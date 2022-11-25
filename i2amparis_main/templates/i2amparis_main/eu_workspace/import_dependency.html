@@ -1,0 +1,131 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        What is the role of import dependency in Europe?
+
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    <p class="col-md-12 col-xs-12">
+        Currently the EU is <strong>a net importer of fossil fuels</strong>, but reducing emissions and a transition to
+        renewables will
+        allow the EU to become less reliant on import dependency.
+    </p>
+    <p class="col-md-12 col-xs-12">
+        Some Member States have acknowledged the importance of improving energy efficiency, reducing overall gross
+        inland consumption while also targeting more ambitious policies toward increasing domestic renewables.
+    </p>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the imported fuels until 2050 under current policy efforts.
+                    </p>">
+                Imported fuels
+            </h2>
+            <h4 style="">(until 2050)</h4>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 1em; text-align: center">Please select among
+            the available imported fuels.
+        </div>
+        <div class="col-md-3 col-sm-2 col-xs-1"></div>
+        <div class="form-group col-md-6 col-sm-8 col-xs-10" style="text-align: center">
+            <div class="">
+                <select class="desc_text take_up_space model-select2" placeholder="Select a Model"
+                        id="model_select2" style="width: 100%;">
+                    <option value="Trade|Primary Energy|Coal|Volume">Coal</option>
+                    <option value="Trade|Primary Energy|Gas|Volume">Gas</option>
+                    <option value="Trade|Primary Energy|Oil|Volume">Oil</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-2 col-xs-1"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 arrow-message"><span class="hidden-sm hidden-xs">Use the scrollbar below to change the timeframe of the chart</span>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 back-7" style="text-align: center"><i#}
+        {#                class="fa fa-angle-left next-back-arrow"></i></div>#}
+        {#        <div class="col-xs-2 col-sm-10 col-md-10 arrow-message"><span class="hidden-sm hidden-xs">Please use the arrows to change the timeframe of the chart</span>#}
+        {#        </div>#}
+        {##}
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 next-7" style="text-align: center"><i#}
+        {#                class="fa fa-angle-right next-back-arrow"></i></div>#}
+        <div class="col-sm-12 col-md-12 col-xs-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="imported_fuels" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="imported_fuels_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="imported_fuels_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the imported fuels until 2050 under current
+                                policy efforts.
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="col-md-12 col-xs-12">
+        A reduction in coal and oil imports is also expected in 2050, but model results differ regarding the future of
+        gas imports. Gas imports increase in EU-TIMES and GEMINI-E3, while in TIAM tends to reduce in the long run but
+        retain some important role in the transition.
+    </p>
+    <hr style="color: black">
+    {#    <span id="import_dependency" style="position: relative; top:-8em"></span>#}
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the import dependency in relation to CO2 emissions reduction levels (since 1990, based on European Environmental Agency, 2019).
+                    </p>">
+                Import dependency
+            </h2>
+            <h4 style="">(in relation to CO2 emissions reduction levels)</h4>
+        </div>
+        {% comment %}<div class="col-xs-5 col-sm-1 col-md-1 back-6" style="text-align: center"><i
+                class="fa fa-angle-left next-back-arrow"></i></div>
+        <div class="col-xs-2 col-sm-10 col-md-10 arrow-message"><span class="hidden-sm hidden-xs">Please use the arrows to see how the Import Dependency is affected by reducing the CO2 emissions </span>
+        </div>
+        <div class="col-xs-5 col-sm-1 col-md-1 next-6" style="text-align: center"><i
+                class="fa fa-angle-right next-back-arrow"></i></div>{% endcomment %}
+        <div class="col-sm-12 col-md-12 col-xs-12" style="height:40em">
+            <div style="height: 100%;">
+                <div id="import_dependency" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="import_dependency_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="import_dependency_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the import dependency in relation to CO2
+                                emissions reduction levels (since 1990, based on European Environmental Agency, 2019).
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="col-md-12 col-xs-12">In TIAM, import dependency decreases in time, in line with the higher decarbonisation
+        efforts compared to the other two models, thereby attesting to future low-carbon energy systems relying less and
+        less on imports, substituted primarily by energy savings and domestic energy resources.
+    </p>
+
+
+</div>

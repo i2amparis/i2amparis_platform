@@ -1,0 +1,165 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        Where is Europe headed towards in 2050?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    {#    <span id="ht2050" style="position: relative; top:-8em"></span>#}
+    <p class="col-md-12 col-xs-12">
+        From 1990 to 2015,
+        <strong>annual CO2 emissions in the EU have decreased</strong>
+        an average of 0.9% per year.
+
+    </p>
+    <p class="col-md-12 col-xs-12">
+    <ul>
+        <li>Between 2020 and 2030, models project a reduction of
+            <strong>CO2 emissions reaching in 2030 -33% to -45% of CO2</strong>
+            emissions compared to 1990.
+        </li>
+        <li>GHG emissions reduction in 2030 will range between −39% and −51%, compared to 1990 levels.
+        </li>
+        <li>These figures are
+            <strong>insufficient to comply with the new EU Green Deal objective of a 55% GHG reduction target.
+            </strong>
+        </li>
+        <li>
+            These figures show the EU will reach the former −40% milestone, but not yet the new EU Green Deal objective
+            of a 55% GHG reduction target.
+        </li>
+    </ul>
+    </p>
+    <p class="col-md-12 col-xs-12">
+        In 2050, the median EU CO2 emissions are about 2.1 Gt, with a broad range of about 1.0–2.35 Gt, representing a
+        CO2 emissions drop of −43% to −76% compared to 1990.
+    </p>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the total CO2 emissions from energy in the EU across models until 2050.
+                    </p>">
+                Total CO2 emissions
+            </h2>
+            <h4 style="">(in the EU across models until 2050)</h4>
+        </div>
+
+        {% comment %}<div class="col-xs-5 col-sm-1 col-md-1 back-2" style="text-align: center"><i
+                class="fa fa-angle-left next-back-arrow"></i></div>
+        <div class="col-xs-2 col-sm-10 col-md-10 arrow-message"><span class="hidden-sm hidden-xs">Please use the arrows to change the timeframe of the chart</span>
+        </div>
+
+        <div class="col-xs-5 col-sm-1 col-md-1 next-2" style="text-align: center"><i
+                class="fa fa-angle-right next-back-arrow"></i></div>{% endcomment %}
+        <div class="col-xs-12 col-sm-12 col-md-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="total_co2_emissions" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="total_co2_emissions_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="total_co2_emissions_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the total CO2 emissions from energy in
+                                the EU across models until 2050.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-12 col-xs-12" style="font-style: italic; font-size: 0.9em; margin-top: 1em;display: none">
+        <ul>
+            <li>PR_CurPol_CP: Current policies evolving with GDP per capita growth (E3ME, GCAM, Gemini-E3, ICES, MUSE,
+                TIAM)
+            </li>
+            <li>PR_CurPol_EI: Current policies evolving with 2020-2030 GDP reduction rate (42)</li>
+            <li>PR_NDC_CP: NDCs evolving with GDP per capita growth (EU-TIMES, NEMESIS)</li>
+            {#            <li>PR_NDC_EI: NDCs evolving with 2020-2030 GDP reduction rate</li>#}
+        </ul>
+    </div>
+    <p class="col-md-12 col-xs-12" style="font-style: italic; font-size: 0.9em">
+        Variability between models comes from the different mitigation options available, key technologies (e.g.
+        Carbon Capture and Storage (CCS)), markets and national policies.
+    </p>
+
+    <p class="col-md-12 col-xs-12" style="margin-top: 3em">
+        When looking into sectors, PR’s EU model ensemble results indicate that:
+    </p>
+    <p class="col-md-12 col-xs-12">
+    <ul>
+        <li><strong>Energy supply </strong>is the largest contributor of emissions cuts
+            between
+            2020 and 2050 in almost all
+            models <strong>(with an average of 47%).</strong>
+        </li>
+        <li>
+            On the contrary, median decarbonisation rates in <strong>industry (42%), buildings (30%) and transport
+            (32%) </strong>
+            differ significantly across models, with industrial CO2 emissions displaying the largest variability.
+        </li>
+        <li>The two sector-specific models, FORECAST (buildings and industry) and ALADIN (transport) show significant
+            emissions cuts in their sectors, compared to other models.
+        </li>
+    </ul>
+    </p>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the energy CO2 emissions by sector in the EU across models for 2020, 2030, 2040 and 2050.
+                    </p>">
+                Energy CO2 emissions
+            </h2>
+            <h4 style="">(by sector)</h4>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 back-3" style="text-align: center"><i#}
+        {#                class="fa fa-angle-left next-back-arrow"></i></div>#}
+        <div class="col-xs-12 col-sm-12 col-md-12 arrow-message"><span class="hidden-sm hidden-xs">Use the scrollbar bellow to change the timeframe of the chart</span>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 next-3" style="text-align: center"><i#}
+        {#                class="fa fa-angle-right next-back-arrow"></i></div>#}
+
+        <div class="col-sm-12 col-md-12 col-xs-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="energy_co2_emissions_by_sector" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="energy_co2_emissions_by_sector_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="energy_co2_emissions_by_sector_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the energy CO2 emissions by sector in the EU
+                                across models for 2020, 2030, 2040 and 2050.
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <p class="col-md-12 col-xs-12" style="font-style: italic">Different columns in the same time period represent different models and their results for the CO2 emissions.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+        {#        html {#}
+        {#            scroll-behavior: smooth;#}
+        {#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <link rel="stylesheet" href={% static "tools/css/eu_workspace/eu_virtual_library.css" %}>
+
+</head>
+
+<body>
+
+
+{% include "upper_bar_virtual.html" %}
+
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+    <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+        <div class=" col-sm-12 col-xs-12" style="text-align: center">
+            <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                Virtual Library
+            </h1>
+        </div>
+        <div class="content-section col-sm-12 col-xs-12 col-md-12"
+             style="text-align: center; margin-top: 2em;padding: 1em">
+            <div class="col-sm-4 col-xs-6">
+                <div class="circle-button cb-orange" style="text-align: center">
+                    <a href="virtual_library/publications" class="">Publications</a>
+                    <i class="fa fa-book circle-icon"></i>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+                <div class="circle-button cb-green" style="text-align: center">
+                    <a href="virtual_library/conferences" class="">Conferences</a>
+                    <i class="fa fa-users circle-icon"></i>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+                <div class="circle-button cb-yellow" style="text-align: center">
+                    <a style="padding-top: 3em; white-space: normal" href="virtual_library/policybriefs"
+                       class="">Commentaries
+                        & Policy Briefs</a>
+                    <i class="fa fa-comment circle-icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="content-section col-sm-12 col-xs-12 col-md-12"
+             style="text-align: center; margin-top: 3em; padding: 1em">
+            <div class="col-sm-4 col-xs-6">
+                <div class="circle-button cb-purple" style="text-align: center">
+                    <a href="virtual_library/databases" class="">Databases</a>
+                    <i class="fa fa-hdd-o circle-icon"></i>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+                <div class="circle-button cb-red" style="text-align: center">
+                    <a href="virtual_library/zenodo" class="">Zenodo Library</a>
+                    <i class="fa fa-cloud-download circle-icon"></i>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+                <div class="circle-button cb-blue" style="text-align: center">
+                    <a href="virtual_library/deliverables" class="">Deliverables</a>
+                    <i class="fa fa-file circle-icon"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+{# navigation - content - menu #}
+
+
+<script src={% static "tools/js/wwh_global/scientific_interface/cookie_retriever.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/token_retrieval.js" %}></script>
+
+
+<script>
+    wow = new WOW({}).init();
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('body').tooltip({container: 'body', html: true, selector: '[data-toggle=tooltip]', placement: 'auto'});
+    });
+</script>
+
+<script>
+    {% comment %}$(".circle-button").click(function (){
+        $('.circle-button').not(this).parent().hide()
+        $(this).parent().parent().siblings('.content-section').hide()
+        $(this).parent().parent().animate({marginTop:'0'}, 'slow')
+        $(this).parent().animate({width:'100%'}, 'slow')
+        $(this).animate({width:'100%',paddingTop:'0.3em', height: '2em' }, 'slow')
+    }){% endcomment %}
+</script>
+
+<script>
+    $(document).on('click', '.circle-button', function (e) {
+        $(this).find('a')[0].click()
+    });
+
+</script>
+
+
+
+</body>
+
+</html>
+
+

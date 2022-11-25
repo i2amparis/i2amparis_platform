@@ -1,0 +1,1237 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+{##}
+{#                                                                                                               Begin MAPLE#}
+                <div id="collapse_maple">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span>Overview</span>
+                            <a style="display: none"
+                               href="#maple_overview">Overview</a>
+                        </li>
+                        <li>
+                        <div class="panel-group maple_key_feauters">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"
+                                     style="padding:0px">
+                                    <h5 class="panel-title"
+                                        style="background-color:#343a40; padding: 5px">
+                                        <a data-toggle="collapse"
+                                           href="#collapse_maple_key_feauters"><i
+                                                class="fa fa-caret-right rotate"
+                                                style="margin-right: 10px;"></i>Key
+                                            features
+                                            of the
+                                            model
+
+
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse_maple_key_feauters"
+                                     class="panel-collapse collapse">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span>Energy sectoral detail</span>
+                                            <a style="display: none"
+                                               href="#maple_energy_sectoral">
+                                                Energy
+                                                sectoral
+                                                detail</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span>Geographic coverage</span>
+                                            <a style="display: none"
+                                               href="#maple_geographic_coverage">
+                                                Geographic
+                                                coverage</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span>Multi-year time periods</span>
+                                            <a style="display: none"
+                                               href="#maple_multi_year_time_periods">
+                                                Multi-year
+                                                time
+                                                periods</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span>Intra-year time periods (time slices)</span>
+                                            <a style="display: none"
+                                               href="#maple_intra_year_time_periods">
+                                                Intra-year
+                                                time
+                                                periods
+                                                (time
+                                                slices)</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="list-group-item">
+                            <span>GHG Emission and local pollutant emissions</span>
+                            <a style="display: none"
+                               href="#maple_ghg_emission">
+                                GHG Emission
+                                and local
+                                pollutant
+                                emissions</a>
+                        </li>
+                        <li>
+                            <div class="panel-group maple_energy_ghg">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"
+                                         style="padding:0px">
+                                        <h5 class="panel-title"
+                                            style="background-color:#343a40; padding: 5px">
+                                            <a data-toggle="collapse"
+                                               href="#collapse_maple_energy_ghg"><i
+                                                    class="fa fa-caret-right rotate"
+                                                    style="margin-right: 10px;"></i>Drivers
+                                                of
+                                                energy
+                                                and
+                                                other
+                                                GHG-emitting
+                                                service
+                                                demands
+
+
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse_maple_energy_ghg"
+                                         class="panel-collapse collapse">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <span>GDP, population and urbanisation</span>
+                                                <a style="display: none"
+                                                   href="#maple_gdp_population">
+                                                    GDP,
+                                                    population
+                                                    and
+                                                    urbanisation</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span>Energy demand drivers</span>
+                                                <a style="display: none"
+                                                   href="#maple_energy_demand_drivers">Energy demand drivers</a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <span>Calibration of the model</span>
+                            <a style="display: none"
+                               href="#maple_calibration">
+                                Calibration
+                                of the
+                                model</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Mitigation/adaptation measures and technologies</span>
+                            <a style="display: none"
+                               href="#maple_mitigation_adaptation">
+                                Mitigation/adaptation
+                                measures and
+                                technologies</a>
+                        <li class="list-group-item">
+                            <span>Economic rationale and model solution</span>
+                            <a style="display: none"
+                               href="#maple_economic_rationale">
+                                Economic
+                                rationale
+                                and model
+                                solution</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Key Parameters</span>
+                            <a style="display: none"
+                               href="#maple_key_params">
+                                Key
+                                Parameters</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Policy questions and SDGs</span>
+                            <a style="display: none"
+                               href="#maple_policy_sdgs">
+                                Policy
+                                questions
+                                and SDGs</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Recent publications</span>
+                            <a style="display: none"
+                               href="#maple_recent_publications">
+                                Recent
+                                publications</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>References</span>
+                            <a style="display: none"
+                               href="#maple_references">
+                                References</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+                      <div class="row">
+                        <h1 id="maple" style="padding-bottom: 1em; padding-top: 1em">MAPLE</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Overview</h2>
+                            <p>
+                                The China-MAPLE model consists of an energy system optimisation
+                                module which is based on the TIMES modelling framework. TIMES is a modelling
+                                platform for local, national or multi-regional energy systems, which provides
+                                a technology-rich basis for estimating how energy system operations will evolve over
+                                a long-term, multiple-period time horizon (Loulou and Labriet, 2007). It follows a
+                                techno-economic (bottom-up) approach to describe the energy sectors in many details
+                                through a variety of specific technologies characterised with their technical and
+                                economic parameters. TIMES offers thus a detailed representation of energy sectors,
+                                which includes extraction, transformation, distribution, end uses, and trade of
+                                various energy forms and materials. TIMES computes an equilibrium on energy markets
+                                (partial equilibrium) and determines an optimal configuration of the energy systems
+                                to satisfy service demands at a minimum cost over a long-term horizon, while
+                                respecting GHG emission limits.
+
+                            </p>
+                            <p>
+                                The MAPLE model simulates the investment and operation of major energy technologies
+                                under constraints of emissions reductions of GHGs and pollutants in local regions
+                                in China. The model can project and simulate future energy use trends in reference
+                                scenarios and other comparative scenarios of varying degrees of mitigation action.
+                                The calculation objective of the model is that the total cost of the energy system
+                                must reach the minimum while exogenously given energy demand and any other major
+                                constraints on the energy system (e.g. technology availability and growth rates)
+                                are satisfied. The costs include investment costs, residual values of assets,
+                                fixed and variable operating costs and maintenance costs, local energy extraction
+                                costs, the costs of energy imports beyond China, gains from exports to regions
+                                outside of China, major energy transmission and distribution costs, related taxes
+                                and additional subsidies.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Key features of the model</h2>
+                            <span id="maple_energy_sectoral" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/china_maple_national_level_analysis.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of the China-MAPLE
+                                        energy system for China national-level analysis
+                                    </p>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_geographic_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                            <p>
+                                The MAPLE version 1.0 model has one region
+                                (China), i.e. the analysis is based on the national level.
+                                In version 2.0, for the residential sector, the geographic
+                                granularity of the model includes 31 provinces (regions).
+                                That is because the residential sector accounts for a large amount of particulate
+                                matter (PM2.5) emissions, and MAPLE aims to analyse the co-benefits of emissions
+                                reductions for air quality. For the most recent version, more regions have been
+                                developed for other sectors, including the residential, electricity, and
+                                industrial sectors and sub-sectors.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_multi_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Multi-year time periods</h4>
+                            <p>
+                                The model performs calculations on five-year steps, from 2010 to 2050, currently
+                                being updated to establishing 2015 as the base year.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_intra_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Intra-year time periods (time slices)</h4>
+                            <p>
+                                When explicitly referring to the electricity sector,
+                                it is possible to include intra-annual time slices by
+                                season and day-night, to represent the specific variation in electricity supply
+                                (such as from time- and weather-dependent renewables like wind and solar
+                                photovoltaics) and demand during different typical periods of the day and
+                                year (e.g. winter versus summer, day versus night).
+                            </p>
+                            <p>
+                                Time-slices are especially important whenever the mode and cost of
+                                production of an energy carrier at different times of the year are
+                                signiﬁcantly different (Loulou and Labriet, 2007). This is the case
+                                for instance when the demand for an electricity ﬂuctuates across the
+                                year and a variety of technologies may be chosen for its production at
+                                given times of the year (such as wind power when wind resources are high,
+                                and solar photovoltaics when there is a high availability of solar radiation).
+                                In such cases, the matching of supply and demand requires that the activities
+                                of the technologies producing and consuming the electricity be tracked—and
+                                matched—in each time slice.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_ghg_emission" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">GHG Emission and local pollutant emissions</h2>
+                            <p>
+                                In MAPLE 1.0 and 2.0, carbon dioxide (CO2) is considered as the main GHG emission.
+                                The other main emissions, including methane (CH4) and nitrous oxide (N2O), are
+                                expected to be added in the next version. For the local pollutant emissions,
+                                in version 2.0, sulphur dioxide (SO2), nitrogen oxides (NOx), and primary
+                                particulate matters are considered as main emissions related to China’s air
+                                quality improvement.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Drivers of energy and other GHG-emitting service demands</h2>
+                            <span id="maple_gdp_population" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">GDP, population and urbanisation</h4>
+                            <p>
+                                The general socioeconomic parameters, including GDP growth rate, population,
+                                urbanisation rate, and industry structure, are exogenous. The current socioeconomic
+                                modelling assumption is consistent with the model of the World Bank (2012) and other
+                                literature. The average annual growth rate of the GDP of China will drop to nearly
+                                6.2% in 2020 and will further decrease to approximately 4% after 2030. The model
+                                assumes a population growth scenario in which having a second child is publicly
+                                allowed. Based on various sources (Zeng et al., 2013), the model assumes that the
+                                total population of China will gradually increase from 1.36 billion in 2010 to
+                                1.433 billion by 2020, peak by 2025-2030, and thereafter decrease to 1.385 billion
+                                by 2050. The urbanisation rate of China reached 54.77% in 2014; the rate will reach
+                                58.2% in 2020, 67.1% in 2030, and 75.2% in 2050. These assumptions can be varied in
+                                light of updated socioeconomic projection information.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_energy_demand_drivers" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy demand drivers</h4>
+                            <p>
+                                In the TIMES modelling framework, the economic, population and sectoral growths are
+                                used to determine specific drivers for the growth in energy demands in reference
+                                scenarios with no climate change mitigation policy. For example, the demand for
+                                the number of billion kilometre-vehicles (BVkm) travelled by automobiles is based
+                                on GDP per capita, whereas the growth in the demand for residential space heating
+                                is driven by the number of households. Once the drivers for the different energy
+                                demands represented by NATEM are determined and quantified, the construction of
+                                the reference demand scenario requires computing a set of energy service demands
+                                over the horizon. This is done by choosing elasticities of demands to their
+                                respective drivers, in each region, using the following general formula:
+                            </p>
+                            <p align="center">
+                                <i>
+                                    Demand = Driver <sup>Elasticity</sup>
+                                </i>
+                            </p>
+                            <p>
+                                So, for example the number of billion vehicle
+                                km travelled by automobiles (BVkm) grows by a factor that is
+                                the growth in the GDP per capita in a region to the power of a pre-defined elasticity:
+                            </p>
+                            <p align="center">
+                                <i>
+                                    BVkm = (GDP/capita) <sup>Elasticity</sup>
+                                </i>
+                            </p>
+                            <p>
+                                In most cases the elasticities (which vary over time) are less than 1 and decrease
+                                over time. For example, an elasticity of 0.8 means that a 10% increase in the growth
+                                of GDP per capita in a region would result in an 8% increase in billions of vehicle
+                                kilometres driven. Over time this could reduce to a much smaller elasticity,
+                                reflecting empirical evidence that demand for energy services such as automobile
+                                transport ultimately saturates with rising incomes.
+                            </p>
+                            <p>
+                                The TIMES modelling framework also has the capability of estimating the price-based
+                                response of these energy service demands to the changing conditions of scenarios in
+                                which mitigation occurs. For example, if the cost of energy increases as fossil
+                                fuels are replaced by renewables, or because fossil-subsidies are reduced, then
+                                the demand for energy services could decrease. To do this, TIMES uses another set
+                                of inputs, namely the price elasticities of the demands for each energy service
+                                considered. The model can then calculate the new demands for these policy cases.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_calibration" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                            <p>
+                                Calibration concludes with the base year calibration, which mainly includes the
+                                following aspects: (i) total energy consumption and category-based energy
+                                consumption of various sectors and sub-sectors; (ii) total energy consumption
+                                and category-based energy consumption of third-level sub-sectors; (iii) energy
+                                consumption per unit of end-use demand of major divisions; (iv) CO2 emissions;
+                                and (v) emissions of conventional pollutants.
+                            </p>
+                            <p>
+                                Energy consumption of sub-sectors of the industrial sector is derived on the basis
+                                of energy consumption statistics given in the year 2010 (2015 in the updated
+                                version in progress) from the Energy Balance Sheet and the Industrial Statistics
+                                Yearbook. The energy consumption of the third-level sub-sectors in the industrial
+                                sector calculated in the model is summarised according to sub-sectors after
+                                calibration on the base year and main statistical data.
+
+                            </p>
+                            <p>
+                                The main sources of energy demand data is energy balance tables available
+                                from China’s energy statistical yearbook. For energy consumption in the
+                                industrial sub-sectors and technologies, we used several sources such as China
+                                Statistical <b>Yearbook 2006-2011, Industrial Statistical Yearbook 2010-2013, China
+                                Steel Statistics 2011, China Chemical Industry Yearbook, China Nonferrous Metals
+                                Industry Yearbook, China Energy Statistical Yearbook 2006-2013. We also use technical
+                                parameter documents on production lines of major industrial sectors, as well as
+                                calculation and collation from related literature. The data for the transport sector
+                                is from Research into China's Medium and Long-Term Development Strategy on Traffic
+                                and Transportation, Automotive Energy Outlook 2012, China Transport Yearbook, China
+                                Bulletin on Motor Vehicles Pollution Prevention, China Energy Statistical Yearbook
+                                2010-2013, as well as data research and calculation based on major literature. For
+                                the building sector, the data sources include The Annual Development and Research
+                                Report on Building Energy Efficiency in China (2008-2013), as well as the summary
+                                and calculation of relevant literature.</b>
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_mitigation_adaptation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>
+                                China is on the critical stage of its energy transformation reform
+                                and meeting its NDC target for 2030. As a technology-rich model, and
+                                like other bottom-up models, mitigation/adaptation measures and
+                                technologies can be reflected by constraints for commodities and processes.
+                                Referring to the “five-year plan” series, detailed emission standard and
+                                mitigation technologies are reported for each sector, especially for final
+                                demand sectors.
+
+                            </p>
+                            <p>
+                                Demand for end-use energy services is the basis of analysis of the bottom-up
+                                energy model. Useful energy provided by end-use energy equipment satisfying
+                                demand for end-use energy for the current year is a prerequisite for analysis
+                                of energy system optimisation. The demand for end-use energy services pertaining
+                                to the Chinese regional model is classified into four major sectors, namely the
+                                industrial sector, the transportation sector, the building sector
+                                (commercial/residential sector), and the agricultural sector and others,
+                                according to segments.
+                            </p>
+                            <p>
+                                The main mitigation measures and technologies considered in the model are listed
+                                in the following table, and the technologies with an asterisk (*) could be further added in
+                                the model, based on the requirements of the PARIS REINFORCE project. The main
+                                assumptions and technological data will be revised and updated to be consistent
+                                with the current updating government database and other modelling groups in the
+                                project.
+                            </p>
+
+
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    {#                                      <tr>#}
+                                    {#                                          <th style="width:20%">Industry</th>#}
+                                    {#                                          <th style="width:40%">Buildings#}
+                                    {#(tertiary and residential)</th>#}
+                                    {#                                          <th style="width:40%">Appliances(tertiary and residential)</th>#}
+                                    {#                                      </tr>#}
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Upstream</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b><i>Synthetic fuel production</i></b></td>
+                                        <td><b><i>Synthetic fuel production</i></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal to gas without CCS</li>
+                                                <li>Biomass to gas without CCS</li>
+                                                <li><font color="#a9a9a9">Coal to gas with CCS*</font></li>
+                                                <li><font color="#a9a9a9">Coal to liquids with CCS*</font></li>
+
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal to gas without CCS</li>
+                                                <li>Biomass to gas without CCS</li>
+                                                <li><font color="#a9a9a9">Coal to gas with CCS*</font></li>
+                                                <li><font color="#a9a9a9">Coal to liquids with CCS*</font></li>
+                                                <li><font color="#a9a9a9">Gas to liquids with CCS*</font></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Electricity and heat</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Electricity generation</b></td>
+                                        <td><b>Heat generation</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal with CCS</li>
+                                                <li>GAS with CCS</li>
+                                                <li>Nuclear</li>
+                                                <li>Hydro</li>
+                                                <li>Biomass (with and without CCS)</li>
+                                                <li>Solar PV</li>
+                                                <li>Solar CSP</li>
+                                                <li>Wind (onshore and offshore)</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal with / without CCS</li>
+                                                <li>GAS without CCS</li>
+                                                <li><font color="#a9a9a9">Gas with CCS*</font></li>
+                                                <li>Biomass</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Transport</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Road</b></td>
+                                        <td><b>Rail</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas (LNG / CNG) vehicles</li>
+                                                <li>Hybrid electric vehicles</li>
+                                                <li>Fully electric vehicles</li>
+                                                <li><font color="#a9a9a9">Fully cell vehicles</font></li>
+                                                <li>Emission standards</li>
+                                                <li>Fuel Economy improvement</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Electric high-speed railway
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Air</b></td>
+                                        <td><b>Marine</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Biofuels in fuel mix</li>
+                                                <li><font color="#a9a9a9">Efficiency*</font></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li><font color="#a9a9a9">Gas*</font></li>
+                                                <li><font color="#a9a9a9">Biofuels*</font></li>
+                                                <li><font color="#a9a9a9">Efficiency*</font></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Buildings (commercial/residential)</b>
+                                        </p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Heating</b></td>
+                                        <td><b>Lighting</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing coal / oil (coal-to-gas incentives)</li>
+                                                <li>Electricity replacing coal (coal-to-electricity incentives)</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Efficiency
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Appliances</b></td>
+                                        <td><b>Cooling</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Efficiency</td>
+                                        <td>Efficiency</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Industry</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Chemical</b></td>
+                                        <td><b>Non-Metallic</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Synthetic ammonia (efficiency)</li>
+                                                <li>Ethylene (efficiency)</li>
+                                                <li>Yellow phosphorus (efficiency)</li>
+                                                <li>Caustic soda / soda (efficiency)</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Cement/Clinker (low carbon production standard)</li>
+                                                <li>Cement/Clinker (efficiency)</li>
+                                                <li>Glass/Paper (efficiency)</li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Ferrous metal</b></td>
+                                        <td><b>Non-Ferrous metal</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Iron and steel with CCS</li>
+                                                <li>Iron and steel (efficiency of furnace)</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Copper/aluminium (efficiency)</li>
+                                                <li>Zinc/lead (efficiency)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Process heat</b></td>
+                                        <td><b>Machine drives</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Steam</b></td>
+                                        <td><b>CHP</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Agriculture</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Energy</b></td>
+                                        <td><b>Other</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left">Biomass</p></td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption> Main GHG energy system mitigation options in China-MAPLE
+                                    </caption>
+                                </table>
+                            </div>
+                            <p>
+                            <ul>
+                                The differences between China-MAPLE and other bottom-up models for China is mainly
+                                reflected in four aspects:
+                                <li>China-MAPLE integrates local pollutant control and co-benefit modules into the
+                                    energy system framework, and models local pollutant emission control measures
+                                    and technologies in key areas.
+                                </li>
+                                <li>With regard to the local pollutant module, the link between local emissions and
+                                    energy systems is based on technical rather than activity levels to reflect the
+                                    mitigation effects of technological advances and structural adjustments. Regarding
+                                    the benefit evaluation module, it describes the benefits of local pollutants
+                                    obtained through emissions reduction.
+                                </li>
+                                <li>China-MAPLE introduces energy supply curves in the energy supply module.
+                                    The supply of coal, oil and natural gas includes both domestic production and
+                                    imports, avoiding deviations caused by fixed energy costs.
+                                </li>
+                                <li>MAPLE model is currently applied in the World Bank Group project on
+                                    China’s energy modelling project, with consideration of linking the
+                                    bottom-up model with a typical top-down computable general equilibrium approach.
+                                </li>
+                            </ul>
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_economic_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>
+                                TIMES is a dynamic least-cost optimisation model, and as such contains three
+                                components: an objective function, variables, and constraints. The first
+                                component (objective) corresponds to minimising the net total discounted cost
+                                (e.g. 3-5% is typically used in deep decarbonisation studies) of the entire
+                                energy system. A single optimisation, which searches for the maximal net
+                                total surplus, simulates market equilibrium for each commodity (energy, material,
+                                demand). Maximising the net total surplus (i.e. the sum of producers’ and consumers’
+                                surpluses) is operationally done by minimising the net total cost of the energy
+                                system. The second component (variables) corresponds mainly to future investments
+                                and activities of technologies at each time period, amount of energy produced or
+                                consumed by technologies, as well as energy imports and exports. An additional
+                                output of the model is the implicit price (shadow price) of each energy form,
+                                material and emission, as well as the reduced cost of each technology (reduction
+                                required to make a technology competitive). The third component (constraints)
+                                corresponds to various limits (e.g. amount of energy resources available)
+                                and obligations (e.g. energy balances throughout the system, useful energy
+                                demand satisfaction) to be respected.
+
+                            </p>
+                            <p>
+                                The main model assumptions leading to optimal outputs include
+                                future technological developments and the structure of energy markets.
+                                On the one hand, technological progress is exogenously assumed, and
+                                economic agents have a perfect foresight of this. On the other hand,
+                                energy markets are assumed to be under perfect competition. Moreover,
+                                TIMES considers only energy markets, and thus equilibrium is not assumed
+                                for all markets in the economy. From that perspective, TIMES computes
+                                only a partial equilibrium on energy markets.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_key_params" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key Parameters</h2>
+                            <p>
+                            <ul>
+                                China is a country with a large difference in energy production and consumption
+                                technologies among provinces. As a bottom-up technology-rich model, a large number
+                                of data and parameter collection processes are required. The main parameters include:
+                                <li>Technical parameters: efficiency, availability factor, lifetime, stock for base
+                                    year, etc.
+                                </li>
+                                <li>Economic parameters: investment cost, operation fixed cost, variable cost, fuel
+                                    cost, etc.
+                                </li>
+                                <li>Emission parameters: emission coefficient for fuels and for specific technologies.
+                                </li>
+                                <li>Policy parameters: new technology for starting year, new investment for
+                                    technologies,
+                                    technology share constraints, emission constraints, carbon tax, etc.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                Taking the technical parameters of the power sector as an example, power
+                                generation technologies mainly include thermal, nuclear and renewable energy power
+                                generation technologies. Coal power and natural-gas-based power generation
+                                constitutes the main technology of thermal power generation in China. With
+                                regard to technical parameters of three typical coal-fired units, power
+                                production efficiency of the supercritical unit is approximately 41-42%,
+                                coal consumption per unit of power generation being about 310 grams of coal
+                                equivalent (gce)/kWh, and that of the ultra-supercritical unit is 45%-47%,
+                                coal consumption per unit of power generation standing at about 280 gce/kWh.
+                                The natural gas power generation technology in the base year is mainly natural
+                                gas-based gas turbine technology and gas-steam combined cycle units. Natural gas
+                                in China has the merits of higher efficiency, relatively environmental protection,
+                                smaller floor area and shorter construction period compared with coal-fired power
+                                generation. Because construction and operating costs of nuclear power plants are
+                                relatively high (about three times that of thermal power plants), its power
+                                generation cost is higher (about 0.42-0.54 Yuan/kWh on average). Furthermore,
+                                power generation technologies involving wind power, solar energy, biomass, small
+                                hydropower and other sorts of renewable energy also play an important role in China's
+                                power production.
+                            </p>
+                            <p>
+                                Parameters can be revised and updated in the framework of the PARIS REINFORCE
+                                project, following the feedback of national and local experts (stakeholder
+                                engagement), the comparative assessment with other modelling experiences,
+                                and the discussion with the partners (modellers).
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_policy_sdgs" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <p>
+                                The policy questions considered in MAPLE mainly orient on emission mitigation and
+                                energy policy instruments. Like most bottom-up energy models, multiple kinds of
+                                constraints can be added during the energy system optimisation process. The main
+                                policy granularity in the model is listed in the following table, with further explanation.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>
+                                            Emissions mitigation policy instruments</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tax</td>
+                                        <td><b>Full.</b>
+                                            Feasible for carbon tax (also other emission tax) constraints for a
+                                            milestone year.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emissions target/quota (annual)</td>
+                                        <td><b>Full.</b> Feasible for the annual emission target for CO2 and local
+                                            pollutant emissions.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Emissions target/quota (cumulative)
+                                        </td>
+                                        <td>
+                                            <b>Partial.</b> Possible, provided sufficient historical data.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Regulations (emissions standards, etc.)</td>
+                                        <td><b>Full.</b> Regulations like emission standards for a specific sector
+                                            or energy commodity. Constraints for carbon emission intensity can also
+                                            be added.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Energy policy instruments</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tax</td>
+                                        <td><b>Full.</b> Feasible for taxes set on fuels, technologies, other
+                                            emissions, etc.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Subsidy</td>
+                                        <td><b>Full.</b> Feasible for subsidy set on energy fuels and technologies;
+                                            energy service final devices, like gas-oven for coal-to-gas heating
+                                            policy; and full electric vehicles purchasing behaviour.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Energy mix target</td>
+                                        <td>
+                                            <b>Full.</b> Energy mix targets for both full-economy sector and for
+                                            specific sector, e.g. electricity generation, transportation, and
+                                            industry (with sub-sectors).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Efficiency target</td>
+                                        <td>
+                                            <b>Full.</b> Efficiency target mainly for technologies, e.g. power
+                                            generation efficiency; and fuel-economy standard upgrade for gasoline
+                                            vehicles.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Regulations (thermal regulation in buildings, banning of diesel cars in
+                                            urban areas, etc.)
+                                        </td>
+                                        <td>
+                                            <b>Full.</b> Feasible for regulations for specific sector and energy
+                                            commodity, e.g. limitation of vehicles with low emission standards in
+                                            transportation sector, and regulations on low-carbon Ammonia production,
+                                            etc.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Main policies simulated in China-MAPLE</caption>
+                                </table>
+                            </div>
+                            <p>
+                                Furthermore, the SDGs considered in the current version model include mainly health
+                                and affordable clean energy, with details shown in the following table.
+                            </p>
+
+
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:40%">SDGs</th>
+                                        <th style="width:60%">Details</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>§3. Health (e.g., air-pollution related mortality)</td>
+                                        <td>In the local pollutant module, the local pollutant emissions are
+                                            calculated and optimised. The local pollutant emission coefficient
+                                            is directly linked to the energy processes/technologies, also considering
+                                            any the end-of-pipe pollutant control measures. Damages to health can be
+                                            evaluated based on measures of mortality (VSL – value of statistical
+                                            life)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§7. Affordable and clean energy (e.g., traditional biomass use,
+                                            %renewable energy)
+                                        </td>
+                                        <td>Cost-effectiveness analysis for clean energy is included in the model
+                                            framework, also considering the environmental co-benefits.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Capability of the China-MAPLE assess other SDGs</caption>
+                                </table>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_recent_publications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications</h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Publication</th>
+                                        <th style="width:40%">Topic</th>
+                                        <th style="width:40%">Key findings</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Yang et al. (2018a)</td>
+                                        <td>Air quality benefit of China’s mitigation target to peak its emission
+                                            by 2030
+                                        </td>
+                                        <td>The model in this paper assesses the co-benefits of carbon mitigation
+                                            in local pollutant reduction by linking carbon emissions to local
+                                            air pollutants at the technological level.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yang et al. (2018b)</td>
+                                        <td>Cost–benefit analysis of China’s Intended Nationally Determined
+                                            Contributions based on carbon marginal cost curves
+                                        </td>
+                                        <td>Carbon tax is added into China-Multi-Pollutant Abatement Planning and
+                                            Long-term Benefit Evaluation (China-MAPLE). Several conclusions are drawn
+                                            from analysis based on MACC and China-MAPLE model.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yang et al. (2018c)</td>
+                                        <td>The air quality co-benefit of coal control strategy in China</td>
+                                        <td>A bottom-up model of China-MAPLE is developed, to analyze the impact of
+                                            coal control strategies on energy systems and local pollutant reductions.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yang et al. (2016)</td>
+                                        <td>A scenario analysis of oil and gas consumption in China to 2030
+                                            considering the peak CO2 emission constraint
+                                        </td>
+                                        <td>A bottom-up energy system model is built and applied to analyse the
+                                            fossil fuel consumption and carbon emissions in China up to 2030.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yang et al. (2013a)</td>
+                                        <td>Incorporating environmental co-benefits into climate policies:
+                                            A regional study of the cement industry in China
+                                        </td>
+                                        <td>The model of this paper analyses the impacts of incorporating local
+                                            air quality improvement and environmental co-benefits into the climate
+                                            policy and mitigation technology assessment of the cement sector in
+                                            China.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yang et al. (2013b)</td>
+                                        <td>Quantifying co-benefit potentials in China’s industry sector during its
+                                            12th five year
+                                        </td>
+                                        <td>Co-benefits of mitigation measures in key industry sector are evaluated
+                                            based on and the policy impact is further analysed based on marginal
+                                            abatement cost during 12th Five Year Plan period.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yang et al. (2018d)</td>
+                                        <td>Carbon Mitigation Pathway Evaluation and Environmental Benefit
+                                            Analysis of Mitigation Technologies in China’s Petrochemical Industry
+                                        </td>
+                                        <td>This model evaluates the carbon mitigation effects and
+                                            environmental co-benefits of mitigation technologies that have been
+                                            long ignored in China’s petrochemical and chemical industry.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yang et al. (2018e)</td>
+                                        <td>Provincial-level Evaluation for the environmental health benefits of
+                                            residential building energy conservation polices
+                                        </td>
+                                        <td>The model of this article evaluates the effect of energy conservation
+                                            policies and carbon mitigation efforts on reducing health damage in
+                                            China’s building sector.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="maple_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>Loulou R. & Labriet M. (2007). ETSAP-TIAM: the TIMES integrated assessment model
+                                Part I: Model structure. Computational Management Science 5(1): 7–40. </p>
+                            <p>
+                                World Bank. (2012). Data – The World Bank. Retrieved September 20,
+                                from <a href="http://data.worldbank.org/">http://data.worldbank.org/</a>
+                            </p>
+                            <p>
+                                Yang, X. & Teng, F. (2018a). Air quality benefit of China’s mitigation
+                                target to peak its emission by 2030. Climate Policy, 18(1), 99-110.
+                            </p>
+                            <p>
+                                Yang, X., Teng. F. & Xi, X. (2018b) Cost–benefit analysis of China’s
+                                Intended Nationally Determined Contributions based on carbon marginal
+                                cost curves. Applied Energy, 227, 415-425.
+                            </p>
+                            <p>
+                                Yang, X. & Teng, F. (2018c). The air quality co-benefit of coal control
+                                strategy in China. Resources, Conservation and Recycling, 129, 373-382.
+                            </p>
+                            <p>
+                                Yang, X., Xi, X. & Guo, S. Lin, W., & Feng, X. (2018d). Carbon Mitigation
+                                Pathway Evaluation and Environmental Benefit Analysis of Mitigation Technologies
+                                in China’s Petrochemical and Chemical Industry, Energies,11(12), 3331.
+                            </p>
+                            <p>
+                                Yang, X., Xi X., Lin, W., et al. (2018e) Evaluation of environmental health
+                                benefits of China’s building energy conservation policies: an integrated
+                                assessment on national and provincial levels. International Journal of
+                                Environmental Health Research, 28(3), 1-25.
+                            </p>
+                            <p>
+                                Yang, X., Wan. H., Zhang, Q., Zhou, J.-C., & Chen, S.-Y. (2016).
+                                A scenario analysis of oil and gas consumption in China to 2030 considering
+                                the peak CO2 emission constraint. Petroleum Science, 13(2), 370-383.
+                            </p>
+                            <p>
+                                Yang, X., Teng, F., & Wang, G. (2013a) Incorporating environmental co-benefits
+                                into climate policies: A regional study of the cement industry in China. Applied
+                                Energy, 112, 1446-1453.
+                            </p>
+                            <p>
+                                Yang, X., Teng, F., & Wang, G. (2013b). Quantifying co-benefit potentials in the
+                                Chinese cement sector during 12th Five Year Plan: An analysis based on marginal
+                                abatement cost with monetized environmental effect. Journal of Cleaner Production,
+                                58, 102–111.
+                            </p>
+                            <p>
+                                Zeng,Y., Gu, B., Liang,J., & Guo, Z. (2013). China’s fertility policy adjustment and
+                                China’s development. Beijing: Social Sciences Academic Press.
+                            </p>
+                        </section>
+                    </div>
+
+
+
+
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}>
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+<script src={% static "goback_button_js.js" %}></script>
+<script src={% static "navigate_menu_js.js" %}></script>
+</body>
+
+</html>
+
+

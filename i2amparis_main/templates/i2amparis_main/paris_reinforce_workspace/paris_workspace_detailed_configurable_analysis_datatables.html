@@ -1,0 +1,61 @@
+{% load static %}
+{% csrf_token %}
+
+
+<div class="tab-pane" id="data_tables">
+    <div class="container" style="width: 90%; height:100%;">
+        <div class="row" style="margin-top: 2em;">
+
+            <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help"
+                    data-toggle="tooltip" data-placement="auto"
+                    title="<p>These are the results of the analysis for a selected model, region,
+                                variable(s), scenario in function of time in a tabular format.</p>">
+                    Data Exploration
+                </h2>
+            </div>
+            <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                <h5 style="display: inline-block;background:transparent; box-shadow: none;line-height: 1.3em">
+                    The following table contains the requested data in a tabular format. The data exploration includes
+                    ordering, searching and exporting the available data. You can download the entire datasets in the
+                    following links:
+                    <br>
+                    <a href="/static/excel_files/CountriesResults_harmonisation_PRmodels.xlsx" download>
+                        Countries
+                    </a>,
+                    <a href="/static/excel_files/EUResults_harmonisation_PRmodels.xlsx" download>
+                        EU Region
+                    </a>,
+                    <a href="/static/excel_files/R5Results_harmonisation_PRmodels.xlsx" download>
+                        R5 Regions
+                    </a>,
+                    <a href="/static/excel_files/WorldResults_harmonisation_PRmodels.xlsx" download>
+                        Global
+                    </a>
+                </h5>
+            </div>
+            <div class="row col-md-12 col-xs-12" style="position:relative;z-index: 0">
+                <table id="example" class="display" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Value</th>
+                        <th>Region</th>
+                        <th>Scenario</th>
+                        <th>Unit</th>
+                        <th>Variable</th>
+                        <th>Model</th>
+
+
+                    </tr>
+                    </thead>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

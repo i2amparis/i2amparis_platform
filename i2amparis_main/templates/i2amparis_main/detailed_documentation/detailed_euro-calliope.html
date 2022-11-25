@@ -1,0 +1,506 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model Euro-Calliope</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_key_features">Key features of the model Euro-Calliope</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#euro-calliope_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#euro-calliope_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#euro-calliope_recent_use_cases">Recent use cases</a>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>References</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#42_references">References</a>-->
+<!--                                </li>-->
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The Euro-Calliope model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  Calliope is an open-source energy modelling framework. It focuses on flexibility, high
+                                  spatial and temporal resolution, the ability to execute many runs based on the same
+                                  base model, and a clear separation of framework (code) and model (data). Its primary
+                                  focus is on planning energy systems at scales ranging from urban districts to entire
+                                  continents. In an optional operational mode it can also test a pre-defined system
+                                  under different operational conditions.
+                              </p>
+                              <p>
+                                  Euro-Calliope is a freely available instance of the Calliope framework, which models
+                                  the European electricity system at a high spatial resolution. It can be built on three
+                                  spatial resolutions: on the continental level as a single location, on the national
+                                  level with 34 locations, and on the regional level with 497 locations. On each node,
+                                  renewable generation capacities (wind, solar, bioenergy) and balancing capacities
+                                  (battery, hydrogen) can be built. In addition, hydro electricity and pumped hydro
+                                  storage capacities can be built up to the extent to which they exist today. All
+                                  capacities are used to satisfy electricity demand on all locations which is based on
+                                  historic data. Locations are connected through transmission lines of unrestricted
+                                  capacity. Using Calliope, the model is formulated as a linear optimisation problem
+                                  with total monetary cost of all capacities as the minimisation objective. All elements
+                                  of Euro-Calliope can be manipulated either by changing the configuration in
+                                  config/default.yaml or by manipulating the build workflow before building the model.
+                              </p>
+                              <p>
+                                  The broader Calliope framework has been used in many European projects and features in
+                                  several peer-reviewed publications aimed at supporting energy policies at the national
+                                  scale. For instance: Francesco Lombardi, Matteo Vincenzo Rocco and
+                                  Emanuela Colombo (2019). A multi-layer energy modelling methodology to assess the
+                                  impact of heat-electricity integration strategies: the case of the residential cooking
+                                  sector in Italy. Energy, doi: 10.1016/j.energy.2019.01.004.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the Euro-Calliope model</h2>
+                              <p>
+                                  Euro-Calliope's key features are the ease of use, the flexibility to variable
+                                  geographical and temporal resolutions, and the high degree of transparency and
+                                  internal validation, in addition to a completely open-source and fully documented
+                                  release.</p>
+
+                                  <b>Easy-to-use, modular building blocks</b>
+                              <p>
+                                  Building a model is easy using Calliope's flexible text-based model definition format.
+                                  Existing model instances, such as Euro-Calliope can be freely manipulated and adapted
+                                  to the specific needs of the study of interest.
+                                  This is a key point, because several of the features currently not implemented in the
+                                  model (e.g. accounting for other emissions than CO2) might be included at need.
+                              </p>
+                                  <b>High spatial and temporal resolution in modelling the energy system</b>
+                              <p>
+                                  The existing Euro-Calliope model has very high spatial detail (up to NUTS3
+                                  geographical units across all Europe) and temporal resolution (1-hour timesteps for a
+                                  full year). Moreover, such detail can be flexibily adapted, allowing to compromise at
+                                  need between resolution and computational tractability.
+                              </p>
+                                  <b>Full internal consistency and validation</b>
+                              <p>
+                                  Unlike the majority of models, Calliope's code features a full set of internal tests
+                                  and checks that ensure code's consistency across releases and code developments. This
+                                  significantly increases the users' trust in the model and in its results, as well as
+                                  the scientific robustness of the latter.
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                 Whilst not featuring direct integration with a climate module, Calliope allows for
+                                  technology-specific accounting of direct and indirect emissions. As such, it is open
+                                  to the implementation of any internationally-recognised emissions inventory. Moreover,
+                                  the wide gallery of model instances for several different European countries, as well
+                                  as for the whole EU-28, ensures already a full and up-to-date database of
+                                  technology-specific emissions on which the user can rely.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  Socioeconomic dimensions are not explicitly captured by energy models, and
+                                  Euro-Calliope is no exception.
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                 Whilst any mitigation or adaptation measure related to the energy sector can be
+                                  virtually included in the model at need, the basic implementation of Euro-Calliope
+                                  features key mitigation technologies, such as Direct Air Capture (DAC) in combination
+                                  with methanation of green hydrogn, for the production of carbon-neutral methane to be
+                                  injected in existing gas grids. In addition, the model includes bioenergy power
+                                  plants, which can be easily equipped with CCS technology (if need be), leading to
+                                  BECCS.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  The model finds the energy system configuration which minimises total
+                                  (investmet + operation) annualised costs. The optimisation is performed over a 1 year
+                                  horizon, for 1-hour timesteps (i.e. 8760 total timesptes). Technologies lifetime is
+                                  accounted for in the annualisation of their fixed costs. This assumes that the energy
+                                  sector "actors" implicit in the model behave rationally and with perfect foresight of
+                                  subsequent events. Such actors include: power plants owners, aggregators of
+                                  residential distributed loads (heat pumps, electric vehicles), grid operators, etc.
+                              </p>
+                              <p>
+                                  As an example, in each timestep the modell will have to satisfy the demand for any
+                                  carrier (electricity, gas, hydrogen, etc.) at the minimum cost. However, this also
+                                  needs to take into account the demand of the subsequent timesteps. For instance, the
+                                  use of stored energy to meet demand might be the least-cost option in the timestep,
+                                  but it may be preserved for subsequent timestep in which the model knows (thanks to
+                                  its perfect foresight) that the same energy will be needed more.
+                              </p>
+                              <p>
+                                  As anticipated, the implict actors in the model have perfect foresight of the future.
+                                  However, it is possible to re-run any energy system configuration, obtained as the
+                                  cost-optimal to meet a given demand scenario, in the so-called "operation" mode. In
+                                  such mode, conceived to stres-test the operational feasibility of any configuration,
+                                  the actors do not have full perfect foresight. Rather, the model operates based on a
+                                  rolling horizon, in which actors have knowledge only of the subsequent 48 h (with the
+                                  number of hours being a customisable parameter).
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                              Key scenario assumptions for Euro-Calliope include energy technology characteristics
+                                  (e.g. fixed and variable costs, efficiency, direct emissions); resource timeseries,
+                                  such as wind, solar and hydroelectric timeseries; demand timeseries for each carrier;
+                                  and capacity expansion maximum potential per technology (i.e. how many additional GW
+                                  of a given technology can be installed at each location), if available.
+                              </p>
+                              <p>
+                                  Key scenario results (outputs) from the Euro-Calliope model include the cost-optimal
+                                  energy system configuration and the cost-optimal hourly dispatch of energy
+                                  (or any other carrier) within the latter. It is worth noting that the resulting energy
+                                  system configuration can be a green field result, if assuming that no existing
+                                  capacity is kept in operation, or a brown field one, in which the capacity expands
+                                  starting from the current one.
+
+                                The outcomes of the model depend on the quality of the abovementioned parameters, and
+                                  sensitivity analysis is always envisaged to complement the results.
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="euro-calliope_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                  Several types of policies can be assessed by Euro-Calliope
+
+                                  <b>Emissions-related policies</b>
+                                  It is possible to impose a limit (carbon budget) on cumulative yearly emissions, as
+                                  well as to modulate the budget across different energy sectors (e.g. 100%
+                                  carbon-neutral power generation, 80% heat generation, etc.).
+                                  It is also possible to include CO2 emissions in the objective formulation such that
+                                  the minimisation of cost is weighted with the minimisation of CO2 emissions, both on
+                                  a yearly and on a hourly basis. This is equivalent to assigning a price to CO2
+                                  emissions.
+
+                                  <b>Energy production policies</b>
+                                  It is possible to define a large variety of energy policies, such as the imposure of a
+                                  certain share of renewables or biofuels in either energy generation or installed
+                                  capacity. As before, this can be modulated across differnt sectors and carriers with a
+                                  high detail
+
+                                  <b>Land use policies</b>
+                                  It is possible to limit the total amount of land occupied in any one location, even at
+                                  the subnational level, if land-use values are defined for each energy technology. Or,
+                                  as for CO2 emissions, it is possible to give an additional price to such land
+                                  occupation and make it feature in the objective function.
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                  The model can provide insights about the impact of alternative feasible energy system
+                                  configurations on a number of SDGs. Clearly on SDG7, in terms of renewable
+                                  penetration, use of bioenergy, etc., but also on SDGs related to climate (SDG13) and
+                                  potentially to others (e.g. health) if additional emission metrics are included.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="euro-calliope_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.energy.2019.01.004</td>
+                                          <td>
+                                              A multi-layer energy modelling methodology to assess the impact of
+                                              heat-electricity integration strategies: the case of the residential
+                                              cooking sector in Italy
+                                          </td>
+                                          <td>
+                                              The electrification of residential cooking energy uses, in italy, is
+                                              beneficial only under high shares of renewables. Otherwise, it increases
+                                              primary energy consumption of natural gas.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.apenergy.2015.04.102</td>
+                                          <td>
+                                              Renewables, nuclear, or fossil fuels? Comparing scenarios for the Great
+                                              Britain electricity system
+                                          </td>
+                                          <td>
+                                              Up to 60% of variable renewable capacity is possible with little cost increase.
+                                              Higher shares require storage, imports or dispatchable renewables such as tidal range.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/j.apenergy.2019.114218
+                                          </td>
+                                          <td>
+                                             Optimal system layout and locations for fully renewable high temperature
+                                              co-electrolysis
+                                          </td>
+                                          <td>
+                                              Many favourable locations for high-temperature co-electrolysis (HTCOE) exist across Europe.
+                                            HTCOE can become economically competitive for currently discussed CO2 prices.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the Euro-Calliope model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+<!--                    <div class="row">-->
+<!--                        <section class="section">-->
+<!--                            <span id="42_references" class="anchor"></span>-->
+<!--                            <h2 class="mb-0 heading-new">References</h2>-->
+
+<!--                        </section>-->
+<!--                    </div>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

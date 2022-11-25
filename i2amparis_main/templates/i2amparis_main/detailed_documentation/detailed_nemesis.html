@@ -1,0 +1,1354 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                                {#Begin NEMESIS#}
+{##}
+                                        <div id="collapse_nemesis">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Short overview</span>
+                                                    <a style="display: none"
+                                                       href="#nemesis_short_overview">Short
+                                                        Overview</a>
+                                                </li>
+                                                <li>
+                                                <div class="panel-group nemesis_key_feauters">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading"
+                                                             style="padding:0px">
+                                                            <h5 class="panel-title"
+                                                                style="background-color:#343a40; padding: 5px">
+                                                                <a data-toggle="collapse"
+                                                                   href="#collapse_nemesis_key_feauters"><i
+                                                                        class="fa fa-caret-right rotate"
+                                                                        style="margin-right: 10px;"></i>Key
+                                                                    features of the NEMESIS model
+
+
+                                                                </a>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapse_nemesis_key_feauters"
+                                                             class="panel-collapse collapse">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    <span>Geographical coverage</span>
+                                                                    <a style="display: none"
+                                                                       href="#nemesis_geographical_coverage">
+                                                                        Geographical coverage</a>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <span>Economic activities coverage</span>
+                                                                    <a style="display: none"
+                                                                       href="#nemesis_economic_act_cov">
+                                                                        Economic activities
+                                                                        coverage</a>
+                                                                </li>
+
+                                                                <li class="list-group-item">
+                                                                    <span>Databases</span>
+                                                                    <a style="display: none"
+                                                                       href="#nemesis_databases">
+                                                                        Databases</a>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <span>The economic core</span>
+                                                                    <a style="display: none"
+                                                                       href="#nemesis_econ_core">
+                                                                        The economic core</a>
+                                                                </li>
+
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </li>
+
+                                                <li class="list-group-item">
+                                                <span>Energy module & emissions granularity</span>
+                                                    <a style="display: none" href="#nemesis_energy_module_emiss_gran">
+                                                                Energy module & emissions
+                                                                granularity
+                                                            </a>
+                                                        </li>
+                                                     <li>
+                                <div class="panel-group nemesis_socioeco_menu">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_nemesis_socioeco_menu"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Socioeconomic dimensions
+
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_nemesis_socioeco_menu"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+
+
+                                      <li class="list-group-item">
+                                                                <span>Introduction</span>
+                                                                <a style="display: none"
+                                                                   href="#nemesis_socioecon_dimesion">
+                                                                    Introduction</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <span>EU demography
+    					                                            </span>
+                                                                <a style="display: none"
+                                                                   href="#nemesis_eu_demography">
+                                                                    EU demography
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                            <span>Financial exogenous variables
+   					                                            </span>
+                                                                <a style="display: none"
+                                                                   href="#nemesis_finac_exo_var">
+                                                                    Financial exogenous variables
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <span>World demand indicators and price</span>
+                                                                <a style="display: none"
+                                                                   href="#nemesis_world_demand_indicator_price">
+                                                                    World demand indicators and
+                                                                    price</a>
+                                                            </li>
+
+                                                            <li class="list-group-item">
+                                                                <span>Socioeconomic indicators</span>
+                                                                <a style="display: none"
+                                                                   href="#nemesis_socioeconomic_indicators">
+                                                                    Socioeconomic indicators</a>
+                                                            </li>
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Some key parameters for climate change mitigation assessment</span>
+                                    <a style="display: none"
+                                       href="#nemesis_key_param_climate_mitigation">
+                                        Some key parameters for climate
+                                        change mitigation assessment</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Substitution elasticity between production factors</span>
+                                    <a style="display: none"
+                                       href="#nemesis_substitution_elasticity">
+                                        Substitution elasticity between
+                                        production factors</a>
+                                </li>
+
+
+                                                        <div class="panel-group nemesis_mitigation_adaptation">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading"
+                                                                     style="padding:0px">
+                                                                <h5 class="panel-title"
+                                                                        style="background-color:#343a40; padding: 5px">
+                                                                    <a data-toggle="collapse"
+                                                                           href="#collapse_nemesis_mitigation_adaptation"><i
+                                                                                class="fa fa-caret-right rotate"
+                                                                                style="margin-right: 10px;"></i>Mitigation/ adaptation
+                                                                            measures and
+                                                                            technologies
+
+
+                                                                    </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapse_nemesis_mitigation_adaptation"
+                                                                 class="panel-collapse collapse">
+                                                                <ul class="list-group">
+                                                                    <li class="list-group-item">
+                                                                        <span>Substitution elasticity between energy sources</span>
+                                                                        <a style="display: none"
+                                                                           href="#nemesis_substitution_elasticity_between_energy_sources">
+                                                                            Substitution
+                                                                            elasticity between
+                                                                            energy sources</a>
+                                                                    </li>
+
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel-group nemesis_mitigation_adaptation_m">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading"
+                                                                 style="padding:0px">
+                                                                <h5 class="panel-title"
+                                                                    style="background-color:#343a40; padding: 5px">
+                                                                    <a data-toggle="collapse"
+                                                                       href="#collapse_nemesis_mitigation_adaptation_m"><i
+                                                                            class="fa fa-caret-right rotate"
+                                                                            style="margin-right: 10px;"></i>Mitigation/ adaptation
+                                                                        measures
+
+
+                                                                    </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapse_nemesis_mitigation_adaptation_m"
+                                                                 class="panel-collapse collapse">
+                                                                <ul class="list-group">
+                                                                    <li class="list-group-item">
+                                                                        <span>Alone or linked</span>
+                                                                        <a style="display: none"
+                                                                           href="#nemesis_alone_or_linked">
+                                                                            Alone or linked</a>
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                        <span>Climate change mitigation policies: a set of assumptions to define</span>
+                                                                        <a style="display: none"
+                                                                           href="#nemesis_climate_change_mitigation_policies">
+                                                                            Climate change
+                                                                            mitigation policies:
+                                                                            a set of assumptions
+                                                                            to define</a>
+                                                                    </li>
+
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li class="list-group-item">
+                                                    <span>Recent publications using the NEMESIS model</span>
+                                                            <a style="display: none"
+                                                               href="#nemesis_recent_puplications">
+                                                                Recent publications using the
+                                                                NEMESIS model
+                                                            </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>References</span>
+                                                    <a style="display: none"
+                                                       href="#nemesis_references">References</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+            </div>
+
+                                        {#End NEMESIS#}
+
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                        <h1 id="nemesis" style="padding-bottom: 1em; padding-top: 1em">NEMESIS - New Econometric Model of Evaluation
+                            by Sectoral Interdependency
+                            and Supply</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_short_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Short overview</h2>
+                            <p>
+                                The NEMESIS model (New Econometric Model of Evaluation by
+                                Sectoral Interdependency and Supply) is a sectoral detailed
+                                macroeconomic model for the European Union (Boitier et al.
+                                2018). It is a system of economic models for every European
+                                country (including the United Kingdom), devoted to study issues
+                                that link economic development, competitiveness, employment and
+                                public accounts to economic policies, and notably all
+                                structural policies involving long term effects.
+                                The essential purpose of the model is to provide a
+                                consolidated framework to realise “Business As Usual"
+                                (BAU) scenarios (or other alternative scenarios),
+                                up to 30 to 40 years, and to assess the socioeconomic
+                                impact of the implementation of all additional
+                                policies not already implemented in the BAU.
+                                The main mechanisms of the model are based on the behaviour of
+                                representative agents: firms, households,
+                                government and rest of the world. From the supply side,
+                                the model distinguishes 30 different economic activities
+                                that produce goods and services through production
+                                functions and, to do so, use production factors: capital,
+                                energy, low and high-qualified labour and other intermediate consumption.
+                                All these economic activities are interrelated by
+                                inter-sectoral exchanges (conversion matrices)
+                                and external trades with other EU countries and the rest of the world.
+                                NEMESIS includes a detailed energy-environment
+                                module that allows the model to deal with climate mitigation policies,
+                                at EU and EU-national level. This module enhances the representation
+                                of the energy-system of each Member
+                                State by detailing the energy used
+                                (ten different products) by each economic activity but also by households.
+                                It also details the power generation sector
+                                by allocating electricity production
+                                between different technologies through diffusion curves.
+                                CO2 emissions from fossil fuel combustion (FFC) are then calculated from fossil
+                                fuel consumption whereas other GHGs
+                                (CO2 from others sources, CH4, N2O, HFCs, PFCs and SF6) are either calculated by
+                                the model (however more roughly than CO2 from fossil fuel combustion) or
+                                calibrated on external studies. Furthermore, the model can be relatively easily
+                                linked to other tools. In case of a linkage with more detailed energy-system models,
+                                NEMESIS is then used to assess the socioeconomic impacts at EU and EU-national level,
+                                with detailed characterisation of the energy-system being delegate to the detailed
+                                energy models.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Key features of the NEMESIS model</h2>
+                            <span id="nemesis_geographical_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographical coverage</h4>
+                            <p>
+                                NEMESIS models each Member State of the European Union (including the United-Kingdom)
+                                . The rest of the world is defined through a set of assumptions according to
+                                economic development, good and services prices, exchange rates, etc.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_economic_act_cov" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Economic activities coverage</h4>
+                            <p>
+                                As NEMESIS is a macroeconomic model, it covers all the economic activities
+                                in each EU Member State, but in each country the economy is divided in 30 different
+                                economic activities of which: one for agriculture, fisheries and forestry, six for
+                                utilities, thirteen for manufacturing activities, one for construction, three for
+                                transport activities and six for services (see the table below).
+
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:10%">No</th>
+                                        <th style="width:40%">Economic activity</th>
+                                        <th style="width:10%">No</th>
+                                        <th style="width:40%">Economic activity</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><font color="green">01</font></td>
+                                        <td><font color="green">Agriculture</font></td>
+                                        <td><font color="#1e90ff">16</font></td>
+                                        <td><font color="#1e90ff">Manufacture of food products; beverages and tobacco
+                                            products</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="red">02</font></td>
+                                        <td><font color="red">Mining and quarrying expect oil and gas</font></td>
+                                        <td><font color="#1e90ff">17</font></td>
+                                        <td><font color="#1e90ff">Manufacture of textiles, wearing apparel, leather and
+                                            related products</font></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><font color="red">03</font></td>
+                                        <td><font color="red">Oil and gas extraction</font></td>
+                                        <td><font color="#1e90ff">18</font></td>
+                                        <td><font color="#1e90ff">Manufacture of paper and paper products; Printing and
+                                            reproduction of recorded media</font></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><font color="red">04</font></td>
+                                        <td><font color="red">Manufacture of paper and paper products; Printing and
+                                            reproduction of recorded media</font></td>
+                                        <td><font color="#1e90ff">19</font></td>
+                                        <td><font color="#1e90ff">Manufacture of rubber and plastic products</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="red">05</font></td>
+                                        <td><font color="red">Manufacture of coke and refined petroleum
+                                            products</font></td>
+                                        <td><font color="#1e90ff">20</font></td>
+                                        <td><font color="#1e90ff">Other manufactures</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="red">06</font></td>
+                                        <td><font color="red">Electricity</font></td>
+                                        <td><font color="#8b4513">21</font></td>
+                                        <td><font color="#8b4513">Construction</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="red">07</font></td>
+                                        <td><font color="red">Water collection, treatment and supply</font></td>
+                                        <td><font color="orange">22</font></td>
+                                        <td><font color="orange">Wholesale and retail trade</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">08</font></td>
+                                        <td><font color="#1e90ff">Manufacture of basic metals</font></td>
+                                        <td><font color="orange">23</font></td>
+                                        <td><font color="orange">Accommodation and food service
+                                            activities</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">09</font></td>
+                                        <td><font color="#1e90ff">Manufacture of other non-metallic mineral
+                                            products</font></td>
+                                        <td><font color="#663399">24</font></td>
+                                        <td><font color="#663399">Land transport and transport via
+                                            pipelines</font></td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">10</font></td>
+                                        <td><font color="#1e90ff">Manufactures of chemicals & pharmaceutical  products</font>
+                                        </td>
+                                        <td><font color="#663399">25</font></td>
+                                        <td><font color="#663399">Air and water transport</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">11</font></td>
+                                        <td><font color="#1e90ff">Manufacture of fabricated metal products, except
+                                            machinery and equipment</font></td>
+                                        <td><font color="#663399">26</font></td>
+                                        <td><font color="#663399">Other transport activities</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">12</font></td>
+                                        <td><font color="#1e90ff">Manufacture of machinery and equipment n.e.c.</font>
+                                        </td>
+                                        <td><font color="orange">27</font></td>
+                                        <td><font color="orange">Information and communication</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">13</font></td>
+                                        <td><font color="#1e90ff">Manufacture of computer, electronic and optical
+                                            products</font></td>
+                                        <td><font color="orange">28</font></td>
+                                        <td><font color="orange">Bank, finance, insurance & real estate</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">14</font></td>
+                                        <td><font color="#1e90ff">Manufacture of electrical equipment</font></td>
+                                        <td><font color="orange">29</font></td>
+                                        <td><font color="orange">Other market services</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">15</font></td>
+                                        <td><font color="#1e90ff">Manufacture of transport equipment</font></td>
+                                        <td><font color="orange">30</font></td>
+                                        <td><font color="orange">Non-market services</font></td>
+                                    </tr>
+
+
+                                    </tbody>
+                                    <caption>List of economic activities covered by NEMESIS</caption>
+                                </table>
+                            </div>
+                            <p><i>
+                                In green: agriculture, fisheries and forestry; in red: utilities, in blue:
+                                manufacturing industries; in brown: construction; in purple:
+                                transport and in orange: services
+                            </i></p>
+
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_databases" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Databases</h4>
+                            <p>
+                                The NEMESIS model is designed to deliver outputs in annual step.
+                                NEMESIS with its level of detail requires a big consolidated
+                                database for its functioning. Data are compiled from numerous
+                                sources (Eurostat, 2018; WIOD - Timmer et al., 2015; EEA, 2019;
+                                etc.) and are post-processed for ensuring their whole accounting coherency.
+                                Thus, the dataset used by the model are frequently updated.
+                                Currently the model is calibrated for the year 2014, but for some data, historical
+                                value goes up 2017, such as for energy consumption and GHG emissions and the model
+                                can deliver output up to 2050.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_econ_core" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">The economic core</h4>
+                            <p>
+                                On the supply side, each sector is modelled as a representative firm determining its
+                                production level and the use of production factors (Capital, low- and high-qualified
+                                labour, energy and other intermediate consumptions) given its expectations on demands
+                                and prices. Nested CES production functions are used to characterise the production
+                                technology with substitution elasticity coming from econometric works or from
+                                literature (see the figure below). Price setting is defined under
+                                monopolistic competition, with constant margin rates, different among
+                                sectors and inter-sectoral exchanges are captured by conversion matrices that
+                                allocate the intermediate consumption (input-output matrices) and investment
+                                demands to economic activities producing the required goods and services.
+                            </p>
+                            <p>
+                                Regarding households, final consumption is calculated as follows: (i) firstly,
+                                the aggregate consumption is computed based on the real disposable income;
+                                (ii) then, the aggregate consumption is allocated among 27 consumption purposes
+                                of durable and non-durable goods. The income that is not consumed results in
+                                savings, which are split between investment in real estate and financial or
+                                monetary assets.
+                            </p>
+                            <p>
+                                The labour market is modelled on the basis of the demand for labour, depending
+                                on the optimisation of production levels done by firms, and its supply, which
+                                is based on population’s age and qualification levels (approximated using
+                                education levels). Wages are determined by augmented <b
+                                    class="tooltip-demo well" data-toggle="tooltip" title='The so-called Philipp Curves are downward-sloping curves resulting from the
+                                negative correlation between unemployment rates and inflation rates.'>Philipps curves</b>, and
+                                they are calculated separately for high- and low-qualified workers.
+                            </p>
+                            <p>
+                                As for international trade, each EU country exports to (and imports from)
+                                two groups of trade partners: intra-EU and extra-EU countries. The determinants
+                                of trade are the relative prices of domestic and foreign goods and services,
+                                capturing the competitiveness effect, and the volume of exchanges, which is
+                                approximated by sectoral demand for goods and services. Different prices are
+                                set for intra-EU and extra-EU exports (and imports), to account for the
+                                differences in trade costs.
+                            </p>
+                            <p>
+                                Regarding public finances, the model incorporates both subsidies and the main
+                                forms of taxation, such as taxes on production and imports, including most
+                                notably VAT, taxes on incomes and wealth, social contributions, and taxes on
+                                capital. VAT rates are modelled on the basis of the actual VAT rates
+                                (as published by European Union, DG TAXUD, 2019). Carbon price can also be
+                                introduced in the model and different recycling options can be assessed.
+                                Finally, public finance is relatively detailed allowing the model to
+                                provide indicators on government’ expenditures, incomes and balances.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/nemesis_economic_core.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">General scheme of the NEMESIS model'
+                                        economic core
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_energy_module_emiss_gran" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Energy module & emissions granularity</h2>
+                            <p>
+                                Besides economic core, the model includes a detailed energy-environment module. For
+                                each economic activity, the energy demand (E in the figure below) is split,
+                                thanks to a nested CES function, in ten different energy sources (electricity,
+                                oil, gas, solid fuel, biomass including wood, biogas, biofuel and other biomass,
+                                geothermal and industrial and urban wastes). Furthermore, the “electricity”
+                                sector is not modelled as other sectors, there exists a specific modelling
+                                for power generation in order to properly represent energy mix capability in
+                                power generation. For this purpose, fourteen different power generation
+                                technologies are distinguished, namely: nuclear, hydro, gas, oil,
+                                solid fuel, wind (onshore and offshore), geothermal, solar
+                                (large scale PV), industrial waste and biomass and waste.
+                                Nuclear and hydroelectric power generation technologies are set exogenous because,
+                                this setting is assumed to reflect more energy policy choices of each EU member
+                                state than only pure economic choices. Other production sources are endogenous
+                                and are modelled through diffusion curves (logistic function).
+                            </p>
+
+                            <div class="wrapper_table">
+
+                                <b>Energy products and power generation technologies covered by the NEMESIS model</b>
+                            <div class="my_table table-responsive" style="width: 50%; height:100%; float: left">
+
+
+                                <table class="table" width="50%">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2" style="width:100%">Energy products</th>
+
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><font color="#8b0000">Fossil fuels</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>(of which)</td>
+                                        <td><font color="#8b0000">Oil</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="#8b0000">Gas</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                        </td>
+                                        <td><font color="#8b0000">Coal</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">Electricity</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Biomass</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>(of which)</td>
+                                        <td><font color="green">Wood</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="green">Biomass</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="green">Biofuels</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="green">Others</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Solar</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><font color="#1e90ff">Industrial and urban wastes</font></td>
+                                    </tr>
+
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            <div class="my_table table-responsive" style="width: 50%; height: 100%; float: right">
+
+
+                                <table class="table" width="50%">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2" style="width:100%">Power generation technology</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><font color="#8b0000">Fossil fuels</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>(of which)</td>
+                                        <td><font color="#8b0000">Coal</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="#8b0000">Oil</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="#8b0000">Gas</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">Nuclear*</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Geothermal*</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Hydro*</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Wind</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>(of which)</td>
+                                        <td><font color="green">Onshore</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="green">Offshore</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Solar</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>(of which)</td>
+                                        <td><font color="green">PV</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="green">CSP</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Biomass & wastes</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>(of which)</td>
+                                        <td><font color="green">Wood</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="green">Biogas</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><font color="green">Others</font></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="green">Tidal</font></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font color="#1e90ff">Industrial wastes</font></td>
+                                        <td></td>
+                                    </tr>
+
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <p><i>In brown: CO2 emitting technologies, in green: renewable
+                                technologies (only 50% for urban wastes) and in blue other technologies.
+                                *: production from these technologies is exogenous.</i></p>
+                            <p>
+                                From the energy consumption calculated, the CO2 emissions from fossil fuel
+                                combustion can be quantified. For <b
+                                    class="tooltip-demo well" data-toggle="tooltip" title='Implementation of abatement curves for these (non-CO2) emissions, especially in
+                                agriculture, is ongoing.'>other
+                                emissions</b>, except for land use
+                                emissions, either exogenous values coming from external studies are
+                                assumed or a basic modelling with emissions coefficient indexed on
+                                emitting economic activity is used (as detailed as the model allows).
+                            </p>
+                            <p>
+                                As the geographical coverage of the model is limited to the EU, the
+                                model does not include emissions impacts on climate such as radiative
+                                forcing. The model can only implement climate change mitigation policies on
+                                the basis of GHG emissions targets. Finally, the model does not
+                                currently include neither impact of climate change on the economic activity
+                                (damage function) nor climate change adaptation options.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_socioecon_dimesion" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Socioeconomic dimensions</h2>
+                            <p>
+                                The socioeconomic dimension is essential in the NEMESIS, as on the one hand, it
+                                serves as drivers (exogenous variables) of the modelling simulations and on the
+                                other hand large a part of the model outputs concern socioeconomic variables.
+                                European demographics, particularly working age population, the economic context
+                                outside the EU (including GDP growth), <b
+                                    class="tooltip-demo well" data-toggle="tooltip" title='There is a version of the NEMESIS model including endogenous growth properties
+                                (see e.g. Brécard et al., 2006 and Ravet et al., 2019) however, this will not be used
+                                in the PARIS REINFORCE project, but rather a version more detailed in terms of energy and climate change mitigation options.'>exogenous
+                                financial variables and labour hypotheses</b>
+                                are the main drivers of the model whereas EU GDP growth is an
+                                output
+                                of the model. Nevertheless, in several multi-model analyses of climate change
+                                mitigation options, the socioeconomic characterisation of scenarios already
+                                includes GDP projections as in the case for the Shared Socioeconomic Pathways or
+                                SSP, (Riahi et al., 2017) including three sets of GDP projections (Cuaresma, 2017;
+                                Dellink et al., 2017 and Leimbach et al., 2017). Thus, when such socioeconomic
+                                characterisation exists the model can be constrained in order to replicate, as
+                                close as possible, the EU GDP projections.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_eu_demography" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">EU demography</h4>
+                            <p>
+                                The first set of inputs required by NEMESIS is related to European demographics.
+                                This is essential to define the labour force and then the state of the labour
+                                market, and, to a lesser extent, its influence on the households’ final
+                                consumption. For NEMESIS, the demographic data include population by age
+                                groups and by qualification for each EU country. The age groups that are
+                                distinguished are: [0-14], [15-24], [25-54], [55-64], [65-74] and [75-max].
+                                Furthermore, demographic data for NEMESIS required the level of qualification,
+                                it is measured from two different levels of educational attainment:
+                            </p>
+                            <ul>
+                                <li>low-qualified including <b
+                                        class="tooltip-demo well" data-toggle="tooltip" title='International Standard Classification of Education 2011.'>ISCED
+                                    </b> from 0 to 4; and </li>
+                                <li>highly-qualified including ISCED from 5 to 8.</li>
+                            </ul>
+                            <p>
+                                Historical data come from Eurostat (2017) while, usually,
+                                population projections by age group come from Eurostat (2018b); however
+                                alternative population projections (with short-term adjustments to ensure
+                                consistency between historical data and projections) can be used, including
+                                the SSPs (KC and Lutz, 2017) that feature projections by qualification levels
+                                (educational level attainment).
+                            </p>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_finac_exo_var" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Financial exogenous variables</h4>
+                            <p>
+                                In NEMESIS, the capital market is not modelled and the interest and exchange rates
+                                are both exogenous. It is therefore necessary to describe the financial context in
+                                which the EU economies are expected to operate in future years. These assumptions
+                                can be modified for scenarios including specific evolutions on interest or exchange
+                                rates. In the model, while all variables are defined in euros, the exchange rates are
+                                defined (i) between the euro and the Rest of the World currencies and (ii) between
+                                the euro and the currencies of the EU countries that do not belong to the Eurozone.
+                                These assumptions are based on external studies, mainly focusing on the €/$ exchange
+                                rate. For interest rates, that are relevant mainly for the user cost of capital and
+                                agents' accounts, projections are also based on external studies or on specific
+                                assumptions related to the scenario definition.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_world_demand_indicator_price" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">World demand indicators and price</h4>
+                            <p>
+                                The Rest of the World (non-EU countries) regions are not directly modelled in
+                                NEMESIS and it is necessary to make assumptions on the evolution of global
+                                demand for the different products and on global prices of the different
+                                commodities that are traded by EU countries. Generally, the exogenous variables
+                                representing the demands for the EU coming from the rest of the World are
+                                calculated from the WIOD2016 dataset (Timmer et al., 2015). The methodology
+                                uses the World Input-Output Table (WIOT), which retraces the inter-industrial
+                                exchanges between sectors, with also the geographical origin of the products
+                                used. The combination of these matrices with assumptions on the growth of GDP
+                                in the different countries outside EU allows to calculate vectors of addressed
+                                demands per country and per sector. The expected growth of GDP for non-EU countries
+                                are exogenously defined and based on external studies, SSP scenario could be used
+                                here or alternatively, GDP for non-EU countries and even sectoral value added if
+                                available could come from other models, as a part of an operational linkage between
+                                a global macroeconomic model and NEMESIS.
+                            </p>
+                            <p>
+                                The second set of exogenous variables correspond to the price of the imported goods
+                                and services from the rest of the World defined for each country and sector. These
+                                are defined exogenously on the basis of past trends or on external studies when
+                                available.
+                            </p>
+                            <p>
+                                The last set of exogenous variables defining the general context of the World
+                                economy is related to the prices of raw materials and notably of fossil fuels
+                                (oil, gas and coal). Here again, fossil fuel prices could be an element of
+                                linkage between a global IAM, in which fossil fuels market are modelled, and
+                                the NEMESIS model.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_socioeconomic_indicators" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Socioeconomic indicators</h4>
+                            <p>
+                                NEMESIS can deliver numerous economic indicators at EU and country level.
+                                There are three main layers of economic indicators:
+                            </p>
+                            <ul>
+                                <li>
+                                    macro-economic, such as GDP (European and EU-national) and its counterparts
+                                    (final consumption, investment, exports, imports, etc.), unemployment rates, etc.;
+                                </li>
+                                <li>
+                                    sectoral, such as production, value added and employment per sector; and
+                                </li>
+                                <li>
+                                    agent accounts for: government, non-financial corporations, financial
+                                    corporations, households including non-profit institutes serving households
+                                    (NPISH), and the rest of the world.
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_key_param_climate_mitigation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Some key parameters for climate change mitigation
+                                assessment</h2>
+                            <p>
+                                The parameters of behavioural equations are either estimated by econometrics works
+                                or calibrated. It is the case for the production factors (capital, labour, energy
+                                and intermediate consumption), for households’ consumption purposes or the wage
+                                equation that describes, roughly, the labour market functioning. Even if a large
+                                set of parameters are important when assessing EU climate change mitigation
+                                policies, we provide below some values or ranges for a restricted list of them
+                                that we assume the most important for the assessment of climate mitigation policy
+                                with the model.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_substitution_elasticity" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Substitution elasticity between production factors</h4>
+                            <p>
+                                The elasticities of substitution between production factors in the nested constant
+                                elasticity of substitution (CES) production function are differentiated for each
+                                production factor and for each economic activity. The figure below presents the
+                                general structure of the nested CES production function including the range of
+                                the elasticity of substitution at each level of the nesting (within brackets).
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/nemesis__nested_ces.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Structure of the nested CES production
+                                        functions in NEMESIS
+                                    </p>
+
+                                </div>
+                            </div>
+                            <p><i>NB: Y is the production, A: the innovation services, X, KLE, KLHSE, and KE are
+                                compounds inputs, M: intermediate consumptions except energy, LLS: low-qualified
+                                labour, LHS: high-qualified labour, K: the capital stock and E: the energy
+                                consumption.</i></p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <span id="nemesis_substitution_elasticity_between_energy_sources" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Substitution elasticity between energy sources</h4>
+                            <p>
+                                Similarly, the following figure presents the general structure of the nested CES function
+                                allowing the calculation of the energy demand by source, with the value of the
+                                substitution elasticity that is calibrated for each economic activity.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/nemesis_energy_producy_nested_ces.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Energy product nested CES function
+                                    </p>
+
+                                </div>
+                            </div>
+                            <p><i>NB: E: the energy consumption, ELEC: the electricity consumption, EOTH: a
+                                compound of other energy products than electricity, OIL: petroleum products
+                                consumption, GAS: natural gas consumption, COAL: solid fossil fuels consumption
+                                and Oth. E: the consumption other energy products (individualised by product).</i></p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures</h2>
+                            <span id="nemesis_alone_or_linked" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Alone or linked</h4>
+                            <p>
+                                Usually, there exists two different possibilities for the NEMESIS model to deal
+                                with climate change mitigation actions either using the model including the
+                                energy and environment module or using NEMESIS linked with other modelling tools,
+                                typically more detailed and accurate to assess these actions, especially
+                                energy-system models. In the first case, climate change mitigation essentially
+                                corresponds to complying with a pre-defined annual GHG emissions binding target
+                                through the implementation of economic instruments in the model, such as carbon
+                                prices. In the second case, climate change mitigation policies are implemented
+                                (at least partially, when the linkage concerns only specific sectoral tools) in
+                                the soft-linked tool(s). This inter-linkage aims at expressing climate change
+                                mitigation costs as calculated by the coupled tool(s) in the NEMESIS model and it
+                                requires significant work to ensure consistency between variables exchanged
+                                among all tools, including in particular a proper interpretation of the meaning
+                                of these variables. Some of past studies of both settings are included in the following table.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_climate_change_mitigation_policies" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Climate change mitigation policies: a set of assumptions to
+                                define</h4>
+                            <p>
+                                Finally, and more particularly when NEMESIS is used as a standalone model, i.e.
+                                without linking it with other modelling tools, the implementation of climate change
+                                mitigation options requires the definition of assumptions on the policy design, on
+                                the economic instruments implemented and on what is happening in the rest of the world.
+                            </p>
+                            <p>
+                                The model can deal with different economic instruments for the implementation of
+                                climate change mitigation in the EU: “universal” carbon prices, sectoral and/or
+                                nationally differentiated carbon prices, support to “green” technologies, permit
+                                allocation with different allocation rules, etc. According to the economic
+                                instruments implemented, it is also necessary to define the recycling scheme
+                                of the potential revenues produced by a new taxation (or the origin of the
+                                resources in the case of public financial supports), such as reduction of other
+                                taxes or financial compensation to economic agents, etc. All these aspects must
+                                be defined in the design of the scenario, because they will impact the outputs of
+                                the model.
+                            </p>
+                            <p>
+                                Beside internal EU policy, it is also important to define what is happening in the
+                                rest of the world. Indeed, the characterisation of the socioeconomic impacts of
+                                mitigation options implemented in the rest of the world is required either on
+                                the basis of exogenous assumptions or drawing from results of interlinked global
+                                modelling tools, as it affects the output of the NEMESIS model, as presented in
+                                Section 3.5.4.3. For instance, a unilateral implementation of a stringent climate
+                                change mitigation policy in EU can have negative impacts on the competitiveness of
+                                EU firms and can even lead to new design of policy options in the EU, such as carbon
+                                border tax or free permit allowance in the EU emissions trading system (ETS).
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_recent_puplications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications using the NEMESIS model</h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:25%">Paper</th>
+                                        <th style="width:25%">Topic</th>
+                                        <th style="width:25%">Key findings</th>
+                                        <th style="width:25%">Linkage with other modelling tools</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            France Stratégie, (2019)
+                                        </td>
+                                        <td>
+                                            Assessing the French social value of carbon – A multi-model analysis
+                                        </td>
+                                        <td>
+                                            The report provides a comprehensive overview of analyses enabling
+                                            definition of a trajectory of values to be taken into account if
+                                            we are to achieve the goal of net zero GHG emissions by 2050 in France.
+                                            Among other analyses, a multi-model analysis has been achieved using
+                                            two different kind of models: macroeconomic models and energy-system
+                                            models. Finally, the report recommends, for 2030, to put forward a
+                                            shadow price of €250 per ton of CO2e. By 2050 it is expected to align
+                                            with the estimated costs of the enabling technologies required for
+                                            decarbonisation —therefore a cautious range of €600 to €900/ton of CO2e.
+                                        </td>
+                                        <td>No</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Muller, et al., (Forthcoming)
+                                        </td>
+                                        <td>
+                                            Carbon footprint of the French economy and scenarios of carbon
+                                            border adjustment in EU
+                                        </td>
+                                        <td>
+                                            Based on the calculation of the carbon footprint embodied in the EU
+                                            imports (done in the first parts of the report), the last part of
+                                            the report presents the macroeconomic effects (on GDP and employment)
+                                            in the European Union and in France of adopting carbon border adjustment
+                                            mechanisms. The results show that the implementation of a tax on
+                                            the carbon content of EU importations can reduce the negative impacts
+                                            of stringent GHG mitigation policies, within the EU, on competitiveness
+                                            and furthermore with more positive effects when incomes from this tax
+                                            are redistributed to European economic agents.
+                                        </td>
+                                        <td>No</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Duscha, et al., (2016)
+                                        </td>
+                                        <td>
+                                            Impact of RES deployment on employment in EU
+                                        </td>
+                                        <td>
+                                            The paper assesses whether renewable energy deployment in Europe can
+                                            provide a “triple dividend”, at which ambition levels of 2030 RES
+                                            targets, and what the role of the support policy scheme for electricity
+                                            is. It applies two types of models: a detailed techno-economic
+                                            sectoral model of the deployment of RES and two macroeconomic models.
+                                            Our findings suggest that up to 2030 our triple-dividend hypothesis
+                                            holds even under a declining role of Europe as a technology provider
+                                            for the rest of the world. More ambiguous is the order of magnitude
+                                            of the effects on GDP and employment, which differs noticeably
+                                            depending on the economic theory applied in the different models.
+                                            Nevertheless, both models predict slightly higher GDP and employment
+                                            in 2030 when implementing ambitious RES targets.
+                                        </td>
+                                        <td>
+                                            Yes
+                                            (with GREEN-X a detailed modelling tool for renewables)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Enerdata, et al., (2015)
+                                        </td>
+                                        <td>
+                                            “Energy-Air-Climate" scenarios for France up to 2035
+                                            (Multi-model analysis)
+                                        </td>
+                                        <td>
+                                            The report provides a quantified scenario of Energy-Air-Climate for
+                                            France up to 2035. The quantification has been done with the support of
+                                            different modelling tools (sectoral energy system, global energy-system,
+                                            macroeconomic model). Three scenarios have been quantified: a
+                                            reference scenario including existing policy instruments; a more
+                                            ambitious scenario, as regards of GHG emissions mitigation
+                                            including additional policy measures; and a very ambitious
+                                            scenario with reinforced GHG mitigation policies.
+                                            These are used as benchmark scenarios for the
+                                            French climate policies. Here, the NEMESIS model
+                                            has assessed the socioeconomic impact of the two ambitious scenarios in
+                                            terms of GDP, employment and detailed economic activity.
+                                        </td>
+                                        <td>
+                                            Yes
+                                            (with POLES, an energy-system model and micro-analyses)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Capros, et al., (2014)
+                                        </td>
+                                        <td>
+                                            European decarbonisation pathways under alternative technological and
+                                            policy choices: A multi-model analysis
+                                        </td>
+                                        <td>
+                                            This paper explores in a systematic manner the required energy system
+                                            transformation and the associated costs incurred for the EU in order
+                                            to meet the decarbonisation targets as specified in the EU Roadmap
+                                            2050, i.e. the 80% GHG emissions reduction target and the equivalent
+                                            carbon budget by 2050. Seven large-scale energy-economy models, are
+                                            employed for the simulation and quantification of alternative EU
+                                            decarbonisation pathways under technological limitations and
+                                            climate policy delays. The models’ results show that the EU
+                                            emissions reduction target is feasible with currently known
+                                            technological options at low costs (lower than 1% of GDP in
+                                            the period 2015–2050).
+                                        </td>
+                                        <td>No</td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>List of recent publications using the NEMESIS model</caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <!--Add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="nemesis_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Boitier, B., Fougeyrollas, A., Le Mouël, P., & Zagamé, P. (2018). NEMESIS Model:
+                                Full description. Tech. rep., SEURECO.
+                            </p>
+                            <p>
+                                Timmer, M. P., Dietzenbacher, E., Los, B., Stehrer, R., & Vries, G. J. (2015).
+                                An Illustrated User Guide to the World Input-Output Database: the Case of Global
+                                Automotive Production. Review of International Economics, 23, 575-605.
+                                doi:10.1111/roie.12178
+                            </p>
+                            <p>
+                                Dellink, R., Chateau, J., Lanzi, E., & Magné, B. (2017). Long-term economic growth
+                                projections in the Shared Socioeconomic Pathways. Global Environmental Change, 42,
+                                200-214. doi:10.1016/j.gloenvcha.2015.06.004
+                            </p>
+                            <p>
+                                Leimbach, M., Kriegler, E., Roming, N., & Schwanitz, J. (2017). Future growth patterns
+                                of world regions – A GDP scenario approach. Global Environmental Change, 42, 215-225.
+                                doi:10.1016/j.gloenvcha.2015.02.005
+                            </p>
+                            <p>
+                                Riahi, K., Vuuren, D. P., Kriegler, E., Edmonds, J., O'Neill, B. C., Fujimori, S.,
+                                N. Bauer, K. Calvin, R. Dellink, O. Fricko, W. Lutz, A. Popp, J. Crespo Cuaresma, S. KC,
+                                M. Leimbach, L. Jiang, T. Kram, S. Rao, J. Emmerling, K. Ebi, T. Hasegawa, P. Havlik,
+                                F. Humpenöder, .L. Aleluia Da Silva, S. Smith, E. Stehfest, V. Bosetti, J. Eom,
+                                D. Gernaat, T. Masui, J. Rogelj, J. Strefler, L. Drouet, V. Krey, G. Luderer,
+                                M. Harmsen, K. Takahashi, L. Baumstark, J. C. Doelman, M. Kainuma, Z. Klimont,
+                                G. Marangoni, H. Lotze-Campen, M. Obersteiner, A. Tabeau and Tavoni, M. (2017).
+                                The Shared Socioeconomic Pathways and their energy, land use, and greenhouse gas
+                                emissions implications: An overview. Global Environmental Change, 42, 153-168.
+                                doi:10.1016/j.gloenvcha.2016.05.009
+                            </p>
+                            <p>
+                                Muller, S., Boitier, B., Fougeyrollas, A., Lai, F., Beylot, A., & Villeneuve,
+                                J. (Forthcoming). L'empreinte carbone de la demande finale intérieure et des
+                                importations de la France - Comparaison des bases de données, focus sur la filière des
+                                métaux et analyse des vulnérabilités. IODA research project Final Report, ADEME.
+                            </p>
+                            <p>
+                                Duscha, V., Fougeyrollas, A., Nathani, C., Pfaff, M., Ragwitz, M., Resch, G.,
+                                Schade, W., Breitschopf, B. and Walz, R. (2016, 8). Renewable energy deployment in
+                                Europe up to 2030 and the aim of a triple dividend. Energy Policy, 95, 314-323.
+                                doi:10.1016/j.enpol.2016.05.011
+                            </p>
+                            <p>
+                                Enerdata, Energies Demain, Seureco, Citepa, Mines ParisTech, & Armines. (2015).
+                                Scénarios prospectifs Energie - Climat - Air pour la France à l’horizon 2035.
+                                Rapport Final - Synthèse des résultats.
+                            </p>
+                            <p>
+                                Capros, P., Paroussos, L., Fragkos, P., Tsani, S., Boitier, B., Wagner, F., Busch, S.,
+                                Resch, G., Blesl, M., and Bollen, J. (2014). European decarbonisation pathways under
+                                alternative technological and policy choices: A multi-model analysis. Energy Strategy
+                                Reviews, 2, 231-245. doi:10.1016/j.esr.2013.12.007
+                            </p>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,76 @@
+/*
+#1 = 417630
+#2 = 417630
+*/
+a {
+	color: #828f30;
+}
+a:hover {
+	color: #828f30;
+}
+
+/* menu */
+.nav>li>a:hover {
+	color: #97ae21;
+}
+
+.navbar .navbar-nav > .active > a {
+	/*color: #97ae21;*/
+}
+.navbar .navbar-brand:hover {
+	color: #97ae21;
+}
+
+/* flexslider */
+.flex-control-paging li a {
+	background: #828f30;
+}
+
+.flex-direction-nav a:hover{
+	background-color:#828f30;
+}
+
+.testimonial span.author a {
+	color: #828f30;
+}
+
+/* --- icon box hover --- */
+.hi-icon-effect-5 .hi-icon {
+	color: #828f30;
+	box-shadow: 0 0 0 4px #828f30;
+}
+.no-touch .hi-icon-effect-5 .hi-icon:hover {
+	background: #828f30;
+	box-shadow: 0 0 0 8px  #828f30;
+}
+
+
+/* portfolio */
+.portfolio-item .portfolio-desc {
+	background: #828f30;
+}
+
+/* btn */
+.btn-theme {
+  background: #828f30;
+}
+.btn-theme:hover,.btn-theme:focus,.btn-theme:active{
+  background: #828f30;
+}
+.btn-cta,.btn-cta.btn-lg {
+  background: #828f30;
+  border-color: #828f30;
+}
+
+.btn-cta:focus,.btn-cta:active{
+   border-color: #828f30;
+}
+
+/* footer */
+.social-circle li a {
+	background:#828f30;
+}
+
+a.scrollup{
+	background:#828f30;
+}

@@ -1,0 +1,777 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Dynamic Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+    <style>
+        {#        .model-list svg {#}
+        {#            margin-right: 0.6em;#}
+        {#            margin-left: 0.6em;#}
+        {#            margin-top: 0.2em;#}
+        {#            margin-bottom: 0.2em;#}
+        {##}
+        {#        }#}
+        {##}
+        {#        .model-list svg {#}
+        {#            cursor: pointer;#}
+        {#        }#}
+        {##}
+        {#        .model-list svg text {#}
+        {#            fill: #777#}
+        {#        }#}
+        {##}
+        {#        .model-list rect {#}
+        {#            fill: rgba(77, 77, 77, 0.31);#}
+        {#            stroke: rgba(64, 64, 64, 0.75);#}
+        {#            stroke-width: 1;#}
+        {#        }#}
+        {##}
+        {#        .model-list svg:hover rect {#}
+        {#            fill: rgba(151, 174, 33, 0.8);#}
+        {#            stroke: #5e6d13e6;#}
+        {#            stroke-width: 2;#}
+        {#        }#}
+        {##}
+        {#        .model-list svg:hover text {#}
+        {#            fill: rgba(255, 255, 255, 0.91)#}
+        {#        }#}
+
+        .model-list div.not-selected {
+            opacity: 0.7;
+        }
+
+        .model-list div:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        {#        .model-list svg:hover {#}
+        {#            -webkit-animation-name: wiggle;#}
+        {#            -ms-animation-name: wiggle;#}
+        {#            -ms-animation-duration: 200ms;#}
+        {#            -webkit-animation-duration: 200ms;#}
+        {#            -webkit-animation-iteration-count: 1;#}
+        {#            -ms-animation-iteration-count: 1;#}
+        {#            -webkit-animation-timing-function: ease-in-out;#}
+        {#            -ms-animation-timing-function: ease-in-out;#}
+        {#        }#}
+
+        .model-list div:hover {
+            -webkit-animation-name: wiggle;
+            -ms-animation-name: wiggle;
+            -ms-animation-duration: 200ms;
+            -webkit-animation-duration: 200ms;
+            -webkit-animation-iteration-count: 1;
+            -ms-animation-iteration-count: 1;
+            -webkit-animation-timing-function: ease-in-out;
+            -ms-animation-timing-function: ease-in-out;
+        }
+
+        @-webkit-keyframes wiggle {
+            0% {
+                -webkit-transform: rotate(1deg);
+            }
+            25% {
+                -webkit-transform: rotate(-1deg);
+            }
+            50% {
+                -webkit-transform: rotate(3deg);
+            }
+            75% {
+                -webkit-transform: rotate(-0.5deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+
+        @-ms-keyframes wiggle {
+            0% {
+                -ms-transform: rotate(0.5deg);
+            }
+            25% {
+                -ms-transform: rotate(-0.5deg);
+            }
+            50% {
+                -ms-transform: rotate(1deg);
+            }
+            75% {
+                -ms-transform: rotate(-2.5deg);
+            }
+            100% {
+                -ms-transform: rotate(0deg);
+            }
+        }
+
+        @keyframes wiggle {
+            0% {
+                transform: rotate(1deg);
+            }
+            25% {
+                transform: rotate(-1deg);
+            }
+            50% {
+                transform: rotate(3deg);
+            }
+            75% {
+                transform: rotate(-0.5deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        {#        .model-list svg {#}
+        {#            width: 8.6rem;#}
+        {#            height: 4rem;#}
+        {#        }#}
+        {##}
+        {#        .model-list svg rect {#}
+        {#            width: 8.6rem;#}
+        {#            height: 4rem;#}
+        {#        }#}
+
+        .granularities img {
+            margin: 0.2rem;
+            width: 3.2em;
+        }
+
+        .tooltip-demo {
+            box-shadow: none;
+        }
+
+        .model-list i.fa-info-circle:hover {
+            cursor: help;
+        }
+
+        .model-list i.fa-info-circle {
+            display: none;
+        }
+
+        .model-list div:hover i.fa-info-circle {
+            display: inline-block;
+        }
+
+        .rounded-corners-el {
+            border-radius: 4px;
+        }
+
+    </style>
+    <style>
+        .model-filtering {
+            padding: 0 !important;
+            margin-left: 1em !important;
+        }
+    </style>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <!-- =======================================================
+      Theme Name: Green
+      Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+
+<body>
+
+{% include "i2amparis_main/dynamic_documentation/dynamic_doc_navigation_bar.html" %}
+
+<div class="main-page" style="margin-top: 80px; height: 100%">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="width: 99%">
+        <div class="main-content">
+            <div class="row" style="margin-bottom: 1em">
+                <h3 style="text-align: center ;margin-bottom: 1.0em; width:100%">
+                    Models</h3>
+                <p style="display: inline-block; margin-left: 2em;">Filter models by project:</p>
+                <select class="desc_text take_up_space model-filtering " placeholder="Select a Project"
+                        id="mod_filtering_select">
+                    <option value="All">All Models</option>
+                    <option value="Paris Reinforce">PARIS REINFORCE Models</option>
+                    <option value="NDC ASPECTS">NDC ASPECTS Models</option>
+                    <option value="ENCLUDE">ENCLUDE Models</option>
+                </select>
+                <div class="model-list tooltip-demo large"
+                     style="overflow: auto;  text-align: center">
+                    {% for model,json in buttons.items %}
+                        {% if model == selected_model_name %}
+                            <div class="col selected model-obj" data-link="{{ model }}"
+                                 data-project="{{ json.projects }}"
+                                 style="overflow: visible; padding: 0;position: relative;display: inline-block;  margin: 0.2em 1em 0.2em 1em; width: 9em;vertical-align: top">
+                            <i style="position: absolute;left: 1em;top:1em;font-size: 0.9em;z-index: 1050;color:#f7f7f7;"
+                               class="fa fa-info-circle"></i>
+                            {#                                    <i style="position: absolute;right: 0.6em;bottom:1.3em;font-size: 0.6em;color: #828f38"#}
+                            {#                                       class="fa fa-check"></i>#}
+                            <a href="/dynamic_doc/{{ model }}/?format={{ template_format }}#model-characteristics">
+                                <img class="selected rounded-corners-el"
+                                     style="width:8em; margin: 0.5em 0.1em 0.5em 0.1em "
+                                     src="/static/{{ sel_icons }}/colored/{{ json.icon }}"
+                                     data-toggle="tooltip" data-placement="auto"
+                                     title='<p>{{ json.description }}</p>'>
+                            </a>
+                        {% else %}
+                            <div class="col not-selected model-obj" data-link="{{ model }}"
+                                 data-project="{{ json.projects }}"
+                                 style="overflow: visible; padding: 0;position: relative;display: inline-block;  margin: 0.2em 1em 0.2em 1em; width: 9em;vertical-align: top ">
+                            <i style="position: absolute;left: 1em;top:1em;color:#cfd0d2;font-size: 0.9em;z-index: 1050"
+                               class="fa fa-info-circle"></i>
+                            <a href="/dynamic_doc/{{ model }}/?format={{ template_format }}#model-characteristics">
+                                <img class="not-selected rounded-corners-el"
+                                     style="width:8em; margin: 0.5em 0.1em 0.5em 0.1em "
+                                     src="/static/{{ sel_icons }}/grey/{{ json.icon }}"
+                                     data-toggle="tooltip" data-placement="auto"
+                                     title='<p>{{ json.description }}</p>'>
+                            </a>
+                        {% endif %}
+                    <div class="long_title"
+                         style="font-weight:400;color:#777;font-size: 0.6em; text-align: center;line-height: 1.5em; margin-top: 0.5em;">{{ json.long_title }}</div>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div style="text-align: left;margin-bottom: 2em; margin-top: 1em;margin-left: 2em"><span
+                        style="font-size: 1.8em">*</span><span
+                        style="font-size: 0.8em">Models outside the PARIS REINFORCE project</span>
+                </div>
+                <div class="row" style="margin: 1em">
+                    <span style="position: relative;top:-7em" id="model-characteristics"></span>
+                    <div class="col-sm-12 col-md-6">
+                        <h3 style="text-align: center">Geographic Coverage of {{ selected_model_title }}</h3>
+                        <div style="height:29em" id="chartdiv"></div>
+                        <div style="margin-top: 0.5em" class="row">
+
+                            <div
+                                    style="font-size: 0.7em;margin: 1em;line-height: 1.1em;font-weight: 500">
+                                <p>Note: Hover over the map to see the model's spatial coverage.</p>
+                                <p><i class="fa fa-circle" style="color: #dfdfdf;margin-right: 0.5em"></i> Grey
+                                    indicates
+                                    non-availability (i.e. areas not covered). </p>
+                                <p><i class="fa fa-circle" style="color: #8a941f;margin-right: 0.5em"></i>Green colour
+                                    indicates national coverage (i.e. countries represented at the country-level.</p>
+                                <p>For countries not represented with national granularity, same colour for multiple
+                                    countries indicates countries covered as part of the same region. Pop-up title on
+                                    mouse
+                                    over each covered country displays Name of Region (Name of Country)</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="container col-sm-12 col-md-6 categories granularities"
+                         style="margin: 0;overflow: visible!important;z-index: 1;top:2em">
+                        <div class="row">
+                            <h4 class="col-sm-6 col-md-2"
+                                style="display: inline-block; position:relative; font-size:0.9em;padding:0">Sectors</h4>
+                            <div class="col-sm-6 col-md-10 tooltip-demo well"
+                                 style="display: inline-block; background:transparent; box-shadow:none">
+                                {% for k,vv in granularities.Sectors.items %}
+                                    <img
+                                            style="
+                                   background: transparent; padding: 0;"
+                                            {% if vv.is_enable == 'green' %}
+                                            src="/static/{{ sel_icons }}/colored/{{ vv.icon }}"
+                                            {% else %}
+                                            src="/static/icons/grey/{{ vv.icon }}"
+                                            {% endif %}
+                                            class="muted rounded-corners-el"
+                                            {% if vv.html == "" %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% elif vv.is_enable == 'grey' %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% else %}
+                                                data-toggle="tooltip" title='{{ vv.html }}' >
+                                            {% endif %}
+
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4 class="col-sm-6 col-md-2"
+                                style="position:relative;  font-size:0.9em;  padding:0">Policy</h4>
+                            <div class="col-sm-6 col-md-10 tooltip-demo well"
+                                 style="display: inline-block;background:transparent; box-shadow:none">
+                                {% for k,vv in granularities.Policy.items %}
+                                    <img
+                                            style="
+                                       background: transparent; padding: 0;"
+                                            {% if vv.is_enable == 'green' %}
+                                            src="/static/{{ sel_icons }}/colored/{{ vv.icon }}"
+                                            {% else %}
+                                            src="/static/icons/grey/{{ vv.icon }}"
+                                            {% endif %}
+                                            class="muted rounded-corners-el"
+                                            {% if vv.html == "" %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% elif vv.is_enable == 'grey' %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% else %}
+                                                data-toggle="tooltip" title='{{ vv.html }}' >
+                                            {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h4 class="col-sm-6 col-md-2"
+                                style=" position:relative;  font-size:0.9em;  padding:0">SDGs</h4>
+                            <div class="col-sm-6 col-md-10 tooltip-demo well"
+                                 style="display: inline-block;background:transparent; box-shadow:none">
+                                {% for k,vv in granularities.SDGs.items %}
+                                    <img
+                                            style="
+                                       background: transparent; padding: 0;"
+                                            {% if vv.is_enable == 'green' %}
+                                            src="/static/{{ sel_icons }}/colored/{{ vv.icon }}"
+                                            {% else %}
+                                            src="/static/icons/grey/{{ vv.icon }}"
+                                            {% endif %}
+                                            class="muted rounded-corners-el"
+                                            {% if vv.html == "" %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% elif vv.is_enable == 'grey' %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% else %}
+                                                data-toggle="tooltip" title='{{ vv.html }}' >
+                                            {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4 class="col-sm-6 col-md-2"
+                                style=" position:relative;  font-size:0.9em;  padding:0">Socio-Economics</h4>
+                            <div class="col-sm-6 col-md-10 tooltip-demo well"
+                                 style="display: inline-block;background:transparent; box-shadow:none">
+                                {% for k,vv in granularities.SocioEconomics.items %}
+                                    <img
+                                            style="
+                                       background: transparent; padding: 0;"
+                                            {% if vv.is_enable == 'green' %}
+                                            src="/static/{{ sel_icons }}/colored/{{ vv.icon }}"
+                                            {% else %}
+                                            src="/static/icons/grey/{{ vv.icon }}"
+                                            {% endif %}
+                                            class="muted rounded-corners-el"
+                                            {% if vv.html == "" %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% elif vv.is_enable == 'grey' %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% else %}
+                                                data-toggle="tooltip" title='{{ vv.html }}' >
+                                            {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h4 class="col-sm-6 col-md-2"
+                                style=" position:relative;  font-size:0.9em; padding:0">
+                                Mitigation-Adaptation Measures</h4>
+                            <div class="col-sm-6 col-md-10 tooltip-demo well icons-list"
+                                 style="display: inline-block;background:transparent; box-shadow:none">
+                                {% for k,vv in granularities.MitigationAdaptationMeasures.items %}
+                                    <img
+                                            style="
+                                       background: transparent; padding: 0;"
+                                            {% if vv.is_enable == 'green' %}
+                                            src="/static/{{ sel_icons }}/colored/{{ vv.icon }}"
+                                            {% else %}
+                                            src="/static/icons/grey/{{ vv.icon }}"
+                                            {% endif %}
+                                            class="muted rounded-corners-el"
+                                            {% if vv.html == "" %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% elif vv.is_enable == 'grey' %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% else %}
+                                                data-toggle="tooltip" title='{{ vv.html }}' >
+                                            {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4 class="col-sm-6 col-md-2"
+                                style=" position:relative;  font-size:0.9em;  padding:0">Emissions</h4>
+                            <div class="col-sm-6 col-md-10 tooltip-demo well"
+                                 style="display: inline-block;background:transparent; box-shadow:none">
+                                {% for k,vv in granularities.Emissions.items %}
+                                    <img
+                                            style="
+                                       background: transparent; padding: 0;"
+                                            {% if vv.is_enable == 'green' %}
+                                            src="/static/{{ sel_icons }}/colored/{{ vv.icon }}"
+                                            {% else %}
+                                            src="/static/icons/grey/{{ vv.icon }}"
+                                            {% endif %}
+                                            class="muted rounded-corners-el"
+                                            {% if vv.html == "" %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% elif vv.is_enable == 'grey' %} data-toggle="tooltip" title='{{ k }}'>
+                                            {% else %}
+                                                data-toggle="tooltip" title='{{ vv.html }}' >
+                                            {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+    </section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script>
+    $(document).ready(function () {
+        $('body').css('height', '100%');
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('body').css('height', '100%');
+    });
+
+</script>
+
+{#<script>#}
+{#    function goback() {#}
+{#        window.history.back();#}
+{#    }#}
+{#</script>#}
+
+<script>
+    $(document).ready(function () {
+        {#        $('.tooltip-demo.well').tooltip({#}
+        {#            html: true,#}
+        {#            selector: 'i[data-toggle=tooltip]',#}
+        {#            container: "#model-characteristics"#}
+        {#        });#}
+        {#        $('.tooltip-demo.large').tooltip({#}
+        {#            html: true,#}
+        {#            selector: 'svg[data-toggle=tooltip]',#}
+        {#            container: ".model-list"#}
+        {#        });#}
+        $('.tooltip-demo.well').tooltip({
+            html: true,
+            selector: 'img[data-toggle=tooltip]',
+            container: "#model-characteristics"
+        });
+        $('.tooltip-demo.large').tooltip({
+            html: true,
+            selector: 'img[data-toggle=tooltip]',
+            container: ".model-list"
+        });
+        {#        $(".model-list a img").click(function (event) {#}
+        {#            console.log('pressed link');#}
+        {#            window.location.href = "/dynamic_doc/" + $(this).parent().data('link') + "/?format={{ template_format }}#model-characteristics";#}
+        {#            // Do something#}
+        {#        });#}
+        $(".model-list i.fa-info-circle").click(function (event) {
+            console.log('pressed icon');
+            window.open("/detailed_model_doc/" + $(this).parent().data('link'));
+            // Do something
+        });
+
+        $('.dynamic_doc_format_select').on('click', function () {
+            console.log($(this).data('value'));
+            if ($(this).data('value') === "") {
+                window.location.replace("/dynamic_doc/" + '{{ selected_model_name }}');
+            } else {
+                var str = 'dynamic_doc/' + '{{ selected_model_name }}' + '?format=' + $(this).data('value');
+                window.location.replace("/" + str);
+            }
+        });
+
+
+    });
+</script>
+<script src={% static "tools/js/dynamic_doc/model_filtering.js" %}></script>
+<script>
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create map instance
+        var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+// Set map definition
+        chart.geodata = am4geodata_worldLow;
+
+// Set projection
+        chart.projection = new am4maps.projections.Mercator();
+
+// Export
+        chart.exporting.menu = new am4core.ExportMenu();
+
+// Zoom control
+        chart.zoomControl = new am4maps.ZoomControl();
+
+        var homeButton = new am4core.Button();
+        homeButton.events.on("hit", function () {
+            chart.goHome();
+        });
+
+        homeButton.icon = new am4core.Sprite();
+        homeButton.padding(7, 5, 7, 5);
+        homeButton.width = 30;
+        homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
+        homeButton.marginBottom = 10;
+        homeButton.parent = chart.zoomControl;
+        homeButton.insertBefore(chart.zoomControl.plusButton);
+
+// Center on the groups by default
+        chart.homeZoomLevel = 1.5;
+        chart.homeGeoPoint = {longitude: 10, latitude: 52};
+        console.log({{ data|safe }});
+        var groupData = {{ data|safe }};
+
+
+// This array will be populated with country IDs to exclude from the world series
+        var excludedCountries = [];
+
+// Create a series for each group, and populate the above array
+        groupData.forEach(function (group) {
+            var series = chart.series.push(new am4maps.MapPolygonSeries());
+            series.name = group.name;
+            series.useGeodata = true;
+            var includedCountries = [];
+            group.data.forEach(function (country) {
+                includedCountries.push(country.id);
+                excludedCountries.push(country.id);
+            });
+            series.include = includedCountries;
+
+            series.fill = am4core.color(group.color);
+
+            // By creating a hover state and setting setStateOnChildren to true, when we
+            // hover over the series itself, it will trigger the hover SpriteState of all
+            // its countries (provided those countries have a hover SpriteState, too!).
+            series.setStateOnChildren = true;
+            series.calculateVisualCenter = true;
+
+            // Country shape properties & behaviors
+            var mapPolygonTemplate = series.mapPolygons.template;
+            // Instead of our custom title, we could also use {name} which comes from geodata
+            mapPolygonTemplate.fill = am4core.color(group.color);
+            mapPolygonTemplate.fillOpacity = 0.8;
+            mapPolygonTemplate.nonScalingStroke = true;
+            mapPolygonTemplate.tooltipPosition = "fixed";
+
+            mapPolygonTemplate.events.on("over", function (event) {
+                series.mapPolygons.each(function (mapPolygon) {
+                    mapPolygon.isHover = true;
+                });
+                event.target.isHover = false;
+                event.target.isHover = true;
+            });
+
+            mapPolygonTemplate.events.on("out", function (event) {
+                series.mapPolygons.each(function (mapPolygon) {
+                    mapPolygon.isHover = false;
+                })
+            });
+
+            // States
+            var hoverState = mapPolygonTemplate.states.create("hover");
+            hoverState.properties.fill = am4core.color(group.color);
+
+            // Tooltip
+            mapPolygonTemplate.tooltipText = group.name + " ({title})"; // enables tooltip
+            // series.tooltip.getFillFromObject = false; // prevents default colorization, which would make all tooltips red on hover
+            // series.tooltip.background.fill = am4core.color(group.color);
+
+            // MapPolygonSeries will mutate the data assigned to it,
+            // we make and provide a copy of the original data array to leave it untouched.
+            // (This method of copying works only for simple objects, e.g. it will not work
+            //  as predictably for deep copying custom Classes.)
+            series.data = JSON.parse(JSON.stringify(group.data));
+        });
+
+// The rest of the world.
+        var worldSeries = chart.series.push(new am4maps.MapPolygonSeries());
+        var worldSeriesName = "world";
+        worldSeries.name = worldSeriesName;
+        worldSeries.useGeodata = true;
+        worldSeries.exclude = excludedCountries;
+        worldSeries.fillOpacity = 0.8;
+        worldSeries.hiddenInLegend = true;
+        worldSeries.mapPolygons.template.nonScalingStroke = true;
+
+        let linkContainer = chart.createChild(am4core.Container);
+        linkContainer.isMeasured = false;
+        linkContainer.layout = "horizontal";
+        linkContainer.x = am4core.percent(50);
+        linkContainer.y = am4core.percent(90);
+        linkContainer.horizontalCenter = "middle";
+
+        let equirectangular = linkContainer.createChild(am4core.TextLink);
+        equirectangular.margin(10, 10, 10, 10);
+        equirectangular.padding(3, 3, 3, 3);
+        equirectangular.text = "Equirectangular";
+        equirectangular.background.fill = am4core.color("#777");
+        equirectangular.background.fillOpacity = 0.8;
+        equirectangular.fill = am4core.color("#FFF");
+        var hs1 = equirectangular.states.create("hover");
+        hs1.properties.fill = chart.colors.getIndex(0).brighten(-1);
+        equirectangular.events.on("hit", function () {
+            chart.projection = new am4maps.projections.Projection();
+            {#            chart.panBehavior = "rotateLong";#}
+            {#            chart.panBehavior = "rotateLongLat";#}
+            chart.deltaLatitude = 0;
+            chart.deltaLongitude = 0;
+            chart.panBehavior = "move";
+            chart.homeZoomLevel = 1.5;
+            chart.homeGeoPoint = {longitude: 10, latitude: 52};
+        })
+
+        let mercator = linkContainer.createChild(am4core.TextLink);
+        mercator.text = "Mercator";
+        mercator.background.fill = am4core.color("#777");
+        mercator.background.fillOpacity = 0.8;
+        mercator.fill = am4core.color("#FFF");
+        mercator.margin(10, 10, 10, 10);
+        mercator.padding(3, 3, 3, 3);
+        var hs2 = mercator.states.create("hover");
+        hs2.properties.fill = chart.colors.getIndex(0).brighten(-1);
+        mercator.events.on("hit", function () {
+            chart.projection = new am4maps.projections.Mercator();
+            {#            chart.panBehavior = "rotateLong";#}
+            {#            chart.panBehavior = "rotateLongLat";#}
+            chart.deltaLatitude = 0;
+            chart.deltaLongitude = 0;
+            chart.panBehavior = "move";
+            chart.homeZoomLevel = 1.5;
+            chart.homeGeoPoint = {longitude: 10, latitude: 52};
+        })
+
+        let miller = linkContainer.createChild(am4core.TextLink);
+        miller.margin(10, 10, 10, 10);
+        miller.padding(3, 3, 3, 3);
+        miller.text = "Miller";
+        miller.background.fill = am4core.color("#777");
+        miller.background.fillOpacity = 0.8;
+        miller.fill = am4core.color("#FFF");
+        var hs3 = miller.states.create("hover");
+        hs3.properties.fill = chart.colors.getIndex(0).brighten(-1);
+        miller.events.on("hit", function () {
+            chart.projection = new am4maps.projections.Miller();
+            {#            chart.panBehavior = "rotateLong";#}
+            {#            chart.panBehavior = "rotateLongLat";#}
+            chart.deltaLatitude = 0;
+            chart.deltaLongitude = 0;
+            chart.panBehavior = "move";
+            chart.homeZoomLevel = 1.5;
+            chart.homeGeoPoint = {longitude: 10, latitude: 52};
+        })
+
+        let eckert = linkContainer.createChild(am4core.TextLink);
+        eckert.margin(10, 10, 10, 10);
+        eckert.padding(3, 3, 3, 3);
+        eckert.text = "Eckert 6";
+        eckert.background.fill = am4core.color("#777");
+        eckert.background.fillOpacity = 0.8;
+        eckert.fill = am4core.color("#FFF");
+        var hs4 = eckert.states.create("hover");
+        hs4.properties.fill = chart.colors.getIndex(0).brighten(-1);
+        eckert.events.on("hit", function () {
+            chart.projection = new am4maps.projections.Eckert6();
+            {#            chart.panBehavior = "rotateLong";#}
+            chart.panBehavior = "rotateLongLat";
+            chart.deltaLatitude = 0;
+            chart.deltaLongitude = 0;
+            {#            chart.panBehavior = "move";#}
+            chart.homeZoomLevel = 1.5;
+            chart.homeGeoPoint = {longitude: 10, latitude: 52};
+        })
+
+        let orthographic = linkContainer.createChild(am4core.TextLink);
+        orthographic.margin(10, 10, 10, 10);
+        orthographic.padding(3, 3, 3, 3);
+        orthographic.text = "Orthographic";
+        orthographic.background.fill = am4core.color("#777");
+        orthographic.background.fillOpacity = 0.8;
+        orthographic.fill = am4core.color("#FFF");
+        var hs5 = orthographic.states.create("hover");
+        hs5.properties.fill = chart.colors.getIndex(0).brighten(-1);
+        orthographic.events.on("hit", function () {
+            chart.projection = new am4maps.projections.Orthographic();
+            {#            chart.panBehavior = "rotateLong";#}
+            chart.deltaLatitude = 0;
+            chart.deltaLongitude = 0;
+            chart.panBehavior = "rotateLongLat";
+            chart.homeZoomLevel = 1;
+            chart.homeGeoPoint = {longitude: 0, latitude: 0};
+
+        })
+        // Set projection
+        {#        chart.projection = new am4maps.projections.Miller();#}
+        {#        chart.panBehavior = "rotateLongLat";#}
+
+        var grid = chart.series.push(new am4maps.GraticuleSeries());
+        grid.toBack();
+
+    }); // end am4core.ready()
+</script>
+
+
+</body>
+</html>

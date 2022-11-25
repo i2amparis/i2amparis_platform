@@ -1,0 +1,995 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#42_short_overview">Short Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group 42_key_feat">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_key_feat"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features of the model 42
+
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_key_feat"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+					                            <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#42_groegraphic_coverage">
+                                                       Geographic coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Energy sectoral detail</span>
+                                                    <a style="display: none"
+                                                       href="#42_energy_sectoral_detail">
+                                                       Energy sectoral detail</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Time coverage</span>
+                                                    <a style="display: none"
+                                                       href="#42_time_coverage">
+                                                       Time coverage</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+
+
+                                <li class="list-group-item">
+                                    <span>Emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#42_emissions_granularity">Emissions granularity</a>
+                                </li>
+                                <li>
+                                <div class="panel-group 42_socioeco_menu">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_socioeco_menu"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Socioeconomic dimensions
+
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_socioeco_menu"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+
+
+                                <li class="list-group-item">
+                                    <span>Introduction</span>
+                                    <a style="display: none"
+                                       href="#42_socioecon_dim">Introduction</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Population growth</span>
+                                    <a style="display: none"
+                                       href="#42_population_growth">Population growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic growth</span>
+                                    <a style="display: none"
+                                       href="#42_econ_growth">Economic growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Vehicle fleet</span>
+                                    <a style="display: none"
+                                       href="#42_vehicle_fleet">Vehicle fleet</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Energy intensity of the economy</span>
+                                    <a style="display: none"
+                                       href="#42_energy_intensity">Energy intensity of the economy</a>
+                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+
+
+                                <li class="list-group-item">
+                                    <span>Calibration of the model</span>
+                                    <a style="display: none"
+                                       href="#42_calibration">Calibration of the model</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#42_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#42_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#42_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#42_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#42_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#42_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#42_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The 42 model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="42_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  42 is a simulation model for estimating CO2 emissions associated with energy
+                                  consumption in a wide range of countries, dividing the world into 50 countries and
+                                  regions. The key goal of the model is to describe the target characteristics of the
+                                  perspective energy sector in different countries for their effective integration
+                                  into the global process of regulating emissions. The model is used to calculate
+                                  the impacts of possible structural changes, as well as of improvements in the
+                                  efficiency of energy use. The energy sector of all countries is described in
+                                  detail in the form of energy balances, synchronised with the methodology of the
+                                  International Energy Agency (IEA). Modelling is based on a bottom-up approach:
+                                  first, the final consumption of energy resources is estimated for the industrial,
+                                  transport, residential, and services sectors; and then model calculates the necessary
+                                  amount of primary energy resources needed to produce petroleum products, electricity
+                                  and heat. Key influencing factors include changes in the fuel structure of electricity
+                                  and heat production; changes in the efficiency of electricity and heat production
+                                  based on different types of fuel; changes in the structure of vehicle fleet (for cars
+                                  and trucks); changes in energy consumption per capita; and changes in energy
+                                  efficiency in manufacturing sectors of the economy.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Key features of the 42 model</h2>
+                                <span id="42_groegraphic_coverage" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                              <p>
+                                  In the 42 model, the world is divided into 50 countries and regions, as shown in
+                                  the following table:
+                              </p>
+
+                               <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:30%">Regions</th>
+                                          <th style="width:60%">Geographic regions/countries covered in the model</th>
+
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>North America</td>
+                                          <td>USA, Canada, Mexico</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Central and South America</td>
+                                          <td>Argentina, Brazil, Columbia, Ecuador, Venezuela, Other Central and
+                                              South America</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Europe</td>
+                                          <td>EU, Norway, Iceland, Switzerland, Turkey, Other Europe</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Commonwealth of Independent States</td>
+                                          <td>Russia, Azerbaijan, Belarus, Kazakhstan, Turkmenistan, Ukraine,
+                                              Uzbekistan, Other countries</td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Africa
+                                          </td>
+                                          <td>Angola, Algeria, Egypt, Gabon, Libya, Mozambique, Nigeria, South Africa,
+                                              Other Africa</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Middle East</td>
+                                          <td>UAE, Iran, Iraq, Kuwait, Qatar, Saudi Arabia, Other Middle East</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Asia</td>
+                                          <td>Australia, China, India, Indonesia, Japan, South Korea, Malaysia,
+                                              New Zeeland, Thailand, Vietnam, Other Asia</td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Countries/Regions under consideration in the 42 model</caption>
+                                  </table>
+</div>
+
+
+</section>
+                     </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="42_energy_sectoral_detail" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                              <p>
+                                  The description of the energy sector is performed through energy balances synchronised
+                                  with the methodology of the International Energy Agency and built on the basis of its
+                                  data.
+                              </p>
+                              <p>
+                                  Primary energy resources include coal, natural gas, oil, nuclear, hydro, solar, wind,
+                                  biofuels, and other renewables; while secondary energy resources include electricity,
+                                  heat, oil products (gasoline, diesel, fuel oil, jet fuel, naphtha and LPG, and
+                                  others).
+                              </p>
+                              <p>
+                                  The structure of the energy consumption balance is quite typical, although there
+                                  is particular aggregation in the final consumption unit. The model also distinguishes
+                                  energy consumption for bunkering. Road transport is divided into cars and trucks.
+                              </p>
+
+                               <div class="my_table table-responsive">
+                                   <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:30%">Transformation</th>
+                                          <th style="width:30%">Final Consumption</th>
+                                          <th style="width:40%">Total Primary Energy Supply</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>Power sector</td>
+                                          <td>Industry</td>
+                                          <td>Bunkers</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Heating</td>
+                                          <td>Aviation</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Oil refineries</td>
+                                          <td>Road transport (cars and trucks)</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Coal transformation</td>
+                                          <td>Rail transport</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Gas works</td>
+                                          <td>Other transport</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Liquefaction</td>
+                                          <td>Residential</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Other transformation</td>
+                                          <td>Commercial and public services</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Loses, Energy industry own use</td>
+                                          <td>Non-energy use in chemical</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td></td>
+                                          <td>Other non-energy use</td>
+                                          <td></td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Energy transformation and demand sectors in the 42 model</caption>
+                                  </table>
+</div>
+
+                          </section>
+                    </div>
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="42_time_coverage" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Time coverage</h4>
+                              <p>
+                                  The forecast period is until 2045, while energy balances of all countries are
+                                  built for each year (i.e. one-year time steps).
+                              </p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="42_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Emissions granularity</h2>
+                              <p>
+                                  42 does not have a climate module and does not calculate the impact of
+                                  anthropogenic emissions on climate change. The current version of the model tracks
+                                  only carbon dioxide (CO2) emissions. It may be expanded during the implementation of
+                                  the PARIS REINFORCE project, in order to provide a more complete description of
+                                  anthropogenic emissions.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="42_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  42 requires a number of socioeconomic metrics, according to which both energy
+                                  consumption and energy-related CO<sub>2</sub> emissions are modelled.
+                                  The key parameters concern economic growth and its structure, population, vehicle
+                                  fleet and energy intensity for each country/region under consideration. The current
+                                  version of the 42 model contains relevant and representative data for all of these
+                                  dimensions.
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="42_population_growth" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Population growth</h4>
+                              <p>
+                                  Population growth is one of the primary causes of world energy consumption increase.
+                                  The UN demographic forecast is usually employed as a basis for population scenarios.
+                                  The reference (medium) scenario assumes an increase in the global population to 9.5
+                                  billion by 2045 (average annual growth rate of 0.7%). 42 does not consider population
+                                  structure (e.g. by age group, urbanisation status, etc.).
+                              </p>
+                          </section>
+                     </div>
+                          <div class="row">
+                          <section class="section">
+                              <span id="42_econ_growth" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Economic growth</h4>
+                              <p>
+                                  Another driver for increasing energy consumption is economic growth. Currently,
+                                  scenario hypotheses on the GDP growth rates for all the countries and regions under
+                                  consideration are set in accordance with calculations on economic forecasting models
+                                  performed by the team of the Institute of Economic Forecasting of the Russian Academy
+                                  of Sciences. According to these estimates, global GDP will increase 2.45 times, from
+                                  110 (currently) to 270 trillion dollars (2011 PPP) by 2045. However, 42 can use any
+                                  hypotheses on GDP growth as inputs.
+                              </p>
+                              <p>
+                                  The structure of GDP is also an important metric, since different sectors are
+                                  characterised by various levels of energy intensity. The 42 model distinguishes the
+                                  following components of the total value added in the economy of all countries/regions:
+                                  material production, transport, and services. The ratio of these segments is analysed
+                                  basing on an econometric approach.
+                              </p>
+
+                          </section>
+                          </div>
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="42_vehicle_fleet" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Vehicle fleet</h4>
+                              <p>
+                                  Road transport is an important energy consumer, providing about 40% of global oil
+                                  demand. The vehicle fleet size reflects the economic situation: the growth of
+                                  household income stimulates the purchase of a private vehicle, and economic
+                                  development creates a cargo flow for transportation. Further development of the
+                                  world economy is associated with an increase of the fleet size. The reference scenario
+                                  for the car fleet in Russia is defined as population times the automobilisation rate.
+                                  At the same time, the automobilisation rate depends on GDP per capita (the
+                                  relationship between these parameters is described by an S-shaped curve, which is
+                                  similar to consumer demand saturation). However, its future dynamics can be
+                                  significantly transformed. The modern generation of young people is less interested
+                                  in buying a personal car, and new technologies make a sharing-based model of
+                                  transportation affordable and convenient. The development of online services and
+                                  remote work can also reduce the demand for mobility. Given these factors,
+                                  transportation and fleet forecasts vary widely.
+                              </p>
+                              <p>
+                                  Nowadays, the most crucial trend is government incentives to change the structure of
+                                  the automotive market in the direction of low-carbon solutions (electric vehicles).
+                                  Therefore, structural shifts in the fleet constitute another key socioeconomic
+                                  metric for future energy consumption. Simulating the growth of the share of
+                                  low-carbon transport is a way of modelling climate change mitigation.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="42_energy_intensity" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Energy intensity of the economy</h4>
+                              <p>
+                                  Economic and demographic development provide gross characteristics of energy demand.
+                                  However, energy efficiency is superimposed on these, slowing the increase of global
+                                  consumption and CO<sub>2</sub> emissions. In the 42 model, there is no relationship
+                                  between the investment process and energy efficiency. Instead, energy intensities
+                                  of different industries are inputs to the model.
+                              </p>
+                              <p>
+                                  The logarithmic approximation is used as typical dynamics of energy intensity curves
+                                  in different industries. It is characterised by damping dynamics and is well suited
+                                  to describe the logic of energy consumption process evolution. The growing logarithmic
+                                  curve produces a situation of increasing consumption, as it implies that the role of
+                                  an energy resource is strengthened in a specific economic sector (for instance,
+                                  electrification of residences and services; increase in electric equipment in
+                                  industries of developing countries; spread of carbon-free resources in developed
+                                  countries). The falling logarithmic curve produces situations either of improving
+                                  the efficiency or of consumers moving away from a particular energy source (for
+                                  instance, a replacement of coal).
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/42_intensity_curves.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Typical dynamics of energy intensity
+                                          curves in the 42 Model
+                                      </p>
+
+                                  </div>
+                              </div>
+
+
+                          </section>
+                     </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="42_calibration" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                              <p>
+                                  The 42 model is calibrated to IEA’s energy balances for the period of 1990-2016,
+                                  for each of the countries/regions considered.
+                              </p>
+                          </section>
+                    </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="42_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                  42 is a simulation model focused on the implementation of low-carbon solutions in the
+                                  field of electricity and heat production, and automobile transport. By simulating the
+                                  substitution of low-carbon for high-carbon technologies, the 42 model simulates
+                                  mitigation. The principal energy-sector CO<sub>2</sub> mitigation technology options
+                                  are as
+                                  shown in the table below. Particular attention is paid to improving the efficiency of energy
+                                  consumption through the simulation of energy intensity curves.
+                              </p>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td><b>Electricity generation</b></td>
+                                          <td><b>Heat generation</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Efficiency<br>
+                                              Nuclear<br>
+                                              Hydro<br>
+                                              Biomass<br>Solar<br>
+                                              Wind
+                                          </td>
+                                          <td>
+                                              Efficiency<br>
+                                              Geothermal<br>
+                                              Biomass
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Road transport</b></td>
+                                          <td><b>Other transport</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Efficiency<br>
+                                              Gas vehicles<br>
+                                              Electric vehicles
+                                          </td>
+                                          <td>
+                                              Gas<br>
+                                              Electric<br>
+                                              Efficiency
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Industry</b></td>
+                                          <td><b>Residential</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Gas replacing oil / coal<br>
+                                              Electricity<br>
+                                              Biomass<br>
+                                              Efficiency
+                                          </td>
+                                          <td>
+                                              Efficiency<br>
+                                              Electrification<br>
+                                              Gasification
+                                          </td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Main CO2 energy system mitigation options in the 42
+                                          model</caption>
+                                  </table>
+</div>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="42_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  Modelling is based on a bottom-up approach: first, the final consumption of energy
+                                  resources is estimated for industry, transport, the residential sector, and services;
+                                  and then the model calculates the necessary amount of primary energy resources needed
+                                  to produce petroleum products, electricity and heat. The amount of primary energy
+                                  consumption in these two phases explains the total energy consumption, which is
+                                  multiplied by the carbon intensity vector and thus CO<sub>2</sub> emissions
+                                  associated with
+                                  the energy sector are calculated.
+                              </p>
+                              <p>
+                                  The process of energy consumption is modelled as a combination of three classes of
+                                  influencing factors:
+                              </p>
+                              <p>
+                                  Consumption = Gross factor * Structural factor * Technological factor
+                              </p>
+                              <p>
+                                  <ul>
+                              Gross factor characterises the size of an object consuming energy. The examples of such
+                              factors distinguished are as follows:
+                              <li>GDP (gross factor for the entire economy)</li>
+                              <li>population (gross factor for residential sector)</li>
+                              <li>vehicle fleet (gross factor of transport sector)</li>
+                              <li>electricity production (gross factor of power sector)</li>
+                          </ul>
+                              </p>
+                              <p>
+                                  <ul>
+                              The structural factor is necessary in order to identify which part of the “gross” object
+                              consumes a particular energy product. The following structural factors are distinguished:
+                              <li>GDP structure (shares of value added in material production, transport and services
+                                  in relation to GDP)</li>
+                              <li>
+                                  electricity production structure (it determines how much electricity will be
+                                  generated on the basis of different types of energy resources)
+                              </li>
+                              <li>vehicle fleet structure (it shows how many cars will consume different types of
+                                  motor fuels)</li>
+                          </ul>
+                              </p>
+                              <p>
+                                  <ul>
+                                      The technological factor is necessary in order to describe the dynamics of
+                              specific energy consumption. For example, how much natural gas is needed to produce 1 kWh
+                              of electricity; how many litres of diesel are needed to drive 100 km by car; how much
+                              energy is needed to create 1 million USD of value added in the services. The following
+                              technological factors are distinguished:
+                              <li>vehicle fuel efficiency per 100 km</li>
+                              <li>efficiencies of power generation technologies</li>
+                              <li>energy intensity of value added in different s</li>
+                                  </ul>
+                              </p>
+                              <p>
+                                  Using all these key drivers of future energy demand as model inputs, the 42 is
+                                  focused on energy-associated CO2 emissions calculation according to a simulation-based
+                                  approach.
+                              </p>
+
+<div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/42_solution_algorithm.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Solution algorithm for the 42 model
+                                      </p>
+
+                                  </div>
+                              </div>
+
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="42_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                  <ul>
+                              Model 42 offers a simulation-based description of energy consumption processes. Therefore,
+                              in addition to socioeconomic and demographic characteristics, it requires parameters of
+                              CO2 mitigation measures in terms of structural and technological features of the energy
+                              sector. A list of key parameters for all countries under consideration is given below:
+                              <li>vehicle fleet and its structure (depending on the people’s mobility hypothesis);</li>
+                              <li>structure of electricity and heat production (may be based on the countries’ goals
+                                  within the framework of the Paris Agreement or more ambitious targets);</li>
+                              <li>energy intensities of different sectors;</li>
+                              <li>fuel efficiency for cars and trucks (may be based on countries technical regulation
+                                  of automotive industry and markets); and</li>
+                              <li>fuel efficiency for electricity and heat plants.</li>
+                          </ul>
+                              </p>
+                              <p>
+                                  These parameters should be set to take into account existing goals of the national
+                                  climate policy implemented by the countries under consideration, as well as to define
+                                  the most efficient structure of the energy sector that is in line with the goals of
+                                  the selected level of climate change mitigation (be that the Paris Agreement goals or
+                                  scenarios of increased ambition).
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="42_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                  <ul>
+                              As a simulation model, 42 predominantly works by adjusting the structural characteristic
+                              and efficiency parameters of energy-consuming sectors. In addition, the emission limits
+                              being adopted by countries may be used as a simulation target. The following policies
+                              can be implemented during the calculations:
+                              <li>goals for renewable energy-based electricity generation in benchmark years;</li>
+                              <li>restrictions of the capacities/production for the power plants based on the fossil
+                                  fuels;</li>
+                              <li>restriction or complete ban on sale and use of conventional (internal combustion
+                                  engine) cars;</li>
+                              <li>stimulation of energy efficiency in terms of decreasing energy intensities of value
+                                  added and energy consumption per capita; and</li>
+                              <li>restriction of CO2 emissions associated with energy consumption.</li>
+                          </ul>
+                              </p>
+                              <p>
+                                  42 may help to implement policy-relevant investigations, focused on searching the
+                                  objective parameters, which are consistent with a low-carbon future, of national
+                                  energy sectors of a wide list of countries. The overarching question the model aims to
+                                  address is: <i>what is the structure of the energy balance, in consistency with the
+                                  Paris Agreement?</i>
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="42_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                  As an energy model, 42 is able track the goals for SDG §7 (affordable and
+                                  clean energy), by exploring for example the share of low-carbon energy in the power
+                                  sector and fuels in transportation.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="42_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper</th>
+                                          <th style="width:40%">Topic</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>Ivanter et al. (2018)</td>
+                                          <td>
+                                              Boosting the development of the Russian economy: priority actions
+                                              (suggestions for the main activities of the State until 2024)
+                                          </td>
+                                          <td>
+                                              The report highlights priority directions of the economic policy,
+                                              primarily in investment activity, development of the domestic market, as
+                                              well as financial and organisational support for the suggested actions.
+                                              42 was used to determine the potential scenarios of future demand for
+                                              Russian energy resources in the world
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>Semikashev et al. (2016)</td>
+                                          <td>
+                                              Analysis and forecast of prospects for renewable energy development in
+                                              the world until 2030
+                                          </td>
+                                          <td>
+                                              The goals of the countries under the Paris Agreement are studied. The
+                                              structure of global energy consumption while achieving all stated goals
+                                              is shown. The role of renewable energy in the global energy sector is
+                                              assessed.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Uzyakov et al. (2016)
+                                          </td>
+                                          <td>
+                                              Integrated approach to the construction of agreed scenarios of world oil
+                                              production, consumption and price
+                                          </td>
+                                          <td>
+                                              The article describes the evolution of the pricing mechanisms in the world
+                                              oil market. We demonstrate the practical use of a modelling ensemble
+                                              (which includes the 42 model) on the example of construction of agreed
+                                              world oil production, consumption and price scenarios, interrelated with
+                                              perspective parameters of the world economy and energy sector.
+                                              The conditions and parameters of relatively high and low world oil prices
+                                              scenarios are described.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Shirov et al. (2016)</td>
+                                          <td>
+                                              Russia and Europe: Energy union of energy conflict? (Eight years after)
+                                          </td>
+                                          <td>
+                                              The article discusses current issues of interaction between Russia and the
+                                              EU in the energy sector at the present stage. It is stated that the
+                                              formation of an energy union has more advantages for each of the parties
+                                              in comparison with the conflict scenario. Alternatives to Russia's energy
+                                              policy in case of deterioration of trade and economic relations with the
+                                              EU are given.
+                                          </td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Recent publications using the 42 model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="42_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Ivanter V.V., Porfiryev B.N., Sorokin D.E., Eskindarov M.A., Maslennikov V.V., Shirov
+                                 A. A., Abdikeev N.M., Abramova M. A., Bogachev Yu.S., Goncharenko L.I., Govtvan’ O.
+                                Dzh., Gusev M.S., Dubova S.E., Ershov M.V., Zubets A.N., Kolpakov А. Yu., Ksenofontov
+                                M.N., Kuvalin D. B., Mikheeva N.N., Moiseev A.K., Potapenko V.V., Solyannikova S.P.,
+                                Stroev P.V., Tolkachev S. A., Uzyakov M.N., & Fedotova M. A. (2018). How to Boost the
+                                Development of the Russian Economy: Priority Actions (Suggestions for the Main
+                                Activities of the State until 2024). Finance: Theory and practice, 22 (1), pp. 4-15.
+                                (In Russian).
+                            </p>
+                            <p>
+                                Semikashev V.V., Kolpakov. A.Yu. Merkulov S.K., & Terentiev N.E. (2016). Analysis and
+                                forecast of prospects for renewable energy development in the world until 2030.
+                                Alternative energy as a factor of modernization of the Russian economy: trends and
+                                prospects. Collection of scientific papers. Publisher: Scientific consultant limited
+                                liability company, Moscow. (In Russian).
+                            </p>
+                            <p>
+                                Uzyakov M.N., Yantovskiy A.A., Ksenofontov M.Yu., Semikashev V.V., & Kolpakov A.Yu.
+                                (2016). Integrated approach to the construction of agreed scenarios of world oil
+                                production, consumption and price. Oil industry, 11, pp. 8-14. (In Russian).
+                            </p>
+                            <p>
+                                Shirov A.A., Semikashev V.V., Yantovskii A.A., & Kolpakov A.Y. (2016). Russia and
+                                Europe: Energy union of energy conflict? (Eight years after). Studies on Russian
+                                Economic Development, 27 (2), pp. 127-137.
+                            </p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#powerplan_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model PowerPlan</span>
+                                    <a style="display: none"
+                                       href="#powerplan_key_features">Key features of the model PowerPlan</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#powerplan_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#powerplan_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#powerplan_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The PowerPlan model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="powerplan_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                PowerPlan allows users to explore what-if scenarios, quantifying the implications of
+                                  decisions made. The outputs are not predictions of the future; they are a way of
+                                  analysing the potential impacts of different choices (scenarios). It simulates
+                                  investment decisions in capacity expansion and produces results including generation
+                                  costs, system reliability, fuel use and environmental emissions. The core of the
+                                  PowerPlan model is the production simulation module in which the demand has to be met
+                                  by the supply using the merit order approach. Calculations are performed on an hourly
+                                  bases.
+                              </p>
+                              <p>
+                                  The model uses a merit-order approach assigned based on user assumptions by the user
+                                  or based on marginal costs. For scheduled maintenance and unplanned outage, the
+                                  existing capacities are de-rated for operation  & maintenance by a fixed fraction
+                                  throughout the year.
+                              </p>
+                              <p>
+                                  The representation of system reliability is parameterized by the Loss of Load
+                                  Probability (LOLP) and energy shortages. The LOLP is a measure for the number of hours
+                                  per year in which the demand is higher than the production, see equation 1. The
+                                  shortages are the amount of energy (GWh) that could not be delivered, see equation 2.
+                                  Besides this, PowerPlan gives also the surplus of electricity generated. This surplus
+                                  occurs when intermittent sources like wind and photovoltaics and so-called “must-run”
+                                  capacity like nuclear power stations produce more electricity than the final demand.
+                                  In an annual cycle, the demand is determined by the peak load and the normalized
+                                  hourly demand pattern. To simulate intermittent energy sources (wind and solar PV)
+                                  multiple normalized hourly patterns can be used. Hydro power plants can receive an
+                                  inflow into their reservoir, which is based on the Pardé-coefficients. The monthly
+                                  influxes are equally divided over the hours within a month. The surpluses are
+                                  allocated to the plants based on the relative storage potential of the individual
+                                  plants: each hour, first the natural inflow is added to the reservoir and second
+                                  available surpluses will be stored in the upper reservoirs.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="powerplan_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the PowerPlan model</h2>
+                              <p>PowerPlan uses a bottom-up approach which means that each plant in the electricity
+                                  production system can be defined separately, several production patterns for e.g. PV
+                                  and wind farms can be used.</p>
+                              <p>
+                                  PowerPlan is flexible. Although it is designed for a national scale. It  can also be
+                                  used for smaller electricity systems can be simulated (e.g. a self-sufficient
+                                  village).
+                              </p>
+                              <p>
+                                  It is used to develop alternative scenarios for the national electricity system but
+                                  also to study more detailed questions like: to what extend are Swiss Pump Hydro Power
+                                  plants capable of buffering the German future electricity system with a high
+                                  penetration of renewable sources (Solar PV and Wind).
+                              </p>
+                              <p>
+                                  It has a uses-friendly interface with lots of detailed output. Input and output can
+                                  also be realised via Excel sheets.
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="powerplan_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                PowerPlan only give CO2 emissions as an output.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="powerplan_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  Population and GDP together wit a GDP-Electricity demand determe the frwoth of the
+                                  electricity demand. The uses can also enters a time series for the electricity growth
+                                  directly.
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="powerplan_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                Variety of mitigation technologies.
+                              </p>
+
+                          </section>
+                     </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

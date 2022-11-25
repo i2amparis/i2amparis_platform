@@ -1,0 +1,177 @@
+{% extends "base_template_rrf_policy.html" %}
+{% load static %}
+{% csrf_token %}
+{% block css %}
+
+    <style>
+        .heading {
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .heading a {
+            font-size: 0.9em;
+        }
+
+        .desc_text {
+            font-size: 0.8em;
+        }
+
+        .take_up_space {
+            min-height: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .text_take_up_space {
+            min-height: 10em;
+            margin-bottom: 1em;
+        }
+
+        td {
+            font-size: 0.8em;
+            background-color: rgba(246, 250, 238, 0.5);
+            color: #2a2a2e;
+        }
+
+        td.light-grey {
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 1em;
+        }
+
+        .disabled_radio {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .init_load_bar_text {
+            animation: blinker 1.5s linear infinite;
+        }
+        p{
+            text-align: justify;
+        }
+
+
+    </style>
+
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+{% endblock %}
+{% load static %}
+{% csrf_token %}
+{% block content %}
+    <div class="tab-pane" id="rrf_policy_datatables">
+        <div class="container" style="width: 90%; height:100%;">
+            <div class="row" style="margin-top: 8em; height: 90vh">
+
+                <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                    <h1 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                        Recovery Policy DB
+                    </h1>
+                </div>
+                <div class="tooltip-demo col-md-12 col-xs-12 ">
+                    <p style="background:transparent; box-shadow: none;">
+                        The H2020 PARIS REINFORCE project is coordinating a shared recovery policy database, in which
+                        different H2020 research and innovation projects for climate policy modelling take stock of
+                        intended/final recovery policies of selected Member States, as well as of other European
+                        countries. This shared policy database is intended to align with the ongoing efforts of the
+                        modelling community for enhanced transparency of model assumptions; save significant resources
+                        (avoiding duplicate work across research projects); enable cross-project comparison of relevant
+                        questions; and facilitate/encourage engagement in COVID- and recovery-related modelling work.
+                        As of October 29, the database accommodates the recovery plans for Belgium, France, Germany,
+                        Greece, Italy, Spain, and the United Kingdom.
+
+                    </p>
+
+                    {% include "i2amparis_main/rrf_policy_workspace/rrf_policy_datatables.html" %}
+                    <div class="tooltip-demo" style="margin-top:3em">
+                        <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help; margin-bottom: 0.2em"
+                            data-toggle="tooltip" data-placement="auto"
+                            title="<p>The chart presents the overall resource allocation in
+                                            national recovery and resilience plans (% of total and € billions).
+                    </p>">
+                            Overall resource allocation in national recovery and resilience plans
+                        </h2>
+                        <h4 style="color: #828f30">(% of total and € millions)</h4>
+                    </div>
+
+                    <div class="" style="height: 70vh">
+                        <div style="height: 100%;">
+                            <div id="classification_1" class="row"
+                                 style="height: 100%; line-height: 100%;">
+                                <iframe id="classification_1_viz_iframe" src="" title="Results"
+                                        style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                                <div id="classification_1_loading_bar"
+                                     style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                                    <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                         src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                                    <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-8">The chart will present the overall resource allocation in
+                                            national recovery and resilience plans (% of total and € billions)
+                                        </div>
+                                        <div class="col-sm-2"></div>
+                                    </div>
+                                    <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tooltip-demo" style="margin-top:2em">
+                        <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help; margin-bottom: 0.2em"
+                            data-toggle="tooltip" data-placement="auto"
+                            title="<p>The chart presents the composition of recovery plans
+                                            according to the flagship areas defined by the Commission (% of total).
+                    </p>">
+                            Composition of recovery plans
+                            according to the flagship areas defined by the Commission
+                        </h2>
+                        <h4 style="color: #828f30">(% of total and € millions)</h4>
+                    </div>
+
+                    <div class="" style="height: 70vh">
+                        <div style="height: 100%;">
+                            <div id="classification_2" class="row"
+                                 style="height: 100%; line-height: 100%;">
+                                <iframe id="classification_2_viz_iframe" src="" title="Results"
+                                        style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                                <div id="classification_2_loading_bar"
+                                     style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                                    <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                         src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                                    <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-8">The chart will present the composition of recovery plans
+                                            according to the flagship areas defined by the Commission (% of total)
+                                        </div>
+                                        <div class="col-sm-2"></div>
+                                    </div>
+                                    <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+
+            $('body').tooltip({container: 'body', html: true, selector: '[data-toggle=tooltip]', placement: 'auto'});
+
+        });
+
+
+    </script>
+{% endblock %}

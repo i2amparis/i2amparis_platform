@@ -1,0 +1,264 @@
+
+
+h1 {
+    font-size: 38px;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+    position: relative;
+    top: -0.1em;
+}
+
+.mylogo {
+    text-align: left;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.sidebar span:hover {
+    color: white;
+}
+
+.sidebar a, .sidebar span {
+    padding: 2px 4px 2px 4px;
+    text-decoration: none;
+    color: #b1b1b1;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.sidebar span {
+    font-size: 14px;
+}
+
+.sidebar h4 a {
+    font-size: 17px;
+}
+
+.sidebar li a {
+    font-size: 17px;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 17px;
+    cursor: pointer;
+    background-color: #343a40;
+    color: white;
+    padding: 7px 7px;
+    border: none;
+    border-radius: 4px;
+    padding: 1vh 1.2vw 1vh 1.2vw
+}
+
+.openbtn:hover {
+    background-color: #828f30;
+}
+
+#main_bar {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+.panel-group {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.panel-default {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.list-group-item {
+    background-color: #343a40;
+    color: white;
+    border-color: transparent;
+}
+
+.anchor {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    top: -110px;
+    left: 0;
+    visibility: hidden;
+}
+
+.section {
+    position: relative;
+}
+
+section.section {
+    padding: 0px 0 0px 0
+}
+
+.btn-link {
+    color: #97ae21E6
+}
+
+.btn-link:hover, .btn-link:focus, .btn-link:active {
+    color: #5e6d13e6;
+}
+
+.my_table {
+    margin: 50px 0 50px 0;
+}
+
+.my_table th {
+    background-color: #5e6d13e6;
+    color: white;
+    font-size: 13px;
+}
+
+.my_table .colored {
+    background-color: #5e6d13e6;
+    color: white;
+
+}
+
+.my_table .light-grey {
+    background-color: #585f65;
+    color: white;
+
+}
+
+.my_table .grey_category {
+    background-color: #343a40;
+    color: white;
+}
+
+.my_table td.feasible {
+    background-color: #5e6d1352
+}
+
+.my_table td.mod-feasible {
+    background-color: rgba(238, 229, 126, 0.6)
+}
+
+.my_table td.not-feasible {
+    background-color: rgba(222, 215, 219, 0.81);;
+}
+
+.my_table .transparent_category {
+    background-color: transparent;
+}
+
+.my_table .vertical_aligned {
+    vertical-align: middle;
+}
+
+figcaption {
+    text-align: center;
+    font-weight: 600;
+    margin: 20px;
+}
+
+caption {
+    display: table-caption;
+    text-align: center;
+    font-weight: 600;
+    margin: 20px;
+}
+
+table.table tbody tr td,
+table.table thead tr th,
+table.table thead {
+    border-left: 1px solid rgba(186, 186, 186, 0.48);
+    border-right: 1px solid rgba(186, 186, 186, 0.48);
+    border-bottom: 1px solid rgba(186, 186, 186, 0.48);
+    vertical-align: middle;
+    text-align: center;
+}
+
+table.table tr.left, table.table td.left{
+    text-align: left!important;
+}
+
+.my_table .nolr-border {
+    border-left: transparent;
+    border-right: transparent;
+    border-top: 1px solid rgba(186, 186, 186, 0.48);
+    background: rgba(186, 186, 186, 0.48);
+}
+
+body {
+    height: 100%;
+}
+
+
+.sidebar .list-group-item {
+    padding: 5px;
+}
+
+.table-notes {
+    font-size: 13px;
+}
+
+.rotate {
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.rotate.down {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.content_btn{
+    top:1em;
+    background-color: rgba(121, 126, 123, 0.8);
+    font-size: 1em;
+    right: 1.5em;
+}
+    /*position: absolute;*/
+    /*top: 10.3rem;*/
+    /*left: 1rem;}*/
+
+.card-header button{
+    font-size: 1em;
+    white-space: normal;
+    text-align: left;
+}

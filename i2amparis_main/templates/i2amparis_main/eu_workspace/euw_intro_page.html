@@ -1,0 +1,58 @@
+{% load static %}
+{% csrf_token %}
+<div class="tab-pane" id="intro_summary" style="height: 295vh">
+    <div class="container" style="width: 100%; height:100%; margin-top: 10em;">
+        <div class="row" style=" height: 90vh">
+            <div class="navbar-collapse collapse"
+                 style="margin-right: 0; margin-top: -3.4em; padding: 0; position:fixed; z-index: 50;width:100%">
+                <ul class="nav navbar-nav " id="mySumTab" role="tablist"
+                    data-0="margin-top:0px;background-color: rgba(130, 143, 48, 1);"
+                    data-300="margin-top:0px;background-color: rgba(130, 143, 48, 0.5);"
+                    style="width: 100%">
+                    <li class="active"><a role="tab" data-toggle="tab" href="#co2_emissions_tab"
+                                          style="font-weight: 500">CO2 Emissions</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#primary_energy"
+                                    style="font-weight: 500">Primary Energy</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#final_energy"
+                                    style="font-weight: 500">Final Energy</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#ccs"
+                                    style="font-weight: 500">Carbon Capture & Storage</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#imports"
+                                    style="font-weight: 500">Imports</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#electrification"
+                                    style="font-weight: 500">Transport Electrification</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#hydrogen"
+                                    style="font-weight: 500">Hydrogen Production</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#investments"
+                                    style="font-weight: 500">Investments</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="tab-content" style="">
+
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_page_co2_emissions.html" %}
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_primary_energy.html" %}
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_final_energy.html" %}
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_page_ccs.html" %}
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_page_imported_fuels.html" %}
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_page_electrification.html" %}
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_hydrogen.html" %}
+                {% include "i2amparis_main/eu_workspace/eu_workspace_intro_investments.html" %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block js %}
+
+
+{% endblock %}

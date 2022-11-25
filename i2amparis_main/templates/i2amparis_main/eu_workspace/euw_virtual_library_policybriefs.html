@@ -1,0 +1,86 @@
+{% extends 'i2amparis_main/eu_workspace/euw_virtual_library_section.html' %}
+
+{% block content %}
+    <div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+        <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+            <div class=" col-sm-12 col-xs-12" style="text-align: center">
+                <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                    Virtual Library
+                </h1>
+            </div>
+            <div class="content-section col-sm-12 col-xs-12 col-md-12"
+                 style="text-align: center; margin-top: 2em;padding: 1em">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="circle-button tb-yellow" style="text-align: center">
+                        <a style="padding-top: 3em; white-space: normal" href=""
+                           class="">Commentaries
+                            & Policy Briefs</a>
+                        <i class="fa fa-comment mini-title-icon"></i>
+                    </div>
+                </div>
+                {% include "i2amparis_main/eu_workspace/euw_virtual_library_side_menu.html" %}
+                <div class="main-content col-md-9 col-xs-12 col-sm-9" style="margin-top: 3em">
+                    <div class="accordion col-sm-12 col-xs-12" id="accordion_2">
+                        <div class="card" style="text-align: left">
+                            <div class="card-header" id="heading_2">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse_2" aria-expanded="true"
+                                            aria-controls="collapse_2" style="padding:0px">
+                                        <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                        PARIS REINFORCE: What can our models deliver?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse_2" class="collapse "
+                                 aria-labelledby="heading_2"
+                                 data-parent="#accordion_2">
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Date:</strong>
+                                        November 2019
+                                    </p>
+                                    <p>
+                                        <strong>Short description:</strong>
+                                        The fundamental aim of PARIS REINFORCE is to enhance and improve climate
+                                        policymaking. In order to do this, the consortium has access to a range of
+                                        sophisticated climate-economic scientific models. A key novelty of the project
+                                        is its devotion to ‘demand-driven’ research. That is, the questions these models
+                                        will provide insights into and the assumptions they will do this based upon are
+                                        to be stakeholder-determined through an extensive and exhaustive process.
+                                    </p>
+                                    <p>
+                                        <strong>Authors:</strong>
+                                        Ben McWilliams, Georg Zachmann, Alevgul Sorman, Ester Galende, Ajay Gambhir, Alexandros Nikas, Haris Doukas
+                                    </p>
+                                    <p>
+                                        <strong>Tags:</strong>
+                                        <span class="text-tag">Policy brief</span>
+                                        <span class="text-tag">Integrated assessment models</span>
+                                        <span class="text-tag">Climate policy</span>
+                                        <span class="text-tag">Climate Science</span>
+                                        <span class="text-tag">Co-creation</span>
+                                        <span class="text-tag">Policy questions</span>
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="col-md-12 col-xs-12 col-sm-12">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(".lib-menu-nav .tb-yellow").hide();
+    </script>
+{% endblock %}

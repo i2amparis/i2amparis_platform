@@ -1,0 +1,676 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model MENA-EDS</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_key_features">Key features of the model MENA-EDS</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#mena-edsmodel_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#mena-edsmodel_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#mena-edsmodel_recent_use_cases">Recent use cases</a>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>References</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#42_references">References</a>-->
+<!--                                </li>-->
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">MENA-EDS</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  The MENA-EDS model provides detailed projections of energy demand, supply, power
+                                  generation mix, energy-related carbon emissions, energy prices and investment to the
+                                  future covering the global energy system. MENA-EDS is a fully fledged energy demand
+                                  and supply simulation model aiming at addressing energy system analysis, energy price
+                                  projections, power generation planning and climate change mitigation policies. It
+                                  contains relations and/or exogenous variables for all the main quantities, which are
+                                  of interest in the context of general energy systems analysis. These include
+                                  demographic and economic activity indicators, primary and final energy consumption by
+                                  main fuel, fuel resources and prices, CO2 emissions, greenhouse gases concentrations
+                                  and technology dynamics (for power generation, road transport, hydrogen production
+                                  and industrial and residential end-use technologies).
+                              </p>
+                              <p>
+                                MENA-EDS quantifies CO2 emissions and incorporates environmentally oriented emission
+                                  abatement technologies (like RES, electric vehicles, CCS, energy efficiency) and
+                                  policy instruments. The latter include both market based instruments such as cap and
+                                  trade systems with differential application per region and sector specific policies
+                                  and measures focusing on specific carbon emitting activities. Key characteristics of
+                                  the model, that are particularly pertinent for performing the analysis of the
+                                  implications of alternative climate abatement scenarios, include world supply/demand
+                                  resolution for determining the prices of internationally traded fuels and technology
+                                  dynamics mechanisms for simulating spill-over effects for technological improvements
+                                  (increased uptake of a new technology in one part of the world leads to improvements
+                                  through learning by experience which eventually benefits the energy systems in other
+                                  parts of the World).
+                              </p>
+                              <p>
+                                MENA-EDS is designed to provide medium and long term energy system projections and
+                                  system restructuring up to 2050, both in the demand and the supply sides. The model
+                                  produces analytical quantitative results in the form of detailed energy balances in
+                                  the period 2015 to 2050 annually. The model can support impact assessment of specific
+                                  energy and environment policies and measures, applied at regional and global level,
+                                  including price signals, such as taxation, subsidies, technology and energy efficiency
+                                  promoting policies, RES supporting policies, environmental policies and technology
+                                  standards.
+                              </p>
+                          <p>
+                            MENA-EDS  consists of a large set of equations describing the time evolution of key
+                              variables, which are of interest in the context of a general analysis of the
+                              energy-environment-economic system.Equations in the model represent the model’s endogenous
+                              variables as a function of other endogenous variables, exogenous variables and parameters.
+                              It is a recursive dynamic (partial equilibrium energy system) model with annual resolution
+                              currently serviced to run up to the year 2050 (the process to extend model horizon to 2100
+                              is ongoing). The MENA-EDS model has a triangular structure in order to avoid
+                              contemporaneous simultaneity. On the other hand, simultaneity is modelled through lagged
+                              instances of endogenous variables. Most of the model equations are specified in difference
+                              terms in order to avoid excessive early variability and adequately represent accumulation
+                              of uncertainty in the longer term.
+                            The model is currently used to develop NDC and low-emission pathways for South Mediterannean
+                              countries (Morocco, Algeria, Tunisia, Egypt, Luibya, Israel, Jordan, Lebanon, Turkey,
+                              Palestine), but can be expanded to other countries (this process is already implemented in
+                              NDC ASPECTS project)
+                          </p>
+
+
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the MENA-EDS model</h2>
+                              <p>
+                                  The MENA-EDS model provides detailed projections of energy demand, supply, power
+                                  generation mix, energy-related carbon emissions, energy prices and investment to the
+                                  future covering the global energy system. MENA-EDS is a fully fledged energy demand
+                                  and supply simulation model aiming at addressing energy system analysis, energy price
+                                  projections, power generation planning and climate change mitigation policies. The
+                                  model contains relations and/or exogenous variables for all the main quantities,
+                                  which are of interest in the context of general energy systems analysis. These
+                                  include demographic and economic activity indicators, primary and final energy
+                                  consumption by main fuel, fuel resources and prices, CO2 emissions, greenhouse
+                                  gases concentrations and technology dynamics (for power generation, road transport,
+                                  hydrogen production and industrial and residential end-use technologies).
+                              </p>
+                              <p>
+                                  MENA-EDS quantifies CO2 emissions and incorporates environmentally oriented emission
+                                  abatement technologies (including renewable energy, electric vehicles, Carbon Capture
+                                  and Storage, energy efficiency, electrification, green hydrogen, advanced biofuels)
+                                  and energy and climate policy instruments. The latter include both market based
+                                  instruments such as cap and trade systems with differential application per region
+                                  and sector specific policies and measures focusing on specific carbon emitting
+                                  activities. Key characteristics of the model, that are particularly pertinent for
+                                  performing the analysis of the implications of alternative climate abatement
+                                  scenarios, include world supply/demand resolution for determining the prices of
+                                  internationally traded fuels and technology dynamics mechanisms for simulating
+                                  spill-over effects for technological improvements (increased uptake of a new
+                                  technology in one part of the world leads to improvements through learning by
+                                  experience which eventually benefits the energy systems in other parts of the World).
+                                  MENA-EDS is designed to provide medium and long term energy system projections and
+                                  system restructuring up to 2050 (and 2100), both in the energy demand and the supply
+                                  sides. The model produces analytical quantitative results in the form of detailed
+                                  energy balances in the period 2015 to 2050 annually (to be expanded to 2100). The
+                                  model can support impact assessment of specific energy and environment policies and
+                                  measures, applied at regional and global level, including price signals, such as
+                                  taxation, subsidies, technology and energy efficiency promoting policies, RES
+                                  supporting policies, environmental policies and technology standards.
+                              </p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                  The MENA-EDS model estimates in detail carbon dioxide emissions, as emerging from
+                                  fossil fuel combustion and industrial processes.</p>
+                              <p>
+                                  The model directly covers all emissions from the energy sector and the industry sector
+                                  and can split CO2 emissions by sector (transport, industry, buildings, power
+                                  generation, refineries, international bunkers, other) and by fuel (coal, oil,
+                                  natural gas). The model is currently expanded to represent non-CO2 GHG emissions
+                                  (including CH4, N2O and F-gases) through specific marginal abatement cost curves
+                                  per region and sector.</p>
+                              <p>Energy and climate policies affect these emissions: energy CO2 is derived from the
+                                  changes in the energy sector induced by the policy, other emissions are affected by
+                                  marginal abatement cost curves.</p>
+                              <p>The model has been used extensively to study climate change mitigation scenarios, see
+                                  References section for the most recent examples.</p>
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  The two main socio-economic drivers, population and GDP, are exogenous in MENA-EDS.
+                              </p>
+                              <p>
+                                  The key marco-economic assumptions are derived from population and GDP projections.
+                              </p>
+                              <p>
+                                  Starting from historical data, sectoral economic activity variables are calculated (capturing regional differentiation):
+                              </p>
+                              <p>
+                                  <ul>
+                              <li> sectoral value added by sector (industries, services, agriculture): depends on the
+                                  level of development of the region, given by GDP per capita (industrialization phase
+                                  followed by service-based economy);</li>
+                              <li>industrial physical production: depends on the evolution of sectoral value added,
+                                  which depends on the level of development</li>
+                              <li>mobility (for passengers and for goods): depends on the evolution of GDP per capita
+                                  and transport activity (measured in terms of passenger-km/cars per capita or tonne-km)
+                                  as well as the average cost of transport compared to income</li>
+                              <li>buildings surfaces: depend on households size and surface per dwelling, both depending
+                                  on personal income.</li>
+                          </ul>
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                               MENA-EDS is a technology-rich energy system model that represents most major fossil fuel
+                                  and low-carbon technologies  that are envisaged to be available for at least the first
+                                  half of the 21st century, and also including disruptive technological options,
+                                  including zero and negative-emission technologies (incuding Biomass with CCS and
+                                  Direct Air Capture) . By simulating the substitution of low or zero-carbon for
+                                  high-carbon technologies in response to their relative costs, as well as emissions
+                                  constraints and/or carbon prices, the MENA-EDS energy system model simulates
+                                  mitigation through a large set of different measures and technological configurations.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                 MENA-EDS is a recursive dynamic energy system simulation model. Variables are either
+                                  calculated directly or are calculated based on the previous years' values, to which
+                                  are applied the evolution of explanatory variables and other exogenous parameters.
+                              </p>
+                              <p>
+                                 The economic decisions regarding the investment and operation of the energy system are
+                                  based on the current state of knowledge of parameters (costs and performance of
+                                  technologies, prices, ...) or with a myopic anticipation of future costs and
+                                  constraints. The model does not use foresight but myopic anticipation. Some foresight
+                                  can be forced in the electricity production sector. The core operating principle of
+                                  the model is that of market equilibrium. The representative agents in the modules use
+                                  information on prices and make decisions about the allocation of resources. They
+                                  represent, for example, regional electricity sectors, regional refining sectors,
+                                  regional energy demand sectors. Markets are the means by which these representative
+                                  agents interact with one another. The model solves for a set of market prices so that
+                                  supplies and demands are balanced in all these markets across the model ; in other
+                                  words, market equilibrium is assumed to take place in each one of these markets
+                                  (partial equilibrium), and not in the entire economy across all markets (general
+                                  equilibrium). The solution process is the process of iterating on market prices until
+                                  this equilibrium is reached. The regional fuel markets are also integrated to form an
+                                  international (global or regional) market equilibirum for crude oil, natural gas and
+                                  coal.
+                              </p>
+                              <p>
+                                 A major update of the model is currently implemented, expanding its time horizon,
+                                  technology coverage, regional coverage and policy representation (as part of H2020
+                                  NDC ASPECTS project)
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                Key scenario assumptions for MENA-EDS include socioeconomics (population, labour
+                                  participation, and GDP); energy technology characteristics (e.g. costs, performance);
+                                  energy and other resources & potentials, such as fossil fuels, wind, solar, uranium;
+                                  and policies, including emissions constraints, renewable portfolio standards, etc.
+                              </p>
+                              <p>
+                                Key scenario results (outputs) from MENA-EDS include an analysis of the energy system
+                                  (energy demands, flows, technology deployments, and prices throughout); prices of
+                                  energy products; and emissions for the major greenhouse gases
+                              </p>
+                              <p>
+                                  Outcomes of MENA-EDS depend strongly on the assumptions made for socioeconomic,
+                                  techno-economic, and policy parameters.
+                              </p>
+                              <p>
+                                  Parameters can be revised and updated in the framework of the project, following the
+                                  feedback of local and national experts (stakeholder engagement), the comparative
+                                  assessment with other modelling experiences, and the discussion with the partners
+                                  (modellers).
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="mena-edsmodel_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                The MENA-EDS model is used to simulate the implications of various energy and climate policy instruments, including:
+                              </p>
+                              <p>
+                                  GHG policies
+                              </p>
+                              <p>
+                                 Regional emission reduction objective: Implementation of carbon pricing schemes
+                              </p>
+                              <p>
+                                  Cumulated CO2 buget: Regional differentiation of emission constraints and carbon pricing to reduce emissions within budget (iterative calculation)
+                              </p>
+                              <p>
+                                  Energy pricing policies
+                              </p>
+                              <p>
+                                  Carbon pricing (either carbon taxation in ETS sectors or carbon values non-ETS sectors)
+                              </p>
+                              <p>
+                                  Other environmental taxes (e.g. introduction of taxes on fossil fuel production and/or consumption or environmental tax on non-conventional fuels production)
+                              </p>
+                              <p>
+                                  Subsidies to renewable energy, electric cars and energy efficiency
+                              </p>
+                              <p>
+                                  Fossil fuel subsidies (including the possibility to phase out)
+                              </p>
+                              <p>
+                                  Support policies for specific technologies
+                              </p>
+                              <p>
+                                  Electricity generation feed-in tariffs (especially for renewable energy technologies)
+                              </p>
+                              <p>
+                                  Acceleration of deployment of low-emission vehicles (e.g. through direct subsidies or
+                                  low interest loans)
+                              </p>
+                              <p>
+                                  Low interest loans or subsidies to capital cost to purchase energy appliances and
+                                  equipment or to perform energy retrofitting
+                              </p>
+                              <p>Efficiency standards</p>
+                              <p>Fuel efficiency standards in vehicles and in buildings</p>
+                              <p>
+                                  Penetration of low-energy consuming buildings
+                              </p>
+                              <p>
+                                  Openness to investment, especially in low-carbon technologies
+                              </p>
+                              <p>
+                                  Discount rates in low-carbon technology investment
+                              </p>
+                              <p>
+                                  Lower discount rates (subsidies to capital) for low-carbon and energy efficient
+                                  technologies
+                              </p>
+                              <p>
+                                  The model calculates several indicators that can be used to inform energy and climate
+                                  policy impact assessment at regional or global level. These include:
+                              </p>
+                              <p>
+                                  Energy Demand, Energy intensity of GDP (primary and final energy), Energy intensity
+                                  per unit of value added in industry, Energy intensity of households’ income, Energy
+                                  intensity per inhabitant, Energy intensity per passenger car, Electricity consumption
+                                  per capita in residential sector, Electricity generated per capita, Transport fuels
+                                  per capita, Performance against overall energy efficiency targets (primary energy and
+                                  final energy), Number of passenger cars per capita, Overall share of RES in primary
+                                  energy demand, Share of RES in total power generation, Share of bio-fuels in fuels
+                                  used in the transport sector, Share of renewable energy in power generation, Share of
+                                  electricity produced by CCS, Share of intermittent RES in power generation, Share of
+                                  nuclear in power generation, Power generation per capita, Average load factor of power
+                                  generation, Average rate of use of power plant capacities (by type), Security of
+                                  Energy Supply, Overall energy dependence indicator in each region, Evolution of import
+                                  fossil fuel prices for the EU, Developments of global fossil fuel markets for oil,
+                                  natural gas and coal, Share of unconventional oil (extra heavy oil and tar sands) in
+                                  global oil supply, Share of Middle East production in global oil production and
+                                  reserves, Development of unconventional gas resources (shale, tight and CBM), Carbon
+                                  intensity of GDP, Carbon intensity of households,Carbon intensity of the transport
+                                  sector,Carbon emissions per capita,Carbon intensity of power generation, Share of
+                                  emissions captured in power generation, Carbon intensity per unit of final energy in
+                                  industry/transport/buildings, Carbon intensity per unit of primary energy, Prices for
+                                  internationally traded fossil fuels (coal, oil and natural gas), Electricity prices
+                                  for industries and households, Unit costs of electricity production, Investments in
+                                  the power generation sector and in energy efficiency, Consumer expenditures on final
+                                  energy,  Carbon prices
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                  MENA-EDS does not automatically calculate the implications on non-climate SDGs of its
+                                  least-cost energy system to meet prescribed climate or emissions constraints. However,
+                                  it is possible to use its outputs to calculate relevant indicators in the SDG agenda
+                                  (details in the SDGs tab).
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="mena-edsmodel_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/j.esr.2012.12.009
+                                          </td>
+                                          <td>
+                                              Model-based analysis of the future strategies for the MENA energy system
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  This paper introduces a large-scale energy demand and supply model
+                                                  that is used to quantify alternative energy system strategies for the
+                                                  Middle East and North Africa (MENA) region to 2030. MENA contains
+                                                  major hydrocarbon producers and a vast and currently untapped
+                                                  potential for renewable power generation.
+                                              </p>
+                                              <p>
+                                                  It examines mutual benefits that MENA and the EU could derive by
+                                                  cooperating in the field of energy and climate policies. It also
+                                                  investigates a strategy emphasising decentralised RES deployment
+                                                  together with accelerated market reform leading to a reduction in
+                                                  power generation costs and a large increase of exportable hydrocarbon
+                                                  surpluses. Recognising the risks that characterise the region a case
+                                                  of policy failure is also considered.
+                                              </p>
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/B978-0-12-804436-0.00009-6
+                                          </td>
+                                          <td>
+                                              Analysis of Future Common Strategies Between the South and East
+                                              Mediterranean Area and the EU in the Energy Sector
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  Uncontestably the south and east Mediterranean (SEM) region and the
+                                                  European Union (EU) will mutually benefit by sharing energy resources
+                                                  in view of their strategic long-term aspirations. The SEM region has
+                                                  great potential for energy efficiency improvements and deployment of
+                                                  renewables which are sufficient both to cover local needs and to
+                                                  release hydrocarbon resources for exportation as well as to help the
+                                                  EU achieve the Energy Roadmap emission reduction targets at lower
+                                                  costs. Two kinds of obstacles currently hamper taking advantage of the
+                                                  untapped potential: (1) lack of power interconnection infrastructure
+                                                  and regulatory policy framework and (2) persistence of fossil fuel
+                                                  subsidies in a large part of the SEM region.
+                                              </p>
+                                              <p>
+                                                  This analysis is based on a large-scale energy system modeling of both
+                                                  the SEM and the EU regions and assesses two alternative cooperation
+                                                  strategies. The first strategy is essentially based on centralized
+                                                  actions involving large-scale exploitation of renewables in
+                                                  large-scale installations with a mainly exportation orientation. This
+                                                  strategy offers the best, cost-effective prospects for electricity
+                                                  exports to the EU under mechanisms of remuneration based on power
+                                                  purchase agreements (PPAs) and geographic expansion of the EU-ETS. The
+                                                  second, alternative strategy gives priority to decentralized
+                                                  investment aiming at exploiting dispersed renewable sources – the
+                                                  renewables recombined with proactive removal of current energy-pricing
+                                                  distortions and policies providing incentives for energy savings by
+                                                  energy consumers. The two scenarios differ in technology mix and have
+                                                  different impacts on the energy system, the energy trade balance,
+                                                  power generation costs, and investment financing. The scenarios also
+                                                  require different regulatory and investment promoting frameworks to
+                                                  materialize.
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                            DG CLIMA work (unfortunately not published yet)
+                                          </td>
+                                          <td>
+                                              Assessing the impacts of NDCs and low-emission pathways in MENA countries
+                                          </td>
+                                          <td>
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the MENA-EDS model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+<!--                    <div class="row">-->
+<!--                        <section class="section">-->
+<!--                            <span id="42_references" class="anchor"></span>-->
+<!--                            <h2 class="mb-0 heading-new">References</h2>-->
+<!--                            <p><a href="https://e3modelling.com/modelling-tools/prometheus/"> https://e3modelling.com/modelling-tools/prometheus/</a></p>-->
+<!--                        </section>-->
+<!--                    </div>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

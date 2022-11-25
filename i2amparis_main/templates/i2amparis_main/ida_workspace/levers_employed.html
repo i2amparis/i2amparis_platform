@@ -1,0 +1,74 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        What levers are employed by the models to achieve emission reductions?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    <p class="col-md-12 col-xs-12">
+    <ul>
+        <li>Level of emissions reduction in WWH ranges from <strong>-33 to -64%.</strong>
+        </li>
+        <li>The driving force, which refers to the activity variable that increases emissions in a sector, is “power generation” in the electricity supply sector. In all models and scenarios, power generation has a positive contribution to emissions.
+        </li>
+        <li>Renewables are employed with varying magnitude for decarbonisation: their contributions range from -31% relative emission reduction  in NEMESIS to -74% in GCAM.
+        </li>
+        <li>The share of nuclear in the power mix decreases  in all models except for GCAM, where the share of nuclear stays almost constant at around 27% of power generation. For the other three models, the impact is on a comparable level (11-16% of emission increase).
+        </li>
+        <li>The contribution of the fossil CO2 intensity reduction to decarbonisation is very small in all models.</li>
+        <li>The application of CCS to reduce emissions starts in 2035 for GCAM and EU TIMES, it is not used in the other two models. Only in GCAM, CCS already has a large contribution to decarbonisation in WWH (-58%). In EU TIMES, it contributes -13% to emission reduction.</li>
+    </ul>
+    </p>
+   <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+            data-toggle="tooltip" data-placement="auto"
+            title="<p>The charts presents the Global Final Energy by sector.
+            </p>">
+            Levers of emission reduction
+        </h2>
+        <h4 style="">(by scenarios and models)</h4>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 1em; text-align: center">Please select a scenario and an indicator.</div>
+    <div class="col-md-3 col-sm-2 col-xs-1"></div>
+    <div class="form-group col-md-8 col-sm-10 col-xs-12" style="margin-bottom: 2em;">
+        <div class="">
+            <select class="desc_text take_up_space levers_scenario_select sum-mul-select sum-boot-select" placeholder="Select a scenario" id="levers_scenario_select" style="width: 100%;display:inline" multiple="multiple">
+            <option value="WWH" selected>WWH</option>
+            <option value="NZE">NZE</option>
+            </select>
+            <select class="desc_text take_up_space levers_sector_select" placeholder="Select a sector" id="levers_sector_select" style="width: 100%;display:inline">
+            <option value="Power">Power</option>
+            <option value="Industry">Industry</option>
+            <option value="Buildings">Buildings</option>
+            <option value="Transport">Transport</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-12" style="height: 40em">
+        <div style="height: 100%;">
+            <div id="ida_levers" class="row"
+            style="height: 100%; line-height: 100%;">
+            <iframe id="ida_levers_viz_iframe" src="" title="Results"
+            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+            <div id="ida_levers_loading_bar"
+            style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+            src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">The chart will present the emissions levers.
+
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,819 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+                {#                                  E3ME#}
+                        <div id="collapse_e3me">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#e3me_short_overview">Short Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group e3me_key_feauters">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_e3me_key_feauters"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features of the E3ME model
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_e3me_key_feauters"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#e3me_geographic_coverage">
+                                                        Geographic coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Sectoral coverage</span>
+                                                    <a style="display: none"
+                                                       href="#e3me_sectoral_coverage">
+                                                        Sectoral coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Energy system coverage</span>
+                                                    <a style="display: none"
+                                                       href="#e3me_energy_system_coverage">
+                                                       Energy system coverage</a>
+                                                </li>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#e3me_emissions_granularity">Emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimension</span>
+                                    <a style="display: none"
+                                       href="#e3me_socioecon_dim">Socioeconomic dimension</a>
+                                </li>
+                                <li>
+                                <div class="panel-group e3me_policy_questions">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_e3me_policy_questions"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_e3me_policy_questions"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>What kind of questions can the model address?</span>
+                                                    <a style="display: none"
+                                                       href="#e3me_what_kind_questions">
+                                                        What kind of questions can the model address?</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>What kind of answers can the model provide?</span>
+                                                    <a style="display: none"
+                                                       href="#e3me_what_kind_answ">
+                                                        What kind of answers can the model provide?</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#e3me_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#e3me_references">References</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The Energy-Environment-Economy Global
+                             Macro-Economic (E3ME) model</h1>
+                      </div>
+                      <div class="row">
+                          <section class="section">
+                              <span id="e3me_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  The Energy-Environment-Economy Macro-Econometric model (E3ME – www.e3me.com) is a
+                                  computer-based model of the world’s economic and energy systems and the environment.
+                                  It was originally developed through the European Commission’s research framework
+                                  programmes and is now widely used in Europe and beyond for policy assessments,
+                                  forecasting and research purposes.
+                              </p>
+                              <p>
+                                  E3ME assesses the interactions between the economy, energy and the environment.
+                                  As a global model, based on the full structure of the economic national accounts,
+                                  E3ME is capable of producing a broad range of economic indicators. In addition, there
+                                  is range of energy and environment indicators.
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/e3m3_Model.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">E3ME as an E3 Model
+                                      </p>
+
+                                  </div>
+                              </div>
+
+                          </section>
+                      </div>
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Key features of the E3ME model</h2>
+                                <span id="e3me_geographic_coverage" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                              <p>
+                                  The E3ME model covers the entire globe in 61 regions, which comprise most major
+                                  economies (including China, India, Russia, Brazil, Japan, Canada, Mexico, Indonesia,
+                                  and the United States of America), the EU, at the regional level as well as at the
+                                  national level (Member States plus candidate countries), and other countries’
+                                  economies separately or regionally grouped.
+                              </p>
+                                 <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:50%">Geographic region</th>
+                                          <th style="width:50%">Countries</th>
+
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>AOPEC</td>
+                                          <td>Africa OPEC</td>
+                                      </tr>
+                                      <tr>
+                                          <td>AR</td>
+                                          <td>Argentina</td>
+                                      </tr>
+                                      <tr>
+                                          <td>AT</td>
+                                          <td>Austria</td>
+                                      </tr>
+                                      <tr>
+                                          <td>AU</td>
+                                          <td>Australia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>BE</td>
+                                          <td>Belgium</td>
+                                      </tr>
+                                      <tr>
+                                          <td>BR</td>
+                                          <td>Brazil</td>
+                                      </tr>
+                                      <tr>
+                                          <td>BU</td>
+                                          <td>Bulgaria</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CA</td>
+                                          <td>Canada</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CH</td>
+                                          <td>Switzerland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CN</td>
+                                          <td>China</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CO</td>
+                                          <td>Colombia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CR</td>
+                                          <td>Croatia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CY</td>
+                                          <td>Cyprus</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CZ</td>
+                                          <td>Czech Republic</td>
+                                      </tr>
+                                      <tr>
+                                          <td>DE</td>
+                                          <td>Germany</td>
+                                      </tr>
+                                      <tr>
+                                          <td>DK</td>
+                                          <td>Denmark</td>
+                                      </tr>
+                                      <tr>
+                                          <td>EL</td>
+                                          <td>Greece</td>
+                                      </tr>
+                                      <tr>
+                                          <td>EN</td>
+                                          <td>Estonia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ES</td>
+                                          <td>Spain</td>
+                                      </tr>
+                                      <tr>
+                                          <td>FI</td>
+                                          <td>Finland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>FR</td>
+                                          <td>France</td>
+                                      </tr>
+                                      <tr>
+                                          <td>HU</td>
+                                          <td>Hungary</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ID</td>
+                                          <td>Indonesia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>IN</td>
+                                          <td>India</td>
+                                      </tr>
+                                      <tr>
+                                          <td>IR</td>
+                                          <td>Ireland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>IS</td>
+                                          <td>Iceland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>IT</td>
+                                          <td>Italy</td>
+                                      </tr>
+                                      <tr>
+                                          <td>JP</td>
+                                          <td>Japan</td>
+                                      </tr>
+                                      <tr>
+                                          <td>KA</td>
+                                          <td>Kazakhstan</td>
+                                      </tr>
+                                      <tr>
+                                          <td>KO</td>
+                                          <td>Korea</td>
+                                      </tr>
+                                      <tr>
+                                          <td>LT</td>
+                                          <td>Lithuania</td>
+                                      </tr>
+                                      <tr>
+                                          <td>LV</td>
+                                          <td>Latvia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>LX</td>
+                                          <td>Luxembourg</td>
+                                      </tr>
+                                      <tr>
+                                          <td>MA</td>
+                                          <td>North Macedonia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>MA</td>
+                                          <td>Malaysia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>MT</td>
+                                          <td>Malta</td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>MX</td>
+                                          <td>Mexico</td>
+                                      </tr>
+                                      <tr>
+                                          <td>NG</td>
+                                          <td>Nigeria</td>
+                                      </tr>
+                                      <tr>
+                                          <td>NL</td>
+                                          <td>Netherlands</td>
+                                      </tr>
+                                      <tr>
+                                          <td>NO</td>
+                                          <td>Norway</td>
+                                      </tr>
+                                      <tr>
+                                          <td>NZ</td>
+                                          <td>New Zealand</td>
+                                      </tr>
+                                      <tr>
+                                          <td>PL</td>
+                                          <td>Poland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>PT</td>
+                                          <td>Portugal</td>
+                                      </tr>
+                                      <tr>
+                                          <td>RAI</td>
+                                          <td>Rest of Annex I</td>
+                                      </tr>
+                                      <tr>
+                                          <td>RASEAN</td>
+                                          <td>Rest of ASEAN</td>
+                                      </tr>
+                                      <tr>
+                                          <td>RLA</td>
+                                          <td>Rest of Latin America</td>
+                                      </tr>
+                                      <tr>
+                                          <td>RO</td>
+                                          <td>Romania</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ROA</td>
+                                          <td>Rest of Africa</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ROPEC</td>
+                                          <td>Rest of OPEC</td>
+                                      </tr>
+                                      <tr>
+                                          <td>RU</td>
+                                          <td>Russian Federation</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SA</td>
+                                          <td>Saudi Arabia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SI</td>
+                                          <td>Slovenia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SK</td>
+                                          <td>Slovenia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SW</td>
+                                          <td>Sweden</td>
+                                      </tr>
+                                      <tr>
+                                          <td>TK</td>
+                                          <td>Turkey</td>
+                                      </tr>
+                                      <tr>
+                                          <td>TW</td>
+                                          <td>Taiwan</td>
+                                      </tr>
+                                      <tr>
+                                          <td>UK</td>
+                                          <td>United Kingdom</td>
+                                      </tr>
+                                      <tr>
+                                          <td>UR</td>
+                                          <td>Ukraine</td>
+                                      </tr>
+                                      <tr>
+                                          <td>US</td>
+                                          <td>United States of America</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ZA</td>
+                                          <td>South Africa</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ROW</td>
+                                          <td>Rest of World</td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Countries and regions covered in E3ME</caption>
+                                  </table>
+</div>
+
+
+                          </section>
+                     </div>
+
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me_sectoral_coverage" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Sectoral coverage</h4>
+                              <p>
+                                  The model covers the entire economy, into up to 69 sectors, with considerable detail
+                                  of service sectors, as well as up to 43 categories of consumer expenditure.
+                              </p>
+                          </section>
+                     </div>
+
+
+
+
+                        <div class="row">
+                          <section class="section">
+                              <span id="e3me_energy_system_coverage" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Energy system coverage </h4>
+                              <p>
+                                  Twenty-three different users of twelve different fuel types are included in the model.
+                              </p>
+                          </section>
+                        </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Emissions granularity</h2>
+                              <p>
+                                  E3ME covers fourteen types of air-borne emission (where data are available), including
+                                  the six GHGs monitored under the Kyoto protocol. This in essence includes carbon
+                                  dioxide (CO<sub>2</sub>), methane (CH<sub>4</sub>), nitrous oxide (N<sub>2</sub>O) and F-gases;
+                                  land-use CO<sub>2</sub>
+                                  (exogenously); and particulate matter (BC, OC, PM2.5), sulphur oxides (SOx), other
+                                  nitrogen oxides (NOx) and organic compounds (OC/VOC).
+                              </p>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimension</h2>
+                              <p>
+                                  The E3ME model includes thirteen types of household, including income quintiles and
+                                  socioeconomic groups, such as the unemployed, inactive and retired, plus an
+                                  urban/rural split.
+                              </p>
+                              <p>
+                                  It is built to create annual projections up until 2050 over these main model
+                                  dimensions (although, theoretically, it can be used up to 2100).
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions</h2>
+                            <span id="e3me_what_kind_questions" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">What kind of questions can the model address?</h4>
+                              <p>
+                                  E3ME can be used for both forecasting and evaluating the impacts of an input shock
+                                  through a scenario-based analysis. The shock could be, for example, a change in
+                                  policy or a change in economic assumptions. The analysis can be either forward-looking
+                                  (ex-ante) or evaluating previous developments in an ex-post manner.
+                              </p>
+                              <p>
+                                  <ul>
+                              As such, E3ME is well-suited to examine questions regarding changes in policies. The
+                              primary strength of E3ME lies in its use as a platform for the analysis of scenarios. As
+                              E3ME is a global Energy-Economy-Environment model, it is capable of addressing such
+                              questions as follows:
+                              <li>
+                                  Changes in the economy and labour market associated with changes in policy
+                              </li>
+                              <li>
+                                  Impacts of changes in energy demand and changes in the composition of energy
+                                  technologies
+                              </li>
+                              <li>
+                                  The effect of policy on environmental indicators including emissions (consumption and
+                                  production-based) and material use
+                              </li>
+                          </ul>
+                              </p>
+                          </section>
+                     </div>
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="e3me_what_kind_answ" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">What kind of answers can the model provide?</h4>
+                              <p>
+                                  <ul>
+                              As noted, E3ME is designed to form annual projections up to 2050. Therefore, E3ME is
+                              commonly used to compare scenario projections. The following, non-exhaustive list shows
+                              the most common model outputs:
+                              <li>
+                                  GDP and the aggregate components of GDP (household expenditure, investment, government
+                                  expenditure and international trade)
+                              </li>
+                              <li>Sectoral output and GVA, prices, trade and competitiveness effects</li>
+                              <li>International trade by sector, origin and destination</li>
+                              <li>Consumer prices and expenditures</li>
+                              <li>Sectoral employment, unemployment, sectoral wage rates and labour supply</li>
+                              <li>Energy demand, by sector and by fuel, energy prices</li>
+                              <li>Rebound and spill-over effects</li>
+                              <li>CO<sub>2</sub> emissions by sector and by fuel</li>
+                              <li>Other air-borne emissions</li>
+                              <li>Material demands </li>
+                          </ul>
+                              </p>
+                              <p>
+                                  Given the wide range of both economic and environmental output indicators, and the
+                                  high degree of disaggregation, E3ME is capable of providing detailed projections
+                                  of the impacts of policies on both the regional level as well as the sectoral level.
+                              </p>
+                          </section>
+                    </div>
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+
+                                 <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper</th>
+                                          <th style="width:40%">Topic</th>
+                                          <th style="width:40%">Key findings
+</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>Wood et al. (2019)</td>
+                                          <td>Historical impacts of globalisation and future impacts of climate policies
+                                              on international emission transfers</td>
+                                          <td>
+                                              The results suggest that absolute embodied emissions will plateau at
+                                              current levels or slowly return to pre-2008- crisis levels, and
+                                              differences between the NDC and baseline scenarios imply that NDC policies
+                                              will not result in significant carbon leakage. The share of national
+                                              footprint embodied in imports, at least for countries with ambitious
+                                              decarbonisation policies, will likely increase. This suggests that,
+                                              despite the world-wide stabilisation of emissions transfers, addressing
+                                              emissions embodied in imports will become increasingly important for
+                                              reducing carbon footprints.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Gramkow and Anger-Kraavi (2019)</td>
+                                          <td>
+                                              Exploring a transformation of Brazil’s economy, with a focus on
+                                              manufacturing sectors, while contributing to the Paris targets
+                                          </td>
+                                          <td>
+                                              Findings highlight that the correct mix of green stimulus can help
+                                              modernise and decarbonise the Brazilian manufacturing sectors and the
+                                              country’s economy grow faster (by up to 0.42% compared to baseline) while
+                                              its carbon dioxide (CO2) emissions decline (by up to 14.5% in relation to
+                                              baseline). Investment levels increase, thereby strengthening exports’
+                                              competitiveness and alleviating external constraints to long-term economic
+                                              growth in net terms. Scaling up green fiscal stimulus in manufacturing
+                                              sectors globally needs to be considered as one of the main policy measures
+                                              helping with transformation to a low-carbon economy, especially in the
+                                              developing world.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Bachner et al., 2019</td>
+                                          <td>Uncertainties in the economy-wide assessment of decarbonisation pathways,
+                                              in the European iron and steel sector</td>
+                                          <td>We show that the effects depend strongly on the technology choice, the
+                                              prevailing macroeconomic states as well as regional characteristics. The
+                                              underlying socioeconomic development and the climate policy trajectory,
+                                              with a to date expected range of variation, seem to play a less important
+                                              role. Particularly, we find that the choice of model, with its underlying
+                                              macroeconomic theory, influences the sign and magnitude of macroeconomic
+                                              effects and thus should be well understood by both modellers and
+                                              policymakers. We emphasise that model assumptions should be transparent,
+                                              results sought to be derived across a range of possible contexts, and
+                                              presented together with the conditions under which they are valid. To that
+                                              end, co-design and co-production in research would support its relevance.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Spijker et al., 2019</td>
+                                          <td>
+                                              Integrated impacts of low-emission transitions in the Dutch livestock
+                                              sector
+                                          </td>
+                                          <td>
+                                              Findings suggest that each low-emission transition pathway has its own
+                                              unique ‘footprint’ of positive and negative side-effects. This footprint
+                                              is largely shaped by the combination of existing and new technologies,
+                                              practices and behavioral patterns. We consider the findings relevant for
+                                              climate policy and transition governance processes where there is a need
+                                              to develop robust transition pathways that meet different development
+                                              goals and to overcome implementation barriers for the selected low
+                                              emission technologies and practices.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Silaen et al., 2018</td>
+                                          <td>Understanding the potential of bioenergy for an energy transition in
+                                              Bali</td>
+                                          <td>
+                                              Quantitative research using the E3ME model identified economic benefits of
+                                              biogas deployment, but also that increased LPG use due technological
+                                              constraints of biogas could cause a potential increase of national
+                                              CO<sub>2</sub>
+                                              emissions.  Policy stakeholders agreed that LPG subsidies hindered the
+                                              biogas development and biogas should be considered in Indonesia’s
+                                              Medium-Term National Development Plan. These factors, in addition to
+                                              co-benefits of biogas, should be considered while drafting the development
+                                              plan.
+                                          </td>
+                                      </tr>
+
+
+                                      </tbody>
+                                      <caption>List of recent publications using the E3ME model</caption>
+                                  </table>
+</div>
+
+                          </section>
+                     </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="e3me_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Wood, R., Grubb, M., Anger-Kraavi, A., Pollitt, H., Rizzo, B., Alexandri, E., ... &
+                                Tukker, A. (2019). Beyond peak emission transfers: historical impacts of globalization
+                                and future impacts of climate policies on international emission transfers.
+                                Climate Policy, 1-14.
+                            </p>
+                            <p>
+                                Gramkow, C., & Anger-Kraavi, A. (2019). Developing Green: A case for the Brazilian
+                                manufacturing industry. Sustainability (submitted, under review)
+                            </p>
+                            <p>
+                                Bachner, G., Mayer, J., Steininger, K. W., Anger-Kraavi, A., & Smith, A. (2019).
+                                Uncertainties in the economy-wide assessment of decarbonization pathways - The case of
+                                the European iron and steel. Ecological Economics (submitted, under review)
+                            </p>
+                            <p>
+                                Spijker, E., Anger-Kraavi, A., Pollitt, H., & Van de Ven, D.-J. (2019). Evaluating
+                                integrated impacts of low-emission transitions in the livestock sector, Environmental
+                                Innovation and Societal Transitions (submitted, under review)
+                            </p>
+                            <p>
+                                Silaen, M., Taylor, R., Bößner, S., Anger-Kraavi, A., Chewpreecha, U., Badinotti, A., &
+                                Takama, T. (2019). Bioenergy in Bali: applying mixed-research methods to understand
+                                potential for an energy transition, Environmental Innovation and Societal Transitions
+                                (submitted, under review)
+                            </p>
+
+
+
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+</body>
+
+</html>
+
+

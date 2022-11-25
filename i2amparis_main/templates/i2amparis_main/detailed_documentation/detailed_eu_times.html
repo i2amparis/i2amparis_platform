@@ -1,0 +1,1564 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+{#                                                                    JET#}
+{##}
+{##}
+
+                                <div id="collapse_jet">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span>Short overview</span>
+                                            <a style="display: none"
+                                               href="#jet_short_overview">Short Overview</a>
+                                        </li>
+                                        <li>
+                                        <div class="panel-group jet_key_feauters">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" style="padding:0px">
+                                                    <h5 class="panel-title"
+                                                        style="background-color:#343a40; padding: 5px">
+                                                        <a data-toggle="collapse"
+                                                           href="#collapse_jet_key_feauters"><i
+                                                                class="fa fa-caret-right rotate"
+                                                                style="margin-right: 10px;"></i>Key
+                                                            features of the EU-TIMES model
+                                                        </a>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapse_jet_key_feauters"
+                                                     class="panel-collapse collapse">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item">
+                                      <span>Energy sectoral detail
+
+</span>
+                                                            <a style="display: none"
+                                                               href="#jet_energy_sectoral">
+                                                                Energy sectoral detail
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                      <span>Geographic coverage
+</span>
+                                                            <a style="display: none"
+                                                               href="#jet_geographic_coverage">
+                                                                Geographic coverage
+                                                            </a>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <span>Multi-year time periods</span>
+                                                            <a style="display: none"
+                                                               href="#jet_multi_year_time_periods">
+                                                                Multi-year time periods</a>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <span>Intra-year time periods (time slices)</span>
+                                                            <a style="display: none"
+                                                               href="#jet_intra_year_time_periods">
+                                                                Intra-year time periods (time
+                                                                slices)</a>
+                                                        </li>
+
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </li>
+                                                <li class="list-group-item">
+                                                    <span>Emissions granularity</span>
+                                                    <a style="display: none"
+                                                       href="#jet_emissions_granularity">
+                                                        Emissions granularity</a>
+                                                </li>
+
+                                               <li>
+                                <div class="panel-group eu_times_socioeco_menu">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_eu_times_socioeco_menu"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Socioeconomic dimensions
+
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_eu_times_socioeco_menu"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+
+
+                                  <li class="list-group-item">
+                                                    <span>Introduction</span>
+                                                    <a style="display: none"
+                                                       href="#jet_socioeconomic_dimensions">
+                                                        Introduction</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Energy demand drivers and demand elasticities</span>
+                                                    <a style="display: none"
+                                                       href="#jet_energy_demand_drivers_elasticities">
+                                                        Energy demand drivers and demand
+                                                        elasticities</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+
+                                                <li class="list-group-item">
+                                                    <span>Calibration of the model</span>
+                                                    <a style="display: none"
+                                                       href="#jet_calibration">
+                                                        Calibration of the model</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Mitigation/adaptation measures and technologies</span>
+                                                    <a style="display: none"
+                                                       href="#jet_mitigation_adaptation">
+                                                        Mitigation/adaptation measures and
+                                                        technologies</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Economic rationale and model solution</span>
+                                                    <a style="display: none"
+                                                       href="#jet_economic_rationale">
+                                                        Economic rationale and model solution</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Value of key parameters</span>
+                                                    <a style="display: none"
+                                                       href="#jet_value_key_param">
+                                                        Value of key parameters</a>
+                                                </li>
+                                        <li>
+
+                                                <div class="panel-group jet_policies_sdgs">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading"
+                                                             style="padding:0px">
+                                                            <h5 class="panel-title"
+                                                                style="background-color:#343a40; padding: 5px">
+                                                                <a data-toggle="collapse"
+                                                                   href="#collapse_jet_policies_sdgs"><i
+                                                                        class="fa fa-caret-right rotate"
+                                                                        style="margin-right: 10px;"></i>Methodology
+
+
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapse_jet_policies_sdgs"
+                                                         class="panel-collapse collapse">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                <span>Key policies that can be addressed</span>
+                                                                <a style="display: none"
+                                                                   href="#jet_key_policies">
+                                                                    Key policies that can be
+                                                                    addressed</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <span>Implications for other SDGs</span>
+                                                                <a style="display: none"
+                                                                   href="#jet_implications_sdgs">
+                                                                    Implications on other
+                                                                    SDGs</a>
+                                                            </li>
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            <span>Recent publications using the EU-TIMES model</span>
+                                                    <a style="display: none"
+                                                       href="#jet_recent_puplications">
+                                                        Recent publications using the EU-TIMES
+                                                        model
+                                                    </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span>References</span>
+                                            <a style="display: none"
+                                               href="#jet_references">References</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+                  <div class="row">
+                        <h1 id="jet" style="padding-bottom: 1em; padding-top: 1em">EU-TIMES</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_short_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Short overview</h2>
+                            <p>
+                                TIMES is a modelling platform for local, national or multi-regional energy systems,
+                                which provides a technology-rich basis for estimating how energy system operations
+                                will evolve over a long term, multiple period time horizon (Loulou and Labriet, 2008)
+                                These energy system operations include the extraction of primary energy such as
+                                fossil fuels, the conversion of this primary energy into useful forms (such as
+                                electricity, hydrogen, solid heating fuels and liquid transport fuels), and the
+                                use of these fuels in a range of energy service applications (vehicular transport,
+                                building heating and cooling, and the powering of industrial manufacturing plants).
+                                In multi-region versions of the model, the trade of fuels between regions is also
+                                estimated. The TIMES framework is usually applied to the analysis of the entire
+                                energy sector, but it may also be applied to the detailed study of single sectors
+                                (e.g. the electricity and district heat sector).
+                            </p>
+                            <p>
+                                The EU-TIMES model, is the multi-region, European version of TIMES,
+                                which is designed for analysing the role of energy technologies and their
+                                innovation needs for meeting European policy targets related to energy and
+                                climate change. It models technologies uptake and deployment and their
+                                interaction with the energy infrastructure in an energy systems perspective.
+                                It is a relevant tool to support impact assessment studies in the energy policy
+                                field that require quantitative modelling at an energy system level with a high
+                                technology detail. The EU-TIMES model represents the EU Member States and
+                                neighbouring countries, where each country is modelled as one region; producing
+                                projections (or scenarios) of the EU energy system showing its evolution up to
+                                2060 under different sets of specific technology and policy assumptions and
+                                constraints.
+
+                            </p>
+                            <p>
+                                EU-TIMES is an improved offspring of previous European energy system models
+                                developed under several EU funded projects, such as <a href="http://www.needs-project.org"><b>NEEDS</b></a>,
+                                <a href="http://www.cres.gr/res2020"><b>RES2020</b></a>,
+                                <a href="http://realisegrid.rse-web.it"><b>REALISEGRID</b></a>,
+                                <a href="http://reaccess.epu.ntua.gr"><b>REACCESS</b></a>,
+                                and <a href=" http://comet.lneg.pt"><b>COMET</b></a>.
+                                The EU-TIMES
+                                model has been further developed over the last years by JRC unit C.7. A list of
+                                publication is available online <a
+                                    href=" https://ec.europa.eu/jrc/en/publications-list/%2522jrc-eu-times%2522"><b>here</b></a>.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Key features of the EU-TIMES model</h2>
+                            <span id="jet_energy_sectoral" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                            <p>
+                                The EU-TIMES model considers both the supply and demand sides and includes the
+                                following seven sectors: primary energy supply (including transformation);
+                                electricity generation; industry; residential; commercial; agriculture; and transport.
+
+                            </p>
+                            <p>
+                                A simplified overview of the EU-TIMES energy sectors structure is shown in the following figure.
+                            </p>
+
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/jet_energy_system_per_region.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of the EU-TIMES energy system for
+                                        each region
+                                    </p><p> Source: Own elaboration
+                                    </p>
+                                    {#                                      <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">#}
+                                    {#                                          https://jgcri.github.io/gcam-doc/overview.html</a></p>#}
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_geographic_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                            <p>
+                                The EU-TIMES includes in its base version 31 regions, connected by
+                                energy/emissions trade, as follows: the EU-28 (Austria, Belgium, Bulgaria,
+                                Croatia, Cyprus, Czech Republic, Germany, Denmark, Estonia, Spain, Finland,
+                                France, Greece, Hungary, Ireland, Italy, Lithuania, Luxemburg, Latvia,
+                                Malta, the Netherlands, Poland, Portugal, Romania, Sweden, Slovenia,
+                                Slovakia and the United Kingdom) and Non-EU countries (Switzerland, Iceland, Norway).
+                                The model can be optionally further expanded to the Balkans regions (Albania,
+                                Bosnia and Herzegovina, Kosovo, The Former Yugoslav Republic of Macedonia,
+                                Montenegro, and Serbia), although this configuration requires some modelling work.
+                            </p>
+                            <p>
+                                Each country is represented as one single region, as shown in the following figure.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:60%;height:60%; margin-bottom: 2em"
+                                     src="{% static "images/jrc_eu_tmes_coverage.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Regional representation and countries in the
+                                        EU-TIMES model
+                                    </p><p>   Source: Own elaboration
+                                    </p>
+                                    {#                                      <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">#}
+                                    {#                                          https://jgcri.github.io/gcam-doc/overview.html</a></p>#}
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_multi_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Multi-year time periods</h4>
+                            <p>
+                                According to its analytical paradigm, EU-TIMES models energy dynamics over a
+                                multi period time horizon. The time horizon over which the model simulates the
+                                evolution of the energy system is divided into a user-chosen number of time-periods;
+                                which can vary depending on a number of factors, such as the scope of the analysis,
+                                model setup, computational limitations, etc.
+
+                            </p>
+                            <p>
+                                In its current version, the EU-TIMES model runs from 2010 (base year)
+                                until 2060, with flexible number of intervals (from four to twelve).
+                                For all quantities such as installed technology levels,
+                                power plant capacities and energy and emissions flows,
+                                any annual input quantity (e.g. coal used in a power plant per year) or
+                                output quantity (e.g. electricity generated from the coal plant per year)
+                                related to a given time period applies identically to each of the years in that
+                                period.
+
+                            </p>
+                            <p>
+                                In the framework of the project, model can run different horizons/organisation of
+                                periods (if needed/helpful).
+                            </p>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_intra_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Intra-year time periods (time slices)</h4>
+                            <p>
+                                In addition to the multi-year time periods described above, in the EU-TIMES
+                                there are time divisions within a year, called “time slices”, which may be
+                                deﬁned by the user, so as to capture different weather conditions, consumer
+                                behaviours, and energy demand conditions at different times of the year.
+                                There are currently twelve time-slices representing an average of day, night
+                                and peak demand for every one of the four seasons of the year (e.g. summer day,
+                                summer night and summer peak, etc.).
+                            </p>
+                            <p>
+                                Time-slices are especially important whenever the mode and cost of production of an
+                                energy carrier at different times of the year are signiﬁcantly different
+                                (Loulou and Labriet, 2008). This is the case for instance when the demand
+                                for an electricity ﬂuctuates across the year and a variety of technologies may
+                                be chosen for its production at given times of the year (such as wind power when
+                                wind resources are high, and solar photovoltaics when there is a high availability
+                                of solar radiation. In such cases, the matching of supply and demand requires that
+                                the activities of the technologies producing and consuming the electricity be
+                                tracked – and matched – in each time slice.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_emissions_granularity" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Emissions granularity</h2>
+                            <p>
+                                The model tracks the main source of greenhouse gases in the energy sector, i.e.
+                                carbon dioxide (CO2) from both combustion and industrial processing.
+                                A special module of the EU-TIMES can be enabled to allow emissions trading across
+                                the model regions.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_socioeconomic_dimensions" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Socioeconomic dimensions</h2>
+                            <p>
+                                The EU-TIMES model requires inputs concerning the degree to which energy
+                                demands, as well as demand for goods and services that result in GHG emissions,
+                                will grow over the course of the next decades in the different countries.
+                            </p>
+                            <p>
+                                Key drivers to the EU-TIMES model are the socioeconomic projections of GDP
+                                growth; private consumption as a proxy for disposable income; price evolution
+                                and sector production growth, population and number of households etc.; for each
+                                country in the model. These drivers are transformed into the different final
+                                annual end-use demand projections, which are the key quantities that the
+                                EU-TIMES model must produce an energy system to satisfy.
+                                The building-related sectors (namely residential and commercial sectors) require
+                                a more detailed approach, as to generate the demands for heat, cooling and
+                                hot water, characteristics of dwellings are explicitly represented
+                                (Chiodi et al., 2017).
+                            </p>
+                            <p>
+                                Across the years several sources and methodologies have been employed to
+                                generate updated EU-TIMES energy services demands. For example in
+                                Simoes et al. (2017), the materials and energy demand projections for each
+                                country are differentiated by economic sector and end-use energy service,
+                                using as a starting point historical 2005 data and macroeconomic projections
+                                from the GEM-E3 model (Russ et al., 2009) as detailed in (Simoes et al., 2013),
+                                and in line with the values considered in the EU Energy Roadmap 2050 reference
+                                scenario (EC, 2011). These projections have been further updated to align with
+                                latest socioeconomic projections in use within the European Commission
+                                (Nijs et al., 2019; Nijs et al., 2017).
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_energy_demand_drivers_elasticities" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy demand drivers and demand elasticities</h4>
+                            <p>
+                                In total, the EU-TIMES represents about 60 different types of energy services
+                                for the transport, residential, agricultural, commercial, industry and non-energy
+                                sectors. Some examples include number of residential and commercial dwelling
+                                stocks (thousands of dwellings), public street lighting
+                                (thousands of lighting points), industry iron & steel (millions of tonnes),
+                                transport car distance (billions of passenger kilometres) and transport road
+                                freight (billions of tonne kilometres).
+
+                            </p>
+                            <p>
+                                The socioeconomic, population and physical drivers
+                                (e.g. physical production of industrial activities,
+                                expected numbers of new dwellings) are used as
+                                specific drivers for the growth in energy demands,
+                                associated when relevant to demand elasticities,
+                                see Loulou et al. (2016) for more details.
+                            </p>
+                            <p>
+                                Once the drivers for the different energy demands represented
+                                by EU-TIMES model are selected, allocated and quantified,
+                                the construction of the reference demand scenario requires computing a set of
+                                energy service demands over the horizon.
+
+                            </p>
+                            <p>
+                                Furthermore EU-TIMES has the capability of
+                                estimating the price-based response of these energy service demands to the
+                                changing conditions of scenarios in which mitigation occurs. For example,
+                                if the cost of energy increases as fossil fuels are replaced by renewables,
+                                then the demand for energy services would decrease. To do this,
+                                EU-TIMES makes use of another set of inputs, namely own price elasticities,
+                                applied to each model energy service. This option can be easily disabled,
+                                assuming in that case energy service demands to be inelastic.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_calibration" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                            <p>
+                                The EU-TIMES model is calibrated to the year 2010 (base-year) and key
+                                commodity variables aligned with statistics in the period 2011-2014.
+                                The calibration makes use of a combination of the latest available
+                                information and statistics about the EU energy sectors, namely: energy balances
+                                from Eurostat and IEA (only for regions currently not covered by Eurostat),
+                                and detailed databases such <a href=" https://ec.europa.eu/jrc/en/potencia/jrc-idees"><b>JRC-IDEES</b></a>,
+                                <a href="https://traccs.emisia.com"><b>TRACCS</b></a>,
+                                and <a href="https://www.entranze.eu"><b>ENTRANZE</b></a>.
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_mitigation_adaptation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>
+                                EU-TIMES is a technology-rich model that represents most major fossil fuel and
+                                low-carbon technologies that are envisaged to be available (for those systems)
+                                for at least the first half of the 21st century. By simulating the substitution
+                                of low-carbon for high-carbon technologies in response to their relative costs,
+                                as well as emissions constraints and/or carbon prices, the model simulates
+                                mitigation. The typical question that EU-TIMES can address is what
+                                technologies are competitive under various policy scenarios.
+                                For emerging technologies with a small uptake, EU-TIMES can
+                                estimate what technology improvements would be needed to make
+                                these competitive (Nijs et al., 2018).
+
+                            </p>
+                            <p>
+                                The principal energy sector mitigation options are shown in the table below,
+                                where the options that can be potentially
+                                added are marked with an asterisk. Data will be revised and
+                                updated in the framework of the Paris Reinforce project, and in
+                                accordance with the international database and feedback of local experts.
+                            </p>
+                            <p>
+                                Moreover the EU-TIMES might be set to simulate impacts of a number
+                                of adaptation measures, as listed in the table below; such restrictions in
+                                water availability, changes in building envelope requirements,
+                                or increased requirements for specific energy services.
+
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2" style="width:100%">Upstreamy</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Synthetic fuel production
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Hydrogen production
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Coal to gas without CCS</li>
+                                                <li>Coal to liquids without CCS</li>
+                                                <li>Biomass to gas without CCS</li>
+                                                <li>Biomass to liquids without CCS</li>
+                                                <li>Coal to gas with CCS*</li>
+                                                <li>Coal to liquids with CCS*</li>
+                                                <li>Gas to liquids with CCS*</li>
+                                                <li>Biomass to liquids with CCS*</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Electrolysis</li>
+                                                <li>Coal to hydrogen with CCS</li>
+                                                <li>Gas to hydrogen with CCS</li>
+                                                <li>Biomass to hydrogen with CCS*</li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <p align="left"><b>Electricity and heat</b></p>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Electricity generation
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Heat generation
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Coal with CCS</li>
+                                                <li>Gas with CCS</li>
+                                                <li>Nuclear fission</li>
+                                                <li></li>
+                                                <b>Nuclear fusion*</b></ul>
+                                            <ul style="list-style-type: none">
+                                                <li>Hydro</li>
+                                                <li>Biomass (with and without CCS)</li>
+                                                <li>Geothermal</li>
+                                                <li>Solar PV</li>
+                                                <li>Solar CSP</li>
+                                                <li>Wind (onshore and offshore)</li>
+                                                <li>Marine</li>
+                                            </ul>
+
+                                        </td>
+                                        </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Coal with CCS*</li>
+                                                <li>Gas with CCS*</li>
+                                                <li>Oil with CCS*</li>
+                                                <li>Geothermal</li>
+                                                <li>Biomass</li>
+                                                <li>Biomass with CCS*</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Transport</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Road
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Rail
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Hybrid electric vehicles</li>
+                                                <li>Fully electric vehicles</li>
+                                                <li>Hydrogen fuel cell vehicles</li>
+                                                <li>Biofuels in fuel mix</li>
+                                                <li> Efficiency</li>
+
+                                            </ul>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Electric</li>
+                                                <li><b>Hydrogen*</b></li>
+                                                <li><b>Efficiency</b></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Air
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Marine
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Hydrogen planes*</li>
+                                                <li>Efficiency</li>
+
+                                            </ul>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas*</li>
+                                                       <li> Hydrogen*</li>
+
+                                        <li>Biofuels</li>
+                                        <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    </ul>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left">
+                                                <b>
+                                                    Buildings
+                                                </b>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Heating
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Lighting
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biofuels</li>
+                                                <li>Electricity</li>
+                                                <li>Hydrogen</li>
+                                                <li>Solar thermal</li>
+                                                <li>Building shell efficiency (Roof insulation, Wall insulation,
+                                                    Windows replacement)
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Efficiency
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Appliances
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Cooling
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Efficiency
+                                        </td>
+                                        <td>
+                                            Electricity
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Behaviour change</b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Other
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Demand response to price signals</li>
+                                                <li>Behaviour change in buildings</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Energy poverty (proxy)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left">
+                                                <b>
+                                                    Industry
+                                                </b>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Process heat
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Machine drives
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                                <li>Hydrogen</li>
+                                                <li></li>
+                                                Electricity
+                                            </ul>
+                                            </ul>
+
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li></li>
+                                                Electricity
+                                            </ul>
+                                            </ul>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Steam
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                CHP
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                CCS
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Other
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>CCS in iron and steel</li>
+                                                <li>CCS in cement</li>
+                                                <li>CCS in pulp & paper</li>
+                                                <li>CCS in non-metallic minerals</li>
+                                                <li>CCS in chemicals</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Demand response to price signals
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left">
+                                                <b>
+                                                    Agriculture
+                                                </b>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Energy
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Other
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            Demand response to price signals
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                    <caption>Main GHG energy system mitigation options in EU-TIMES
+                                    </caption>
+                                </table>
+                            </div>
+                            <p>*: option that can be potential added</p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:40%">Water</th>
+                                        <th style="width:60%">Heating & Cooling</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Water use restrictions</td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Additional cooling of buildings</li>
+                                                <li>Building material choices</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Main adaptation measures in EU-TIMES</caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_economic_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>
+                                According to its analytical paradigm, the EU-TIMES model computes a dynamic
+                                inter-temporal partial equilibrium for the (multi-) regional energy and
+                                emission markets, based on the maximisation of total surplus defined as the
+                                sum of surplus of the suppliers and consumers. In other words, it is assumed
+                                that the multi-regional system evolves, while maintaining intra and
+                                inter-temporal partial economic equilibrium, and always occupies the
+                                technical possibility frontier. The process of solving the model determines
+                                the optimal mix of technologies (capacity and activity) and fuels at each period,
+                                the associated emissions, the mining and “trading activities”, the quantity and
+                                prices of all commodities, all in time series from the base year to the
+                                time horizon of the model.
+                            </p>
+                            <p>
+                                The most relevant model outputs are the annual stock and activity of energy supply
+                                and demand technologies for each region and period. This is accompanied by
+                                associated energy and material flows including emissions to air and fuel
+                                consumption, detailed for each energy carrier. Besides technical outputs,
+                                the associated operation and maintenance costs, the investment costs for
+                                new technologies, all energy and materials commodities prices (including
+                                for emissions if an emission cap is considered), are obtained for every time step.
+                            </p>
+                            <p>
+                                EU-TIMES combines a social approach towards the time value of money and
+                                a private approach towards risk as well as the cost of financing based on
+                                the individual technologies. The EU-TIMES model uses a mix of private
+                                and social discount rates, since for the evaluation of investment decisions
+                                private discount rates are used, but for the timing of investment a social
+                                discount rate is applied. The first determines whether an investment pays
+                                off with the assumed private discount rate. The higher the (perceived) risk is,
+                                the higher the discount rate. Technologically specific discount rates are used
+                                to balance planning approaches and include risks for specific technologies.
+                                The second determines when is the best timing to do investments reflecting
+                                the time preference for consuming as well as a decreasing marginal utility of
+                                future consumption. This discount rate is applied primarily to make intertemporal
+                                decisions based on Net Present Value (Nijs et al., 2019).
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_value_key_param" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Value of key parameters </h2>
+                            <p>
+                                The EU-TIMES model is “by paradigm” a technology rich tool where techno-economic
+                                information is assigned to each process (existing and future) of the system,
+                                and therefore many datasets/parameters can be extracted and reported.
+
+                            </p>
+                            <p>
+                                In line with this concept EU-TIMES monitors cost evolution of a large subset of
+                                technologies from the upstream (e.g. costs of primary resources), transformation
+                                (e.g. electricity and hydrogen production), and final consumption (e.g. end-use
+                                sectors technologies; as appliances, cars, etc.).
+
+                            </p>
+                            <p>
+                                Given the European context and its central focus on boosting decarbonisation,
+                                renewables and energy efficiency; the model, since its origins, had a specific
+                                focus on low carbon technologies, in particular the one identified by the EU SET
+                                Plan <a href="https://ec.europa.eu/energy/en/topics/technology-and-
+                                innovation/strategic-energy-technology-plan"><b>(Strategic Energy Technology Plan)</b></a>.
+                                Most recent model updates and analyses
+                                on technology have focused on improving knowledge on hydrogen and power to liquid
+                                technologies (Blanco et al., 2018; Kanellopoulos et al., 2019 and
+                                Sgobbi et al., 2016), Heating & Cooling (Chiodi et al., 2017 and Nijs et al., 2017),
+                                electromobility (Thiel et al., 2016), retrofit measures in buildings (Chiodi et al.,
+                                2017), electricity storage (Nijs et al., 2014) and other key low carbon technologies
+                                (Nijs et al., 2018) and (Simoes et al., 2017)). Datasets with renewable energy
+                                potentials (Ruiz et al., 2015 and Ruiz Castello et al., 2019) have also been made
+                                publicly available.
+
+
+                            </p>
+                            <p>
+                                In the framework of the Paris Reinforce project, the following key
+                                information can be considered as the parameters to monitor, discuss and
+                                evaluate as to guarantee a successful integration with the other tools and analyses:
+                            <ul style="list-style-type: none">
+                                <li>- Renewable energy and CCS costs/potentials.</li>
+                                <li>- Quantities and/or prices of trade for main energy commodities.</li>
+                                <li>- Under construction/planned/possible energy projects/infrastructures.</li>
+                                <li>- Burden/contribution of Member States to the EU Energy Union objectives and
+                                    other specific policies.
+                                </li>
+                                <li>- Technology costs and characteristics, in particular for key end-use sectors.</li>
+                            </ul>
+                            </p>
+                            <p>
+                                Cost and policy parameters can be revised and updated, following the feedback
+                                of national experts (stakeholder engagement), the comparative assessment with
+                                other modelling experiences, and the discussion with the partners (modellers).
+                            </p>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="jet_key_policies" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>
+                                As for all TIMES-based models, EU-TIMES can consider policies that affect
+                                either the entire energy system, sectors, group of technologies/commodities,
+                                or single technologies/commodities. For example, the following policies can be
+                                implemented:
+                            <ul style="list-style-type: disc">
+                                <li>Carbon emissions constraint or a carbon price (imposed as a tax) in each region
+                                    that it represents, or alternatively all regions simultaneously.
+                                </li>
+                                <li>Subsidies/capital grants on specific sets technologies (e.g. on solar PV).</li>
+                                <li>Constraints on the availability of particular technologies (e.g. “no nuclear”,
+                                    variable renewables accounting for no more than 50% of electricity generation).
+                                </li>
+                                <li>Constraints on the growth rates of particular technologies (e.g. carbon capture
+                                    and storage power generation capacity cannot grow at more than 20% per year).
+                                </li>
+                                <li>Inter-regional emissions trading (such as the EU Emissions Trading System
+                                    - EU ETS).
+                                </li>
+                                <li>Technology standards (e.g. efficiency labelling or ban of specific technologies).
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                For EU-TIMES the most commonly applied policies include:
+                            <ul style="list-style-type: disc">
+                                <li>Feed-in Tariffs and green certificates on renewable technologies.</li>
+                                <li>Renewable targets in gross final energy consumption (e.g. in line with
+                                    EU Renewable Energy Directive RED).
+                                </li>
+                                <li>Emission targets (e.g. the EU Effort Sharing Regulation - ESR).</li>
+                            </ul>
+                            </p>
+                            <p>
+                                Furthermore, the structure of the EU-TIMES may allow (although <b
+                                    class="tooltip-demo well" data-toggle="tooltip" title='There is the option to hard-link the EU-TIMES model with the global model
+                                ETSAP-TIAM, as to explicitly represent energy dynamics for both world macro-regions
+                                and European countries. One of the strengths of this set up is that it describes
+                                global dynamics on the basis of a new detailed representation
+                                of the European context, expanding the scope of scenario analysis.'>some
+                                modelling
+                                expansion is required</b>) the exploration of energy security concepts,
+                                with the possible analysis of scenario variants and policies related to
+                                criticalities across sensitive corridor hubs (i.e. <a href="http://reaccess.epu.ntua.gr"><b>EU REACCESS project</b></a>),
+                                and security of supply (Chiodi et al., 2016).
+                            </p>
+                            <p>
+                                The following table provides additional information about the capability of the
+                                model to represent policies and measures across the five key energy and climate
+                                dimensions, as defined by the governance of the EU energy union.
+
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:50%"><b
+                                                class="tooltip-demo well" style="background: #5e6d13e6" data-toggle="tooltip" title='According to the new rules on governance of the EU energy union'>PaMs (by dimension)</b></th>
+                                        <th style="width:50%"><b>EU-TIMES</b></th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Decarbonisation
+                                        </td>
+                                        <td>
+                                            <b>High</b> capability (several mitigation options, regulatory
+                                            and economic measures, etc.)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Energy Efficiency
+                                        </td>
+                                        <td>
+                                            <b>High</b> capability (several energy efficiency options,
+                                            regulatory and economic measures, etc.)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Energy Security
+                                        </td>
+                                        <td>
+                                            <b>Medium/High</b> capability (key focus of the previous European
+                                            project REACCESS, which used the EU-TIMES in conjunction with ETSAP-TIAM model)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Internal energy markets
+                                        </td>
+                                        <td>
+                                            <b>Medium</b> capability (electrification, hydrogenation,
+                                            power-to-gas/liquid, interconnectivity, etc.)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Research, Innovation and competitiveness
+                                        </td>
+                                        <td>
+                                            <b>Low-Medium</b> capability (implicit and/or ex-post)
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Capability of the EU-TIMES to address policy and
+                                        measures
+                                    </caption>
+                                </table>
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_implications_sdgs" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                            <p>
+                                Apart from the above-mentioned dimensions, a number of Sustainable Development
+                                Goals (SDGs) can be taken into consideration and investigated making use of the
+                                EU-TIMES model, as shown below.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:50%"><b>SDGs</b></th>
+                                        <th style="width:50%"><b>EU-TIMES</b></th>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            §7. Affordable and clean energy (e.g., traditional biomass use,
+                                            %renewable energy)
+                                        </td>
+                                        <td>
+                                            <b>Full.</b> Full assessment of cost-effectiveness of RES within a
+                                            specific storyline.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            §8. Decent work & economic growth (e.g., impact on GDPpc, jobs)
+                                        </td>
+                                        <td>
+                                            <b>Partial (requires further developments).</b> The implementation
+                                            of an optional TIMES plugin (currently not implemented), the macro
+                                            module, may allow the estimation of GDP losses due to delivery of
+                                            Paris Agreement climate targets.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            §9. Industry, innovation & infrastructure (e.g., R&D investments)
+                                        </td>
+                                        <td>
+                                            <b>Partial.</b> Limited to the quantification of the energy-related
+                                            system costs and investment needs required to deliver energy and
+                                            climate policies.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            §11: Sustainable Cities & Communities (e.g., PMs from city transport
+                                            and buildings)
+                                        </td>
+                                        <td>
+                                            <b>Limited.</b> Although EU-TIMES does not have a geographical
+                                            representation of cities and communities (i.e. each region is
+                                            represented as a single node), It explicitly represents the
+                                            building stock by building type (i.e. detached, semidetached and flat),
+                                            by country (i.e. 37 countries) and by construction period (i.e. six
+                                            periods). These outputs might inform more detailed out-of-model
+                                            analyses on Sustainable Cities & Communities
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            §12: Responsible production & consumption (e.g., % recycled waste,
+                                            embedded emissions)
+                                        </td>
+                                        <td>
+                                            <b>Limited.</b> Limited to energy (and water) uses and production.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            §15: Life on land (e.g., land use for forests, rate of land use change)
+                                        </td>
+                                        <td>
+                                            <b>Limited/Simplified.</b> Afforestation measures can be considered;
+                                            RES potential/exploitation and investment decisions (e.g. energy
+                                            infrastructures) can be subject to land-specific constraints (natural
+                                            and regulatory).
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>
+                                        Capability of the EU-TIMES consider/assess other SDGs
+                                    </caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_recent_puplications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications using the EU-TIMES model</h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:35%">Paper</th>
+                                        <th style="width:35%">Topic</th>
+                                        <th style="width:30%">Key findings</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Kanellopoulos et al., 2019
+                                        </td>
+                                        <td>
+                                            The potential role of H2 production in a sustainable future power system
+                                        </td>
+                                        <td>
+                                            The operation of a future highly decarbonised (95% CO2 emissions
+                                            reduction vs 1990) power system, as defined with EU-TIMES in
+                                            2050, is analysed with the METIS model. Under the assumption of
+                                            adequate competition between the electrolyser operators the
+                                            resulting prices could, in most EU Member States, arrive at a
+                                            sustainable equilibrium.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Nijs et al., 2019
+                                        </td>
+                                        <td>
+                                            Deployment scenarios for low carbon energy technologies
+                                        </td>
+                                        <td>
+                                            This report provides an outlook for deployment of a set of low
+                                            carbon energy technologies, as well as background on how
+                                            EU-TIMES baseline and decarbonisation scenarios are
+                                            derived. The analysis shows the different role of technologies –
+                                            such nuclear, CCS, hydrogen, wind, solar, ocean energy, geothermal,
+                                            etc. – under two key underpinning scenarios: i) a world where Member
+                                            States uses all technology options to decarbonise (including
+                                            CCS and nuclear), and ii) a pro renewables world, where decarbonisation
+                                            is mainly driven by renewable resources.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Paardekooper, et al., 2018
+                                        </td>
+                                        <td>
+                                            Heat Roadmap Europe. Quantifying the Impact of Low-carbon Heating and
+                                            Cooling Roadmaps
+                                        </td>
+                                        <td>
+                                            The Heat Roadmap Europe provides scientific evidence required to
+                                            effectively support the decarbonisation of the heating and cooling
+                                            sector in Europe and democratise the debate about the sector. The
+                                            report indicates that the EU should focus on implementing change
+                                            and enabling markets for existing technologies and infrastructures
+                                            in order to take advantage of the benefits of energy efficiency in a
+                                            broader sense and for the heating and cooling sector specifically.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Simoes et al., 2017
+                                        </td>
+                                        <td>
+                                            Comparing policy routes for low-carbon power technology deployment in
+                                            EU – an energy system analysis
+                                        </td>
+                                        <td>
+                                            he EU-TIMES model is used to support energy technology R&D design
+                                            by analysing power technologies deployment till 2050 to different
+                                            decarbonisation exogenous policy routes. Paper concludes that R&D can
+                                            be tailored to depending on how sensitive technologies are to the
+                                            policy routes. R&D priority should be given to those technologies that
+                                            are in any case deployed rapidly across the modelled time horizon
+                                            (as PV) as this could significantly reduce the energy system costs,
+                                            but also to those that are deployed up to their maximum technical
+                                            potentials and that are typically less sensitive to exogenous
+                                            policy routes (as hydro and geothermal). For these ‘no regret’
+                                            technologies, R&D efforts could be mainly directed to increase
+                                            their technical potential for implementation. For yet 'sensitive'
+                                            to exogenous policy routes technologies (as CSP and marine),
+                                            efforts should be assigned to improving their techno-economic
+                                            characteristics such as capacity factors or associated costs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Sgobbi et al., 2016
+                                        </td>
+                                        <td>
+                                            How far away is hydrogen? Its role in the medium and long-term
+                                            decarbonisation of the European energy system
+                                        </td>
+                                        <td>
+                                            The EU-TIMES model is used to assess the role of hydrogen in a
+                                            future decarbonised Europe under key climate scenarios. Results
+                                            indicate that hydrogen could become a viable option already in
+                                            2030 e however, a long-term CO2 cap is needed to sustain the transition.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Recent publications using the EU-TIMES model</caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <!--Add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="jet_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Chiodi, A., De Miglio, R., Gargiulo, M., Kanudia, A., Nus, W., Politis, S.,
+                                Ruiz Castello, P., and Zucker, A. (2017). EU-TIMES 2017 Upgrade: Buildings and
+                                heating & cooling technologies. JRC Technical Reports, JRC - Joint Reserch Center.
+                                doi:10.2760/602564
+                            </p>
+                            <p>
+                                Simoes, S., Nijs, W., Ruiz, P., Sgobbi, A., & Thiel, C. (2017). Comparing policy routes
+                                for low-carbon power technology deployment in EU – an energy system analysis. Energy
+                                Policy, 101, 353-365. doi:10.1016/j.enpol.2016.10.006
+                            </p>
+                            <p>
+                                Russ, P., Ciscar, J.-C., Saveyn, B., Soria, A., Szabo, L., Ierland, T. V.,
+                                Van Regemorter, D. and Virdis, R. (2009). Economic Assessment of Post-2012 Global
+                                Climate Policies - Analysis of Greenhouse Gas Emission Reduction Scenarios with the
+                                POLESand GEM-E3 models. Tech. rep., JRC - Joint Research Center. doi:10.2791/70332
+                            </p>
+                            <p>
+                                Simoes, S., Nijs, W., Ruiz, P., Sgobbi, A., Radu, D., Bolat, P., Thiel, C. and Peteves,
+                                S. (2013). The EU-TIMES - Assessing the long-term role of the SET Plan Energy
+                                technologie. JRC Scientific and Policy Reports, JRC - Joint Research Center.
+                                doi:10.2790/97596
+                            </p>
+                            <p>
+                                Nijs, W., Ruiz Castello, P., & Hidalgo Gonzalez, I. (2017). Baseline scenario of the
+                                total energy system up to 2050. EU-TIMES model outputs for the 14 MS and the EU.
+                                Deliverable 5.2: Business-as-usual reference scenarios. Tech. rep., Heat Roadmap Europe.
+                            </p>
+                            <p>
+                                Nijs, W., Hidalgo González, I., & Paardekooper, S. (2018). EU-TIMES and EnergyPLAN
+                                comparison. Deliverable 6.3: Methodology report for comparing the EU-TIMES and
+                                EnergyPLAN scenarios. Tech. rep., Heat Roadmap Europe.
+                            </p>
+                            <p>
+                                Nijs, W., Ruiz Castello, P., Tarvydas, D., Tsiropoulos, I., & Zucker, A. (2019).
+                                Deployment scenarios for low carbon energy technologies - Deliverable D.4.7 for the Low
+                                Carbon Energy Observatory (LCEO). JRC Science for Policy Report, JRC - Joint Research
+                                Center. doi:10.2760/249336
+                            </p>
+                            <p>
+                                Blanco, H., Nijs, W., Ruf, J., & Faaij, A. (2018). Potential for hydrogen and
+                                Power-to-Liquid in a low-carbon EU energy system using cost optimization. Applied
+                                Energy, 232, 617-639. doi:10.1016/j.apenergy.2018.09.216
+                            </p>
+                            <p>
+                                Kanellopoulos, K., & Blanco Reano, H. (2019). The potential role of H2 production in a
+                                sustainable future power system - An analysis with METIS of a decarbonised system
+                                powered by renewables in 2050. JRC Technical Reports, JRC - Joint Research Center.
+                                doi:10.2760/540707
+                            </p>
+                            <p>
+                                Loulou, R., Goldstein, G., Kanudia, A., Lettila, A., & Remme, U. (2016). Documentation
+                                for the TIMES Model - Part I. Tech. rep., IEA-ETSAP.
+                            </p>
+                            <p>
+                                Thiel, C., Drossinos, Y., Krause, J., Harrison, G., Gkatzoflias, D., & Donati, A. V.
+                                (2016). Modelling Electro-mobility: An Integrated Modelling Platform for Assessing
+                                European Policies. Transportation Research Procedia, 14, 2544-2553.
+                                doi:10.1016/j.trpro.2016.05.341
+                            </p>
+                            <p>
+                                Nijs, W., Simoes, S., Ruiz, P., Sgobbi, A., & Thiel, C. (2014). Assessing the role of
+                                electricity storage in EU28 until 2050. 11th International Conference on the European
+                                Energy Market (EEM14). IEEE. doi:10.1109/eem.2014.6861273
+                            </p>
+                            <p>
+                                Ruiz, P., Sgobbi, A., Nijs, W., Thiel, C., Longa, F. D., Kober, T., Elbersen, B. and
+                                Hengeveld, G. (2015). The EU-TIMES model - Bioenergy potentials for EU and
+                                neighbouring countries. Tech. rep., JRC - Joint Research Center. doi:10.2790/39014
+                            </p>
+                            <p>
+                                Ruiz Castello, P., Nijs, W., Tarvydas, D., Sgobbi, A., Zucker, A., Pilli, R., Camia, A.,
+                                Thiel, C., Hoyer-Klick, C., Dalla Longa, F., Kober, T., Badger, J., Volker, P.,
+                                Elbersen, B., Brosowki, A., Thrän, D. and Jonsson, K. (2019). ENSPRESO - an open data,
+                                EU-28 wide, transparent and coherent database of wind, solar and biomass energy
+                                potentials. Tech. rep., JRC - Joint Research Center.
+                            </p>
+                            <p>
+                                Chiodi, A., Gargiulo, M., Gracceva, F., De Miglio, R., Spisto, A., Costescu, A.,
+                                & Giaccaria, S. (2016). Unconventional oil and gas resources in future energy markets:
+                                A modelling analysis of the economic impacts on global energy markets and implication
+                                for Europe. JRC Science for Policy Report, JRC - Joint Research Center.
+                                doi:10.2760/34568
+                            </p>
+                            <p>
+                                Paardekooper, S., Lund, R. S., Mathiesen, B. V., Chang, M., Petersen, U. R., Grundahl,
+                                L., David, A., Dahlbæk, J. and Kapetanakis, I. A., Lund, H., Bertelsen, N., Hansen, K.,
+                                Drysdale, D. W. and Persson, U. (2018). Quantifying the Impact of Low-Carbon Heating
+                                and Cooling Roadmaps. Tech. rep., Aalborg university.
+                            </p>
+                            <p>
+                                Sgobbi, A., Nijs, W., Miglio, R. D., Chiodi, A., Gargiulo, M., & Thiel, C. (2016). How
+                                far away is hydrogen? Its role in the medium and long-term decarbonisation of the
+                                European energy system. International Journal of Hydrogen Energy, 41, 19-35.
+                                doi:10.1016/j.ijhydene.2015.09.004
+                            </p>
+                        </section>
+                    </div>
+
+
+                </div>
+            </div>
+    </section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+</body>
+
+</html>
+
+

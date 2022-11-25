@@ -1,0 +1,411 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+{#                                                  SISGEMA##}
+                        <div id="collapse_sisgema">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#sisgema_overview">Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group sisgema_key_features">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_sisgema_key_features"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features of the SISGEMA model
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_sisgema_key_features"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Components</span>
+                                                    <a style="display: none"
+                                                       href="#sisgema_components">
+                                                       Components</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#sisgema_geographic_coverage">
+                                                        Geographic coverage</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="panel-group sisgema_policy_sdg">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_sisgema_policy_sdg"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_sisgema_policy_sdg"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#sisgema_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implication for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#sisgema_implication_sdgs">
+                                                      Implication for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent publications using the SISGEMA model</span>
+                                    <a style="display: none"
+                                       href="#sisgema_recent_publications">Recent publications using the SISGEMA model</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#sisgema_references">
+                                       References
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+                     <div class="row">
+                        <h1 style="padding-bottom: 1em; padding-top: 1em">SISGEMA</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="sisgema_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Overview</h2>
+                            <p>
+                                SISGEMA is a hybrid environmental-economic model for assessing economic and
+                                environmental impacts of alternative land uses in Brazil. The model augments the
+                                standard economic accounting matrix—in monetary terms—by introducing environmental
+                                accounting that represents ecosystem services variables—in physical terms—in the
+                                economic modelling. In nature, it is similar to the EU’s NAMEA (National Accounting
+                                Matrix with Environmental Accounts) project. The model can be used to analyse
+                                different scenarios of policies and other factors that have an impact on land use,
+                                such as the necessary price levels for and impacts of an effective Payment for
+                                Ecosystem Services (PES), the investment requirements of implementing Brazil’s
+                                Forest Code, and the impacts of using alternative assumptions related to
+                                deforestation rates, land prices, costs of recovering forest areas (e.g.
+                                labour costs) and of preserving forest areas (for example, interest rates), among
+                                others. Since the model is spatially disaggregated at the municipal level (over five
+                                thousand municipalities in the Brazilian territory), it is possible to aggregate
+                                results according to different criteria (biomes, geographic and administrative
+                                regions, etc.) and to establish analytical comparisons with other variables
+                                available at the municipal level. SISGEMA is developed by the Environmental and
+                                Sustainable Development Group of the Economics Institute at the Federal University
+                                of Rio de Janeiro (GEMA–IE/UFRJ).
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Key features of the SISGEMA model</h2>
+                            <span id="sisgema_components" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Components</h4>
+                            <p>
+                                The model comprises two main components. The first component refers to quantifying
+                                the costs of preserving and recovering forest areas. Cost of forest preservation is
+                                based on estimates of land use opportunity costs, i.e. on the compensation land
+                                owners would have to receive to give up agriculture and, instead, adopt practices
+                                to preserve ecosystem services. Three alternative models to estimate opportunity
+                                costs have been developed, and the mean of each models’ results is used. Results
+                                are provided for each of the Brazilian 5,700 “munícipios” (local administrative unit
+                                , similar to UK counties). The latest estimate is that an average amount of R$
+                                403/hectare/year (approximately EUR 102/hectare/year) could compensate
+                                the maintenance of ecosystem services provision in half of Brazil’s
+                                municipalities – but it is important to note that there are strong
+                                heterogeneities among regions. Cost of forest recovery is calculated by estimating
+                                costs of fencing, inputs and labour, also per município. Estimates show that the
+                                median of this cost is R$ 7,466/hectare/year (approximately EUR 1,892/hectare/year).
+                                These results show that maintaining ecosystem services provision is much cheaper
+                                than recovering forest areas. This cost is then added to the opportunity cost in
+                                areas where forest areas have been depleted. Based on these two sets of costs,
+                                supply curves of preserving ecosystem services and recovering forest areas are
+                                estimated, respectively.
+                            </p>
+                            <p>
+                                The second component of the model concerns introducing ecosystem services into the
+                                model. This component constitutes the hybrid component of the model, i.e. the
+                                modelling of ecosystem services in physical units, established in a geographic
+                                information system (GIS), in a framework that is integrated with economic
+                                accounting—i.e. with economic variables in monetary units. Adjusted by the
+                                different stages of forest growing, this component provides estimates of carbon
+                                captured by forests, methane emissions related to alternative cattle raising
+                                practices, soil erosion and biodiversity, also for each “município”. This allows,
+                                for instance, to quantify a supply curve of avoided deforestation (and related
+                                avoided CO2e emissions) subject to different carbon prices.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="sisgema_geographic_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                            <p>
+                                The SISGEMA model covers the entire territory of Brazil, via over 5 thousand
+                                municipalities.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="sisgema_key_policies" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <ul>
+                                The following policies can be addressed with SISGEMA:
+                                <li>Necessary price levels for and impacts of an effective Payment for Ecosystem
+                                    Services (PES)
+                                </li>
+                                <li>Investment requirements of implementing Brazil’s Forest Code</li>
+                                <li>Impacts of using alternative assumptions related to deforestation rates,
+                                    land prices, costs of recovering forest areas (e.g. labour costs) and of
+                                    preserving forest areas (for example, interest rates), among others
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="sisgema_implication_sdgs" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Implication for other SDGs</h4>
+                            <p>
+                                SISGEMA can provide insights into SDG15 (life on land) directly, as it estimates the
+                                deforestation rates, as well as the conservation and restoration cost in each of the
+                                Brazilian municipalities.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="sisgema_recent_publications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications using the SISGEMA model</h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Study</th>
+                                        <th style="width:20%">Focus</th>
+                                        <th style="width:60%">Key findings
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Young et al. (2017)</td>
+                                        <td>Analysis of the implications of a potential market for Environmental
+                                            Reserve Quotas (Cotas de Reserva Ambiental - CRA) in Brazil
+                                        </td>
+                                        <td>
+                                            The obtained results reveal that a biome-restricted CRA transaction
+                                            market is the strategy that results in the highest environmental benefit
+                                            per-cost unit. The total cost of implementing this strategy is R$ 63.9
+                                            billion, with transactions of 15.3 million hectares of land. Comparing
+                                            both of these outcomes, results indicate a superiority of the CRA market
+                                            per biome in relation to a national scenario because, despite the lower
+                                            cost associated to the unrestricted scenario (R$ 52.6 billion, with 18.5
+                                            million hectares transacted), the volume of environmental services
+                                            would be much lower: it would culminate in 37% less CO­2 emissions
+                                            avoided/captured, and 40% less soil erosion avoided. In addition,
+                                            a significant portion of the values transacted would be concentrated
+                                            in the Caatinga biome, which would alone account for 68.2% of total
+                                            compensation for Legal Reserve deficit areas. This is mainly due to the
+                                            lower opportunity costs and the extensive forest asset areas presented
+                                            by this biome.
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Young et al. (2016)</td>
+                                        <td>Organisation of the necessary subsidies for the Brazilian Government’s
+                                            position on National Policy for Payment for Environmental Services
+                                        </td>
+                                        <td>
+                                            The study provided estimates of costs and benefits of a possible Payment
+                                            for Environmental Services System (PES) in Brazil and identified possible
+                                            sources of funding to implement it, which are important inputs for policy
+                                            proposals for an efficient National PES Policy.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="sisgema_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Young, C. E. F., Alvarenga Jr, M., Gandra, F. M., Costa, L. N. A., & Mendes, M. P.
+                                (2017). Custos e Benefícios da Implementação de um Mercado de Cotas de Reserva
+                                Ambiental (CRA) no Brasil. In: XII Encontro Nacional da Sociedade Brasileira de
+                                Economia Ecológica, 2017, Uberlândia. XII Encontro Nacional da Sociedade Brasileira
+                                de Economia Ecológica. Uberlândia: Sociedade Brasileira de Economia Ecológica.
+                            </p>
+                            <p>
+                                Young, C. E. F., Castro, B. S., Rocha, R., Santanna, A. A., Erazo M., J. A.,
+                                Buckmann, M. F. Y.,, De Bakker, L. B., Alvarenga Jr, M., Pereira, V. S., Aguiar,
+                                C., Tornaghi, L., Costa, D. S., Mendes, M. P., Costa, L. N. A., Almeida, D. M.
+                                (2016). Estudos e produção de subsídios técnicos para a construção de uma Política
+                                Nacional de Pagamento por Serviços Ambientais. Relatório Final com apêndices.
+                                (Relatório de pesquisa). UNDP PROJECT BRA/11/022.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+
+</body>
+
+</html>
+
+

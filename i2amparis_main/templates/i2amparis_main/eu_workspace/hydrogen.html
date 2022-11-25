@@ -1,0 +1,194 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        What is the future of hydrogen in the EU?
+
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    {#    <span id="hydrogen" style="position: relative; top:-8em"></span>#}
+    <img class="col-md-3 col-xs-12 fade-img" src={% static "images/wwheu_public_ui/Hydrogen_production.png" %}>
+    <div class="col-md-9 col-xs-12">
+        <p class="col-md-12 col-xs-12">
+            In a low-carbon future, hydrogen is generally expected to grow in order to sustain the decarbonisation of
+            hard-to-electrify demand sectors, like heavy-duty transportation, navigation, aviation, and energy-intensive
+            industries, or used for energy storage sustaining the uptake of large renewable energy shares (RES) in the
+            power
+            sector.
+        </p>
+        <p class="col-md-12 col-xs-12">
+            <strong>Hydrogen can be produced through a variety of processes</strong> and its manufacturing can be
+            energy-intensive and
+            associated with a wide range of emissions, depending on the technology used.
+        </p>
+        <p class="col-md-12 col-xs-12">
+            Generally hydrogen production can be divided into <strong>fossils based</strong> or <strong>renewables
+            based</strong>.
+        </p>
+        <p class="col-md-12 col-xs-12">
+            <strong>Brown hydrogen </strong>is produced via coal gasification, <strong>grey hydrogen</strong> is from
+            natural gas, <strong>blue hydrogen</strong> uses CCS technologies for the greenhouse gases produced via grey
+            hydrogen and <strong>green hydrogen</strong> production uses renewable energy.
+        </p>
+        <p class="col-md-12 col-xs-12">
+            For a more detailed analysis on Hydrogen Production see the <a
+                href="https://op.europa.eu/en/publication-detail/-/publication/5602f358-c136-11ea-b3a4-01aa75ed71a1/language-en">European
+            Commission's communication</a>.
+        </p>
+    </div>
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the hydrogen production capacities by fuel type foreseen by three IAMS in 2020, 2030, 2040 and 2050
+</p>">
+                Hydrogen production capacities
+            </h2>
+            <h4 style="">(by fuel type)</h4>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 back-10" style="text-align: center"><i#}
+        {#                class="fa fa-angle-left next-back-arrow"></i></div>#}
+        <div class="col-xs-12 col-sm-12 col-md-12 arrow-message"><span class="hidden-sm hidden-xs">Use the scrollbar bellow to change the timeframe of the chart</span>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 next-10" style="text-align: center"><i#}
+        {#                class="fa fa-angle-right next-back-arrow"></i></div>#}
+        <div class="col-sm-12 col-md-12 col-xs-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="hydrogen_production_by_fuel" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="hydrogen_production_by_fuel_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="hydrogen_production_by_fuel_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the hydrogen production capacities by fuel type
+                                foreseen by three IAMS in 2020, 2030, 2040 and 2050.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <p class="col-md-12 col-xs-12" style="font-style: italic">Different columns in the same time period
+                represent different models and their results for hydrogen production.</p>
+        </div>
+    </div>
+
+    <p class="col-md-12 col-xs-12">
+        Most hydrogen production in <strong>2030 is expected to be grey.</strong> By <strong>2050</strong>, models show
+        <strong>conversion to blue hydrogen</strong>,
+        underpinning the increase of natural gas in the energy system with reliance on CCS technologies.
+    </p>
+
+    <p class="col-md-12 col-xs-12">
+        These findings indicate that current policies are not enough to drive a complete change from grey to green
+        hydrogen in EU by 2050.
+    </p>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the hydrogen production compared to electricity in final transport and industry demand.
+                    </p>">
+                Hydrogen/ electricity comparison
+            </h2>
+            <h4 style="">(in final transport and industry demand)</h4>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 back-11" style="text-align: center"><i#}
+        {#                class="fa fa-angle-left next-back-arrow"></i></div>#}
+        <div class="col-xs-12 col-sm-12 col-md-12 arrow-message"><span class="hidden-sm hidden-xs">Use the scrollbar below to change the timeframe of the chart</span>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 next-11" style="text-align: center"><i#}
+        {#                class="fa fa-angle-right next-back-arrow"></i></div>#}
+        <div class="col-sm-12 col-md-12 col-xs-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="hydrogen_electricity_comp_ind" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="hydrogen_electricity_comp_ind_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="hydrogen_electricity_comp_ind_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present he hydrogen production compared to electricity
+                                in final industry demand.
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <p class="col-md-12 col-xs-12" style="font-style: italic">Different columns in the same time period
+                    represent different models and their results for hydrogen/ electricity comparison in industry
+                    demand.</p>
+            </div>
+        </div>
+        <p class="col-md-12 col-xs-12" style="font-style: italic; margin-top: 2em; margin-bottom: 3em">In industry,
+            future scenarios based
+            on current
+            policies also indicate that the share of hydrogen in total final energy demand is negligible in comparison
+            to the role of electricity, estimated at around 1% of total sector consumption in 2030 and 3.5% in 2050.
+        </p>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 back-11" style="text-align: center"><i#}
+        {#                class="fa fa-angle-left next-back-arrow"></i></div>#}
+        <div class="col-xs-12 col-sm-12 col-md-12 arrow-message"><span class="hidden-sm hidden-xs">Use the scrollbar below to change the timeframe of the chart</span>
+        </div>
+        {#        <div class="col-xs-5 col-sm-1 col-md-1 next-11" style="text-align: center"><i#}
+        {#                class="fa fa-angle-right next-back-arrow"></i></div>#}
+        <div class="col-sm-12 col-md-12 col-xs-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="hydrogen_electricity_comp_trans" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="hydrogen_electricity_comp_trans_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="hydrogen_electricity_comp_trans_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present he hydrogen production compared to electricity
+                                in final transport.
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <p class="col-md-12 col-xs-12" style="font-style: italic">Different columns in the same time period
+                represent different models and their results for hydrogen/ electricity comparison in transport
+                demand.</p>
+        </div>
+    </div>
+
+
+    <p class="col-md-12 col-xs-12" style="font-style: italic; margin-top: 2em">In transport, only TIAM shows important
+        hydrogen
+        deployment, delivering 7% of total consumption in 2030 and 17% in 2050. In all other models, hydrogen remains a
+        niche technology achieving in 2050 an average of 0.7% of consumption.
+    </p>
+
+</div>

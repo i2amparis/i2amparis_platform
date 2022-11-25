@@ -1,0 +1,35 @@
+{% extends 'i2amparis_main/paris_reinforce_workspace/virtual_library_section.html' %}
+
+{% block content %}
+<div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+    <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+        <div class=" col-sm-12 col-xs-12" style="text-align: center">
+            <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                Virtual Library
+            </h1>
+        </div>
+        <div class="content-section col-sm-12 col-xs-12 col-md-12"
+             style="text-align: center; margin-top: 2em;padding: 1em">
+           <div class="col-sm-12 col-xs-12">
+                <div class="circle-button tb-purple" style="text-align: center">
+                    <a href="" class="">Databases</a>
+                    <i class="fa fa-hdd-o mini-title-icon"></i>
+                </div>
+            </div>
+            {% include "i2amparis_main/eu_workspace/euw_virtual_library_side_menu.html" %}
+            <div class="main-content col-md-9 col-xs-12 col-sm-9" style="margin-top: 3em">
+                No Data available, yet.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(".lib-menu-nav .tb-purple").hide();
+    </script>
+{% endblock %}

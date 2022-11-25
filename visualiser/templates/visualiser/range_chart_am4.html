@@ -1,0 +1,153 @@
+{% extends 'visualiser/main_visualiser_am4.html' %}
+{% block content %}
+    <div id="chartdiv"></div>
+    <script>
+        am4core.ready(function () {
+
+
+// Themes begin
+            am4core.useTheme(am4themes_animated);
+// Themes end
+
+            var chart = am4core.create("chartdiv", am4charts.XYChart);
+            chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+//Add data
+            chart.data = {{ chart_data|safe }};
+            var x_axis_type = "{{ x_axis_type }}";
+            var x_axis_title = "{{x_axis_title}}";
+            var x_axis_name = "{{ x_axis_name }}";
+            var x_axis_unit = "{{ x_axis_unit }}";
+            var y_var_names = {{ y_var_names|safe}};
+            var y_var_titles = {{ y_var_titles|safe}};
+            var y_var_units = {{ y_var_units|safe }};
+            var y_axis_title = "{{ y_axis_title }}";
+            var color_list = {{ color_list|safe }};
+            var use_default_colors = {{ use_default_colors }};
+            var xAxis;
+
+            console.log(color_list);
+
+            // Create and format axes
+            if (x_axis_type==="time") {
+                xAxis = chart.xAxes.push(new am4charts.DateAxis());
+            }else if (x_axis_type==="text") {
+                xAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+            }else{
+                xAxis = chart.xAxes.push(new am4charts.ValueAxis());
+            }
+            xAxis.renderer.minGridDistance = 50;
+            xAxis.title.text = x_axis_title + " (" + x_axis_unit + ")";
+            xAxis.title.fontWeight = "bold";
+            xAxis.title.marginTop = 10;
+            xAxis.title.marginBottom = 20;
+
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            valueAxis.title.text = y_axis_title + " (" + y_var_units[0] + ")";
+            valueAxis.title.fontWeight = 600;
+
+          //Create series
+            var series = [];
+            for(var i=0; i<y_var_names.length; i++) {
+                if (use_default_colors){
+                    series[i]= create_range(x_axis_name+"_"+String(i), "open_" + String(i), "close_" + String(i),
+                        y_var_names[i], chart.colors.getIndex(i), x_axis_type, y_var_titles[i], y_var_units[i],valueAxis);
+                }else{
+                    series[i] = create_range(x_axis_name + "_" + String(i), "open_" + String(i), "close_" + String(i),
+                        y_var_names[i], color_list[i], x_axis_type, y_var_titles[i], y_var_units[i], valueAxis);
+
+                }
+            }
+
+
+            //Add Legend
+            chart.legend = new am4charts.Legend();
+            chart.legend.useDefaultMarker = true;
+            var marker = chart.legend.markers.template.children.getIndex(0);
+            marker.cornerRadius(5, 5, 5, 5);
+            marker.strokeWidth = 2;
+            marker.strokeOpacity = 1;
+            marker.stroke = am4core.color("#ccc");
+            var markerTemplate = chart.legend.markers.template;
+            markerTemplate.width = 25;
+            markerTemplate.height = 25;
+
+            //Add cursor
+            chart.cursor = new am4charts.XYCursor();
+            chart.cursor.xAxis = xAxis;
+            chart.scrollbarX = new am4charts.XYChartScrollbar();
+            chart.scrollbarX.series.push(series[0]);
+
+
+            function create_range(setNameOfX, open, close, myVar, fillColor, xAxisType, myVarTitle,myVarUnit) {
+                <!-- Set the range  between open and close and set and the close-->
+                var series = chart.series.push(new am4charts.LineSeries());
+                if (xAxisType==="time") {
+                    series.dataFields.dateX = setNameOfX;
+                }else if(xAxisType==="text"){
+                    series.dataFields.categoryX
+                }else{
+                    series.dataFields.valueX = setNameOfX;
+                }
+                series.yAxis = valueAxis;
+                series.dataFields.openValueY = open;
+                series.dataFields.valueY = close;
+                {#series.tooltipText = "Minimum "+ String(myVarTitle) +": {openValueY.value} "+myVarUnit+"\n Maximum "+ String(myVarTitle) +": {valueY.value}" + myVarUnit ;#}
+                series.tooltip.background.cornerRadius = 20;
+                series.tooltip.background.fillOpacity = 0.5;
+                series.tooltip.label.padding(12, 12, 12, 12);
+                series.sequencedInterpolation = true;
+                series.strokeWidth = 0;
+                series.name = String(myVarTitle) + " Range";
+                series.stroke = am4core.color(fillColor);
+                series.fill = series.stroke;
+                series.fillOpacity = 0.15;
+                series.defaultState.transitionDuration = 1000;
+                series.tensionX = 0.8;
+                series.legendSettings.labelText = "{name} ("+myVarUnit+"):";
+                series.legendSettings.itemValueText = "[bold]({openValueY} - {valueY})[/bold]";
+
+
+                <!-- Set main timeseries -->
+                var series3 = chart.series.push(new am4charts.LineSeries());
+
+                if (xAxisType === "time") {
+                    series3.dataFields.dateX = setNameOfX;
+                } else if (xAxisType === "text") {
+                    series3.dataFields.categoryX
+                } else {
+                    series3.dataFields.valueX = setNameOfX;
+                }
+                series3.yAxis = valueAxis;
+                series3.dataFields.valueY = myVar;
+                series3.sequencedInterpolation = true;
+                series3.strokeWidth = 2;
+                series3.tooltip.getFillFromObject = true;
+                series3.tooltip.getStrokeFromObject = true;
+                series3.tooltip.label.fill = am4core.color("#000");
+                series3.tooltipText = String(myVarTitle) + ": {valueY.value} " + myVarUnit;
+                series3.tooltip.background.cornerRadius = 20;
+                series3.tooltip.background.fillOpacity = 0.7;
+                series3.tooltip.label.padding(12, 12, 12, 12);
+                series3.tooltip.autoTextColor = false;
+                series3.tooltip.label.fill = am4core.color("#FFFFFF");
+                series3.tooltip.getFillFromObject = false;
+                series3.tooltip.background.fill = am4core.color(fillColor).lighten(-0.3);
+                series3.name = String(myVarTitle);
+                series3.stroke = am4core.color(fillColor);
+                series3.fill = am4core.color(fillColor);
+                series3.tensionX = 0.9;
+                series3.legendSettings.labelText = "{name} (" + myVarUnit + "):";
+                series3.legendSettings.itemValueText = "[bold]{valueY}[/bold]";
+                var bullet3 = series3.bullets.push(new am4charts.CircleBullet());
+                bullet3.fillOpacity = 1;
+                bullet3.strokeWidth = 1;
+                bullet3.circle.radius = 2;
+                return series3
+            }
+
+
+
+        });
+    </script>
+{% endblock %}
+

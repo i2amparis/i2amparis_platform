@@ -1,0 +1,1 @@
+DATA_TABLES_APP = 'i2amparis_main'

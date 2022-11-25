@@ -1,0 +1,87 @@
+{% extends 'visualiser/main_visualiser_am4.html' %}
+{% block content %}
+    <div id="chartdiv"></div>
+    <script>
+        am4core.ready(function () {
+
+// Themes begin
+            am4core.useTheme(am4themes_animated);
+// Themes end
+
+            var chart_data = {{ chart_data|safe }};
+            var chart_3d = {{ chart_3d }};
+            if (chart_3d) {
+                var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+                chart.depth = 30;
+                chart.angle = 30;
+            } else {
+                var chart = am4core.create("chartdiv", am4charts.PieChart);
+            }
+            chart.paddingBottom = 20;
+            chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+            chart.responsive.enabled = true;
+            var category_title = "{{x_axis_title}}";
+            var category_name = "{{ x_axis_name }}";
+            var variable_name = {{ y_var_names|safe}};
+            var variable_title = {{ y_var_titles|safe}};
+            var variable_unit = {{ y_var_units|safe }};
+            var diagram_title = "{{ y_axis_title }}";
+            var color_list = {{ color_list|safe }};
+            var use_default_colors = {{ use_default_colors }};
+            console.log(color_list);
+            console.log(use_default_colors);
+
+
+            chart.legend = new am4charts.Legend();
+
+
+            var chart_title = chart.titles.create();
+            chart_title.text = diagram_title ;
+            chart_title.fontSize = 19;
+            chart_title.fontWeight = 600;
+            chart_title.marginBottom = 10;
+            chart_title.align = "center";
+            chart_title.valign = "bottom";
+
+
+            chart.data = chart_data;
+
+            var series;
+            if (chart_3d) {
+                series = chart.series.push(new am4charts.PieSeries3D());
+            } else {
+                series = chart.series.push(new am4charts.PieSeries());
+            }
+
+            series.dataFields.value = variable_name[0];
+            series.dataFields.category = category_name;
+            series.tooltip.autoTextColor = false;
+            series.tooltip.label.fill = am4core.color("#FFFFFF");
+            series.tooltip.getFillFromObject = false;
+            series.tooltip.background.fill = am4core.color("#323232");
+            series.slices.template.tooltipText ="{category}: {value.percent.formatNumber('#.#')}%\n"+variable_title[0]+
+                ": {value.value}"+ " (" +variable_unit[0]+ ")" ;
+            series.labels.template.text = "{category}: {value.value} (" + variable_unit[0] + ")";
+
+            if (use_default_colors === false) {
+                for (var i = 0; i < chart_data.length; i++) {
+                    chart_data[i]["color"] = am4core.color(color_list[i]);
+                }
+                series.slices.template.propertyFields.fill = "color";
+            }
+
+            series.innerRadius = am4core.percent(50);
+
+            var rgm = new am4core.RadialGradientModifier();
+            rgm.brightnesses.push(-0.3, -0.2, -0.1, 0, 0.5);
+            series.slices.template.fillModifier = rgm;
+            series.slices.template.strokeModifier = rgm;
+            series.slices.template.strokeOpacity = 0.4;
+            series.slices.template.strokeWidth = 0;
+            {# gradient makes it a little heavy#}
+
+
+        }); // end am4core.ready()
+
+    </script>
+{% endblock %}

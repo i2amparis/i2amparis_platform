@@ -1,0 +1,1013 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model TEEM Suite</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_key_features">Key features of the model TEEM Suite</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#teemsuite_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#teemsuite_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#teemsuite_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The TEEM Suite model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>TEEM, the TEESlab Modeling suite, is an ensemble of high-resolution energy system
+                                  simulation and optimization models consisting of:</p>
+                              <ul>
+                                  <ol><b>(i)</b> the Business Strategy Assessment Model (BSAM), which is an agent-based
+                                      electricity wholesale market simulation model which simulates the complex
+                                      operations within a power pool central dispatch Day Ahead Market, </ol>
+                                  <ol><b>(ii)</b> the Agent-based Technology adOption Model (ATOM), which simulates the
+                                      dynamics of technology adoption among consumers, </ol>
+                                  <ol><b>(iii)</b> the Dynamic high-Resolution dEmand-sidE Management (DREEM) model,
+                                      which serves as an entry point in Demand-Side management modeling in the
+                                      building sector, and </ol>
+                                  <ol><b>(iv)</b> the Adaptive polIcymaking Model (AIM), which generates real time
+                                      visualizations of adaptive policy maps, showing various sequences of policy
+                                      options leading robustly to desired policy outcomes. </ol>
+                              </ul>
+                              <p>
+                                  The modules of TEEM can be coupled (i.e., soft- and/or hard- linking) with each other,
+                                  as well as other models/modules, to support the evaluation of energy related
+                                  challenges (e.g., the expected impacts from bringing demand-flexibility into the power
+                                  market, the adoption of technologies that can be regarded as flexibility enablers, the
+                                  technoeconimic impact of high RES shares, etc.). It can also perform meta-analysis of
+                                  other models' inputs and outputs, to identify the conditions of success of a policy
+                                  instrument, as well as generate robust policy pathways, by treating various modelling
+                                  assumption as potential future evolutions of policies' context.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the TEEM Suite model</h2>
+                              <p>TEEM incorporates the following features:</p>
+                              <p><b>1) Wholesale electricity market modelling (BSAM):</b></p>
+                              <p>
+                                  Modeling of the day-ahead market by solving the Security Constrained Unit Commitment
+                                  and Economic Dispatch problems. System constraints (e.g., supply equals demand,
+                                  satisfaction of reserves requirements), operating plants constraints (e.g., minimum
+                                  and maximum generation, uptime and downtime requirements), system reserves, price
+                                  caps, etc., are considered in simulations. Agents (e.g., thermal generators, imports
+                                  and hydroelectric generators) within the wholesale electricity market are modelled as
+                                  entities aiming in profit maximisation, while the market is cleared with objective
+                                  function being the minimization of electricity generation costs. Thus BSAM simulates
+                                  a competitive electricity market.
+                              </p>
+                              <p><b>2) Technology adoption considering behavioural uncertainty (ATOM)</b></p>
+                              <p>
+                                  Simulation of technology adoption under policy schemes of interest, quantifing
+                                  uncertainties related to agents’ preferences and decision-making criteria. The
+                                  novelty of the model lies in obtaining realistic uncertainty bounds and splitting the
+                                  output uncertainty in its major contributing sources. A calibration module defines
+                                  the parameters influencing the agents’ behavior, and suitable ranges of values
+                                  according to historical data and observations are defined. A sensitivity analysis
+                                  module quantifies uncertainties related to potential adopters' attributes and
+                                  decision-making criteria. Finally, a scenario analysis module, based on historical
+                                  observations, simulates the plausible behavior of agents, within the investigated
+                                  geographic and socioeconomic context, under technological support policy schemes of
+                                  interest (i.e., forward-looking simulations).
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/teemsuite_figure_1.jpg" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+                              <p><b>3) Integrated demand-side management modelling (DREEM)</b></p>
+                              <p>
+                                  DREEM is a fully integrated dynamic high-resolution model resolving key features that
+                                  are not found together in existing Demand-Side Management (DSM) models. The model
+                                  serves as an entry point in DSM modeling in the building sector, by expanding the
+                                  computational capabilities of existing Building Energy System (BES) models to assess
+                                  the benefits and limitations of demand-flexibility, primarily for consumers, and for
+                                  other power actors involved. DREEM is a hybrid bottom up model that combines the key
+                                  features of both statistical and engineering models. The novelty of the DREEM model
+                                  lies mainly in its modularity, as its structure is decomposed into individual modules
+                                  characterized by the main principles of component- and modular-based system modeling
+                                  approach, namely "the interdependence" of decisions within modules.
+                              </p>
+                              <p>Hierarchical structure of the DREEM model</p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/teemsuite_figure_2.jpg" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+
+                              <p>
+                                  <ul>
+                              <ol>
+                                  - <b>Weather-climate module:</b> Responsible for generating climatic boundary
+                                  conditions. It reads weather data from the respective files and then provides them to
+                                  the other components, where and when necessary.
+                              </ol>
+                              <ol>
+                                  - <b>Building envelope module:</b> Modelling of different building typologies with the
+                                  corresponding characteristics, properties and heat conduction elements.
+                              </ol>
+                              <ol> - <b>Electricity demand module:</b> Calculation of the electricity demand considering
+                                  the occupancy of the building, the electric appliances used, the heating, ventilation
+                                  and airconditioning usage coupled with a smart thermostat, etc.</ol>
+                              <ol> - <b>Thermal comfort module:</b> Responsible for determining, based on international
+                                  standards, appropriate thermal conditions and temperature ranges that result in
+                                  thermal satisfaction of occupants.</ol>
+                              <ol> - <b>Flexibility management module:</b> Calculation of the solar generation based on
+                                  roof tilt and locational irradiation, simulation of the operation of electricty
+                                  storage, and, simulation of the control algorithm of a smart thermostat.</ol>
+                              <ol> - <b>Demand-Response (DR) module:</b> Simulation of DR mechanisms that motivate the
+                                  consumers to respond to real time price signals.</ol>
+                              <ol> - <b>Control strategies module:</b> Responsible for the energy management supervision
+                                  strategy that, given the time-shifting events of demand and the occupancy signals,
+                                  aims at achieving energy savings and costeffectiveness.</ol>
+                          </ul>
+                              </p>
+                              <p><b>4) Dynamic adaptive policy pathways generation for robust policy planning
+                                  (AIM)</b></p>
+                              <p>
+                                  A decision support, data-driven, approach, facilitates robust decision making under
+                                  deep uncertainties, and co-development with stakeholders of policy pathways, towards
+                                  a desired target. This is done by applying a stepwise policy implementation and
+                                  assessment approach, which considers the impact of policy implementation and uses it
+                                  to inform the effectiveness of consequent policies. Using inputs and outputs of
+                                  simulation models: (i) conditions under-, and the timeframe beyond-which a policy
+                                  measure starts to deviate from set targets are investigatd, (ii) maps of diverse
+                                  Dynamic Adaptive Policy Pathways are visualised, showing sequences of policies
+                                  leading to a common policy target, under different perspectives regarding the
+                                  objective (i.e., policy cost minimization, early target achievement, etc) until the
+                                  final target, and (iii) a monitoring system enabling timely identification of
+                                  influential contextual influences which might affect policy outcome is set up,
+                                  enabling that way, dynamic adaptation during real world policy implementation.
+                                  Modelling outcomes are presented via easily-undestandable visualizations, which
+                                  feature quantitative results regarding the evaluation of policies' performence under
+                                  contextual evolutions. With these visualizations, the bulk of data generated is
+                                  reduced to only those of actual use of stakeholders, thus attracting their interest
+                                  in using and being informed by the model.
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>The BSAM model of the TEEM Suite can calculate the CO2 emissions for electricity
+                                  generation from thermal generating resources and the respective emissions cost
+                                  considering the EU ETS emission prices.</p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                          <p><b>Economic Growth (aspects of technology diffusion)</b></p>
+                              <p>
+                                  ATOM models the triggering of private investments, in the form of new capacity
+                                  additions of solar PV technologies, capturing also benefits and profitability aspects
+                                  for consumers. Behavioural aspects relevant to the decision-making criteria of
+                                  consumers are also caputed by the model.
+                              </p>
+                              <p><b>Building sector growth</b></p>
+                              <p>In DREEM, demand for energy services in residential and commercial buildings is
+                                  primarily increased by total building floor space, which is driven by GDP per capita,
+                                  and saturates at a given maximum value, defined per region. Per unit of floor space,
+                                  demand for energy services increases over time depending on the relative price of the
+                                  service, and the difference between the base year saturation and the defined maximum
+                                  saturation for a certain service. For heating and cooling services, the maximum
+                                  saturation depends on regionally explicit heating and cooling degree days.</p>
+                              <p><b>Energy Poverty</b></p>
+                              <p>As most European countries have no official definition for the term "energy poverty",
+                                  this state is often described as the "inability to keep homes adequately warm". DREEM
+                                  can estimate the energy needs of a household taking into consideration details as
+                                  occupancy and thermal comfort, simulating this way the household with accurate
+                                  “real-world” conditions. Therefore, the results of DREEM combined with real
+                                  demographic data can help users identify energy poor households.  </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p><b>BSAM</b> simulates both fossil fuelled (i.e., lignite and natural gas) and
+                                  low-carbon (i.e., wind and PV) electricity generation technologies. Variables such as
+                                  the EU-ETS carbon price and the cost of fossil fuels, as well as large renewables'
+                                  penetration scenarios are modelled, to showcase their effect on the resulting
+                                  electricity mix and system-wide CO2 emissions for electricity generation.</p>
+                              <p><b>ATOM</b> simulates the adoption rate of low-carbon technologies, such as solar PV
+                                  and battery energy storage systems in the building sector.</p>
+                              <p><b>DREEM</b> simulates decentralized RES technologies, storage technologies, energy
+                                  efficiency measures and practices, as well as, cooling/heating practices in
+                                  buildings.</p>
+                              <p><b>AIM</b> is capable of performing meta-analysis of the inputs and outputs of
+                                  simulation models, towards mitigation/adaptation targets. For instance, it has been
+                                  used in soft-link with ATOM to generate dynamic adaptive policy pathways supporting
+                                  the diffusion of small-scale PV installations towards the achievement of the 2030
+                                  capacity targets in Greece (sequence of incentive-based policies). This was done
+                                  considering various evolutions of the Greek context, thus adding robustness to the
+                                  generated policy pathways.</p>
+                              <!--   FIGURE 3                           -->
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/teemsuite_figure_3.jpg" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p><b>BSAM</b> is built upon the notion that agents aim to maximize their profits within a
+                                  competitive market aiming to minimize the total electricity generation costs. Agents
+                                  interact with each other within the wholesale electricity market by placing bids for
+                                  their electricity generation. Agents' profits are calculated by considering a profit
+                                  margin above marginal costs for electricity generation. Agent profit bids decisions
+                                  are continuously updated based on knowledge and information acquired from previous bid
+                                  decisions. An optimization of the Unit Commitment and Economic Dispatch problem
+                                  minimizes the total electricity generation costs. To do so, a ranking of agent price
+                                  bids in an increasing order is followed by an iterative process of clearing
+                                  electricity-price bids under the constraint that supply should equal demand. After
+                                  meeting the demand requirements the process stops and the SMP and the total system
+                                  cost are calculated. </p>
+                              <p>The core principle of <b>ATOM</b> is that of agent-based modelling. In particular, each
+                                  agent has a private initial belief about the expected annual cash inflows from
+                                  investing in a PV system. This belief is expressed as a Gaussian distribution.
+                                  Furthermore, to capture the effects of social learning, each agent receives
+                                  information from the agents in its social circle that have already invested in a PV
+                                  system. This information concerns the actual profitability of their investments so
+                                  far, and is used to update the agent’s beliefs. This is equivalent to updating a
+                                  Gaussian prior, given a new observation. Accordingly, each agent has a social circle.
+                                  This condition is modeled as a “small-world” network, which is a type of mathematical
+                                  graph.</p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/teemsuite_figure_4.jpg" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+
+                              <p><b>DREEM</b> is a Demand-Side Management (DSM) model, generating energy demand in the
+                                  building sector, for realistic building typologies of interest, aggragating at a
+                                  higher scale based on survey/census data or historical observations. The model can
+                                  quantify the value of demand-flexibility primarily for consumers, and then for other
+                                  power actors involved, through the inclusion of a rich set of technology solutions
+                                  (small-scale PV, battery storage, smart devices and control management systems, energy
+                                  efficiency and renovation measues, etc.). By aggragating at e.g., national level, the
+                                  model can derive pathways for the achievement of, for example, energy efficiency
+                                  targets, and quantify the amount of public and/or private investments needed towards
+                                  this end. For the Demand-Response compononent, a Reinforcement Learning-based
+                                  algorithm is employed to find the optimal policy (demand response signals) that could
+                                  maximize the central entity's assumed profits.</p>
+                              <p><b>AIM</b> with appropriate modifications, follows the economic rational of any model,
+                                  to perform exploratory analysis of other models' simulation outcomes.</p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+<!--                          <p><b>BSAM: *Please Insert Table 1*</b></p>-->
+                               <div class="my_table table-responsive">
+<table class="table ">
+       <thead>
+       <tr>
+
+           <th style="width:7.5%">Model input parameter</th>
+           <th style="width:7.5%">Key data sources</th>
+           <th style="width:7.5%">Dimensions (Space/Time)</th>
+           </tr>
+       </thead>
+            <tbody>
+            <tr>
+            <td><b></b>Electricity</td>
+            <td>
+            <ul>
+            <ol>1)ENTSO-e Transparency Platform</ol>
+            <ol>2) Scientific literature/Technical reports</ol>
+            </ul>
+            </td>
+            <td>country / hour</td>
+            </tr>
+            <tr>
+            <td><b>Generators</b></td>
+            <td>1) Scientific literature/Technical reports</td>
+            <td>technology, fuel, technical characteristics / -</td>
+            </tr>
+            <tr>
+            <td><b>Generating Resource Availability</b></td>
+            <td>
+            <ul>
+            <ol>1) Scientific literature/Technical reports</ol>
+            <ol>2) Stakeholder engagement</ol>
+            </ul>
+            </td>
+            <td>country / year</td>
+            </tr>
+            <tr>
+            <td><b>Hydro basin levels</b></td>
+            <td>Technical reports</td>
+            <td>basin / month (historical data; at least 1 year)</td>
+            </tr>
+            <tr>
+            <td><b>Historical hydro generation</b></td>
+            <td>ENTSO-e Transparency Platform</td>
+            <td>country / month</td>
+            </tr>
+            <tr>
+            <td><b>Expected generation of hydro plants</b></td>
+            <td>Scientific literature/Technical reports</td>
+            <td>dam / month</td>
+            </tr>
+            <tr>
+            <td><b>Thermal reference price</b></td>
+            <td>Hellenic Energy Exchange website</td>
+            <td>country / month</td>
+            </tr>
+            <tr>
+            <td><b>Imports Prices</b></td>
+            <td>ENTSO-e Transparency Platform</td>
+            <td>country / hour</td>
+            </tr>
+            <tr>
+            <td><b>Interconnections Capacity</b></td>
+            <td>Scientific literature/Technical reports</td>
+            <td>country / year</td>
+            </tr>
+            <tr>
+            <td><b>Natural Gas Prices</b></td>
+            <td><a href="https://www.eia.gov/dnav/ng/hist/rngwhhdm.htm">https://www.eia.gov/dnav/ng/hist/rngwhhdm.htm</a></td>
+            <td>country / month</td>
+            </tr>
+            <tr>
+            <td><b>PV-generated electricity</b></td>
+            <td>ENTSO-e Transparency Platform</td>
+            <td>country / hour</td>
+            </tr>
+            <tr>
+            <td><b>Wind-generated electricity</b></td>
+            <td>ENTSO-e Transparency Platform</td>
+            <td>country / hour</td>
+            </tr>
+            <tr>
+            <td><b>Market Data</b></td>
+            <td><ul>
+            <ol>1) IPTO’s website</ol>
+            <ol>2) Technical reports</ol>
+            </ul></td>
+            <td>country / -</td>
+            </tr>
+            <tr>
+            <td class="colored" colspan="2"><b>Key outputs</b></td>
+            <td class="colored"><b>Dimensions (Space/Time)</b></td>
+            </tr>
+            <tr>
+            <td colspan="2"  class="light-grey"><b>System Marginal Price</b></td>
+            <td  class="light-grey">country / hour</td>
+            </tr>
+            <tr>
+            <td colspan="2"><b>Generators’ profits</b></td>
+            <td>resource / day</td>
+            </tr>
+            <tr>
+            <td colspan="2"  class="light-grey"><b>Resource Scheduling</b></td>
+            <td  class="light-grey">resource / hour</td>
+            </tr>
+            <tr>
+            <td colspan="2"><b>Electricity mix</b></td>
+            <td>country / hour</td>
+            </tr>
+            <tr>
+            <td class="light-grey" colspan="3"><b>Description of (likely) unclear terms</b></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+            <ul>
+                <li><b>Country: modelled country or the country from which electricity is imported.</b></li>
+                <li><b>Resource: Generating resource</b></li>
+                <li><b>Resource Scheduling: Generation from each resource for every hour of a modelled period</b></li>
+                <li><b>Technology: lignite plant, open-cycle gas turbine, combined-cycle gas turbine, other.</b></li>
+                <li><b>Fuel: lignite, natural gas, other.</b></li>
+                <li><b>Technical characteristics: nominal capacity, technical minimum generation, minimum uptime/downtime,
+                    cost/generation function coefficients, heat rate function coefficients, cost to start-up from hot/cold
+                    state, start-up times from hot/cold state, time since shut down to reach cold state</b></li>
+                <li><b>Dam: the dam from which a hydro plant is powered</b></li>
+                <li><b>Basin: the basin of a river which powers many dams</b></li>
+                <li><b>Thermal reference price: price of displaced energy from thermal units due to the use of hydro generated
+                    electricity</b></li>
+                <li><b>Generating resource availability: percentage of its nominal capacity. Zero if planned for
+                    decommissioning. </b></li>
+                <li><b>Market data: System reserves, electricity price cap, linearized segments of generation/cost function of
+                    generators, collective profit percentage limit above which fines are imposed to profiteering generators,
+                    consecutive years and capacity factor below which a plant is considered unprofitable, virtual power plant
+                    capacity.</b></li>
+            </ul>
+                </td>
+            </tr>
+           </tbody>
+         <caption>BSAM:</caption>
+        </table>
+        </div>
+                              <!--INSERT TABLE 2                              -->
+                               <div class="my_table table-responsive">
+                                   <table class="table ">
+                                       <thead>
+                                       <tr>
+                                           <th style="width:7.5%">Model input parameter</th>
+                                           <th style="width:7.5%">Key data sources</th>
+                                           <th style="width:7.5%">Dimensions (Space/Time)</th>
+                                        </tr>
+                                       </thead>
+	                            <tbody>
+                                    <tr>
+                                    <td>Historical data on Number and Capacity of grid connection requests</td>
+                                    <td>Historical data publicly available.</td>
+                                    <td><b>Country/Daily</b></td>
+                                    </tr>
+                                    <tr>
+                                    <td>Small-scale PV investment costs</td>
+                                    <td>Scientific literature/Technical reports</td>
+                                    <td><b></b>Country/Yearly</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Residential battery storage investment costs</td>
+                                    <td>Scientific literature/Technical reports</td>
+                                    <td><b>EU/Yearly</b></td>
+                                    </tr>
+                                    <tr>
+                                    <td>Competitive electricity consumption tariffs and other regulated charges</td>
+                                    <td>Market data publicly available (e.g.,
+                                        <a href="https://www.dei.gr/Documents2/TIMOLOGIA/NEA-TIMOLOGIA-SEPT2019/SEPT19-V2/TIMOK-XT-2019-G1-SEPT19_v2.pdf">“G1” tariff</a> in Greece).</td>
+                                    <td><b>Country/Yearly</b></td>
+                                    </tr>
+                                    <tr>
+                                    <td>Electricity consumption profiles per household</td>
+                                    <td>Survey/Census data
+                                        <a href="https://ec.europa.eu/eurostat/documents/3859598/5935825/
+                                        KS-GQ-13-003-EN.PDF/baa96509-3f4b-4c7a-94dd-feb1a31c7291">Development of
+                                            detailed statistics on energy consumption in households (SECH)</a>
+                                        Scientific literature
+                                </td>
+                                    <td><b>Country/Daily</b></td>
+                                    </tr>
+                                    <tr>
+                                    <td>Solar PV generation profiles
+                                        (i.e., site-specific solar irradiation dataset/site-specific ambient air
+                                        temperature & wind speed)</td>
+                                <td><a href="http://www.soda-pro.com/web-services/radiation/cams-radiation-service">
+                                    Copernicus Atmosphere Monitoring Service (CAMS) radiation service
+                                    Modern-Era Retrospective Analysis for Research and Applications,</a><a
+                                        href="https://disc.gsfc.nasa.gov/
+                                        datasets?keywords=%22MERRA-2%22&page=1&source=Models%2FAnalyses%20MERRA-2">
+                                    Version 2 (MERRA-2) project</a></td>
+                                <td><b>Country/Daily</b></td>
+                                </tr>
+                                <tr>
+                                <td>Compensation schemes for consumers</td>
+                                <td>User-defined</td>
+                                <td><b>Policy</b></td>
+                                </tr>
+                               </tbody>
+                             <caption>ATOM:</caption>
+                        </table>
+                        </div>
+<!--                              <p><b>DREEM * Please Insert Table 3*</b></p>-->
+                               <div class="my_table table-responsive">
+<table class="table ">
+       <thead>
+       <tr>
+
+           <th style="width:7.5%">Model input parameter</th>
+           <th style="width:7.5%">Key data sources</th>
+           <th style="width:7.5%">Dimensions (Space/Time)</th>
+           </tr>
+       </thead>
+            <tbody>
+            <tr>
+            <td><b>Weather Data</b></td>
+            <td><a href="https://energyplus.net/weather-region/europe_wmo_region_6">EnergyPlus</a></td>
+            <td>Region/Minute</td>
+            </tr>
+            <tr>
+            <td><b>Building typologies & envelope specifications</b></td>
+            <td><a href="http://webtool.building-typology.eu/#bm">TabulaWebtool</a>, <a href="http://bpie.eu/">BPIE</a>,
+                <a href="https://www.entranze.eu/tools/interactive-data-tool">ENTRANZE</a>,
+                <a href="https://www.odyssee-mure.eu/">ODYSEE-MURE</a>
+            </td>
+            <td>Region/Minute</td>
+            </tr>
+            <tr>
+                <td><b>Demographics/Occupancy & activity profiles/ Appliances (traits, power ratings and use characteristics)</b></td>
+                <td>Survey/Census data <a href="https://ec.europa.eu/eurostat/documents/3859598/5935825/KS-GQ-13-003-EN.PDF/baa96509-3f4b-4c7a-94dd-feb1a31c7291">Development of detailed statistics on energy consumption in households (SECH)</a></td>
+                <td>Country-Region/Monthly</td>
+            </tr>
+            <tr>
+            <td><b>Thermal comfort parameters</b></td>
+            <td><p>
+                International standards:
+                <ul>
+                <ol><a href="https://www.iso.org/standard/39155.html">“DIN EN ISO 7730”</a></ol>
+                <ol><a href="https://www.sciencedirect.com/science/article/abs/pii/S1364032113003535">“ASHRAE 55”</a></ol>
+                <ol><a
+                        href="http://www.cres.gr/greenbuilding/PDF/prend/set4/
+                        WI_31_Pre-FV_version_prEN_15251_Indoor_Environment.pdf">“EN 15251”</a></ol>
+                </ul>
+                </p></td>
+            <td>Country/Monthly</td>
+            </tr>
+            <tr>
+            <td><b>Competitive electricity consumption tariffs and other regulated charges</b></td>
+            <td>Market data publicly available (e.g., <a href="https://www.dei.gr/Documents2/TIMOLOGIA/
+            NEA-TIMOLOGIA-SEPT2019/SEPT19-V2/TIMOK-XT-2019-G1-SEPT19_v2.pdf">“G1” tariff </a> in Greece).</td>
+            <td>Country/Yearly</td>
+            </tr>
+            <tr>
+            <td><b>System Marginal Prices</b></td>
+            <td>Market data publicly available (e.g., <a href="http://www.admie.gr/en/operations-data/electricity-power-market-participation/market-data/">Greek Independent Power Transmission Operator (IPTO))
+            </a></td>
+            <td>Country/Hourly</td>
+            </tr>
+           </tbody>
+         <caption>DREEM:</caption>
+        </table>
+</div>
+                              <p><b>AIM:</b> Any input and output used/generated in simulation models</p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="teemsuite_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p><b>Emissions-related policies </b></p>
+                              <p>With BSAM CO2 emissions reduction can be investigated through scenarios of EU-ETS
+                                  carbon price evolution. The user can input scenarios of estimated EU-ETS carbon price,
+                                  which is modelled as an additional cost on the marginal costs of fossil fuel
+                                  generators (i.e., lignite- and gas-fueled plants). This additional cost increases the
+                                  difficulty of high CO2 emitters to be competitive in the wholesale electricity market,
+                                  altering their contribution to the electricity mix and the resulting system-wide CO2
+                                  emissions. </p>
+                              <p><b>RES & storage support policies</b></p>
+                              <p><b>ATOM</b> can be used to investigate the expected effectiveness of different policy
+                                  support schemes (e.g., Feed-in-Tarrifs, Net-metering, different typologies of
+                                  self-consumption schemes that subsidize part of storage systems' initial investment
+                                  costs, etc.),  in driving investments in small-scale PV, towards the achievement of
+                                  small-scale PV capacity targets for the geographical and socioeconomic context of
+                                  interest.</p>
+                              <p><b>DREEM</b> can assess the electrical performance of small-scale PV installations. The
+                                  complete possible monthly energy yield of the PV installation can be calculated during
+                                  simulation and therefore the power generated can be computed. Thus, policy instruments
+                                  that support solar PV installation (i.e., FiTs, Net-Metering, Self-Consumption, etc.)
+                                  can be examined and further deployment opportunities can be identified.</p>
+                              <p><b>DREEM</b> simulates also storage technologies (e.g., batteries) quantifying benefits
+                                  of storage installations in the building sector. Different support policies, as for
+                                  example subsidizing storage's initial investment costs are considered by the model.
+                              </p>
+                              <p><b>Demand-Response policies </b></p>
+                              <p>Demand-Response (DR) is increasingly attracting policy attention and residential
+                                  consumers could offer a substantial new source of demand-side flexibility.
+                                  Demand-Response schemes offered to customers, are considered integral part of
+                                  Demand-Side Management modeling. The <b>DREEM</b> model brings together all important
+                                  aspects of end-use with a DR modeling framework, that builds on the concept of
+                                  time-based DR methods. In particular, it simulates DR mechanisms as derived through:
+                                  (i) considering Hourly Electricity Prices (HEPs) and a Limiting Price (LP), and
+                                  (ii) a more “real-world” situation, in which a central planner attempts to maximize
+                                  flexibility value by issuing DR signals. This planner learns the optimal policy that
+                                  maximizes its revenues through an optimization approach based on Reinforcement
+                                  Learning theory. </p>
+                              <p><b>Energy Efficiency policies</b></p>
+                              <p><b>DREEM</b> can be used to examine different energy efficiency measures and retrofit
+                                  packages, and behavioral analysis of end-use in the building sector. The model
+                                  considers different support policy schemes, as subsidies, Pay-for-Performance,
+                                  etc.</p>
+                              <p><b>Combinations and beyond 'perfect foresight' modelling</b></p>
+                              <p><b>AIM</b> can exploratory analyze simulation outputs under different input assumptions
+                                  of simulation models (e.g., different support policies for the promotion of RES and
+                                  storage, diverse socio-economic contexts), to generate policy pathways comprising of
+                                  policy sequences that not only lead to the desired policy outcomes (e.g. RES
+                                  integration), but also consider uncertainties in modelling assumptions as potential
+                                  future evolutions, adding the element of robustness to policy evaluation.</p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p><b>The TEEM Suite as whole</b> can provide implications for: </p>
+                              <ul>
+                                  <ol>
+                                       - §7. Affordable and clean energy by providing:
+                                      <ul>
+                                          <ol>> the renewable energy share in electricity mix </ol>
+                                          <ol>> the system marginal price of electricity</ol>
+                                          <ol>> cost-benefit ratios of decentralized RES generation and
+                                              Self-consumption</ol>
+                                      </ul>
+                                  </ol>
+                                  <ol>
+                                      - §11: Sustainable Cities & Communities by providing:
+                                      <ul>
+                                          <ol>
+                                               > the Levelized Cost of Saved Energy (LCSE) of different Energy
+                                              Efficiency Measures in the building sector, as well as cost-benefit ratios
+                                              of Demand-Flexibility
+
+                                          </ol>
+                                          <ol>- $13: Climate action by providing:</ol>
+                                          <ul>
+                                              <ol>> the CO2 emissions from electricity generation</ol>
+                                              <ol>> the footprint impact of private consumption in the building sector</ol>
+                                          </ul>
+                                      </ul>
+                                  </ol>
+                              </ul>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="teemsuite_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.eist.2018.12.004</td>
+                                          <td>
+                                            Barriers to and consequences of a solar-based energy transition in Greece
+                                          </td>
+                                          <td>
+                                              <p>BSAM simulation results showed that increasing self-consumption will
+                                                  increase, during some months of the year, the price that everybody
+                                                  else pays for electricity, in order for generators to counterbalance
+                                                  their revenue losses. These findings validate literature insights and
+                                                  signal a consequential risk that must be in-corporated into any policy
+                                                  aiming to support self-consumption in Greece. </p>
+                                              <p>However, since simulation results were derived by allowing small-scale
+                                                  PV and electricity storage to coordinate with the sole goal
+                                                  ofincreasing self-consumption, it is concluded that just supporting
+                                                  increased self-consumption is suboptimal—at least if optimalitymeans
+                                                  decreasing the price that consumers without self-consumption must pay.
+                                                  To overcome this sub-optimality, policymakingshould trigger
+                                                  self-consumption by measures that have a broader view of the system's
+                                                  state. This entails supporting smart self-consumption,i.e.,
+                                                  self-consumption that is triggered by the power system’s needs and
+                                                  activated based on price signals. Mixes of policy measures to support
+                                                  self-consumption of (PV-produced electricity must focus on increasing
+                                                  its profitability and financial appeal to the consumers. Sustainable
+                                                  practices to this end can result from parameterising direct support to
+                                                  PV investments, electricity storage and self-consumption (€/MWh);
+                                                  purchase price of, and tax and levies for, electricity fed to the
+                                                  grid; and grid fees. However, there is a constant need to augment such
+                                                  measures with the infrastructure and regulation necessary to control
+                                                  and steer distributed generation according to the power system’s
+                                                  needs.</p>
+                                              <p>Finally, by expecting significant technological breakthroughs in
+                                                  electricity storage manufacturing in the coming years, it becomes
+                                                  apparent that investing in a self-consumption with storage scheme in
+                                                  Greece should be evaluated together with expectedly decreasing costs
+                                                  for storage and the fact that PV self-consumption will balance the
+                                                  frequency and magnitude of peak generation events stressing the
+                                                  distribution network.Thus,it is essential that policymaking focus on
+                                                  new business models that will monetise the value of self-consumption
+                                                  with storage, and on regulatory frameworks that will envisage
+                                                  appropriate technology subsidies and extra provisions to operators,
+                                                  allowing fair allocation of benefits among all actors involved.</p>
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.apenergy.2019.113795</td>
+                                          <td>
+                                              An agent-based model to simulate technology adoption quantifying
+                                              behavioural uncertainty of consumers
+                                          </td>
+                                          <td>
+                                              <p>Simulation results showed that the net-metering scheme, as currently
+                                                  stands, is not capable of achieving the necessary capacity addition
+                                                  towards the Greek target of 2025. In particular, while the scheme
+                                                  could be successful until the end of 2021, it won’t be able to reach
+                                                  the national target of 2025, even in the most optimistic scenarios.
+                                                  The effectiveness of the net-metering scheme in Greece is closely
+                                                  related to the retail price of electricity. Simulation results
+                                                  indicated that an increase in the retail price, reduces the total
+                                                  uncertainty in the modeling outcomes, which is mainly introduced by
+                                                  modeling parameters, as the probability of investing, consumers’
+                                                  beliefs and resistance towards investing. In policy terms, this is
+                                                  translated into a reduction of the behavioural uncertainty related to
+                                                  the effectiveness of the NEM scheme, especially for the case of
+                                                  risk-averse consumers, which implies that different sources of
+                                                  positive financial outcomes for consumers should be further
+                                                  investigated.</p>
+                                              <p></p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/j.enconman.2019.112339
+                                          </td>
+                                          <td>
+                                              A modular high-resolution demand-side management model to quantify
+                                              benefits of demand-flexibility in the residential sector
+                                          </td>
+                                          <td>
+                                              <p>Simulation results showed that promoting a synergistic co-operation
+                                                  between the power supplier and the prosumer could lead to significan
+                                                  cost reductions and energy savings, paving the way towards
+                                                  “gamechanger” business models that capture new value on the supply
+                                                  side by coupling it to the demand side.</p>
+                                              <p>Policymaking in Greece should focus on promoting small-scale PV with
+                                                  technologies, as battery storage or smart thermostats. Considering
+                                                  the existing ambiguity of the PV market in Greece, such an
+                                                  infrastructure could generate additional sources of revenue for
+                                                  consumers, which could counterbalance the phase out of the previous
+                                                  Feed-in-Tariffs (FiTs) scheme. In particular, policy efforts should
+                                                  focus on more marketbased structures by avoiding cross-subsidization,
+                                                  along with appropriate promotion campaigns that will inform consumers
+                                                  on the benefits of self-consumption, and its influence on their
+                                                  electricity bill. This should be evaluated along with the fact that
+                                                  electricity storage manufacturers are promising revolutionary progress
+                                                  regarding cost reductions in the coming years, and that PV
+                                                  self-consumption can balance the frequency and magnitude of peak
+                                                  generation events that stress the distribution network.</p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>10.1016/j.enpol.2020.111350</td>
+                                          <td>A transdisciplinary modeling framework for the participatory design of
+                                              dynamic adaptive policy pathways</td>
+                                          <td>
+                                              Net-metering is capable of driving adequate investments in small-scale PV
+                                              that follow the Greek PV targets’ trajectory only in the short term. This
+                                              is because grid charges for net-metered electricity burden the prosumers
+                                              instead of being used to increase the value of locally generated
+                                              electricity for their benefit. Thus, bill savings (i.e., prosumers’
+                                              profits) are solely dependent on the electricity retail price, which
+                                              reduces consumers’ willingness to install a photovoltaic system. A
+                                              self-consumption scheme that subsidizes battery storage showed great
+                                              potential to incentivise investments y consumers. This is because,
+                                              with a self-consumption scheme prosumers consume more self-generated
+                                              electricity since it can be stored for later direct use. Furthermore,
+                                              grid charges are paid only for the electricity
+                                              consumed from the grid. As such, there is less price-related uncertainty
+                                              and prosumers’ profits are higher. However, stepwise reduction of subsidy
+                                              is suggested, to ensure an initial uptake of PV, wihle avoiding excessive
+                                              subsidies' cost. Regarding the applicability of AIM, the study showed that
+                                              while 100% success of a policy pathway, regardless the contextual
+                                              evolution, cannot be achieved, opportunities and dead-ends can be
+                                              highlighted and visualized in a stakeholder-friendly fashion.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the TEEM Suite model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="teemsuite_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>Nikas, A. et al. (2019) ‘Barriers to and consequences of a solar-based energy transition
+                                in Greece’, Environmental Innovation and Societal Transitions. Elsevier, 35(September
+                                2018), pp. 383–399. doi: 10.1016/j.eist.2018.12.004.</p>
+                            <p>Stavrakas, V., Papadelis, S., & Flamos, A. (2019). An agent-based model to simulate
+                                technology adoption quantifying behavioural uncertainty of consumers. Applied Energy,
+                                255, 113795. https://doi.org/10.1016/j.apenergy.2019.113795.</p>
+                            <p>Stavrakas, V., & Flamos, A. (2020). A modular high-resolution demand-side management
+                                model to quantify benefits of demand-flexibility in the residential sector. Energy
+                                Conversion and Management, 205, 112339. https://doi.org/10.1016/j.enconman.2019.112339.
+                            </p>
+                            <p>Michas, S., Stavrakas, V., Papadelis, S., & Flamos, A. (2020). A transdisciplinary
+                                modeling framework for the participatory design of dynamic adaptive policy pathways.
+                                Energy Policy, 139, 111350. https://doi.org/10.1016/j.enpol.2020.111350.</p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

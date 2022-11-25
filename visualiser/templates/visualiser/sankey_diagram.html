@@ -1,0 +1,104 @@
+{% extends 'visualiser/main_visualiser_am4.html' %}
+{% block content %}
+    <div id="chartdiv"></div>
+    <script>
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            var chart = am4core.create("chartdiv", am4charts.SankeyDiagram);
+            chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+            var chart_data = {{data|safe}};
+            var node_list = {{ node_list|safe }};
+
+            console.log(node_list);
+            var use_default_colors = {{ use_default_colors }};
+            var color_node = [];
+            var chart_title = "{{ chart_title }}";
+            if (use_default_colors === false) {
+
+                var color_node_list = {{ color_node_list|safe }};
+                for (var i = 0; i < node_list.length; i++) {
+                    color_node.push({"from": node_list[i], "nodeColor": color_node_list[i]})
+                }
+            }
+            chart_data = color_node.concat(chart_data);
+
+            var title = chart.titles.create();
+            title.text = chart_title;
+            title.fontSize = 18;
+            title.fontWeight = 600;
+            title.marginBottom = 30;
+
+
+            chart.data = chart_data;
+
+            chart.dataFields.fromName = "from";
+            chart.dataFields.toName = "to";
+            chart.dataFields.value = "value";
+            chart.dataFields.color = "nodeColor";
+
+
+            let hoverState = chart.links.template.states.create("hover");
+            hoverState.properties.fillOpacity = 0.7;
+
+            // for right-most label to fit
+            chart.paddingRight = 140;
+            chart.paddingLeft = 30;
+            chart.paddingTop = 30;
+            chart.paddingBottom  =30;
+
+            var linkTemplate = chart.links.template;
+            linkTemplate.fillOpacity = 0.5;
+
+            // make nodes draggable
+            var nodeTemplate = chart.nodes.template;
+            nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
+            nodeTemplate.showSystemTooltip = true;
+            nodeTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+            nodeTemplate.width = 160;
+            nodeTemplate.nameLabel.locationX = 0.05;
+            nodeTemplate.nameLabel.label.fontWeight = "bold";
+            nodeTemplate.nameLabel.label.fontSize = "1.2em";
+            nodeTemplate.nameLabel.label.fill = "#ffffff";
+            nodeTemplate.nameLabel.label.stroke = "#000000";
+            nodeTemplate.nameLabel.label.wrap = true;
+            nodeTemplate.nameLabel.label.truncate = false;
+            nodeTemplate.inert = true;
+            nodeTemplate.stroke = am4core.color("#efefef");
+            nodeTemplate.strokeWidth = 1;
+            nodeTemplate.fillOpacity = 0.9;
+
+            var nodeLink = chart.links.template;
+            var bullet = nodeLink.bullets.push(new am4charts.CircleBullet());
+            bullet.fillOpacity = 1;
+            bullet.circle.radius = 7;
+            bullet.locationX = 0.5;
+
+
+            chart.events.on("ready", function (event) {
+                for (var i = 0; i < chart.links.length; i++) {
+                    var link = chart.links.getIndex(i);
+                    var bullet = link.bullets.getIndex(0);
+                    if (link.dataItem.toNode) {
+                        animateBullet(bullet);
+                    } else {
+                        link.bullets.removeValue(bullet);
+                    }
+                }
+            });
+
+            function animateBullet(bullet) {
+                var duration = 3000 * Math.random() + 2000;
+                var animation = bullet.animate([{property: "locationX", from: 0, to: 1}], duration);
+                animation.events.on("animationended", function (event) {
+                    animateBullet(event.target.object);
+                })
+            }
+
+        }); // end am4core.ready()
+        </script>
+{% endblock %}

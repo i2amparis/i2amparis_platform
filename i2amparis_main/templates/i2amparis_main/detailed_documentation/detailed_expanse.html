@@ -1,0 +1,461 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#expanse_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model EXPANSE</span>
+                                    <a style="display: none"
+                                       href="#expanse_key_features">Key features of the model EXPANSE</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#expanse_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#expanse_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#expanse_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#expanse_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#expanse_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#expanse_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#expanse_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#expanse_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#expanse_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The EXPANSE model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="expanse_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                               EXPANSE is a bottom-up, technology-rich electricity system model. Two versions of the
+                                  model exist depending on the research question: (1) spatially-explicit, single-year
+                                  model at NUTS-3 spatial resolution and with hourly time step for Europe; and (2)
+                                  national long-range capacity expansion model with in-depth uncertainty analysis. The
+                                  unique feature of EXPANSE is that it applies Modelling to Generate Alternatives method
+                                  (MGA) to compute and analyze large numbers of cost-optimal and near-optimal scenarios
+                                  with only a single set of assumptions. The principle of MGA is to relax the
+                                  cost-optimality assumption and instead define an acceptable range of total system
+                                  costs to search for scenarios within this acceptable range. Thus, EXPANSE tackles the
+                                  common critiques to other bottom-up technology-rich models by not only focusing on
+                                  costs as the sole driver of the energy transition. In this way, EXPANSE also allows to
+                                  better tackle structural uncertainty, reduce modeler’s bias, and provides various
+                                  alternative scenarios for policymakers.
+                                </p>
+                              <p>
+                                  Based on the exogenous assumption, such as technology parameters and costs,
+                                  electricity demand, or maximum acceptable increase in total system cost, EXPANSE
+                                  generates a wanted set of maximally-different scenarios that are within the
+                                  pre-defined level of acceptable costs. For each of these computer-generated scenarios,
+                                  EXPANSE assesses the implications on the key decision-relevant outcomes for European
+                                  regions, such as technology capacity and operation, cost, employment, greenhouse gas
+                                  and particulate matter emissions, land use, regional inequality, and so on. EXPANSE is
+                                  then combined with Monte-Carlo technique to quantify the associated uncertainties.
+                              </p>
+                              <p>
+                                  The role of EXPANSE is to provide more realistic what-if scenarios of the electricity
+                                  sector transition that is driven by costs as well as other socio-technical factors.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="expanse_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the EXPANSE model</h2>
+                              <b>Key features</b>
+                              <p></p>
+                              <ul>
+                                  <li>models cost-optimal and near-optimal scenarios of the electricity sector
+                                      transition by applying state-of-the-art MGA methodology</li>
+                                  <li>
+                                      quantifies various environmental and economic impacts at high spatial resolution
+                                  </li>
+                                  <li>
+                                      conducts in-depth analysis of parametric and structural uncertainties
+                                  </li>
+                              </ul>
+                              <p></p>
+                              <b>Geographic coverage</b>
+                              <p>
+                                  Spatially-explicit EXPANSE has a nodal representation of 1440 NUTS-3 land regions for
+                                  33 European countries (EU-27, UK, CH, NO, and Western Balkans). Long-range EXPANSE
+                                  represents countries at an aggregated level (Switzerland, UK).
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="expanse_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                 EXPANSE quantifies direct greenhouse gas and particulate matter emissions from the
+                                  electricity sector with high spatial resolution at NUTS-3 in Europe. EXPANSE does not
+                                  include a climate module.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="expanse_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  <b>Electricity sector costs and employment</b>
+                                  <p>
+                                    EXPANSE estimates the total and regionally-explicit costs of the electricity system,
+                              including generation, transmission, and storage. It also quantifies regional employment
+                              impacts of the electricity sector based on bottom-up calculation associated to each unit
+                              of installed capacity.
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="expanse_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                  EXPANSE is a technology-rich model that includes most conventional and renewable
+                                  electricity generation technologies, and is complemented by the PyPSA model to assess
+                                  storage and transmission requirements. National renewable electricity targets,
+                                  emission constraints, and national policy instruments can be used by the EXPANSE model
+                                  to include and assess mitigation measures.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="expanse_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  The principle of MGA is to remove the objective function of cost optimization and to
+                                  convert it into a constraint on acceptable total system costs. EXPANSE then uses MGA
+                                  to sample a wanted number of scenarios in this space: from a handful of
+                                  maximally-different scenarios to thousands of scenarios for analysis of parametric and
+                                  structural uncertainty. The focus on near-optimal scenarios allows EXPANSE to
+                                  represent the socio-technical energy transition more realistically than done in
+                                  conventional cost-optimization models. The EXPANSE scenarios within the near-optimal
+                                  space may also be more desirable by decision makers than the cost-optimal scenarios
+                                  due to various objectives that are not part of the model.
+
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="expanse_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                  Key parameters include socioeconomic parameters (e.g., electricity demand based on
+                                  population and GDP growth), energy technology characteristics (e.g., costs,
+                                  efficiencies, emissions, employment, land use), renewable resource availabilities
+                                  (e.g., wind speed, solar irradiation, biomass resources, hydropower inflow), and
+                                  policies (e.g. national renewable electricity targets, emission constraints).
+
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="expanse_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                  National renewable electricity targets, emission constraints, feed-in tariffs and
+                                  subsidies, carbon prices.
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="expanse_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                 SDG1: Distributional impacts from changes in electricity cost and employment in the electricity sector.
+                                  SDG3: Changes in particulate matter emissions from the electricity sector, which could lead to changes in human health.
+                                  SDG7: Share of renewable electricity per NUTS-3 region.
+                                  SDG8: Changes in employment in the electricity sector.
+                                  SDG10: Changes in regional inequalites from the electricity sector, in terms of infrastructure deployment, regional costs, employment, greenhouse gas and particulate emissions, and land use.
+                                  SDG13: Regional implications of implementing national renewable electricity system targets to reach European climate targets.
+                                  SDG15: Land use impacts of the electricity sector
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="expanse_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.apenergy.2019.113724</td>
+                                          <td>
+                                             ﻿Distributional trade-offs between regionally equitable and cost-efficient allocation of renewable electricity generation
+                                          </td>
+                                          <td>
+                                              Decentralized renewable electricity generation (DREG) has been growing at an unprecedented pace, yet the appropriate spatial allocation and associated regional equity implications remain underinvestigated. In this study, we quantify the trade-offs between cost-efficient (least-cost) and regionally equitable DREG allocation in terms of electricity generation costs, investment needs, and DREG capacity requirements. Using the case of the ambitious and publicly-approved Swiss Energy Strategy 2050, we set up a bottom-up, technology-rich electricity system model EXPANSE with Modeling to Generate Alternatives at a spatial resolution of 2’258 Swiss municipalities. In order to measure regional equity implication, we adapt the concepts of the Lorenz curve and the Gini coefficient. We find a significant trade-off by 2035 in Switzerland: 50% increase in regional equity when allocating DREG to various Swiss regions on the basis of population or electricity demand leads to 18% higher electricity generation costs. Least-cost allocation implies concentrating DREG and associated investments to few most productive locations only. Solar PV is the key technology for increasing regional equity. We conclude that in countries with spatially-uneven DREG resources like Switzerland, any policies that focus on cost efficiency should anticipate regional equity implications in advance and, if desired, minimize them by promoting solar PV.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.energy.2016.03.038</td>
+                                          <td>
+                                             ﻿Does cost optimization approximate the real-world energy transition?
+                                          </td>
+                                          <td>
+                                              ﻿Bottom-up energy system models rely on cost optimization to produce energy scenarios that inform policy analyses, debates and decisions. This paper reviews the rationale for the use of cost optimization and questions whether cost-optimal scenarios are adequate proxies of the real-world energy transition. Evidence from ex-post modeling shows that cost optimization does not approximate the real-world UK electricity system transition in 1990-2014. The deviation in cumulative total system costs from the cost-optimal scenario in 1990-2014 is equal to 9-23% under various technology, cost, demand, and discount rate assumptions. In fact, cost-optimal scenarios are shown to gloss over a large share of uncertainty that arises due to deviations from cost optimality. Exploration of large numbers of near-optimal scenarios under parametric uncertainty can give indication of the bounds or envelope of predictability of the real-world transition. Concrete suggestions are then made how to improve bottom-up energy system models to better deal with the vast uncertainty around the future energy transition. The paper closes with a reflective discussion on the tension between predictive and exploratory use of energy system models.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/j.energy.2017.03.043
+                                          </td>
+                                          <td>
+                                             Ensuring the diversity of national energy scenarios: bottom-up energy system model with Modeling to Generate Alternatives
+                                          </td>
+                                          <td>
+                                             Long-range energy scenarios are commonly used to inform national energy policy decisions. Although the scenario approach aims to expand the spectrum of futures considered, in the past energy scenarios have not been diverse enough to include less expected real-world developments. We use a bottom-up energy system model EXPANSE with Modeling to Generate Alternatives (MGA) to assess the diversity of the existing ensemble of multi-organization, multi-model Swiss electricity supply scenarios. We show that both for 2035 and 2050 existing scenarios cover well the various possibilities in deployment of individual electricity generation technologies in terms of installed capacity or produced electricity. When analyzing scenarios as a whole, we find that in 2035 there is a lack of scenarios with high electricity demand and greater deployment of renewable technologies occurring simultaneously, as well as scenarios with a negligible or negative share of net electricity import. In 2050, there is also a lack of scenarios that depict high electricity demand and conservative deployment of new renewable technologies, especially solar PV. We propose six additional scenarios to be included to increase the diversity of the ensemble of Swiss electricity supply scenarios and achieve better understanding of the future possibilities and uncertainties.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the EXPANSE model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+<!--                    add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="expanse_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                               Sasse, J.-P. & Trutnevyte, E. Distributional trade-offs between regionally equitable and
+                                cost-efficient allocation of renewable electricity generation. Appl. Energy 254, (2019).
+                            </p>
+                            <p>
+                              Trutnevyte, E. Does cost optimization approximate the real-world energy transition? Energy
+                                106, 182–193 (2016).
+                            </p>
+                            <p>
+                                Ensuring the diversity of national energy scenarios: bottom-up energy system model with
+                                Modeling to Generate Alternatives. Energy 126, 886-898 (2017).
+                            </p>
+                            <p>
+                                Investment appraisal of cost-optimal and near-optimal pathways for the UK electricity
+                                sector transition to 2050. Applied Energy 189, 89-109 (2017).
+                            </p>
+
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

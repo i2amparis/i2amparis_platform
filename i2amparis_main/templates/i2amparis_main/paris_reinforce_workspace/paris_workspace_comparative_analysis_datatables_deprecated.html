@@ -1,0 +1,47 @@
+{% load static %}
+{% csrf_token %}
+
+
+
+<div class="tab-pane">
+    <div class="container" style="width: 90%; height:100%;">
+        <div class="row" style="margin-top: 2em;">
+
+            <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help"
+                    data-toggle="tooltip" data-placement="auto"
+                    title="<p>These are the results of the analysis for a selected model,
+                                variable(s), scenarios grouped by time or region in a tabular format.</p>">
+                    Data Exploration
+                </h2>
+            </div>
+            <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                <h5 style="display: inline-block;background:transparent; box-shadow: none;">
+                    The following table contains the requested data in a tabular format. The data exploration includes
+                    ordering, searching and exporting the available data.
+                </h5>
+            </div>
+            <div class="row col-md-12 col-xs-12" style="position:relative;z-index: 0">
+                <table id="comparative_tables" class="display" cellspacing="0" width="100%" >
+                    <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Scenario</th>
+                        <th>Variable</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                        <th>Aggregation Variable</th>
+
+
+                    </tr>
+                    </thead>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

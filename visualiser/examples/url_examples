@@ -1,0 +1,504 @@
+LINE CHART TIME SERIES
+-----------------------
+-GET REQUEST:
+
+http://localhost:8000/visualiser/show_line_chart?y_var_names[]=myVar1&y_var_names[]=myVar2&y_var_titles[]=Var1&y_var_titles[]=Var2&y_var_units[]=v1_unit&y_var_units[]=v2_unit&x_axis_type=time&x_axis_name=time&x_axis_title=Time&x_axis_unit=-&y_axis_title=Var&color_list_request[]=blue&color_list_request[]=red&use_default_colors=false&min_max_y_value[]=0&min_max_y_value[]=2000
+
+-POST REQUEST:
+
+http://localhost:8000/visualiser/show_line_chart
+
+Body: {
+    "y_var_names": ["myVar1", "myVar2"],
+    "y_var_titles":["Var1", "Var2"],
+    "y_var_units": ["v1_unit", "v2_unit"],
+    "x_axis_type": "time",
+    "x_axis_name": "time",
+    "x_axis_title": "Time",
+    "x_axis_unit": "-",
+    "y_axis_title": "Var",
+    "color_list_request": ["blue", "red"],
+    "use_default_colors": "false",
+    "min_max_y_value": [0, 2000],
+    "dataset": "my_dataset"
+    }
+
+
+
+http://localhost:8000/visualiser/show_column_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_column_chart?y_var_names[]=year2017&y_var_names[]=year2018&y_var_titles[]=Year 2017&y_var_titles[]=Year 2018&y_var_units[]=%&y_var_units[]=%&x_axis_type=text&x_axis_name=country&x_axis_title=Country&y_axis_title=GDP Rates&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&use_default_colors=false&min_max_y_value[]=0&min_max_y_value[]=2000&chart_3d=true&use_default_colors=false
+-POST REQUEST:
+http://localhost:8000/visualiser/show_column_chart
+Body:{
+        'chart_3d': 'true',
+         'color_list_request': ['blue', 'red', 'green'],
+         'min_max_y_value': [0, 2000],
+         'use_default_colors': 'false',
+         'x_axis_name': 'country',
+         'x_axis_title': 'Country',
+         'x_axis_type': 'text',
+         'y_axis_title': 'GDP Rates',
+         'y_var_names': ['year2017', 'year2018'],
+         'y_var_titles': ['Year 2017', 'Year 2018'],
+         'y_var_units': ['%', '%']
+         }
+
+
+
+http://localhost:8000/visualiser/show_pie_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_pie_chart?y_var_names[]=oil_consumption&y_var_titles[]=Oil%20Consumption&y_var_units[]=litres&x_axis_name=country&x_axis_title=Country&use_default_colors=false&chart_3d=false&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&color_list_request[]=gold&color_list_request[]=ceramic&color_list_request[]=fuchsia&color_list_request[]=violet&color_list_request[]=purple&color_list_request[]=cyan
+-POST REQUEST:
+http://localhost:8000/visualiser/show_pie_chart
+Body:{
+        'chart_3d': 'false',
+         'color_list_request': ['blue',
+                                'red',
+                                'green',
+                                'gold',
+                                'ceramic',
+                                'fuchsia',
+                                'violet',
+                                'purple',
+                                'cyan'],
+         'use_default_colors': 'false',
+         'x_axis_name': 'country',
+         'x_axis_title': 'Country',
+         'y_var_names': ['oil_consumption'],
+         'y_var_titles': ['Oil Consumption'],
+         'y_var_units': ['litres']
+         }
+
+
+http://localhost:8000/visualiser/show_radar_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_radar_chart?y_var_names[]=oil_consumption&y_var_names[]=energy_consumption&y_var_titles[]=Oil Consumption&y_var_titles[]=Energy Consumption&y_var_units[]=litres&y_var_units[]=Watt&x_axis_name=country&x_axis_title=Country&use_default_colors=false&chart_3d=false&color_list_request[]=red&color_list_request[]=blue
+-POST REQUEST:
+http://localhost:8000/visualiser/show_radar_chart
+Body:{
+        'chart_3d': 'false',
+         'color_list_request': ['red', 'blue'],
+         'use_default_colors': 'false',
+         'x_axis_name': 'country',
+         'x_axis_title': 'Country',
+         'y_var_names': ['oil_consumption', 'energy_consumption'],
+         'y_var_titles': ['Oil Consumption', 'Energy Consumption'],
+         'y_var_units': ['litres', 'Watt']
+         }
+
+
+
+
+http://localhost:8000/visualiser/show_stacked_column_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_stacked_column_chart?y_var_names[]=year2017&y_var_names[]=year2018&y_var_titles[]=Year 2017&y_var_titles[]=Year 2018&x_axis_type=text&x_axis_name=country&x_axis_title=Country&y_axis_title=GDP Rates&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&color&use_default_colors=false&chart_3d=false&min_max_y_value[]=0&min_max_y_value[]=2000&y_var_units[]=%&y_var_units[]=%
+-POST REQUEST:
+http://localhost:8000/visualiser/show_stacked_column_chart
+Body:{
+        'chart_3d': 'false',
+         'color': 'color',
+         'color_list_request': ['blue', 'red', 'green'],
+         'min_max_y_value': [0, 2000],
+         'use_default_colors': 'false',
+         'x_axis_name': 'country',
+         'x_axis_title': 'Country',
+         'x_axis_type': 'text',
+         'y_axis_title': 'GDP Rates',
+         'y_var_names': ['year2017', 'year2018'],
+         'y_var_titles': ['Year 2017', 'Year 2018'],
+         'y_var_units': ['%', '%']
+         }
+
+
+http://localhost:8000/visualiser/show_bar_heat_map_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_bar_heat_map_chart?y_var_names[]=precision&y_var_titles[]=Precision&x_axis_type=text&x_axis_name=category&x_axis_title=Category&y_axis_title=Model%20Precision&color_list_request[]=blue_red&use_default_colors=false&chart_3d=false&min_max_y_value[]=0&min_max_y_value[]=2000&y_var_units[]=units
+-POST REQUEST:
+http://localhost:8000/visualiser/show_bar_heat_map_chart
+Body:{
+        'chart_3d': 'false',
+         'color_list_request': ['blue_red'],
+         'min_max_y_value': [0, 2000],
+         'use_default_colors': 'false',
+         'x_axis_name': 'category',
+         'x_axis_title': 'Category',
+         'x_axis_type': 'text',
+         'y_axis_title': 'Value Units',
+         'y_var_names': ['value'],
+         'y_var_titles': ['Value'],
+         'y_var_units': ['units']
+         }
+
+
+--
+http://localhost:8000/visualiser/show_bar_heat_map_chart?y_var_names[]=value&y_var_titles[]=Value&x_axis_type=text&x_axis_name=category&x_axis_title=Levels%20of%20contribution&y_axis_title=Value%20Units&color_list_request[]=blue_red&use_default_colors=false&chart_3d=false&min_max_y_value[]=0&min_max_y_value[]=100&y_var_units[]=%
+-POST REQUEST:
+http://localhost:8000/visualiser/show_bar_heat_map_chart
+Body:{
+        'chart_3d': 'false',
+         'color_list_request': ['blue_red'],
+         'min_max_y_value': [0, 100],
+         'use_default_colors': 'false',
+         'x_axis_name': 'category',
+         'x_axis_title': 'Levels of contribution',
+         'x_axis_type': 'text',
+         'y_axis_title': 'Value Units',
+         'y_var_names': ['value'],
+         'y_var_titles': ['Value'],
+         'y_var_units': ['%']
+         }
+
+
+http://localhost:8000/visualiser/show_heat_map_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_heat_map_chart?y_var_names[]=hour&y_axis_title=Hour&y_var_units[]=-&x_axis_name=weekday&x_axis_title=Weekday&x_axis_unit=-&z_axis_name=value&z_axis_title=Value&z_axis_unit=m&color_list_request[]=cyan&min_max_z_value[]=1900&min_max_z_value[]=11000
+- GET REQUEST (2 / distinct_colors)
+http://localhost:8000/visualiser/show_heat_map_chart?y_var_names[]=hour&y_axis_title=Hour&y_var_units[]=-&x_axis_name=weekday&x_axis_title=Weekday&x_axis_unit=-&z_axis_name=value&z_axis_title=Value&z_axis_unit=m&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&distinct[]=1&distinct[]=2&distinct[]=3
+- GET REQUEST (3 / distinct_colors)
+http://localhost:8000/visualiser/show_heat_map_chart?y_var_names[]=variable&y_axis_title=Variables&y_var_units[]=-&x_axis_name=model&x_axis_title=Models&x_axis_unit=-&z_axis_name=value&z_axis_title=Value&z_axis_unit=m&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&distinct[]=Extractable%20model%20output&distinct[]=Interlinkable%20model%20input&distinct[]=No%20explicit%20output%20or%20input
+
+-POST REQUEST:
+http://localhost:8000/visualiser/show_heat_map_chart
+Body:{
+         'color_list_request': ['cyan'],
+         'min_max_z_value': [1900, 11000],
+         'x_axis_name': 'weekday',
+         'x_axis_title': 'Weekday',
+         'x_axis_unit': '-',
+         'y_axis_title': 'Hour',
+         'y_var_names': ['hour'],
+         'y_var_units': ['-'],
+         'z_axis_name': 'value',
+         'z_axis_title': 'Value',
+         'z_axis_unit': 'm'
+         }
+
+
+----
+http://localhost:8000/visualiser/show_heat_map_chart?y_var_names[]=SDG&y_axis_title=Socioecon.%20Granularity&y_var_units[]=-&x_axis_name=Model&x_axis_title=Models&x_axis_unit=-&z_axis_name=usage&z_axis_title=Usage&z_axis_unit=%&color_list_request[]=cyan&min_max_z_value[]=1900&min_max_z_value[]=11000
+
+-POST REQUEST:
+http://localhost:8000/visualiser/show_heat_map_chart
+Body:{
+         'color_list_request': ['cyan'],
+         'min_max_z_value': [1900, 11000],
+         'x_axis_name': 'Model',
+         'x_axis_title': 'Models',
+         'x_axis_unit': '-',
+         'y_axis_title': 'Socioecon. Granularity',
+         'y_var_names': ['SDG'],
+         'y_var_units': ['-'],
+         'z_axis_name': 'value',
+         'z_axis_title': 'Value',
+         'z_axis_unit': 'm'
+         }
+
+
+http://localhost:8000/visualiser/show_bar_range_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_bar_range_chart?y_var_names[]=name&y_var_titles[]=Var1&y_var_titles[]=Var2&x_axis_type=time&x_axis_name=time&x_axis_title=Time&x_axis_unit=-&y_axis_title=Var&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&color_list_request[]=gold&color_list_request[]=mustard&color_list_request[]=purple&color_list_request[]=violet&color_list_request[]=ceramic&use_default_colors=false&chart_3d=false&min_max_y_value[]=0&min_max_y_value[]=2000
+-POST REQUEST:
+http://localhost:8000/visualiser/show_bar_range_chart
+Body:{
+         'chart_3d': 'false',
+         'color_list_request': ['blue',
+                                'red',
+                                'green',
+                                'gold',
+                                'mustard',
+                                'purple',
+                                'violet',
+                                'ceramic'],
+         'min_max_y_value': [0, 2000],
+         'use_default_colors': 'false',
+         'x_axis_name': 'time',
+         'x_axis_title': 'Time',
+         'x_axis_type': 'time',
+         'x_axis_unit': '-',
+         'y_axis_title': 'Var',
+         'y_var_names': ['name'],
+         'y_var_titles': ['Var1', 'Var2']
+         }
+
+
+----
+http://localhost:8000/visualiser/show_bar_range_chart?y_var_names[]=region&y_var_titles[]=Region&y_var_titles[]=Region&x_axis_name=time&x_axis_title=CO2 emissions from fossil fuels and industry&y_axis_title=Regions&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&color_list_request[]=gold&color_list_request[]=mustard&color_list_request[]=purple&color_list_request[]=violet&color_list_request[]=ceramic&use_default_colors=false&chart_3d=false&min_max_y_value[]=0&min_max_y_value[]=2000&x_axis_unit=%
+-POST REQUEST:
+http://localhost:8000/visualiser/show_bar_range_chart
+Body:{
+        'chart_3d': 'false',
+         'color_list_request': ['blue',
+                                'red',
+                                'green',
+                                'gold',
+                                'mustard',
+                                'purple',
+                                'violet',
+                                'ceramic'],
+         'min_max_y_value': [0, 2000],
+         'use_default_colors': 'false',
+         'x_axis_name': 'time',
+         'x_axis_title': 'CO2 emissions from fossil fuels and industry',
+         'x_axis_unit': '%',
+         'y_axis_title': 'Regions',
+         'y_var_names': ['region'],
+         'y_var_titles': ['Region', 'Region']
+         }
+
+
+http://localhost:8000/visualiser/show_heat_map
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_heat_map?map_var_name=temperature&map_var_title=Temperature&map_var_unit=C degrees&color_list_request[]=blue_red&min_max_y_value[]=18&min_max_y_value[]=45
+-POST REQUEST:
+http://localhost:8000/visualiser/show_heat_map
+Body:{
+        'color_list_request': ['blue_red'],
+         'map_var_name': 'temperature',
+         'map_var_title': 'Temperature',
+         'map_var_unit': 'C degrees',
+         'min_max_y_value': [18, 45]
+         }
+
+http://localhost:8000/visualiser/show_heat_map?map_var_name=frequency&map_var_title=Model%20Coverage&map_var_unit=models&color_list_request[]=cyan_green&min_max_y_value[]=4&min_max_y_value[]=30
+
+http://localhost:8000/visualiser/show_heat_map?map_var_name=frequency&map_var_title=Model%20Coverage&map_var_unit=models&color_list_request[]=grey_darkblue&min_max_y_value[]=3&min_max_y_value[]=112
+
+http://localhost:8000/visualiser/show_heat_map?map_var_name=frequency&map_var_title=Model%20Coverage&map_var_unit=models&color_list_request[]=lightblue_green&min_max_y_value[]=3&min_max_y_value[]=112
+
+http://localhost:8000/visualiser/show_heat_map?map_var_name=frequency&map_var_title=Model%20Coverage&map_var_unit=models&color_list_request[]=beige_purple&min_max_y_value[]=20&min_max_y_value[]=112
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+http://localhost:8000/visualiser/show_heat_map?map_var_name=Annual share of global CO₂ emissions&map_var_title=Annual share of global CO₂ emissions&map_var_unit=%&color_list_request[]=blue_red&min_max_y_value[]=0&min_max_y_value[]=50
+-POST REQUEST:
+http://localhost:8000/visualiser/show_heat_map
+Body:{
+        'color_list_request': ['blue_red'],
+         'map_var_name': 'Annual share of global CO₂ emissions',
+         'map_var_title': 'Annual share of global CO₂ emissions',
+         'map_var_unit': '%',
+         'min_max_y_value': [0, 50]
+         }
+
+
+http://localhost:8000/visualiser/thermometer_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/thermometer_chart?min_max_y_value[]=-20&min_max_y_value[]=50
+-POST REQUEST:
+http://localhost:8000/visualiser/thermometer_chart
+Body:{
+        'min_max_y_value': [-20, 50]
+        }
+
+
+http://localhost:8000/visualiser/show_sankey_diagram
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_sankey_diagram?pass_value=pass_value&use_def_colors=false&chart_title=Sankey Flow Chart of Business Processes&node_list[]=A&node_list[]=B&node_list[]=C&node_list[]=D&node_list[]=E&node_list[]=F&node_list[]=G&node_list[]=H&node_list[]=I&node_list[]=J&color_node_list[]=blue&color_node_list[]=violet&color_node_list[]=purple&color_node_list[]=fuchsia&color_node_list[]=red&color_node_list[]=ceramic&color_node_list[]=gold&color_node_list[]=black&color_node_list[]=gray
+
+-POST REQUEST:
+http://localhost:8000/visualiser/show_sankey_diagram
+Body:{
+         'chart_title': 'Sankey Flow Chart of Business Processes',
+         'color_node_list': ['blue',
+                             'violet',
+                             'purple',
+                             'fuchsia',
+                             'red',
+                             'ceramic',
+                             'gold',
+                             'black',
+                             'gray'],
+         'node_list': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
+         'pass_value': 'pass_value',
+         'use_def_colors': 'false'
+         }
+
+
+---
+http://localhost:8000/visualiser/show_sankey_diagram?pass_value=pass_value&use_def_colors=false&chart_title=Energy flows in 2050&node_list[]=Coal%20reserves&node_list[]=Gas%20reserves&node_list[]=Hydro&node_list[]=Nuclear&node_list[]=Oil%20reserves&node_list[]=Solar&node_list[]=Wind&node_list[]=Biomass%20and%20waste&color_node_list[]=blue&color_node_list[]=violet&color_node_list[]=purple&color_node_list[]=fuchsia&color_node_list[]=red&color_node_list[]=ceramic&color_node_list[]=gold&color_node_list[]=gray
+-POST REQUEST:
+http://localhost:8000/visualiser/show_sankey_diagram
+Body:{
+        'chart_title': 'Energy flows in 2050',
+         'color_node_list': ['blue',
+                             'violet',
+                             'purple',
+                             'fuchsia',
+                             'red',
+                             'ceramic',
+                             'gold',
+                             'gray'],
+         'node_list': ['Coal reserves',
+                       'Gas reserves',
+                       'Hydro',
+                       'Nuclear',
+                       'Oil reserves',
+                       'Solar',
+                       'Wind',
+                       'Biomass and waste'],
+         'pass_value': 'pass_value',
+         'use_def_colors': 'false'
+         }
+
+http://localhost:8000/visualiser/show_chord_diagram
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_chord_diagram?pass_value=pass_value&use_def_colors=false&chart_title=Chord Flow Chart of Business Processes&node_list[]=A&node_list[]=B&node_list[]=C&node_list[]=D&node_list[]=E&node_list[]=F&node_list[]=G&node_list[]=H&node_list[]=I&node_list[]=J&color_node_list[]=blue&color_node_list[]=violet&color_node_list[]=purple&color_node_list[]=fuchsia&color_node_list[]=red&color_node_list[]=ceramic&color_node_list[]=gold&color_node_list[]=black&color_node_list[]=gray
+
+-POST REQUEST:
+http://localhost:8000/visualiser/show_chord_diagram
+Body:{
+         'chart_title': 'Chord Flow Chart of Business Processes',
+         'color_node_list': ['blue',
+                             'violet',
+                             'purple',
+                             'fuchsia',
+                             'red',
+                             'ceramic',
+                             'gold',
+                             'black',
+                             'gray'],
+         'node_list': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
+         'pass_value': 'pass_value',
+         'use_def_colors': 'false'
+         }
+
+
+--
+http://localhost:8000/visualiser/show_chord_diagram?pass_value=pass_value&use_def_colors=false&chart_title=Energy flows in 2050&node_list[]=Coal reserves&node_list[]=Gas reserves&node_list[]=Hydro&node_list[]=Nuclear&node_list[]=Oil reserves&node_list[]=Solar&node_list[]=Wind&node_list[]=Biomass and waste&color_node_list[]=blue&color_node_list[]=violet&color_node_list[]=purple&color_node_list[]=fuchsia&color_node_list[]=red&color_node_list[]=ceramic&color_node_list[]=gold&color_node_list[]=gray
+-POST REQUEST:
+http://localhost:8000/visualiser/show_chord_diagram
+Body:{
+         'chart_title': 'Energy flows in 2050',
+         'color_node_list': ['blue',
+                             'violet',
+                             'purple',
+                             'fuchsia',
+                             'red',
+                             'ceramic',
+                             'gold',
+                             'gray'],
+         'node_list': ['Coal reserves',
+                       'Gas reserves',
+                       'Hydro',
+                       'Nuclear',
+                       'Oil reserves',
+                       'Solar',
+                       'Wind',
+                       'Biomass and waste'],
+         'pass_value': 'pass_value',
+         'use_def_colors': 'false'
+         }
+
+
+http://localhost:8000/visualiser/parallel_coordinates_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/parallel_coordinates_chart?y_axes[]=A&y_axes[]=B&y_axes[]=C&y_axes[]=D&y_axes[]=E&y_axes[]=F&samples_size=5
+-POST REQUEST:
+http://localhost:8000/visualiser/parallel_coordinates_chart
+Body:{
+        'samples_size': 5,
+        'y_axes': ['A', 'B', 'C', 'D', 'E', 'F']
+        }
+
+
+http://localhost:8000/visualiser/`parallel_coordinates_chart2
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/parallel_coordinates_chart2?y_axes[]=name&y_axes[]=group&y_axes[]=protein (g)&y_axes[]=calcium (g)&y_axes[]=sodium (g)&y_axes[]=fiber (g)&y_axes[]=vitaminc (g)&y_axes[]=potassium (g)&y_axes[]=carbohydrate (g)&y_axes[]=sugars (g)&y_axes[]=fat (g)&y_axes[]=water (g)&y_axes[]=calories&y_axes[]=saturated (g)&y_axes[]=monounsat (g)&y_axes[]=polyunsat (g)&title=Nutrient Explorer&about_title=About&about_text=Write about this chart&groups_title=Groups&sample_size=20
+-POST REQUEST:
+http://localhost:8000/visualiser/parallel_coordinates_chart2
+Body:{
+         'about_text': 'Write about this chart',
+         'about_title': 'About',
+         'groups_title': 'Groups',
+         'sample_size': 20,
+         'title': 'Nutrient Explorer',
+         'y_axes': ['name',
+                    'group',
+                    'protein (g)',
+                    'calcium (g)',
+                    'sodium (g)',
+                    'fiber (g)',
+                    'vitaminc (g)',
+                    'potassium (g)',
+                    'carbohydrate (g)',
+                    'sugars (g)',
+                    'fat (g)',
+                    'water (g)',
+                    'calories',
+                    'saturated (g)',
+                    'monounsat (g)',
+                    'polyunsat (g)']
+                    }
+
+- GET REQUEST
+http://localhost:8000/visualiser/parallel_coordinates_chart2?y_axes[]=name&y_axes[]=group&y_axes[]=CO2(%)&y_axes[]=Temperature(Celcius)&y_axes[]=GDP(%)&title=Correlation of temperature and Co2 emissions with GDP&about_title=About&about_text=Write about this chart&groups_title=Groups&sample_size=20
+- POST REQUEST
+http://localhost:8000/visualiser/parallel_coordinates_chart2
+Body:{
+        'about_text': 'Write about this chart',
+         'about_title': 'About',
+         'groups_title': 'Groups',
+         'sample_size': '20',
+         'title': 'Correlation of temperature and Co2 emissions with GDP',
+         'y_axes': ['name', 'group', 'CO2(%)', 'Temperature(Celcius)', 'GDP(%)']
+         }
+
+http://localhost:8000/visualiser/show_range_chart
+------------------------------------------------------------------------------------------------------------------------
+- GET REQUEST
+http://localhost:8000/visualiser/show_range_chart?y_var_names[]=myVar1&y_var_names[]=myVar2&y_var_titles[]=Var1&y_var_titles[]=Var2&y_var_units[]=v1_units&y_var_units[]=v2_units&x_axis_type=time&x_axis_name=time&x_axis_title=Time&y_axis_title=Var&use_default_colors=false&chart_3d=false&min_max_y_value[]=0&min_max_y_value[]=2000&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green
+-POST REQUEST:
+http://localhost:8000/visualiser/show_range_chart
+Body:{
+         'chart_3d': 'false',
+         'color_list_request': ['blue', 'red', 'green'],
+         'min_max_y_value': [0, 2000],
+         'use_default_colors': 'false',
+         'x_axis_name': 'time',
+         'x_axis_title': 'Time',
+         'x_axis_type': 'time',
+         'y_axis_title': 'Var',
+         'y_var_names': ['myVar1', 'myVar2'],
+         'y_var_titles': ['Var1', 'Var2'],
+         'y_var_units': ['v1_units', 'v2_units']
+         }
+
+
+-------------------
+http://localhost:8000/visualiser/show_range_chart?y_var_names[]=F&y_var_names[]=BC&y_var_names[]=NL&&y_var_titles[]=FOREST&y_var_titles[]=BIOENERGY CROPLAND&y_var_titles[]=NATURAL LAND&y_var_units[]=Mkm2&y_var_units[]=Mkm2&y_var_units[]=Mkm2&y_var_units[]=Mkm2&x_axis_name=year&x_axis_title=SSP1 Sustainability-focused&y_axis_title=Change in Land from 2010&use_default_colors=false&chart_3d=false&min_max_y_value[]=0&min_max_y_value[]=2000&color_list_request[]=blue&color_list_request[]=red&color_list_request[]=green&x_axis_unit=year
+-POST REQUEST:
+http://localhost:8000/visualiser/show_range_chart
+Body:{
+        'chart_3d': 'false',
+         'color_list_request': ['blue', 'red', 'green'],
+         'min_max_y_value': [0, 2000],
+         'use_default_colors': 'false',
+         'x_axis_name': 'year',
+         'x_axis_title': 'SSP1 Sustainability-focused',
+         'x_axis_unit': 'year',
+         'y_axis_title': 'Change in Land from 2010',
+         'y_var_names': ['F', 'BC', 'NL', 'C', 'P'],
+         'y_var_titles': ['FOREST',
+                          'BIOENERGY CROPLAND',
+                          'NATURAL LAND',
+                          'CROPLAND',
+                          'PASTURE'],
+     'y_var_units': ['Mkm2', 'Mkm2', 'Mkm2', 'Mkm2']
+     }
+
+Notes for Documentation

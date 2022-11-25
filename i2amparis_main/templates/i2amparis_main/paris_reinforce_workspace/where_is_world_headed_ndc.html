@@ -1,0 +1,138 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        Where is the world headed towards based on Nationally Determined Contributions (NDCs) policies?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    {#    <span id="ht2050" style="position: relative; top:-8em"></span>#}
+    <p class="col-md-12 col-xs-12">
+        Similarly, Nationally Determined Contributions (NDCs) scenarios are also broken down into two projection
+        scenarios, one based on emissions intensity and the other on carbon price.
+    </p>
+    <div class="my_table table-responsive col-xs-12 col-sm-12 col-md-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Scenario</th>
+                <th>2030 target</th>
+                <th>Post-2030 assumption</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>NDC_Intensity</td>
+                <td>NDCs</td>
+                <td>Constant rate of emissions intensity</td>
+                <td>Scenario exploring where emissions are headed assuming NDCs to 2030 and constant rates of
+                    emissions intensity reductions thereafter
+                </td>
+            </tr>
+            <tr>
+                <td>NDC_Price</td>
+                <td>NDCs</td>
+                <td>Carbon price increasing with per capita GDP</td>
+                <td>Scenario exploring where emissions are headed assuming NDCs to 2030 and carbon prices
+                    increasing with per capita GDP thereafter
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <p class="col-xs-12 col-md-12">Different to the previous, this graph illustrates NDC constrained scenarios of global
+        energy related CO2 emissions until 2050 across the IAMs. Levels of emissions vary between 30-34 GtCO2 in 2030
+        and 23-38 GtCO2 in 2050. These ranges are slightly lower than the Current Policy scenarios based on countries’
+        efforts to align emission policies with NDC targets, planning and implementation processes.</p>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the Global Fossil Energy Emission Trajectories based on Nationally Determined Contributions up to 2050.
+                    </p>">
+                Total CO2 emissions
+            </h2>
+            <h4 style="">(in the world across models in NDC scenarios until 2050)</h4>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3" style="height: 43em">
+            <div style="height: 100%;">
+                <div id="total_co2_emissions_ndc_historical" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="total_co2_emissions_ndc_historical_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="total_co2_emissions_ndc_historical_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present historical data for the CO2 emissions from energy use.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7 col-md-7" style="height: 53.25em">
+            <div style="height: 100%;">
+                <div id="total_co2_emissions_ndc" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="total_co2_emissions_ndc_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="total_co2_emissions_ndc_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the Global Fossil Energy Emission Trajectories
+                                based on Current Policies up to 2050.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-2 col-md-2" style="height: 50em">
+            <div style="height: 100%;">
+                <div id="total_co2_emissions_ndc_ranges" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="total_co2_emissions_ndc_ranges_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="total_co2_emissions_ndc_ranges_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-12">The chart will present the ranges of Energy Emissions.
+
+                            </div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="col-md-12 col-xs-12" style="margin-top: 2em">
+        <strong>Shaded areas</strong> show emissions spanned by NDC_Price and NDC_Intensity scenarios for each model and
+        <strong>colored bars</strong> show
+        2050 ranges (2045 value for FortyTwo, which only has intensity scenarios). <strong>Markers</strong> above bars
+        show baseline
+        values in 2050 (in 2045 for FortyTwo). GEMINI baseline value in 2050, 47.25 Gt CO2, is outside the range shown
+        in the figure. <strong>Black lines</strong> show historical emissions.
+    </p>
+
+</div>

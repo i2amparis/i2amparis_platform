@@ -1,0 +1,428 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#etc-urice_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model ETC-U RICE</span>
+                                    <a style="display: none"
+                                       href="#etc-urice_key_features">Key features of the model ETC-U RICE</a>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Climate module & emissions granularity</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#etc-urice_emissions_granularity">Climate module & emissions granularity</a>-->
+<!--                                </li>-->
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Socioeconomic dimensions</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#etc-urice_socioecon_dim">Socioeconomic dimensions</a>-->
+<!--                                </li>-->
+
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Mitigation/adaptation measures and technologies</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#etc-urice_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>-->
+<!--                                </li>-->
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#etc-urice_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#etc-urice_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#etc-urice_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#etc-urice_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#etc-urice_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#etc-urice_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The ETC-U RICE model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="etc-urice_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>The Endogenous Technical Change with Uncertainty RICE model (ETC-U RICE) is a
+                                  integrated assessment model with endogenous environmental technical change based on
+                                  Nordhaus and Yang (1996). It explores the behaviour and interactions between the R&D
+                                  efforts and endogenous patterns of GDP level and CO2 emissions. The role of ETC-U RICE
+                                  is to explore how environmental uncertainty can stimulate technical change, long-run
+                                  growth and pollution.</p>
+                              <p>ETC-U RICE allows users to explore what-if scenarios, quantifying the implications of
+                                  possible future conditions. These outputs are not predictions of the future; they are
+                                  a way of analysing the potential impacts of different assumptions about future
+                                  conditions and technical change dynamics.</p>
+                              <p>It is used to explore and measure the implications of uncertainty in key input
+                                  assumptions and parameters into implied distributions of outputs, such as
+                                  Investment/GDP ratio, CO2 emission level, Domestic abatement rate, R&D/GDP ratio.
+                                  Techniques include scenarios analysis and sensitivity analysis.</p>
+
+                              <p>ETC-U RICE has been used to produce scenarios for several regions (USA, Japan, EEC,
+                                  China, Former Soviet Union and Rest of the World).</p>
+                                </p>
+
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="etc-urice_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the ETC-U RICE model</h2>
+                              <p>ETC-U RICE takes in a set of assumptions and then processes those assumptions to create
+                                  a full scenario of prices, investment decisions, and R&D expenditure. The economy and
+                                  climate systems are interconnected and interact with each other.</p>
+                              <p><b>Geographic coverage</b></p>
+                              <p>The ETC_U RICE core represents the entire world, but it is constructed with different
+                                  levels of resolution for each of these different systems. The RICE economy system
+                                  operates at 12 geopolitical regions globally. These regions can be large countries or
+                                  multi-county region (e.g.  EEC)
+
+                              </p>
+                              <p><b>Hazard rate detail</b></p>
+                              <p>Environmental uncertainty concerns catastrophes. The "hazard rate" llinks the
+                                  probability of a catastrophic event, the level of temperature mesured on the planet at
+                                  a certain moment with the R&D efforts to reduce CO2 emissions and the economic
+                                  growth.</p>
+
+                          </section>
+                    </div>
+
+<!--                    <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="etc-urice_emissions_granularity" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>-->
+<!--                              <p>OsEMOSYS allows to model specific emissions per each technology operation, set emission-->
+<!--                                  penalties, annual limits on emissions and limits on emissions for model period.-->
+<!--                              </p>-->
+<!--                              <p>Emissions can also be “exogenous” meaning not produced by the modelled technologies and-->
+<!--                                  be accounted for, in addition to the “endogenous” ones.-->
+<!--                              </p>-->
+<!--                          </section>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="etc-urice_socioecon_dim" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>-->
+<!--                              <p>-->
+<!--                                 The Growth of the energy demand can be modelled according to different economic growth-->
+<!--                                  and social related trends evaluated outside the model boundaries-->
+<!--                              </p>-->
+<!--                          </section>-->
+<!--                    </div>-->
+
+
+<!--                     <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="etc-urice_mitigation_adaptation" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>-->
+<!--                              <p>-->
+<!--                                  The model allows to model all the existing technologies for energy conversion, from-->
+<!--                                  fossil fuels to new generation renewables. A switch from one technology to the other-->
+<!--                                  can be modelled thanks to emission targets, cost targets or technology use targets.-->
+<!--                                  In the same way is possible to evaluate the impact of national and international-->
+<!--                                  climate policies on the energy system.-->
+<!--                              </p>-->
+
+<!--                          </section>-->
+<!--                     </div>-->
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="etc-urice_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  The core operating principle for ETC-U RICE is the ETC- RICE model which views climate
+                                  change in the framework of economic growth theory (Buonanno et al. 2001). In a
+                                  standard neoclassical optimal growth model known as the Ramsey model, society invests
+                                  in capital goods, thereby reducing consumption today, in order to increase consumption
+                                  in the future (Ramsey 1928, Koopmans 1965). The RICE model modifies the Ramsey model
+                                  to include climate investments, which are analogous to capital investments in the
+                                  mainstream model. That is, we can view concentrations of GHGs as “negative natural
+                                  capital” and emissions reductions as investments that lower  the quantity of that
+                                  negative capital. Emissions reductions lower consumption today but, by preventing
+                                  economically harmful climate change, increase consumption possibilities in the future.
+                                  The representative agents in the modules use information to determine the optimal
+                                  level of R&D expenditures in a context of uncertainty embedding a hazard rate function
+                                  as Bosello and Moretto (1999).
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="etc-urice_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                               Key scenario assumptions for the ETC-U RICE core include technology characteristics (e.g. sensitivity to temperature growth); emissions constraints, probability of facing a catastrophe.
+                              </p>
+                              <p>
+                               Key scenario results (outputs) from the ETC-U RICE model include an analysis of the R&D dynamics; long-run output growth; CO2 emission and abatement rates.
+                              </p>
+                              <p>
+                                  Outcomes in ETC_U RICE depend strongly on the assumptions made for the initial catastrophe probability and its level in year 2090 in case of an increase of 3°C.
+                              </p>
+                              <p style="color:#FF0000";>
+                                  <i>
+                                      Parameters can be revised and updated in the framework of the PARIS REINFORCE project, following the feedback of local experts (stakeholder engagement), the comparative assessment with other modelling experiences, and the discussion with the partners (modellers).
+                                  </i>
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="etc-urice_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>There are a number of types of policies that can be easily modelled in ETC-U RICE:</p>
+                              <ul>
+                                  <li><b>Emissions-related policies</b></li>
+                                  <li><b>Technical change policies </b></li>
+                              </ul>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="etc-urice_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                U ETC-RICE does not automatically calculate the implication on SDGs indicators. However,
+                                  it is possible to use its outputs and calculate the predictions for certain SDGs
+                                  related indicators.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="etc-urice_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>doi.org/10.1016/j.ecolecon.2004.12.036.</td>
+                                          <td>
+                                            Lerning by Doing vs Learning by Researching in a Model of Climate Change Policy Analysis
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>doi.org/10.1023/B:ENMO.0000004582.29948.d4</td>
+                                          <td>
+                                             ﻿Global warming, uncertainty and endogenous technical change
+                                          </td>
+
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the ETC-U RICE model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+<!--                    add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="etc-urice_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>P. Buonanno, C. Carraro, E. Castelnuovo and M. Galeotti, Emission trading restrictions
+                                with endogenous technological change, International Agreements: Politics, Law and
+                                Economics 3 (2001) 379–395.</p>
+                            <p>F. Bosello and M. Moretto, Dynamic uncertainty and global warming risk, FEEM working
+                                paper, n. 80.99 (1999).</p>
+                            <p>F.P. Ramsey. A mathematical theory of saving. Economic Journal 38 (1928) 543–559.</p>
+                            <p>T. C. Koopmans, Tjalling C. 1965. “On the Concept of Optimal Economic Growth.” Academiae
+                                Scientiarum Scripta Varia 28(1) (1965) 1-75.</p>
+                            <p>W.D. Nordhaus and Z. Yang, A regional dynamic general-equilibrium model of alternative
+                                climate-change strategies, American Economic Review 4 (1996) 741–765.</p>
+
+
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

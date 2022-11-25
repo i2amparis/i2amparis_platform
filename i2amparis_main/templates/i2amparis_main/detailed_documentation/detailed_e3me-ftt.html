@@ -1,0 +1,673 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model E3ME-FTT</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_key_features">Key features of the model E3ME-FTT</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#e3me-ftt_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#e3me-ftt_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#e3me-ftt_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The E3ME-FTT model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                          <p>
+                              E3ME (https://www.e3me.com/) is a macro-econometric model with substantial sectoral
+                              detail at the Member State level, which captures interlinkages between the energy,
+                              economic and environmental systems. E3ME was originally developed through the European
+                              Framework Programme and has since been enhanced to become one of the key tools available
+                              for Impact Assessment in the EU. Because of its existing capability and geographical
+                              coverage (61 regions including the EU27+UK at the national level), E3ME is well-placed to
+                              assess the potential positive and negative impacts of a wide range of policies in the
+                              European Union and beyond.
+                          </p>
+                              <p>
+                                  E3ME’s core post-Keynesian economic framework has been expanded to include bottom-up
+                                  models of technology diffusion in the energy sector (power, road transport, and
+                                  heating system in buildings). These detailed, bottom-up, technology diffusion
+                                  sub-modules are based on the Future Technology Transformation (FTT) methodology
+                                  developed by Jean-Francois Mercure. For instance, FTT: Power uses a behavioural
+                                  approach to determine the power mix that will generate electricity as its
+                                  decision-making core mimics investors wanting to build new electrical capacity.
+                                  The diffusion model makes decisions based on final energy demand and constrained by a
+                                  global database of renewable and non-renewable resources. The choice of technology
+                                  used depends partly on costs but also on how well the technology is already
+                                  established. The other FTT models cover passenger transport, household heating and the
+                                  steel sector.
+                              </p>
+                              <p>
+                                 <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/e3me-ftt_1.png" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                          </div>
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the E3ME-FTT model</h2>
+                              <p>
+                                  <ul>As a global E3 model, E3ME can provide comprehensive analysis of policies:
+                              <ol>•	direct impacts, for example reduction in energy demand and emissions, fuel
+                                  switching and renewable energy;</ol>
+                              <o>•	secondary effects, for example on fuel suppliers, energy price and competitiveness
+                                  impacts;</o>
+                              <ol>•	rebound effects of energy and materials consumption from lower price, spending on
+                                  energy or higher economic activities; </ol>
+                              <ol>•	overall macroeconomic impacts; on jobs and economy including income distribution
+                                  at macro and sectoral level.</ol>
+                          </ul>
+                              </p>
+                              <p>
+                                  <ul>
+                              Summary of key strengths:
+                              <ol>•	The close integration of the economy, energy systems and the environment, with
+                                  two-way linkages between each component;</ol>
+                              <ol>•	The detailed sectoral disaggregation in the model’s classifications, allowing for
+                                  the analysis of similarly detailed scenarios;</ol>
+                              <ol>•	Its global coverage, while still allowing for analysis at the national level for
+                                  large economies (61 regions total);</ol>
+                              <ol>•	The econometric approach, which provides a strong empirical basis for the model and
+                                  means it is not reliant on some of the restrictive assumptions common to CGE
+
+                                  models;</ol>
+                              <ol>•	The econometric specification of the model, making it suitable for short and
+                                  medium-term assessment, as well as longer-term trends.</ol>
+                          </ul>
+                              </p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                          <p>
+                              E3ME covers fourteen types of air-borne emission (where data are available), including the
+                              six GHGs monitored under the Kyoto protocol. This in essence includes carbon dioxide
+                              (CO<sub>2</sub>)
+                              , methane (CH<sub>4</sub>), nitrous oxide (N<sub>2</sub>O) and F-gases; land-use
+                              CO<sub>2</sub> (exogenously); and
+                              particulate matter (BC, OC, PM2.5), sulphur oxides (SO<sub>x</sub>), other nitrogen oxides
+                              (NO<sub>x</sub>) and
+                              organic compounds (OC/VOC).
+                          </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  <ul>
+                              E3ME's economic module is shown in the below figure and is solved for each region. Most
+                              of the economic variables shown in the chart are solved at the sectoral level. The whole
+                              system is solved simultaneously for all industries and all regions, although
+                              single-country solutions are also possible. As the figure suggests, output and
+                              employment are determined by levels of demand, unless there are constraints on
+                              available supply. The figure shows three loops or circuits of economic interdependence,
+                              which are described below. In addition there is an interdependency between the sectors
+                              that is not shown in the figure. The full set of loops comprises:
+                              <ol>• Interdependency between sectors: If one sector increases output it will buy more
+                                  inputs from its suppliers who will in turn purchase from their own suppliers. This
+                                  is similar to a Type I multiplier.</ol>
+                              <ol>• The income loop: If a sector increases output it may also increase employment,
+                                  leading to higher incomes and additional consumer spending. This in turn feeds back
+                                  into the economy, as given by a Type II multiplier.</ol>
+                              <ol>• The investment loop: When firms increase output (and expect higher levels of future
+                                  output) they must also increase production capacity by investing. This creates demand
+                                  for the production of the sectors that produce investment goods (e.g. construction,
+                                  engineering) and their supply chains.</ol>
+                              <ol>• The trade loop: Some of the increase in demand described above will be met by
+                                  imported goods and services. This leads to higher demand and production levels in
+                                  other countries. Hence there is also a loop between countries.</ol>
+                          </ul>
+                              </p>
+                              <p>
+                                  <ul>
+                              Policy assessments, including Impact Assessment at European level requires an analysis of
+                              economic, social and environmental impacts. In quantitative modelling, the assessment of
+                              social impacts is often largely ignored. This is partly due to a lack of quantitative
+                              indicators but also that it often does not fit well into the basic structure of most
+                              macroeconomic models. Like other models, E3ME is able to provide less coverage of social
+                              factors than economic factors (see above) and environmental impacts but social factors are
+                              not ignored completely. The main social indicators in the model are:
+                              <ol>• sectoral employment and working hours;</ol>
+                              <ol>• sectoral wage rates;</ol>
+                              <ol>• unemployment; and</ol>
+                              <ol>• an estimate of (real) income distribution.</ol>
+                          </ul>
+                              </p>
+                              <p>
+                                     <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/e3me-ftt_2.png" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                          <p>E3ME is often used to assess the impacts of climate mitigation policy on the economy and
+                              the labour market. The basic model structure links the economy to the energy system to
+                              ensure consistency across each area. </p>
+                              <p>
+                                  <ul>
+                              Possible policies to assess include:
+                              <ol>•	Carbon and energy taxes;</ol>
+                              <ol>•	Emission trading systems;</ol>
+                              <ol>•	Environmental tax reforms;</ol>
+                              <ol>•	Energy efficiency programmes;</ol>
+                              <ol>•	Subsidies for particular technologies in the power, transport and residential
+                                  sectors;</ol>
+                              <ol>•	Phase-outs of particular fuels and other direct regulation; and</ol>
+                              <ol>•	Resource efficiency programmes.</ol>
+                          </ul>
+                              </p>
+                              <p>
+                                  <ul>
+                              Technological progress plays an important role in the E3ME model, affecting all three E’s:
+                              economy, energy and environment:
+                              <ol>• The model’s endogenous technical progress indicators (TPIs), a function of R&D and
+                                  gross investment, appear in nine of E3ME’s econometric equation sets including trade,
+                                  the labour market and prices.</ol>
+                              <ol>• Investment and R&D in new technologies also appears in the E3ME’s energy and
+                                  material demand equations to capture energy/resource savings technologies as well
+                                  as pollution abatement equipment.</ol>
+                              <ol>• In addition, E3ME also captures low carbon technologies in the power, road
+                                  transport, heating, and iron and steel sectors through the FTT (Future Technology
+                                  Transformations) sector models._x000B_</ol>
+                          </ul>
+                              </p>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>Economic activity undertaken by persons, households, firms and other groups in society
+                                  has effects on other groups after a time lag, and the effects persist into future
+                                  generations, although many of the effects soon become so small as to be negligible.
+                                  But there are many actors and the effects, both beneficial and damaging, accumulate
+                                  in economic and physical stocks. The effects are transmitted through the environment
+                                  (with externalities such as greenhouse gas emissions contributing to global warming),
+                                  through the economy and the price and money system (via the markets for labour and
+                                  commodities), and through the global transport and information networks. The markets
+                                  transmit effects in three main ways: through the level of activity creating demand
+                                  for inputs of materials, fuels and labour; through wages and prices affecting
+                                  incomes; and through incomes leading in turn to further demands for goods and
+                                  services. These interdependencies suggest that an E3 model should be comprehensive
+                                  and include many linkages between different parts of the economic and energy
+                                  systems.</p>
+                              <p>E3ME is often compared to Computable General Equilibrium (CGE) models. In many ways
+                                  the modelling approaches are similar; they are used to answer similar questions and
+                                  use similar inputs and outputs. However, underlying this there are important
+                                  theoretical differences between the modelling approaches. In a typical CGE framework,
+                                  optimal behaviour is assumed, output is determined by supply-side constraints and
+                                  prices adjust fully so that all the available capacity is used. </p>
+                              <p>In E3ME the determination of output comes from a post-Keynesian framework and it is
+                                  possible to have spare capacity. The model is more demand-driven and it is not
+                                  assumed that prices always adjust to market clearing levels. The differences have
+                                  important practical implications, as they mean that in E3ME regulation and other
+                                  policy may lead to increases in output if they are able to draw upon spare economic
+                                  capacity. This is described in more detail in the model manual. The econometric
+                                  specification of E3ME gives the model a strong empirical grounding.  E3ME uses a
+                                  system of error correction, allowing short-term dynamic (or transition) outcomes,
+                                  moving towards a long-term trend.  The dynamic specification is important when
+                                  considering short and medium-term analysis (e.g. up to 2020) and rebound effects,
+                                  which are included as standard in the model’s results.</p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                          <p>The structure of E3ME is based on the system of national accounts, with further linkages to energy demand and environmental emissions. The labour market is also covered in detail, including both voluntary and involuntary unemployment. In total there are 33 sets of econometrically estimated equations, also including the components of GDP (consumption, investment, international trade), prices, energy demand and materials demand. Each equation set is disaggregated by country and by sector.</p>
+                              <p>E3ME’s historical database covers the period 1970-2018 and the model projects forward annually to 2050. The main data sources for European countries are Eurostat and the IEA, supplemented by the OECD’s STAN database and other sources where appropriate.  For regions outside Europe, additional sources for data include the UN, OECD, World Bank, IMF, ILO and national statistics. Gaps in the data are estimated using customised software algorithms.</p>
+                              <p>
+                                  <ul>
+                              The main dimensions of E3ME are:
+                              <ol>•	61 countries – all major world economies, the EU27+UK and candidate countries plus other countries’ economies grouped;</ol>
+                              <ol>•	44 (or 70 in Europe) industry sectors, based on standard international classifications;</ol>
+                              <ol>•	28 (or 43 in Europe) categories of household expenditure;</ol>
+                              <ol>•	22 different users of 12 different fuel types;</ol>
+                              <ol>•	14 types of air-borne emission (where data are available) including the 6 GHG’s monitored under the Kyoto Protocol.</ol>
+                          </ul>
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="e3me-ftt_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                          <p>
+                              <ul>
+                              <b>Energy and Climate</b>
+                              <ol>• Decarbonisation;</ol>
+                              <ol>• emission trading scheme/ carbon market;</ol>
+                              <ol>• carbon/energy targets;</ol>
+                              <ol>• carbon/ energy tax;</ol>
+                              <ol>• environmental tax reform;</ol>
+                              <ol>• renewables energy;</ol>
+                              <ol>• power generation mix;</ol>
+                              <ol>• green jobs;</ol>
+                              <ol>• CDM;</ol>
+                              <ol>• removal of harmful subsidies;</ol>
+                              <ol>• international energy prices.</ol>
+                          </ul>
+                          </p>
+                              <p>
+                                  <ul>
+                              <b>Economic/Labour Market</b>
+                              <ol>• fiscal policies: government revenues and spending;</ol>
+                              <ol>• monetary policies;</ol>
+                              <ol>• trade agreement;</ol>
+                              <ol>• labour supply and demand forecasts;</ol>
+                              <ol>• labour market policies e.g. improving female participation rate.</ol>
+                          </ul>
+                              </p>
+                              <p>
+                                  <ul>
+                              <b>Others</b>
+                              <ol>• sector specific studies e.g. aviation, water transport, engineering, chemical;</ol>
+                              <ol>• impacts of R&D and innovations;</ol>
+                              <ol>• resource efficiency.</ol>
+                          </ul>
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                              The table below summarise how the E3ME model can be applied for selected SDG targets:
+                                  <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%"><b>SDG</b></th>
+                                          <th style="width:40%">Example of E3ME past or possible applications</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>
+                                              SDG7: Affordable and Clean Energy
+                                          </td>
+                                          <td><ul>
+                                              <ol>•	Energy efficiency;</ol>
+                                              <ol>•	Renewable targets;</ol>
+                                              <ol>•	Investment in energy infrastructure.</ol>
+                                          </ul></td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG8: Decent Work and Economic Growth</td>
+                                          <td>
+                                              <ul>
+                                                  <ol>•	Investment and R&D spending;</ol>
+                                                  <ol>•	Green jobs;</ol>
+                                                  <ol>•	Environmental tax reform;</ol>
+                                                  <ol>•	Labour market policies;</ol>
+                                                  <ol>•	Trade policies;</ol>
+                                                  <ol>•	Fiscal stimulus .</ol>
+                                              </ul>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG12: Responsible Consumption and Production</td>
+                                          <td>
+                                              <ul>
+                                                  <ol>•	Resource and energy efficiency;</ol>
+                                                  <ol>•	Circular economy activities;</ol>
+                                                  <ol>•	Collaborative economy activities;</ol>
+                                                  <ol>•	Raw material tax or regulations.</ol>
+                                              </ul>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG13: Climate Actions</td>
+                                          <td>
+                                              <ul>
+                                                  <ol>•	Policy options to achieve 2°C or 1.5°C temperature targets;</ol>
+                                                  <ol>•	“Nationally Determined Contributions” targets and real-world
+                                                      policies to achieve them;</ol>
+                                                  <ol>•	Carbon pricing mechanism.</ol>
+                                              </ul>
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                                                </table>
+                          </div>
+                              </p>
+
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="e3me-ftt_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1080/14693062.2019.1619507</td>
+                                          <td>
+                                              ‘Beyond peak emission transfers: historical impacts of globalization and
+                                              future impacts of climate policies on international emission transfers’
+                                          </td>
+                                          <td>
+                                              The authors find that emission transfers between OECD and non-OECD
+                                              countries peaked in 2006, and have been declining since. The reversal is
+                                              principally due to the reduction in the emissions intensity of traded
+                                              goods, rather than the volume of trade. A more recent decline in
+                                              embodied emissions transfers is also observed in trade between developing
+                                              countries. Using E3ME to model a Nationally Determined Contribution
+                                              scenario, the authors find that absolute embodied emissions are expected
+                                              to plateau at current levels or slowly return to pre-2008- crisis levels
+                                              , and differences between the NDC and baseline scenarios imply that NDC
+                                              policies will not result in significant carbon leakage.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.1080/14693062.2019.1617665</td>
+                                          <td>
+                                              ‘Modelling innovation and the macroeconomics of low-carbon transitions:
+                                              theory, perspectives and practical use’
+                                          </td>
+                                          <td>
+                                              The authors traces the characteristic discrepancies in models’ outcomes
+                                              to their origins in different macro-economic theories, most importantly
+                                              their treatment of technological innovation and finance. The authors show
+                                              that model outcomes are mainly determined by their representations of
+                                              monetary and finance dimensions, and their interactions with investment,
+                                              innovation and technological change. Improving these in all modelling
+                                              approaches is crucial for strengthening the evidence base for policy
+                                              making and gaining a more consistent picture of the macroeconomic impacts
+                                              of achieving emissions reductions objectives. The paper contributes
+                                              towards the ongoing effort of enhancing the transparency and understanding
+                                              of sophisticated model mechanisms applied to energy and climate policy
+                                              analysis.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/j.ecolecon.2020.106631
+                                          </td>
+                                          <td>
+                                              Uncertainties in macroeconomic assessments of low-carbon transition
+                                              pathways – The case of the European iron and steel industry’
+                                          </td>
+                                          <td>
+                                              The authors find that the effects of modelling zero-process emission pathway of the European iron and steel industry depend strongly on the technology choice, the prevailing macroeconomic states as well as regional characteristics. The underlying socioeconomic development and the climate policy trajectory, with a to date expected range of variation, seem to play a less important role. Particularly, the authors find that the choice of model, with its underlying macroeconomic theory, influences the sign and magnitude of macroeconomic effects and thus should be well understood by both modellers and policymakers. The paper argues that model assumptions should be transparent, results sought to be derived across a range of possible contexts, and presented together with the conditions under which they are valid.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the E3ME-FTT model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="e3me-ftt_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>Pollitt, H., Neuhoff, K. and Lin, X. (2019) ‘The impact of implementing a consumption
+                                charge on carbon-intensive materials in Europe’, Climate Policy, in press.</p>
+                            <p>Lehmann, P., Sijm, J., Gawel, E., Strunz, S., Chewpreecha, U., Mercure, J-F. and Pollitt,
+                                H (2018) ‘Addressing multiple externalities from electricity generation: a case for EU
+                                renewable energy policy beyond 2020?’, Environmental Economics and Policy Studies’,
+                                Volume 21, Issue 2, pp 255–283.</p>
+                            <p>Mercure, J-F., Lam, A., Billington, S. and Pollitt, H. (2018) ‘Integrated assessment
+                                modelling as a positive science: private passenger road transport policies to meet a
+                                climate target well below 2°C’, Climatic Change, November 2018, Volume 151, Issue 2,
+                                pp 109–129</p>
+                            <p>Knobloch, F., Pollitt H., Chewpreecha U., Daioglou V. and Mercure J-F. (2018)
+                                ‘Simulating the deep decarbonisation of residential heating for limiting global
+                                warming to 1.5°C’, Energy Efficiency, Volume 12, Issue 2, pp 521–550.</p>
+                            <p>Holden, P.B., Edwards N.R., Ridgwell A., Wilkinson R.D., Fraedrich K., Lunkeit F.,
+                                Pollitt H., Mercure J-F., Salas P., Lam A., Knobloch F., Chewpreecha U. and
+                                Viñuales J.E. (2018) ‘Climate–carbon cycle uncertainties and the Paris Agreement’,
+                                Nature Climate Change, Volume 8, pp 609-613 (2018).</p>
+                            <p>Mercure, J-F., Pollitt, H., Viñuales, J.E., Edwards, N.R., Holden, P.B., Chewpreecha, U.,
+                                Salas, P., Sognnaes, I., Lam, A. and Knobloch, F. (2018) ‘Macroeconomic impact of
+                                stranded fossil fuel assets’, Nature Climate Change, Volume 8, pp 588–593 (2018).</p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

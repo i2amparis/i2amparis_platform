@@ -1,0 +1,91 @@
+{% extends 'i2amparis_main/paris_reinforce_workspace/virtual_library_section.html' %}
+
+{% block content %}
+    <div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+        <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+            <div class=" col-sm-12 col-xs-12" style="text-align: center">
+                <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                    Virtual Library
+                </h1>
+            </div>
+            <div class="content-section col-sm-12 col-xs-12 col-md-12"
+                 style=" margin-top: 2em;padding: 1em">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="circle-button tb-red" style="text-align: center">
+                        <a href="" class="">Zenodo Library</a>
+                        <i class="fa fa-cloud-download mini-title-icon"></i>
+                    </div>
+                </div>
+                {% include "i2amparis_main/eu_workspace/euw_virtual_library_side_menu.html" %}
+                <div class="main-content col-md-9 col-xs-12 col-sm-9" style="margin-top: 3em">
+                    <div class="accordion col-sm-12 col-xs-12" id="accordion_1">
+                        <div class="card">
+                            <div class="card-header" id="heading_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse_1" aria-expanded="true"
+                                            aria-controls="collapse_1" style="padding:0px">
+                                        <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                        Sognnaes_et_al_2021_NCC_DATASET
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse_1" class="collapse "
+                                 aria-labelledby="heading_1"
+                                 data-parent="#accordion_1">
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Title:</strong>
+                                        Sognnaes_et_al_2021_NCC_DATASET
+                                    </p>
+                                    <p>
+                                        <strong>Date:</strong>
+                                        September 27, 2021
+                                    </p>
+                                    <p>
+                                        <strong>Short description:</strong>
+                                        This dataset contains the underlying data for the following publication: I.
+                                        Sognnaes, A. Gambhir, D.-J. Van de Ven, A. Nikas, A. Anger-Kraavi, H. Bui, L.
+                                        Campagnolo, E. Delpiazzo, H. Doukas, S. Giarola, N. Grant, A. Hawkes, A.
+                                        Koberle, A. Kolpakov, S. Mittal, J. Moreno, S. Perdana, J. Rogelj, M. Vielle, &
+                                        G.P. Peters. (2021). A multi-model analysis of long-term emissions and warming
+                                        implications of current mitigation efforts. Nature Climate Change, in press. <a
+                                            target="_blank" href="https://doi.org/10.1038/s41558-021-01206-3.">
+                                        https://doi.org/10.1038/s41558-021-01206-3. </a>
+                                    </p>
+                                    <p>
+                                        <strong>Authors:</strong>
+                                        Sognnaes, I., Gambhir, A., Van de Ven, D.J., Nikas, A., Anger-Kraavi, A., Bui,
+                                        H., Campagnolo, L., Delpiazzo, E., Doukas, H., Giarola, S., Grant, N., Hawkes,
+                                        A., Koberle, A.C., Kolpakov, A., Mittal, S., Moreno, J., Perdana, S., Rogelj,
+                                        J., Vielle, M., & Peters, G.P.
+                                    </p>
+                                    <p>
+                                        <strong>License:</strong>
+                                        Creative Commons Attribution 4.0 International (CC BY 4.0)
+                                    </p>
+                                    <p>
+                                        <strong>Link:</strong>
+                                        <a href="https://doi.org/10.5281/zenodo.5562199" target="_blank">https://doi.org/10.5281/zenodo.5562199</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="col-md-12 col-xs-12 col-sm-12">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(".lib-menu-nav .tb-red").hide();
+    </script>
+{% endblock %}

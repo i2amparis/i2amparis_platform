@@ -1,0 +1,44 @@
+.sidebar li a {
+    font-size: 1.4rem;
+}
+
+.sidebar span{
+    font-size: 1.3rem;
+
+}
+
+.sidebar ul {
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+}
+
+.sidebar li li span {
+    font-size: 1.2rem;
+    padding-left: 2em;
+
+}
+
+.sidebar li.list-group-item {
+    padding: 0;
+}
+
+#mySidebar {
+    margin-top: 141px
+}
+
+
+
+.sidebar .closebtn{
+    right: 0.1em;
+    top:0.2em;
+}
+.back-button{
+    background-color: rgba(151, 174, 33, 0.8);
+    color: white;
+    position: relative;
+    top:1em;
+    font-size: 1em;
+    right: 1em;
+    /*margin: 1em;*/
+    /*top: 1em;*/
+    /*right: 0.5em*/
+}

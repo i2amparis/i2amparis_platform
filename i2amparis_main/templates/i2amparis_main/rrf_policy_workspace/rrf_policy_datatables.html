@@ -1,0 +1,54 @@
+{% load static %}
+{% csrf_token %}
+
+
+<div class="tab-pane" id="data_tables">
+    <div class="container" style="width: 100%; height:100%;">
+        <div class="row" style="margin-top: 2em;">
+
+            <div class="tooltip-demo">
+                <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help"
+                    data-toggle="tooltip" data-placement="auto"
+                    title="<p>The data exploration tool accommodates the Recovery and Resilience Plans for different countries in a tabular format.</p>">
+                    Data Exploration
+                </h2>
+            </div>
+            <div class="tooltip-demo ">
+                <p style="display: inline-block;background:transparent; box-shadow: none;line-height: 1.3em">
+                    The following table contains the Recovery and Resilience Plans for different countries in a tabular format. The data exploration includes
+                    ordering, searching and exporting the available data. You can download the entire datasets in the
+                    following links:
+                    <br>
+                    <a href="/static/excel_files/RRFPolicy.xlsx" download>
+                        RRF Policies
+                    </a>
+
+                </p>
+            </div>
+            <div class="row col-md-12 col-xs-12" style="position:relative;z-index: 0">
+                <table id="example" class="display" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Country</th>
+                        <th>Budget</th>
+                        <th>Total Ratio</th>
+                        <th>GDO Classification</th>
+                        <th>Seven Flagship Classification</th>
+
+                    </tr>
+                    </thead>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+

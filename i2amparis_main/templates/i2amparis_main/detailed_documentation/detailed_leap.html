@@ -1,0 +1,1223 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+{#                                                  LEAP#}
+                        <div id="collapse_leap">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#leap_short_overview">Short Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group leap_key_feauters">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_leap_key_feauters"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features
+                                                    of the LEAP tool
+
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_leap_key_feauters"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Energy sectoral detail</span>
+                                                    <a style="display: none"
+                                                       href="#leap_energy_sectoral">
+                                                        Energy sectoral detail
+
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#leap_geographic_coverage">
+                                                        Geographic coverage
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Multi-year time periods</span>
+                                                    <a style="display: none"
+                                                       href="#leap_multi_year_time_periods">
+                                                        Multi-year time periods</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Intra-year time periods (time slices)</span>
+                                                    <a style="display: none"
+                                                       href="#leap_intra_year_time_periods">
+                                                        Intra-year time periods (time slices)</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#leap_climate_module_emissions_granularity">
+                                        Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#leap_socioecon_dimension">
+                                        Socioeconomic dimensions</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Calibration of the model</span>
+                                    <a style="display: none" href="#leap_calibration">
+                                        Calibration of the model</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#leap_mitigation_adaptation">
+                                        Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#leap_economic_rationale">
+                                        Economic rationale and model solution</a>
+                                </li>
+                                <li>
+                                    <div class="panel-group leap_policies_sdgs">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:0px">
+                                                <h5 class="panel-title"
+                                                    style="background-color:#343a40; padding: 5px">
+                                                    <a data-toggle="collapse"
+                                                       href="#collapse_leap_policies_sdgs"><i
+                                                            class="fa fa-caret-right rotate"
+                                                            style="margin-right: 10px;"></i>Methodology
+
+
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse_leap_policies_sdgs"
+                                                 class="panel-collapse collapse">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span>Key policies that can be addressed</span>
+                                                        <a style="display: none"
+                                                           href="#leap_key_policies">
+                                                            Key policies that can be
+                                                            addressed</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Implications on other SDGs</span>
+                                                        <a style="display: none"
+                                                           href="#leap_implications_sdgs">
+                                                            Implications on other SDGs</a>
+                                                    </li>
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Recent publications using the LEAP model</span>
+                                    <a style="display: none"
+                                       href="#leap_recent_publications">
+                                        Implications on other Recent publications using the
+                                        LEAP model</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#leap_references">References</a>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+
+            <div id="main_bar">
+                <div class="container">
+
+
+              <div class="row">
+                        <h1 id="leap" style="padding-bottom: 1em; padding-top: 1em">LEAP - Long-range Energy Alternatives Planning
+                            System</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_short_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Short overview</h2>
+                            <p>
+                                LEAP, the Long-range Energy Alternatives Planning System, is a widely-used
+                                scenario-based software tool, which supports a wide range of different modelling
+                                methodologies for energy policy analysis and climate change mitigation assessment
+                                at many different scales, ranging from cities and states to national, regional and
+                                global applications. On the demand side, these applications range from bottom-up
+                                end-use accounting techniques to top-down macroeconomic modelling. LEAP’s
+                                functionalities lay within the core activities of countries undertaking integrated
+                                resource planning, greenhouse gas (GHG) mitigation assessments, and Low Emission
+                                Development Strategies (LEDS), especially in the developing world. The main purpose
+                                of LEAP lies in providing a means of comparison between a “Business as Usual (BaU)”
+                                scenario, and other user-customised scenarios promoting the adoption of innovative
+                                policies and sustainable strategies in the context of a country, in crucial activity
+                                sectors, such as the energy production and the building envelope. LEAP supports
+                                numerous scenarios, thus providing for in-depth insights regarding a wide variety
+                                of key energy, environmental and socioeconomic indicators. At least 32 countries
+                                used LEAP for a variety of tasks focused on the field of GHG mitigation by several
+                                techniques, such as changing the energy consumption on the demand side, shifting
+                                the energy carrier on the supply side and imposing policies on the supply and demand
+                                sides (Martı́nez-Jaramillo et al., 2017) in the context of creating energy and
+                                emissions scenarios, to be the basis for their Intended Nationally Determined
+                                Contributions (INDCs) to climate action. (Dagher and Ruble, 2011) constructed
+                                LEAP-based scenarios and examined the technical, economic, and environmental
+                                implications of all scenarios with regard to electrical planning. Using the
+                                LEAP model, Jun and Lee (2010) focused on the penetration of renewable energies
+                                on the existing electricity generation market in South Korea, in terms of economic
+                                and environmental influence. (Cai et al., 2007) assessed the reduction potential of
+                                CO2 emissions in China’s electricity sector and simulated different development paths.
+                            </p>
+                            <p>
+                                LEAP is based on an integrated, scenario-based structure, which can also be used to
+                                track energy consumption, production and resource extraction in all sectors of an
+                                economy, including accounting for GHG emission sources and sinks at both the energy
+                                and non-energy sectors. LEAP’s structure enhances the representation of the energy
+                                system of each Member State by breaking down the energy used in each economic
+                                activity, even to the “lowest” level (i.e. households). It also allows for the
+                                modelling of several energy production units (e.g. lignite, natural gas, renewables,
+                                etc.) along with their technical specifications (e.g. power, technical minimum,
+                                lifetime, fuel, etc.) as well as optimised unit commitment, in terms of meeting the
+                                end-user demand curve with the minimum cost. Energy CO2 emissions and other
+                                greenhouse gases (e.g. CO2 from others sources, CH4, N2O, HFCs, PFCs and SF6)
+                                are then calculated by the model, with respect to the energy production side.
+                                In addition to tracking GHG emissions, LEAP can also be used to analyse emissions
+                                of local and regional air pollutants, and short-lived climate forcers (SLCFs),
+                                making it well-suited to studies of the climate co-benefits of local air pollution
+                                reduction. Given LEAP’s diversity, it can be used to explore GHG mitigation
+                                alternatives through energy system transformations as well as to provide policy
+                                insights towards transitioning to a climate-resilient energy sector.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Key features of the LEAP tool</h2>
+                            <span id="leap_energy_sectoral" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                            <p>
+                                On the demand side, each sector is modelled as a production or an energy intensity level
+                                and the use
+                                of other key intermediate factors (capital, intermediate consumptions, etc.) given its
+                                expectations
+                                on demands and prices. Regarding the end-user side specifically, the final demand is
+                                usually broken
+                                down into four major categories: a) residential, b) agricultural, c) commercial and d)
+                                transport,
+                                providing the user with the capacity to introduce all associated information, such as
+                                (non-)
+                                electrified households, passenger- and ton-km, etc. As we move further from the demand
+                                side, LEAP
+                                allows the user to model the energy production side, along with their respective
+                                networks and
+                                implications (e.g. resource limitations and energy losses). This approach can be used to
+                                fully
+                                describe individual policy measures which can then be combined in different combinations
+                                and
+                                permutations into alternative integrated scenarios, thus allowing policy makers to
+                                assess the impact
+                                of an individual policy as well as the interactions that occur when multiple policies
+                                and
+                                measures are combined, in terms of both energy and environmental impact.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/leap_energy_system.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of the LEAP energy system
+                                        Source: LEAP User Guide, 2005; own elaboration
+                                    </p>
+                                    {#                                      <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">#}
+                                    {#                                          https://jgcri.github.io/gcam-doc/overview.html</a></p>#}
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_geographic_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                            <p>
+                                LEAP provides a range of accounting, simulation and optimisation methodologies that are
+                                powerful enough
+                                to easily incorporate data and results from other more specialised models, thus making
+                                LEAP an
+                                integrated tool spanning across the entire globe, at national, regional and local level
+                                (see the table below).
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Geographic region</th>
+                                        <th style="width:40%">Countries</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Africa
+                                        </td>
+                                        <td>
+                                            Algeria, Angola, Benin, Botswana, Cameroon, Congo, Democratic Republic
+                                            of Congo, Côte d’Ivoire, Egypt, Eritrea, Ethiopia, Gabon, Ghana, Kenya,
+                                            Libya, Morocco, Mozambique, Namibia, Nigeria, Senegal,
+                                            South Africa, Sudan, United Republic of Tanzania, Togo, Tunisia,
+                                            Zambia, Zimbabwe, and Other Africa
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Australia, New Zealand
+                                        </td>
+                                        <td>
+                                            Australia, New Zealand
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Canada
+                                        </td>
+                                        <td>
+                                            Canada
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            North America
+                                        </td>
+                                        <td>
+                                            US, Mexico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Latin America
+                                        </td>
+                                        <td>
+                                            Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba,
+                                            Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras,
+                                            Jamaica, Netherlands Antilles, Nicaragua, Panama, Paraguay, Peru,
+                                            Trinidad and Tobago, Uruguay, Venezuela and Other Latin America
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Central and Eastern Europe
+                                        </td>
+                                        <td>
+                                            Albania, Bosnia-Herzegovina, Bulgaria, Croatia, Czech Republic,
+                                            Hungary, Macedonia, Poland, Romania, Serbia and Montenegro, Slovenia,
+                                            Slovakia
+                                        </td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Middle East
+                                        </td>
+                                        <td>
+                                            Bahrain, Islamic Republic of Iran, Iraq, Israel, Jordan, Kuwait, Lebanon,
+                                            Oman, Qatar, Saudi Arabia, Syria, United Arab Emirates, Yemen, and
+                                            Turkey, Cyprus
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Russia and Central Asia
+                                        </td>
+                                        <td>
+                                            Armenia, Azerbaijan, Belarus, Estonia, Georgia, Kazakhstan, Kyrgyzstan,
+                                            Latvia, Lithuania, Moldova, Tajikistan, Turkmenistan, Ukraine,
+                                            Uzbekistan, Russian Federation
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>(Other) South and Southeast Asia</td>
+                                        <td>
+                                            Bangladesh, India, Brunei Darussalam, Cambodia, Taiwan (China),
+                                            Indonesia, DPR of Korea, Malaysia, Mongolia, Myanmar, Nepal, Pakistan,
+                                            Philippines, Singapore, Sri Lanka, Thailand, Vietnam and Other Asia
+                                            (Japan, China, Republic of Korea, etc.)
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Western Europe
+                                        </td>
+                                        <td>
+                                            Austria, Belgium, Cyprus, Denmark, Finland, France, Germany, Greece,
+                                            Iceland, Ireland, Italy, Luxembourg, Malta, Norway, Portugal, Spain,
+                                            Sweden, Switzerland, The Netherlands, UK
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Regional representation and countries included in each
+                                        region in LEAP
+                                    </caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_multi_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Multi-year time periods</h4>
+                            <p>
+                                LEAP is intended as a medium- to long-term modelling tool. Its calculations occur based
+                                on a
+                                user-defined time-step (e.g. annual, 5-year period, etc.) and baseline year (e.g. 2005,
+                                2010, etc.),
+                                and the time horizon can extend to an unlimited number of years (beyond 2100). Studies
+                                typically
+                                include both a historical period known as the Current Accounts, in which the model is
+                                run to test
+                                its ability to replicate known statistical data, as well as multiple forward-looking
+                                scenarios.
+                                Typically, most studies use a forecast period of between 20 and 50 years.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_intra_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Intra-year time periods (time slices)</h4>
+                            <p>
+                                Some results are calculated with a finer level of temporal detail. For example, the year
+                                can
+                                be split into different user-defined “time slices” to represent seasons, types of days
+                                or even
+                                representative times of the day. These slices can be used to examine how loads vary
+                                within the
+                                year and how electric power plants are dispatched differently in different seasons. LEAP
+                                includes an
+                                easily-customised dataset of time-slices, which extends from seasonal segregation (i.e.
+                                summer,
+                                winter, autumn, fall) today- and night- time of all seasons as well as hourly
+                                representation.
+                                This kind of in-depth time-slicing seeks to provide analytical insights and partially
+                                offset
+                                the stochastic nature of the energy production sector (given the high RES penetration)
+                                and the
+                                fluctuating end-user demand across the year, by facilitating the matching of supply and
+                                demand in
+                                each time-slice.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_climate_module_emissions_granularity" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                            <p>
+                                The climate component in LEAP includes a diverse database of both energy and
+                                non-energy sector GHG emissions per fuel or activity, thus calculating the
+                                final GHG emissions stemming from an energy system’s operation at global,
+                                national, regional, or local level, based on the initial energy and
+                                socioeconomic data provided (e.g. demographics, income, GDP, etc.).
+                                The tool tracks far beyond the three main sources of greenhouse gases
+                                (i.e. CO2, CH4, and N2O), extending its analysis to tracking SLCFs such as
+                                fluorinated gases, black carbon, etc. The LEAP model also includes the
+                                Technology and Environmental Database (TED), which provides extensive
+                                information describing the technical characteristics, costs and environmental
+                                impacts of a wide range of energy technologies (including existing technologies,
+                                current best practices and next generation devices), compiled from numerous
+                                sources (e.g. Eurostat, EEA, etc.). Thus, LEAP is appropriate for energy policy
+                                analysis and climate change mitigation assessment. Since LEAP is a scenario-based
+                                modelling tool, its climate module calculates changes in the atmospheric
+                                concentration of all implicated GHG emissions between a reference scenario (which
+                                depicts the current condition of a system in terms of energy—demand and supply—and
+                                demographics—population, income, etc.) and a number of GHG mitigation-oriented
+                                scenarios based on current and future limitations, aligned with the ongoing global
+                                treaties and agreements (such as the goals set by the Paris Agreement or by
+                                increasing ambition).
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/leap_logic.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Logic of LEAP climate module Source: LEAP
+                                        User Guide,
+                                        2005; own elaboration
+                                    </p>
+                                    {#                                      <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">#}
+                                    {#                                          https://jgcri.github.io/gcam-doc/overview.html</a></p>#}
+                                </div>
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_socioecon_dimension" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Socioeconomic dimensions</h2>
+                            <p>
+                                LEAP requires in-depth inputs regarding the changes in socioeconomic conditions
+                                (e.g. population, household size, etc.) and energy sector (e.g. supply and demand),
+                                as well as demand for other goods and services that affect GHG emissions
+                                (such as agricultural demand) for both the reference and the mitigation scenarios,
+                                over the time horizon of the analysis. It should be noted that LEAP does not
+                                include a default set of socioeconomic and energy data, since it is an
+                                easily-customised tool that can be adjusted to use several socioeconomic
+                                and sectoral growth projections from different sources (aside from SSPs). Since
+                                the economic, population and sectoral growths are used to capture specific drivers
+                                for the changes in energy demand in a reference scenario (in which no climate
+                                change mitigation measure has been applied), LEAP allows users to self-assess and
+                                define the sets of energy service demands over the horizon, as well as to
+                                quantify them based on a diverse set of quantification units. This set of
+                                quantification varies from passenger-kms and tonne-kms in the transport sector
+                                to kWhs and metric tonnes in the industrial sector, as well as to Gigajoules of
+                                final consumption per unit of activity level (GJ/€). LEAP is
+                                also widely open to conducting cost-benefit analyses if the required socioeconomic
+                                and energy inputs needed are partially available.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_calibration" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                            <p>
+                                LEAP is calibrated for the initial period, in terms of fuels, based on a
+                                standard fuels database drawing data from IEA, UN and other standard international
+                                sources (such as the IPCC). These data sources should suffice for most LEAP analyses.
+                                However, LEAP allows the user to edit the default data, for example to change the
+                                energy contents of certain fuels (such as coal and wood) to reflect the conditions
+                                in the area they aim to study. In addition, LEAP provides an “Add” and “Delete”
+                                button for the user to add a new fuel and delete one respectively, if necessary,
+                                and manually define its respective specifications. Regarding the projections for
+                                energy in the reference and mitigation scenarios, the installed technological
+                                capacity along with its CAPEX and OPEX, the exported, imported, produced and
+                                consumed quantities for all energy carriers etc., LEAP does not include a
+                                respective database, and therefore this kind of data must be entered and updated
+                                manually.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_mitigation_adaptation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>
+                                LEAP includes a wide dataset of the most major fossil fuel and low-carbon
+                                technologies that are perceived to be commonly exploited in the upcoming years.
+                                Thus, for each economic activity, the energy demand is broken down in key
+                                categories such as oil, gas, solid fuel, biomass, etc. Regarding the electricity
+                                sector, LEAP allows for an in-depth representation of the energy mix capability
+                                by providing several energy-based production units such as, solar, nuclear, wind,
+                                etc. By simulating the substitution of low-carbon for high-carbon technologies
+                                in response to their relative costs, as well as emissions constraints, the LEAP
+                                model simulates mitigation. The principal energy sector CO2 mitigation technology
+                                options are as shown in the following table. The plethora of energy choices that LEAP provides
+                                can be crucial for the suggestion of several mitigation/adaptation policies.
+                                These scenarios may aim to the reduction of GHG emissions or the abatement of
+                                the cost of energy production. An interesting example is the choice between
+                                hydroelectric power and nuclear power. Both energy sources are emission-free
+                                but each of them features different costs depending on the region they are applied.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2" style="width:100%">Electricity and heat</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <b>Electricity generation</b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Heat generation
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Nuclear fission</li>
+                                                <li>Nuclear fusion</li>
+                                                <li>Hydro</li>
+                                                <li>Biomass</li>
+                                                <li>Geothermal</li>
+                                                <li>Solar PV</li>
+                                                <li>Solar CSP</li>
+                                                <li>Onshore wind</li>
+                                                <li>Offshore wind<</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Geothermal</li>
+                                                <li></li>
+                                                Biomass</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left">
+                                                <b>Transport</b>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Road</b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Rail
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas (LNG / CNG) vehicles</li>
+                                                <li>Fully electric vehicles</li>
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>
+                                                    Electric
+                                                </li>
+                                                <li>
+                                                    Efficiency
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Air
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Marine
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Electric planes</li>
+                                                <li></li>
+                                                Efficiency
+                                            </ul>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas</li>
+                                                <li>Biofuels</li>
+                                                <li>Electric</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left">
+                                                <b>
+                                                    Buildings
+                                                </b>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Heating</b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Lighting
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing coal / oil</li>
+                                                <li>Biofuels</li>
+                                                <li>Electricity</li>
+                                                <li>Solar thermal</li>
+                                                <li></li>
+                                                Efficiency
+                                            </ul>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Efficiency
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Appliances
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Cooling
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Efficiency
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Electricity</li>
+                                                <li></li>
+                                                Efficiency
+                                            </ul>
+                                            </ul>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left"><b>Industry</b></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Process heat
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Steam
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                                <li></li>
+                                                Electricity
+                                            </ul>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left"><b>CHP</b></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left">
+                                            <ul style="list-style-type: none">
+                                                <li>
+                                                    Gas replacing oil / coal
+                                                </li>
+                                                <li>
+                                                    Biomass
+                                                </li>
+                                            </ul>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left"><b>Agriculture</b></p>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left"><b>Energy use</b></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p align="left">
+                                            <ul style="list-style-type: none">
+                                                <li>Gas replacing oil/coal</li>
+                                                <li>Biomass</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                    <caption>
+                                        Main CO2 energy system mitigation options in LEAP
+                                    </caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_economic_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>
+                                LEAP simultaneously calculates the quantity of the energy produced, converted and
+                                consumed with regard to the different “commodities” accounted for in the model,
+                                the total GHG emissions stemming from a system’s operation, as well as the way in
+                                which these emissions are broken down into each sector, in a given region or economy
+                                under a range of alternative assumptions on population, economic development,
+                                technology, prices and so on. These commodities comprise the different energy forms,
+                                the deployed technologies, and the energy services. LEAP allows to reach a
+                                cost-minimising level of commodity production and consumption, consistent
+                                with meeting all current and future energy demands and emissions constraints.
+                                The total energy system cost is calculated as a Net Present Value (NPV) cost of
+                                the energy system over the entire pre-defined time horizon. With its flexible data
+                                structures, LEAP allows for analysis as rich—in technological specification and
+                                end-use detail—as the user chooses. All of the aforementioned features contribute
+                                to the creation and evaluation of multiple alternative mitigation scenarios.
+                                These scenarios can be compared with a reference scenario (which projects the
+                                progress of energy demand, energy production, social costs and GHGs emissions of
+                                the region studied if no significant changes occur on the current energy system),
+                                in order to evaluate the contingent reduction of GHG emissions or social costs
+                                of the different mitigation scenarios suggested.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="leap_key_policies" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>
+                                LEAP can be used to project the energy supply and demand situation in order to get
+                                a glimpse of future patterns, identify potential problems, and assess the likely
+                                impacts of energy policies. In this respect, LEAP allows to examine a wide variety
+                                of projects, programs, technologies and other energy initiatives, and arrive at
+                                strategies that best address environmental and energy problems. Some
+                                indicative policies that can be implemented in LEAP are the following:
+                            </p>
+                            <ul style="list-style-type:disc;">
+                                <li>
+                                    Minimum/maximum capacity factors on fossil fuel power generation plants
+                                    (e.g. to simulate minimum or maximum desired levels of operation);
+                                </li>
+                                <li>
+                                    Constraints on the CO2-related primary energy resources exploited (e.g.
+                                    limit the availability of fossil fuels down to its minimum in the upcoming years);
+                                </li>
+                                <li>
+                                    Energy consumption cuts through increasing energy efficiency on the end-users’
+                                    side (e.g. withdrawal of an outdated car fleet and replacement with new
+                                    vehicles, based on cleaner fuels with lower consumption, such as CNG);
+                                </li>
+                                <li>
+                                    Subsidies on particular technologies (through adjusting their costs);
+                                </li>
+                                <li>
+                                    Constraints on the availability of particular technologies (e.g. “no nuclear”);
+                                </li>
+                                <li>
+                                    Constraints on the growth rates of particular technologies
+                                    (e.g. natural gas units and substitution with renewable energy sources);
+                                </li>
+                                <li>
+                                    Constraints on the growth rates of particular socioeconomic aspects
+                                    (e.g. population, income, GDP, etc.);
+                                </li>
+                            </ul>
+                            <p>
+                                This allows LEAP to perform a number of policy-relevant investigations, such as:
+                            </p>
+                            <ul style="list-style-type:disc;">
+                                <li>
+                                    What impact will current efforts towards expanding clean energy resources have
+                                    over time and which policies are the most effective, in terms of both minimising
+                                    costs and maximising social benefits?
+                                    <ul style="list-style-type:circle;">
+                                        <li>
+                                            For example, Abt Associates (2017) explore the costs and benefits
+                                            stemming from the implementation of different mitigation options both in
+                                            the energy and transport sectors of Azerbaijan, Kazakhstan, and
+                                            Uzbekistan, in terms of GHG abatement and social benefits. The
+                                            effectiveness of these options was assessed in terms of GHG
+                                            abatement, and social benefits.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Where can we do more to promote a green future?
+                                    <ul style="list-style-type:circle;">
+                                        <li>
+                                            For example, Ouedraogo (2017) and Emodi et al., (2017) showcase the
+                                            mitigation potential in different activity sectors in Africa
+                                            (through the analysis of several mitigation scenarios), and their
+                                            close association with socioeconomic variables such as gross domestic
+                                            product, income per capita.
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    What amount of clean energy is needed to adequately reduce carbon pollution and
+                                    meet current emissions targets?
+                                    <ul style="list-style-type:circle;">
+                                        <li>
+                                            For example, Mirjat et al., (2015) explore the energy supply mix
+                                            that needs to be produced in order to meet Pakistan’s final energy
+                                            demand, in alignment with the national and global GHG emissions
+                                            reduction target.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_implications_sdgs" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Implications on other SDGs</h4>
+                            <p>
+                                LEAP does not automatically calculate the implications on non-climate SDGs of its
+                                least-cost energy system to
+                                meet prescribed climate or emissions constraints. However, it is possible to exploit
+                                LEAP’s outputs
+                                and conduct “off-model” calculations to estimate many of the SDG implications. For
+                                example, LEAP
+                                reports the total final energy consumption in an energy system. This energy can be
+                                reshaped at lower/higher
+                                levels, depending on the successful implementation of different mitigation scenarios,
+                                thus allowing
+                                for an estimation of the energy-poor citizens.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_recent_publications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications using the LEAP model</h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Paper</th>
+                                        <th style="width:40%">Topic</th>
+                                        <th style="width:40%">Key findings
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Mirjat et al., (2015)
+                                        </td>
+                                        <td>
+                                            Long-Term Electricity Demand Forecast and Supply Side Scenarios for
+                                            Pakistan (2015-2050): A LEAP Model Application for Policy Analysis.
+                                        </td>
+                                        <td>
+                                            Given that the balance between demand and supply of electricity in
+                                            Pakistan is yet to be achieved, in this study, Long-range Energy
+                                            Alternatives Planning System (LEAP) is used to develop Pakistan's
+                                            LEAP modelling framework for the period 2015–2050, through four
+                                            supply side scenarios, following the demand forecast. In the most
+                                            effective scenario (Energy Efficiency and Conservation) there is a
+                                            CO2 reduction higher than 50% on the in 2050.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Emodi et al., (2017)
+                                        </td>
+                                        <td>
+                                            Energy policy for low carbon development in Nigeria: A LEAP model
+                                            application.
+                                        </td>
+                                        <td>
+                                            This paper applied a scenario-based analysis to explore Nigeria's
+                                            future energy demand, supply and associated GHG emissions from 2010
+                                            to 2040 through the analysis of a reference scenario, a low-carbon
+                                            moderate scenario, a low-carbon advanced scenario, and a green optimistic
+                                            scenario. It is observed that in the Green Optimistic scenario the
+                                            emissions will be 11% lower than in the reference scenario.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Martı́nez-Jaramillo et al., (2017)
+                                        </td>
+                                        <td>
+                                            Assessing the impacts of transport policies through energy system
+                                            simulation: The case of the Medellin Metropolitan Area, Colombia.
+                                        </td>
+                                        <td>
+                                            This paper quantifies the emissions that could be avoided by the
+                                            implementation of Medellin’s Master Plan, the promotion of
+                                            telecommuting, and the development of a transport energy model
+                                            for the Medellin metropolitan area between 2010 and 2040. The results
+                                            indicate that a policy combining the promotion of mass transportation
+                                            could represent 5.65 Million Tons of CO2 equivalent avoided by 2040
+                                            (a 9.4% reduction).
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Abt Associates (2017)
+                                        </td>
+                                        <td>
+                                            Economics of Climate Change in Central and West Asia.
+                                        </td>
+                                        <td>
+                                            LEAP was used as the main modelling tool for analysing the costs and
+                                            benefits of mitigation options in the energy and transport sectors of
+                                            Azerbaijan, Kazakhstan, and Uzbekistan. The effectiveness of the
+                                            examined options was assessed in terms of GHG abatement, and net
+                                            social costs and benefits. 
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Ouedraogo (2017)
+                                        </td>
+                                        <td>
+                                            Energy futures modelling for African countries.
+                                        </td>
+                                        <td>
+                                            An assessment of the current and future trends in energy demand in
+                                            Africa and associated GHG emissions. Future energy demand is
+                                            forecasted on the basis of socioeconomic variables such as gross
+                                            domestic product, income per capita, population, and urbanisation.
+                                            LEAP is applied to analyse and project energy demand and the related
+                                            emissions under alternative strategies for the period 2010–2040.
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Huang et al., (2011)
+                                        </td>
+                                        <td>
+                                            The long-term forecast of Taiwan’s energy supply and demand: LEAP
+                                            model application.
+                                        </td>
+                                        <td>
+                                            The Taiwan LEAP model is used to compare future energy demand and
+                                            supply patterns, as well as greenhouse gas emissions, for several
+                                            alternative scenarios of energy policy and energy sector evolution. 
+                                            An interesting conclusion of this study is the fact that if the
+                                            existent nuclear plants are retired but not replaced by RES,
+                                            there will be a higher demand for coal and other fossil fuels, which
+                                            will result in the increase of greenhouse gases emissions.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>List of recent publications using the LEAP model</caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!--Add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="leap_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Martı́nez-Jaramillo, J. E., Arango-Aramburo, S., Álvarez-Uribe, K. C., &
+                                Jaramillo-Álvarez, P. (2017). Assessing the impacts of transport policies through
+                                energy system simulation: The case of the Medellin Metropolitan Area, Colombia.
+                                Energy Policy, 101, 101-108. doi:10.1016/j.enpol.2016.11.026
+                            </p>
+                            <p>
+                                Cai, W., Wang, C., Wang, K., Zhang, Y., & Chen, J. (2007). Scenario analysis on CO2
+                                emissions reduction potential in Chinas electricity sector. Energy Policy, 35,
+                                6445-6456. doi:10.1016/j.enpol.2007.08.026
+                            </p>
+                            <p>
+                                Ouedraogo, N. (2017). Energy futures modelling for African countries: LEAP model
+                                application. WIDER Working Paper, United Nations University - UNU-WIDER.
+                            </p>
+                            <p>
+                                Emodi, N. V., Emodi, C. C., Murthy, G. P., & Emodi, A. S. (2017). Energy policy for low
+                                carbon development in Nigeria: A LEAP model application. Renewable and Sustainable
+                                Energy Reviews, 68, 247-261. doi:10.1016/j.rser.2016.09.118
+                            </p>
+                            <p>
+                                Mirjat, N., Uqaili, M., Harijan, K., & Valasai, G. (2015). Pakistan’s Energy System:
+                                Integrated Energy Modelling and Formulation of National Energy Policies. International
+                                Conference on Sustainable Energy Technologies – SET2015, Nottingham, vol. 14.
+                            </p>
+                            <p>
+                                Abt Associates. (2017). Economics of Climate Change Mitigation in Central and
+                                West Asia. Asian Development Bank. Asian Development Bank. doi:10.22617/rpt178634
+                            </p>
+                            <p>
+                                Huang, Y., Bor, Y. J., & Peng, C.-Y. (2011). The long-term forecast of Taiwan's energy
+                                supply and demand: LEAP model application. Energy Policy, 39, 6790-6803.
+                                doi:10.1016/j.enpol.2010.10.023
+                            </p>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+
+
+</body>
+
+</html>
+
+

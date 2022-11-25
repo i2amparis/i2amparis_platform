@@ -1,0 +1,608 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model WISEE-EDM</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_key_features">Key features of the model WISEE-EDM</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#wisee-edm_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#wisee-edm_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#wisee-edm_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#42_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The WISEE-EDM model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>The industrial module of WISEE-EDM is used to analyse possible futures of an industrial
+                                  production system and to derive technically consistent paths to them, starting from
+                                  the current production system. </p>
+                              <p>
+                                  <ul>
+                              Typical questions to the model are, for example:
+                              <li>
+                                  Which technology mixes make it possible to meet CO2 emission reduction targets in
+                                  2050?
+                              </li>
+                              <li>
+                                  When do investments in innovative industrial processes have to start in order to
+                                  achieve a set target status while maintaining the usual reinvestment cycles?
+                              </li>
+                              <li>
+                                  Which energy sources are needed for a target-oriented path, in what quantities, when
+                                  and where?
+                              </li>
+                              <li>
+                                  What will future production networks look like in technological and geographical
+                                  terms?
+                              </li>
+                          </ul>
+                              </p>
+                              <p>
+                                  The model has a high level of technical detail and offers a variety of options for
+                                  adapting the analysis to scenario-specific assumptions. It is therefore particularly
+                                  suitable for developing scenarios in exchange with stakeholders.
+                              </p>
+                              <p>
+                                  <ul>
+                              The industrial module of WISEE-EDM is a "bottom-up" model of industrial production.
+                              Bottom-up means that aggregated values such as CO2 emissions of the German steel industry
+                              are derived from the properties and operation of the individual plants covered by the
+                              model. Its databasis of industry plants currently (2020) covers the following industries:
+                              <li>
+                                  for EU-27+3: iron & steel, basic chemicals, refineries
+                              </li>
+                              <li>
+                                  for Germany in addition: pulp & paper, non-ferrous metals, cement, lime, glass
+                                  (more on this see „Key features“).
+                              </li>
+                          </ul>
+                              Developments of energy demand and CO2-emissions in other sectors are calculated using
+                              econometric methods.
+                              </p>
+                              <p>
+                                  <ul>
+                              The industrial module of WISEE-EDM is strictly speaking a model family whose central
+                              components are the following two modules:
+                              <li>
+                                  WISEE-EDM Dispatch (EDM-D): Calculates the use (dispatch) of production plants and the
+                                  associated CO2 emissions, energy requirements, feedstock flows and the production of
+                                  by-products (e.g. hydrogen from chlor-alkali electrolysis).
+                              </li>
+                              <li>
+                                  WISEE-EDM-Invest (EDM-I): Optimizes the Europe-wide investments in production
+                                  facilities from an economic point of view over a given period of time, taking into
+                                  account the demand for end products and transport costs between locations. (Currently
+                                  parameterized for the chemical industry only)
+                              </li>
+                          </ul>
+                              </p>
+                              <p>
+                                  <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/wisee-edm.jpg" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+
+                              </p>
+                              <p>The model results cover selected years (typically 5-year steps) within the specified
+                                  simulated time frame (e.g. 2020 - 2050). While the invest module optimizes over the
+                                  whole time frame, the dispatch model calculates results for each selected year in
+                                  turn.</p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the WISEE-EDM model</h2>
+                              <p><b>High level of technological detail</b></p>
+                              <p>
+                                  <ul>
+                              Energy requirements and CO2 emissions are calculated based on the (assumed) physical
+                              production of goods. The database of the WISEE-EDM industry module includes:
+                              <li>
+                                  Approx. 800 production sites in Europe. These are covered with GIS data and assigned
+                                  to the EU member states and various NUTS levels (NUTS 1, NUTS 3). The database also
+                                  contains the connection of sites of the chemical industry and refineries by pipelines.
+                                  Furthermore, the (future) connections of sites to a CO2 or hydrogen infrastructure can
+                                  be specified (scenario-dependent).
+                              </li>
+                              <li>
+                                  Approx. 200 technologies (e.g. blast furnace, steam cracker, rotary kiln) with their
+                                  respective specific energy requirements (differentiated by 25 energy carriers),
+                                  process-related emissions, selected material inputs and typical technical lifetimes.
+                                  Technologies on the European average standard of the years 2000 to 2005 as well as the
+                                  currently best available technology (BAT) and assumed future processes (e.g. reduction
+                                  of iron ore by means of hydrogen) are included.
+                              </li>
+                              <li>
+                                  > 2600 industrial production plants. The production plants are specified in terms of
+                                  the technology used (see above) and their production capacity. For particularly
+                                  energy-intensive plants, the year in which they were built is also specified. All
+                                  production facilities are assigned to the respective sites.
+                              </li>
+                              <li>
+                                  > 250 industrial power plants, specified by fuel, maximum capacity (electrical,
+                                  thermal), operating strategy and year of construction. They are assigned to the
+                                  respective sites.
+                              </li>
+                          </ul>
+                              </p>
+                              <p>
+                                  <b>Consideration of industrial co-products</b>
+                              </p>
+                              <p>
+                                  The production of steam, steel gases and hydrogen as by-products of industrial
+                                  production is accounted for at each site or within the inter-site networks defined in
+                                  the model, and is taken into account in the calculation of (remaining) energy
+                                  requirements and the operation of industrial power plants. For the production of steel
+                                  and basic chemicals, balances are also prepared for selected quantities of materials
+                                  (educts and products).
+                              </p>
+                              <p>
+                                  <b>
+                                      Consideration of production chains
+                                  </b>
+                              </p>
+                              <p>
+                                  The investment module is characterized by a consideration of complex production chains
+                                  in connection with transport possibilities and costs of intermediate products.
+                              </p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>CO2 emissions are calculated based on the (assumed) physical production of goods
+                                  considering the site-specific efficiency of applied technologies and the choice of
+                                  energy carriers as well as the use of carbon capture technologies (if any). CO2
+                                  emissions are calculated for each production plant and can be aggregated to NUTS 3-,
+                                  NUTS 1-, national and European levels.</p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  <b>Production levels</b>
+                              </p>
+                              <p>
+                                  Production levels are a main driver of the model. Economic growth is a main input
+                                  variable to the definition of production level scenarios used by the model.
+                                  Furthermore, effects of behavioural changes on production levels (e.g. less demand
+                                  for cars) can be included in the specification of production level scenarios. The
+                                  fine-grained differentiation of products by the model allows for a detailed
+                                  representation of developments in  the various industrial sectors.
+                              </p>
+                              <p>
+                                  <b>
+                                      Impacts of political and societal discourses
+                                  </b>
+                              </p>
+                              <p>
+                                  The model is flexible to include impacts of politial and societal discourses on the
+                                  industrial production system such as the future (non-)availability of infractures
+                                  (e.g. CO2-infrastructure) and technologies.
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p><ul>
+                              The model is capable of including technical mitigation measures such as:
+                              <li>
+                                  Efficiency of industrial production technologies
+                              </li>
+                              <li>
+                                   Innovative production technologies (e.g. DRI for steel making)
+                              </li>
+                              <li>
+                                  Fuel switches
+                              </li>
+                              <li>
+                                  Carbon capture and storage
+                              </li>
+                              <li>
+                                  Changes to production levels of particular goods
+                              </li>
+                          </ul></p>
+                              <p>
+                                  The model does not include adaptation measures.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>The core principle behind the investment related part of the model (EDM-I) is that of
+                                  societal costs of industrial production of a given amount of products. EDM-I is an
+                                  optimization model that minimizes the investments and (simplified) operation costs
+                                  over the whole simulated time period (while considering the value of assets at the
+                                  end of the time period). </p>
+                              <p>The dispatch part of the model (EDM-D) does not involve economic considerations but is
+                                  a purely technical model. It calculates energy demand and emissions based on
+                                  production levels and characteristics of the production plants operative in the
+                                  selected year according to the scenario.</p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p><b>Demand for products / Production levels</b></p>
+                              <p>The central input variables from which the dispatch in the EDM-D is calculated on the
+                                  assumption of an even utilization of all plants are the production capacities
+                                  available in the selected year and the production quantities.
+                                  The production levels and production capacities can either be directly set in the
+                                  EDM-D or be provided by the EDM-I (for the chemical industry). For running the EDM-I,
+                                  the demand for products needs to be specified. Invest costs and operation costs for
+                                  different technologies as well as transport costs for intermediary products are
+                                  parameterized in the model but can be adapted. </p>
+                              <p><b>Technological development</b></p>
+                              <p>
+                                  Other central parameters are the years at which innovative production technlogies are
+                                  assumed to be available on an industrial scale and the speed of market penetration
+                                  with BAT technology or further improved production processes.
+                              </p>
+                              <p><b>Infrastructure development</b></p>
+                              <p>
+                                  The time at which infrastructures (H2, CO2) will be available (in the future) needs to
+                                  be defined in the model on a site-specific basis per scenario.
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="wisee-edm_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                              While the WISEE-EDM does not feature a policy interface, it is able to simulate the
+                                  effects of a range of different types of policies through adaptation of the models
+                                  parameters:
+                              </p>
+                              <p><b>Energy policy</b></p>
+                              <p>The invest module (EDM-I) can directly assess the effects of energy related policies
+                                  that affect prices (tax, subsidies) or availability of energy carriers
+                                  (e.g. coal exit). In the dispatch module (EDM-D) the standard energy demand associated
+                                  with the usage of particular production technologies may also be amended in a
+                                  rule-based manner to cover fuel switches (e.g. coal exit, replacement of natural gas
+                                  by biomethan etc.).  </p>
+                              <p><b>R&D related policies</b></p>
+                              <p>The model can assess the effects of R&D related policies by variation of the year
+                                  from which on technologies are availabe on an industrial scale level. The model may be
+                                  used to check the influence of such measures on the development of the industrial
+                                  production stock – depending on the age composition of the plants, availability of
+                                  infrastructure, and other factors.
+                              Furthermore, policies that support the diffusion of innovative technologies can be
+                                  represented through variation of the replacement rate of standard technologies through
+                                  best available technologies.</p>
+                              <p><b>Infrastructure related policies</b></p>
+                              <p>The model can assess the effects of infrastructure related policies and regulations
+                                  through variation of industry sites’ connection to infrastructures.</p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>WISEE-EDM does not automatically calculate the implications on non-climate SDGs.
+                                  However, it is possible to use its outputs and calculate the predictions for certain
+                                  indicators framed in the SDG agenda.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-edm_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.eist.2019.05.004</td>
+                                          <td>
+                                              Risks and opportunities associated with decarbonising Rotterdam’s
+                                              industrial cluster
+                                          </td>
+                                          <td>
+                                             The Port of Rotterdam industrial cluster is heavily exposed to future
+                                              decarbonisation policies, as most of its activities focus on trading,
+                                              handling, converting and using fossil fuels. Using a mixture of
+                                              qualitative and quantitative methods, the article explores three pathways
+                                              whereby the port’s industry can maintain its strong position while
+                                              significantly reducing its CO2 emissions and related risks by 2050.
+                                              Depending on mitigation target and choice of mitigation strategies,
+                                              future technologies and infrastructure may differ greatly. Almost full
+                                              decarbonisation of the cluster can be achieved by 2050, possibly even
+                                              without CCS.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td></td>
+                                          <td>
+                                              Simulating geographically distributed production networks of a climate
+                                              neutral European petrochemical industry
+                                          </td>
+                                          <td>
+                                              The paper describes quantitative scenarios on a possible evolution of the
+                                              EU petrochemical industry towards climate neutrality. The
+                                              cost-optimization model used to develop the scenarios describes at which
+                                              sites investments of industry in the production stock could take place in
+                                              the future. Around 50 types of products, the related production processes
+                                              and the respective sites have been collected in a database. The processes
+                                              included cover the production chain from platform chemicals via
+                                              intermediates to polymers. Pipelines allowing for efficient exchange of
+                                              feedstock and platform chemicals between sites are taken into account as
+                                              well. The model draws on this data to simulate capacity change at
+                                              individual plants as well as plant utilization. Thus, a future European
+                                              production network for petrochemicals with flows between the different
+                                              sites and steps of the value chain can be sketched. The scenarios
+                                              described in this paper reveal how an electrification strategy could be
+                                              implemented by European industry over time with minimized societal costs.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/j.apenergy.2019.114218
+                                          </td>
+                                          <td>
+                                             Optimal system layout and locations for fully renewable high temperature
+                                              co-electrolysis
+                                          </td>
+                                          <td>
+                                              Many favourable locations for high-temperature co-electrolysis (HTCOE) exist across Europe.
+                                            HTCOE can become economically competitive for currently discussed CO2 prices.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the WISEE-EDM model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+<!--                    add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="42_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>Schneider, C., Lechtenböhmer, S., & Samadi, S. (2020). Risks and opportunities associated
+                                with decarbonising Rotterdam’s industrial cluster. Environmental Innovation and Societal
+                                Transitions (35).</p>
+                            <p>Schneider, C. & Saurat, M. (2020). Simulating geographically distributed production
+                                networks of a climate neutral European petrochemical industry. Paper accepted for
+                                presentation at ECEEE 2020 conference.</p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

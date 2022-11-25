@@ -1,0 +1,68 @@
+{% extends 'visualiser/main_visualiser_am4.html' %}
+{% block content %}
+<div id="example" class="parcoords"></div>
+<div id="grid"></div>
+<!--http://bl.ocks.org/eesur/1a2514440351ec22f176
+alternative,
+https://bl.ocks.org/jasondavies/1341281
+-->
+{% load static %}
+ <script src="{% static 'd3/d3.parcoords.js' %}"></script>
+ <script src="{% static 'd3/divgrid.js' %}"></script>
+ <link rel="stylesheet" type="text/css" href="{% static 'd3/style_d3.css' %}">
+
+<script id="brushing">// quantitative colour scale
+<!--If we want we can set the range of colors base in particular 'column'-->
+var green_to_blue = d3.scale.linear()
+  .domain([9, 50])
+  .range(["#7AC143", "#00B0DD"])
+  .interpolate(d3.interpolateLab);
+
+var color = function(d) { return green_to_blue(d['B']); };
+
+var parcoords = d3.parcoords()("#example")
+  .color(color)
+  .alpha(0.4);
+
+var slice_size = {{slice_size}}
+var input_data = {{data|safe}};
+var y_axes = {{y_axes|safe}};
+var data = [];
+for (var j=0; j<input_data.length;j++){
+      var temp_dict = {}
+      for (var y=0; y<y_axes.length;y++) {
+          temp_dict[y_axes[y]]=input_data[j][y];
+      }
+      data.push(temp_dict);
+}
+
+  parcoords
+    .data(data)
+    .render()
+    .brushMode("1D-axes");  // enable brushing
+
+  // create data table, row hover highlighting
+  var grid = d3.divgrid();
+  d3.select("#grid")
+  <!--Set how rows we want to appear in 'table'-->
+    .datum(data.slice(0,slice_size))
+    .call(grid)
+    .selectAll(".row")
+    .on({
+      "mouseover": function(d) { parcoords.highlight([d]) },
+      "mouseout": parcoords.unhighlight
+    });
+
+  // update data table on brush event
+  parcoords.on("brush", function(d) {
+    d3.select("#grid")
+      .datum(d.slice(0,10))
+      .call(grid)
+      .selectAll(".row")
+      .on({
+        "mouseover": function(d) { parcoords.highlight([d]) },
+        "mouseout": parcoords.unhighlight
+      });
+  });
+</script>
+{% endblock %}

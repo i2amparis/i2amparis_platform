@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+        {#        html {#}
+        {#            scroll-behavior: smooth;#}
+        {#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+
+        .next-back-arrow {
+            font-size: 2em;
+            font-weight: bold;
+            background: rgba(151, 174, 33, 0.54);
+            color: white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: 5px;
+        }
+
+        .next-back-arrow:hover {
+            background: #97ae21;
+            cursor: pointer;
+        }
+
+        .methods-image {
+            position: absolute;
+            left: 0;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+
+        .methods-image.opaque {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=1);
+        }
+
+        .arrow-message {
+            text-align: center;
+            font-style: italic;
+
+        }
+
+        {% comment %}
+                .fade-img {
+                    opacity: 1;
+                    animation: imgfade 3s linear infinite;
+                }{% endcomment %}
+
+        @keyframes imgfade {
+            0%, 100% {
+                opacity: 0
+            }
+            15%, 85% {
+                opacity: 0.5
+            }
+            50% {
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes spaceboots {
+            0% {
+                -webkit-transform: translate(2px, 1px) rotate(0deg);
+            }
+            10% {
+                -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            }
+            20% {
+                -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            }
+            30% {
+                -webkit-transform: translate(0px, 2px) rotate(0deg);
+            }
+            40% {
+                -webkit-transform: translate(1px, -1px) rotate(1deg);
+            }
+            50% {
+                -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            }
+            60% {
+                -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            }
+            70% {
+                -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            }
+            80% {
+                -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            }
+            90% {
+                -webkit-transform: translate(2px, 2px) rotate(0deg);
+            }
+            100% {
+                -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+
+
+        {% comment %}   .shake {
+               -webkit-animation-name: spaceboots;
+               -webkit-animation-duration: 0.8s;
+               -webkit-transform-origin: 50% 50%;
+               -webkit-animation-iteration-count: infinite;
+               -webkit-animation-timing-function: linear;
+           }
+   {% endcomment %}
+
+        @-webkit-keyframes arrow-jump-r {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateX(2em);
+                -moz-transform: translateX(2em);
+                transform: translateX(2em);
+            }
+
+        }
+
+        .arrow-move-r {
+            -webkit-animation: arrow-jump-r 1s infinite; /* Safari 4+ */
+            -moz-animation: arrow-jump-r 1s infinite; /* Fx 5+ */
+            -o-animation: arrow-jump-r 1s infinite; /* Opera 12+ */
+            animation: arrow-jump-r 1s infinite; /* IE 10+, Fx 29+ */
+        }
+
+        @-webkit-keyframes arrow-jump-l {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateX(-2em);
+                -moz-transform: translateX(-2em);
+                transform: translateX(-2em);
+            }
+
+        }
+
+        .arrow-move-l {
+            -webkit-animation: arrow-jump-l 1s infinite; /* Safari 4+ */
+            -moz-animation: arrow-jump-l 1s infinite; /* Fx 5+ */
+            -o-animation: arrow-jump-l 1s infinite; /* Opera 12+ */
+            animation: arrow-jump-l 1s infinite; /* IE 10+, Fx 29+ */
+        }
+
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .row {
+            z-index: 0;
+        }
+
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <link rel="stylesheet" href={% static "side_bar_workspaces.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "upper_bar_public_ui.html" %}
+<div id="mySidenav" class="sidenav" style="margin-top: 3em">
+    <a class="closebtn">&times;</a>
+    <a class="heading-link" data-section="methods" href="#methods"><h4 style="margin-bottom: 0!important;">Co-creation process</h4>
+    </a>
+    <a class="heading-link" data-section="policies" href="#policies"><h4 style="margin-bottom: 0!important;">Policy
+        Questions</h4></a>
+    <div class="sub-heading-link col-sm-12 col-md-12">
+        <a data-section="ht_2050" href="#policies">Where is Europe headed towards in 2050?</a>
+        <a data-section="ccs" href="#policies">What is the role of Carbon Capture and Storage (CCS)?</a>
+        <a data-section="import_dependency" href="#policies">What is the role of import dependency in
+            Europe? </a>
+        <a data-section="electrification" href="#policies">What will the role of electrification be in the
+            transport sector?</a>
+        <a data-section="hydrogen" href="#policies">What is the future of hydrogen in the EU?</a>
+        <a data-section="costs_gains" href="#policies">What are the costs and gains of current policies?</a>
+    </div>
+</div>
+
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main" style="margin-top: 6em;min-height: 100%">
+    <div class="container" style="width: 90%; height: 100%">
+        <div class=" col-sm-12 col-xs-12 methods content-section">
+            {% include 'i2amparis_main/eu_workspace/methods.html' %}
+        </div>
+        <div class=" col-sm-12 col-xs-12 policies content-section">
+            <h1 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                Policy Questions
+            </h1>
+            <span id="policies" style="position: relative; top:-7em"></span>
+            <div class="ht_2050 subcontent" style="display: none">
+                {% include 'i2amparis_main/eu_workspace/where_is_europe_headed_towards_in_2050.html' %}
+            </div>
+            <div class="ccs subcontent" style="display: none">
+                {% include 'i2amparis_main/eu_workspace/role_of_carbon_capture_and_storage.html' %}
+            </div>
+            <div class="import_dependency subcontent" style="display: none">
+                {% include 'i2amparis_main/eu_workspace/import_dependency.html' %}
+            </div>
+            <div class="electrification subcontent" style="display: none">
+                {% include 'i2amparis_main/eu_workspace/electrification.html' %}
+            </div>
+            <div class="hydrogen subcontent" style="display: none">
+                {% include 'i2amparis_main/eu_workspace/hydrogen.html' %}
+            </div>
+            <div class="costs_gains subcontent" style="display: none">
+                {% include 'i2amparis_main/eu_workspace/costs_gains.html' %}
+            </div>
+        </div>
+    </div>
+
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+{# navigation - content - menu #}
+<script src={% static "tools/js/wwh_eu/public_interface/menu_controller.js" %}></script>
+
+<script src={% static "tools/js/wwh_global/scientific_interface/cookie_retriever.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/token_retrieval.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/start_query_creation_viz_execution.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/create_visualisation.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/total_co2_emissions.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/co2_emissions_by_sector.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/imported_fuels.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/ccs_reduction_ratio.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/import_dependency_ratio.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/electricity_ratio.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/electricity_tfec.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/hydrogen_production_by_fuel.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/hydrogen_electicity_comp_ind.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/hydrogen_electicity_comp_trans.js" %}></script>
+<script src={% static "tools/js/wwh_eu/public_interface/co2_ccs_by_sector.js" %}></script>
+
+<script>
+    wow = new WOW({}).init();
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('body').tooltip({container: 'body', html: true, selector: '[data-toggle=tooltip]', placement: 'auto'});
+    });
+</script>
+
+
+{#methods figure 1 animation#}
+<script src={% static "tools/js/wwh_eu/public_interface/image_controller.js" %}></script>
+
+{#where is europe headed towards in 2050 chart controller#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_1_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_2_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_4_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_5_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_6_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_7_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_8_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_9_controller.js" %}></script>#}
+{#<script src={% static "tools/js/wwh_eu/public_interface/chart_10_controller.js" %}></script>#}
+
+</body>
+
+</html>
+
+

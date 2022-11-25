@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Nutrient Database Explorer</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'd3/parallel.css' %}">
+    <script>
+    // Input data and format the data in suitable format
+    const colored_groups = {{colored_groups|safe}};
+    const samples_size = {{samples_size}};
+    const input_data = {{data|safe}};
+    const y_axes = {{y_axes|safe}};
+    var data = [];
+    for (var j=0; j<input_data.length;j++){
+    var temp_dict = {}
+    for (var y=0; y<y_axes.length;y++) {
+      temp_dict[y_axes[y]]=input_data[j][y];
+    }
+    data.push(temp_dict);
+    }
+    </script>
+  </head>
+  <body>
+  <div id="header">
+    <h1>{{title}}</h1>
+    <button title="Zoom in on selected data" id="keep-data" disabled="disabled">Keep</button>
+    <button title="Remove selected data" id="exclude-data" disabled="disabled">Exclude</button>
+    <button title="Export data as CSV" id="export-data">Export</button>
+    <div class="controls">
+      <strong id="rendered-count"></strong>/<strong id="selected-count"></strong><!--<strong id="data-count"></strong>-->
+      <div class="fillbar"><div id="selected-bar"><div id="rendered-bar">&nbsp;</div></div></div>
+      Lines at <strong id="opacity"></strong> opacity.
+      <span class="settings">
+        <button id="hide-ticks">Hide Ticks</button>
+        <button id="show-ticks" disabled="disabled">Show Ticks</button>
+        <button id="dark-theme">Dark</button>
+        <button id="light-theme" disabled="disabled">Light</button>
+      </span>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <div id="chart">
+    <canvas id="background"></canvas>
+    <canvas id="foreground"></canvas>
+    <canvas id="highlight"></canvas>
+    <svg></svg>
+  </div>
+  <div id="wrap">
+    <div class="third" id="controls">
+      <div class="bright">
+        <h3>{{about}}</h3>
+        <p>
+        {{about_text}}
+        </p>
+
+      </div>
+
+      <div class="little-box">
+        <h3>Controls</h3>
+        <p>
+          <strong>Brush</strong>: Drag vertically along an axis.<br/>
+          <strong>Remove Brush</strong>: Tap the axis background.<br/>
+          <strong>Reorder Axes</strong>: Drag a label horizontally.<br/>
+          <strong>Invert Axis</strong>: Tap an axis label.<br/>
+          <strong>Remove Axis</strong>: Drag axis label to the left edge.<br/>
+        </p>
+      </div>
+    </div>
+    <div  class="third">
+      <small>
+        <!--Last rendered <strong id="render-speed"></strong> lines-->
+      </small>
+      <h3>{{groups}}</h3>
+      <p id="legend">
+      </p>
+    </div>
+    <div class="third">
+      <h3>{{samples}} <input type="text" id="search" placeholder="Search..."></input></h3>
+      <p id="food-list">
+      </p>
+    </div>
+
+  </div>
+
+  <center>
+      <div id="grid"></div>
+  </center>
+
+
+
+
+
+  </body>
+  <script src="https://mbostock.github.com/d3/d3.v2.js"></script>
+  <script src="http://underscorejs.org/underscore.js"></script>
+  {% load static %}
+  <script src="{% static 'd3/divgrid.js' %}"></script>
+  <script src="{% static 'd3/parallel.js' %}"></script>
+
+</html>

@@ -1,0 +1,1427 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                        <div id="collapse_times_cac">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Overview</span>
+                                    <a style="display: none"
+                                       href="#times_cac_overview">Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group times_cac_key_features">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_times_cac_key_features"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features of the TIMES-CAC model
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_times_cac_key_features"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Energy sectoral detail</span>
+                                                    <a style="display: none"
+                                                       href="#times_cac_energy_sectoral">
+                                                        Energy sectoral detail</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#times_cac_geographic_coverage">
+                                                        Geographic coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Multi-year time periods</span>
+                                                    <a style="display: none"
+                                                       href="#times_cac_multi_year_time_periods">
+                                                        Multi-year time periods</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span> Intra-year time periods (time slices)</span>
+                                                    <a style="display: none"
+                                                       href="#times_cac_intra_year_time_periods">
+                                                       Intra-year time periods (time slices)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#times_cac_climate_emission">Climate module & emissions granularity</a>
+                                </li>
+
+                               <li>
+                                <div class="panel-group times_cac_socioeco_menu">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_times_cac_socioeco_menu"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Drivers of energy and other
+						GHG-emitting service demands
+
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_times_cac_socioeco_menu"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+
+                                <li class="list-group-item">
+                                    <span>Introduction</span>
+                                    <a style="display: none"
+                                       href="#times_cac_drivers_energy_ghg">Introduction</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic growth</span>
+                                    <a style="display: none"
+                                       href="#times_cac_econ_growth">Economic growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Population growth</span>
+                                    <a style="display: none"
+                                       href="#times_cac_population_growth">Population growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Sectoral growth</span>
+                                    <a style="display: none"
+                                       href="#times_cac_sectoral_growth">Sectoral growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Energy demand drivers and demand elasticities</span>
+                                    <a style="display: none"
+                                       href="#times_cac_energy_demand_elasticities">
+                                        Energy demand drivers and demand elasticities</a>
+                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Calibration of the model</span>
+                                    <a style="display: none"
+                                       href="#times_cac_calibration">
+                                        Calibration of the model</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#times_cac_mitigation_adaptation">
+                                        Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#times_cac_economic_rationale">
+                                        Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#times_cac_key_params">
+                                        Key parameters</a>
+                                </li>
+                                <li>
+                                <div class="panel-group times_cac_policy_sdg">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_times_cac_policy_sdg"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_times_cac_policy_sdg"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#times_cac_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#times_cac_implications_sdgs">
+                                                       Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent publications using the TIMES-CAC model*</span>
+                                    <a style="display: none"
+                                       href="#times_cac_recent_publications">Recent publications using the TIMES-CAC model*</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#times_cac_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                        <h1 style="padding-bottom: 1em; padding-top: 1em">The TIMES- Central Asian Caspian Model
+                            (TIMES-CAC)</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Overview</h2>
+                            <p>
+                                As with MAPLE and NATEM, TIMES-CAC uses the TIMES modelling framework,
+                                as described in Section 3.6.1. The integrated bottom-up partial-equilibrium
+                                energy system model of the Central Asian Caspian (CAC) Area, titled TIMES-CAC,
+                                assembles the four separate but structurally-consistent single-region TIMES
+                                country models of <b
+                                    class="tooltip-demo well" data-toggle="tooltip" title='Two extra “implicit” regions, Kyrgyzstan and Tajikistan,
+                                can be enabled to further explore electricity synergies and
+                                emission reduction cooperative strategies. In its default
+                                version, the model is built upon four regions only and it
+                                is named TIMES-CAC-4R.'>Azerbaijan,
+                                Kazakhstan, Turkmenistan, and Uzbekistan</b> by
+                                interconnecting them through the representation of energy flows and
+                                emission permits exchanges. The multiregional model is thought and
+                                designed as a comprehensive framework, able to explore national
+                                and/or supra-national forces, in a long-time horizon (until 2050),
+                                with the aim to test the effects of long-term energy export strategies
+                                on the energy system of the CAC countries and analyse trade-off curves
+                                between “risk” indicators and key KPIs, such as the system cost, the
+                                quantities exported and the corresponding revenues, as well as the
+                                emission reduction ambitions.
+                            </p>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Key features of the TIMES-CAC model</h2>
+                            <span id="times_cac_energy_sectoral" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                            <p>
+                                The key components of the TIMES-CAC model are the
+                                technologies for the production of primary and
+                                secondary commodities (mining and extractions
+                                processes, power plants, refineries, etc.)
+                                together with the most representative appliances and devices
+                                of the demand sectors (boilers, light bulbs, road vehicles, etc.).
+                                The energy system development of each model region is driven by a
+                                set of demands for energy services in all sectors: agriculture,
+                                residential, commercial, industry, and transportation.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/times_cac_energy_system_per_country.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of the TIMES-CAC
+                                        energy system for each country
+                                    </p>
+                                    <p>Source: Authors, based on the original design of Loulou and Labriet
+                                        (2007)</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_geographic_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                            <p>
+                                In its default version, the TIMES-CAC model covers four explicit regions (countries).
+                                A number of export routes (towards three key areas of energy transit/consumption,
+                                namely Russia, Europe and China, which are all well-represented in the PARIS
+                                REINFORCE consortium) are also simulated, as shown in the following figures
+                                (structure and data as included in the current version of the model).
+                            </p>
+                            <div class="image_grid" style="text-align: center">
+                                <div style="display:block" class="up_row">
+                                    <div class="col-sm-6 col-md-6">
+                                        <img style="width:80%;height:80%; margin-bottom: 2em"
+                                             src="{% static "images/times_cac_regional_rep1.png" %}">
+                                    </div>
+                                        <div class="col-sm-6 col-md-6">
+                                        <img style="width:80%;height:80%; margin-bottom: 2em"
+                                             src="{% static "images/times_cac_regional_rep2.png" %}">
+                                    </div>
+                                </div>
+                                <div style="display:block" class="down_row">
+                                    <div class="col-sm-6 col-md-6">
+                                        <img style="width:80%;height:80%; margin-bottom: 2em"
+                                             src="{% static "images/times_cac_regional_rep3.png" %}">
+                                    </div>
+                                    <div class="col-sm-6 col-md-6">
+                                        <img style="width:80%;height:80%; margin-bottom: 2em"
+                                             src="{% static "images/times_cac_row.png" %}">
+                                <!--<div style="text-align: center">-->
+                                    <!--<p style="text-align: center">Figure 3.12: Regional representation in-->
+                                        <!--TIMES-CAC, connection with the rest of the world (RoW)-->
+                                    <!--</p>-->
+                                    <!--<p>Source:Authors, elaborations for internal reports and conferences.-->
+                                        <!--Oil trade routes (red arrows) and gas trades routes (yellow arrows).-->
+                                        <!--A Southern route “to India” (through Afghanistan) can also be analysed.</p>-->
+                                <!--</div>-->
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Regional representation in TIMES-CAC, connection with the rest of the world (RoW)</p>
+                                </div>
+                                    <p>Source:Authors, elaborations for internal reports and conferences.
+                                        Oil trade routes (red arrows) and gas trades routes (yellow arrows).
+                                        A Southern route “to India” (through Afghanistan) can also be analysed.</p>
+                            </div>
+
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_multi_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Multi-year time periods</h4>
+                            <p>
+                                The time horizon over which TIMES-CAC simulates the evolution of the energy system
+                                is divided into a user-chosen number of time periods. In its default (current)
+                                version, the model runs from 2011 (base year) to the medium-to-long term through
+                                six periods (the representative years of which are: 2011, 2013, 2020, 2030, 2040,
+                                and 2050). All years in a given period are considered identical. For all quantities,
+                                such as installed technology levels, power plant capacities and energy and emissions
+                                flows, any annual input quantity (e.g. coal used in a power plant per year) or output
+                                quantity (e.g. electricity generated from the coal plant per year) related to a given
+                                time period applies identically to each of the years in that period.
+
+                            </p>
+                            <p>
+                                In the framework of the project, the model can be further calibrated to different
+                                references years and run different horizons/organisation of periods, if necessary.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_intra_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Intra-year time periods (time slices)</h4>
+                            <p>In addition to the multi-year time periods described above, in TIAM there are time
+                                divisions <b>within</b> a year, called “time slices”, which may be deﬁned by the user,
+                                so as to capture different weather, consumer behaviours, and energy demand
+                                conditions at different times of the year <font color="#1e90ff"> (see Section
+                                    3.6.2.4 for the MAPLE model
+                                    for further details on time-slices in the TIMES modelling framework)</font>. There
+                                are
+                                currently nine time-slices representing summer daytime, summer night time, and
+                                a peak moment in summer, winter daytime, winter night time, and a peak moment
+                                in winter, and an intermediate season day time and night time and peak moment
+                                in the intermediate season.</p>
+
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_climate_emission" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                            <p>
+                                The model tracks the three main sources of GHGs: carbon dioxide (CO2), methane (CH4)
+                                and nitrous oxide (N20). A special module of the TIMES-CAC model can be enabled to
+                                let two more countries of the Central-Asian region (virtually modelled), to
+                                participate in the GHG emission reduction effort (through a virtual market
+                                trading scheme extended to four-plus-two regions of the area).
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_drivers_energy_ghg" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Drivers of energy and
+                                other GHG-emitting service demands</h2>
+                            <p>
+                                The TIMES-CAC model requires inputs concerning the degree to which
+                                energy service demands, as well as demand for other goods and services which result
+                                in GHG emissions (such as agricultural demand), will grow over the course of next
+                                decades in the different countries. It does this by using various socioeconomic
+                                inputs, as described in the following table (current default values) and sections.
+                                Data will be revised and updated before running the model under the PARIS REINFORCE
+                                project.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2" style="width:35%">Indicator</th>
+                                        <th style="width:15%">Values</th>
+                                        <th style="width:10%">In 2009</th>
+                                        <th colspan="4" style="width:40%">Growth index (2009=100)</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><b>2020</b></td>
+                                        <td><b>2025</b></td>
+                                        <td><b>2030</b></td>
+                                        <td><b>2050</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">AZJ</td>
+                                        <td>Population</td>
+                                        <td>Million</td>
+                                        <td>8.8</td>
+                                        <td>118</td>
+                                        <td>124</td>
+                                        <td>130</td>
+                                        <td>*1.5 wrt the BY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GDP per capita (&)</td>
+                                        <td>S$’2000ppp</td>
+                                        <td>8702</td>
+                                        <td>175</td>
+                                        <td>217</td>
+                                        <td>251</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aggregate demand for energy services</td>
+                                        <td>Index (+)</td>
+                                        <td>100</td>
+                                        <td>199</td>
+                                        <td>265</td>
+                                        <td>328</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">KZK</td>
+                                        <td>Population</td>
+                                        <td>Million</td>
+                                        <td>15.9</td>
+                                        <td>118</td>
+                                        <td>124</td>
+                                        <td>130</td>
+                                        <td>*1.5 wrt the BY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GDP per capita (&)</td>
+                                        <td>US$’2000ppp</td>
+                                        <td>8400</td>
+                                        <td>161</td>
+                                        <td>196</td>
+                                        <td>238</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aggregate demand for energy services</td>
+                                        <td>Index (+)</td>
+                                        <td>100</td>
+                                        <td>167</td>
+                                        <td>209</td>
+                                        <td>264</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">TKM</td>
+                                        <td>Population</td>
+                                        <td>Million</td>
+                                        <td>5.1</td>
+                                        <td>118</td>
+                                        <td>124</td>
+                                        <td>130</td>
+                                        <td>*1.5 wrt the BY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GDP per capita (&)</td>
+                                        <td>US$’2000ppp</td>
+                                        <td>9859</td>
+                                        <td>175</td>
+                                        <td>217</td>
+                                        <td>251</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aggregate demand for energy services</td>
+                                        <td>Index (+)</td>
+                                        <td>100</td>
+                                        <td>179</td>
+                                        <td>226</td>
+                                        <td>269</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">UZB</td>
+                                        <td>Population</td>
+                                        <td>Million</td>
+                                        <td>27.8</td>
+                                        <td>118</td>
+                                        <td>124</td>
+                                        <td>130</td>
+                                        <td>*1.5 wrt the BY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GDP per capita (&)</td>
+                                        <td>US$’2000ppp</td>
+                                        <td>2395</td>
+                                        <td>175</td>
+                                        <td>217</td>
+                                        <td>251</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aggregate demand for energy services</td>
+                                        <td>Index (+)</td>
+                                        <td>100</td>
+                                        <td>185</td>
+                                        <td>238</td>
+                                        <td>283</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3" CAC-4R></td>
+                                        <td>Population</td>
+                                        <td>Million</td>
+                                        <td>57.6</td>
+                                        <td>118</td>
+                                        <td>124</td>
+                                        <td>130</td>
+                                        <td>*1.5 wrt the BY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GDP per capita (&)</td>
+                                        <td>US$’2000ppp</td>
+                                        <td>5678</td>
+                                        <td>170</td>
+                                        <td>208</td>
+                                        <td>246</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aggregate demand for energy services</td>
+                                        <td>Index (+)</td>
+                                        <td>100</td>
+                                        <td>178</td>
+                                        <td>226</td>
+                                        <td>278</td>
+                                        <td>Study-specific</td>
+                                    </tr>
+                                    </tbody>
+                                    <caption>Key socioeconomic inputs in TIMES-CAC</caption>
+                                </table>
+                            </div>
+
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_econ_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Economic growth</h4>
+                            <p>
+                                As is the case for almost all the most important energy-producing countries, the CAC
+                                countries are also highly dependent on energy exports, and this dependence results
+                                in a very large share of the energy sector to the GDP and fundamental (critical)
+                                contributions to the State budgets. Economic growths are based on national specific
+                                projections for the medium-term, and on hypotheses (study- and scenario-specific)
+                                for the longer horizon. In general terms, the analysed storylines always assume a
+                                (quite fast) growth in domestic GDPs for all the cases and countries, that in a
+                                baseline case is equivalent to a an economic trend of around +4.5% (in terms of GDP,
+                                in average, to 2050).
+                            </p>
+                            <p>
+                                But due to the abovementioned characteristics, economic growths in the CAC area
+                                (by country) should be always properly assessed and considered within a
+                                self-consistent (energy-related) storyline, in order to keep a certain degree of
+                                robustness of the scenario and of the projections.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_population_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Population growth</h4>
+                            <p>
+                                Population growths are also based on national (local) specific information in the
+                                medium term and on assumptions in the longer horizon (mainly inherited by a specific
+                                analysis for Kazakhstan), that result in a population growth rate of +1.2%, in
+                                average, in the long-term (2050), for the multiregional area. It is worth noting
+                                that, according to some local experts, the international analyses often
+                                “underestimate” the population growth rates of the area, due to the incorrect
+                                comparison with Russia (and the Former Soviet Union) and with the Russian ethnic
+                                groups (lower birth rates).
+                            </p>
+                            <p>
+                                It should also be noted that the TIMES-CAC model can be adjusted to use other
+                                socioeconomic growth projections aside
+                                from the default.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_sectoral_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Sectoral growth</h4>
+                            <p>
+                                The growth in the industrial, agricultural and retail business sectors in each region
+                                is partially derived from the national’s overall GDP growth, with each sector’s share
+                                of total GDP changing over time, and from the expected/planned production levels,
+                                constructions (e.g. square meters for services), and development of certain
+                                activities. Growth of residential households is derived from population growth and
+                                assumptions on average household size in each region.
+                            </p>
+                            <p>
+                                Growth in each of these sectors drives energy demand as described in the next
+                                sub-section.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_energy_demand_elasticities" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy demand drivers and demand elasticities</h4>
+                            <p>
+                                The economic, population and sectoral growths (e.g. physical production of industrial
+                                activities) are used as specific drivers for the growth in energy demands, in the
+                                same way as for the MAPLE and NATEM models, as detailed for the MAPLE model in
+                                Section 3.6.9.2.
+                            </p>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_calibration" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                            <p>
+                                The TIMES-CAC model is calibrated for the initial period (currently 2011) using a
+                                combination of IEA world energy statistics for the year 2011 and country-specific
+                                information, with the projections for the key energy-related investments and stocks
+                                (e.g. installed technology capacity) further calibrated until 2013-2015. The current
+                                intention is that the version of TIMES-CAC to be used in PARIS REINFORCE will have
+                                an updated energy statistics calibration (the most useful combination among the key
+                                international and local sources) to the most recent years. The main variables to be
+                                calibrated include: the capacities/stocks and operating levels of all technologies;
+                                the extracted, exported, imported, produced, and consumed quantities for all energy
+                                carriers; and the introduction/representation of recent (new) policy- and
+                                target-related elements (if any).
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_mitigation_adaptation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>
+                                TIMES-CAC is a technology-rich model that represents most major fossil fuel and
+                                low-carbon technologies that are envisaged to be available (for those systems)
+                                for at least the first half of the 21st century. By simulating the substitution of
+                                low-carbon for high-carbon technologies in response to their relative costs, as well
+                                as emissions constraints and/or carbon prices, the model simulates mitigation. The
+                                principal energy sector CO2 (and non- CO2) mitigation options are shown in the
+                                following table (the options that are not currently available but can be added in the
+                                model are marked with an asterisk*). Data will be revised and updated in the
+                                framework of the PARIS REINFORCE project, and in accordance with the international
+                                database and feedback of local experts.
+
+                            </p>
+
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2"><p align="left"></p>Upstream</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Synthetic fuel production</b></td>
+                                        <td><b>Hydrogen production</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal to gas without CCS</li>
+                                                <li>Coal to liquids without CCS</li>
+                                                <li>Biomass to gas without CCS</li>
+                                                <li>Coal to gas with CCS*</li>
+                                                <li>Coal to liquids with CCS*</li>
+                                                <li>Gas to liquids with CCS*</li>
+                                                <li>Biomass to liquids (with and without CCS)*</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electrolysis</li>
+                                                <li>Coal to hydrogen with CCS</li>
+                                                <li>Gas to hydrogen with CCS*</li>
+                                                <li>Biomass to hydrogen with CCS*</li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><b>Electricity and heat</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Electricity generation</b></td>
+                                        <td><b>Heat generation</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal with CCS</li>
+                                                <li>Gas with CCS</li>
+                                                <li>Nuclear (fission and fusion)*</li>
+                                                <li>Hydro</li>
+                                                <li>Biomass (with and without CCS)</li>
+                                                <li>Geothermal</li>
+                                                <li>Solar PV</li>
+                                                <li>Solar CSP</li>
+                                                <li>Wind (onshore and offshore)</li>
+                                                <li>Marine*</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal with CCS*</li>
+                                                <li>Gas with CCS*</li>
+                                                <li>Oil with CCS*</li>
+                                                <li>Geothermal*</li>
+                                                <li>Biomass</li>
+                                                <li>Biomass with CCS*</li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Transport</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Road</b></td>
+                                        <td><b>Rail</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas (LNG / CNG) vehicles</li>
+                                                <li>Hybrid electric vehicles</li>
+                                                <li>Fully electric vehicles</li>
+                                                <li>Hydrogen fuel cell vehicles</li>
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electric</li>
+                                                <li>Hydrogen*</li>
+                                                <li>Efficiency*</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Air</b></td>
+                                        <td><b>Marine</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Hydrogen planes*</li>
+                                                <li>Efficiency*</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas*</li>
+                                                <li>Hydrogen*</li>
+                                                <li>Biofuels*</li>
+                                                <li>Efficiency*</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Buildings</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Heating </b></td>
+                                        <td><b>Lighting</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing coal / oil</li>
+                                                <li>Biofuels</li>
+                                                <li>Electricity</li>
+                                                <li>Hydrogen</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>Efficiency</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Appliances</b></td>
+                                        <td><b>Cooling</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Efficiency</td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electricity</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><b>Industry</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Process heat</b></td>
+                                        <td><b>Machine drives</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                                <li>Hydrogen</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Steam</b></td>
+                                        <td><b>CHP</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>CCS</b></td>
+                                        <td><b>Other</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>CCS in iron and steel (for auto-producers only)</li>
+                                                <li>CCS in cement (for auto-producers only)</li>
+                                                <li>CCS in chemicals (for auto-producers only)</li>
+                                            </ul>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><b>Agriculture</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Energy</b></td>
+                                        <td><b>Other</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Biomass</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><b>Non-CO2</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Enteric fermentation + Digester + Cogeneration (Agriculture)</td>
+                                        <td>Flare gas recovery + on site use</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Waste water processing with recovery + cogeneration (Industry)</td>
+                                        <td>Flare gas recovery + compression + distribution</td>
+                                    </tr>
+                                    </tbody>
+                                    <caption>Main GHG energy system mitigation options in
+                                        TIMES-CAC
+                                    </caption>
+                                </table>
+                            </div>
+
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_economic_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>
+                                The modelling framework and solution rationale is similar to the MAPLE and
+                                NATEM models, as detailed for MAPLE in Section 3.6.7.
+                            </p>
+                            <p>
+                                The TIMES-CAC model computes a dynamic inter-temporal partial equilibrium for
+                                the (multi-) regional energy and emission markets, based on the maximisation of
+                                total surplus defined as the sum of surplus of the suppliers and consumers. In
+                                other words, it is assumed that the multi-regional system evolves, while
+                                maintaining intra-temporal and inter-temporal partial economic equilibrium,
+                                and always occupies the technical possibility frontier. The process of solving the
+                                model determines the optimal mix of technologies (capacity and activity) and fuels at
+                                each period, the associated emissions, the mining and “trading activities”, the
+                                quantity and prices of all commodities, all in time series from the base year
+                                to the time horizon of the model.
+                            </p>
+                            <p>
+                                The model was mainly developed and used to assess the dynamics of the national
+                                energy system of the area in cooperative and non-cooperative manner, when <b
+                                        class="tooltip-demo well" data-toggle="tooltip" title='Model can currently run in two modes: with exogenously defined export levels
+                                per each direction of export, or with endogenously defined export levels through
+                                the most profitable route and destination. A ri'>energy export levels</b> export levels are determined by the willingness-to-pay of the different
+                                “importers/customers”.
+                            </p>
+                            <p>
+                                The model responds to economic incentives (such as revenues from the exports)
+                                by optimising the domestic energy system (supply and demand of each energy form),
+                                the energy exchanges within the multiregional system (CAC area), and with the
+                                external markets, in an “integrated” manner. A “discount” factor of 5% per year is
+                                usually used to value the costs of the energy system at different time points in
+                                the future. In other words, a cost of $100 one year in the future would be equated
+                                to a cost of $95 today. This discount factor can be changed. Implicit discount
+                                rates are also used at sectoral level.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_key_params" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key parameters </h2>
+                            <p>
+                                The TIMES-CAC model is “by paradigm” a technology-rich tool, where techno-economic
+                                information is assigned to each process (existing and future) of the system, and
+                                therefore many datasets/parameters can be extracted and reported.
+                            </p>
+                            <p>
+                            <ul>
+                                Based on the geopolitical and strategic role of the CAC area in the international
+                                “energy” context, and on its specific technical and market characteristics that affect
+                                the local energy and climate plans, the following key information is selected as the
+                                “most important” parameters to monitor, discuss and evaluate in the framework of the
+                                PARIS REINFORCE project for a successful integration of this model with the other
+                                tools and analyses:
+                                <li>Fossil fuel proven/possible reserves (mainly oil and gas) and expected production
+                                    rates (P/R).
+                                </li>
+                                <li>Quantities and/or prices of trades (mainly for oil and gas), by area of import.</li>
+                                <li>Information about under construction/planned/possible energy
+                                    projects/infrastructures.
+                                </li>
+                                <li>Burden/contribution of the countries/area to global climate
+                                    targets (based on previous experiences, this is particularly relevant
+                                    with respect to the gas allocation: domestic use vs. export), and national
+                                    emission reduction goals.
+                                </li>
+                                <li>Energy efficiency improvements costs/limits (from the supply side to the
+                                    demand side).
+                                </li>
+                                <li>Renewable energy and CCS costs/potentials.</li>
+                                <li>Local-specific priorities, targets, plans.</li>
+                            </ul>
+                            </p>
+                            <p>
+                                Parameters can be revised and updated in the framework of the PARIS REINFORCE
+                                project, following the feedback of national experts (stakeholder engagement),
+                                the comparative assessment with other modelling experiences, and the discussion
+                                with the partners (modellers).
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="times_cac_key_policies" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>
+                            <ul>
+                                As for all the TIMES-based models, TIMES-CAC predominantly works by specifying
+                                either a carbon price (imposed as a tax) or a carbon emissions constraint in
+                                each region that it represents, or alternatively all regions simultaneously.
+                                For example the following further policies can be implemented:
+                                <li>Minimum/maximum capacity factors on fossil fuel power generation plants
+                                    (e.g. to simulate minimum or maximum desired levels of operation);
+                                </li>
+                                <li>Subsidies on particular technologies (through adjusting their costs or the
+                                    explicit assignment of incentives);
+                                </li>
+                                <li>Constraints on the availability of particular technologies (e.g. “no nuclear”,
+                                    variable renewables accounting for no more than 50% of electricity generation);
+                                </li>
+                                <li>Constraints on the growth rates of particular technologies (e.g. carbon capture
+                                    and storage power generation capacity cannot grow at more than 20% per year)
+                                </li>
+                                <li>Inter-regional emissions trading (or no trading);</li>
+                            </ul>
+                            </p>
+                            <p>
+                            <ul>
+                                More in particular, TIMES-CAC is capable of exploring the direct economic advantage
+                                of cooperation policies in the energy and climate change mitigation sectors for the
+                                represented countries. The following cooperation policies in the area can be directly
+                                modelled:
+                                <li>exploitation of Caspian oil and natural gas resources;</li>
+                                <li>investment in the construction of cross-national new pipelines;</li>
+                                <li>maintenance of free exchange in the energy sector across the region; and</li>
+                                <li>creation of a joint CO2 emission permit system in the area.</li>
+                            </ul>
+                            </p>
+                            <p>
+                                Furthermore, the structure of the TIMES-CAC model allows to fully include the
+                                concept of “energy security” in the analysis (from the perspective of energy
+                                exporters), and to test the effects of long-term energy export strategies in
+                                the CAC region by exploring the trade-offs between a “risk” indicator and some
+                                key variables of the energy system such as the total cost, the quantities exported
+                                and the corresponding revenues, the climate targets of the region. Furthermore,
+                                (export) risk reduction goals can be combined with securing a minimum level of
+                                revenues from the hydrocarbon exports goals, with the aim to quantitatively
+                                evaluate the response of the energy sector and its sensitivity to different
+                                export strategies.
+                            </p>
+                            <p>The following table provides additional information about the capability of the model to
+                                represent policies and measures per each key energy and climate dimension.</p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:40%"><b style="background: #5e6d13e6"
+                                                class="tooltip-demo well" data-toggle="tooltip" title=' According to the new rules on governance of the EU energy union.'>Policies
+                                            and Measures (by dimension)</b></th>
+                                        <th style="width:60%">Details</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Decarbonisation</td>
+                                        <td><b>High</b> capability (several mitigation options, regulatory
+                                            and economic measures, etc.)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Energy Efficiency</td>
+                                        <td><b>High</b> capability (several energy efficiency options,
+                                            regulatory and economic measures, etc.)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Energy Security</td>
+                                        <td><b>High</b> capability (key focus of the TIMES-CAC,
+                                            risk and diversification targets)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Internal energy markets</td>
+                                        <td><b>Medium</b> capability (gasification of the systems,
+                                            electrifications, partial/complete phase-out of fuel subsidies, etc.)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Research, Innovation and competitiveness</td>
+                                        <td><b>Low-Medium</b> capability (implicit and/or ex-post)</td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Capability of the TIMES-CAC to address policies and measures
+                                    </caption>
+                                </table>
+                            </div>
+
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_implications_sdgs" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                            <p>
+                                Apart from the abovementioned dimensions, a number of SDGs other than climate action
+                                can be taken into consideration and investigated making use of the TIMES-CAC model,
+                                as shown in the following table.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:50%">SDG</th>
+                                        <th style="width:50%">Details</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>§1. No Poverty (e.g., intra-country distributional impact by
+                                            income level)
+                                        </td>
+                                        <td>Trade-offs between energy poverty reduction (residential)
+                                            measures vs. energy consumption can be partially explored.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§3. Health (e.g., air-pollution related mortality)</td>
+                                        <td>Measures to tackle the use of solid fuels in buildings (not negligible
+                                            fractions in the CAC area, and direct cause of
+                                            pollution-related mortality) can be included.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§7. Affordable and clean energy (e.g., traditional biomass use,
+                                            %renewable energy)
+                                        </td>
+                                        <td>Cost-effectiveness of RES within a specific storyline.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>§8. Decent work & economic growth (e.g., impact on GDP per capita,
+                                            jobs)
+                                        </td>
+                                        <td>Energy export revenues can be tracked and analysed to evaluate the
+                                            corresponding relevance/impact on the State budget (e.g. capability
+                                            to fund RES, etc.) and on the domestic macroeconomic indicators.
+                                        </td>
+                                    </tr>
+                                    <td>§15: Life on land (e.g., land use for forests, rate of land use change)</td>
+                                    <td>Afforestation measures can be taken into account; RES
+                                        potential/exploitation and investment decisions
+                                        (e.g. energy infrastructures) can be subject to land-specific
+                                        constraints (natural and regulatory).
+                                    </td>
+
+                                    </tbody>
+                                    <caption>Capability of the TIMES-CAC consider/assess other
+                                        SDGs
+                                    </caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_recent_publications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications using the TIMES-CAC model* </h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Study</th>
+                                        <th style="width:20%">Focus</th>
+                                        <th style="width:60%">Key findings</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Kerimray et al. (2018)
+                                        </td>
+                                        <td>Long-Term Climate Change Mitigation in Kazakhstan in a Post
+                                            Paris Agreement Context
+                                        </td>
+                                        <td>Under the Paris Agreement, Kazakhstan’s nationally
+                                            determined contribution (NDC) target is to reduce its greenhouse gas
+                                            emissions (GHG) by between 15 and 25% by 2030 compared with 1990
+                                            levels. Kazakhstan’s energy system is highly carbon intensive and
+                                            GHG emissions continue to steadily grow, indicating insufficient
+                                            progress towards achieving the NDC emissions reductions announced
+                                            under the Paris Agreement. This chapter presents modelling analysis
+                                            that assesses a least-cost long term (2050) pathway towards achieving
+                                            these NDC targets. The results demonstrate how ambitious a 25% GHG
+                                            emissions reduction pathway is compared with the current energy
+                                            policies and mitigation actions. Such a reduction requires an almost
+                                            full phase-out of coal consumption in power generation by 2050.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bakdolotov et al. (2017)</td>
+                                        <td>Techno-economic modelling to strategize energy exports in the Central
+                                            Asian Caspian region
+                                        </td>
+                                        <td>This paper studies the concept of energy security from export-oriented
+                                            countries’ point of view. It aims to test the effects of long-term
+                                            energy export strategies in the Central Asian Caspian (CAC) region,
+                                            by exploring the trade-offs between a “risk” indicator and some key
+                                            variables of the energy system such as the total cost, the quantities
+                                            exported, and the corresponding revenues. Risk reduction goals are
+                                            combined with securing a minimum level of revenues from the hydrocarbon
+                                            exports goals. It is also attempted to provide a definition and a
+                                            quantification of a risk indicator on the basis of four components.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kerimray et al. (2015)</td>
+                                        <td>Improving Efficiency in Kazakhstan’s Energy System
+                                        </td>
+                                        <td>There are various reasons for inefficiencies in Kazakhstan’s energy
+                                            system: administrative and economic (statistical double counting of
+                                            energy flows, above normative losses and low profitability),
+                                            geographic (the extremely continental climate and low population
+                                            density) and technical considerations (high share of coal in generation
+                                            mix, high wear on main and auxiliary equipment in energy intensive
+                                            sectors, high wear on electric lines, dilapidation of housing stock,
+                                            and an absence of control systems for energy savings) all contribute to
+                                            the high energy intensity. This study explores energy efficiency
+                                            potential by analysing the evolution of the Kazakh energy system.
+                                            All the technical inefficiencies have been taken into consideration
+                                            through the explicit representation of existing inefficient
+                                            technologies/chains in a TIMES-based model. Under the assumptions of
+                                            a market-oriented development of the economic system, even without
+                                            specific policies (Business as Usual), the model suggests significant
+                                            energy efficiency improvement: 22 Mtoe (million tons of oil equivalent)
+                                            by 2030 and a 40 % reduction in energy intensity of GDP by 2030.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>De Miglio et al. (2014)</td>
+                                        <td>Cooperation benefits of Caspian countries in their energy sector
+                                            development.
+                                        </td>
+                                        <td>This paper studies the development possibilities of the energy systems of
+                                            four Central Asia and Caspian countries. It explores options that
+                                            improve their domestic energy efficiencies and increase their export
+                                            of fossil energy commodities. With the help of scenario analyses, it
+                                            evaluates the direct economic advantage of improving the domestic energy
+                                            efficiencies. Furthermore it calculates the direct economic advantage of
+                                            cooperation. It finds out that a new/different geo-economic attitude
+                                            brings USD billions of annual economic benefits, particularly if the
+                                            countries aim to differentiate their export routes, increase the amount
+                                            of export and contribute to climate change mitigation.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            <p><i>*or using national-specific analysis based on the utilisation of single-region
+                                tools inherited by the TIMES-CAC model</i></p>
+
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="times_cac_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>Bakdolotov, A., Miglio, R. D., Akhmetbekov, Y., & Baigarin, K. (2017). Techno-economic
+                                modelling to strategize energy exports in the Central Asian Caspian region. Heliyon,
+                                3(4), e00283.
+                            </p>
+                            <p>
+                                De Miglio, R., Akhmetbekov, Y., Baigarin, K., Bakdolotov, A., & Tosato, G. (2014).
+                                Cooperation benefits of Caspian countries in their energy sector development.
+                                Energy Strategy Reviews, 4, 52–60.
+                            </p>
+                            <p>
+                                Energy Charter (2015) International Energy Security: Common Concept for Energy
+                                Producing, Consuming and Transit Countries.
+                            </p>
+                            <p>
+                                Energy Information Administration (2013) Overview of oil and natural gas in the
+                                Caspian Sea region, 1–25.
+                                <a href="http://www.eia.gov/countries/analysisbriefs/Caspian_Sea/caspian_sea.pdf">http://www.eia.gov/countries/analysisbriefs/Caspian_Sea/caspian_sea.pdf</a>.
+                            </p>
+                            <p>
+                                International Energy Agency (2012) Beyond 2020, Extended and Summary
+                                Energy Balances of Non OECD countries, <a href="http://www.iea.org/statistics/">http://www.iea.org/statistics/</a>.
+                            </p>
+                            <p>
+                                Kerimray, A., Suleimenov, B., De Miglio, R., Rojas-Solórzano, L., & Ó
+                                Gallachóir, B. (2018). Long-Term Climate Change Mitigation in Kazakhstan in a
+                                Post Paris Agreement Context. In G. Giannakidis, K. Karlsson, M. Labriet, & B. Ó.
+                                Gallachóir (Eds.), Limiting Global Warming to Well Below 2 °C: Energy System
+                                Modelling and Policy Development (pp. 297–314)
+
+                            </p>
+                            <p>
+                                Kerimray, A., Baigarin, K., Bakdolotov, A., De Miglio, R., & Tosato, G. (2015).
+                                Improving Efficiency in Kazakhstan’s Energy System. In G. Giannakidis, M. Labriet,
+                                B. Ó Gallachóir, & G. Tosato (Eds.), Informing Energy and Climate Policies Using
+                                Energy Systems Models: Insights from Scenario Analysis Increasing the Evidence
+                                Base (pp. 141–150)
+                            </p>
+                            <p>
+                                Loulou R. & Labriet M. (2007). ETSAP-TIAM: the TIMES integrated assessment
+                                model Part I: Model structure. Computational Management Science, 5(102), 7–40.
+                            </p>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+</body>
+
+</html>
+
+

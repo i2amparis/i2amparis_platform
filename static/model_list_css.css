@@ -1,0 +1,100 @@
+.model-list div.not-selected {
+    opacity: 0.7;
+}
+
+.model-list div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.model-list div:hover {
+    -webkit-animation-name: wiggle;
+    -ms-animation-name: wiggle;
+    -ms-animation-duration: 200ms;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+}
+
+
+@-webkit-keyframes wiggle {
+    0% {
+        -webkit-transform: rotate(1deg);
+    }
+    25% {
+        -webkit-transform: rotate(-1deg);
+    }
+    50% {
+        -webkit-transform: rotate(3deg);
+    }
+    75% {
+        -webkit-transform: rotate(-0.5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-ms-keyframes wiggle {
+    0% {
+        -ms-transform: rotate(0.5deg);
+    }
+    25% {
+        -ms-transform: rotate(-0.5deg);
+    }
+    50% {
+        -ms-transform: rotate(1deg);
+    }
+    75% {
+        -ms-transform: rotate(-2.5deg);
+    }
+    100% {
+        -ms-transform: rotate(0deg);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(1deg);
+    }
+    25% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    75% {
+        transform: rotate(-0.5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.granularities img {
+    margin: 0.2rem;
+    width: 3.2em;
+}
+
+.tooltip-demo {
+    box-shadow: none;
+}
+
+.model-list i.fa-info-circle:hover {
+    cursor: help;
+}
+
+.model-list i.fa-info-circle {
+    display: none;
+}
+
+.model-list div:hover i.fa-info-circle {
+    display: inline-block;
+}
+
+.rounded-corners-el {
+    border-radius: 4px;
+}

@@ -1,0 +1,470 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model PSM-EU</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_key_features">Key features of the model PSM-EU</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#psm-eu_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#psm-eu_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#psm-eu_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#42_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The PSM-EU model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>PSM-EU provides instances of a power system simulation models for (parts of) EU27 plus
+                                  United Kingdom, Norway, and Switzerland. PSM-EU contains data at a country basis and
+                                  can be used to perform capacity expansion (i.e. building new generation and
+                                  transmission infrastructure) and UCED calculations, considering power plant
+                                  flexibility limitations and flexible loads. The objective function of the capacity
+                                  expansion is to minimise the total net present value (NPV) of build costs, fixed
+                                  operation and maintenance (FOM) costs, and variable operating and maintenance (VOM)
+                                  costs, while the objective function of UCED is to minimise variable generation costs.
+                                  Current instances are mostly implemented in PLEXOS, a mixed-integer linear programming
+                                  (MILP) model which has been used in many studies on RES integration and system
+                                  adequacy, but also in a custom-made C#-software package.</p>
+                              <p>PSM-EU has been used among others to assess the system adequacy of power systems with
+                                  high penetration of solar and wind energy taking into account climate variability, to
+                                  evaluate different electricity market designs, and to identify cost-effective
+                                  trajectories to reach Paris targets</p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the Euro-Calliope model</h2>
+                              <p>PSM-EU provide instances of power system simulation models for the EU27 plus United
+                                  Kingdom, Norway, and Switzland. </p>
+                              <p>Temporal resolution of instances is hourly, and spatial resolution varies from country
+                                  level to regions within Europe.</p>
+                              <p>PSM-EU can be used to assess the system adequacy of power systems with high penetration
+                                  of solar and wind energy taking into account climate variability, to evaluate
+                                  different electricity market designs, and to identify cost-effective trajectories to
+                                  reach Paris targets. </p>
+                              <p>
+                                  <ul>
+                              Instances contain knowledge and data of:
+                              <ol>1. A broad portfolio of conventional and low carbon electricity generation technologies,
+                                  storage technologies, and negative CO2 emission technologies. Per technology,
+                                  techno-economic parameters are provided including investment costs, fixed operating
+                                  and maintenance costs, variable operating and maintenance costs, efficiency, ramping
+                                  rates, minimum up and down, and minimum load. </ol>
+                              <ol>2. Transmission lines between countries.</ol>
+                              <ol>3. Hourly electricity demand patterns are based on historical electricity demand patterns
+                                  for each country. Additionally, all patterns are adapted based on electrification of
+                                  the heating and transport. </ol>
+                              <ol>4. Demand response options, also known as demand side management (DSM): to what extent
+                                  electricity demand can be shifted or curtailed during times of peak residual load.
+                                  Demand options are assessed for industry, and residential and tertiary appliances.
+                                  Volumes and activation times are limited depending on the application and season.
+                              </ol>
+                              <ol>5. Operating reserves (both up and down regulation) can be included that can cope with
+                                  mismatches between demand and generation due to (i) demand forecast errors, (ii) vRES
+                                  generation forecast errors, and (iii) unplanned generator outages.  </ol>
+                              <ol>6. Supply patterns of solar and wind energy are based on historical time series or
+                                  climate simulations for future weather years. </ol>
+                          </ul>
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                 CO2 emissions can be an output, or CO2 emissions can be capped (during a specific
+                                  period e.g. for a year)
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                 Electricity demand is an exogenous input based on GDP and population developments, and
+                                  technological developments such as electrification of heating and transport
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                               Many mitigation technologies are available from wind turbines to direct air capture of
+                                  CO2
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  Minimisation of total system costs in the capacity expansion mode and minimisation of
+                                  all variable costs in the UCED mode.  Thus, a perfect market is modelled based on
+                                  perfect information and rationale stakeholders.
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                  <ul>
+                                Instances contain knowledge and data of:
+                              <ol>1. A broad portfolio of conventional and low carbon electricity generation
+                                  technologies, storage technologies, and negative CO2 emission technologies. Per
+                                  technology, techno-economic parameters are provided including investment costs, fixed
+                                  operating and maintenance costs, variable operating and maintenance costs, efficiency,
+                                  ramping rates, minimum up and down, and minimum load. </ol>
+                              <ol>2. Transmission lines between countries.</ol>
+                              <ol>3. Hourly electricity demand patterns are based on historical electricity demand patterns
+                                  for each country. Additionally, all patterns are adapted based on electrification of
+                                  the heating and transport. </ol>
+                              <ol>4. Demand response options, also known as demand side management (DSM): to what extent
+                                  electricity demand can be shifted or curtailed during times of peak residual load.
+                                  Demand options are assessed for industry, and residential and tertiary appliances.
+                                  Volumes and activation times are limited depending on the application and season.
+                              </ol>
+                              <ol>5. Operating reserves (both up and down regulation) can be included that can cope with
+                                  mismatches between demand and generation due to (i) demand forecast errors, (ii) vRES
+                                  generation forecast errors, and (iii) unplanned generator outages. </ol>
+                              <ol>6. Supply patterns of solar and wind energy are based on historical time series or
+                                  climate simulations for future weather years.</ol>
+                          </ul>
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="psm-eu_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                 PSM-EU can be used to support policy making and decision making among others, in the
+                                  field of energy security, power system reliability, emission reduction policies,
+                                  electrcitity market designs, any regulation in the electricity sector, electrification
+                                  strategies, cooperation between countries with regard to the energy system across
+                                  Europe, investment decisions, tax regimes, and R&D of technologies.
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                PSM-EU calculates the cost implications and power system reliability of the climate SDG.
+                                  With respect to the SDG7, it provides insights into total system costs (+ split into
+                                  investment costs and variable costs), electricity prices, system adequacy, share of
+                                  each electricity generation technology (also all renewables).
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="psm-eu_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.apenergy.2018.08.109</td>
+                                          <td>
+                                            Is a 100% renewable European power system feasible by 2050?
+                                          </td>
+                                          <td>
+                                              <p>Seven scenarios for a 100% renewable European power system are modelled
+                                                  for 2050. A 100% renewable system could operate with the same level of
+                                                  adequacy as today. Mass mobilisation of Europe’s solid biomass and
+                                                  biogas resources would be required. 90% more generation and 240%
+                                                  more transmission capacity would be needed than today. Costs
+                                                  would be ∼530 €billion per year, 30% more than a system with nuclear
+                                                  or CCS.</p>
+
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.apenergy.2019.113587</td>
+                                          <td>
+                                              Cost-optimal reliable power generation in a deep decarbonisation future
+                                          </td>
+                                          <td>
+                                              A detailed model of the 2050 Western Europe power system is developed.
+                                              Variable system costs differ up to 25% with interannual weather
+                                              variability. In most scenarios firm low-carbon capacity is above 75% of
+                                              the peak demand. The role of green hydrogen as electricity storage is
+                                              limited.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                             https://doi.org/10.1016/j.apenergy.2015.09.090
+                                          </td>
+                                          <td>
+                                              Least-cost options for integrating intermittent renewables in low-carbon
+                                              power systems
+                                          </td>
+                                          <td>
+                                              Simulated the 2050 West-European power system with 40%, 60% and 80% RES
+                                              penetration. Assessed if 5 options can complement intermittent RES and
+                                              lower total system costs. 3 options lower costs: demand response,
+                                              gas-fired generators(+CCS) and curtailment. Power storage is too expensive
+                                              and extra interconnectors are valuable at RES ⩾60%. Virtually all
+                                              generators encounter a revenue gap in the current energy-only market.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the PSM-EU model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="42_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>van Zuijlen, B., Zappa, W., Turkenburg, W., van der Schrier, G., & van den Broek, M.
+                                (2019). Cost-optimal reliable power generation in a deep decarbonisation future.
+                                Applied Energy, 253, [113587]. https://doi.org/(...)apenergy.2019.113587</p>
+                            <p>Zappa, W., Junginger, M., & van den Broek, M. (2019). Is a 100% renewable European power
+                                system feasible by 2050? Applied Energy, 233-234, 1027-1050.
+                                https://doi.org/(...)apenergy.2018.08.109</p>
+                            <p>Brouwer, A. S., van den Broek, M., Zappa, W., Turkenburg, W. C., & Faaij, A. (2016).
+                                Least-cost options for integrating intermittent renewables in low-carbon power systems.
+                                Applied Energy, 161, 48-74. https://doi.org/(...)apenergy.2015.09.090</p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

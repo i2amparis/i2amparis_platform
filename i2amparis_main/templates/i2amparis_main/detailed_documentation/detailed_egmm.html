@@ -1,0 +1,411 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#egmm_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model EGMM</span>
+                                    <a style="display: none"
+                                       href="#egmm_key_features">Key features of the model EGMM</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#egmm_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#egmm_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#egmm_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#egmm_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#egmm_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#egmm_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#egmm_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#egmm_recent_use_cases">Recent use cases</a>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>References</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#42_references">References</a>-->
+<!--                                </li>-->
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The EGMM model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="egmm_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                          <p>
+                           EGMM is a dynamic, multi-market sectoral equilibrium model, simulating the intricate workings
+                              of the European natural gas markets. EGMM modelling has proved excep-tionally useful in:
+                              Effects of major global developments on the European gas markets (e.g. LNG supply);
+                              Cost-Benefit Analysis (CBA) of new infrastructure;
+                          </p>
+                              <p>
+                                  Identifying main risks affecting the realisation of infrastructure projects;
+                                  Cross-Border Cost Allocation (CBCA) of infrastructure projects; Effects of various
+                                  tariff regimes on the European gas market; Effects of major infrastructure projects
+                                  and long-term contract delivery point changes on the European gas market
+                                  (e.g. Nord Stream 2)
+                              </p>
+                              <p>
+                                  Our model is primarily suited for scenario analysis, not forecasting.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="egmm_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the EGMM model</h2>
+                              <p>
+                                  Infrastructure evaluation, CBA, CBCA, regulatory policies' evaluation (e.g. tariff
+                                  change on major infastructure)
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="egmm_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                               None
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="egmm_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  Consumer surplus, producer surplus, gas traders profit, gas infrastructure operators
+                                  revenue
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="egmm_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                None
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="egmm_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                               Perfect competition constrained by long-term gas contracts and infrastructure
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="egmm_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                  Gas production, gas consumption, gas infrastructure (pipeline, storage, LNG)
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="egmm_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                  None
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="egmm_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                  None
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="egmm_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1177/0958305X16685471</td>
+                                          <td>
+                                             How far is mitigation of Russian gas dependency possible through energy
+                                              efficiency and renewable policies assuming different gas market
+                                              structures?
+                                          </td>
+                                          <td>
+                                             This paper presents the results of a coordinated modelling assessment that
+                                              incorporates European energy efficiency and renewable policies with two
+                                              potential gas market scenarios. First, the impact of EU energy efficiency
+                                              and renewable policies on natural gas demand is calculated using the
+                                              PRIMES model 2014 Baseline projection, the Fraunhofer ISI Low Policy
+                                              Intensity Energy Efficiency scenario, and the Green-X model for renewable
+                                              deployment. Next, the effect of these policies on the natural gas markets
+                                              is assessed, using the European Gas Market Model. The model tests
+                                              scenarios for different positions on long-term gas contracts with Russia
+                                              assuming different stages of European gas infrastructure development. The
+                                              findings show that dependency on Russian natural gas can be reduced to
+                                              low levels without triggering a significant increase in natural gas prices
+                                              for any single EU member country. In an extreme scenario whereby energy
+                                              efficiency savings, higher renewable energy sources deployment and the
+                                              assumed positive gas market developments take place simultaneously, gas
+                                              cost savings can reach as high as 37%. Benefits arise not only in the most
+                                              recent round of EU Member States (12 MS) targeted in the study, but are
+                                              visible across most EU gas markets. This underlines the interlinkages of
+                                              the whole EU gas market, and the results suggest that security of gas
+                                              supply is not only a challenge for new Member States, but in the broader
+                                              European markets.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.5547/01956574.37.SI3.akis</td>
+                                          <td>
+                                             A Top-Down Approach to Evaluating Cross-Border Natural Gas Infrastructure
+                                              Projects in Europe
+                                          </td>
+                                          <td>
+                                             There is an ongoing policy debate in Europe about how to select natural gas
+                                              infrastructure projects for an EU-wide investment support scheme. We
+                                              contribute to this debate by introducing a model-based project evaluation
+                                              method that addresses several shortcomings of the current approach and
+                                              demonstrate its application on a set of shortlisted investment proposals
+                                              in Central and South Eastern Europe. Importantly, our selection mechanism
+                                              deals with the complementarity and the substitutability of new pipelines.
+                                              We find that a small number of projects are sufficient to maximize the
+                                              net gain in regional welfare, but different baseline assumptions favor
+                                              different project combinations. We also explore the consequences of
+                                              Russian gas permanently delivered at the EU border from northern and
+                                              southern routes that bypass Ukraine and find modest negative welfare
+                                              effects.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                      </tbody>
+                                      <caption>Recent publications using the EGMM model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+<!--                    <div class="row">-->
+<!--                        <section class="section">-->
+<!--                            <span id="42_references" class="anchor"></span>-->
+<!--                            <h2 class="mb-0 heading-new">References</h2>-->
+
+<!--                        </section>-->
+<!--                    </div>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

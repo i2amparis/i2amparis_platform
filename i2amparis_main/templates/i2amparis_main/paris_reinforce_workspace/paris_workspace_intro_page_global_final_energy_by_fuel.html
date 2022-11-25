@@ -1,0 +1,88 @@
+{% load static %}
+{% csrf_token %}
+<div id="global_final_energy_by_fuel" class="row tab-pane" >
+    <div class="container" style="width: 90%; height:100%;">
+
+        <div class="tooltip-demo col-md-6 col-xs-12">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart on the right will present the Global Final Energy by Fuel in each model to 2100 averaged across scenarios.
+                    </p>">
+                Global Final Energy by Fuel in each Model
+            </h2>
+            <h4 style="color: #828f30">(averaged across scenarios)</h4>
+        </div>
+        <div class="tooltip-demo col-md-6 col-xs-12">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart on the right will present the Global Final Energy by Fuel in each scenario to 2100 averaged across models.
+                    </p>">
+                Global Final Energy by Fuel in each Scenario
+            </h2>
+            <h4 style="color: #828f30">(averaged across models)</h4>
+        </div>
+
+
+        <div class=" col-md-6 col-xs-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="global_final_energy_by_fuel_1_frame_div" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="global_final_energy_by_fuel_1_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="global_final_energy_by_fuel_1_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the Global Final Energy by Fuel in
+                                each model to 2100 averaged across scenarios.
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-6 col-xs-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="global_final_energy_by_fuel_2_frame_div" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="global_final_energy_by_fuel_2_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="global_final_energy_by_fuel_2_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the Global Final Energy by Fuel in
+                                each scenario to 2100 averaged across models.
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-12" style="margin-top: 1em">
+            <button style="background-color: #e78b10; font-weight: bold"
+                    class="button btn btn-default openbtn" type="button"
+                    data-toggle="collapse" data-target="#legend_final_energy_by_fuel">
+                Show Legend
+            </button>
+        </div>
+        <div id="legend_final_energy_by_fuel" class="collapse col-xs-12 col-md-12">
+            <div class="" style="font-size: 0.8em; margin-top: 1em">
+                <div class="" id="legend_final_energy_by_fuel_scenarios">
+                    {% include "i2amparis_main/paris_reinforce_workspace/prw_wawh_summary_scenario_legend.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

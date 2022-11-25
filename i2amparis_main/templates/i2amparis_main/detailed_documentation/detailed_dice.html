@@ -1,0 +1,393 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  DICE#}
+                        <div id="collapse_dice">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#dices_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Technical specifications</span>
+                                    <a style="display: none"
+                                       href="#dice_technical_specif">Technical specifications</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Regional, sectoral and GHG coverage</span>
+                                    <a style="display: none"
+                                       href="#dice_regional_sectoral_ghg">Regional, sectoral and GHG coverage</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases and limitations</span>
+                                    <a style="display: none"
+                                       href="#dice_recent_use_cases">Recent use cases and limitations</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#dice_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The Dynamic Integrated model of Climate and
+                             the Economy (DICE)</h1>
+                      </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="dices_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  DICE is a global integrated assessment model developed by Nordhaus (1992) that
+                                  represents the economic, policy and scientific aspects of climate change. It
+                                  integrates the climate system in the framework of economic growth theory. In this
+                                  approach, society invests in capital goods, thereby reducing consumption today, in
+                                  order to increase consumption in the future. Investing in emissions reduction reduces
+                                  consumption today but also prevents damage from climate change and increases
+                                  consumption possibilities in the future. The DICE model has been used and developed
+                                  by researchers outside the consortium.
+                              </p>
+                              <p>
+                                  The following figure shows a schematic flow chart of the major modules and logical structure of
+                                  the model. The economy module includes the factors that are driving the economic
+                                  growth (labour, population, capital and technology) and also the emissions of GHGs.
+                                  The DICE model includes also several geophysical relationships that link the economy
+                                  with the different forces affecting climate change. These relationships include the
+                                  carbon cycle, a radiative forcing equation, climate-change equations and a
+                                  climate-damage relationship. A key feature of IAMs is that the modules operate in an
+                                  integrated fashion rather than taking variables as exogenous inputs from other models
+                                  or assumptions. Therefore, the damage of climate change affects the production/output
+                                  via a damage function.
+                              </p>
+
+                                <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/dice_structure.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Structure of the DICE model
+                                      </p>
+
+                                  </div>
+                              </div>
+
+                          </section>
+                    </div>
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="dice_technical_specif" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Technical specifications </h2>
+                              <p>
+                                  In this section we include technical information on DICE extracted from
+                                  Gonzalez-Eguino et al. (2016). More information can be found in Nordhaus and
+                                  Sztorc (2013).
+                              </p>
+                              <p>
+                                  The model optimises a social welfare function, W, which is the discounted sum of the
+                                  population-weighted utility of per capita consumption.
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:30%;height:30%; margin-bottom: 2em"
+                                       src="{% static "images/dice_formula_w.png" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+
+                              <p>
+                                  In this function, c(t) is the per capita consumption, L(t) is the population, and
+                                  R(t) = (1 + ρ)<sup>-t</sup> is the discount factor of utility or welfare.  ρ is the
+                                  pure rate of social time preference or generational discount rate. The utility
+                                  function is a constant elasticity function with respect to consumption of the
+                                  form U(c) = c<sup>1-α</sup> /(1 − α). The parameter α is interpreted here as the
+                                  generational
+                                  inequality aversion.
+                              </p>
+                              <p>
+                                  Net output, Q(t), is the gross output, Y(t), reduced by damage, Ω(t), and mitigation
+                                  costs, Λ(t). This net output, a function of capital, labour and technology that
+                                  explains economic growth, can be devoted to consumption, C(t), and investment, I(t).
+                                  Labour is proportional to population, while capital accumulates according to an
+                                  endogenous savings rate.
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:40%;height:40%; margin-bottom: 2em"
+                                       src="{% static "images/ices_formula_qt.png" %}">
+                                  <div style="text-align: center">
+
+                                  </div>
+                              </div>
+                              <p>
+                                  Damage from climate change, which is subject to large uncertainties, is represented in
+                                  the DICE model by a quadratic function of globally averaged temperature change
+                                  (<b>T<sub>AT</sub></b>).
+                                  The damage function is defined as <b>Ω(t) = D(t)/[1+D(t)]</b>, where
+                              </p>
+
+<div style="text-align: center">
+                                  <img style="width:40%;height:40%; margin-bottom: 2em"
+                                       src="{% static "images/ices_formula_dt.png" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+                              <p>
+                                  The abatement cost is a function of the emissions reduction rate, μ(t), and is
+                                  estimated to be highly convex, indicating that the marginal cost of reductions
+                                  rises from zero more than linearly with the reduction rate:
+                              </p>
+
+                                <div style="text-align: center">
+                                  <img style="width:20%;height:20%; margin-bottom: 2em"
+                                       src="{% static "images/ices_formula_lt.png" %}">
+                                  <div style="text-align: center">
+
+                                  </div>
+                              </div>
+                              <p>
+                                  Total emissions,<b>E(t)</b>, are fossil fuel and industrial emissions plus land-use change
+                                  emissions, ELAND(t), and permafrost emissions, EPER(t). Fossil fuel and industrial
+                                  CO<sub>2</sub> emissions are determined by the level of carbon intensity, σ(t),
+                                  times gross output, and reduced by the emissions reduction rate, μ(t). The only type
+                                  of emissions subject to (endogenous) control in the DICE model is fossil fuel and
+                                  industrial CO<sub>2</sub>.
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:45%;height:45%; margin-bottom: 2em"
+                                       src="{% static "images/ices_formula_et.png" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+                              <p>
+                                  The geophysical equations link the GHG emissions to the carbon cycle, radiative
+                                  forcing and temperature change. These equations are calibrated for the 21st century
+                                  to large models or model experiments and have been updated (version 2013R) in line
+                                  with AR5 of the IPCC (for example, in the current version, the equilibrium climate
+                                  sensitivity has been reduced from 3 to 2.9). The following equation represents the
+                                  equations of the carbon cycle for three reservoirs (j = AT, UP, and LO): atmosphere,
+                                  upper oceans and biosphere, and lower oceans. All emissions flow into the atmosphere
+                                  and the parameters φij represent the flow of carbon between reservoirs per period.
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:40%;height:40%; margin-bottom: 2em"
+                                       src="{% static "images/ices_formula_mjt.png" %}">
+                                  <div style="text-align: center">
+
+                                  </div>
+                              </div>
+                              <p>
+                                  Finally, the relationship between CO2 concentrations and increased radiative
+                                  forcing is given by:
+                              </p>
+                              <p><b>F(t) = η{log<sub>2</sub>[M<sub>AT</sub>(t)/M<sub>AT</sub>(1750)]}+F<sub>EX</sub>(t)</b></p>
+
+                              <p>
+                                  where F(t) is the change in total radiative forcing of greenhouse gases from
+                                  anthropogenic sources and FEX(t) is an exogenous forcing (which includes non-CO2
+                                  emissions and aerosols). For simplicity and transparency, we keep all aspects of
+                                  the original DICE model unaltered. In this way, our results can easily be compared
+                                  to previous findings obtained with the same model.
+                              </p>
+
+                         </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="dice_regional_sectoral_ghg" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Regional, sectoral and GHG coverage</h2>
+                              <p>
+                                  DICE is a global model. Therefore, it is not disaggregated between sectors,
+                                  technologies or regions. The model includes CO,<sub>2</sub> emissions from fossil fuel
+                                  combustion endogenously and CO2 from other sources exogenously. Non-CO<sub>2</sub>
+                                  emissions are included aggregated as exogenous radiative forcing.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="dice_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases and limitations</h2>
+                              <p>
+                                  DICE has been helpful in illustrating the economic cost and damage from climate action
+                                  under different circumstances (Nordhaus, 2014; Moore and Diaz, 2015; Butler et al.,
+                                  2014; or González-Eguino, 2016) However, different studies have shown that the results
+                                  of the DICE model are very sensitive to the choice of the damage function (Pindyck,
+                                  2013), especially beyond 2°C. Therefore, some authors have used the DICE model using
+                                  alternative damage functions (Ackerman et al., 2010 or Gonzalez-Eguino et al., 2017)
+                                  and a sensitivity analysis of key parameters. Finally, the DICE model is an aggregated
+                                  model that captures the economic cost of mitigation using only a cost function.
+                                  Therefore, it cannot capture the complexity of the mitigation options of large-scale
+                                  IAMs, such as, for example, the GCAM or TIAM models.
+
+                              </p>
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="dice_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                González-Eguino, M., & Neumann, M. B. (2016). Significant implications of permafrost
+                                thawing for climate change control. Climatic Change, 136(2), 381-388.
+                            </p>
+                            <p>
+                                González‐Eguino, M., Neumann, M. B., Arto, I., Capellán‐Perez, I., & Faria, S. H.
+                                (2017). Mitigation implications of an ice‐free summer in the Arctic Ocean. Earth's
+                                Future, 5(1), 59-66.
+                            </p>
+                            <p>
+                                Nordhaus, W.D., & Sztorc., P. (2013). DICE 2013R: Introduction and User’s Manual.
+                                Available at:
+                                http://www.econ.yale.edu/~nordhaus/homepage/documents/ DICE_Manual_103113r2.pdf.
+                            </p>
+                            <p>
+                                Nordhaus, W. (2014). Estimates of the social cost of carbon: concepts and results
+                                from the DICE-2013R model and alternative approaches. Journal of the Association of
+                                Environmental and Resource Economists, 1(1/2), 273-312.
+                            </p>
+                            <p>
+                                Moore, F. C., & Diaz, D. B. (2015). Temperature impacts on economic growth warrant
+                                stringent mitigation policy. Nature Climate Change, 5(2), 127.
+                            </p>
+                            <p>
+                                Butler, M. P., Reed, P. M., Fisher-Vanden, K., Keller, K., & Wagener, T. (2014).
+                                Inaction and climate stabilization uncertainties lead to severe economic risks.
+                                Climatic change, 127(3-4), 463-474.
+                            </p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "27rem";
+        {#          document.getElementsByClassName("main-page")[0].style.marginLeft = "250px";#}
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        {#          document.getElementsByClassName("main-page")[0].style.marginLeft = "0";#}
+    }
+</script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+</body>
+
+</html>
+
+

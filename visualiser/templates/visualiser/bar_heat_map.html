@@ -1,0 +1,105 @@
+{% extends 'visualiser/main_visualiser_am4.html' %}
+{% block content %}
+ <div id="chartdiv"></div>
+
+<script>
+    am4core.ready(function () {
+
+        var chart_3d = {{ chart_3d }};
+        if (chart_3d) {
+            var chart = am4core.create("chartdiv", am4charts.XYChart3D);
+        } else {
+            var chart = am4core.create("chartdiv", am4charts.XYChart);
+        }
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+
+        // Add data
+        chart.data = {{ chart_data |safe}};
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        var x_axis_title = "{{x_axis_title}}";
+        var x_axis_name = "{{ x_axis_name }}";
+        var x_axis_unit = "{{ x_axis_unit }}";
+        var y_var_names = {{ y_var_names|safe}};
+        var y_var_titles = {{ y_var_titles|safe}};
+        var y_var_units = {{ y_var_units|safe }};
+        var y_axis_title = "{{ y_axis_title }}";
+        var color_list = {{ color_list|safe }};
+        var minmax_y_value = {{ minmax_y_value|safe }};
+        var use_default_colors = {{ use_default_colors }};
+        if (use_default_colors){
+            color_list = ["#539ad6","#aa352f"];
+        }
+        chart.width = am4core.percent(95);
+
+        /* Create axes */
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = x_axis_name;
+        categoryAxis.renderer.grid.template.location = 0;
+        categoryAxis.renderer.minGridDistance = 30;
+        categoryAxis.title.text = x_axis_title + " (" + x_axis_unit + ")";
+        categoryAxis.title.fontWeight = 600;
+        categoryAxis.title.marginTop = 10;
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.title.fontWeight = 600;
+        var valueAxis2 = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis2.title.fontWeight = 600;
+        valueAxis2.renderer.opposite = true;
+
+
+        valueAxis.title.text = y_axis_title + " (" + y_var_units[0] + ")";
+        valueAxis.title.fontWeight = 600;
+
+        /* Create series */
+        if (chart_3d) {
+            var series = chart.series.push(new am4charts.ColumnSeries3D());
+            series.clustered = false;
+            series.columns.template.fillOpacity = 0.9;
+            series.columns.template.width = am4core.percent(60);
+        } else {
+            var series = chart.series.push(new am4charts.ColumnSeries());
+            series.clustered = true;
+            series.columns.template.fillOpacity = 0.9;
+            series.columns.template.strokeOpacity = 1;
+            series.columns.template.width = am4core.percent(80);
+
+        }
+        series.columns.template.tooltipText =  "{categoryX}- " + y_var_titles[0] + " : [bold]{valueY}"+ y_var_units[0] +"[/]";
+        series.tooltip.autoTextColor = false;
+        series.tooltip.label.fill = am4core.color("#FFFFFF");
+
+
+
+        series.dataFields.valueY = y_var_names[0];
+        series.dataFields.categoryX = x_axis_name;
+        series.name = y_var_titles[0];
+        series.columns.template.column.cornerRadiusTopLeft = 5;
+        series.columns.template.column.cornerRadiusTopRight = 5;
+        series.stroke = am4core.color("#9f9f9f");
+        series.strokeOpacity = 0.5;
+        series.yAxis = valueAxis2;
+
+        /* Create a heat rule */
+        series.heatRules.push({
+            "target": series.columns.template,
+            "property": "fill",
+            "min": am4core.color(color_list[0]),
+            "max": am4core.color(color_list[1]),
+            "dataField": "valueY"
+        });
+
+        /* Create a heat legend */
+        var heatLegend = chart.rightAxesContainer.createChild(am4charts.HeatLegend);
+        heatLegend.height = am4core.percent(100);
+        heatLegend.minColor = am4core.color(color_list[0]);
+        heatLegend.maxColor = am4core.color(color_list[1]);
+        heatLegend.minValue = minmax_y_value[0];
+        heatLegend.maxValue = minmax_y_value[1];
+        heatLegend.orientation = "vertical";
+
+
+    });
+</script>
+{% endblock %}

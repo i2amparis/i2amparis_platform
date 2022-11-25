@@ -1,0 +1,17 @@
+asgiref==3.2.10
+Django==2.2.5
+django-cachalot==2.3.3
+django-environ==0.4.5
+gunicorn==20.1.0
+numpy==1.19.3
+pandas==1.1.4
+psycopg2-binary>=2.8,<2.9
+python-dateutil==2.8.1
+python-memcached==1.59
+pytz==2020.1
+redis==3.5.3
+six==1.15.0
+sqlparse==0.3.1
+whitenoise==5.2.0
+dj-database-url==0.5
+xlrd==2.0.1

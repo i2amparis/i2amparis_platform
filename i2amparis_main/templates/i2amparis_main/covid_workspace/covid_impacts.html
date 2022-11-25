@@ -1,0 +1,135 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30;">
+        What are the impacts of the optimal allocation of COVID-19 recovery packages over power-sector technologies?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    <p class="col-md-12 col-xs-12">
+        Results indicate that the optimal allocation of COVID-19 recovery packages over power-sector technologies in China and the EU have the potential to significantly contribute to their respective 2030 mitigation targets, compared with where the two regions would be headed given their current policy efforts and absent any recovery finance spending. 
+    </p>
+    <p class="col-md-12 col-xs-12">
+    <ul>
+        <li>For <strong>China</strong>, the optimal allocation of the available recovery funds in a portfolio of clean energy supply technologies can cut up to two times the CO2 emissions gap of the country’s 2030 nationally determined contribution (NDC) target of reducing the carbon intensity of its economy by at least 65% relative to 2005, while in the same period covering 4%–22% of the jobs lost due to COVID-19.</li>
+        <li>For the <strong>EU</strong>, and depending on the three models’ emissions trajectories, optimal recovery spending could help approach the ‘‘Fit for 55’’ CO2 emissions target (i.e., reduce CO2 emissions by at least 55% by 2030, against 1990 levels) by 7%–48%, while mitigating the pandemic-related job losses by up to around 9% by the end of the decade.</li>
+        <li>Packages in the <strong>United States</strong> and <strong>India</strong> are measured to contribute significantly less, with contributions in the range of 0%–3%.</li>
+        <li>The expected impact of packages in <strong>Canada</strong> lies in between, while results for <strong>Japan</strong> are inconclusive due to stronger model variation.</li>
+    </ul>
+    </p>
+    <p class="col-md-12 col-xs-12">
+        You can select a country/region in the dropdown menu to see numeric results for each country. 
+    </p>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart impacts of green recovery packages.</p>">
+                Impacts on emissions cuts and energy-sector jobs
+            </h2>
+            <h4 style=""></h4>
+
+            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 1em; text-align: center">Please select a country/region and the type of results (absolute or relative).</div>
+            <div class="col-md-3 col-sm-2 col-xs-1"></div>
+            <div class="form-group col-md-6 col-sm-8 col-xs-10" style="margin-bottom: 2em;">
+                <div class="">
+                    <select class="desc_text take_up_space country-select-impacts" placeholder="Select a Country" id="country_select" style="width: 100%;display:inline">
+                    <option value="China">China</option>
+                    <option value="Canada">Canada</option>
+                    <option value="EU">EU (incl. the UK)</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="USA">USA</option>
+                    </select>
+                    <select class="desc_text take_up_space result_type_select" placeholder="Select a result types" id="result_type_select" style="width: 100%;display:inline">
+                    <option value="Relative">Relative results</option>
+                    <option value="Absolute">Absolute results</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4" style="height: 30em">
+            <h4 style="color: #828f30; margin-bottom:0">CO2 emissions cuts</h4>
+            <div style="height: 100%;">
+                <div id="covid_impacts_co2" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="covid_impacts_co2_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="covid_impacts_co2_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the impacts of COVID recovery packages on CO2 emissions cuts.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4" style="height: 30em">
+            <h4 style="color: #828f30; margin-bottom:0">Jobs by 2025</h4>
+            <div style="height: 100%;">
+                <div id="covid_impacts_jobs_2025" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="covid_impacts_jobs_2025_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="covid_impacts_jobs_2025_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the impacts of COVID recovery packages on energy sector jobs by 2025.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4" style="height: 30em">
+            <h4 style="color: #828f30; margin-bottom:0">Jobs by 2030</h4>
+            <div style="height: 100%;">
+                <div id="covid_impacts_jobs_2030" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="covid_impacts_jobs_2030_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="covid_impacts_jobs_2030_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the impacts of COVID recovery packages on energy sector jobs by 2030.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-md-12 col-xs-12" style="margin-top:6em">
+        <p style="font-style: italic"><strong>Relative results for emissions cuts:</strong> We first calculate the difference in cumulative 2021–2030 emissions of each region on model in the current policies baseline with emissions in the latest 2030 NDC submissions, and then divide the recovery package abatement by this emissions gap. Assumed NDC targets (applied to CO only) are 55% w.r.t. 1990 in the EU, 65% emissions intensity w.r.t. 2005 in China, 51% w.r.t. 2005 in the United States, 45% emissions intensity w.r.t. 2005 in India, 46% w.r.t. 2013 in Japan, and 42.5% w.r.t. 2005 in Canada. No results appear for model-region combinations where the current policy baseline already achieves the latest NDC target. </p>
+
+        <p style="font-style: italic"><strong>Relative results for jobs:</strong> First the number of new unemployed in 2021 relative to 2019 is calculated by multiplying the unemployment rate by total labor force; we focus on unemployment in 2021 instead of 2020 to filter out large temporal unemployment driven by hard lockdowns during 2020). Then it divides the amount of recovery package job-years in the energy sector by 10 (2021-2030) and 5 (2021–2025) and divides it by the total amount of new unemployed.</p>
+    </div>
+
+
+
+
+
+    </div>
+</div>

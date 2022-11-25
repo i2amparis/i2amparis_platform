@@ -1,0 +1,81 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        How do the models compare over time based on benchmarking indicators?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    {#    <span id="ccs" style="position: relative; top:-8em"></span>#}
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <p class="col-md-12 col-xs-12">
+                <ul>
+                    <li>“Energy intensity” is a measure of energy used per unit of GDP.</li>
+                    <li>In the WWH scenarios, the indicators are on different levels in 2020 and then decrease towards 2050 for all models except EU Times.</li>
+                </ul>
+            </p>
+            <div class="col-md-12 col-xs-12">
+                <div class="tooltip-demo" style="margin-top:3em">
+                    <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                    data-toggle="tooltip" data-placement="auto"
+                    title="<p>The charts presents the Global Final Energy by sector.
+                    </p>">
+                    Benchmarking indicators
+                </h2>
+                <h4 style="">(by scenarios and models)</h4>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 1em; text-align: center">Please select a scenario and an indicator.</div>
+            <div class="col-md-3 col-sm-2 col-xs-1"></div>
+            <div class="form-group col-md-8 col-sm-10 col-xs-12" style="margin-bottom: 2em;">
+                <div class="">
+                    <select class="desc_text take_up_space indicator_scenario_select sum-mul-select sum-boot-select" placeholder="Select a scenario" id="indicator_scenario_select" style="width: 100%;display:inline" multiple="multiple">
+                    <option value="WWH" selected>WWH</option>
+                    <option value="NZE">NZE</option>
+                    </select>
+                    <select class="desc_text take_up_space indicator_variable_select" placeholder="Select an indicator" id="indicator_variable_select" style="width: 100%;display:inline">
+                    <option value="Benchmarking|Industry|Energy intensity">Benchmarking|Industry|Energy intensity</option>
+                    <option value="Benchmarking|Industry|GDP per capita">Benchmarking|Industry|GDP per capita</option>
+                    <option value="Benchmarking|Industry|Electrification rate">Benchmarking|Industry|Electrification rate</option>
+                    <option value="Benchmarking|Industry|CO2 intensity (gross)">Benchmarking|Industry|CO2 intensity (gross)</option>
+                    <option value="Benchmarking|Industry|CO2 intensity (net)">Benchmarking|Industry|CO2 intensity (net)</option>
+                    <option value="Benchmarking|Buildings|Energy per capita">Benchmarking|Buildings|Energy per capita</option>
+                    <option value="Benchmarking|Buildings|Electrification rate">Benchmarking|Buildings|Electrification rate</option>
+                    <option value="Benchmarking|Buildings|District heat rate">Benchmarking|Buildings|District heat rate</option>
+                    <option value="Benchmarking|Buildings|CO2 intensity">Benchmarking|Buildings|CO2 intensity</option>
+                    <option value="Benchmarking|Transport|Energy per capita">Benchmarking|Transport|Energy per capita</option>
+                    <option value="Benchmarking|Transport|Electrification rate">Benchmarking|Transport|Electrification rate</option>
+                    <option value="Benchmarking|Transport|Biofuel admixture quota">Benchmarking|Transport|Biofuel admixture quota</option>
+                    <option value="Benchmarking|Transport|CO2 intensity">Benchmarking|Transport|CO2 intensity</option>
+
+                     </select>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-12 col-md-12" style="height: 40em">
+                <div style="height: 100%;">
+                    <div id="ida_benchmarking" class="row"
+                    style="height: 100%; line-height: 100%;">
+                    <iframe id="ida_benchmarking_viz_iframe" src="" title="Results"
+                    style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="ida_benchmarking_loading_bar"
+                    style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                    <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                    src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                    <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">The chart will present the benchmarking indicators.
+
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

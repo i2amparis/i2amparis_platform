@@ -1,0 +1,102 @@
+{% extends 'visualiser/main_visualiser_am4.html' %}
+{% block content %}
+    <div id="chartdiv"></div>
+    <script>
+        am4core.ready(function () {
+
+// Themes begin
+            am4core.useTheme(am4themes_animated);
+// Themes end
+
+            var chart_data = {{ chart_data|safe }};
+
+            /* Create chart instance */
+            var chart = am4core.create("chartdiv", am4charts.RadarChart);
+
+            chart.paddingBottom = 20;
+            chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+            chart.responsive.enabled = true;
+            var category_title = "{{x_axis_title}}";
+            var category_name = "{{ x_axis_name }}";
+            var variable_name = {{ y_var_names|safe}};
+            var variable_title = {{ y_var_titles|safe}};
+            var variable_unit = {{ y_var_units|safe }};
+            var diagram_title = "{{ y_axis_title }}";
+            var color_list = {{ color_list|safe }};
+            var use_default_colors = {{ use_default_colors }};
+            console.log(color_list);
+            console.log(use_default_colors);
+            console.log(chart_data);
+            console.log(variable_name);
+            console.log(variable_title);
+            console.log()
+
+
+            chart.legend = new am4charts.Legend();
+
+
+            var chart_title = chart.titles.create();
+            chart_title.text = diagram_title;
+            chart_title.fontSize = 19;
+            chart_title.fontWeight = 600;
+            chart_title.marginBottom = 10;
+            chart_title.align = "center";
+            chart_title.valign = "top";
+
+            chart.data = chart_data;
+
+            /* Create axes */
+            var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+            categoryAxis.dataFields.category = category_name;
+            categoryAxis.fontWeight = 600;
+
+
+
+                valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                if (use_default_colors == true) {
+                    valueAxis.renderer.axisFills.template.fill = chart.colors.getIndex(2);
+                } else {
+                    valueAxis.renderer.axisFills.template.fill = am4core.color(color_list[i]);
+                }
+                valueAxis.renderer.axisFills.template.fillOpacity = 0.05;
+
+
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+            var series = [];
+            for (var i = 0; i < variable_name.length; i++) {
+                if (use_default_colors) {
+                    series[i] = create_series(category_name, variable_name[i], chart.colors.getIndex(i), variable_title[i],
+                        variable_unit[i], valueAxis);
+                } else {
+                    series[i] = create_series(category_name, variable_name[i], color_list[i], variable_title[i],
+                        variable_unit[i], valueAxis);
+                }
+            }
+            chart.cursor = new am4charts.RadarCursor();
+            chart.legend.labels.template.truncate = false;
+            chart.legend.labels.template.wrap = true;
+
+            function create_series(category_name, variable_name, fillColor, variable_title, variable_unit, myvalueAxis) {
+                var series = chart.series.push(new am4charts.RadarSeries());
+                series.dataFields.valueY = variable_name;
+                series.dataFields.categoryX = category_name;
+                series.strokeWidth = 3;
+                series.stroke = fillColor;
+                series.fill = fillColor;
+                series.fillOpacity = 0.2;
+                series.name = variable_title;
+                series.yAxis = myvalueAxis;
+                series.legendSettings.labelText = "{name} (" + variable_unit + "):";
+                series.legendSettings.itemValueText = "[bold]{valueY}[/bold]";
+
+                {#series.column.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";#}
+            }
+
+
+
+
+        }); // end am4core.ready()
+
+    </script>
+{% endblock %}

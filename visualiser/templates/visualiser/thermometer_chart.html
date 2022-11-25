@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <!--<link rel="stylesheet" href="./style.css">-->
+    {% load static %}
+ <link rel="stylesheet" type="text/css" href="{% static 'thermometer/style.css' %}">
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+<style>
+#chartdiv {
+  height: 300px;
+}
+
+</style>
+    <script src={% static "main_theme/js/jquery.js" %}></script>
+    <script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+    <script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+
+
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+    <div id="main" class="container"
+         style="overflow: visible!important;z-index: 1; width: 100%; margin-left: 5em;margin-right: 5em; margin-top: 2em" >
+        <div class="row" style="height: 38em">
+            <div id="thermometer_chart" style="height: 100%; margin-bottom: 10em;" class="col-sm-1 col-xs-12">
+                <div id="termometer" style="height: 100%">
+                    <div id="temperature" style="height:0" data-value="0°C"></div>
+                    <div id="graduations"></div>
+                </div>
+
+            <div id="playground">
+                <div id="range">
+                    Temperature:<input id="input_temp" type="text" value="0">
+<!--                    MIN:<input id="minTemp" type="text" value="-20">-->
+<!--        &lt;!&ndash; 			<input type="range" min="-20" max="50" value="42"> &ndash;&gt;-->
+<!--                    MAX:<input id="maxTemp" type="text" value="50">-->
+                </div>
+                <p id="">Celcius C°</p>
+
+            </div>
+        </div>
+            <div class="col-sm-1 "></div>
+        <div id="chartdiv" class="col-sm-10 col-xs-12" style="height: 48em"></div>
+
+</div>
+
+<!-- partial -->
+  <!--<script  src="./script.js"></script>-->
+	<script>
+	const min_temp = {{min_temp}}
+	const max_temp = {{max_temp}}
+	const inputData = {{data|safe}};
+	const recordData = {{recordData|safe}};
+</script>
+  {% load static %}
+ <script src="{% static 'thermometer/script.js' %}"></script>
+</div>
+</body>
+
+</html>

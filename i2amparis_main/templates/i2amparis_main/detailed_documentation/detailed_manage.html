@@ -1,0 +1,455 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#manage_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model MANAGE</span>
+                                    <a style="display: none"
+                                       href="#manage_key_features">Key features of the model MANAGE</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#manage_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#manage_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#manage_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#manage_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#manage_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#manage_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#manage_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#manage_recent_use_cases">Recent use cases</a>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>References</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#42_references">References</a>-->
+<!--                                </li>-->
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The MANAGE model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="manage_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  MANAGE is a (recursive) dynamic single country computable general equilibrium (CGE)
+                                  model designed to focus on energy, emissions and climate change. In addition to the
+                                  standard features of a single country CGE model, MANAGE includes a detailed energy
+                                  specification that allows for capital/labor/energy substitution in production,
+                                  intra-fuel energy substitution across all demand agents, and a multi-output
+                                  multi-input production structure.
+                                  MANAGE is a dynamic model, using by and large the neo-classical growth specification,
+                                  where labor growth is exogenous. Capital accumulation derives from savings/investment
+                                  decisions. The model allows for a wide-range of productivity assumptions that include
+                                  autonomous improvements in energy efficiency that can differ across agents and energy
+                                  carriers. Finally, the model has a vintage structure for capital that allows for
+                                  putty/semi-putty assumptions with sluggish mobility of installed capital.
+                                  The model is sufficiently flexible that it can be calibrated to a relatively large
+                                  number of Social Accounting Matrices (SAM). The latest version of the model
+                                  incorporates recently developed price/volume splits of the energy sectors and CO2
+                                  emissions. The model is implemented in the GAMS software and an aggregation facility
+                                  is used as a front-end to the model to allow for full aggregation flexibility.
+                              </p>
+
+
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="manage_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the MANAGE model</h2>
+                              <p><b>Geographic coverage </b></p>
+                              <p>
+                                  MANAGE uses the GTAP's database so it can be tailored to any of these countries or for
+                                  a regional coalition. The GTAP's database contains 141 countries/regions comprising of
+                                  121 countries that account for 98% of world GDP and 92% of world population. MANAGE is
+                                  a single country model. Thus, each time, the SAM table of the region choice should be
+                                  imported in the model or, in case of a regional coalition, after completing the
+                                  appropriate regional aggregation on GTAP databse to extract the SAM table of the
+                                  regional coalition. Note that this is in accordance to the GTAP version 10. The
+                                  version 11 is under construction and its pre-released version is expected to be
+                                  available containing even more new countries or countries that belong to a regional
+                                  coalition.
+                              </p>
+                              <p><b>Energy system detail </b></p>
+                              <p>
+                                  Energy goods are aggregated together into a single energy bundle that allows for
+                                  substitution across the diferent energy carriers. Energy is assumed to be a
+                                  near-complement with capital in the short-run, but a substitute in the long-run.
+                                  The model also allows for both multi-input and multi-output production. This  would
+                                  allow for electricity supply to be produced by multiple activities (thermal, hydro,
+                                  solar and other renewable forms of electricity production). Energy demand is bundled
+                                  into a single commodity and disaggregated by energy type using a CES structure that
+                                  allows for inter-fuel substitution.
+                              </p>
+                              <p><b>Land detail</b></p>
+                              <p>
+                                  The model has a single national market for land. Aggregate land supply is specified as
+                                  an upward sloping supply curve. National land supply is allocated to each sector based
+                                  on the assumption of perfect or sluggish mobility
+                              </p>
+                              <p><b>Natoural Resources</b></p>
+                              <p>
+                                   Natural resources are sector specific and supply is given by an iso-elastic supply
+                                  curve.
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="manage_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                  The current model includes carbon emissions only. Carbon, in the current version, is
+                                  only emitted through the combustion of fuels.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="manage_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  The core baseline scenarios for MANAGE are currently calibrated to the SSP projections
+                                  provided by the Integrated Assessment community, but could be adjusted based on the
+                                  country specific data. Labor/population are exogenous and sources include UN
+                                  Population Division, as well as  IIASA. Capital stock is also exogenous within period
+                                  and it is a function of long-run savings dynamics. The baseline scenario is also used
+                                  to calibrate labor productivity. The latter is allowed to differ across sectors.
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="manage_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                  Currently, MANAGE's energy & technology detail is limited to the GTAP's Power Data
+                                  Base. In particular, it includes transmission and distribution, as well as electricity
+                                  production split into 11 sources (thermal, nuclear, hydro renewables, etc.) which are
+                                  further split into base and peak load respectively. The main mtigation instrument
+                                  relies on setting carbon taxes, that is, mitigation policy is limited to direct
+                                  consumption. Additionally, MANAGE allows for caps on emissions. In this case, the
+                                  carbon taxes are determined endogenously. Moreover, since MANAGE allows for exogenous
+                                  changes in productivity, this also includes changes in energy efficiency.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="manage_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p><b>Model solution </b></p>
+                              <p>
+                                  In MANAGE, each year of a scenario is solved as a static equilibrium, with dynamic
+                                  equations linking exogenous factors across years with, in addition, update equations
+                                  for productivity factors. Each static equilibria relies on a relatively standard set
+                                  of equation specifications. The dynamics of MANAGE is composed of three elements
+                                  (similar to most neo-classical growth models): population/labor, capital accumulation,
+                                  and productivity changes, including changes in energy efficiency.
+                              </p>
+                              <p><b>Economic rationale</b></p>
+                              <p>
+                                  In general, MANAGE follows a rather standard economic flow linking production, factor
+                                  income and taxes, and demand (private, public, savings, trade) under closure and
+                                  equilibrium constraints.         More precisely, production structure forms a set of
+                                  nested constant-elasticity-of-substitution functions, allowing for the aggregation of
+                                  multiple activities, as well as for shifts in preferences (e.g. RES vs fossil fuels).
+                                  Demand block consists of three final agents: households, government and investment,
+                                  where each has a unique expenditutre function. Regardings their incomes, househlds
+                                  derive incom from factor payments and tranfers, while government's income comes from a
+                                  suite of taxes and tarrifs. Investment income is driven by savings and depreciation.
+                                  Factor markets are exactly the following: labor, land, capital and natural resources.
+                                  Finally, MANAGE incudes a trade block, where domestic supply is allocated across the
+                                  domestic market and exports, and absorption is allocated between domestic goods and
+                                  imports, implemented is fixed trade and transport margin
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="manage_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                  The key features of MANAGE structure are summarized in the following:
+                                  Capital/labor/energy substitution in production, intra-fuel energy substitution across
+                                  all demand agents, and multi-output and multi-production structure.
+                                  Moreover, dynamics of MANAGE are driven by the following key factors:
+                                  Population and labor force growth rate, capital accumulation (influenced by the
+                                  national savings rate, foreign savings and unit cost of investment), and productivity
+                                  changes, including changes in energy efficiency.
+                                  Regarding pure key modelling parameters, MANAGE like most CGE models is limited to
+                                  various substitution, transformation and income elasticities.
+                                  Finally, one of the key features of MANAGE is the multi-input/multi output
+                                  specification allowing for the aggregation of multiple activities into a single
+                                  marketed good.
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="manage_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                  MANAGE can model a number of key policies including: output tax, tax on sector
+                                  specific capital use, tax on sector specific capital, output subsidy, export tax or
+                                  subsidy, tariffs, value added tax,agent specidic commodity tax. Additionally, a carbon
+                                  tax can be imposed exogenously or determined endogenously with a cap on emissions.
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="manage_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                  MANAGE does not automatically calculate the implications on SDGs. However,
+                                  constituting a multi-sector CGE model with a special focus on energy, it may provide
+                                  impacts of any policy shock on agricultural goods, clear energy, etc.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="manage_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>
+                                              https://www.gtap.agecon.purdue.edu/resources/res_display.asp?RecordID=5790</td>
+                                          <td>
+                                             Integrating Top-down and Bottom-up Approaches: An Integrated Model of
+                                              Energy for a Developing Country
+                                          </td>
+                                          <td>
+                                              In progress …
+                                          </td>
+
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the MANAGE model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="42_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>Selva, A. C. (2019). Integrating Top-down and Bottom-up Approaches: A CGE Energy Model
+                                for a Developing Country.</p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

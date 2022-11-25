@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<body class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AM PARIS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+
+    <style>
+
+
+        sup {
+            vertical-align: super;
+            font-size: smaller;
+            position: relative;
+            top: -0.1em;
+        }
+
+        .mylogo {
+            text-align: left;
+        }
+
+        sub {
+            vertical-align: sub;
+            font-size: 0.6em;
+        }
+
+        .disabled-select {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+
+    </style>
+
+    <!-- =======================================================
+      Theme Name: Green
+      Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<div class="header">
+    <section id="header" class="appear">
+
+        <div class="navbar navbar-fixed-top" role="navigation" data-0="background-color:rgba(52, 58, 64, 1)"
+             data-300="background-color:rgba(0,0,0,1);" style="height: 4em">
+            <div class="navbar-header" style="width: 100%; height: 4em">
+                <div class="wow fadeInUp mylogo" data-wow-offset="0" data-wow-delay="0.1s" href="main">
+                    <a class="col-sm-2 col-md-2 col-xs-2" href="/" style="line-height: 4em"><img
+                            src="/static/images/logo.png"
+                            style="height: 3em"></a>
+                    <a class="col-sm-8 col-md-8 col-xs-6"> </a>
+
+                    <a href="/pr_wwh_landing"
+                       class="button btn btn-default col-sm-1 col-md-1 col-xs-2 openbtn content_btn green line-btn"
+                       style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em; padding: 0;height: inherit; line-height: 2.5em">Back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<div class=" main_page">
+    <section style="min-height: 2000px">
+        <div class="container" style="width: 90%; height:100%; margin-top: 6em;">
+
+
+            <h2
+                    style="font-weight: bold; color: #828f30; ">
+                What Are Our Scenarios?
+            </h2>
+
+            <div class="col-xs-12 col-md-12" style="margin-bottom: 1em">
+                <p>
+                    The first round of model runs within the Paris Reinforce project show results from seven integrated
+                    assessment models (IAMs). With these seven models, we cover a diversity of modelling approaches and
+                    updated
+                    socioeconomic and <a href="https://paris-reinforce.epu.ntua.gr/pr_wwh/harmonisation_table">technology
+                    assumptions</a>.
+                </p>
+                <p>
+                    The modelling results display mitigation efforts implied by current policies and <a
+                        href="https://unfccc.int/process-and-meetings/the-paris-agreement/nationally-determined-contributions-ndcs/nationally-determined-contributions-ndcs">
+                    Nationally Determined Contributions (NDCs) </a> extended to 2050 and 2100 to explore how CO2
+                    emissions from energy could look like
+                    according to current ambitions.
+                </p>
+
+                <h4
+                        style=" font-weight: bold; ">
+                    What do Current Policies and NDCs mean?
+                </h4>
+                <p>
+                    Our modelling efforts cover two different policy options across the globe:
+                </p>
+                <ul style="padding-left: 3em">
+                    <li>The implementation of current policies until 2030, and the extrapolation of climate ambition in
+                        these
+                        beyond 2030
+                    </li>
+                    <li>The implementation of NDCs on top of current policies until 2030, and the extrapolation of
+                        climate
+                        ambition in these beyond 2030
+                    </li>
+                </ul>
+                <p>
+                    In NDC scenarios, additional mitigation efforts are assumed on top of current policies to meet NDC
+                    targets
+                    in every region in 2030 and beyond 2030. In regions where the mitigation level due to current
+                    policies
+                    surpass the pledged mitigation in the region´s NDC, there is no difference between the NDC and
+                    current
+                    policies scenario. Therefore, by construction, the NDC scenarios are at least as ambitious as the
+                    current
+                    policies scenarios.
+                </p>
+                <p>
+                    In order to project beyond 2030, two metrics are used:
+                </p>
+                <ul style="padding-left: 3em">
+                    <li>The equivalent carbon price: the (economy-wide) carbon price that, on its own (absent other
+                        policies), will achieve a given level of emissions reductions.
+                    </li>
+                    <li>Emissions intensity reductions: the changes in emissions per unit GDP over time.
+                    </li>
+                </ul>
+                <p style="margin-bottom: 3em">
+                    Each metric is applied independently to each modelled region represented by each IAM, reflecting the
+                    geographically heterogeneous nature of mitigation ambitions in the Paris Agreement.
+                </p>
+            </div>
+
+
+            <div style="width: 70%; margin-left: 15%; margin-right: 15%; margin-top: 2em">
+                <div class="my_table table-responsive text-left">
+                    <table class="table" style="caption-side: bottom">
+                        <thead>
+                        <tr class="left">
+                            <th class="">Up to 2030</th>
+                            <th class="">Post 2030</th>
+                            <th class="">Scenario</th>
+                        </tr>
+
+                        </thead>
+                        <tbody>
+                        <tr class="left">
+                            <td rowspan="2" class="grey_category left"><strong>Current Policies:</strong><br>
+                                Implementation of current policies
+                            </td>
+                            <td class="left">Equivalent carbon price<sup>b</sup> in 2030 increasing with GDP per capita
+                            </td>
+                            <td class="left">CurPol_CP</td>
+                        </tr>
+                        <tr class="left">
+                            <td class="left">Rate of emissions intensity<sup>c</sup> reductions same as 2020-2030</td>
+                            <td class="left">CurPol_EI</td>
+                        </tr>
+                        <tr class="left">
+                            <td rowspan="2" class="grey_category left"><strong>NDCs:</strong><br>
+                                Implementation of unconditional NDCs, on top of current policies<sup>a</sup>
+                            </td>
+                            <td class="left">Equivalent carbon price<sup>b</sup> in 2030 increasing with GDP per capita
+                            </td>
+                            <td class="left">NDC_CP</td>
+                        </tr>
+                        <tr class="left">
+                            <td class="left">Rate of emissions intensity<sup>c</sup> reductions same as 2020-2030</td>
+                            <td class="left">NDC_EI</td>
+                        </tr>
+
+
+                        </tbody>
+                        <caption style="text-align: left">
+                            <p><sup>a</sup> if current policies, in a given region, leads to stronger emissions
+                                reductions
+                                than NDCs, the NDC scenario is equal to the current policies scenario.</p>
+                            <p><sup>b</sup> The carbon price that, on its own (absent other policies) achieves the
+                                corresponding level of emissions reductions in 2030.</p>
+                            <p><sup>c</sup> Emissions per GDP</p>
+
+                        </caption>
+                    </table>
+
+                </div>
+            </div>
+
+
+            <div class=" col-md-6 col-xs-12" style="height: 80vh">
+                <div style="height: 85%;">
+                    <div id="emissions_2050" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="emissions_2050_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="emissions_2050_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the Fossil Energy
+                                    CO<sub>2</sub> Emissions to 2050
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-6 col-xs-12" style="height: 80vh">
+                <div style="height: 85%;">
+                    <div id="emissions_2100" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="emissions_2100_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="emissions_2100_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the Fossil Energy
+                                    CO<sub>2</sub> Emissions to 2100
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {#            <div class="col-xs-12 col-md-3" style="margin-top: 1em; margin-bottom: 2em">#}
+            {#                <button style="background-color: #e78b10; width: 100%; font-weight: bold"#}
+            {#                        class="button btn btn-default openbtn" type="button"#}
+            {#                        data-toggle="collapse" data-target="#legend_fossil">#}
+            {#                    Show Legend#}
+            {#                </button>#}
+            {#            </div>#}
+            {#            <div id="legend_fossil" class="collapse col-xs-12 col-md-12">#}
+            {#                <div class="" style="font-size: 0.8em;  margin-bottom: 2em">#}
+            {#                    <div class="" id="legend_fossil_scenarios">#}
+            {#                        {% include "i2amparis_main/paris_reinforce_workspace/prw_wawh_summary_scenario_legend.html" %}#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+            {#        </div>#}
+
+            <p class="col-xs-12 col-md-12" style="margin-bottom: 2em">
+                Commonly, reference scenarios in modelling assume a ‘no policy’ baseline depicting a future where no
+                environmental or climate policies are implemented. However, it is becoming evident that climate policies
+                are
+                indeed having an impact, in line with the Paris Agreement and ratcheting ambitions. With these forward
+                projections of mitigation efforts beyond 2030, we generate new reference baseline scenarios to 2050 and
+                2100. These new baseline scenarios reflect where emissions are headed if current efforts are continued -
+                filling a critical gap in the scenario space that is currently underexplored.
+            </p>
+
+            <h2
+                    style="font-weight: bold; color: #828f30; ">
+                What do the min-max of each scenario say across the diversity of models in terms of emissions?
+            </h2>
+            <div class="col-xs-12 col-md-12">
+                <p>
+                    The overall range of global fossil energy CO2 emissions in our scenarios show the following:
+                </p>
+                <p><strong>In 2030:</strong> 31-38GtCO2 (32-38 GtCO2 150 for Current Policies scenarios and 31-35
+                    GtCO2 for NDC scenarios)</p>
+                <p><strong>In 2050:</strong> 20-41GtCO2 (23-151 41GtCO2 for Current Policies scenarios and 20-38GtCO2
+                    for NDC scenarios)</p>
+            </div>
+
+
+            <div class=" col-md-6 col-xs-12" style="height: 115vh">
+                <div style="height: 85%;">
+                    <div id="fossil_emissions_cur_pol_2050" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="fossil_emissions_cur_pol_2050_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="fossil_emissions_cur_pol_2050_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the Fossil Energy
+                                    CO<sub>2</sub> Emissions to 2050
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-6 col-xs-12" style="height: 115vh">
+                <div style="height: 85%;">
+                    <div id="fossil_emissions_cur_pol_2100" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="fossil_emissions_cur_pol_2100_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="fossil_emissions_cur_pol_2100_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the Fossil Energy
+                                    CO<sub>2</sub> Emissions to 2100
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" col-md-6 col-xs-12" style="height: 115vh">
+                <div style="height: 85%;">
+                    <div id="fossil_emissions_ndc_2050" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="fossil_emissions_ndc_2050_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="fossil_emissions_ndc_2050_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the Fossil Energy
+                                    CO<sub>2</sub> Emissions to 2050
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-6 col-xs-12" style="height: 115vh">
+                <div style="height: 85%;">
+                    <div id="fossil_emissions_ndc_2100" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="fossil_emissions_ndc_2100_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="fossil_emissions_ndc_2100_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the Fossil Energy
+                                    CO<sub>2</sub> Emissions to 2100
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="col-xs-12 col-md-12">Global fossil energy CO2 emissions to 2100 shown for the three models project
+                to ranges from:
+            <p>
+            <ul class="col-xs-12 col-md-12" style="padding-left: 3em; margin-bottom: 2em">
+                <li>GCAM between 2.4-3.0 °C
+                </li>
+                <li>TIAM between 2.2-2.4 °C
+                </li>
+                <li>MUSE between 2.4-2.5 °C</li>
+            </ul>
+
+
+            <h2
+                    style="font-weight: bold; color: #828f30; ">
+                Implications for reinforcing targets towards the PA 2030 and goals beyond?
+            </h2>
+            <p class="col-xs-12 col-md-12">
+                Our results show variation in emissions trajectories due to model differences.
+            </p>
+            <p class="col-xs-12 col-md-12">
+                Therefore, exploratory pathways for mitigation efforts should always be based on diverse sets of
+                modelling approaches.
+            </p>
+            <ul class="col-xs-12 col-md-12" style="padding-left: 3em">
+                <li>Our scenarios show a level of ambition that is significantly higher than what ‘No Policy’
+                    baselines indicate
+                </li>
+                <li>As also indicated by the <a
+                        href="https://unfccc.int/news/climate-commitments-not-on-track-to-meet-paris-agreement-goals-as-ndc-synthesis-report-is-published">NDC
+                    synthesis report </a> published in Feb 2021, all our scenarios still show a
+                    level of ambition that is insufficient to limit global warming to “well below” 2°C.
+                </li>
+                <li>Current policies still lag behind NDCs in many regions.</li>
+            </ul>
+            <p class="col-xs-12 col-md-12" style="margin-bottom: 2em">
+                To achieve the Paris Agreement goal, global ambitions will have to be strengthened.
+            </p>
+
+
+            <h2
+                    style="font-weight: bold; color: #828f30; ">
+                What role does technology play in this?
+            </h2>
+            <p class="col-xs-12 col-md-12">
+                While the energy system is decarbonized, the use of Carbon Capture and Storage (CCS) contributes
+                significantly to the reduction in energy CO2 emissions in all models that include CCS.
+            </p>
+            <div class=" col-md-12 col-xs-12" style="height: 80vh">
+                <div style="height: 85%;">
+                    <div id="ccs" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="ccs_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="ccs_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the CCS
+
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <p class="col-xs-12 col-md-12">
+                This graph shows CCS technology deployed to 2100 in all scenarios for all models that include CCS.
+                GEMINI-E3 includes only fossil CCS. ICES and 42 do not include CCS.
+            </p>
+            <p class="col-xs-12 col-md-12">
+                The dominance of CO2 removal in scenarios and models is still a subject of debate (For more detail see:
+                <a href="https://www.nature.com/articles/d41586-021-00662-3"> Rogelj et al 2021)</a>.
+
+            </p>
+
+
+        </div>
+    </section>
+</div>
+
+
+{% include "i2amparis_main/pages_footer.html" %}
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+
+
+<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+
+
+<script src={% static "tools/js/wwh_global/scientific_interface/cookie_retriever.js" %}></script>
+<script src={% static "tools/js/what_does_this_mean_js/../../../../static/tools/js/wwh_global/public_interface/fossil_energy_co2_curpol_1.js" %}></script>
+<script src={% static "tools/js/what_does_this_mean_js/../../../../static/tools/js/wwh_global/public_interface/ccs_1.js" %}></script>
+
+<script>
+    wow = new WOW({}).init();
+
+
+</script>
+
+</body>
+
+

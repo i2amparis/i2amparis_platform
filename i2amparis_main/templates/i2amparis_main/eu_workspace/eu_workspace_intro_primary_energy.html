@@ -1,0 +1,100 @@
+{% load static %}
+{% csrf_token %}
+<div id="primary_energy" class="tab-pane">
+    <div class="container" style="width: 90%; height:100%;">
+
+        <div id="primary_by_fuel">
+            <div class="tooltip-demo col-md-3 col-xs-12">
+                <div class="tooltip-demo">
+                    <h2 class="col-xs-12 col-md-12"
+                        style="margin-bottom: 0.4em ;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help"
+                        data-toggle="tooltip" data-placement="auto"
+                        title="<p>The chart presents the primary energy consumption by fuel type.</p>">
+                        Primary Energy consumption
+                    </h2>
+                    <h4 class="col-xs-12 col-md-12" style="color: #828f30">(by fuel type)</h4>
+                </div>
+                <p class="col-xs-12 col-md-12" style="display: inline-block;background:transparent; box-shadow: none;">
+                    The chart presents the primary energy consumption by fuel type.
+                </p>
+                <div class="form-group sum-selects-filters col-md-12 col-xs-12">
+                    <label for="primary_by_fuel_model_name">Models</label>
+                    <select class="desc_text take_up_space sum-mul-select sum-boot-select" data-dbname="model"
+                            placeholder="Select Model(s)"
+                            multiple="multiple"
+                            id="primary_by_fuel_model_name" style="width: 100%">
+                        {#                        <option value="aladin" selected="selected">ALADIN</option>#}
+                        <option value="eu_times" selected="selected">EU-TIMES</option>
+                        <option value="e3me" selected="selected">E3ME</option>
+                        <option value="gcam" selected="selected">GCAM</option>
+                        {#                        <option value="gemini_e3" selected="selected">Gemini-E3</option>#}
+                        <option value="ices" selected="selected">ICES</option>
+                        <option value="muse" selected="selected">MUSE</option>
+                        <option value="nemesis" selected="selected">NEMESIS</option>
+                        <option value="tiam" selected="selected">TIAM</option>
+                        <option value="42" selected="selected">42</option>
+
+                    </select>
+                </div>
+                <div style="display: none" class="form-group sum-selects-filters col-md-12 col-xs-12">
+                    <label for="primary_by_fuel_scenario_name">Scenario</label>
+                    <select class="desc_text take_up_space sum-mul-select sum-boot-select" data-dbname="scenario"
+                            placeholder="Select Scenario(s)"
+                            multiple="multiple"
+                            id="primary_by_fuel_scenario_name" style="width: 100%">
+                        <option value="EUWWH" selected="selected">EUWWH</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-6 col-md-2">
+                    <a id="primary_by_fuel-clear-button"
+                       class="button btn btn-default col-md-1 col-xs-6 openbtn line-btn"
+                       style="background-color: rgba(172,31,0,0.8);color: white;padding: 0;height: inherit; line-height: 2.5em;width: 100%">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-10">
+                    <a id="primary_by_fuel-run-button"
+                       class="button btn btn-default col-sm-1 col-md-1 col-xs-2 openbtn green line-btn"
+                       style="background-color: rgba(151, 174, 33, 0.8);color: white;padding: 0;height: inherit; line-height: 2.5em;width: 100% ">Run
+                        <i class="fa fa-spinner"></i>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-12" style="margin-top: 1em">
+                    <p>Different columns in the same time period represent different models and their results for primary energy
+                        consumption.</p>
+                </div>
+            </div>
+
+
+            <div class=" col-md-9 col-xs-12" style="height: 100vh">
+                <div style="height: 85%;">
+                    <div id="primary_by_fuel_frame_div" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="primary_by_fuel_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="primary_by_fuel_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The chart will present the primary energy consumption by fuel type.
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</div>

@@ -1,0 +1,112 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        What is the global final energy use by fuel type?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    {#    <span id="ht2050" style="position: relative; top:-8em"></span>#}
+    <div class="col-md-12 col-xs-12">
+        <p>
+            These figures show the final energy consumption by fuel type across 2020-2050.
+        </p>
+    </div>
+
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The charts presents the Global Final Energy by fuel type.
+                    </p>">
+                Global Final Energy
+            </h2>
+            <h4 style="">(by fuel type)</h4>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4" style="height: 50em">
+            <h4 style="color: #828f30; margin-bottom:0">2020</h4>
+            <div style="height: 100%;">
+                <div id="final_energy_ft_2020" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="final_energy_ft_2020_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="final_energy_ft_2020_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the Global Final Energy by fuel type in 2020.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4" style="height: 50em">
+            <h4 style="color: #828f30; margin-bottom:0">2030</h4>
+            <div style="height: 100%;">
+                <div id="final_energy_ft_2030" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="final_energy_ft_2030_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="final_energy_ft_2030_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the Global Final Energy by fuel type in 2030.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4" style="height: 50em">
+            <h4 style="color: #828f30; margin-bottom:0">2050</h4>
+            <div style="height: 100%;">
+                <div id="final_energy_ft_2050" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="final_energy_ft_2050_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="final_energy_ft_2050_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the Global Final Energy by fuel type in 2050.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xs-12 col-md-12" style="margin-top: 4em">
+        <p style="font-style: italic">Different columns for the same model represent different scenarios and their results for final energy by fuel
+            type.</p>
+    </div>
+    <div class="col-md-12 col-xs-12">
+        <p>
+            Over time, electricity, is expected to dominate electricity production, characterised by a low share of
+            fossil
+            fuels (and higher shares of renewables) displacing gases and solids.
+        </p>
+    </div>
+
+</div>

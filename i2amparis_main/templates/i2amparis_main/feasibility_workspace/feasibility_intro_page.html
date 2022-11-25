@@ -1,0 +1,38 @@
+{% load static %}
+{% csrf_token %}
+<div class="tab-pane" id="intro_summary" style="height: 125vh">
+    <div class="container" style="width: 100%; height:100%; margin-top: 10em;">
+        <div class="row" style=" height: 90vh">
+            <div class="navbar-collapse collapse"
+                 style="margin-right: 0; margin-top: -3.4em; padding: 0; position:fixed; z-index: 50;width:100%">
+                <ul class="nav navbar-nav " id="mySumTab" role="tablist"
+                    data-0="margin-top:0px;background-color: rgba(130, 143, 48, 1);"
+                    data-300="margin-top:0px;background-color: rgba(130, 143, 48, 0.5);"
+                    style="width: 100%">
+                    <li class="active"><a role="tab" data-toggle="tab" href="#energy_co2"
+                                          style="font-weight: 500">CO2 Emissions of Energy Sector</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#industry_co2"
+                                    style="font-weight: 500">CO2 Emissions of Industry</a>
+                    </li>
+                    <li class=""><a role="tab" data-toggle="tab" href="#feasibility_temperature"
+                                    style="font-weight: 500">Global Approximate Temperature</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="tab-content" style="">
+
+                {% include "i2amparis_main/feasibility_workspace/feasibility_intro_page_energy_co2.html" %}
+                {% include "i2amparis_main/feasibility_workspace/feasibility_intro_page_industry_co2.html" %}
+                {% include "i2amparis_main/feasibility_workspace/feasibility_intro_page_temperature.html" %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block js %}
+
+
+{% endblock %}

@@ -1,0 +1,2694 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Overview and Comparative Assessment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 2000px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_overview.html" %}
+<div class="main-page" style="margin-top: 120px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+                        <div id="collapse_global_models">
+                            {#                                      MENU BAR#}
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Introduction</span>
+                                    <a style="display: none" href="#introduction">Introduction</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic Assumptions</span>
+                                    <a style="display: none" href="#se_assumptions">Socioeconomic Assumptions</a>
+                                </li>
+                                <li class="list-group-item">
+                                      <span>Mitigation and Adaptation Measures Included in
+                                                                 each Model</span>
+                                    <a style="display: none" href="#mam_permodel"> Mitigation and Adaptation Measures
+                                        Included in
+                                        each Model</a></li>
+                                <li class="list-group-item">
+                                      <span>Policies Included in
+                                      the Models</span>
+                                    <a style="display: none" href="#global_policies">Policies Included inthe Models</a>
+                                </li>
+                                <li class="list-group-item"><span>Analysis of Implications for SDGs</span>
+                                    <a style="display: none" href="#global_sdg">
+                                        Analysis of Implications for SDGs </a></li>
+                                <li class="list-group-item"><span>How Does
+                                      each Model Calculate a Mitigation Pathway?</span>
+                                    <a style="display: none" href="#global_mitigation_pathway">How Does
+                                        each Model Calculate a Mitigation Pathway?</a></li>
+                                <li class="list-group-item"><span>Example Use-cases for each Model</span>
+                                    <a style="display: none" href="#global_example_per_model">
+                                        Example Use-cases for each Model</a></li>
+                                <li class="list-group-item"><span>Ensuring Validity and Trust in the Models</span>
+                                    <a style="display: none" href="#global_validity_link">
+                                        Ensuring Validity and Trust in the Models</a></li>
+                                <li class="list-group-item"><span>What Can our Models Deliver?</span>
+                                    <a style="display: none" href="#global_wcomd_link">
+                                        What Can our Models Deliver?</a></li>
+                                <li class="list-group-item"><span>References</span>
+                                    <a style="display: none" href="#global_references">
+                                        References</a></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+            <div id="main_bar">
+                <div class="container">
+                    <div class="row">
+                        <h1 style="padding-bottom: 1em; padding-top: 1em">Global Models</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="introduction" class="anchor"></span>
+                            <div class="accordion" id="accordion_introduction">
+                                <div class="card">
+                                    <div class="card-header" id="heading_introduction">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_introduction" aria-expanded="true"
+                                                    aria-controls="collapse_introduction" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                What Can this Range of Models Explore?
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_introduction" class="collapse "
+                                         aria-labelledby="heading_introduction"
+                                         data-parent="#accordion_introduction">
+                                        <div class="card-body">
+                                            <p>The diversity of the PARIS REINFORCE project’s entire modelling
+                                                ensemble is an asset
+                                                and, in order to make efficient use of the available models, we
+                                                must inform on their
+                                                potential uses for climate policy support. Evidently, not all
+                                                questions can be equally
+                                                addressed by all models, nor will all models that can address a
+                                                specific question give
+                                                similar answers. The policy issues to be addressed by the models
+                                                are mainly related to
+                                                mitigation of and adaptation to climate change, although all eight
+                                                models are better
+                                                suited for studying mitigation options than they are for delving
+                                                into adaptation; as
+                                                well as to overall sustainable development.
+                                            </p>
+                                            <p>
+                                                This section begins with the presentation of the main drivers, or
+                                                exogenous variables,
+                                                such as socioeconomic assumptions, that are considered essential
+                                                inputs for the
+                                                modelling simulations. Once defined, the mechanisms involved in
+                                                each model in the
+                                                climate action scenarios are defined. After considering these
+                                                drivers and mechanisms,
+                                                we take stock of policy instruments that can be implemented in
+                                                each model either
+                                                directly or after specific modelling adjustments. Finally, we
+                                                provide a short overview
+                                                of how a transition pathway is calculated as well as of example
+                                                use cases for each
+                                                model. A detailed account of the information included in this
+                                                section is presented in
+                                                the documentation of Section 3.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="se_assumptions" class="anchor"></span>
+                            <div class="accordion" id="accordion_se_assumptions">
+                                <div class="card">
+                                    <div class="card-header" id="heading_se_assumptions">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_se_assumptions" aria-expanded="true"
+                                                    aria-controls="collapse_se_assumptions" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                Socioeconomic Assumptions
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_se_assumptions" class="collapse "
+                                         aria-labelledby="heading_se_assumptions"
+                                         data-parent="#accordion_se_assumptions">
+                                        <div class="card-body">
+                                            <p>Before exploring the capabilities of the eight models, we first
+                                                present here the
+                                                main drivers and exogenous assumptions necessary for the modelling
+                                                simulations.
+                                                This includes GDP and population growth on the one hand, which are
+                                                the core
+                                                socioeconomic pillars of integrated assessment modelling input and
+                                                usually based
+                                                on universal socioeconomic databases like the Shared Socioeconomic
+                                                Pathways (SSP)
+                                                framework (Riahi et al., 2017), and other key parameters on the
+                                                other, which
+                                                largely vary among the models.
+                                            </p>
+                                            <p>
+                                                Regarding the former, all eight models require inputs on
+                                                population projections.
+                                                This is the case for GDP growth, with the exception of the general
+                                                equilibrium
+                                                models (DICE, as an optimal growth model, included), which
+                                                essentially require GDP
+                                                data for calibration but then endogenously calculate GDP along
+                                                with other
+                                                macroeconomic indicators, such as consumption, trade, employment,
+                                                investments and
+                                                public finance indices.
+                                            </p>
+                                            <p>
+                                                As far as other key parameters are concerned, these vary greatly
+                                                by model, mainly
+                                                due to their mathematical and economic structure. For example,
+                                                computable general
+                                                equilibrium models like GEMINI-E3 and ICES require detailed
+                                                information on
+                                                national and international social accounting matrices, government
+                                                transactions and
+                                                other flows, which are used for calibrating the models and usually
+                                                draw from
+                                                specific databases. But what all models have in common, beside
+                                                specific
+                                                socioeconomic assumptions, are data requirements for technological
+                                                specifications,
+                                                in energy markets, electricity generation mixes and, where
+                                                applicable, vehicle
+                                                fleet size and structure. Main socioeconomic assumptions and key
+                                                parameters for all eight models are
+                                                presented in the table below.
+                                            </p>
+                                            <div class="my_table table-responsive">
+                                                <table class="table ">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="col-2">Model</th>
+                                                        <th class="col-2">Population Growth</th>
+                                                        <th class="col-2">Economic Growth</th>
+                                                        <th class="col-6">Other Key Parameters</th>
+                                                    </tr>
+
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="grey_category">GCAM</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Labour participation and productivity; energy technology
+                                                            costs, performance, water requirements; agricultural
+                                                            technology crop yields, costs, carbon contents, water
+                                                            requirements, fertiliser requirements; resources (fossil
+                                                            fuels, wind, solar, uranium and groundwater); and
+                                                            policies (emissions constraints, renewable portfolio
+                                                            standards, etc.).
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="grey_category">TIAM</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Fossil fuel availability and cost (i.e. supply
+                                                            curves); technology availability and costs;
+                                                            information about under
+                                                            construction/planned/possible energy technologies;
+                                                            regional emissions reduction goals; and energy
+                                                            efficiency improvements rates.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="grey_category">MUSE</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Degree to which energy demand and demand for other
+                                                            goods and services resulting in GHG emissions change
+                                                            over the time horizon (future demand projections of
+                                                            each service in each region are based on population
+                                                            and GDP growth).
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="grey_category">42</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Vehicle fleet and structure; structure of
+                                                            electricity and heat production; sectoral energy
+                                                            intensities; fuel efficiency for cars and trucks;
+                                                            and fuel efficiency for electricity and heat plants.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="grey_category">GEMINI-E3</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Endogenous (exogenous for calibration)</td>
+                                                        <td>Energy markets in physical units; detailed social
+                                                            accounting matrices; indirect taxation; and
+                                                            government expenditures (for calibration).
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="grey_category">ICES</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Endogenous (exogenous for calibration)</td>
+                                                        <td>National social accounting matrices; economic flows
+                                                            related to fuel-specific energy production and
+                                                            consumption; international sectoral statistics;
+                                                            international transactions among governments and
+                                                            transactions/flows between government and private
+                                                            households, and public debt (for calibration).
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="grey_category">DICE</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Endogenous</td>
+                                                        <td>Overall savings rate for physical capital and rate
+                                                            of control of GHG emissions.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="grey_category">E3ME</td>
+                                                        <td>Exogenous</td>
+                                                        <td>Endogenous (exogenous for calibration)</td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                    <caption>
+                                                        Details of socioeconomic assumptions and other key
+                                                        parameters
+                                                    </caption>
+                                                </table>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="mam_permodel" class="anchor"></span>
+                            <div class="accordion" id="accordion_mam_permodel">
+                                <div class="card">
+                                    <div class="card-header" id="heading_mam_permodel">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_mam_permodel" aria-expanded="true"
+                                                    aria-controls="collapse_mam_permodel" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                Mitigation and Adaptation Measures Included in each Model
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_mam_permodel" class="collapse "
+                                         aria-labelledby="heading_mam_permodel"
+                                         data-parent="#accordion_mam_permodel">
+                                        <div class="card-body">
+                                            <p>This section presents the different mitigation and adaptation
+                                                options included in the eight models, as detailed in the following tables.
+                                            </p>
+                                            <p>
+                                                Upstream technologies like hydrogen production and synthetic fuel
+                                                production are covered in detail as mitigation options in MUSE, which
+                                                covers
+                                                almost all existing technologies. GCAM and TIAM only include coal
+                                                and biomass to liquids production, with and without carbon capture
+                                                and storage/sequestration (CCS); but, like MUSE, both models include
+                                                most hydrogen production technologies. GCAM however additionally
+                                                features thermal
+                                                splitting but not biomass to hydrogen (with CCS). It should be
+                                                noted that E3ME also includes a limited number of upstream
+                                                technologies but not to the same detail as the other three models.
+                                            </p>
+                                            <p>
+                                                With the exception of DICE, all models cover a large set of
+                                                mitigation options in the electricity generation sectors, ranging
+                                                from nuclear to renewables: CCS, hydro, solar photovoltaic (PV)
+                                                and concentrating solar power (CSP), onshore and offshore wind
+                                                turbines, biomass (with and without CCS) and geothermal; the
+                                                general equilibrium models (GEMINI-E3 and ICES), however, feature
+                                                less technological detail, while contrary to most other models 42
+                                                also includes nuclear fusion (along with TIAM) and do
+                                                not distinguish onshore and offshore wind. Regarding heat
+                                                generation, only 42, MUSE and TIAM feature significant detail,
+                                                while GCAM includes heat from biomass.
+                                            </p>
+                                            <p>
+                                                In the building sector, the energy system (42 and MUSE) and
+                                                partial equilibrium (GCAM and TIAM) models include mitigation
+                                                options to lesser or larger extent; while GEMINI-E3 includes
+                                                building technologies as an aggregated parameter; and ICES only
+                                                covers behavioural changes and electricity for cooling as
+                                                exogenous shifts in households’ energy demand.
+                                            </p>
+                                            <p>
+                                                In the transport sector, GCAM, TIAM, MUSE and 42 again cover all
+                                                or almost all technologies for road transportation, while
+                                                GEMINI-E3 only includes fully electric vehicles. The technological
+                                                options for GHG emission reductions in aviation and shipping are
+                                                relatively limited, and only in the four abovementioned models,
+                                                covering biofuels (GCAM, TIAM, MUSE, 42), hydrogen (TIAM),
+                                                electricity (MUSE) and efficiency (TIAM, 42) in aviation; and gas
+                                                (MUSE, TIAM, 42), hydrogen (TIAM, MUSE), biofuel (all four) and
+                                                efficiency (42) in shipping. Railways electrification is also
+                                                available in all four models (and GEMINI-E3), while MUSE also
+                                                includes hydrogen fuel cell rail. Finally, modal shift can be used
+                                                to favour low-carbon transports in GCAM and GEMINI-E3, which two
+                                                along with ICES also include behavioural changes in the transport
+                                                sector.
+                                            </p>
+                                            <p>
+                                                For the manufacturing sectors, GCAM, TIAM, MUSE and 42 include
+                                                various mitigation options for heat processing, machine drives,
+                                                steam, combined heat and power (CHP); while GEMINI-E3 covers some
+                                                of them as an aggregate. In addition, MUSE also includes CCS
+                                                options in industry, as is the case for TIAM as well, which
+                                                however also includes direct air capture (DAC).
+                                            </p>
+                                            <p>
+                                                To mitigate GHG emissions from agriculture, MUSE, 42, TIAM and
+                                                GEMINI-E3 cover energy use in detail, whereas GCAM includes
+                                                mitigation options for land yield maximisation and improved
+                                                feeding. GCAM, GEMINI-E3 and ICES also cover behavioural change
+                                                mitigation options, such as reductions in demand.
+                                            </p>
+                                            <p>
+                                                In land use, land-use change and forestry, the available
+                                                mitigation options in the modelling ensemble are afforestation
+                                                (GCAM, TIAM and MUSE), land protection (GCAM and MUSE) and
+                                                biomaterials (GCAM).
+                                            </p>
+                                            <p>
+                                                The models documented in this deliverable do not in general
+                                                produce outputs that are directly relevant to adaptation
+                                                considerations but can offer indirect insights to inform
+                                                adaptation planning. The GCAM model has some consideration of
+                                                adaptation, directly allowing the set-aside of protected land, as
+                                                well as directly calculating the additional cooling requirement of
+                                                buildings as the climate warms, while ICES covers restrictions to
+                                                water use.
+                                            </p>
+                                            <p>
+                                                In principle, adaptation measures could be included as a
+                                                consideration in all models’ simulations of mitigation pathways,
+                                                through for example limiting bioenergy resources (e.g. to
+                                                represent adaptation to crop yield reductions in a warming
+                                                climate), or increasing building cooling requirements exogenously
+                                                given the expectation of a warmer climate. However, these models
+                                                do not project the impacts of a changing climate, so they are of
+                                                limited use for adaptation considerations.
+                                            </p>
+                                            <div class="my_table table-responsive">
+                                                <table class="table ">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:5%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:10%"></th>
+                                                        <th colspan="2" class="col-2 transparent_category nolr-border"
+                                                            style="width:25%"></th>
+                                                        <th style="width:7.5%">GCAM</th>
+                                                        <th style="width:7.5%">TIAM</th>
+                                                        <th style="width:7.5%">MUSE</th>
+                                                        <th style="width:7.5%">42</th>
+                                                        <th style="width:7.5%">GEMINI-E3</th>
+                                                        <th style="width:7.5%">ICES</th>
+                                                        <th style="width:7.5%">DICE</th>
+                                                        <th style="width:7.5%">E3ME</th>
+
+                                                    </tr>
+
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td rowspan="24" class="colored"
+                                                            style="vertical-align: middle;">Mitigation Measures
+                                                        </td>
+                                                        <td rowspan="2" class="grey_category vertical_aligned">Upstream
+                                                            Technologies
+                                                        </td>
+                                                        <td colspan="2">Synthetic fuel production</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Hydrogen production</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="12" class="grey_category vertical_aligned">
+                                                            Electricity and Heat
+                                                            Generation Technologies
+                                                        </td>
+                                                        <td class="vertical_aligned" rowspan="9">Electricity
+                                                            generation
+                                                        </td>
+                                                        <td>CCS</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nuclear fission</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nuclear fusion</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Hydro</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biomass</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biomass with CCS</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Geothermal</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Solar PV & CSP</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wind onshore & offshore</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="vertical_aligned" rowspan="3">Heat generation</td>
+                                                        <td>CCS</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Geothermal</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biomass</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="10" class="grey_category vertical_aligned">
+                                                            Buildings
+                                                        </td>
+                                                        <td class="vertical_aligned" rowspan="6">Heating</td>
+                                                        <td>Gas replacing oil / coal</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biofuels</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electricity</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hydrogen</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Solar thermal</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Building shell efficiency</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Lighting</td>
+                                                        <td>Efficient lighting</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="vertical_aligned">Appliances</td>
+                                                        <td>Efficient appliances</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Cooling</td>
+                                                        <td>Electricity</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Behaviour change (less energy service demand)
+                                                        </td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <caption>
+                                                        Mitigation options in each model for upstream
+                                                        technologies, electricity and heat generation technologies
+                                                        and buildings
+                                                    </caption>
+                                                </table>
+                                                <p class="table-notes">*: Aggregated parameters for GEMINI-E3 model </p>
+
+                                            </div>
+
+                                            <div class="my_table table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:5%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:5%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:10%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:25%"></th>
+                                                        <th style="width:6.875%">GCAM</th>
+                                                        <th style="width:6.875%">TIAM</th>
+                                                        <th style="width:6.875%">MUSE</th>
+                                                        <th style="width:6.875%">42</th>
+                                                        <th style="width:6.875%">GEMINI-E3</th>
+                                                        <th style="width:6.875%">ICES</th>
+                                                        <th style="width:6.875%">DICE</th>
+                                                        <th style="width:6.875%">E3ME</th>
+
+                                                    </tr>
+
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td rowspan="19" class="colored"
+                                                            style="vertical-align: middle;">Mitigation Measures
+                                                        </td>
+                                                        <td rowspan="19" class="grey_category vertical_aligned">
+                                                            Transport
+                                                        </td>
+                                                        <td rowspan="6" class="vertical_aligned">Road</td>
+                                                        <td>Gas (LNG / CNG) vehicles</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hybrid electric vehicles</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fully electric vehicles</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Hydrogen fuel cell vehicles</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biofuels in fuel mix</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Efficiency</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3" class="vertical_aligned">Rail</td>
+                                                        <td>Electric rail</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hydrogen fuel cell rail</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Efficiency</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="4" class="vertical_aligned">Aviation</td>
+                                                        <td>Biofuels in fuel mix</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hydrogen planes</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electric planes</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Efficiency</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="4" class="vertical_aligned">Shipping</td>
+                                                        <td>Gas (LNG / CNG)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hydrogen</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biofuels in fuel mix</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Efficiency</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Modal shifts</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Other behaviour changes (e.g. travelling
+                                                            less)
+                                                        </td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                    <caption>
+                                                        Mitigation options in each model for transport
+                                                    </caption>
+                                                </table>
+
+                                            </div>
+
+                                            <div class="my_table table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:5%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:5%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:10%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:25%"></th>
+                                                        <th style="width:6.875%">GCAM</th>
+                                                        <th style="width:6.875%">TIAM</th>
+                                                        <th style="width:6.875%">MUSE</th>
+                                                        <th style="width:6.875%">42</th>
+                                                        <th style="width:6.875%">GEMINI-E3</th>
+                                                        <th style="width:6.875%">ICES</th>
+                                                        <th style="width:6.875%">DICE</th>
+                                                        <th style="width:6.875%">E3ME</th>
+
+                                                    </tr>
+
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td rowspan="19" class="colored"
+                                                            style="vertical-align: middle;">Mitigation Measures
+                                                        </td>
+                                                        <td rowspan="12" class="grey_category vertical_aligned">
+                                                            Industry
+                                                        </td>
+                                                        <td rowspan="4" class="vertical_aligned">Process heat</td>
+                                                        <td>Gas replacing oil / coal</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biomass</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hydrogen</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Electricity</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2" class="vertical_aligned">Machine drives</td>
+                                                        <td>Gas replacing oil / coal</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electricity</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2" class="vertical_aligned">Steam
+                                                        </td>
+                                                        <td>Gas replacing oil / coal</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electricity</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2" class="vertical_aligned">CHP
+                                                        </td>
+                                                        <td>Gas replacing oil / coal</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biomass</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x*</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Overall industry</td>
+                                                        <td>CCS</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Behaviour changes (lower mat. consumption)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="7" class="grey_category vertical_aligned">
+                                                            Agriculture & LULUCF
+                                                        </td>
+                                                        <td rowspan="3" class="vertical_aligned">Energy use</td>
+                                                        <td>Gas replacing oil / coal</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Biomass</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Electricity</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Land practices</td>
+                                                        <td>Land yield maximisation</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Animal husbandry</td>
+                                                        <td>Improved feeding</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Behaviour changes (less product demand)</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Afforestation, land protection,
+                                                            biomaterials
+                                                        </td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                    <caption>
+                                                        Mitigation options in each model for industry and
+                                                        agriculture
+                                                    </caption>
+                                                </table>
+                                                <p class="table-notes">*: Aggregated parameters for GEMINI-E3 model</p>
+
+                                            </div>
+
+                                            <div class="my_table table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:15%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:10%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:20%"></th>
+                                                        <th style="width:6.875%">GCAM</th>
+                                                        <th style="width:6.875%">TIAM</th>
+                                                        <th style="width:6.875%">MUSE</th>
+                                                        <th style="width:6.875%">42</th>
+                                                        <th style="width:6.875%">GEMINI-E3</th>
+                                                        <th style="width:6.875%">ICES</th>
+                                                        <th style="width:6.875%">DICE</th>
+                                                        <th style="width:6.875%">E3ME</th>
+
+                                                    </tr>
+
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td rowspan="3" class="colored"
+                                                            style="vertical-align: middle;">Adaptation Measures
+                                                        </td>
+                                                        <td rowspan="2" class="grey_category vertical_aligned">
+                                                            Land
+                                                        </td>
+                                                        <td>Water use restrictions</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Land use adaptation/planning</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2" class="grey_category vertical_aligned">
+                                                            Urban
+                                                        </td>
+                                                        <td>Additional cooling of buildings</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                    <caption>
+                                                        Adaptation options in each model
+                                                    </caption>
+                                                </table>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+
+
+                    {#                              Global Policies#}
+                    <div class="row">
+                        <section class="section">
+                            <span id="global_policies" class="anchor"></span>
+                            <div class="accordion" id="accordion_global_policies">
+                                <div class="card">
+                                    <div class="card-header" id="heading_global_policies">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_global_policies" aria-expanded="true"
+                                                    aria-controls="collapse_global_policies" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                Policies Included in the Models
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_global_policies" class="collapse"
+                                         aria-labelledby="heading_global_policies"
+                                         data-parent="#accordion_global_policies">
+                                        <div class="card-body">
+                                            <p>All models (can) include some form of emissions mitigation policy
+                                                instruments, like taxation, emissions target quotas, standards,
+                                                financial support and global temperature or radiative forcing
+                                                targets; as well as, with the exception of DICE, some form of
+                                                energy policy instruments, including taxes and subsidies, energy
+                                                mix and efficiency targets and specific regulations (e.g. building
+                                                codes, vehicle technology bans, etc.).
+                                            </p>
+                                            <p>
+                                                Land policy instruments, on the other hand, such as land
+                                                protection, production quotas and land-use change emissions
+                                                taxation are only included in the GCAM model, while TIAM, ICES and
+                                                DICE can be modified to include some of these instruments.
+                                                Afforestation targets, as a policy option, are only feasible with
+                                                minor modifications to some of the models (GCAM, TIAM and DICE).
+                                            </p>
+                                            <p>
+                                                Finally, carbon border taxes (on imports) and subsidies (on
+                                                exports) are only included in GEMINI-E3, ICES and (potentially) in
+                                                TIAM and E3ME; while TIAM and E3ME can also be modified to include
+                                                some regulation policies (like certifications).
+                                            </p>
+                                            <p>
+                                                The table below summarises policy coverage in the eight documented models.
+                                            </p>
+
+                                            <div class="my_table table-responsive">
+                                                <table class="table ">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:10%"></th>
+                                                        <th class="transparent_category nolr-border"
+                                                            style="width:30%"></th>
+                                                        <th style="width:7.5%">GCAM</th>
+                                                        <th style="width:7.5%">TIAM</th>
+                                                        <th style="width:7.5%">MUSE</th>
+                                                        <th style="width:7.5%">42</th>
+                                                        <th style="width:7.5%">GEMINI-E3</th>
+                                                        <th style="width:7.5%">ICES</th>
+                                                        <th style="width:7.5%">DICE</th>
+                                                        <th style="width:7.5%">E3ME</th>
+
+                                                    </tr>
+
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td rowspan="6" class="grey_category"
+                                                            style="vertical-align: middle;">Emissions mitigation
+                                                            policy instruments
+                                                        </td>
+                                                        <td>Tax</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Emissions target / quota (annual)</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Emissions target / quota (cumulative)</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Regulations (emissions standards, etc…)</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Financial supports (e.g. negative emissions, Green
+                                                            Climate Fund)
+                                                        </td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Global temperature/radiative forcing target
+                                                        </td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="5" class="grey_category"
+                                                            style="vertical-align: middle;">Energy policies
+                                                            instruments
+                                                        </td>
+                                                        <td>Tax</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Subsidy</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Energy mix target</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Efficiency target</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Regulations (thermal regulation in buildings, bans on
+                                                            diesel cars, etc.)
+                                                        </td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="4" class="grey_category"
+                                                            style="vertical-align: middle;">Land policies
+                                                            instruments
+                                                        </td>
+                                                        <td>Protected lands</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Production quotas</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Carbon sink pricing / Land use change emissions tax</td>
+                                                        <td>x</td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Afforestation targets
+                                                        </td>
+                                                        <td>(x)</td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3" class="grey_category"
+                                                            style="vertical-align: middle;">Trade policies
+                                                            instruments
+                                                        </td>
+                                                        <td>Carbon border tax on imports</td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Carbon border supports on exports</td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Regulation policies (certifications, best-available
+                                                            technologies, etc.)
+                                                        </td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>(x)</td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                    <caption>
+                                                        Mapping of policy options in each model (parentheses imply
+                                                        conditional coverage with adjustments to the model)
+                                                    </caption>
+                                                </table>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+
+                    {#                              Global SDGs#}
+                    <div class="row">
+                        <section class="section">
+                            <span id="global_sdg" class="anchor"></span>
+                            <div class="accordion" id="accordion_global_sdg">
+                                <div class="card">
+                                    <div class="card-header" id="heading_global_sdg">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_global_sdg" aria-expanded="true"
+                                                    aria-controls="collapse_global_sdg" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                Analysis of Implications for SDGs
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_global_sdg" class="collapse"
+                                         aria-labelledby="heading_global_sdg"
+                                         data-parent="#accordion_global_sdg">
+                                        <div class="card-body">
+                                            <p>The following table details sixteen of the seventeen SDGs set by the United
+                                                Nations in 2015 for the year 2030. SDG17 on revitalising global
+                                                partnership for sustainable development is excluded, as out of the
+                                                scope of the featured modelling tools. Among these SDGs and with
+                                                the exception of ICES which can provide insights into all SDGs,
+                                                the other seven models can deliver indicators to track directly or
+                                                indirectly eleven of the SDGs.
+                                            </p>
+                                            <p>
+                                                All of the models are able to report on emissions and therefore on
+                                                climate action (SDG13). All models can also offer direct insights
+                                                into affordable and clean energy (SDG7), with the exception of
+                                                DICE: this entails analyses of renewable energy (all models),
+                                                access to electricity and primary energy intensity (ICES),
+                                                traditional biomass use (42 and GCAM), and a full assessment of
+                                                energy commodities (TIAM, E3ME and MUSE). The same can be said for
+                                                industry, innovation and infrastructure (SDG9), with the exception
+                                                of GCAM and 42 that do not feature direct implications. Decent
+                                                work and economic growth (SDG8) is also covered by five models,
+                                                mainly via GDP (per capita) growth and employment impacts. SDG2
+                                                (zero hunger) is also included in half of the models, be looking
+                                                into food prices (GCAM, GEMINI-E3 and E3ME) and overall
+                                                undernourishment (ICES).
+                                            </p>
+                                            <p>
+                                                Other covered SDGs include SDG1 on poverty prevalence (ICES); SDG3
+                                                on health through physical density and life expectancy (ICES) and
+                                                pollution levels linked to mortality (GCAM, TIAM and E3ME); SDG4
+                                                on literacy rate (ICES); SDG5 on gender inequality based on income
+                                                distribution (E3ME); SDG6 on water and sanitation via freshwater
+                                                withdrawals (ICES) and groundwater depletion (GCAM); SDG10 on
+                                                inequalities (E3ME and ICES); SDG11 on sustainable cities (ICES);
+                                                SDG12 on responsible production and consumption through material
+                                                productivity (ICES), and footprint impacts (GCAM); SDG15 on life
+                                                on forest land (ICES and GCAM) and land use change (GCAM); and
+                                                SDG16 on peace, justice and institution (ICES).
+                                            </p>
+                                            <p>
+                                                Regarding ICES, a dedicated module aims at offering a
+                                                comprehensive assessment of future sustainability up to 2030 (with
+                                                the capacity to extend the analysis to 2050) based upon 27
+                                                indicators related to the seventeen SDGs, under different
+                                                socioeconomic and policy scenarios, by combining the ICES
+                                                modelling framework with a regression approach (based on
+                                                historical data) to offer an internally-consistent set-up for
+                                                analysing future patterns of sustainability indicators and their
+                                                inter-linkages.
+                                            </p>
+
+                                            <div class="my_table table-responsive">
+                                                <table class="table ">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="grey_category"
+                                                            style="width:40%">Measure
+                                                        </th>
+                                                        <th style="width:7.5%">GCAM</th>
+                                                        <th style="width:7.5%">TIAM</th>
+                                                        <th style="width:7.5%">MUSE</th>
+                                                        <th style="width:7.5%">42</th>
+                                                        <th style="width:7.5%">GEMINI-E3</th>
+                                                        <th style="width:7.5%">ICES</th>
+                                                        <th style="width:7.5%">DICE</th>
+                                                        <th style="width:7.5%">E3ME</th>
+
+                                                    </tr>
+
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="light-grey">§1. No Poverty</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§2. Zero hunger</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§3. Health</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§4. Quality education</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§5. Gender equality</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§6. Clean water and sanitation</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§7. Affordable and clean energy</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§8. Decent work & economic growth</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§9. Industry, innovation &
+                                                            infrastructure
+                                                        </td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§10: Reduced inequalities</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§11: Sustainable Cities & Communities
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§12: Responsible production &
+                                                            consumption
+                                                        </td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§13: Climate action</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                        <td>x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§14: Life below water</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§15: Life on land</td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">§16: Peace, Justice and institutions</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>x</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                    <caption>
+                                                        Details of SDG (other than SDG13: climate action) measures
+                                                        that can be analysed
+                                                    </caption>
+                                                </table>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    {#MITIGATION PATHWAY#}
+                    <div class="row">
+                        <section class="section">
+                            <span id="global_mitigation_pathway" class="anchor"></span>
+
+
+                            <div class="accordion" id="accordion_global_mitigation_pathway">
+                                <div class="card">
+                                    <div class="card-header" id="heading_global_mitigation_pathway">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_global_mitigation_pathway"
+                                                    aria-expanded="true"
+                                                    aria-controls="collapse_global_mitigation_pathway"
+                                                    style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                How Does each Model Calculate a Mitigation Pathway?
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_global_mitigation_pathway" class="collapse "
+                                         aria-labelledby="heading_global_mitigation_pathway"
+                                         data-parent="#accordion_global_mitigation_pathway">
+                                        <div class="card-body">
+                                            <p>Since all eight models are significantly different, they do not
+                                                operate homogeneously to calculate climate change mitigation
+                                                pathways. However, some of them feature specific similarities;
+                                                therefore, the models can be grouped into categories and described
+                                                by the approach of each category. The models can be sorted into
+                                                five groups (Nikas et al., 2019):
+                                            </p>
+                                            <ul>
+                                                <li><p>GCAM and TIAM are partial equilibrium models, in that
+                                                    they achieve an equilibrium between the supply and demand for
+                                                    energy in each sector represented, taking into account the
+                                                    changes in energy prices that result from the changes in fuels
+                                                    and technologies used to satisfy energy service demands in
+                                                    these sectors. They are not “full” equilibrium models as they
+                                                    do not consider the subsequent changes in the production and
+                                                    supply costs and demands of all services and goods in the
+                                                    economy—only the energy sectors. TIAM operates on a “perfect
+                                                    foresight” cost-optimisation basis, whereby all consequences
+                                                    of technology deployments, fuel extraction and energy price
+                                                    changes over the entire time horizon are considered when
+                                                    minimising the cost of the energy system, so as to provide
+                                                    energy service demands within specified emissions constraints.
+                                                    By contrast, GCAM operates on a “recursive dynamic”
+                                                    cost-optimisation basis, which means that, rather than
+                                                    considering all future time periods, it solves for the
+                                                    least-cost energy system in a given period, before moving to
+                                                    the next time period and performing the same exercise.</p></li>
+                                                <li><p>MUSE and 42 are energy system models, and can therefore
+                                                    be considered as a subcategory of the partial equilibrium
+                                                    modelling group, providing a detailed account of the energy
+                                                    sector, i.e. energy technologies and their associated costs,
+                                                    in order to determine the least-cost ways of attaining GHG
+                                                    emission reductions or the costs of alternative climate
+                                                    policies. They both are bottom-up models that assume
+                                                    short-term microeconomic equilibrium on the energy system,
+                                                    which is achieved by iterating market clearance across all of
+                                                    the sector modules, interchanging price and quantity of each
+                                                    energy commodity in each region. MUSE, in addition, is also an
+                                                    agent-based model, as it tries to determine a mitigation
+                                                    pathway by providing an as realistic as possible description
+                                                    of the investment and operational decision making in each
+                                                    geographical region within a sector.</p>
+                                                </li>
+                                                <li><p>GEMINI-E3 and ICES are computable general equilibrium
+                                                    (CGE) models, and therefore have a more detailed,
+                                                    multiple-sector representation of the economy and, rather than
+                                                    seeking optimal policies, they consider the impacts of
+                                                    specific policies on economic, social and environmental
+                                                    parameters. Their operation is similar to that of GCAM and
+                                                    TIAM, but differs in that market equilibrium is assumed to
+                                                    take place in the entire economy. Their richer representation
+                                                    of the economy comes at a cost in that the growth of the
+                                                    economy is harder to model and its structure more complex; as
+                                                    such, they require calibration to data on national and
+                                                    international socio-accounting information, as well as input
+                                                    in the form of a series of elasticities of substitution.
+                                                    Contrary to all other models, they also calculate economic
+                                                    indices endogenously. </p></li>
+                                                <li><p>Although DICE can also be considered as part of the CGE
+                                                    family, it is distinguished as an optimal growth, or welfare
+                                                    optimisation, or neoclassical model, which does not feature
+                                                    the same level of sectoral or geographic detail (it
+                                                    exclusively covers the entire global economy). It determines
+                                                    the climate policy and investment levels that maximise welfare
+                                                    (future against present consumption) over time, by identifying
+                                                    the emission abatement levels for each time step; its social
+                                                    welfare function represents the world’s well-defined set of
+                                                    preferences and accordingly ranks different consumption paths,
+                                                    with welfare increasing in per capita consumption for each
+                                                    generation but with diminishing marginal utility of
+                                                    consumption (the wealthier the world is, the less valuable an
+                                                    additional unit of consumption is). </p></li>
+                                                <li><p>Finally, E3ME is a macroeconometric model. Quite like CGE
+                                                    models, it is quite detailed in terms of energy technologies
+                                                    and geographic scope, but differs in that it does not assume
+                                                    that consumers and producers behave optimally or that markets
+                                                    clear and reach equilibrium in the short term. Instead, it
+                                                    uses historical data and econometrically estimated parameters
+                                                    and relations to dynamically and more realistically simulate
+                                                    the behaviour of the economy, by assuming that markets achieve
+                                                    equilibrium in the longer run.</p></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    {#                              GLOBAL EXAMPLE USE CASE#}
+                    <div class="row">
+                        <section class="section">
+                            <span id="global_example_per_model" class="anchor"></span>
+
+
+                            <div class="accordion" id="accordion_global_example_per_model">
+                                <div class="card">
+                                    <div class="card-header" id="heading_global_example_per_model">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_global_example_per_model"
+                                                    aria-expanded="true"
+                                                    aria-controls="collapse_global_example_per_model"
+                                                    style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                Example Use-cases for each Model
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_global_example_per_model" class="collapse "
+                                         aria-labelledby="heading_global_example_per_model"
+                                         data-parent="#accordion_global_example_per_model">
+                                        <div class="card-body">
+
+                                            <div class="my_table table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="grey_category"
+                                                            style="width:20%">Model
+                                                        </th>
+                                                        <th class="colored"
+                                                            style="width:20%">Example Study
+                                                        </th>
+                                                        <th class="colored"
+                                                            style="width:30%">Research Question/Focus
+                                                        </th>
+                                                        <th class="colored"
+                                                            style="width:30%">Selected Key Findings
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="light-grey">GCAM</td>
+                                                        <td>Van de Ven et al. (2019)</td>
+                                                        <td>Integrated policy assessment and optimisation over
+                                                            multiple sustainable development goals in Eastern
+                                                            Africa
+                                                        </td>
+                                                        <td>The analysis shows that support for biogas technology
+                                                            should be prioritised in both the short and long term,
+                                                            while financing liquefied petroleum gas and ethanol
+                                                            technologies also has synergetic climate, health and
+                                                            energy access benefits. Instead, financing PV
+                                                            technologies is mostly relevant for improving energy
+                                                            access, while charcoal and to a lesser extend fuelwood
+                                                            technologies are relevant for curbing GHG emissions if
+                                                            their finance is linked to land policies.
+                                                        </td>
+                                                    <tr>
+                                                        <td class="light-grey">TIAM</td>
+                                                        <td>Realmonte et al. (2019)</td>
+                                                        <td>An investigation of the role of Direct Air Capture
+                                                            (DAC) in meeting global 1.5<sup>o</sup>C and 2<sup>o</sup>C pathways
+                                                        </td>
+                                                        <td>DAC can reduce the policy costs of mitigation in the
+                                                            near-term, but there are many uncertainties about its
+                                                            scale-up potential and, if we ease mitigation efforts
+                                                            and rely on DAC, even if it does not deliver
+                                                            large-scale removals, we will overshoot the Paris
+                                                            climate goals.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">MUSE</td>
+                                                        <td>Kerdan et al. (2019a)</td>
+                                                        <td>Gas infrastructure pathways for the southern states of
+                                                            Brazil
+                                                        </td>
+                                                        <td>Results suggest that, due to the expected increase in
+                                                            regional gas demand in South Brazil, the existing gas
+                                                            infrastructure would require additional investments.
+                                                            Depending on the renegotiation outcomes between Brazil
+                                                            and Bolivia (i.e. either maintaining constant,
+                                                            halving, or halting the Bolivian import of gas),
+                                                            natural gas demand could be covered by a share of
+                                                            alternative supply options, such as an increase in
+                                                            pre-salt production, LNG imports and imports from a
+                                                            new Argentinian pipeline.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">42</td>
+                                                        <td>Ivanter et al. (2018)</td>
+                                                        <td>How to Boost the Development of the Russian Economy:
+                                                            Priority Actions
+                                                        </td>
+                                                        <td>A set of priority directions of the economic policy,
+                                                            primarily in investment activity, development of the
+                                                            domestic market, as well as financial and
+                                                            organisational support for the suggested actions.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">GEMINI-E3</td>
+                                                        <td>Babonneau et al. (2018a)</td>
+                                                        <td>The evaluation of the Paris Intended Nationally
+                                                            Determined Contributions (INDCs) and the design of
+                                                            fair agreements concerning additional abatements up to
+                                                            2050.
+                                                        </td>
+                                                        <td>Results confirm the weakness of INDC pledges.
+                                                            Nevertheless, it shows that, with political
+                                                            determination, an equitable burden-sharing agreement
+                                                            can be achieved with very reasonable costs for all
+                                                            nations of approximately 0.8% of total discounted
+                                                            household consumption. With a more ambitious 1.5°C
+                                                            target, the global cost is multiplied by a factor of
+                                                            four revealing the stringency of such an objective.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">ICES</td>
+                                                        <td>Campagnolo & Davide (2019)</td>
+                                                        <td>An assessment of climate mitigation co-benefits or
+                                                            side-effects on poverty and inequality, in respect to
+                                                            the Paris Agreement.
+                                                        </td>
+                                                        <td>A full implementation of the emission reduction
+                                                            contributions, stated in the NDCs, is projected to
+                                                            slow down the effort to reduce poverty by 2030 (+4.2%
+                                                            of the population below the poverty line compared to
+                                                            the baseline scenario), especially in countries that
+                                                            have proposed relatively more stringent mitigation
+                                                            targets and suffer higher policy costs. Conversely,
+                                                            the impact of climate policy on inequality shows
+                                                            opposite sign but remains very limited. If financial
+                                                            support for mitigation action in developing countries
+                                                            is provided through an international climate fund, the
+                                                            prevalence of poverty will be slightly reduced at the
+                                                            aggregate level, but the country-specific effect
+                                                            depends on the relative size of funds flowing to
+                                                            beneficiary countries and on their economic structure.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="light-grey">DICE</td>
+                                                        <td>Gramkow and Anger-Kraavi (2019))</td>
+                                                        <td>Exploring a transformation of Brazil’s economy, with a
+                                                            focus on manufacturing sectors, while contributing to
+                                                            the Paris targets
+                                                        </td>
+                                                        <td>The correct mix of green stimulus can help modernise
+                                                            and decarbonise the Brazilian manufacturing sectors
+                                                            and the country’s economy grow faster (by up to 0.42%
+                                                            compared to baseline) while its CO2 emissions decline
+                                                            (by up to 14.5% in relation to baseline). Investment
+                                                            levels increase, thereby strengthening exports’
+                                                            competitiveness and alleviating external constraints
+                                                            to long-term economic growth in net terms. Scaling up
+                                                            green fiscal stimulus in manufacturing sectors
+                                                            globally needs to be considered as one of the main
+                                                            policy measures helping with transformation to a
+                                                            low-carbon economy, especially in the developing
+                                                            world.
+                                                        </td>
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                    <caption>
+                                                        Key examples of policy-relevant questions addressed by
+                                                        each model in recent years
+                                                    </caption>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="global_validity_link" class="anchor"></span>
+                            <div class="accordion" id="accordion_global_validity_link">
+                                <div class="card">
+                                    <div class="card-header" id="heading_global_validity_link">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_global_validity_link" aria-expanded="true"
+                                                    aria-controls="collapse_global_validity_link" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                Ensuring Validity and Trust in the Models
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_global_validity_link" class="collapse "
+                                         aria-labelledby="heading_global_validity_link"
+                                         data-parent="#accordion_global_validity_link">
+                                        <div class="card-body">
+                                            <p>
+                                                Regarding the use of global integrated assessment models, a legitimate
+                                                question has been raised, both in the literature and in the policy
+                                                world, around the levels of trust that people (whether scientists,
+                                                policymakers, or other stakeholders) should have in these models and
+                                                their outputs (Doukas and Nikas, 2020). That is, especially, considering
+                                                the underlying assumptions driving them (Kelly and Kolstad, 1999) and
+                                                uncertainty ranges (Doukas et al., 2018), as well as the extent to which
+                                                these are communicated alongside the results.
+                                            </p>
+                                            <p>
+                                                It is unavoidable that models, such as those documented in I2AM PARIS,
+                                                cannot provide a complete representation of the world, owing to the fact
+                                                that in many ways the future is unknown, and furthermore there is
+                                                incomplete knowledge of past dynamics governing energy, agricultural,
+                                                land and environmental systems that are represented by these models.
+                                            </p>
+                                            <p>
+                                                Despite this challenge, these models are intended to be trusted, and
+                                                seen as useful and valid, by both the scientific community and—equally
+                                                if not more importantly—stakeholders such as policy- and
+                                                decision-makers, who will plan low-carbon strategies on their basis.
+                                                Here we briefly detail the steps that have been applied in developing
+                                                and using the models, as well those that will be applied in the context
+                                                of the PARIS REINFORCE project, in order that such trust and validation
+                                                is achieved.
+                                            </p>
+                                            <p>
+                                                The workflow is illustrated in the following figure, based on the
+                                                relevant literature on evaluation and validation of integrated
+                                                assessment models and drawing from the primary elements of (Schwanitz,
+                                                2013):
+                                            </p>
+                                            <div style="text-align: center">
+                                                <img style="width:70%;height:70%; margin-bottom: 2em"
+                                                     src="{% static "images/global_validity_pic_1.png" %}">
+                                                <div style="text-align: center">
+                                                    <p style="text-align: center">Model validation process of
+                                                        models in PARIS REINFORCE
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                In particular, very early in the project the consortium has put
+                                                significant effort in documenting each of the employed models’
+                                                capabilities, in terms of geographic disaggregation, sectoral
+                                                representation, types of greenhouse gas and pollutant emissions
+                                                accounted for, technological detail, policy representation,
+                                                socioeconomic inputs and outputs, and representation of metrics relevant
+                                                to non-climate SDG indicators. It has done so for every global model in
+                                                the consortium, (a) in detailed and technical format for experts’
+                                                consideration (see <a href="http://paris-reinforce.epu.ntua.gr/detailed_model_doc/gemini_e3">here</a>), (b) in a dynamic interface and easy-to-digest
+                                                language for non-experts to comprehend and map their requirements onto
+                                                (see <a href="http://paris-reinforce.epu.ntua.gr/dynamic_doc/42/?format=_alternative_3">here</a>), and (c) in a comparative setting, allowing all stakeholders
+                                                to understand which models should be employed for which policy questions
+                                                (as in this page). As part of this step, the project released and shared
+                                                with stakeholders a policy brief on ‘what can our models do?’ (<a href="https://paris-reinforce.eu/sites/default/files/2019-11/PARIS REINFORCE Policy Brief What our models can do.pdf">link</a>).
+                                            </p>
+                                            <p>
+                                                Secondly, as with national/regional models for the EU and
+                                                countries/regions outside the EU, the global modelling approach is in
+                                                line with the “prolonged nature of model validation” (Barlas, 1996).
+                                                This approach integrates opinions from the scientific community with the
+                                                perspectives of stakeholders and external experts that will ultimately
+                                                use the model results. PARIS REINFORCE will, in this respect, undertake
+                                                active engagement with global stakeholders aimed at communicating what
+                                                the models are, as well as what they can do, including a presentation of
+                                                the modelling approach, preliminary results, and a discussion of the
+                                                types of inputs and outputs the models produce and how they do this.
+                                                This interaction will therefore provide an opportunity to place our
+                                                models’ results in the context of previous results from other global
+                                                low-carbon pathways modelling activities. They will also allow the
+                                                project, not only to clearly communicate the modelling capabilities,
+                                                features, and questions they have been asked to address in the past, but
+                                                also to co-create the most pertinent questions stakeholders would like
+                                                the models to address in the context of PARIS REINFORCE, in light of
+                                                this well-informed stakeholder perspective. The project workflow
+                                                involves first undertaking global, regionally-disaggregated modelling to
+                                                explore the regional dynamics of emissions and energy/agricultural and
+                                                land system transitions globally, before discussing the realism,
+                                                feasibility and validity of such results with both global and regional
+                                                stakeholders. In this way, global models can undertake scenarios
+                                                informed by national stakeholders in various regions around the world,
+                                                improving the real-world relevance of their outputs.
+                                            </p>
+                                            <p>
+                                                Third, a central aspect of achieving real-world relevance is to
+                                                undertake basic harmonisation/benchmarking of the models, via targeted
+                                                validity checks. This includes ensuring that base-year emissions,
+                                                socio-economic assumptions, policies, and energy/agricultural/land
+                                                system representations are in line with the most up-to-date verified
+                                                information, and that such inputs are to the extent possible harmonised
+                                                across the models used in a multi-model analysis; this is not to strip
+                                                models of their invaluable diversity in the way they behave in response
+                                                to specific stimuli as well as the theoretical foundations underpinning
+                                                them, but quite the contrary to allow the consortium to later map the
+                                                resulting ranges onto this diversity rather than uncertainties
+                                                associated with ad hoc inputs assumed for each model. This also includes
+                                                technology costs and performance variables. The underlying detailed
+                                                protocol for achieving this has been documented in Giarola et al.
+                                            </p>
+                                            <p>
+                                                Fourth, “diagnostic” tests are and will be run for each model, to check
+                                                that its responses to key input variable changes, such as stringency of
+                                                climate policy (as represented by emissions targets, carbon prices, or
+                                                combinations thereof), are in line with common expectations and compared
+                                                to other results and models covering the same/similar regions and/or a
+                                                priori defined stylised behaviours. For global models, this includes
+                                                comparing the resulting ranges of the inter-comparison exercises to
+                                                those of similar studies in the scientific or grey literature; for
+                                                example, in building a robust reference scenario looking at current
+                                                policy efforts (Sognnaes et al.), comparisons have been drawn against
+                                                recent similar scientific endeavours like (Roelfsema et al., 2020) or
+                                                high-impact reports like the International Energy Agency’s 2019 World
+                                                Energy Outlook (IEA, 2019). These checks will build on the normal
+                                                standard practice undertaken by each modelling group to regularly check
+                                                the model code and ensure that errors/bugs are identified and
+                                                eliminated, and to report the model’s performance alongside its results.
+                                            </p>
+                                            <p>
+                                                Finally, this evaluation process will be carried out in an iterative
+                                                process throughout the project. It will be documented to ensure that
+                                                models perform without unexplained dynamics in both reference and
+                                                mitigation cases. A key element of this will be in taking documented
+                                                modelling results back to stakeholders in the second half of the
+                                                project, when they will be able to understand the behaviours of the
+                                                models under increasingly stringent mitigation scenarios, and to ask why
+                                                the models respond in the way that they do.
+                                            </p>
+                                            <p>
+                                                In combination, these evaluation steps cover the primary elements of the
+                                                workflow suggested by Schwanitz (2013) on model validation. The models’
+                                                conceptual framework has to a large extent already been evaluated (and
+                                                will be clearly communicated with stakeholders) as following from a
+                                                principle of identifying least-cost pathways to low-carbon futures given
+                                                the technological other input assumptions (like technology constraints,
+                                                socio-economic dynamics, and representations of policies). The I2AM
+                                                PARIS platform is intended to represent a major advance in communicating
+                                                in a clear, accessible and attractive way the features, objectives,
+                                                coverage, capabilities and limitations of models. Such documentation has
+                                                been and will be accompanying our stakeholder interactions. Model
+                                                structure and responses are being tested through both diagnostics as
+                                                well as comparisons with other published low-carbon and reference case
+                                                pathways. Whilst most modelling groups explicitly draw on a vast range
+                                                of literature and comparative studies to understand the extent to which
+                                                their results are similar to or different from others, and if so why, in
+                                                PARIS REINFORCE we will explicitly undertake and present such
+                                                comparisons throughout our modelling, to help better build trust in the
+                                                results and the models themselves.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="global_wcomd_link" class="anchor"></span>
+                            <div class="accordion" id="accordion_global_wcomd_link">
+                                <div class="card">
+                                    <div class="card-header" id="heading_global_wcomd_link">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_global_wcomd_link" aria-expanded="true"
+                                                    aria-controls="collapse_global_wcomd_link" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                What Can our Models Deliver?
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_global_wcomd_link" class="collapse "
+                                         aria-labelledby="heading_global_wcomd_link"
+                                         data-parent="#accordion_global_wcomd_link">
+                                        <div class="card-body">
+                                            <p>For further information on what our models can deliver click <a
+                                                    href={% static "pdf_files/d3_2.pdf" %}>here</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="global_references" class="anchor"></span>
+                            <div class="accordion" id="accordion_global_references">
+                                <div class="card">
+                                    <div class="card-header" id="heading_global_references">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#collapse_global_references" aria-expanded="true"
+                                                    aria-controls="collapse_global_references" style="padding:0px">
+                                                <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                                References
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapse_global_references" class="collapse "
+                                         aria-labelledby="heading_global_references"
+                                         data-parent="#accordion_global_references">
+                                        <div class="card-body">
+                                            <p>
+                                                - Barlas, Y. (1996). Formal aspects of model validity and validation in
+                                                system dynamics. System Dynamics Review: The Journal of the System
+                                                Dynamics Society, 12(3), 183-210.</p>
+                                            <p>
+                                                - Doukas, H., & Nikas, A. (2020). Decision support models in climate
+                                                policy. European Journal of Operational Research, 280(1), 1-24.
+                                            </p>
+                                            <p>
+                                                - Doukas, H., Nikas, A., González-Eguino, M., Arto, I., & Anger-Kraavi,
+                                                A. (2018). From integrated to integrative: Delivering on the Paris
+                                                Agreement. Sustainability, 10(7), 2299.
+                                            </p>
+                                            <p>
+                                                - Giarola, S., Mittal, S., Vielle, M., Perdana, S., Campagnolo, L.,
+                                                Delpiazzo, E., Bui, H., Anger-Kraavi, A., Kolpakov, A., Sognnaes, I.,
+                                                Peters, G.P., Hawkes, A., Koberle, A., Grant, N., Gambhir, A., Nikas,
+                                                A., Doukas, H., Moreno, J., & Van de Ven, D.J. (Reviewed & Revised).
+                                                Challenges in the harmonisation of global integrated assessment models:
+                                                a comprehensive methodology to reduce model response heterogeneity.
+                                                Science of the Total Environment.
+                                            </p>
+                                            <p>
+                                                - IEA. (2019). World Energy Outlook. IEA. Available at:
+                                                https://www.iea.org/reports/world-energy-outlook-2019.
+                                            </p>
+                                            <p>
+                                                - Kelly, D. L., & Kolstad, C. D. (1999). Integrated assessment models
+                                                for climate change control. International yearbook of environmental and
+                                                resource economics, 2000, 171-197.
+                                            </p>
+                                            <p>
+                                                - Nikas, A., Doukas, H., & Papandreou, A. (2019). A detailed overview
+                                                and consistent classification of climate-economy models. Understanding
+                                                risks and uncertainties in energy and climate policy, 1-54.
+                                            </p>
+                                            <p>
+                                                - Roelfsema, M., van Soest, H. L., Harmsen, M., van Vuuren, D. P.,
+                                                Bertram, C., den Elzen, M., ... & Vishwanathan, S. S. (2020). Taking
+                                                stock of national climate policies to evaluate implementation of the
+                                                Paris Agreement. Nature Communications, 11(1), 1-12.
+                                            </p>
+                                            <p>
+                                                - Schwanitz, V. J. (2013). Evaluating integrated assessment models of
+                                                global climate change. Environmental modelling & software, 50, 120-131.
+                                            </p>
+                                            <p>
+                                                - Sognnaes, I., Gambhir, A., Van de Ven, D.-J., Nikas, A., Anger-Kraavi,
+                                                A., Bui, H., Campagnolo, L., Delpiazzo, E., Doukas, H., Giarola, S.,
+                                                Grant, N., Hawkes, A., Koberle, A., Kolpakov, A., Mittal, S., Moreno,
+                                                J., Perdana, S., Rogelj, J., Vielle, M., & Peters, G.P. (in revision). A
+                                                multi-model analysis of long-term emissions and warming implications of
+                                                current mitigation efforts. Nature Climate Change.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+
+
+<script>
+    $(document).ready(function () {
+        var stopClickSide = false;
+        var stopClickHeading = false;
+        $(".sidebar h4 a").on('click', function () {
+            $(this).find('i.rotate').toggleClass("down");
+
+        });
+
+        $(".accordion button").on('click', function () {
+            $(this).find('i.rotate').toggleClass("down");
+
+
+        });
+        $('#accordion_introduction').find('button').click();
+        {#        $('li a').on('click', function () {#}
+        {#            $('#main_bar .collapse.in').collapse('hide');#}
+        {#            var x = this.href.split('#')[1];#}
+        {#            $('#collapse_' + x).collapse('show');#}
+        {#        });#}
+        $('li span').on('click', function () {
+            var x = $(this).siblings()[0].href.split('#')[1];
+            var y = $(this).siblings()[0];
+            close_all_collapses(x, y, move_to_collapse);
+            {#            $('#main_bar .collapse.in').on('hidden.bs.collapse', function () {#}
+            {#                if(y!==null){#}
+            {#                    y.click();}#}
+            {#                y= null;#}
+            {#            });#}
+            {#            $('#main_bar .collapse.in').not('#collapse_' + x).collapse('hide');#}
+            {#            $('#collapse_' + x ).collapse('show');#}
+
+
+        });
+
+
+        $('body').css('height', '100%');
+
+        function close_all_collapses(x_to_open, y_to_move_to, callback) {
+            $('#main_bar .collapse.in').not('#collapse_' + x_to_open).collapse('hide');
+            setTimeout(function () {
+                callback(y_to_move_to, x_to_open, open_chosen_collapse);
+            }, 400);
+        }
+
+        function move_to_collapse(y_to_move_to, x_to_open, callback) {
+            y_to_move_to.click();
+            callback(x_to_open);
+            y_to_move_to = null;
+        }
+
+        function open_chosen_collapse(x_to_open) {
+            $('#accordion_' + x_to_open).find('button').click();
+
+        }
+
+
+    });
+
+
+</script>
+</body>
+
+</html>

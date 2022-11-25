@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AM PARIS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <style>
+
+        sup {
+            vertical-align: super;
+            font-size: smaller;
+            position: relative;
+            top: -0.1em;
+        }
+
+        .mylogo {
+            text-align: left;
+        }
+
+        .landing-dropdown {
+            background-color: #00000000 !important;
+            background: none !important;
+        }
+
+        .landing-dropdown:hover {
+            cursor: pointer;
+            background-color: #00000000 !important;
+            background: none !important;
+        }
+
+        .landing-dropdown:focus {
+            background-color: #00000000 !important;
+            background: none !important;
+        }
+
+        .landing-dropdown-sub {
+            background: rgb(28, 28, 28);
+        }
+
+        .landing-dropdown-sub:hover {
+            background: rgb(28, 28, 28) !important;
+        }
+
+        .dropdown-menu {
+            background: rgb(28, 28, 28)
+        }
+
+        .landing-dropdown-sub a {
+            color: white !important;
+            font-family: "Raleway", Helvetica, Arial, sans-serif;
+        }
+
+        .landing-dropdown-sub a:hover {
+            color: #828f30 !important;
+            background: rgb(28, 28, 28) !important;
+        }
+
+        .carousel-caption {
+            line-height: 0.8em;
+        }
+
+
+    </style>
+    <!-- =======================================================
+      Theme Name: Green
+      Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body>
+
+
+<div class="header">
+
+    <section id="header" class="appear">
+        {#    <section id="header" class="appear section">#}
+        {#fixes error with navigation,that home is never reached in big screens.creates error with colors#}
+        <div class="navbar navbar-fixed-top" role="navigation"
+             data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);"
+             data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="fa fa-bars color-white"></span>
+                </button>
+                <div class="fadeInUp mylogo" data-wow-offset="0" data-wow-delay="0.1s" href="main"
+                     data-0="width:99%;height:90%" data-300="width:40%;height:40%;"><a href=""><img
+                        src="static/images/logo.png" style="width: 9%;height:10%;"></a>
+                    <span class="hidden-sm hidden-xs" data-0="display:inline-block; opacity:90%"
+                          data-200="opacity:50%;display:none;" data-300="display:none; opacity:0%"
+                          style="display: inline-block;float: right;font-size: 0.8em;color: white">The I<sup>2</sup>AM PARIS platform has been developed in the context of the EU Horizon 2020 PARIS REINFORCE project
+                    </span>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse" style="margin-right: 0">
+                <ul class="nav navbar-nav" data-0="margin-top:0px;background-color: rgba(28, 28, 28, 1);"
+                    data-300="margin-top:0px;background-color: rgba(75, 75, 75, 0.5);"
+                    style="width: 100%">
+                    <li><a href="#header" style="font-weight: 500">Home</a></li>
+                    <li><a href="#section-works" style="font-weight: 500">Documentation</a></li>
+                    <li><a href="#section-services" style="font-weight: 500">Results</a></li>
+                    <li>
+
+                        <a class="dropdown-toggle landing-dropdown" type="button" id="dropdownMenu1"
+                           data-toggle="dropdown" style="font-weight: 500">The Projects<i
+                                style="margin-left: 0.5em" class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation" class="landing-dropdown-sub"><a role="menuitem" tabindex="-1"
+                                                                                    href="https://paris-reinforce.eu">H2020
+                                PARIS REINFORCE</a></li>
+                            <li role="presentation" class="landing-dropdown-sub"><a role="menuitem" tabindex="-1"
+                                                                                    href="http://www.ndc-aspects.eu">H2020
+                                NDC-ASPECTS</a>
+                            </li>
+                            <li role="presentation" class="landing-dropdown-sub"><a role="menuitem" tabindex="-1"
+                                                                                    href="https://encludeproject.eu">H2020
+                                ENCLUDE</a></li>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li><a href="#section-opencall" style="font-weight: 500">Open Call</a></li>
+                    <li><a href="#section-contact" style="font-weight: 500">Contact</a></li>
+                    <li>
+                        <a href="feedback_form/"><i style="margin-right: 0.5em" class="fa fa-star"></i>Evaluate Us</a>
+                    </li>
+                    <li class="quick-access-content">
+                        <a href="dynamic_doc/"><i style="margin-right: 0.5em" class="fa fa-rocket"></i>Model Dynamic
+                            Documentation</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+
+
+    </section>
+</div>
+
+
+<div class="slider">
+    <div id="about-slider">
+        <div id="carousel-slider" class="carousel slide" data-ride="carousel" data-interval="20000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators visible-xs">
+                <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-slider" data-slide-to="1"></li>
+                <li data-target="#carousel-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active" style="background-image: url({% static 'carousel_images/news_header.png' %})">
+                    <div class="carousel-caption">
+                        <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
+                            <h3>I<sup>2</sup>AM PARIS</h3>
+                            <h4>Integrating Integrated Assessment Modelling
+                                in Support of the Paris Agreement
+                            </h4>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+                                <p style="margin-bottom: 0">Aiming to become the vessel of the international energy- and
+                                    climate-economy modelling community, I<sup>2</sup>AM PARIS is an open-access, data
+                                    exchange
+                                    platform hosting detailed documentation, inputs, and outputs of modelling tools and
+                                    exercises for all audiences</p>
+                                {#                                <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">#}
+                                {#                                    <form style="margin-top: 0" class="form-inline">#}
+                                {#                                        <div class="form-group">#}
+                                {#                                            <p>Bridging the gap between scientists and stakeholders</p>#}
+                                {#                                        </div>#}
+                                {#                                    </form>#}
+                                {#                                </div>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="background-image:url({% static 'carousel_images/news_header.png' %})">
+                    <div class="carousel-caption">
+                        <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">
+                            <h2>Modelling documentation</h2>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+                                <p>Detailed, dynamic, and comparative documentation of quantitative systems models in
+                                    support of climate policy, regarding their representation of socioeconomics,
+                                    sectors, policies, mitigation/adaptation measures, and emissions, as well as their
+                                    geographic coverage</p>
+                            </div>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.6s">
+
+                            <div class="form-group">
+                                <button type="livedemo" class="btn btn-primary btn-lg doc_index">
+                                    <a href="#section-works" style="color: white" class="doc_index">
+                                        Explore
+                                    </a>
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="background-image:url({% static 'carousel_images/news_header.png' %})">
+                    <div class="carousel-caption">
+                        <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">
+                            <h2>Workspaces of modelling exercises</h2>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+                                <p>Scientific interfaces, explanatory summaries for all audiences, along with customised
+                                    visualisations of results, libraries with relevant content and downloadable
+                                    datasets, heatmaps explaining how different models have been harmonised and/or
+                                    interlinked, and open access to model inputs and outputs</p>
+                            </div>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.6s">
+
+                            <div class="form-group">
+                                <button type="livedemo" class="btn btn-primary btn-lg service_index">
+                                    <a href="#section-services" style="color: white" class="service_index">
+                                        Explore
+                                    </a>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a class=" right carousel-control hidden-xs" href="#carousel-slider" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+        <!--/#carousel-slider-->
+    </div>
+    <!--/#about-slider-->
+</div>
+<!--/#slider-->
+
+<section id="section-works" class="section appear clearfix">
+    <div class="container">
+
+        <div class="row mar-bot40">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="section-header">
+                    <h2 class="section-heading animated" data-animation="bounceInUp">Documentation</h2>
+                    <p>Every available model is documented and dynamically presented. </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row mar-bot40">
+
+                <div class="col-lg-3">
+                    <div class="align-center">
+                        <div class="wow bounceIn">
+                            <div class="service-col detailed_doc">
+                                <div class="service-icon">
+                                    <figure><i class="fa fa-list-ul"></i></figure>
+                                </div>
+                                <h2><a class="detailed_doc" href="detailed_model_doc">Detailed Model Documentation</a>
+                                </h2>
+                                <p>A detailed, technical documentation of global, regional, and national models for
+                                    climate policy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3">
+                    <div class="wow bounceIn">
+                        <div class="align-center">
+                            <div class="wow rotateIn">
+                                <div class="service-col dynamic_doc" style="cursor: pointer">
+                                    <div class="service-icon">
+                                        <figure><i class="fa fa-cog"></i></figure>
+                                    </div>
+                                    <h2><a href="dynamic_doc/" class="dynamic_doc">Model Dynamic Documentation</a></h2>
+                                    <p>An interactive library of the models, in the form of a responsive infographic,
+                                        with regard to their coverage, granularity, representation, and features.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3">
+                    <div class="align-center">
+                        <div class="wow bounceIn">
+
+                            <div class="wow rotateIn">
+                                <div class="service-col overview_doc">
+                                    <div class="service-icon" style="position: relative">
+                                        <img class="hidden-xs" style="height: 1.8em; position: absolute; right: 2.5em"
+                                             src={% static "logos/paris_reinforce_logo.png" %}>
+                                        <figure><i class="fa fa-archive"></i></figure>
+                                    </div>
+                                    <h2><a href="overview_comparative_assessment_doc" class="overview_doc">Overview and
+                                        Comparative Assessment</a></h2>
+                                    <p>A comparative documentation of global models, models for Europe, and models for
+                                        countries outside Europe that are part of the PARIS REINFORCE project
+                                        ensemble.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3">
+                    <div class="wow bounceIn">
+                        <div class="align-center">
+                            <div class="wow rotateIn">
+                                <div class="service-col harmonisation_map_on_demand" style="cursor: pointer">
+                                    <div class="service-icon" style="position: relative">
+                                        <img class="hidden-xs " style="height: 1.8em; position: absolute; right: 2.5em"
+                                             src={% static "logos/paris_reinforce_logo.png" %}>
+                                        <figure><i class="fa fa-table"></i></figure>
+                                    </div>
+                                    <h2><a href="/harmonisation_map_tool/harmonisation_manual"
+                                           class="harmonisation_map_on_demand">Variable Harmonisation Heatmap</a></h2>
+                                    <p>This tool creates on-demand heatmaps that indicate how different variables are
+                                        handled across the different models within the PARIS REINFORCE consortium.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+<!-- spacer section:testimonial -->
+<section id="testimonials" class="section" data-stellar-background-ratio="0.5" style="height: auto;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="align-center">
+                    <div class="testimonial pad-top40 pad-bot40 clearfix">
+                        <h3 style="color: white; font-size: 25px; font-weight: 500">
+                            I<sup>2</sup>AM PARIS seeks to enable modellers to communicate with one another and
+                            stakeholders to interact with
+                            modelling assumptions, scenarios and results in an informative way and to understand which
+                            decarbonisation pathways are the most relevant and realistic, ultimately enhancing the
+                            legitimacy of
+                            the scientific processes and improving the transparency of the employed methods, models and
+                            tools.
+                        </h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- services -->
+<section id="section-services" class="section appear pad-bot5 clearfix bg-white">
+    <div class="container">
+        <div class="row mar-bot5">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="section-header">
+                    <div class="wow bounceIn" data-animation-delay="7.8s">
+
+                        <h2 class="section-heading animated">Results</h2>
+                        <h4>Choose among the following workspaces</h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mar-bot40">
+            <div class="col-lg-12">
+                <div class="wow bounceIn">
+                    <div class="align-center">
+
+                        <div class="wow rotateIn">
+                            <div class="service-col paris_reinforce_workspace col-lg-6">
+                                <div class="">
+                                    {#                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_logo.png" %}></figure>#}
+                                    <img style="width: 19em" src={% static "logos/paris_reinforce_logo.png" %}>
+                                </div>
+                                <h2><a href="pr_wwh/landing" class="paris_reinforce_workspace">Where is the world
+                                    headed?</a>
+                                </h2>
+                                <p>A multi-model analysis of long-term emissions and warming implications of current
+                                    global mitigation efforts</p>
+                            </div>
+
+                            <div class="service-col eu_workspace col-lg-6">
+                                <div class="">
+                                    {#                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_logo.png" %}></figure>#}
+                                    <img style="width: 19em" src={% static "logos/paris_reinforce_logo.png" %}>
+                                </div>
+                                <h2><a href="eu_wwh/landing" class="eu_workspace">Where is the EU headed?</a>
+                                </h2>
+                                <p>A stakeholder-driven model inter-comparison assessing where the EU is headed given
+                                    its current climate policy</p>
+                            </div>
+
+
+                            <div class="service-col rrf_policy_workspace col-lg-6">
+                                <div class="">
+                                    {#                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_logo.png" %}></figure>#}
+                                    <img style="width: 19em" src={% static "logos/rrf_policy_logo.png" %}>
+                                </div>
+                                <h2><a href="rrf_policy_intro" class="rrf_policy_workspace">Recovery Policy DB</a>
+                                </h2>
+                                <p>This workspace includes the CINEA Climate Neutrality WGII Shared Recovery Policy
+                                    Database for modelling research</p>
+                            </div>
+
+                            <div class="service-col feasibility_workspace col-lg-6">
+                                <div class="">
+                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_logo.png" %}></figure>
+                                    <img style="width: 19em" src={% static "logos/paris_reinforce_logo.png" %}>
+                                </div>
+                                <h2><a href="feasibility/scientific_module" class="feasibility_workspace">Regional feasibilities to net-zero</a>
+                                </h2>
+                                <p>A global analysis of current policies, NDCs, and net-zero targets with a focus on regional feasibilities</p>
+                            </div>
+
+                            <div class="service-col ida_workspace col-lg-6">
+                                <div class="">
+                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_logo.png" %}></figure>
+                                    <img style="width: 19em" src={% static "logos/paris_reinforce_logo.png" %}>
+                                </div>
+                                <h2><a href="ida/public_module" class="ida_workspace">Index decomposition analysis</a>
+                                </h2>
+                                <p>An assessment of current policy and net-zero emissions scenarios through an index
+                                decomposition and sectoral benchmarking exercise</p>
+                            </div>
+
+                            <div class="service-col covid_workspace col-lg-6">
+                                <div class="">
+                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_logo.png" %}></figure>
+                                    <img style="width: 19em" src={% static "logos/paris_reinforce_logo.png" %}>
+                                </div>
+                                <h2><a href="covid/landing" class="covid_workspace">COVID recovery packages</a>
+                                </h2>
+                                <p>An analysis of climate-employment co-benefits of green recovery packages in six major emitting regions</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {#            <div class="col-lg-4">#}
+            {#                <div class="wow bounceIn">#}
+            {#                    <div class="align-center">#}
+            {##}
+            {#                        <div class="wow rotateIn">#}
+            {#                            <div class="service-col">#}
+            {#                                <div class="service-icon">#}
+            {#                                    <figure><i class="fa fa-globe"></i></figure>#}
+            {#                                </div>#}
+            {#                                <h2><a href="#">Region Based Analysis</a></h2>#}
+            {#                                <p>Region Based Analysis offers the ability to analyse, visualise and compare data from#}
+            {#                                    several#}
+            {#                                    regions (or worldwide) for a specific sector, comparing the outputs of the selected#}
+            {#                                    models.</p>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#            <div class="col-lg-4">#}
+            {#                <div class="align-center">#}
+            {#                    <div class="wow bounceIn">#}
+            {##}
+            {#                        <div class="wow rotateIn">#}
+            {#                            <div class="service-col">#}
+            {#                                <div class="service-icon">#}
+            {#                                    <figure><i class="fa fa-th"></i></figure>#}
+            {#                                </div>#}
+            {#                                <h2><a href="#">Sector Based Analysis</a></h2>#}
+            {#                                <p>Sector Based Analysis offers the ability to analyse, visualise and compare data from#}
+            {#                                    several#}
+            {#                                    different sectors such as Energy, Transportation, Building etc. for a specific#}
+            {#                                    region, comparing#}
+            {#                                    the outputs of the selected models.</p>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#            <div class="col-lg-4">#}
+            {#                <div class="align-center">#}
+            {#                    <div class="wow bounceIn">#}
+            {#                        <div class="service-col">#}
+            {#                            <div class="service-icon">#}
+            {#                                <figure><i class="fa fa-question"></i></figure>#}
+            {#                            </div>#}
+            {#                            <h2><a href="#">Policy Question Based Analysis</a></h2>#}
+            {#                            <p>Policy Question Based Analysis offers the ability to analyse, visualise and compare data#}
+            {#                                from a selected region giving an insight on#}
+            {#                                selected scenarios.</p>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+
+        </div>
+
+    </div>
+</section>
+<!--/services-->
+
+
+<!-- open call -->
+<section id="section-opencall" class="section appear clearfix" style="background: #343a40; color: #fefefe">
+    <div class="container">
+
+        <div class="row mar-bot40">
+            <div class="col-md-offset-0 col-md-12">
+                <div class="section-header">
+
+                    <h2>Open Call</h2>
+                    <h3>Connecting modelling groups across the world in I<sup>2</sup>AM PARIS!</h3>
+
+                    <p> Integrated assessment and energy system modellers are welcome to submit
+                        documentation of their models. The template to fill in the required information
+                        can be found <a href="{% static '/excel_files/I2AM PARIS_documentation_template_final.xlsx' %}"><b>here</b></a>,
+                        and an example based on the GCAM
+                        model can be found <a
+                                href="{% static '/excel_files/I2AM PARIS_documentation_template_GCAM.xlsx' %}"><b>here</b></a>.
+                        Please e-mail the template filled in for your model to
+                    <address><a href="mailto:iam@paris-reinforce.eu"><b>iam@paris-reinforce.eu</b></a></address>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact -->
+<hr>
+<section id="section-contact" class="section appear clearfix" style="">
+    <div class="container">
+
+        <div class="row mar-bot40">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="section-header">
+                    <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+                    <p>For any information do not hesitate to contact us.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage">Something went wrong! Please try again later!</div>
+                <form action="contact_form" method="post" role="form" class="contactForm">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="username" class="form-control" id="username" placeholder="Your Name"
+                               data-rule="minlen:4"
+                               data-msg="Please enter at least 4 chars"/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                               data-rule="email"
+                               data-msg="Please enter a valid email"/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                               data-rule="minlen:4"
+                               data-msg="Please enter at least 8 chars of subject"/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required"
+                        data-msg="Please write something for us"
+                        placeholder="Message"></textarea>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6LewHqEdAAAAAG7A1uY2PJJbdLksCuhlD_N4k49j"></div>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button type="submit" class="line-btn green">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <!-- ./span12 -->
+        </div>
+
+    </div>
+</section>
+<!-- map -->
+{#  <section id="section-map" class="clearfix">#}
+{#    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>#}
+{#  </section>#}
+
+{% include "i2amparis_main/pages_footer.html" %}
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script>
+    $(document).on('click', 'button.doc_index', function (e) {
+        $("a.doc_index")[0].click()
+    });
+    $(document).on('click', 'button.service_index', function (e) {
+        $("a.service_index")[0].click()
+    });
+    $(document).on('click', 'div.overview_doc', function (e) {
+        $("a.overview_doc")[0].click()
+    });
+    $(document).on('click', 'div.dynamic_doc', function (e) {
+        $("a.dynamic_doc")[0].click()
+    });
+    $(document).on('click', 'div.detailed_doc', function (e) {
+        $("a.detailed_doc")[0].click()
+    });
+    $(document).on('click', 'div.harmonisation_map_on_demand', function (e) {
+        $("a.harmonisation_map_on_demand")[0].click()
+    });
+    $(document).on('click', 'div.paris_reinforce_workspace', function (e) {
+        $("a.paris_reinforce_workspace")[0].click()
+    });
+    $(document).on('click', 'div.rrf_policy_workspace', function (e) {
+        $("a.rrf_policy_workspace")[0].click()
+    });
+    $(document).on('click', 'div.covid_workspace', function (e) {
+        $("a.covid_workspace")[0].click()
+    });
+    $(document).on('click', 'div.eu_workspace', function (e) {
+        $("a.eu_workspace")[0].click()
+    });
+    $(document).on('click', 'div.feasibility_workspace', function (e) {
+        $("a.feasibility_workspace")[0].click()
+    });
+    $(document).on('click', 'div.ida_workspace', function (e) {
+        $("a.ida_workspace")[0].click()
+    });
+
+</script>
+<script>
+    $(document).ready(function () {
+        $('#dynamic_doc_format_select').on('change', function () {
+            if ($(this).val() === '') {
+                $('.dynamic_doc a').attr('href', 'dynamic_doc/')
+            } else {
+                var str = 'dynamic_doc/?format=' + $(this).val();
+                $('.dynamic_doc a').attr('href', str)
+            }
+        });
+        setTimeout(function () {
+            $('.quick-access-content').css('float', 'right');
+        }, 100);
+    });
+</script>
+
+</body>
+
+</html>

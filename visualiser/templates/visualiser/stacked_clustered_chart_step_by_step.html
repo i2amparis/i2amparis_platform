@@ -1,0 +1,170 @@
+{% extends 'visualiser/main_visualiser_am4.html' %}
+{% block content %}
+    <div id="chartdiv"></div>
+    <script>
+        am4core.ready(function () {
+            var glob_frame = []
+            var port2;
+
+            // Listen for the initial port transfer message
+            window.addEventListener('message', initPort);
+
+            // Setup the transferred port
+            function initPort(e) {
+                port2 = e.ports[0];
+                port2.onmessage = onMessage;
+            }
+
+            // Handle messages received on port2
+            function onMessage(e) {
+                console.log('Clicked to change.')
+                glob_frame = e.data
+                zoomAxis(glob_frame[0], glob_frame[1]);
+                port2.postMessage('Frame set: "' + e.data + '"');
+            }
+
+// Themes begin
+            am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+            var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+
+            chart.data = {{ chart_data |safe}};
+            chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+            var x_axis_title = "{{x_axis_title}}";
+            var x_axis_name = "{{ x_axis_name }}";
+            var x_axis_unit = "{{ x_axis_unit }}";
+            var y_var_names = {{ y_var_names|safe}};
+            var y_var_titles = {{ y_var_titles|safe}};
+            var y_var_units = "{{ y_var_units|safe }}";
+            var y_axis_title = "{{ y_axis_title|safe }}";
+            var z_axis_cat_names = {{ cat_axis_names|safe }};
+            var z_axis_cat_titles = {{ cat_axis_titles|safe }};
+            var color_list = {{ color_list|safe }};
+            var use_default_colors = {{ use_default_colors }};
+
+            var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+            categoryAxis.dataFields.category = x_axis_name;
+            categoryAxis.renderer.grid.template.location = 0;
+            categoryAxis.renderer.minGridDistance = 30;
+            categoryAxis.title.text = x_axis_title + " (" + x_axis_unit + ")";
+            categoryAxis.title.fontWeight = 600;
+            categoryAxis.title.marginTop = 20;
+            categoryAxis.title.marginBottom = 20;
+            categoryAxis.renderer.labels.template.rotation = 45;
+            categoryAxis.renderer.labels.template.verticalCenter = "middle";
+            categoryAxis.renderer.labels.template.horizontalCenter = "left";
+            {#categoryAxis.renderer.labels.template.marginTop = 30;#}
+            categoryAxis.renderer.labels.template.fontSize = '0.7em';
+            chart.numberFormatter.numberFormat = "####.##";
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            valueAxis.title.fontWeight = 600;
+
+            valueAxis.title.text = y_axis_title + " (" + y_var_units[0] + ")";
+            valueAxis.title.fontWeight = 600;
+
+            function zoomAxis(from, to) {
+                categoryAxis.zoomToCategories(from, to);
+                console.log('zoom2');
+            }
+
+            zoomAxis(glob_frame[0], glob_frame[1]);
+
+            // Create series
+            var series = [];
+            var offset = 0;
+            for (var z = 0; z < z_axis_cat_names.length; z++) {
+                {#createLabelSeries(z_axis_cat_titles[z]);#}
+                var count = 0;
+                for (var i = offset; i < offset + (y_var_names.length / z_axis_cat_names.length); i++) {
+                    if (use_default_colors) {
+                        create_series(x_axis_name, y_var_names[i], chart.colors.getIndex(count), y_var_titles[i],
+                            y_var_units, x_axis_name, count);
+                    } else {
+                        create_series(x_axis_name, y_var_names[i], color_list[count], y_var_titles[i],
+                            y_var_units, x_axis_name, count);
+                    }
+                    count = count + 1;
+
+                }
+                offset = offset + (y_var_names.length / z_axis_cat_names.length);
+            }
+
+
+//Add Legend
+            var legend = chart.bottomAxesContainer.createChild(am4charts.Legend);
+            legend.series = series;
+            legend.itemContainers.template.clickable = false;
+            legend.itemContainers.template.focusable = false;
+            legend.itemContainers.template.cursorOverStyle = am4core.MouseCursorStyle.default;
+            legend.parent = chart.chartContainer;
+            legend.labels.template.fontSize = '0.8em';
+            legend.data = [];
+            for (var j = 0; j < (y_var_names.length / z_axis_cat_names.length); j++) {
+                legend.data.push({"name": y_var_titles[j], "fill": color_list[j]});
+            }
+
+
+            // Add scrollbar
+            {#chart.scrollbarX = new am4charts.XYChartScrollbar();#}
+
+            // Fake series (display cluster label)
+            function createLabelSeries(name) {
+                var series = chart.series.push(new am4charts.ColumnSeries());
+                series.dataFields.valueY = "zero";
+                series.stacked = false;
+                series.dataFields.categoryX = "year";
+                series.name = name;
+                series.hiddenInLegend = true;
+
+                var bullet = series.bullets.push(new am4charts.LabelBullet());
+                bullet.label.text = "{name}";
+                bullet.label.fontSize = "0.6em";
+                bullet.label.rotation = 90;
+                bullet.label.hideOversized = false;
+                bullet.label.paddingLeft = -250;
+
+            }
+
+            function create_series(setNameOfX, myVar, fillColor, myVarTitle, myVarUnit,
+                                   x_axis_name, count) {
+                <!-- Set the range  between open and close and set and the close-->
+
+                var series = chart.series.push(new am4charts.ColumnSeries());
+
+                series.columns.template.fillOpacity = 0.9;
+                series.columns.template.width = am4core.percent(100);
+
+
+                series.columns.template.tooltipText = " {categoryX}- " + myVar + " : [bold]{valueY}[/]";
+
+                series.dataFields.valueY = myVar;
+                series.dataFields.categoryX = x_axis_name;
+                series.name = myVarTitle;
+                series.stroke = am4core.color(fillColor);
+                series.fill = series.stroke;
+                series.columns.template.column.cornerRadiusTopLeft = 5;
+                series.columns.template.column.cornerRadiusTopRight = 5;
+                series.stacked = count !== 0;
+                series.tooltip.autoTextColor = false;
+                series.tooltip.label.fill = am4core.color("#FFFFFF");
+                series.tooltip.getFillFromObject = false;
+                series.tooltip.background.fill = am4core.color(fillColor).lighten(-0.3);
+                series.hiddenInLegend = true;
+
+                {#series.yAxis = valueAxis;#}
+
+                //legend shows value dynamically
+                {#series.legendSettings.labelText = "{name}";#}
+                {#series.legendSettings.itemValueText = "[bold]{value}[/bold]";#}
+
+
+            }
+
+
+        }); // end am4core.ready()
+    </script>
+
+{% endblock %}

@@ -1,0 +1,170 @@
+{% load static %}
+<div class="tab-pane" id="harm_heatmap">
+    <div class="container" style="width: 100%; height:100%;">
+        <div class="row" style="margin-top: 6em; height: 130vh">
+            <div class="col-sm-9 col-xs-12" style="height: 100%">
+                <div id="viz_frame_div" class="row" style="height: 100%; line-height: 100%;">
+                    <iframe id="viz_iframe" src="" title="Harmonisation Table Heatmap Chart"
+                            style="width: 100%; height: 100%;  border:none"></iframe>
+                    <div id="loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em; display: none">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">This heatmap indicates how
+                                different variables are handled across the models within the
+                                Paris Reinforce consortium. The rows present the different socio and techno
+                                economic
+                                variables. The columns indicate the 16 PR models. Variables are either
+                                considered as outputs
+                                from models, inputs to models or are not represented by the models as any
+                                explicit output or
+                                input
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-3 col-xs-12" style="margin-top: 1.5em">
+                <div class="tooltip-demo">
+                    <h4 style="display: inline-block;background:transparent;box-shadow: none; font-weight: bold; color: #828f30; cursor: help"
+                        data-toggle="tooltip" data-placement="auto"
+                        title="<p>This heatmap indicates how different variables are handled across the models within the Paris Reinforce consortium. The rows present the different socio and techno economic variables. The columns indicate the 16 PR models. Variables are either considered as outputs from models, inputs to models or are not represented by the models as any explicit output or input</p>">
+                        Variable Harmonisation Heatmap
+                    </h4>
+                    <div style="margin-bottom: 1em">You can also create on-demand variable harmonisation
+                        heatmaps
+                        <a target="_blank"
+                           rel="noopener noreferrer"
+                           style="font-weight: bold"
+                           href="/harmonisation_map_tool/harmonisation_manual">here
+                        </a>.
+                    </div>
+                </div>
+                <div style="margin-bottom: 3em;">
+                    <label style="display: block;width: 70%">
+                        Order Columns By:
+                        <select id="col_order" class="form-control">
+                            <option value="default" data-category="">Default</option>
+                            <option value="title" data-category="">Alphabetically</option>
+                            <option value="type" data-category="datasetmodeltypeguides">Model Type</option>
+                            <option value="coverage" data-category="datasetmodelgeoguides">Geographical
+                                Coverage
+                            </option>
+                            <option value="time_steps_in_solution" data-category="datasetmodeltimestepguides">
+                                Time Step
+                            </option>
+                        </select>
+                    </label>
+
+                </div>
+
+                <label for="model_name" style="display: block;width: 70%">Model Name
+                    <select class="form-control desc_text take_up_space" id="model_name">
+                        {% for el in models %}
+                            <option value="{{ el.model_name }}">{{ el.model_title }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
+                <div class="heading">Model Geographical Coverage</div>
+                <div class="desc_text take_up_space" id="geo_cov"></div>
+                <div class="heading">Model Type</div>
+                <div class="desc_text take_up_space" id="model_type"></div>
+                <div class="heading"> Model Time Step (Years)</div>
+                <div class="desc_text take_up_space" id="model_timestep"></div>
+                <div class="heading">
+                    <a style="font-weight: bold; " id="model_desc" target="_blank"
+                       rel="noopener noreferrer" href="/detailed_model_doc/">Detailed Model
+                        Documentation
+                        <i class="fa fa-book"></i>
+                    </a>
+                </div>
+                <div class="heading " style="margin-bottom: 1em">
+                    <a style="font-weight: bold; " id="model_dynamic" target="_blank"
+                       rel="noopener noreferrer" href="/dynamic_doc/">Dynamic Model
+                        Documentation
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
+
+                <label for="var_name" style="display: block;width: 70%">Variable Name
+                    <select class=" form-control desc_text take_up_space" id="var_name">
+                        {% for el in variables %}
+                            <option value="{{ el.var_name }}">{{ el.var_title }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
+                <div class="heading"> Category</div>
+                <div class="desc_text take_up_space" id="var_cat"></div>
+                <div class="heading">Variable Definition</div>
+                <div class="desc_text take_up_space" id="var_def"></div>
+                <ol class="source_container" style="font-size: 0.9em; padding: 0">
+
+                </ol>
+
+                <div class="unit_container">
+                    <div class="heading">Unit</div>
+                    <div class="desc_text take_up_space" id="var_mod_unit"></div>
+                </div>
+                <div class="timespan_container">
+                    <div class="heading">Timespan</div>
+                    <div class="desc_text take_up_space" id="var_mod_timespan"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="models_container" style="display: none">
+        {% for model in models %}
+            <div id={{ model.model_name }}>
+                {#                <span id="long_title">{{ model.long_title }}</span>#}
+                <span class="d_model_coverage">{{ model.coverage_title }}</span>
+                <span class="d_model_type">{{ model.type_of_model }}</span>
+                <span class="d_model_timestep">{{ model.time_steps_in_solution }}</span>
+                <span class="d_model_description">{{ model.short_description }}</span>
+            </div>
+        {% endfor %}
+    </div>
+    <div id="variables_container" style="display: none">
+        {% for variable in variables %}
+            <div id={{ variable.var_name }}>
+                <span class="d_var_title">{{ variable.var_title }}</span>
+                <span class="d_var_category">{{ variable.var_category }}</span>
+                <span class="d_var_definition">{{ variable.var_definition }}</span>
+            </div>
+        {% endfor %}
+    </div>
+    <div id="var_mod_data_container" style="display: none">
+        {% for el in var_mod %}
+            <div id={{ el.mod }}_{{ el.var }}>
+                <span class="d_var_mod_unit">{{ el.var_unit }}</span>
+                <span class="d_var_mod_timespan">{{ el.var_timespan }}</span>
+
+                {% for key_source_data,v in el.source_info.items %}
+                    <span class="d_var_mod_source_url">
+                    {% for url in  v %}
+                        <span class="source_url_el">{{url.var_source_url}}</span>
+                    {% endfor %}
+                </span>
+                    <span class="d_var_mod_source_info">
+                    {% for s_info in v %}
+                        <span class="source_info_el">{{s_info.var_source_info}}</span>
+                    {% endfor %}
+                </span>
+                        <span class="d_var_mod_source_title">
+                        {% for s_info in v %}
+                            <span class="source_info_title">{{ key_source_data }}</span>
+                        {% endfor %}
+                    </span>
+                {% endfor %}
+
+            </div>
+        {% endfor %}
+    </div>
+</div>

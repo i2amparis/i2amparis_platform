@@ -1,0 +1,212 @@
+{% load static %}
+{% csrf_token %}
+<div class="tab-pane" id="comparative_tool">
+    <div class="container" style="width: 90%; height:100%;">
+        <div class="row" style="margin-top: 8em; height: 90vh">
+
+            <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help"
+                    data-toggle="tooltip" data-placement="auto"
+                    title="<p>These are the results of the analysis for a selected model,
+                                variable and different scenarios grouped by time (years) or by region.</p>">
+                    Cross-scenario Quantity Comparison
+                </h2>
+            </div>
+            <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                <p style="display: inline-block;background:transparent; box-shadow: none;">
+                    Please, select one or more options from the available fields below. One model, one variable, can be
+                    selected and multiple scenarios.
+                </p>
+                <div class="col-xs-12 col-md-12">
+                    <label class="form-group" style="display: inline-block">Filtering</label>
+                    <div class="tooltip-demo" style="display: inline-block; margin-left: 0.3em">
+                        <i class="fa fa-info-circle"
+                           style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help;"
+                           data-toggle="tooltip" data-placement="auto"
+                           title="<p><strong>Basic</strong> filtering allows the selection options related to any of the currently selected options. <br>
+                        <strong>Strict</strong> filtering allows the selection of options related to all currently selected options</p>">
+                        </i>
+                    </div>
+                </div>
+                <div class="btn-group col-xs-6 col-md-2" data-toggle="buttons" id="comparative_filtering"
+                     style="display: block; margin-bottom: 1em">
+                    <label class="btn btn-primary active"
+                           style="border-top-left-radius: 5px ; border-bottom-left-radius: 5px">
+                        <input type="radio" name="comparative_filtering_input" id="comparative_basic" value="basic" checked>Basic
+                    </label>
+                    <label class="btn btn-primary"
+                           style="border-top-right-radius: 5px ; border-bottom-right-radius: 5px">
+                        <input type="radio" name="comparative_filtering_input" id="comparative_strict" value="strict"> Strict
+                    </label>
+                </div>
+                <div class="col-xs-12 col-md-8"></div>
+                <div class="col-xs-6 col-md-2">
+                    <a id="clear-button_intro_comp"
+                       class="button btn btn-default openbtn"
+                       style="background-color: rgba(172,31,0,0.8);color: white;padding: 0.1em 0.5em 0.1em 0.5em;height: inherit;line-height: 2em; width: 100%; position: relative; ">
+                        Clear All <i style="margin-left: 0.3em" class="fa fa-trash-o"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="selects-filters col-md-12 col-xs-12">
+                    <div class="col-md-3 col-xs-6 form-group">
+                        <label for="model_name_intro_comp" style="display: inline-block;">Models</label>
+                        <div style="display: inline-block; margin-left: 0.4em; position:relative; bottom:0.1em;">
+                            <a class="clear-sel-button-intro-comp button btn btn-default openbtn " data-sel_clear="model_name_intro_comp"
+                               style="background-color: rgba(172,31,0,0.8);color: white;height: inherit; font-size: 11px; padding: 0em 0.4em 0em 0.4em">x
+                            </a>
+                        </div>
+                        <select class="desc_text take_up_space boot-select-intro" data-dbname="model"
+                                placeholder="Select Model(s)"
+
+                                id="model_name_intro_comp" style="width: 100%">
+                            {% for el in models %}
+                                <option value="{{ el.name }}">{{ el.title }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-xs-12 form-group">
+                        <label for="variable_name_intro_comp" style="display: inline-block;">Variables</label>
+                        <div style="display: inline-block; margin-left: 0.4em; position:relative; bottom:0.1em;">
+                            <a class=" disabled-select clear-sel-button-intro-comp button btn btn-default openbtn "
+                               data-sel_clear="variable_name_intro_comp"
+                               style="background-color: rgba(172,31,0,0.8);color: white;height: inherit; font-size: 11px; padding: 0em 0.4em 0em 0.4em">x
+                            </a>
+                        </div>
+                        <select class="desc_text take_up_space boot-select-intro" data-dbname="variable"
+                                placeholder="Select Variable(s)"
+                                id="variable_name_intro_comp" style="width: 100%">
+                            {% for el in variables %}
+                                <option data-agg-func="{{ el.agg_func }}" value="{{ el.name }}">{{ el.title }}</option>
+                            {% endfor %}
+                        </select>
+                        <div style="float: left">
+                            <a id="ca-model-next-btn" class="button btn btn-default openbtn "
+                               style="background-color: #97AE21; color: white;height: inherit; font-size: 13px; padding: 0.4em 0.5em 0.4em 0.5em">Next
+                                <i style="margin-left: 0.3em" class="fa fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6 form-group">
+                        <label for="scenario_name_intro_comp" style="display: inline-block;">Scenarios</label>
+                        <div style="display: inline-block; margin-left: 0.4em; position:relative; bottom:0.1em;">
+                            <a class=" disabled-select clear-sel-button-intro-comp button btn btn-default openbtn"
+                               data-sel_clear="scenario_name_intro_comp"
+                               style="background-color: rgba(172,31,0,0.8);color: white;height: inherit; font-size: 11px; padding: 0em 0.4em 0em 0.4em">x
+                            </a>
+                        </div>
+                        <select class="desc_text take_up_space boot-select-intro " data-dbname="scenario"
+                                multiple="multiple"
+                                placeholder="Select Scenario(s)"
+                                id="scenario_name_intro_comp" style="width: 100%">
+                            {% for el in scenarios %}
+                                <option value="{{ el.name }}">{{ el.title }}</option>
+                            {% endfor %}
+                        </select>
+                        </select>
+                        <div style="float: left" hidden>
+                            <a id="ca-variable-next-btn" class=" button btn btn-default openbtn "
+                               style="background-color: #97AE21; color: white;height: inherit; font-size: 13px; padding: 0.4em 0.5em 0.4em 0.5em">Next
+                                <i style="margin-left: 0.3em" class="fa fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-xs-6">
+                        <label for="agg_var_intro_comp" style="display: block;">Aggregation Variable
+                            <div class="btn-group" data-toggle="buttons" id="agg_var_intro_comp" style="display: block">
+                                <label class="btn btn-primary active"
+                                       style="border-top-left-radius: 5px ; border-bottom-left-radius: 5px">
+                                    <input type="radio" name="agg_var_input" id="year" value="year" checked>Time
+                                </label>
+                                <label class="btn btn-primary"
+                                       style="border-top-right-radius: 5px ; border-bottom-right-radius: 5px">
+                                    <input type="radio" name="agg_var_input" id="region_id" value="region_id"> Location
+                                </label>
+                            </div>
+                        </label>
+
+                    </div>
+                    <div style="display: none">
+                        <div class="col-md-9 col-xs-6"></div>
+                        <div class="col-md-3 col-xs-6 form-group">
+                            <label for="agg_func_intro_comp" style="display: block;"></label>
+                            <select class="desc_text take_up_space boot-select-intro"
+                                    placeholder="Select Aggregation function"
+
+                                    id="agg_func_intro_comp" style="width: 100%">
+                                <option value="default" >Default</option>
+                                <option value="Avg" selected>Average</option>
+                                <option value="Sum">Sum</option>
+                                <option value="Max">Maximum</option>
+                                <option value="Min">Minimum</option>
+                            </select>
+                        </div>
+
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div id="ca_progress_bar" class="progress col-md-10 col-xs-12" style="padding: 0; top: 1em">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="2"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                            <span class="sr-only">25% Complete</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12 disabled-select">
+                        <a id="run-button_sm_intro_comp"
+                           class="button btn btn-default openbtn green"
+                           style="background-color: rgba(151, 174, 33, 0.8);color: white;padding: 0.1em 2.5em 0.1em 2.5em;height: inherit;line-height: 2em ; width: 100% ; ">Run
+                            <i style="margin-left: 0.3em" class="fa fa-spinner"></i>
+                        </a>
+                    </div>
+                    <div id="comparative_progress_text" class="col-md-12 col-xs-12">
+                        <p>Please select Model . . .</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="height: 75vh">
+                <div class="col-sm-9 col-xs-12" style="height: 100%; margin-top: 2em">
+                    <div id="viz_frame_div_intro_comp" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="viz_iframe_intro_comp" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none"></iframe>
+                        <div id="quantity_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em; display: none">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">These are the results of the analysis for a selected model,
+                                    variable and different scenarios grouped by time (years) or by region.
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="chart-side-info_intro_comp" style="height: 100%; margin-top: 2em; display: none"
+                     class="col-sm-3 col-xs-12">
+                    <div class=""><p style="font-size: 0.9em">The chart on the left shows the model analysis results
+                        grouped by year or region for:</p>
+                        <div id="updated-chart-info_intro_comp">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-md-12" style="margin-top: 1em">
+            <button style="background-color: #e78b10; font-weight: bold"
+                    class="button btn btn-default openbtn" type="button"
+                    data-toggle="collapse" data-target="#legend_comparative">
+                Show Legend
+            </button>
+        </div>
+        {% include "i2amparis_main/paris_reinforce_workspace/prw_wawh_tools_scenario_region_legend_comp.html" %}
+    </div>
+    {% include "i2amparis_main/paris_reinforce_workspace/paris_workspace_comparative_analysis_datatables_deprecated.html" %}
+</div>

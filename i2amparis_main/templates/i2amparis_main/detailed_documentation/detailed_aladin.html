@@ -1,0 +1,687 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+                {#                                  ALADIN#}
+
+                        <div id="collapse_aladin">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#aladin_short_overview">Short Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group aladin_methology">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_aladin_methology"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Methology
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_aladin_methology"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Model core for Germany</span>
+                                                    <a style="display: none"
+                                                       href="#aladin_model_core_germany">
+                                                        Model core for Germany</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Passenger Cars outside of Germany</span>
+                                                    <a style="display: none"
+                                                       href="#aladin_passenger_cars_outside_germany">
+                                                        Passenger Cars outside of Germany</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Heavy-duty vehicles</span>
+                                                    <a style="display: none"
+                                                       href="#aladin_heavy_duty_vehicles">
+                                                        Heavy-duty vehicles</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Input Data</span>
+                                                    <a style="display: none"
+                                                       href="#aladin_input_data">
+                                                        Input Data</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="panel-group aladin_model_coverage">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_aladin_model_coverage"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Model
+                                                    coverage
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_aladin_model_coverage"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Geographical, temporal, and segment coverage</span>
+                                                    <a style="display: none"
+                                                       href="#aladin_gegraphical_temporal_segment">
+                                                        Geographical, temporal, and segment
+                                                        coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Mitigation options</span>
+                                                    <a style="display: none"
+                                                       href="#aladin_mitigation_options">
+                                                        Mitigation options</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Specific modelling for PARIS REINFORCE</span>
+                                    <a style="display: none"
+                                       href="#aladin_paris_reinforce">Specific modelling for PARIS
+                                        REINFORCE</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent publications using the ALADIN model</span>
+                                    <a style="display: none"
+                                       href="#aladin_recent_publications">
+                                        Recent publications using the ALADIN model
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#aladin_references">References</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+                        {#                      ALADIN#}
+                    <div class="row">
+                        <h1 id="aladin" style="padding-bottom: 1em; padding-top: 1em">ALADIN - ALternative Automobiles Diffusion and
+                            INfrastructure</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_short_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Short overview</h2>
+                            <p>
+                                ALADIN is an agent-based simulation model for assessing the market diffusion of
+                                alternative fuel vehicles (AFV). The acronym ALADIN stands for ALternative Automobiles
+                                Diffusion and INfrastructure. To date, the simulation comprises the market diffusion of
+                                passenger cars and heavy-duty vehicles in Germany and Europe until 2050. The simulation
+                                is
+                                based on driving data of several thousand individual vehicles that are treated as agents
+                                purchasing new vehicles. Changes in prices, user preferences, and model availability
+                                lead
+                                to market evolution for fuels and vehicles in road transport.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Methodology</h2>
+                            <span id="aladin_model_core_germany" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Model core for Germany</h4>
+                            <p>
+                                The simulation model ALADIN calculates the market diffusion of AFVs based on a
+                                comparison of the economic efficiency of different drive systems and considering
+                                obstructive and supportive factors for approximately 6,500 driving profiles. The
+                                successive approach allows the effects of individual influencing factors on market
+                                evolution to be analysed separately and thus makes it more transparent.
+                            </p>
+                            <p>
+                                The costs of buying and using a vehicle of course play an important role for potential
+                                buyers when making a purchasing decision. In commercial fleets, the economic aspects
+                                are even more important. Compared to conventional cars, AFV are generally more
+                                expensive to purchase, but they are often cheaper to run because of lower fuel and
+                                maintenance costs, among other things. It is therefore essential to look at costs in
+                                terms of the total use, in order to determine for which utilisation or driving
+                                profiles electric cars are more economical than conventional ones. Total cost
+                                calculations for vehicles are correspondingly a common component of models of market
+                                penetration of electric vehicles.
+                            </p>
+                            <p>
+                                The model consists of three basic steps (see the figure below). In a first step, the costs of
+                                total use, referred to as TCO (Total Cost of Ownership), are ascertained for
+                                alternative and conventional vehicles. The TCO comprise the purchase and operating
+                                costs for the respective vehicle and are calculated from a user’s perspective. Three
+                                user groups are distinguished—private, commercial (only fleet vehicles) and company
+                                cars—because of their different rates of taxation and depreciation options as well as
+                                their deviating patterns of utilisation. Because the TCO are also strongly influenced
+                                by the size of the vehicle, different car segments are also distinguished.
+                            </p>
+                            <p>
+                                The drive technologies analysed included battery electric vehicles (BEV), plug-in
+                                electric vehicles (PEV), range-extended vehicles (REEV), plug-in hybrids (PHEV), CNG
+                                vehicles and fuel-cell electric vehicles (FCEV) as well as conventional gasoline and
+                                diesel vehicles. For the TCO calculations, the cheapest respective drive technology is
+                                selected.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/aladin_general_str.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">General structure of the ALADIN model.</p>
+
+                                </div>
+                            </div>
+                            <p>
+                                One of the key innovations of ALADIN compared to previous TCO analyses is that the
+                                calculations are not made based on average annual mileages but are instead based on
+                                real-life driving profiles. A driving profile covers all the trips including the
+                                purpose, length of route, departure and arrival time, duration as well as information
+                                about the vehicle over an observation period of at least one week. Profiles vary
+                                widely by user even within the different groups and have a very strong influence on
+                                the economic efficiency of electric vehicles. The barrier presented by BEV’s limited
+                                range is explicitly considered in the analyses; each individual driving profile is
+                                analysed according to whether the driver is able to make all the trips with a BEV. In
+                                addition, the electric driving share of PHEV or REEV is simulated individually for
+                                each driving profile. This is important to obtain realistic results on economic
+                                efficiency, which depends on the share of electric driving and is especially relevant
+                                for PHEV and REEV. The first step, therefore, is to make TCO calculations on this
+                                basis.
+                            </p>
+                            <p>
+                                In the second step, the TCO calculations are extended by including the costs of the
+                                main charging infrastructure. This is done in order to put the assessment of the
+                                economic efficiency in the TCO calculations on a broader basis. Charging
+                                infrastructure costs vary widely depending on the charging type and location. For
+                                instance, using private charging infrastructure is generally cheaper for drivers with
+                                a garage than for drivers using public charging infrastructure, on which on-street
+                                parkers have to rely. Because the methodology is a simulation which does not represent
+                                spatial modelling but only trip purposes (such as for example “going home”, “going to
+                                work”, “going shopping”), statements about the infrastructure are only possible to a
+                                limited extent. The infrastructure assumption made is the same for all users in the
+                                respective user group. Depending on the scenario, car users are provided with a
+                                different amount of charging infrastructure (for example, only charging at home for
+                                private users and only charging at work for commercial users). In terms of costs,
+                                however, only the primary charging point (e.g. the private wall box of garage owners)
+                                is classified.
+                            </p>
+                            <p>
+                                The brand and size of a vehicle are also important factors influencing the decision to
+                                buy. For instance, many buyers are extremely loyal to a particular brand. There will
+                                continue to be a restricted range of models and brands of electric vehicles available
+                                in the near future, which represents a limiting factor for the market evolution of
+                                electric vehicles. The restricted choice and availability of brands are therefore
+                                taken into account in the model. This is done by analysing currently offered models of
+                                electric vehicles and the announcements made about planned new ones. Logistic growth
+                                in the number of available makes with BEV or REEV/PHEV drives is then determined on
+                                this basis using ordinary least squares regression. It is also assumed that some
+                                buyers decide in favour of an EV of a different brand (if an EV has ideal TCO) and the
+                                rest for a conventional vehicle of the original brand. The most important factors
+                                obstructing market diffusion of electric vehicles are taken into account with the
+                                economic efficiency, range anxiety and limited offer of electric vehicles.
+                            </p>
+                            <p>
+                                The fourth and final step then integrates other aspects of electric vehicles, which
+                                tend to support their market penetration, for example environmental friendliness, low
+                                noise emissions or the allure of an innovative technology. These supportive aspects
+                                are integrated in the model for private users via the willingness to pay more.
+                                Experience shows that the admission of a willingness to pay a higher price in
+                                questionnaires is not the same as actually observed purchasing behaviour.
+                                Nevertheless, it does provide first indications of the esteem attached to new
+                                technologies and the approximate magnitude of the willingness to pay more for them.
+                                The approach of taking the willingness to pay a higher price is a common one in market
+                                diffusion models of AFVs.
+                            </p>
+                            <p>
+                                In this final step, the market evolution is modelled for AFV in Germany up to 2050.
+                                The driving profiles at which an AFV becomes economically viable are determined for
+                                each year based on the analyses conducted. The evolution of the market is then
+                                determined by extrapolating the share of these users in newly registered vehicles.
+                                Monetary policy measures are also integrated into the model such as purchase bonuses,
+                                for example, and their impacts on the evolution of the market are quantified.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_passenger_cars_outside_germany" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Passenger Cars outside of Germany</h4>
+                            <p>
+                                The market diffusion of passenger cars in Europe is based on the projected diffusion
+                                in Germany and combined with country specific factors. We fit logistic functions to
+                                model-based predictions for Germany, for the period 2017-2030 and transfer them to
+                                the other European countries with modifications according to the national electricity
+                                and gasoline price ratio. The basic rationale is to use current market shares as
+                                starting point and modify the logistic market diffusion according to national
+                                conditions. These conditions, when expressed in savings per kilometre between
+                                conventional and PEVs, vary between €0.03 and €0.08 per km (between countries that
+                                combine less electricity prices with high gasoline prices or vice versa). These
+                                country specific fuel savings are used to set the growth parameter of a logistic
+                                diffusion curve. The second parameter of the diffusion curve, the time with 50% market
+                                diffusion, is set such that the logistic market diffusion curve meets the countries
+                                2016 PEV sales share. We thus arrive at country specific logistic market diffusion
+                                curves of PEV that are projected until 2050.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_heavy_duty_vehicles" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Heavy-duty vehicles</h4>
+                            <p>
+                                We calculate sales and stock for AFV heavy duty vehicles until 2030 for Germany and
+                                extrapolate market shares until 2050. The reason for the extrapolation is that the
+                                extrapolation of market shares provides higher certainty than extrapolating the
+                                forecasts for individual parameters in long-term forecasts. The calculated market
+                                shares are considered equal in all other European countries as we assume a coordinated
+                                European infrastructure ramp up and heavy road transport is to a large extent
+                                trans-national in Europe. For catenary hybrid trucks, the share of electric driving
+                                with trolley trucks depends on the share of highways with overhead lines and the
+                                annual driving distance of the truck (the average share of km on the highway increases
+                                with annual vehicle km travelled). We assume that connected highway segments with the
+                                highest heavy-duty traffic will be electrified first. In many cases, the distribution
+                                of highway traffic is right skewed. Accordingly, the relation between the share of
+                                electrified vehicle kilometres and electrified highway kilometres is modelled
+                                mathematically.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_input_data" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Input Data</h4>
+                            <p>
+                                The driving profiles of vehicles form a very important foundation for the
+                                calculations. A separate database (“REM2030-Fahrprofile”) is used for commercial
+                                traffic (fleet users) and the so called “Mobility Panel” for private and company car
+                                users (MOP), which also contains information about the driver that can be used to
+                                distinguish private users with privately owned vehicles from those with a company car.
+                                The driving data only covers Germany, but general driving patterns do not vary much
+                                within Europe, only the total distance travelled (in million passenger km or average
+                                annual of vehicle kilometres travelled). The influence of the charging infrastructure
+                                can also be modelled to a certain extent using the driving profiles, because the
+                                driving profiles of the mobility panel contain information about the trips made.
+                                As already discussed, no spatially resolved modelling is done. A willingness to pay
+                                more is assigned to each individual private driving profile according to the
+                                affiliation to one of four groups in the innovation process. Based on a
+                                cross-comparison of the different studies, it is assumed that 55% of commercial users
+                                are not willing to pay more. The other 45% have a willingness to pay 10% more on the
+                                so-called Full Leasing Rate. In the market evolution model, this is translated as an
+                                extra 7% on top of the purchase price of the conventional reference model. Overall,
+                                the assumptions about the willingness to pay more are rather cautious compared to the
+                                statements made in the underlying studies. As already stated, company car users are
+                                assumed not willing to pay more. In ALADIN, only 1.5% of the driving profiles are
+                                assigned a willingness to pay of more than 10%, and approximately half of the private
+                                driving profiles are given a low willingness to pay 1% more. The willingness to pay
+                                more is assumed to decrease to 60% by 2020 and further thereafter for both private and
+                                commercial users, because novel technologies become less attractive over time.
+                            </p>
+                            <p>
+                                Driving date for medium and heavy-duty vehicles is taken from the large-scale
+                                commercial vehicle survey KiD 2010 for Germany. It is enriched with transport
+                                performance and annual mileage data from EUROSTAT.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Model coverage</h2>
+                            <span id="aladin_gegraphical_temporal_segment" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographical, temporal, and segment coverage</h4>
+                            <p>
+                                The ALADIN model covers Germany and Europe (individual EU28 countries as well as
+                                Switzerland and Norway). It simulates the market diffusion of AFVs from 2011 until 2050.
+                                Focus of the analysis are passenger cars, as well as light-duty, medium-duty and
+                                heavy-duty vehicles. Additional model runs cover the US, China, and India.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/aladin_coverage.jpg" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Coverage of the ALADIN model</p>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_mitigation_options" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Mitigation options</h4>
+                            <p>
+                                The model covers the PEV, BEV, PHEV, REEV, CNG, and FCEV as mitigation options in road
+                                transport for passenger cars. The model can incorporate the change in energy, vehicle,
+                                or battery prices directly. Changes in general car usage or purchase, such as the
+                                increased usage of car sharing, must be integrated as changes in total passenger car
+                                sales. Furthermore, modal shifts can be integrated indirectly too, e.g. as reduction in
+                                annual mileage of the vehicles or lower total number of vehicles sold. One strength of
+                                the model is that an increased availability of public charging infrastructure can be
+                                directly modelled.
+                            </p>
+                            <p>
+                                For medium and heavy-duty vehicles, the ALADIN model covers BEV, PHEV, FCEV, and
+                                catenary hybrid trucks as mitigation technologies. An increase in charging or
+                                refuelling infrastructure can be directly modelled in ALADIN, whereas a total change in
+                                freight activity must be incorporated as reduced vehicles sales or change in annual
+                                mileage.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_paris_reinforce" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Specific modelling for PARIS REINFORCE</h2>
+                            {#                          <span id="gcam_usa_references" class="anchor"></span>#}
+                            <p>
+                                With help of the ALADIN model, the PARIS REINFORCE project will analyse the following
+                                transport specific aspects in Paris Reinforce:
+                            </p>
+
+                            <ul>
+                                <li>electrification strategies for passenger cars and heavy-duty vehicles;</li>
+                                <li>infrastructure evolution for refuelling/recharging of AFVs;</li>
+                                <li>policies targeting AFV investment decisions;</li>
+                                <li>real-life behaviour and modal shift; and</li>
+                                <li>comparisons between electrification in road transport and the introduction of
+                                    synthetic fuels in air and water
+                                    transport.
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_recent_publications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications using the ALADIN model</h2>
+                            {#                          <span id="gcam_usa_references" class="anchor"></span>#}
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Paper</th>
+                                        <th style="width:40%">Topic</th>
+                                        <th style="width:40%">Key findings</th>
+                                        <th style="width:40%">Linkage with other modelling tools</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Gnann et al., 2019
+                                        </td>
+                                        <td>
+                                            Effect of slow charging infrastructure on PEV sales
+                                        </td>
+                                        <td>
+                                            How much public charging infrastructure for PEVs is needed and is there
+                                            mutual interaction in the diffusion of public charging infrastructure and
+                                            electric vehicles? The paper demonstrates the possibility of a market
+                                            diffusion in Germany without any slow public charging infrastructure until
+                                            2030. Although a charging point at home is obligatory for early adopters,
+                                            the second-best option for an infrastructure set-up is at work where the
+                                            majority of vehicles is parked for a long time during the day,
+                                            installation is not costly and users profit more than from public
+                                            facilities.
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Plötz et al., 2019
+                                        </td>
+                                        <td>
+                                            Impact of Catenary trucks on energy system
+                                        </td>
+                                        <td>
+                                            Market diffusion scenarios of electric trucks in Europe are studied,
+                                            while covering CO2 emissions from trucks in the transport and energy
+                                            sector. We introduce load curves for trolley trucks and run a complete
+                                            energy system analysis including trolley trucks. We find that electric
+                                            trucks can reduce CO2 emissions from the transport and energy sector
+                                            even when no additional renewable capacity is installed.
+                                        </td>
+                                        <td>
+                                            Yes (with the energy system model PERSEUS-EU)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Gnann et al., 2018
+                                        </td>
+                                        <td>
+                                            Load shifting and RES integration potential of electric vehicles
+                                        </td>
+                                        <td>
+                                            We model the market diffusion of electric vehicles and their load
+                                            shifting potential. We analyze private and commercial PEVs in Germany
+                                            in 2030 with 50% renewables. Commercial electric passenger cars charge
+                                            different to private ones. We find large load shifting potentials if
+                                            charging at home and at work is possible. 25–30% more excess renewable
+                                            electricity can be integrated with PEV load shifting.
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Gnann, 2015
+                                        </td>
+                                        <td>
+                                            Market diffusion of electric vehicles and their charging infrastructure
+                                        </td>
+                                        <td>
+                                            Analysis of electric vehicles market diffusion scenarios in Germany until
+                                            2030 and interaction with public charging infrastructure roll-out. We
+                                            find that there is no chicken-egg-problem for charging infrastructure for
+                                            electric vehicles in western Europe as most users can easily charge at
+                                            home. Furthermore, additional public slow charging infrastructure has
+                                            hardly any effect on electric vehicle sales
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Kluschke et al., under review)
+                                        </td>
+                                        <td>
+                                            Market diffusion of Fuel cell trucks in Germany and optimal H2 fuel station
+                                            network
+                                        </td>
+                                        <td>
+                                            The paper describes market diffusion scenarios for FCEV trucks in
+                                            Germany. It develops a model for the optimal siting and number of the
+                                            refueling network with capacity limits as important property of hydrogen
+                                            fuel stations. We find about 160 – 350 Hydrogen refeuling stations to
+                                            cover heavy-duty highway transport in Germany. A capacity limit per
+                                            station increases the number of stations required and changes their
+                                            optimal location.
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>
+                                        List of recent publications using the ALADIN model
+                                    </caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!--Add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="aladin_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Gnann, T., Plötz, P., & Wietschel, M. (2019). Can public slow charging accelerate
+                                plug-in electric vehicle sales? A simulation of charging infrastructure usage and its
+                                impact on plug-in electric vehicle sales for Germany. International Journal of
+                                Sustainable Transportation, 13, 528-542. doi:10.1080/15568318.2018.1489016
+                            </p>
+                            <p>
+                                Plötz, P., Gnann, T., Jochem, P., Yilmaz, H. Ü., & Kaschub, T. (2019). Impact of
+                                electric trucks powered by overhead lines on the European electricity system and
+                                CO2 emissions. Energy Policy, 130, 32-40. doi:10.1016/j.enpol.2019.03.042
+                            </p>
+                            <p>
+                                Gnann, T., Klingler, A.-L., & Kühnbach, M. (2018). The load shift potential of plug-in
+                                electric vehicles with different amounts of charging infrastructure. Journal of Power
+                                Sources, 390, 20-29. doi:10.1016/j.jpowsour.2018.04.029d
+                            </p>
+                            <p>
+                                Gnann, T. (2015). Market diffusion of plug-in electric vehicles and their charging
+                                infrastructure. Ph.D. dissertation, Karlsruhe, Inst. für Technologie (KIT).
+                             </p>
+                            <p>
+                                Kluschke, P., Nugroho, R., Gnann, P. P., Wietschel, M., & Reuter-Oppermann, M.
+                                (Under review). Optimal development of alternative fuel station networks considering
+                                node capacity restrictions. Transportation Research Part D: Transport and Environment.
+                            </p>
+                        </section>
+
+
+
+
+
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+
+
+</body>
+
+</html>
+
+

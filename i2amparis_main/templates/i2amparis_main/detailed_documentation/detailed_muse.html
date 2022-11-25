@@ -1,0 +1,1244 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+                {#                                  MUSE#}
+                        <div id="collapse_muse">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#muse_short_overview">Short Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group muse_key_features">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_muse_key_features"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features of the MUSE model
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_muse_key_features"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#muse_gegraphic_coverage">
+                                                      Geographic coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Energy sectoral detail</span>
+                                                    <a style="display: none"
+                                                       href="#muse_energy_sectoral_detail">
+                                                       Energy sectoral detail</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Multi-year time periods</span>
+                                                    <a style="display: none"
+                                                       href="#muse_multi_year">
+                                                       Multi-year time periods</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Intra-year time periods (time slices)</span>
+                                                    <a style="display: none"
+                                                       href="#muse_intra_year">
+                                                        Intra-year time periods (time slices)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                  <li class="list-group-item">
+                                    <span>Emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#muse_emissions_granularity">Emissions granularity</a>
+                                </li>
+                                <li>
+                                <div class="panel-group muse_socio_econ_dim">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_muse_socio_econ_dim"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Socioeconomic dimensions
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_muse_socio_econ_dim"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Economic growth</span>
+                                                    <a style="display: none"
+                                                       href="#muse_econ_growth">
+                                                        Economic growth</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Population growth</span>
+                                                    <a style="display: none"
+                                                       href="#muse_population_growth">
+                                                      Population growth</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Sectoral growth</span>
+                                                    <a style="display: none"
+                                                       href="#muse_sectoral_growth">
+                                                      Sectoral growth</a>
+                                                </li>
+                                            <li class="list-group-item">
+                                                    <span>Energy demand drivers</span>
+                                                    <a style="display: none"
+                                                       href="#muse_energy_demand_drivers">
+                                                      Energy demand drivers</a>
+                                                </li>
+                                                 <li class="list-group-item">
+                                                    <span>Energy demand elasticities</span>
+                                                    <a style="display: none"
+                                                       href="#muse_energy_demand_elasticitis">
+                                                      Energy demand elasticities</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Other socioeconomic dimensions</span>
+                                                    <a style="display: none"
+                                                       href="#muse_other_socioeco">
+                                                      Other socioeconomic dimensions</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Calibration of the model</span>
+                                    <a style="display: none"
+                                       href="#muse_calibration">Calibration of the model</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#muse_mitigation_adataptation">
+                                       Mitigation/adaptation measures and technologies
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#muse_econ_rationale">
+                                       Economic rationale and model solution
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#muse_key_params">
+                                      Key parameters
+                                    </a>
+                                </li>
+                                <li>
+                                  <div class="panel-group muse_policy_sdg">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_muse_policy_sdg"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_muse_policy_sdg"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#muse_key_policies">
+                                                       Key policies that can be addressed
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#muse_implication_sdgs">
+                                                       Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                 <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#muse_recent_use_cases">Recent use cases </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#muse_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+
+                            <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The ModUlar energy system Simulation
+                             Environment (MUSE)</h1>
+                      </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="muse_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview </h2>
+                              <p>
+                                  MUSE is a modelling environment for the assessment of how national or multi-regional
+                                  energy systems might change over time. Its scope is the entire energy system, from
+                                  production of primary resources such as oil or biomass, through conversion of these
+                                  resources into forms of energy for final consumption, and finally the end-use
+                                  consumption of that energy to meet economy-wide service demands.
+                              </p>
+                              <p>
+                                  MUSE is an agent-based framework, in that it explicitly characterises the
+                                  decision-making process of firms and consumers in the energy system, thereby
+                                  capturing a variety of features of market imperfection. MUSE is also
+                                  technology-rich, in that it characterises the cost and performance of each technology
+                                  option, tracks technology stock, and provides details on investment, operating costs,
+                                  energy consumption, and emissions with a detailed bottom-up perspective.
+                              </p>
+                              <p>
+                                  The agent-based modular structure of the sectors is brought together in a partial
+                                  equilibrium on the energy system through a market clearing algorithm, which balances
+                                  supply and demand of each energy commodity. The market clearing algorithm is also
+                                  able to enforce a carbon budget, which escalates a carbon price until agents in all
+                                  sectors respond and emissions constraints are met.
+                              </p>
+                              <p>MUSE-Global is an implementation of a global model in the MUSE framework,
+                                  characterising 28-regions of the world, and running over a time horizon of 2010 to
+                                  2100. It can be used to explore a variety of questions on how to mitigate climate
+                                  change given realistic constraints and frictions on system change, and has been
+                                  applied to show that slightly sub-optimal transition pathways may be more likely
+                                  to succeed than optimal ones.
+                              </p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Key features of the MUSE model</h2>
+                                <span id="muse_gegraphic_coverage" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                              <p>The MUSE-Global model covers the entire world, via twenty-eight regions, as shown in the following table:</p>
+
+                               <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:30%">Geographic region</th>
+                                          <th style="width:70%">Countries</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>AE</td>
+                                          <td>Switzerland, Turkey</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ASEAN</td>
+                                          <td>Brunei, Cambodia, Indonesia, Lao PDR, Malaysia, Myanmar, Philippines,
+                                              Singapore, Thailand, Vietnam</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ATE</td>
+                                          <td>Armenia, Azerbaijan, Georgia, Kazakhstan, Kyrgyzstan, Tajikistan,
+                                              Turkmenistan, Uzbekistan</td>
+                                      </tr>
+                                      <tr>
+                                          <td>AUS</td>
+                                          <td>Australia, New Zealand</td>
+                                      </tr>
+                                      <tr>
+                                          <td>BRA</td>
+                                          <td>Brazil</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CAN</td>
+                                          <td>Canada</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CHL</td>
+                                          <td>Chile</td>
+                                      </tr>
+                                      <tr>
+                                          <td>CHN</td>
+
+                                          <td>China, Hong Kong, Taiwan</td>
+                                      </tr>
+                                      <tr>
+                                          <td>DNK</td>
+                                          <td>Denmark</td>
+                                      </tr>
+                                      <tr>
+                                          <td>EA</td>
+                                          <td>Afghanistan, Bangladesh, Bhutan, Chinese Taipei, Cook Islands, Dem.
+                                              Rep. Korea, East Timor, Fiji, French Polynesia, Kiribati, Macau,
+                                              Maldives, Mongolia, Nepal, New Caledonia, Pakistan, Papua New Guinea,
+                                              Samoa, Solomon Islands, Sri Lanka, Tonga, Vanuatu</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ELA</td>
+                                          <td>Antigua and Barbuda, Argentina, Aruba, Bahamas, Barbados, Belize,
+                                              Bermuda, Bolivia, British Virgin Islands, Cayman Islands, Colombia,
+                                              Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador,
+                                              Falkland Islands, French Guyana, Grenada, Guadeloupe,
+                                              Guatemala, Guyana, Haiti, Honduras, Jamaica, Martinique, Montserrat,
+                                              Netherlands Antilles, Nicaragua, Panama, Paraguay, Peru, Puerto Rico,
+                                              Saint Lucia, Saint Pierre et Miquelon, St. Kitts and Nevis,
+                                              St. Vincent and the Grenadines, Suriname, Trinidad and Tobago,
+                                              Turks and Caicos Islands, Uruguay, Venezuela</td>
+                                      </tr>
+                                      <tr>
+                                          <td>EU7</td>
+                                          <td>Bulgaria, Croatia, Cyprus, Latvia, Lithuania, Malta, N. Cyprus,
+                                              Romania</td>
+                                      </tr>
+                                      <tr>
+                                          <td>EU18</td>
+                                          <td>Austria, Belgium, Czech Republic, Estonia, France, Germany, Greece,
+                                              Hungary, Ireland, Italy, Luxembourg, Netherlands, Poland, Portugal,
+                                              Slovakia, Slovenia, Spain, United Kingdom, Greenland </td>
+                                      </tr>
+                                      <tr>
+                                          <td>FIN</td>
+                                          <td>Finland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>IND</td>
+                                          <td>India</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ISL</td>
+                                          <td>Iceland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ISR</td>
+                                          <td>Israel</td>
+                                      </tr>
+                                      <tr>
+                                          <td>JPN</td>
+                                          <td>Japan</td>
+                                      </tr>
+                                      <tr>
+                                          <td>KOR</td>
+                                          <td>South Korea</td>
+                                      </tr>
+                                      <tr>
+                                          <td>MEA</td>
+                                          <td>Bahrain, Iran, Iraq, Jordan, Kuwait, Lebanon, Oman, Qatar,
+                                              Saudi Arabia, Syria, United Arab Emirates, Yemen</td>
+                                      </tr>
+                                      <tr>
+                                          <td>MEX</td>
+                                          <td>Mexico</td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              NCA
+                                          </td>
+                                          <td>
+                                              Algeria, Angola, Benin, Botswana, Burkina Faso, Burundi, Cameroon,
+                                              Cape Verde, Central African Republic, Chad, Comoros, Congo,
+                                              Cote d’Ivoire, Dem. Rep. Congo, Djibouti, Egypt, Eq. Guinea, Eritrea,
+                                              Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho,
+                                              Liberia, Libya, Madagascar, Malawi, Mali, Mauritania, Mauritius,
+                                              Morocco, Mozambique, Namibia, Niger, Nigeria, Reunion, Rwanda,
+                                              Sao Tome and Principe, Senegal, Seychelles, Sierra Leone, Somalia,
+                                              Sudan, Swaziland, Tanzania, Togo, Tunisia, Uganda, Zambia, Zimbabwe
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>NOR</td>
+                                          <td>Norway</td>
+                                      </tr>
+                                      <tr>
+                                          <td>OETE</td>
+                                          <td>Albania, Belarus, Bosnia and Herzegovina, Gibraltar, Kosovo, North
+                                              Macedonia, Moldova, Montenegro, Serbia, Ukraine </td>
+                                      </tr>
+                                      <tr>
+                                          <td>RUS</td>
+                                          <td>Russia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SWE</td>
+                                          <td>Sweden</td>
+                                      </tr>
+                                      <tr>
+                                          <td>USA</td>
+                                          <td>United States of America</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ZAF</td>
+                                          <td>South Africa</td>
+                                      </tr>
+
+
+
+                                      </tbody>
+                                      <caption>Regional representation and countries included in each
+                                          region in MUSE-Global</caption>
+                                  </table>
+                                    </div>
+                          </section>
+                    </div>
+
+                       <div class="row">
+                          <section class="section">
+                              <span id="muse_energy_sectoral_detail" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                              <p>
+                                  As described above, MUSE characterises agent-based decision making in
+                                  each sector of the economy. The sector breakdown is shown in the following figure:
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:60%;height:60%; margin-bottom: 2em"
+                                       src="{% static "images/muse_energy_sectors_clearing_func.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Representation of the MUSE energy
+                                          sectors and clearing function
+                                      </p>
+
+                                  </div>
+                              </div>
+
+
+
+                          </section>
+                       </div>
+
+
+      <div class="row">
+                          <section class="section">
+                              <span id="muse_multi_year" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Multi-year time periods</h4>
+                              <p>
+                                  The time horizon over which MUSE simulates the evolution of the energy system is
+                                  divided into a user-chosen number of time periods. In MUSE-Global, to be used in
+                                  PARIS REINFORCE, there is a starting period of 2010, with further years divided
+                                  in ten-year periods up to 2100. All years in a given period are considered identical.
+                              </p>
+
+                          </section>
+      </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="muse_intra_year" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Intra-year time periods (time slices)</h4>
+                              <p>
+                                  In addition to the multi-year time periods described above, in MUSE there are time
+                                  divisions within a year, called “time slices”, which may be deﬁned by the user,
+                                  so as to capture different resource supply, weather and energy demand conditions
+                                  at different times of the year. This is the case for instance when the demand for an
+                                  electricity ﬂuctuates across the year and a variety of technologies may be chosen
+                                  for its production at given times of the year (such as wind power when wind
+                                  resources are high, and solar photovoltaics when there is a high availability of
+                                  solar radiation).
+                              </p>
+
+                          </section>
+                    </div>
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="muse_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Emissions granularity</h2>
+                              <p>
+                                  As described above, the achievement of climate change targets in MUSE-Global
+                                  is dealt with via the imposition of emissions limits on each time period.
+                                  The model tracks the three main sources of greenhouse gases: carbon dioxide
+                                  (CO<sub>2</sub>), methane (CH<sub>4</sub>) and nitrous oxide (N<sub>2</sub>O).
+                                  These gases are tracked for each technology, sector, region and for the world,
+                                  in each time period.
+                              </p>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                            <span id="muse_econ_growth" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Economic growth </h4>
+                              <p>
+                                  Economic growth is based on the 2nd Shared Socioeconomic Pathway (SSP2), sometimes
+                                  called the “middle-of-the-road” scenario, as it generally continues recent past
+                                  trends in demographic, social, economic and lifestyle developments (Fricko et al.,
+                                  2017) (see the figure below).
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:70%;height:70%; margin-bottom: 2em"
+                                       src="{% static "images/muse_gdp.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">GDP projections in MUSE
+                                      </p>
+
+                                  </div>
+                              </div>
+
+                          </section>
+                     </div>
+
+                       <div class="row">
+                          <section class="section">
+                              <span id="muse_population_growth" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Population growth </h4>
+                              <p>
+                                  Population growth is also based on SSP2, with global population peaking to around
+                                  9.5 billion by 2050 and dropping back to 9 billion by 2100, as shown in the following figure.
+                              </p>
+
+<div style="text-align: center">
+                                  <img style="width:70%;height:70%; margin-bottom: 2em"
+                                       src="{% static "images/muse_population.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Population projections in MUSE
+                                      </p>
+
+                                  </div>
+                              </div>
+                          </section>
+                       </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="muse_sectoral_growth" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Sectoral growth</h4>
+                              <p>
+                                  The growth in the industrial, agricultural and retail business sectors in each region
+                                  is derived from the region’s overall GDP growth, with regression applied to
+                                  determine historical relationships, and the best fit matches for each service
+                                  demand category being applied to project growth forwards. With reference to the
+                                  agricultural sector, the historical trend of service demands (crop and meat demands
+                                  between 1970 and 2015) are regressed against the exogenously given macroeconomic
+                                  drivers (GDP and population) (see the figure below, from Kerdan et al., 2019d).
+                              </p>
+
+<div style="text-align: center">
+                                  <img style="width:60%;height:60%; margin-bottom: 2em"
+                                       src="{% static "images/muse_historical_macroeconomic_drivers.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Example of service demand
+                                          regression over historical macroeconomic drivers in MUSE
+                                      </p>
+                                      <p>Source:Source: Kerdan et al., 2019d</p>
+                                  </div>
+                              </div>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="muse_energy_demand_drivers" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Energy demand drivers</h4>
+                              <p>
+                                  The economic, population and sectoral growths are used to determine specific drivers
+                                  for the growth in energy demands in a “reference” scenario in which there is no
+                                  climate change mitigation. For example, in the agricultural sector, demand for one
+                                  of the services is linked to demand for food. Being highly correlated with income
+                                  and population growth, the regression model used in MUSE is represented in the
+                                  following equation, because of the best fit with historical demand of food:
+                              </p>
+                              <p>
+                                  log C = a + b * ln(GDPpc)
+                              </p>
+                              <p>
+                                  where C represents the consumption of food per capita and GDPpc is the region GDP
+                                  divided over the population.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                      <div class="row">
+                          <section class="section">
+                              <span id="muse_energy_demand_elasticitis" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Energy demand elasticities</h4>
+                              <p>
+                                  MUSE does not include endogenous own-price elasticity. Instead, demand changes may
+                                  be modelled via sensitivity analysis.
+                              </p>
+
+                          </section>
+                      </div>
+
+
+                       <div class="row">
+                          <section class="section">
+                              <span id="muse_other_socioeco" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Other socioeconomic dimensions</h4>
+                              <p>
+                                  As described above, MUSE uses an agent-based formulation to determine possible
+                                  pathways of energy system transition. As such, socioeconomic categorisation of
+                                  populations of investors and/or consumers is used to capture heterogeneity in
+                                  investment decision making. The technique relies upon survey data, and widely
+                                  available socioeconomic metrics, e.g. from the World Bank to achieve this. For
+                                  example, in the building sector the SINUS-Milieus Typology (Sinus Sociovision, 2017)
+                                  was used for the classification and attributes assignment of agents. According to the
+                                  methodology introduced above, socioeconomic survey data of household representative
+                                  persons can be adopted to allocate households into social groups.
+                              </p>
+
+                          </section>
+                       </div>
+
+                         <div class="row">
+                          <section class="section">
+                              <span id="muse_calibration" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                              <p>
+                                  The MUSE model is calibrated for the initial period (2010) using IEA world energy
+                                  statistics for the year 2010, with the projections for energy, installed technology
+                                  capacity and emissions further calibrated to 2015. The main variables to be
+                                  calibrated are the capacities and operating levels of all technologies present in
+                                  the world in 2010; the extracted, exported, imported, produced, and consumed
+                                  quantities for all energy carriers; and the emissions.
+                              </p>
+                          </section>
+                         </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="muse_mitigation_adataptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                  MUSE is a technology-rich model that represents most major fossil fuel and low-carbon
+                                  technologies that are envisaged to be available for at least the first half of the
+                                  21st century. As described above, the calibration process determines what technologies
+                                  existed in the global energy system in the base year. The principal energy sector CO2
+                                  mitigation technology options are as shown in the following table:
+                              </p>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th colspan="2" style="width:100%">Upstream</th>
+
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td><b>Synthetic fuel production</b></td>
+                                          <td><b>Hydrogen production</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Coal to gas with CCS<br>
+                                              Coal to liquids with CCS<br>
+                                              Gas to liquids with CCS<br>
+                                              Biomass to liquids (with and without CCS)
+                                          </td>
+                                          <td>
+                                              Electrolysis<br>
+                                              Coal to hydrogen with CCS<br>
+                                              Gas to hydrogen with CCS<br>
+                                              Biomass to hydrogen with CCS
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td colspan="2"><b>Electricity</b> </td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Electricity generation</b></td>
+                                          <td><b>Electricity generation from variable renewables</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Coal with CCS<br>
+                                              Gas with CCS<br>
+                                              Nuclear (fission)<br>
+                                              Hydro (small and large)<br>
+                                              Biomass (with and without CCS)<br>
+                                              Geothermal<br>
+                                              Storage
+                                          </td>
+                                          <td>
+                                              Solar PV (ground and rooftop)<br>
+                                              Concentrated solar power<br>
+                                              Wind (onshore and offshore)<br>
+                                              Tidal
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td colspan="2"><b>Transport</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Road</b></td>
+                                          <td><b>Rail</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Gas (LNG / CNG) vehicles<br>
+                                              Hybrid/Plugin hybrid electric vehicles (using mixtures of biofuels)<br>
+                                              Fully electric vehicles<br>
+                                              Hydrogen fuel cell vehicles<br>
+                                              Hybrid/Plugin hybrid hydrogen fuel cell vehicles<br>
+                                              Liquid hydrogen vehicles<br>
+                                              Flexible vehicles (using biofuel mixtures)
+                                          </td>
+                                          <td>
+                                              Electric<br>
+                                              Hydrogen
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Air</b></td>
+                                          <td><b>Shipping</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Biofuels in fuel mix<br>
+                                              Hybrid electric planes<br>
+                                              Hybrid electric planes using biofuels
+
+                                          </td>
+                                          <td>
+                                              Gas/LNG<br>
+                                              Hydrogen<br>
+                                              Biofuels
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td colspan="2"><b>Buildings</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Heating </b></td>
+                                          <td><b>Lighting and appliances</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Gas (replacing coal/oil)/biomass/electricity/hydrogen boiler<br>
+                                              Gas/biomass/electricity/hydrogen boilers integrated with solar thermal
+                                              systems<br>
+                                              Gas/biomass co-generation (CHP and micro CHP)<br>
+                                              District heating (gas, biomass, waste heat) standalone or integrated
+                                              with thermal systems and heat pumps<br>
+                                              Efficiency
+                                          </td>
+                                          <td>
+                                              Efficiency<br>
+                                              LED lighting systems
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Cooking</b></td>
+                                          <td><b>Cooling</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Biomass<br>
+                                              Electricity<br>
+                                              Hydrogen<br>
+                                          </td>
+                                          <td>
+                                              Heat pumps<br>
+                                              Heat pumps integrated with solar thermal<br>
+                                              Efficient air conditioning systems
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td colspan="2"><b>Industry</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Iron/steel, pulp/paper, chemicals, aluminum, cement industries</b></td>
+                                          <td><b>CCS</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Gas replacing oil / coal<br>
+                                              Biomass<br>
+                                              Biomethane<br>
+                                              Electrolysis (for ammonia production)<br>
+                                              Efficiency
+                                          </td>
+                                          <td>
+                                              CCS in iron and steel (with/o bioenergy)<br>
+                                              CCS in cement (with/o bioenergy)<br>
+                                              CCS in chemicals (with/o bioenergy)<br>
+                                              CCS in pulp and paper (with/o bioenergy)<br>
+                                              CCS in aluminum (with/o bioenergy)
+                                          </td>
+                                      </tr>
+
+                                      <tr><td colspan="2"><p align="center"><b>Agriculture</b></p> </td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Energy</b></td>
+                                          <td><b>non CO2 emissions</b></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Gas replacing fuel oil<br>
+                                              Biomass<br>
+                                              Electricity<br>
+                                              Mechanisation
+                                          </td>
+                                          <td>Mechanisation</td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Main CO2 energy system mitigation options in MUSE</caption>
+                                  </table>
+</div>
+
+
+
+
+
+
+                          </section>
+                    </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="muse_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  MUSE simulates a microeconomic equilibrium on the energy system. It consists of
+                                  modular independent agent-based sector modules, joined together by a market clearing
+                                  algorithm.
+                              </p>
+                              <p>
+                                  The market clearing algorithm iterates across all of the sector modules,
+                                  interchanging price and quantity of each energy commodity in each region, until an
+                                  equilibrium is reached. It sends commodity prices to the end-use sectors and receives
+                                  back demand for each of these commodities. It sums up these demands and sends them
+                                  to the conversion and/or supply sectors, which in turn send back a price. This is
+                                  used to inform an updated price in the market clearing algorithm, whence the
+                                  procedure iterates again (i.e. updated prices are sent to the end-use sectors, etc).
+                                  Eventually this process results in a microeconomic equilibrium for each energy
+                                  commodity in each region. When investigating climate change mitigation, a carbon
+                                  budget is imposed on each time period. A GHG emissions price is then set in the
+                                  market clearing algorithm such that the carbon budget is achieved (i.e. by pricing
+                                  emissions, and thereby incentivising investment in low emissions technology in all
+                                  sectors via the agent-based modelling described below).
+                              </p>
+                              <p>
+                                  Each agent-based sector module in MUSE is modelled in a way that is appropriate for
+                                  that sector (i.e. MUSE is a hybrid modular approach). As such, MUSE developers are
+                                  able to characterise investment decision making in different ways in each sector,
+                                  to capture the features that are the most important and therefore produce a more
+                                  realistic representation of energy system transitions. MUSE uses socioeconomic and
+                                  firm-level data and analyses to characterise a set of investment decision makers
+                                  (agents) for each sector. Each sector then applies an agent-based modelling (ABM)
+                                  approach where “agents” (firms or consumers) apply rules to (a) determine which
+                                  technologies will be considered for investment; (b) calculate a set of objectives
+                                  according to their decision making preferences; and (c) use a method to combine
+                                  these objectives to make a final investment decision. Each of these steps is bespoke,
+                                  where developers can choose from a set of pre-defined rules or can code and add their
+                                  own objectives and decision rules.
+                              </p>
+                              <p>
+                                  As such, overall MUSE is a limited-foresight model that strives to represent the
+                                  frictions and challenges that could occur as the world aims for systemic technology
+                                  change to achieve climate change mitigation over the coming eight decades. Data
+                                  paucity, technology cost and performance uncertainty, and spatial and temporal
+                                  coarseness are all weaknesses of this approach, as they are with any other form of
+                                  integrated assessment modelling.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="muse_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                  The MUSE model requires inputs concerning the degree to which energy demand, as well
+                                  as demand for other goods and services which result in GHG emissions (such as
+                                  agricultural demand), will change over the time horizon. Future demand projections of
+                                  each service in each region are based on societal input variables, i.e. population
+                                  and GDP.
+                              </p>
+                          </section>
+                     </div>
+
+                    <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                        <span id="muse_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                  <ul>
+                              MUSE is usually applied by specifying either a carbon tax or a carbon emissions constraint
+                              for the world as a whole. This acts as a proxy for all other climate-related policies.
+                              However, a further range of policy levers are possible to implement in MUSE, as follows:
+                              <li>
+                                  Capacity factor limits on fossil fuel power generation plants (e.g. to simulate
+                                  minimum or maximum desired levels of operation)
+                              </li>
+                              <li>
+                                  Subsidies on particular technologies (through adjusting their costs)
+                              </li>
+                              <li>
+                                  Constraints on the availability of particular technologies (e.g. “no nuclear”,
+                                  variable renewables accounting for no more than 50% of electricity generation, etc.)
+                              </li>
+                              <li>
+                                  Constraints on the growth rates of particular technologies (e.g. CCS power generation
+                                  capacity cannot grow at more than 20% per year), addition of capacity (e.g. cannot
+                                  grow more than 5 GW per year, and cumulative capacity limits (e.g. cannot exceed 60
+                                  GW in total, ever).
+                              </li>
+                          </ul>
+                              </p>
+
+
+</section>
+                    </div>
+
+                      <div class="row">
+                          <section class="section">
+                              <span id="muse_implication_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>MUSE does not calculate non-climate SDGs. However, it is possible to take MUSE’s
+                                  outputs and perform “off-model” calculations to estimate many of the SDG implications.
+                                  For example, MUSE reports the quantity of offshore wind power plants in each of its
+                                  reporting years. This allows an estimation of the employment that such activity would
+                                  generate in the region. Furthermore, MUSE may be coupled with macroeconomic and/or
+                                  lifecycle assessment tools in order to calculate SDG-relevant quantities; for example,
+                                  impact on income distribution, impact on air or water quality, etc.</p>
+                          </section>
+                      </div>
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="muse_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                               <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper</th>
+                                          <th style="width:40%">Topic</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>Kerdan et al. (2019a)</td>
+                                          <td>Assessing gas infrastructure pathways for the southern states of Brazil
+                                          </td>
+                                          <td>Results suggest that, due to the expected increase in regional gas demand
+                                              in South Brazil, the existing gas infrastructure would require additional
+                                              investments. Depending on the renegotiation outcomes between Brazil and
+                                              Bolivia (i.e. either maintaining constant, halving, or halting the
+                                              Bolivian import of gas), natural gas demand could be covered by a share of
+                                              alternative supply options, such as an increase in pre-salt production,
+                                              LNG imports and imports from a new Argentinian pipeline.</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Kerdan et al. (2019b)</td>
+                                          <td>Exploring the complex relationship between sugarcane production,
+                                              deforestation and fossil fuel resource exploitation under two 2°C
+                                              scenarios for Brazil obtained by either limiting the natural gas or the
+                                              bioenergy supply</td>
+                                          <td>Results suggest that that the promotion of bioenergy in Brazil, should be
+                                              accompanied by strong policies on limiting deforestation which still
+                                              represents an important source of emissions. On the other hand, emissions
+                                              from natural gas can be compensated by the capture and sequestration
+                                              potential of the Brazilian forests as the natural gas supply helps
+                                              lowering the deforestation rates. In this context where bioenergy supply
+                                              reduces, new investments would be necessary to boost the existing gas
+                                              infrastructure capacity.</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Kerdan et al.  (2019c)</td>
+                                          <td>An analysis focused on carbon sequestration in Brazil comparing
+                                              reforestation and sugarcane expansion on abandoned agricultural lan</td>
+                                          <td>The results suggest that should Brazil enforce policies on promoting
+                                              reforestation, it would have the potential to become a large GHG abatement
+                                              region thanks due to its high carbon (C) sequestration rates. Brazil is
+                                              expected to liberate up to 68.4 Mha of agricultural land by 2050. If this
+                                              land is abandoned, the country carbon stock could be reduced from 135.9
+                                              PgC in 2010 to 129.9 PgC. If a sugarcane expansion policy is followed, by
+                                              mid-century the carbon
+                                          stock could reach 134.2 PgC, whereas if a reforestation policy is implemented
+                                              it could reach 139.2 PgC.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Kerdan et al. (2019d)</td>
+                                          <td>
+                                              An analysis exploring the role of land use and reforestation in achieving
+                                              carbon mitigation targets in Brazil
+                                          </td>
+                                          <td>
+                                              The model tracks agricultural technology diffusion, energy use,
+                                              agrochemical demands and its implication on land use and energy and
+                                              non-energy emissions. Results show the importance of reforestation as a
+                                              significant contributor to carbon sequestration. Brazil has the potential
+                                              to sequester around 5.6 GtCO2 by 2050 through reforestation. In this
+                                              scenario, the capital investment in carbon sequestration and storage would
+                                              be substantially reduced.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Sachs et al. (2019a)</td>
+                                          <td>
+                                              Capturing many of the characteristics of the consumers’ behaviour
+                                              affecting investment decisions
+                                          </td>
+                                          <td>
+                                              The paper sets out the MUSE agent-based method for modelling of the
+                                              investment decision making processes of heterogeneous decision makers in
+                                              the energy system. The integration of several decision-making steps
+                                              including information gathering, the assessment of the performance of each
+                                              option as well as the final selection enables a more flexible and
+                                              realistic representation of the energy system change compared to the
+                                              majority of the energy systems models. The agent-based method leads to a
+                                              range of technologies in the market during a transition phase, continuous
+                                              investment in low capital cost technologies, and eventually the emergence
+                                              of a low carbon system based on new mass market technologies.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Sachs et al. (2019b)
+                                          </td>
+                                          <td>
+                                              Spatially- and temporally-resolved estimation of global space heating,
+                                              space cooling and hot water demand
+                                          </td>
+                                          <td>
+                                              The result is the first self-consistent analysis of three energy end-uses
+                                              (global space heating, space cooling, and hot water demand) at a global
+                                              scale, disaggregated into country and energy density categories, and
+                                              provided in profile form to capture seasonal and diurnal demand
+                                              variations. Global space heating demand reflect not only population and
+                                              temperature characteristics but also the correlation of gross domestic
+                                              product with the ownership of air conditioning equipment. In terms of
+                                              energy density, the results show that a relatively small portion of
+                                              demand (approx. ∼ 5%) occurs at very high energy density locations
+                                              (i.e. above 36.9 GW h/km2), while ~50% of demand occurs in low energy
+                                              density locations (i.e. below 1.79 GW h/km2).
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              Crow et al. (2018)
+                                          </td>
+                                          <td>
+                                              Modelling dynamic supply curves
+                                          </td>
+                                          <td>
+                                              The paper presents how dynamic upstream gas supply curves are modelled
+                                              using a global, bottom-up model of the natural gas supply. In contrast to
+                                              most “static” supply-side models, which bracket resources by average cost,
+                                              the MUSE upstream gas model creates a range of dynamic outputs by
+                                              simulating investment and operating decisions in the upstream gas industry
+                                              triggered in response to forward price and/or demand signals.c
+                                          </td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>List of recent publications using the MUSE model</caption>
+                                  </table>
+</div>
+
+
+                          </section>
+                     </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="muse_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Fricko, O., Havlik, P., Rogelj, J., Klimont, Z., Gusti, M., Johnson, N., ... & Ermolieva, T. (2017). The marker quantification of the Shared Socioeconomic Pathway 2: A middle-of-the-road scenario for the 21st century. Global Environmental Change, 42, 251-267.
+                            </p>
+                            <p>
+                                Kerdan, I. G., Giarola, S., & Hawkes, A. (2019). A novel energy systems model to explore the role of land use and reforestation in achieving carbon mitigation targets: A Brazil case study. Journal of Cleaner Production.
+                            </p>
+                            <p>
+                                Kerdan, I. G., Giarola, S., Jalil-Vega, F., & Hawkes, A. (2019). Carbon Sequestration Potential from Large-Scale Reforestation and Sugarcane Expansion on Abandoned Agricultural Lands in Brazil. Polytechnica, 1-17.
+                            </p>
+                            <p>
+                                Kerdan, I. G., Jalil-Vega, F., Toole, J., Gulati, S., Giarola, S., & Hawkes, A. (2019). Modelling cost-effective pathways for natural gas infrastructure: A southern Brazil case study. Applied Energy, 255, 113799.
+                            </p>
+                            <p>
+                                Kerdan, I.G., Giarola, S., & Hawkes, A. (2019). Implications of Future Natural Gas Demand on Sugarcane Production, Land Use Change and Related Emissions in Brazil, J. sustain. dev. energy water environ. syst.
+                            </p>
+                            <p>
+                                Sachs, J., Meng, Y., Giarola, S., & Hawkes, A. (2019a). An agent-based model for energy investment decisions in the residential sector. Energy, 172, 752-768.
+                            </p>
+                            <p>
+                                Sachs, J., Moya, D., Giarola, S., & Hawkes, A. (2019b). Clustered spatially and temporally resolved global heat and cooling energy demand in the residential sector. Applied Energy, 250, 48-62.
+                            </p>
+                            <p>
+                                Crow, D. J., Giarola, S., & Hawkes, A. D. (2018). A dynamic model of global natural gas supply. Applied energy, 218, 452-469.
+                            </p>
+                        </section>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "27rem";
+        {#          document.getElementsByClassName("main-page")[0].style.marginLeft = "250px";#}
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        {#          document.getElementsByClassName("main-page")[0].style.marginLeft = "0";#}
+    }
+</script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+
+</body>
+
+</html>
+
+

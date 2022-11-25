@@ -1,0 +1,104 @@
+{% load static %}
+{% csrf_token %}
+<div id="global_ccs_2" class="row tab-pane" style="margin-top: 10em;">
+    <div class="container" style="width: 90%; height:100%;">
+        <div class="">
+            <div class="tooltip-demo col-md-4 col-xs-12">
+                <div class="tooltip-demo ">
+                    <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help; margin-bottom: 0.2em"
+                        data-toggle="tooltip" data-placement="auto"
+                        title="<p>The chart on the right will present the Global Carbon Capture & Storage to 2100 for the selected models and scenarios.
+                    </p>">
+                        Global Carbon Capture & Storage
+                    </h2><h4 style="color: #828f30">(current policies scenarios & current policies scenarios with a
+                    Carbon Price
+                    Only)</h4>
+                </div>
+                <p style="display: inline-block;background:transparent; box-shadow: none;">
+                    The chart on the right will present the Global Carbon Capture & Storage in Current Policies
+                    Scenarios &
+                    Current Policies Scenarios with a Carbon Price Only to 2030 for the selected models
+                    and scenarios. Only three models include CurPol_CPO scenarios and CCS. CurPol scenarios reach the
+                    same
+                    level of emissions in 2030 as the CurPol_CP scenarios using economy-wide carbon prices to reach the
+                    same
+                    levels of emissions in each region as CurPol_CP scenrios. Any other current policies are removed
+                    from
+                    CurPol_CPO scenarios.
+                </p>
+                <div class="form-group sum-selects-filters col-md-12 col-xs-12">
+                    <label for="global_ccs_2_model_name">Models</label>
+                    <select class="desc_text take_up_space sum-mul-select sum-boot-select" data-dbname="model"
+                            placeholder="Select Model(s)"
+                            multiple="multiple"
+                            id="global_ccs_2_model_name" style="width: 100%">
+                        {#                            {% for el in models %}#}
+                        {#                                <option value="{{ el.name }}">{{ el.title }}</option>#}
+                        {#                            {% endfor %}#}
+                        <option value="gcam" selected="selected">GCAM</option>
+                        <option value="muse" selected="selected">MUSE</option>
+                        <option value="tiam" selected="selected">TIAM</option>
+
+                    </select>
+                </div>
+                <div class="form-group sum-selects-filters col-md-12 col-xs-12">
+                    <label for="global_ccs_2_scenario_name">Scenario</label>
+                    <select class="desc_text take_up_space sum-mul-select sum-boot-select" data-dbname="scenario"
+                            placeholder="Select Scenario(s)"
+                            multiple="multiple"
+                            id="global_ccs_2_scenario_name" style="width: 100%">
+                        <option value="PR_CurPol_CP" selected="selected">PR_CurPol_CP</option>
+                        <option value="PR_CurPol_CPO" selected="selected">PR_CurPol_CPO</option>
+
+                        {#                            {% for el in models %}#}
+                        {#                                <option value="{{ el.name }}">{{ el.title }}</option>#}
+                        {#                            {% endfor %}#}
+                    </select>
+                </div>
+
+                <div class="col-xs-6 col-md-2">
+                    <a id="global_ccs_2-clear-button"
+                       class="button btn btn-default col-md-1 col-xs-6 openbtn line-btn"
+                       style="background-color: rgba(172,31,0,0.8);color: white;padding: 0;height: inherit; line-height: 2.5em;width: 100%">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-10">
+                    <a id="global_ccs_2-run-button"
+                       class="button btn btn-default col-sm-1 col-md-1 col-xs-2 openbtn green line-btn"
+                       style="background-color: rgba(151, 174, 33, 0.8);color: white;padding: 0;height: inherit; line-height: 2.5em;width: 100% ">Run
+                        <i class="fa fa-spinner"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class=" col-sm-8 col-xs-12" style="height: 100vh">
+                <div style="height: 85%;">
+                    <div id="global_ccs_2_frame_div" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="global_ccs_2_viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                        <div id="global_ccs_2_loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8"> The chart will present the Global Carbon Capture &
+                                    Storage in Current Policies Scenarios &
+                                    Current Policies Scenarios with a Carbon Price Only to 2030.
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,1385 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+
+                {#                                  NATEM#}
+                        <div id="collapse_natem">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Overview</span>
+                                    <a style="display: none"
+                                       href="#natem_overview">Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group natem_key_feauters">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_natem_key_feauters"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features of the model
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_natem_key_feauters"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Energy sectoral detail</span>
+                                                    <a style="display: none"
+                                                       href="#natem_energy_sectoral">
+                                                       Energy sectoral detail</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#natem_geographic_coverage">
+                                                        Geographic coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Multi-year time periods</span>
+                                                    <a style="display: none"
+                                                       href="#natem_multi_year_time_periods">
+                                                        Multi-year time periods</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Intra-year time periods (time slices)</span>
+                                                    <a style="display: none"
+                                                       href="#natem_intra_year_time_periods">
+                                                        Intra-year time periods (time slices)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#natem_climate_modulue_emissions_granularity">Climate module &
+                                        emissions granularity</a>
+                                </li>
+
+                              <li>
+                                <div class="panel-group natem_socioeco_menu">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_natem_socioeco_menu"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Drivers of energy and other
+						                                GHG-emitting service demands
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_natem_socioeco_menu"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+
+                                <li class="list-group-item">
+                                    <span>Introduction</span>
+                                    <a style="display: none"
+                                       href="#natem_drivers_energy_ghg">Introduction</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic growth</span>
+                                    <a style="display: none"
+                                       href="#natem_econ_growth">Economic growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Population growth</span>
+                                    <a style="display: none"
+                                       href="#natem_population_growth">Population growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Sectoral growth</span>
+                                    <a style="display: none"
+                                       href="#natem_sectoral_growth">Sectoral growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Energy demand drivers and demand elasticities</span>
+                                    <a style="display: none"
+                                       href="#natem_energy_demand_drivers_elasticities">Calibration of the model</a>
+                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+
+
+                                <li class="list-group-item">
+                                    <span>Calibration of the model</span>
+                                    <a style="display: none"
+                                       href="#natem_calibration">Calibration of the model</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#natem_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#natem_economic_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#natem_key_params">Key parameters</a>
+                                </li>
+                                <li>
+
+                                <div class="panel-group natem_policy_sdg">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_natem_policy_sdg"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_natem_policy_sdg"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#natem_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#natem_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent publications</span>
+                                    <a style="display: none"
+                                       href="#natem_recent_publications">Recent publications</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#natem_references">
+                                        References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+                    <div class="row">
+                        <h1 style="padding-bottom: 1em; padding-top: 1em">The North American TIMES Energy
+                            Model (NATEM)</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Overview</h2>
+                            <p>
+                                The North American TIMES Energy Model (NATEM) is an optimisation model
+                                that belongs to the TIMES family of models—for a brief explanation of TIMES see
+                                the MAPLE model description in Section 3.6.1. NATEM is currently the only
+                                detailed optimisation model in North America. The 23-region model optimises the
+                                entire integrated energy systems, as well as non-energy GHG emitting sectors, of
+                                Canada, the United States and Mexico. By capturing the large diversity of energy
+                                systems and policies across the three countries using a consistent modelling
+                                approach, it provides a rational framework for supporting adequate decision-making
+                                related to climate policies over the 2050 horizon. Model results have been used by
+                                decision makers from public and private organisations to draft the Climate Action
+                                Plan, identify research priorities for reducing mitigation costs, prepare energy
+                                transition outlooks, assess the impacts of energy projects and evaluate circular
+                                economy strategies.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Key features of the model</h2>
+                            <span id="natem_energy_sectoral" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                            <p>
+                                NATEM offers a comprehensive representation of the energy system of each of the
+                                North American jurisdictions (see the figure below). It also models inter-jurisdictional
+                                and international flows of energy and material commodities. The model is driven
+                                by a set of about 70 end-use demands for energy services in five sectors:
+                                agriculture, commercial, industrial, residential and transportation.
+                            </p>
+                            <p>
+                                For the energy supply side, NATEM captures all sectors including electricity
+                                and heat generation in many details. Other supply sectors include fossil fuels
+                                extraction, upgrading and transport, uranium extraction and transport,
+                                petroleum refining, bioenergy production, natural gas liquefaction and exports,
+                                hydrogen supply chain, etc. Primary energy resources include conventional
+                                and unconventional fossil fuels reserves (oil, gas, and coal), renewables
+                                potentials (hydro, geothermal, wind, solar, tidal and wave), uranium reserves
+                                and biomass (various solid, liquid and gaseous sources). Carbon capture options
+                                are available in the electricity and industrial sectors. Sequestration potentials
+                                exist for enhanced oil recovery, in oil and gas fields (onshore and offshore) and
+                                in deep saline aquifers.
+                            </p>
+                            <p>
+                                In each sector, a repository includes a large number of new technologies that
+                                are in competition to satisfy each end-use demand including existing technologies,
+                                improved versions of existing technologies and new technologies.
+                            </p>
+
+
+                            <div style="text-align: center">
+                                <img style="width:70%;height:70%; margin-bottom: 2em"
+                                     src="{% static "images/natem_energy_system_per_region.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of the NATEM energy
+                                        system for each region
+                                    </p><p>  Source: Vaillancourt et al. (2018c)
+                                    </p>
+
+                                </div>
+                            </div>
+
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_geographic_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                            <p>
+                                NATEM covers Canada through thirteen regions (each of the thirteen provinces and
+                                territories), the United States through nine regions (the official census regions)
+                                and Mexico through one region (see the figure below).
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_multi_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Multi-year time periods</h4>
+                            <p>The time horizon over which NATEM simulates the evolution of the energy system is
+                                divided into a user-chosen number of time-periods. The model is currently solved
+                                for the 2011-2050 timeframe through ten time periods of variable lengths. Short
+                                time periods (1 to 2 years) are defined at the beginning of the horizon, while
+                                longer time periods (5 years) are considered afterward, as uncertainties related to
+                                data are increasing over time. Current milestone years (for which results are
+                                generated) are: 2011, 2013, 2015, 2020, 2025, 2030, 2035, 2040, 2045, and 2050.
+                                All years in a given period are considered identical. For all quantities such as
+                                installed technology levels, power plant capacities and energy and emissions flows,
+                                any annual input quantity (e.g. coal used in a power plant per year) or output
+                                quantity (e.g. electricity generated from the coal plant per year) related to a
+                                given time period applies identically to each of the years in that period.</p>
+
+                            <div style="text-align: center">
+                                <img style="width:50%;height:50%; margin-bottom: 2em"
+                                     src="{% static "images/natem_regional_representation.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Regional representation in NATEM
+                                    </p>
+                                    <p>Source:ESMIA Consultants (2019). Website: Model Description. Retrieved
+                                        from <a href="https://jgcri.github.io/gcam-doc/overview.html">
+                                            www.esmia.ca </a></p>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_intra_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Intra-year time periods (time slices)</h4>
+                            <p>
+                                In addition to the multi-year time periods described above, in NATEM there
+                                are time divisions <b>within</b> a year, called “time slices”,
+                                which may be deﬁned by the user, so as to capture different weather,
+                                consumer behaviours, and energy demand conditions at different times of
+                                the year. There are currently sixteen time slices representing four
+                                seasons a year (spring, summer, fall and winter) and four intraday
+                                periods (day, night, morning peak, evening peak). The MAPLE model
+                                documentation (Section 3.6.2.4) provides further detail of the purpose
+                                of time-slices in the TIMES framework.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_climate_modulue_emissions_granularity" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                            <p>
+                                The model tracks all GHGs, including carbon dioxide (CO2), methane (CH4),
+                                nitrous oxide (N20), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs),
+                                sulphur hexafluoride (SF6) and nitrogen trifluoride (NF3) from all sectors
+                                of the national inventories, except land use, land-use change and forestry
+                                (LULUCF). NATEM does not include a climate module that calculates the
+                                corresponding changes in the atmospheric concentration, the change in radiative
+                                forcing and the temperature change over pre-industrial times.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_drivers_energy_ghg" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Drivers of energy and other GHG-emitting service demands</h2>
+                            <p>
+                                The NATEM model requires inputs concerning the degree to which energy service
+                                demands, as well as demand for other goods and services which result in GHG
+                                emissions, will grow over the course of next decades in the different countries.
+                                It does this by using various socioeconomic inputs, as described below. Data will
+                                be revised and updated before running the model under the PARIS REINFORCE project.
+                            </p>
+                            <p>
+                                Demands for energy services are currently projected through 2050 using a coherent
+                                set of socioeconomic assumptions from the projections of the National Energy Board
+                                (NEB, 2017) for Canada, from the Annual Energy Outlook (EIA, 2018) for the United
+                                States, and various national sources for Mexico (CONAPO, 2012; SENER, 2014;
+                                PRODESEN, 2018). Demands for energy services are projected using national sources
+                                specific to the three countries and not a single source. Demands are ultimately
+                                projected through 2050 from the 2011 base year using the following growth index:
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">GDP</th>
+                                        <th style="width:80%">Index in 2050 (2011=1)</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Canada</td>
+                                        <td>1.93</td>
+                                    </tr>
+                                    <tr>
+                                        <td>United <br>States</td>
+                                        <td>2.16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mexico</td>
+                                        <td>3.70</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Population </b></td>
+                                        <td><b>Index in 2050 (2011=1)</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Canada</td>
+                                        <td>1.33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>United <br> States</td>
+                                        <td>1.24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mexico</td>
+                                        <td>1.29</td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Key socio economic inputs in NATEM</caption>
+                                </table>
+                            </div>
+                            <p>It is important to note that macroeconomic drivers, such as Gross Domestic product
+                                (GDP) and population, are not the only factors used to project end-use demands
+                                for energy services. These projections formed the basis for projecting end-use
+                                requirements in the different sectors, but many other factors are considered:
+                                future announced projects, degree-day projections, number of households,
+                                commercial surface, industrial gross output, etc.</p>
+
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_econ_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Economic growth</h4>
+                            <p>
+                                GDP projections are based on national specific information. Growth rates vary
+                                significantly across the three countries, where the GDP is expected to double
+                                by 2050 in Canada and the United States, while a more than three-fold increase
+                                is projected for Mexico. Although the economic structure varies from a country
+                                to another, the three economies rest on abundant energy resources, both fossil
+                                and renewables.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_population_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Population growth</h4>
+                            <p>
+                                Population projections are also based on national specific information. Growth rates
+                                are similar across the three countries with Canada having the highest rate. This
+                                estimation takes into account historical trends, adjusted with immigration,
+                                emigration and interprovincial migration and track on the National Energy
+                                Board’s population by province as published by the National Energy Board
+                                (NEB 2017; TEPF, 2016).
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_sectoral_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Sectoral growth</h4>
+                            <p>
+                                The growth in the industrial, agricultural and commercial sectors in each region is
+                                partially derived from the national’s overall GDP growth, with each sector’s share
+                                of total GDP changing over time, and from the expected/planned production levels,
+                                constructions, and development of certain activities. These shares are derived
+                                from a historical analysis of how all countries’ sectoral shares of output have
+                                changed as their overall output grew. Growth of residential households is derived
+                                from population growth and assumptions on average household size in each region.
+                                Growth in each of these sectors drives energy demand as described in the next
+                                sub-section.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_energy_demand_drivers_elasticities" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy demand drivers and demand elasticities</h4>
+                            <p>As with MAPLE, described in Section 3.6.4.2, energy demands are driven by underlying
+                                drivers of socioeconomic growth, as well as energy price changes. </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_calibration" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                            <p>
+                                The NATEM model is calibrated to the 2011 base year using mainly country-specific
+                                information (e.g. EIA, 2018; PRODESEN, 2018; Statistics Canada, 2015), with the
+                                projections for the key energy flows, energy-related investments and stocks (e.g.
+                                installed technology capacity) further calibrated as new datasets become available.
+                            </p>
+                            <p>
+                                NATEM is constantly updated; the version to be used in PARIS REINFORCE will have an
+                                updated energy statistics calibration (the most useful combination among the key
+                                international and local sources) to the most recent years. The main variables to
+                                be calibrated are: the capacities/stocks and operating levels of all technologies,
+                                the extracted, exported, imported, produced, and consumed quantities for all energy
+                                carriers, and the representation of new policy- and target-related elements.
+                            </p>
+                            <p>
+                                In order to better isolate the effects of a new policy and/or have a clear picture
+                                of the remaining efforts necessary to achieve mitigation goals, reference scenarios
+                                include government policies already in place such as existing action plans on
+                                climate change, transport electrification targets, renewable penetration targets,
+                                Corporate Average Fuel Economy (CAFE) standards, building codes, regulations
+                                on the minimum content of renewables in conventional fuels, carbon taxes, as well
+                                as the existing carbon market between Quebec and California.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_mitigation_adaptation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>
+                                TIMES models enable capturing in particular substitutions of energy forms (e.g.,
+                                switching to low-carbon fuels) and energy technologies (e.g., use of battery-electric
+                                vehicles instead of vehicles equipped with an internal combustion engine running on
+                                conventional fuels) to comply with climate policy targets.
+                            </p>
+                            <p>
+                                NATEM is such a technology-rich model that represents most major fossil fuel and
+                                low-carbon technologies that are envisaged to be available for at least the first
+                                half of the 21st century. By capturing the substitution of low-carbon for high-carbon
+                                technologies in response to their relative costs, as well as emissions constraints
+                                and/or carbon prices, the NATEM model simulates mitigation. The principal mitigation
+                                technology options are as shown in the following table. Options marked with an asterisk (*)
+                                are currently not in the database but could be included during the project period in
+                                harmonisation with the other modelling teams. Data will be revised and updated in the
+                                framework of the Paris Reinforce project, and in accordance with the international
+                                database and feedback of local experts.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Upstream and downstream</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Synthetic fuel production</b></td>
+                                        <td><b>Hydrogen production</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal to gas without CCS*</li>
+                                                <li>Coal to liquids without CCS*</li>
+                                                <li>Biomass to gas without CCS</li>
+                                                <li>Coal to gas with CCS*</li>
+                                                <li>Coal to liquids with CCS*</li>
+                                                <li>Gas to liquids with CCS</li>
+                                                <li>Biomass to liquids (with and without CCS)</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electrolysis</li>
+                                                <li>Coal to hydrogen with CCS*</li>
+                                                <li>Gas to hydrogen with CCS*</li>
+                                                <li>Biomass to hydrogen with CCS*</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Oil & gas extraction and refining </b></td>
+                                        <td><b>Other</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electricity</li>
+                                                <li>Nuclear (small units)</li>
+                                            </ul>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Electricity and heat</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Electricity generation</b></td>
+                                        <td><b>Heat generation</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal with CCS</li>
+                                                <li>Gas with CCS</li>
+                                                <li>Nuclear (fission and fusion)</li>
+                                                <li>Hydro (dam and run-of-river)</li>
+                                                <li>Biomass (with and without CCS)</li>
+                                                <li>Geothermal</li>
+                                                <li>Solar PV</li>
+                                                <li>Solar CSP</li>
+                                                <li>Wind (onshore and offshore)</li>
+                                                <li>Tidal</li>
+                                                <li>Marine</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal with CCS</li>
+                                                <li>Gas with CCS</li>
+                                                <li>Oil with CCS</li>
+                                                <li>Geothermal</li>
+                                                <li>Biomass</li>
+                                                <li>Biomass with CCS</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Transport</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Road</b></td>
+                                        <td><b>Rail</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas (LNG / CNG) vehicles</li>
+                                                <li>Hybrid electric vehicles</li>
+                                                <li>Fully electric vehicles</li>
+                                                <li>Hydrogen fuel cell vehicles</li>
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electric</li>
+                                                <li>Hydrogen</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Air</b></td>
+                                        <td><b>Marine</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Hydrogen planes*</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas</li>
+                                                <li>Hydrogen</li>
+                                                <li>Biofuels</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Buildings</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Heating </b></td>
+                                        <td><b>Lighting</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing coal / oil</li>
+                                                <li>Biofuels</li>
+                                                <li>Electricity</li>
+                                                <li>Hydrogen</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>Efficiency</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Appliances</b></td>
+                                        <td><b>Cooling</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electricity</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electricity</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Industry</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Process heat</b></td>
+                                        <td><b>Machine drives</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                                <li>Hydrogen</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Steam</b></td>
+                                        <td><b>CHP</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing oil / coal</li>
+                                                <li>Biomass</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>CCS</b></td>
+                                        <td><b>Other (technology replacement)</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>CCS in iron and steel</li>
+                                                <li>CCS in cement</li>
+                                                <li>CCS in chemicals</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Advanced technologies for aluminium (inert anodes)</li>
+                                                <li>Cement clicker replacement</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Agriculture</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Energy</b></td>
+                                        <td><b>Non-Energy</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Biomass</li>
+                                                <li>Electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Additives to reduce enteric fermentation</li>
+                                                <li>Manure & Digester</li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Waste</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Solid waste</b></td>
+                                        <td><b>Wastewater</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Energy recovery for organic material</li>
+                                                <li>Landfill gas capture + renewable gas or electricity</li>
+                                            </ul>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Fugitive emissions</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Flare gas recovery</td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Main GHG energy system mitigation options in NATEM</caption>
+                                </table>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_economic_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>
+                                The TIMES modelling framework rationale, as a least-cost optimisation model, is
+                                detailed in the MAPLE documentation, in Section 3.6.7.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_key_params" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key parameters </h2>
+                            <p>
+                                NATEM relies on a technology-rich database that has been developed and continuously
+                                updated for the past 10 years, through partnerships and accesses to other energy
+                                optimisation model databases used worldwide, research projects in several
+                                universities with important Canadian research funding, consulting projects for
+                                public and private organisations in North America, constant technology watch and
+                                literature review, and collaboration with world class energy modellers to develop
+                                rigorous assumptions and robust approaches through ETSAP-IEA. With thousands of
+                                specific (existing and future) technologies, characterised with their techno-economic
+                                attributes, and hundreds of commodities, many datasets can be extracted and reported.
+                            </p>
+                            <p>
+                            <ul>
+                                Given the very rich and diversified energy systems in North America, the following key
+                                information are considered as the most important parameters to monitor, discuss and
+                                evaluate in the framework of the PARIS REINFORCE project for a successful integration
+                                of this model with the other tools and analyses:
+                                <li>Conventional and unconventional oil and gas reserves (located, enhanced recovery,
+                                    new discoveries);
+                                </li>
+                                <li>International markets for oil and gas exports (quantities and/or prices);</li>
+                                <li>Biomass potential for energy purposes (forest and agriculture residues, organic
+                                    wastes, etc.);
+                                </li>
+                                <li>Renewable potentials and annual variability of intermittent resources;</li>
+                                <li>Sequestration potentials in oil and gas field as well as saline aquifers;</li>
+                                <li>Information about new projects, namely hydro dams and interconnections that are
+                                    currently under construction or already scheduled for future construction, as
+                                    well as pipeline projects;
+                                </li>
+                                <li>Cost evolution for the most promising technologies (renewable electricity,
+                                    electric vehicles, etc.);
+                                </li>
+                                <li>Cost evolution for emerging technologies (second generation biofuels, new
+                                    industrial processes, etc.);
+                                </li>
+                                <li>Energy conservation potentials in buildings (roof insulation, duct sealing,
+                                    etc.);
+                                </li>
+                                <li>Existing policies, targets, plans; etc.</li>
+
+                            </ul>
+                            </p>
+                            <p>
+                                Parameters can be revised and updated in the framework of the PARIS
+                                REINFORCE project, following the feedback of national and local
+                                experts (stakeholder engagement), the comparative assessment with other
+                                modelling experiences, and the discussion with the partners (modellers).
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="natem_key_policies" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>
+                                As for all the TIMES-based models, the NATEM predominantly works by specifying
+                                either a GHG price (e.g. a carbon tax) or a GHG limit (e.g. an upper bound
+                                constraint) in one or several regions, or alternatively for all regions
+                                simultaneously. Additionally, the following further policies and measures can be
+                                implemented: subsidies or taxes on specific technologies, renewable portfolio
+                                standards, minimum renewable content in conventional fuels, phase-out programs and
+                                moratoria on some energy type (e.g. nuclear or hydrocarbon), investment growth rate
+                                projections, etc.
+
+                            </p>
+                            <p>
+                            <ul>
+                                This allows NATEM to perform a number of energy and climate policy-relevant
+                                investigations. Indeed, NATEM has been used to assess the implications of meeting
+                                ambitious GHG mitigation goals on the energy system configuration and cost, under many
+                                different economic and technical assumptions. Model results have been used by decision
+                                makers at national, regional and city levels in North America to
+                                i) <b>draft Climate Action Plan</b> and <b>define optimal sequences for the introduction
+                                of mitigation measures</b> and ii) <b>identify strategic research priorities for
+                                reducing mitigation costs</b> while contributing to the development of a
+                                sustainable economy. For example:
+                                <li>
+                                    Quebec Ministry of Environment and Climate Change and Quebec Ministry of Finance in
+                                    preparation of the Climate Action Plan: the model was used to identify optimal GHG
+                                    reduction trajectories for achieving the official targets taking into account
+                                    uncertainties related to the evolution of demands, social acceptability, and
+                                    technological innovation (Dunsky et al., 2019).
+                                </li>
+                                <li>
+                                    Environmental Commissioner of Ontario in preparation of its Climate Action Plan:
+                                    the model was used to compare costs and other impacts for i) achieving Canadian only
+                                    mitigation targets and ii) achieving both Ontario and Canadian mitigation targets
+                                    (Vaillancourt et al., 2018d).
+                                </li>
+                                <li>
+                                    Metropolitan Montreal Community (MMC) in preparation of its Climate Action Plan:
+                                    the model is used in support to the development of an action plan and define
+                                    priorities in consultation with key stakeholders to achieve carbon neutrality in
+                                    2050 (ongoing project).
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                            <ul>
+                                NATEM was also used in a variety of other applications to support decision-makers
+                                in governments, industries and associations:
+                                <li>
+                                    With the <b>preparation of Canadian energy outlooks,</b> such as the most recent
+                                    Canadian Energy Outlook (Langlois-Bertrand et al., 2018) with an ambitious
+                                    scenario including a GHG reduction target of 80% by 2050 compared to 1990 (the
+                                    first of its kind in over a decade covering Canada and its 13 jurisdictions) and
+                                    the Trottier Energy Futures Project (TEFP, 2016) which is now a reference in
+                                    Canadian universities and government offices to understand how Canada can achieve
+                                    its official targets.
+                                </li>
+                                <li>
+                                    With the <b>preparation of technology roadmaps:</b> the model was used to support
+                                    a gas company in preparation of its long-term Strategic Plan 2015-2030 to analyse
+                                    the penetration rates of renewable natural gas under mitigation scenarios
+                                    (confidential project).
+                                </li>
+                                <li>
+                                    With <b>technological penetration rate estimations:</b> the model was used to
+                                    support
+                                    the Biofuel Canada Network to derive market penetration rates of emerging biofuels
+                                    to 2050 under GHG mitigation scenarios (Levasseur et al., 2016).
+                                </li>
+                                <li>
+                                    With <b>economic and environmental impact assessments of future energy projects
+                                    :</b> the model was used to support the Prime Minister Office and Quebec Ministry
+                                    of Environment and Climate Change in developing their position on the exploitation
+                                    of hydrocarbon on the Anticosti Island in a GHG mitigation context (Vaillancourt
+                                    et al., 2018c).
+                                </li>
+                                <li>
+                                    With <b>energy security issues:</b> the model was used to evaluate the impacts of
+                                    the TransCanada Energy East pipeline on the oil supply-demand dynamic and prices
+                                    in Eastern provinces, Newfoundland and Labrador especially for the Centre for
+                                    Applied Research in Economics (CARE) (Vaillancourt et al., 2015).
+                                </li>
+                                <li>
+                                    With the <b>evaluation of circular economy strategies:</b> the model was used to
+                                    support the Quebec Ministry of Energy and Natural Resources to assess the
+                                    techno-economic potential of circular economy strategies for the iron, copper
+                                    and lithium mining industries (Vaillancourt et al., 2018e).
+                                </li>
+                            </ul>
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_implications_sdgs" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                            <p>
+                                NATEM does not automatically calculate the implications for non-climate SDGs of its
+                                least-cost energy system to meet prescribed climate targets. However, it is
+                                possible to take its outputs and perform “off-model” calculations to estimate many
+                                of the SDG implications or to use them as input in other models or tools. A number
+                                of other SDGs can be taken into consideration and investigated indirectly making
+                                use of the NATEM model (see the table below).
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:40%">SDG</th>
+                                        <th style="width:60%">Details</th>
+
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>§1. Poverty</td>
+                                        <td>Impacts on energy prices in different sectors can be used and trade-offs
+                                            between energy poverty reduction measures versus energy consumptions can be
+                                            partially explored.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§3. Health</td>
+                                        <td>Life-cycle analysis can be used to assess other environmental impacts than
+                                            GHGs of model solutions. Other pollutants can be tracked and impacts on air
+                                            quality and health assessed with a spatial distribution model.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§7. Affordable and clean energy</td>
+                                        <td>Cost-effectiveness of energy technologies and commodities within a specific
+                                            storyline.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§8. Decent work & growth</td>
+                                        <td>Energy export revenues can be tracked and analysed to evaluate the
+                                            corresponding impacts on the global budget. Model outputs (energy prices,
+                                            etc.) can be used as input in a general equilibrium model to estimate
+                                            impacts on GDP and jobs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§9. Industry, Innovation, Infrastructure</td>
+                                        <td>Model can be used to assess the techno-economic potential of emerging
+                                            technologies in industries.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§11. Sustainable cities/communities</td>
+                                        <td>When model development allows it (enough spatial disaggregation), GHG
+                                            mitigation studies can be performed at the city level.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§12. Responsible Cons.-Production</td>
+                                        <td>When model development allows it (enough sectoral details with modelling of
+                                            material commodities), circular economy strategies can be assessed.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§15: Life on land</td>
+                                        <td>Afforestation measures can be taken into account through exogenous supply
+                                            curves. Land-specific constraints (natural and regulatory) can be
+                                            introduced.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Capability of the NATEM model to assess other SDGs</caption>
+                                </table>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_recent_publications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications </h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Study</th>
+                                        <th style="width:40%">Focus</th>
+                                        <th style="width:40%">Key findings</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Vaillancourt et al. (2018a)</td>
+                                        <td>The role of bioenergy in low-carbon energy transition scenarios:
+                                            A case study for Quebec (Canada).
+                                        </td>
+                                        <td>Our study envisions a much larger penetration of bioenergy (up to
+                                            a threefold increase) than the one proposed by the government of
+                                            Quebec in its 2030 Energy Policy to achieve the GHG mitigation target.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vaillancourt et al. (2018b)</td>
+                                        <td>The Canadian contribution to limiting global warming below 2oC:
+                                            An analysis of technological options and regional cooperation.
+                                        </td>
+                                        <td>The main transformations include significant energy efficiency
+                                            improvements, greater penetration of electricity and bioenergy in
+                                            all end-use sectors in 2050, a rapid decarbonisation of electricity
+                                            production and a shift away from fossil fuels. Canada would benefit
+                                            from achieving greater cooperation between jurisdictions because of the
+                                            large diversity of energy systems.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vaillancourt et al. (2018c)</td>
+                                        <td>The role of new fossil fuels projects in a decarbonising energy system:
+                                            A case study for Quebec.
+                                        </td>
+                                        <td>Results indicate the 2050 GHG emission levels would increase by nearly
+                                            7% in the reference case. Greater total GHG reductions would thus be
+                                            required from the baseline at a significantly higher marginal cost.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Astudillo et al. (2017)</td>
+                                        <td>Can the household sector reduce global warming mitigation costs?
+                                            Sensitivity to key parameters in a TIMES techno-economic energy model.
+                                        </td>
+                                        <td>Results indicate that peak demand would rise by 30% due to global
+                                            mitigation efforts, but it can be effectively reduced by
+                                            interventions in the residential sector. Heat pumps are the most
+                                            cost-effective heating technology, despite their lower efficiencies
+                                            in cold climates. Better-insulated building envelopes have an important
+                                            uptake in new houses, reducing by 14% the mitigation costs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Levasseur et al. (2016)</td>
+                                        <td>Assessing butanol from integrated forest biorefinery: A
+                                            combined techno-economic and life cycle approach.
+                                        </td>
+                                        <td>Results show that (i) the energy efficiency of the butanol production
+                                            process is a critical aspect to make butanol a competitive fuel; (ii)
+                                             with a 50% internal heat recovery, butanol has a role to play for
+                                            transport under climate policy scenarios; and (iii) higher supply
+                                            costs for feedstock might undermine the competitiveness of butanol in
+                                            the medium term (2030), but probably not in the long-term (2050).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vaillancourt et al. (2017)</td>
+                                        <td>Exploring deep decarbonisation pathways to 2050 for Canada using
+                                            an optimisation energy model framework.
+                                        </td>
+                                        <td>Results show that three fundamental transformations need to occur
+                                            to achieve GHG reduction targets: electricity should represent up
+                                            to 57% of final energy by 2050, electricity generating supply should
+                                            achieve nearly complete decarbonisation by 2025 and final energy
+                                            should decrease by 20% relative to the baseline by 2050.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="natem_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Astudillo, M.F., Vaillancourt, K., Pineau, P.-O. & Amor M.B. (2017). Can the
+                                household sector reduce global warming mitigation costs? Sensitivity to key
+                                parameters in a TIMES techno-economic energy model. Applied Energy (205), 486-498.
+                            </p>
+                            <p>
+                                CONAPO – Consejo Nacional de Poblacion (2012). Proyecciones de la
+                                Población 2010-2050.
+                                <a href="https://www.gob.mx
+                                /cms/uploads/attachment
+                                /file/63977/Documento_Metodologico_Proyecciones_Mexico_2010_2050.pdf">https://www.gob.mx
+                                    /cms/uploads/attachment
+                                    /file/63977/Documento_Metodologico_Proyecciones_Mexico_2010_2050.pdf</a>
+                            </p>
+                            <p>
+                                Dunsky, P., Poirier, M., Vaillancourt, K. & Joly, E. (2019).
+                                Trajectoires de réduction d’émissions de GES du Québec – Horizons
+                                2030 et 2050. Final Report. Quebec Ministry of Environment and
+                                Climate Change.
+                                <a href="http://www.environnement.gouv.qc.ca/changementsclimatiques/trajectoires-emissions-ges.pdf">http://www.environnement.gouv.qc.ca/changementsclimatiques/trajectoires-emissions-ges.pdf</a>
+                            </p>
+                            <p>
+                                EIA – Energy Information administration (2018). Annual Energy Outlook 2018 –
+                                With projections to 2050. Main Report. U.S. Department of Energy
+                                <a href="http://www.eia.gov/forecasts/aeo/">http://www.eia.gov/forecasts/aeo/</a>
+                            </p>
+                            <p>
+                                Langlois-Bertrand, S., Vaillancourt, K. Bahn, O., Beaumier, L.,
+                                Mousseau N. (2018). Canadian Energy Outlook 2018 – Horizon 2050.
+                                Trottier Energy Institute And E/ Hub. <a href="http://iet.polymtl.ca/en/energy-outlook/">http://iet.polymtl.ca/en/energy-outlook/</a>
+                            </p>
+                            <p>
+                                Levasseur, A., Bahn, O., Beloin-Saint-Pierre, D., Marinova M. & Vaillancourt K.
+                                (2016). Assessing butanol from integrated forest biorefinery: A combined
+                                techno-economic and life cycle approach. Applied Energy, 198, 440-452.
+                            </p>
+                            <p>
+                                Loulou R. Labriet M. (2007). ETSAP-TIAM: the TIMES integrated assessment model
+                                Part I: Model structure. Computational Management Science, 5(102), 7–40.
+                            </p>
+                            <p>
+                                Loulou, R., Goldstein, G., Kanudia, A., Lehtila, A. & Remme, U. (2016).
+                                Documentation for the TIMES Model. ETSAP of the International Energy Agency (IEA).
+                                Retrieved from <a href="http://iea-etsap.org/index.php/documentation">http://iea-etsap.org/index.php/documentation</a>.
+                            </p>
+                            <p>
+                                NEB – National Energy Board (2017). Canada’s Energy Future 2017 - Energy Supply and
+                                Demand Projections to 2040 - An Energy Market Assessment. Ottawa, 90 p. and annexes.
+                            </p>
+                            <p>
+                                SENER – Secretariat de Energia (2018). PRODESEN – Programme de Desarrollo des
+                                Sistema Electrico Nacional.
+                                <a href="https://www.gob.mx/sener/acciones-y-programas/
+                                programa-de-desarrollo-del-sistema-electrico-nacional-33462">https://www.gob.mx/sener/acciones-y-programas/
+                                    programa-de-desarrollo-del-sistema-electrico-nacional-33462</a>
+                            </p>
+                            <p>
+                                SENER – Secretariat de Energia (2014). Prospectiva de Energía Renovable 2014 –
+                                2028. <a href="https://www.gob.mx/sener/documentos/prospectivas-del-sector-energetico">https://www.gob.mx/sener/documentos/prospectivas-del-sector-energetico</a>
+                            </p>
+                            <p>
+                                Statistics Canada (2015). Report on Energy Supply-Demand in Canada. Catalogue N.
+                                57-003-XIE. <a href="https://www150.statcan.gc.ca/n1/en/catalogue/57-003-X">https://www150.statcan.gc.ca/n1/en/catalogue/57-003-X</a>
+                            </p>
+                            <p>
+                                TEFP - Trottier Energy Futures Project (2016). Canada’s challenge & opportunity –
+                                Transformations for major reductions in GHG emissions. Retrieved
+                                from <a href="http://iet.polymtl.ca/en/tefp/">http://iet.polymtl.ca/en/tefp/</a>.
+                            </p>
+                            <p>
+                                Vaillancourt K. Bahn O. Levasseur A. (2018a). The role of bioenergy in
+                                low-carbon energy transition scenarios: A case study for Quebec (Canada).
+                                Renewable and Sustainable Energy Reviews, 102, 24-34.
+                            </p>
+                            <p>
+                                Vaillancourt K. Bahn O. Sigvaldason O. (2018b). The Canadian contribution to
+                                limiting global warming below 2oC: An analysis of technological options and
+                                regional cooperation. In G. Giannakidis et al (eds). Springer Lecture Notes
+                                in Energy: Limiting Global Warming to Well Below 2°C: Energy System Modelling
+                                and Policy Development: 223-242.
+                            </p>
+                            <p>
+                                Vaillancourt K., Bahn O., Patreau V. & Roy P.O. (2018c). The role of new fossil
+                                fuels projects in a decarbonizing energy system: A case studies for Quebec
+                                (Canada). Applied Energy, 218, 114-130.
+                            </p>
+                            <p>
+                                Vaillancourt K., Sigvaldason O. & Ogilvie K. (2018d). Appendix E: Minimum
+                                Cost Strategies for GHG Mitigation for Ontario to 2030, and to 2050. Prepared
+                                for the Environmental Commissioner of Ontario.
+                                <a href="https://docs.assets.eco.on.ca/reports/climate-change/2018/Climate-Action-in-Ontario.pdf">https://docs.assets.eco.on.ca/reports/climate-change/2018/Climate-Action-in-Ontario.pdf</a>
+                            </p>
+                            <p>
+                                Vaillancourt et al. (2018e). Métaux et économie circulaire au Québec. Rapport
+                                de l’étape 3.2: Analyse technico-économique des stratégies de circularité.
+                                Avec l’Institut EDDEC pour le ministère de l’Énergie et des
+                                Ressources naturelles (MERN), 169 p.
+                                <a href="https://mern.gouv.qc.ca/mines/publications/analyses-projets-recherche/">https://mern.gouv.qc.ca/mines/publications/analyses-projets-recherche/</a>
+                            </p>
+                            <p>
+                                Vaillancourt K., Bahn O., Frenette E. & Sigvaldason O. (2017).
+                                Exploring deep decarbonization pathways to 2050 for Canada using an
+                                optimization energy model framework. Applied Energy, 195, 774-785.
+                            </p>
+                            <p>
+                                Vaillancourt K., Alcocer A. & Bahn O. (2015). Impact of the Energy East
+                                pipeline on the oil and gas industry in Newfoundland and Labrador.
+                                Collaborative Applied Research in Economics (CARE), Memorial University of
+                                Newfoundland, 49p. <a href="https://www.mun.ca/care/news.php?id=6438">https://www.mun.ca/care/news.php?id=6438</a>
+                            </p>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,1261 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+{##}
+                                            {#                                                    Begin CONTO#}
+                                                    <div id="collapse_conto">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                <span>Overview</span>
+                                                                <a style="display: none"
+                                                                   href="#conto_overview">Overview</a>
+                                                            </li>
+                                                            <li>
+                                                            <div class="panel-group conto_key_feauters">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading"
+                                                                         style="padding:0px">
+                                                                        <h5 class="panel-title"
+                                                                            style="background-color:#343a40; padding: 5px">
+                                                                            <a data-toggle="collapse"
+                                                                               href="#collapse_conto_key_feauters"><i
+                                                                                    class="fa fa-caret-right rotate"
+                                                                                    style="margin-right: 10px;"></i>Key
+                                                                                features of the
+                                                                                CONTO model
+
+
+                                                                            </a>
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div id="collapse_conto_key_feauters"
+                                                                         class="panel-collapse collapse">
+                                                                        <ul class="list-group">
+                                                                            <li class="list-group-item">
+                                                                                <span>Economic activities coverage</span>
+                                                                                <a style="display: none"
+                                                                                   href="#conto_economics_activities_coverage">
+                                                                                    Economic
+                                                                                    activities
+                                                                                    coverage</a>
+                                                                            </li>
+                                                                            <li class="list-group-item">
+                                                                                <span>Energy sectoral detail</span>
+                                                                                <a style="display: none"
+                                                                                   href="#conto_energy_sectoral">
+                                                                                    Energy sectoral
+                                                                                    detail</a>
+                                                                            </li>
+                                                                            <li class="list-group-item">
+                                                                                <span>Time periods</span>
+                                                                                <a style="display: none"
+                                                                                   href="#conto_time_periods">
+                                                                                    Time periods</a>
+                                                                            </li>
+
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <span>Climate module & emissions granularity</span>
+                                                                <a style="display: none"
+                                                                   href="#conto_climate_emissions">
+                                                                    Climate module &
+                                                                    emissions
+                                                                    granularity</a>
+                                                            </li>
+                                                                    <li class="list-group-item">
+                                                                        <span>Drivers of energy and other GHG-emitting service demands</span>
+                                                                        <a style="display: none"
+                                                                           href="#conto_drivers_of_energy">
+                                                                            Drivers of energy and
+                                                                            other GHG-emitting
+                                                                            service demands
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                        <span>Calibration of the model</span>
+                                                                        <a style="display: none"
+                                                                           href="#conto_calibration">
+                                                                            Calibration of the
+                                                                            model</a>
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                        <span>Mitigation/adaptation measures and technologies</span>
+                                                                        <a style="display: none"
+                                                                           href="#conto_mitigation_adaptation">
+                                                                            Mitigation/adaptation
+                                                                            measures and
+                                                                            technologies</a>
+                                                                    </li>
+
+
+{#                                                                                                               start#}
+                                                                    <li>
+                                                                    <div class="panel-group conto_eco_rat">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading"
+                                                                                 style="padding:0px">
+                                                                                <h5 class="panel-title"
+                                                                                    style="background-color:#343a40; padding: 5px">
+                                                                                    <a data-toggle="collapse"
+                                                                                       href="#collapse_conto_eco_rat"><i
+                                                                                            class="fa fa-caret-right rotate"
+                                                                                            style="margin-right: 10px;"></i>Economic
+                                                                                        rationale
+                                                                                        and model
+                                                                                        solution
+
+
+                                                                                    </a>
+                                                                                </h5>
+                                                                            </div>
+                                                                            <div id="collapse_conto_eco_rat"
+                                                                                 class="panel-collapse collapse">
+                                                                                <ul class="list-group">
+                                                                                    <li class="list-group-item">
+                                                                                        <span>Input-output unit</span>
+                                                                                        <a style="display: none"
+                                                                                           href="#conto_input_output_unit">
+                                                                                            Input-output
+                                                                                            unit</a>
+                                                                                    </li>
+                                                                                    <li class="list-group-item">
+                                                                                        <span>Interaction of input-output and energy units</span>
+                                                                                        <a style="display: none"
+                                                                                           href="#conto_interaction_input_output">
+                                                                                            Interaction
+                                                                                            of
+                                                                                            input-output
+                                                                                            and
+                                                                                            energy
+                                                                                            units</a>
+                                                                                    </li>
+                                                                                    <li class="list-group-item">
+                                                                                        <span>Exogenous parameters of energy efficiency</span>
+                                                                                        <a style="display: none"
+                                                                                           href="#conto_energy_params">
+                                                                                            Exogenous
+                                                                                            parameters
+                                                                                            of
+                                                                                            energy
+                                                                                            efficiency</a>
+                                                                                    </li>
+                                                                                    <li class="list-group-item">
+                                                                                        <span>New technologies unit</span>
+                                                                                        <a style="display: none"
+                                                                                           href="#conto_new_techologies_unit">
+                                                                                            New
+                                                                                            technologies
+                                                                                            unit</a>
+                                                                                    </li>
+                                                                                    <li class="list-group-item">
+                                                                                        <span>CO2 emissions unit</span>
+                                                                                        <a style="display: none"
+                                                                                           href="#conto_co2_emissions">
+                                                                                            CO2
+                                                                                            emissions
+                                                                                            unit</a>
+                                                                                    </li>
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    </li>
+
+{#                                                                                                                  end#}
+
+                                                                    <li class="list-group-item">
+                                                                        <span>Key parameters</span>
+                                                                        <a style="display: none"
+                                                                           href="#conto_key_parameters">
+                                                                            Key parameters</a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                    <div class="panel-group conto_policiy_sdg">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading"
+                                                                                 style="padding:0px">
+                                                                                <h5 class="panel-title"
+                                                                                    style="background-color:#343a40; padding: 5px">
+                                                                                    <a data-toggle="collapse"
+                                                                                       href="#collapse_conto_policiy_sdg"><i
+                                                                                            class="fa fa-caret-right rotate"
+                                                                                            style="margin-right: 10px;"></i>Policy
+                                                                                        questions
+                                                                                        and SDGs
+
+
+                                                                                    </a>
+                                                                                </h5>
+                                                                            </div>
+                                                                            <div id="collapse_conto_policiy_sdg"
+                                                                                 class="panel-collapse collapse">
+                                                                                <ul class="list-group">
+                                                                                    <li class="list-group-item">
+                                                                                        <span>Key policies that can be addressed</span>
+                                                                                        <a style="display: none"
+                                                                                           href="#conto_key_policies_sdgs">
+                                                                                            Key
+                                                                                            policies
+                                                                                            that can
+                                                                                            be
+                                                                                            addressed</a>
+                                                                                    </li>
+                                                                                    <li class="list-group-item">
+                                                                                        <span>Implications for other SDGs</span>
+                                                                                        <a style="display: none"
+                                                                                           href="#conto_implications_sdgs">
+                                                                                            Implications
+                                                                                            for
+                                                                                            other
+                                                                                            SDGs</a>
+                                                                                    </li>
+
+
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    </li>
+
+
+                                                                    <li class="list-group-item">
+                                                                        <span>Recent publications using the CONTO model</span>
+                                                                        <a style="display: none"
+                                                                           href="#conto_recent_publications">
+                                                                            Recent publications
+                                                                            using the CONTO
+                                                                            model</a>
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                        <span>References</span>
+                                                                        <a style="display: none"
+                                                                           href="#conto_references">
+                                                                            References</a>
+                                                                    </li>
+
+                                                        </ul>
+                                                    </div>
+            </div>
+                                                    {#                                                    End CONTO#}
+
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+
+                 <div class="row">
+                        <h1 id="conto" style="padding-bottom: 1em; padding-top: 1em">CONTO</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Overview</h2>
+                            <p>
+                                CONTO is a system of interconnected macro-structural calculations at the national
+                                level, which allows it to describe the synchronised development of economy and the
+                                energy sector of the Russian Federation, as well as the level of associated CO2
+                                emissions. The economic unit is represented by input-output tables, which describe
+                                the inter-industry goods flows during production and consumption processes. The
+                                energy sector is described in detail in the form of energy balances corresponding
+                                to the methodology of the International Energy Agency (IEA). The modelling approach
+                                is elaborated in such a way that indicators of socioeconomic development affect the
+                                volume and efficiency of energy consumption in the country, which, in turn, determine
+                                the economic dynamics of industries involved in the technological chain of energy
+                                supply. CONTO also includes the optimisation unit for evaluating the effective fuel
+                                structure in the transportation and power sectors based on the cost characteristics
+                                of competing technologies. CO2 emissions are calculated in connection with economic
+                                input-output tables. This logical framework is well suited to simulating emissions
+                                mitigation by both economically and through regulations stimulating energy efficiency
+                                and structural change in the fuel mix. Estimation of the macroeconomic impacts of the
+                                application of climate-related measures is a substantial component of the modelling
+                                process. CONTO is designed specifically for this task formulation, although it is
+                                rather flexible for a wide range of research issues for the economy-energy-emissions
+                                triangle and can be expanded during the implementation of the PARIS REINFORCE project
+                                to take into account potentially appropriate emission mitigation practices.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Key features of the CONTO model</h2>
+                            <span id="conto_economics_activities_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Economic activities coverage</h4>
+                            <p>
+                                The statistical base of the CONTO model is a series of input-output (I/O)
+                                tables for Russia at current and constant prices for 1980–2015, which are
+                                consistent with the official data of the Russian Federal State Statistics
+                                Service (Rosstat), including the System of National Accounts (SNA). There are
+                                44 economic activities in the I/O tables of CONTO shown in the following table.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2" style="width:100%">Sector detailed in CONTO model</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Agriculture
+                                        </td>
+                                        <td>
+                                            Medical, optical, and precision instruments
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Petroleum extraction
+                                        </td>
+                                        <td>
+                                            Automobiles, highway transport equipment
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Natural gas extraction
+                                        </td>
+                                        <td>Sea transport equipment and its repair</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Coal mining
+                                        </td>
+                                        <td>
+                                            Airplanes, rockets, and repair
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Other Fuels, incl. Nuclear
+                                        </td>
+                                        <td>Railroad equipment and its repair</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Ores and other mining
+                                        </td>
+                                        <td>
+                                            Recycling
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Food, beverages, tobacco</td>
+                                        <td>Electric, gas, and water utilities</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Textiles, apparel, leather
+                                        </td>
+                                        <td>
+                                            Construction
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Wood and wood products
+                                        </td>
+                                        <td>
+                                            Wholesale and retail trade
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paper and printing</td>
+                                        <td>Hotels and restaurants</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Petroleum refining
+                                        </td>
+                                        <td>
+                                            Transport and storage
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Chemicals
+                                        </td>
+                                        <td>
+                                            Communication
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Pharmaceuticals
+                                        </td>
+                                        <td>
+                                            Finance and insurance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Plastic products
+                                        </td>
+                                        <td>
+                                            Real estate
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Stone, Clay, and Glass products
+                                        </td>
+                                        <td>
+                                            Equipment rental
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Ferrous metals
+                                        </td>
+                                        <td>
+                                            Computing service
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Non-ferrous metals</td>
+                                        <td>
+                                            Research and development
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fabricated metal products</td>
+                                        <td>Other business services</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Machinery
+                                        </td>
+                                        <td>
+                                            Government, defense, social insurance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Computers, office machinery</td>
+                                        <td>Education</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Electical apparatus</td>
+                                        <td>Health services</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Radio, television, communication equipment</td>
+                                        <td>Other social and personal services</td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Economic activities nomenclature in CONTO</caption>
+                                </table>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_energy_sectoral" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy sectoral detail</h4>
+                            <p>
+                                The Russian energy sector is described in the form of energy balances
+                                corresponding to the methodology of IEA. The energy balance primary
+                                includes coal, natural gas, oil, nuclear, hydro, solar, wind, biofuels,
+                                and other renewables; and secondary energy resources.
+
+                            </p>
+                            <p>
+                                The list of supply and demand categories within energy balance is similar to
+                                IEA’s methodology with slight simplifications, which are performed in order
+                                to synchronise the nomenclature of energy and economy units of CONTO.
+                            </p>
+                            <p>
+                                Total primary energy supply (TPES) includes production, net exports, bunkers
+                                and stock changes.
+                            </p>
+                            <p>
+                                The final energy consumption unit is very detailed in order to guarantee the
+                                maximum coordination with the economic I/O tables. It includes:
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    {#                                      <tr>#}
+                                    {#                                          <th style="width:20%">Industry</th>#}
+                                    {#                                          <th style="width:40%">Buildings#}
+                                    {#(tertiary and residential)</th>#}
+                                    {#                                          <th style="width:40%">Appliances#}
+                                    {#(tertiary and residential)#}
+                                    {#</th>#}
+                                    {#                                      </tr>#}
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li style="list-style:none">
+                                                <h5 style="text-align: left">Industry</h5>
+                                                </li>
+                                                <li style="list-style:none">
+                                                <ul style="text-align: left">
+                                                    <li>Mining and quarrying</li>
+                                                    <li>Food and tobacco</li>
+                                                    <li>Textile and leather</li>
+                                                    <li>Wood and wood products</li>
+                                                    <li>Paper, pulp and print</li>
+                                                    <li>Chemical and petrochemical</li>
+                                                    <li>Non-metallic minerals</li>
+                                                    <li>Iron and steel</li>
+                                                    <li>Non-ferrous metals</li>
+                                                    <li>Machinery</li>
+                                                    <li>Transport equipment</li>
+                                                    <li>Construction</li>
+                                                    <li>Other industry</li>
+                                                </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li style="list-style:none">
+                                                    <h5 style="text-align: left">Transport</h5>
+                                                </li>
+                                                <li style="list-style:none">
+                                                    <ul style="text-align: left;margin-bottom: 1em">
+                                                        <li>Aviation</li>
+                                                        <li>Road transport</li>
+                                                        <li>Rail transport</li>
+                                                        <li>Other transport</li>
+                                                    </ul>
+                                                </li>
+                                                <li style="list-style:none">
+                                                    <h5 style="text-align: left">Residential</h5>
+                                                </li>
+                                                <li style="list-style:none">
+                                                    <h5 style="text-align: left">Commercial and public services</h5>
+                                                </li>
+                                                <li style="list-style:none">
+                                                    <h5 style="text-align: left">Agriculture, forestry</h5>
+                                                </li>
+                                                <li style="list-style:none">
+                                                    <h5 style="text-align: left">Non-energy use in
+                                                        chemical/petrochemical</h5>
+                                                </li>
+                                                <li style="list-style:none">
+                                                    <h5 style="text-align: left">Other non-energy use</h5>
+                                                </li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    {#                                      <caption></caption>#}
+                                </table>
+                            </div>
+                            <p>
+                                The final energy consumption indicators of production sectors are directly
+                                dependent on their macroeconomic characteristics, which are described in
+                                the I/O tables. For instance, natural gas consumption
+                                in manufacture of chemicals has the linkage with economic
+                                output in this industry, etc.
+                                Residential consumption, as with personal
+                                transportation, depends on population and incomes.
+                            </p>
+                            <p>Secondary consumption includes electricity plants,
+                                CHP plants, heat plants, oil refineries,
+                                coal transformation, other transformation, energy industry own use and losses.</p>
+                            <p>
+                                CONTO provides an optimisation unit that allows to calculate
+                                the most cost-effective structure for satisfying the final
+                                demand on electricity/heat and transportation.
+                                This unit is filled with the technologies for the production of primary and
+                                secondary commodities (mining & extractions processes, power plants, etc.)
+                                with cost characteristics. Technologies for the production of
+                                hydrogen and its use in transport are also put into the optimisation
+                                block, although they are not currently used in Russia.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/conto_energy_system.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of the CONTO energy system
+                                    </p>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Time periods</h4>
+                            <p>
+                                Currently, the forecast period for the I/O tables, energy balance,
+                                and the energy optimisation unit in the CONTO model is 2040.
+                                The potential duration of the forecast period is limited only by the quality of
+                                scenario indicators. The energy optimisation unit works through ten-year
+                                periods (2010, 2020, 2030 and 2040). The I/O tables and the total energy balance
+                                are formed for each year.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_climate_emissions" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                            <p>
+                                CONTO is a national-level model that does not have a
+                                climate module and that does not calculate the impact of
+                                anthropogenic emissions on climate change.
+                                The current version of the model tracks only carbon
+                                dioxide (CO2) emissions. It may be expanded during
+                                the implementation of the PARIS REINFORCE project
+                                in order to provide a more complete description of anthropogenic emissions.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_drivers_of_energy" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Drivers of energy and other GHG-emitting service demands</h2>
+                            <p>
+                                In CONTO, all socioeconomic parameters are endogenous,
+                                other than demographic parameters (e.g. population)
+                                which are specified exogenously. The model contains
+                                a time series of GDP and output for 44 industries,
+                                national accounts tables, the balance of income and expenses of the population,
+                                indicators of the state budget, balance of payments, balances of the
+                                Central Bank and credit organisations, data on sectoral employment,
+                                and stocks of fixed capital, etc. All of the above parameters describe
+                                the socioeconomic development
+                                of the country and affect the processes of energy consumption.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_calibration" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                            <p>
+                                Within CONTO, calibration is performed
+                                only for the energy optimisation unit,
+                                which estimates the cost-effective fuel mix in the power sector
+                                and road transportation sector. The base year is 2010.
+                                The main variables to be calibrated include the costs for
+                                different technologies; the capacities and utilisation rates;
+                                and particular Russian electricity market rules
+                                (regarding the supply curve formation).
+                                The source of statistical data is IEA’s energy balances.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_mitigation_adaptation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>
+                                CONTO is focused on the implementation of low-carbon solutions in the field of
+                                electricity and heat production, and automobile transport.
+                                Considerable attention is paid to improving the efficiency
+                                of energy consumption through the modernisation of production
+                                capacities. By simulating the substitution of low-carbon for high-carbon
+                                technologies in response to their relative costs, as well as emissions
+                                constraints and/or carbon prices, the CONTO model simulates mitigation.
+                                The principal energy sector CO2 mitigation technology options are as shown in the following table.
+                            </p>
+                            {# Table 3.9: Main CO2 energy system mitigation options in CONTO #}
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <span id="conto_input_output_unit" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Input-output unit</h4>
+                            <p>
+                                In the economic unit, forecast calculations are carried out in accordance
+                                with the input-output methodology. In fact, it is an iterative econometric
+                                inter-sectoral model. The concept of the model reflects the logic of a real
+                                business cycle.
+                            </p>
+                            <p>
+                                The iterative calculation procedure begins with an econometric calculation of
+                                the dynamics of the elements of final consumption (Y), including household
+                                consumption, government consumption, investments, changes in inventories, and
+                                net exports. Next, output (X) is calculated as function of final consumption (Y)
+                                by solving the basic I/O equation, which also uses a direct cost matrix (A) and a
+                                diagonal identity matrix (I):
+                            </p>
+                            <p>
+                            <center>
+                                <i>
+
+                                    X = (I - A) <sup>-1</sup> * γ
+                                </i>
+                            </center>
+                            </p>
+                            <p>
+                                Based on the output and investments, the number of employees and the fixed assets
+                                by sectors are calculated. Then, the model calculates the value added (VA) as a
+                                function of output (X), which consists of wages, profit, depreciation and taxes:
+                            </p>
+
+                            <p>
+                            <center>
+                                <i>
+                                    VA<sup>T</sup> = X - A<sup>T</sup>X
+                                </i>
+                            </center>
+                            </p>
+
+                            <p>
+                                At the next step, in accordance with the Leontief price model and based on the
+                                elements of value added (VA) and output (X), the current prices (P) are calculated:
+                            </p>
+                            <p>
+                            <center>
+                                <i>
+                                    P = (I-A)<sup>-1</sup>*VA/X
+                                </i>
+                            </center>
+                            </p>
+                            <p>
+                                The elements of value added serve as the indicators of incomes of
+                                population (wages), business (profit) and government (taxes). These incomes are
+                                redistributed into the household consumption, investments and government
+                                consumption. Import is a closing element in meeting demand in case of
+                                insufficient own capacities (insufficient investment).
+
+                            </p>
+                            <p>
+                                This closes the settlement procedure. The process of calculations is
+                                repeated until the convergence conditions are met. Once convergence is achieved,
+                                the model moves to the next year.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/conto_economic_unit.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">The solution algorithm in the
+                                        economic unit of CONTO
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_interaction_input_output" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Interaction of input-output and energy units</h4>
+                            <p>
+                                This section describes the energy calculation algorithm in the CONTO model.
+                                It notes the interaction of input-output tables and final energy consumption.
+                                It is implemented as follows.
+                            </p>
+                            <p>
+                                Energy consumption in an industry should simultaneously reflect two factors:
+                                the gross indicator of the industry and energy efficiency.
+                                An industry output can be used as a gross indicator,
+                                and energy efficiency is primarily improved through
+                                the modernisation of production facilities—that is,
+                                through the investment process. In addition, capacity utilisation has an impact.
+                                This is important because, firstly, there are economies of scale, and secondly,
+                                companies incur conditionally fixed costs.
+                            </p>
+                            <p>
+                                Thus, final energy consumption (FC) is calculated as multiplication of output (X) by
+                                specific energy consumption per output unit (EFF), and the latter is the regression
+                                function of investment (INV) and capacity utilisation (UTILISATION) in each industry:
+                            </p>
+                            <p>
+                            <center>
+                                <i>
+                                    FC = X * EFF = X * Function (INV, UTILISATION)
+                                </i>
+                            </center>
+                            </p>
+                            <p>
+                                The direct costs matrix (A) is in fact a description of the technological structure
+                                of the economy. Therefore, its components’ (I/O coefficients) dynamics should reflect
+                                energy efficiency processes. The CONTO model implements an inverse relationship
+                                between energy balance and I/O tables, within which particular I/O coefficients
+                                (a) regressively depend on EFF:
+                            </p>
+                            <p>
+                            <center>
+                                <i>
+                                    a = Function (EFF)
+                                </i>
+                            </center>
+                            </p>
+                            <p>
+                                For example, as a result of investments, production capacities of the ferrous
+                                metal industry in Russia are being updated, leading to an increase in the
+                                efficiency of natural gas use, which is equivalent to a decrease in the specific
+                                consumption of natural gas per unit of output of ferrous metals. This means that
+                                the I/O coefficient describing the flow from the natural gas production sector to
+                                the ferrous metal production sector should be reduced proportionally.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_energy_params" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Exogenous parameters of energy efficiency</h4>
+                            <p>
+                                In the CONTO model, the parameters of fuel consumption on different types of
+                                vehicles, fuel consumption in power and heating sectors, and energy
+                                efficiency in the residential sector are exogenous.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_new_techologies_unit" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">New technologies unit</h4>
+                            <p>
+                                Currently, a unit of new technologies is being developed.
+                                It includes the estimates of the resources and materials use by new and
+                                traditional technologies for the production of electricity and road transport.
+                                The production of electric vehicles requires less ferrous metals, more non-ferrous
+                                metals and electrical equipment (batteries methodologically belong to this category)
+                                compared to traditional internal combustion engine (ICE) cars. Solar generation
+                                requires significant volumes of metals, concrete and silicon at the investment stage.
+                                Wind generation requires significant volumes of concrete, metals, composites and
+                                polymers at the investment stage. Therefore, the spread of low-carbon technologies
+                                will cause structural transformations in the economy. In the CONTO model, such
+                                processes are described through the redistribution of I/O coefficients (a).
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_co2_emissions" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">CO<sub>2</sub> emissions unit</h4>
+                            <p>
+                                CO<sub>2</sub> emissions are calculated based on the output of industries in the
+                                I/O tables
+                                (X) and their specific carbon intensity (carbon):
+                            </p>
+                            <p>
+                            <center>
+                                <i>
+                                    CO<sub>2</sub> = X * carbon
+                                </i>
+                            </center>
+                            </p>
+
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/conto_solution_algorithm.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">CONTO solution algorithm
+                                    </p>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_key_parameters" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key parameters </h2>
+                            <p>
+                                CONTO pays special attention to the socioeconomic development of Russia. Therefore,
+                                in addition to the parameters related to the energy sector, there are indicators
+                                which significantly determine the economic dynamics in the country. These arise
+                                from the fact that Russia is a key supplier of hydrocarbon fuels to the world market.
+                                This leads to high dependence of macroeconomic indicators on the situation in
+                                foreign markets, and also increases the role of fiscal policy.
+
+                            </p>
+                            <p align="left">
+                            <ul>
+                                Key economic parameters are:
+                                <li>
+                                    demographic data (stabilisation and gradual aging of population);
+                                </li>
+                                <li>
+                                    oil price (USD) rate (affects income of commodity sectors and dynamics of prices in
+                                    the economy);
+                                </li>
+                                <li>
+                                    tax rates (affect business profits and state budget revenues);
+                                </li>
+                                <li>
+                                    budget expenditures;
+                                </li>
+                                <li>
+                                    exports of the main products (oil, natural gas and coal); and
+                                </li>
+                                <li>
+                                    growth rates of the world and the EU economy (affect the exports of Russian
+                                    products).
+                                </li>
+                            </ul>
+                            <ul>
+                                Key energy parameters are:
+                                <li>fuel/energy efficiency;</li>
+                                <li>energy technology costs; and</li>
+                                <li>resources of different types of energy.</li>
+                            </ul>
+                            </p>
+
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="conto_key_policies_sdgs" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>
+                                In Russia, crucial attention is paid to the issue of sparking economic growth after
+                                a long recession. That is why the fundamental step in developing national climate
+                                policy is to provide the comprehensive scientific knowledge of potential
+                                climate-oriented ways to positively affect the economy growth and quality
+                                of people’s lives.
+
+                            </p>
+                            <p>
+                            <ul>
+                                In the Russian case study, the key policy-relevant
+                                investigations may be focused on searching the trajectories of effective decarbonisation
+                                of the country that is both in line with its national socioeconomic targets and aligned
+                                with a low-carbon world:
+                                <li>
+                                    What is the structure of the Russian energy balance, consistent with the Paris
+                                    Agreement implementation?
+                                </li>
+                                <li>
+                                    Is there a mix of decarbonisation technologies in the Russian economy that
+                                    have a neutral/positive effect on socioeconomic development?
+                                </li>
+                                <li>
+                                    What solutions can have export potential in the low-carbon world?
+                                </li>
+                                <li>
+                                    What decarbonisation measures can rely heavily on their own production potential?
+                                </li>
+                                <li>
+                                    What is the impact of emissions mitigation on the price dynamics in Russia?
+                                </li>
+                            </ul>
+                            <ul>
+                                Key policy measures that can be implemented in CONTO:
+                                <li>
+                                    Stimulating the modernisation of production capacities and, consequently,
+                                    their fuel efficiency (accelerated investments through adjusting business income);
+                                </li>
+                                <li>
+                                    Subsidies on particular technologies (through adjusting their costs);
+                                </li>
+                                <li>
+                                    State investment programs in the field of renewable energy, including related
+                                    production industries;
+                                </li>
+                                <li>
+                                    CO<sub>2</sub> emissions constraint, carbon tax implementation.
+                                </li>
+                            </ul>
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_implications_sdgs" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                            <p>
+                                As a national-level model, CONTO is able to assess the qualitative direction of
+                                Russia's movement in the field of the sustainable development goals, as
+                                detailed in the following table.
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:40%">SDGs</th>
+                                        <th style="width:60%">Details</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>§1. No Poverty</td>
+                                        <td>Level of average income, employment rate</td>
+                                    </tr>
+                                    <tr>
+                                        <td>§3. Health</td>
+                                        <td>Sufficiency of government financing for health care
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§4. Quality education</td>
+                                        <td>Sufficiency of government financing for education</td>
+                                    </tr>
+                                    <tr>
+                                        <td>§7. Affordable and clean energy</td>
+                                        <td>Share of low-carbon energy, affordability in terms of price/income
+                                            ratio
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Capability of the CONTO model to assess other SDGs</caption>
+                                </table>
+                            </div>
+
+                            <p>In the case of Russia, these goals may contradict each other,
+                                since they will compete for limited financial resources. Therefore,
+                                it is possible to evaluate elasticities with which the achievement of one
+                                goal can affect the performance of others.</p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_recent_publications" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent publications using the CONTO model</h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:25%">Paper</th>
+                                        <th style="width:25%">Topic</th>
+                                        <th style="width:50%">Key findings</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Shirov and Kolpakov (2019)</td>
+                                        <td>Macroeconomic impact of the energy technologies changes in Russia:
+                                            Input-Output approach
+                                        </td>
+                                        <td>Under IPCC’s global warming of 1.5 ºC scenario, the Russian economy
+                                            may lose 0.5 percent points of annual growth. The spread of low-carbon
+                                            technologies is not economically effective yet. Dependence on imports
+                                            is a crucial constraint.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shirov et al. (2018)</td>
+                                        <td>Macroeconomic impacts of the nuclear energy development (methodology
+                                            and practical assessment)
+                                        </td>
+                                        <td>Nuclear energy is one of the possible low-carbon solutions. It is
+                                            rather competitive in Russia. It creates significant inter-industry
+                                            interactions including at the inter-country level.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shirov and Kolpakov (2017)</td>
+                                        <td>Input-Output approach as an instrument for estimating potential
+                                            national ecological targets
+                                        </td>
+                                        <td>Having implemented the Paris goals, the Russian economy is able to
+                                            grow by only 2% which is not enough for solving accumulated structural
+                                            problems. Initial steps aiming for the modernisation of the Russian
+                                            economy are needed.
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Kolpakov et al. (2017)</td>
+                                        <td>Modernisation of industry and high-tech development in the context of
+                                            “green” growth
+                                        </td>
+                                        <td>The international experience in the development of the green economy
+                                            is analysed. Common practice shows that green growth is associated
+                                            with rising prices, accelerating GDP and higher employment. The
+                                            forced creation of new high-tech industries contributes to economic
+                                            diversification.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shirov et al. (2014)</td>
+                                        <td>Input-output macroeconomic model as the core of complex forecasting
+                                            calculations
+                                        </td>
+                                        <td>This paper considers the basic approaches to formation of the
+                                            up-to-date I/O forecast-analytical tools. It provides a description
+                                            of key functional relationships in the I/O macroeconomic CONTO model.
+                                            The paper defines the role of the I/O model in the system of
+                                            forecasting calculations used at the Institute of Economic
+                                            Forecasting Russian Academy of Sciences.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="conto_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Shirov, A., & Kolpakov, A. (2019). Macroeconomic impact of the energy
+                                technologies changes in Russia: Input-Output approach. Paper for 27th
+                                IIOA Conference, 2019.
+                            </p>
+                            <p>Chernyakhovskaya Yu.V., Shirov A.A., Kolpakov A.Yu., Polzikov D.A., Frolov I.E.,
+                                Yantovsky A.A., Sidorenko V.N., Tishchenko E.B., Tishchenko S.A., & Morozova I.M.
+                                (2018). Macroeconomic impacts of the nuclear energy development (methodology
+                                and practical assessment). Scientific report. Moscow, International Relations
+                                Publ. 70 p. (In Russian).</p>
+                            <p>Shirov, A., & Kolpakov, A. (2017). Input-Output approach as an instrument for
+                                estimation of potential national ecological targets. Paper for 25th IIOA Conference,
+                                2017.</p>
+                            <p>Porfiryev, B.N., Borisov, V.N., Budanov, I.A., Vladimirova, I.L., Dmitriev, A.N.,
+                                Eliseev, D.O., Kolpakov, A.Yu., Kopylov, A.E., Kuvalin, D.B., Lavrinenko, P.A.,
+                                Naumova, Yu.V., Semikashev, V.V., Sinyak, Yu.V., Suvorov, N.V., Terentyev, N.E. &
+                                Yankov. K.V. (2017). Modernization of industry and high-tech development in the
+                                context of “green” growth. Monograph / Ed. by Acad. RAS B.N. Porfiryev. Moscow.
+                                Scientific Consultant Publ. 2017. 434 p. (In Russian).</p>
+                            <p>Shirov A.A., & Yantovsky A.A. (2014). Input-output macroeconomic model as the core
+                                of complex forecasting calculations. Studies on Russian Economic Development. 25(3).
+                                225-234.</p>
+                        </section>
+                    </div>
+
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+</body>
+
+</html>
+
+

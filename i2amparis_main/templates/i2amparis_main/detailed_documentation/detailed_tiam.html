@@ -1,0 +1,1370 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+                {#                                  TIAM#}
+                        <div id="collapse_tiam">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#tiam_short_overview">Short Overview</a>
+                                </li>
+                                <li>
+                                <div class="panel-group tiam_key_features">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_tiam_key_features"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Key features of the TIAM model
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_tiam_key_features"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Geographic coverage</span>
+                                                    <a style="display: none"
+                                                       href="#tiam_geographic_coverage">
+                                                        Geographic coverage</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Energy system detail</span>
+                                                    <a style="display: none"
+                                                       href="#tiam_energy_system_detail">
+                                                        Energy system detail</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Multi-year time periods</span>
+                                                    <a style="display: none"
+                                                       href="#tiam_multi_year_time_periods">
+                                                        Multi-year time periods</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Intra-year time periods (time slices)</span>
+                                                    <a style="display: none"
+                                                       href="#tiam_intra_year">
+                                                        Intra-year time periods (time slices)</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+
+                                 <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#tiam_climate_emissions">Climate module & emissions granularity</a>
+                                </li>
+                                <li>
+                                <div class="panel-group tiam_socioeco_menu">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_tiam_socioeco_menu"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Socioeconomic dimensions
+
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_tiam_socioeco_menu"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                                              <li class="list-group-item">
+                                    <span>Introduction</span>
+                                    <a style="display: none"
+                                       href="#tiam_socioeconomic">Introduction</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic growth</span>
+                                    <a style="display: none"
+                                       href="#tiam_econ_growth">Economic growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Population growth</span>
+                                    <a style="display: none"
+                                       href="#tiam_population_growth">Population growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Sectoral growth</span>
+                                    <a style="display: none"
+                                       href="#tiam_sectoral_growth">Sectoral growth</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Energy demand drivers</span>
+                                    <a style="display: none"
+                                       href="#tiam_energy_demand_drivers">Energy demand drivers</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Energy demand elasticities</span>
+                                    <a style="display: none"
+                                       href="#tiam_energy_demand_elasticities">Energy demand elasticities</a>
+                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Calibration of the model</span>
+                                    <a style="display: none"
+                                       href="#tiam_calibration">Calibration of the model</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#tiam_mitigation_adaptation">Mitigation/adaptation measures and
+                                        technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#tiam_economic_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#tiam_key_parameters">Key parameters</a>
+                                </li>
+                                <li>
+                                <div class="panel-group tiam_policy_sdg">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_tiam_policy_sdg"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_tiam_policy_sdg"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#tiam_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#tiam_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#tiam_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+                    <div class="row">
+                        <h1 style="padding-bottom: 1em; padding-top: 1em">The TIMES Integrated Assessment Model
+                            (TIAM)</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_short_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Short overview </h2>
+                            <p>
+                                TIMES is a modelling platform for local, national or multi-regional energy systems,
+                                which provides a technology-rich basis for estimating how energy system operations
+                                will evolve over a long-term, multiple-period time horizon (Loulou and Labriet,
+                                2007). These energy system operations include the extraction of primary energy
+                                such as fossil fuels, the conversion of this primary energy into useful forms
+                                (such as electricity, hydrogen, solid heating fuels and liquid transport fuels),
+                                and the use of these fuels in a range of energy service applications (vehicular
+                                transport, building heating and cooling, and the powering of industrial
+                                manufacturing plants). In multi-region versions of the model, fuel trading between
+                                regions is also estimated. The TIMES framework is usually applied to the analysis
+                                of the entire energy sector, but may also be applied to the detailed study of
+                                single sectors (e.g. the electricity and district heat sector). The framework can
+                                also be used to simulate the mitigation of non-CO<sub>2</sub> greenhouse gases,
+                                including
+                                methane (CH<sub>4</sub>) and nitrous oxide (N<sub>2</sub>O).
+
+                            </p>
+                            <p>
+                                The TIMES Integrate Assessment Model, TIAM, is the multi-region, global version of
+                                TIMES, which combines an energy system representation of fifteen different regions
+                                with options to mitigate non-CO2 greenhouse gases as well as non-energy CO<sub>2</sub>
+                                mitigation
+                                options, such as afforestation in each of these regions. It uses emissions from these
+                                sources to calculate temperature changes using a simple climate module. As such, it
+                                can be used to explore a variety of questions on how to mitigate climate change
+                                through energy system and transformations, as well as reductions in non-energy
+                                CO<sub>2</sub> emissions and non-CO<sub>2</sub> emissions.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Key features of the TIAM model</h2>
+                            <span id="tiam_geographic_coverage" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                            <p>
+                                The TIAM model covers the entire globe, via fifteen regions, as shown in the following table:
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:10%">Region ID</th>
+                                        <th style="width:30%">Geographic region</th>
+                                        <th style="width:60%">Countries</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>AFR</td>
+                                        <td>Africa</td>
+                                        <td>Algeria, Angola, Benin, Botswana, Cameroon, Congo, Democratic
+                                            Republic of Congo, Côte d’Ivoire, Egypt, Eritrea, Ethiopia,
+                                            Gabon, Ghana, Kenya, Libya, Morocco, Mozambique, Namibia,
+                                            Nigeria, Senegal, South Africa, Sudan, United Republic of
+                                            Tanzania, Togo, Tunisia, Zambia, Zimbabwe, and Other Africa
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>AUS</td>
+                                        <td>Oceania</td>
+                                        <td>Australia, New Zealand, Oceania</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CAN</td>
+                                        <td>Canada</td>
+                                        <td>Canada</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CHI</td>
+                                        <td>China</td>
+                                        <td>China</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CSA</td>
+                                        <td>Central & South America</td>
+                                        <td>Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba,
+                                            Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti,
+                                            Honduras, Jamaica, Netherlands Antilles, Nicaragua, Panama,
+                                            Paraguay, Peru, Trinidad and Tobago, Uruguay, Venezuela and
+                                            Other Latin America
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>EEU</td>
+                                        <td>Eastern Europe</td>
+                                        <td>Albania, Bosnia-Herzegovina, Bulgaria, Croatia, Czech Republic,
+                                            Hungary, Macedonia, Poland, Romania, Serbia and Montenegro, Slovenia,
+                                            Slovakia
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>IND</td>
+                                        <td>India</td>
+                                        <td>India</td>
+                                    </tr>
+                                    <tr>
+                                        <td>JPN</td>
+                                        <td>Japan</td>
+                                        <td>Japan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MEA</td>
+                                        <td>Middle East</td>
+                                        <td>Bahrain, Islamic Republic of Iran, Iraq, Israel, Jordan, Kuwait,
+                                            Lebanon, Oman, Qatar, Saudi Arabia, Syria, United Arab Emirates,
+                                            Yemen, and Turkey, Cyprus
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MEX</td>
+                                        <td>Mexico</td>
+                                        <td>Mexico</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FSU</td>
+                                        <td>Russia and Central Asia</td>
+                                        <td>Armenia, Azerbaijan, Belarus, Estonia, Georgia, Kazakhstan, Kyrgyzstan,
+                                            Latvia, Lithuania, Moldova, Tajikistan, Turkmenistan, Ukraine,
+                                            Uzbekistan, Russian Federation
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>RKO</td>
+                                        <td>Republic of Korea</td>
+                                        <td>Republic of Korea</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SSEA</td>
+                                        <td>(Other) South and Southeast Asia</td>
+                                        <td>Bangladesh, Brunei Darussalam, Cambodia, Taiwan (China), Indonesia,
+                                            DPR of Korea, Malaysia, Mongolia, Myanmar, Nepal, Pakistan, Philippines,
+                                            Singapore, Sri Lanka, Thailand, Vietnam and Other Asia
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>USA</td>
+                                        <td>US</td>
+                                        <td>US</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WEU</td>
+                                        <td>Western Europe</td>
+                                        <td>Austria, Belgium, Cyprus, Denmark, Finland, France, Germany, Greece,
+                                            Iceland, Ireland, Italy, Luxembourg, Malta, Norway, Portugal, Spain,
+                                            Sweden, Switzerland, The Netherlands, UK
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Regional representation and countries included in each
+                                        region in TIAM
+                                    </caption>
+
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_energy_system_detail" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy system detail</h4>
+                            <p>
+                                TIAM is a technology-rich model; based on the TIMES energy system modelling
+                                framework, TIAM features a detailed representation of services and technologies
+                                in the energy sector (see the figure below).
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_multi_year_time_periods" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Multi-year time periods</h4>
+                            <p>
+                                The time horizon over which TIAM simulates the evolution of the energy system is
+                                divided into a user-chosen number of time-periods. In the TIAM version to be used
+                                in PARIS REINFORCE, a starting period of 2005 is selected, with further periods
+                                including 2006-7, 2008-2015 (called 2012), and then ten-year periods of 2016-2025
+                                (2020), 2026-2035 (2030), and so on, until 2096-2105 (2100). All years in a given
+                                period are considered to be identical. For all quantities such as installed
+                                technology levels, power plant capacities and energy and emission flows, any annual
+                                input quantity (e.g. coal used in a power plant per year) or output quantity (e.g.
+                                electricity generated from the coal plant per year) related to a given time period
+                                applies identically to each year in that period.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_intra_year" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Intra-year time periods (time slices)</h4>
+                            <p>
+                                In addition to the multi-year time periods described above, in TIAM there are time
+                                divisions within a year, called “time slices”, which may be deﬁned by the user, so
+                                as to capture different weather and energy demand conditions at different times of
+                                the year. Currently, there are six time-slices, representing summer daytime, summer
+                                night time, winter daytime, winter night time, and “transition season” day time and
+                                night time. Time slices are especially important whenever the mode and cost of
+                                production of an energy carrier at different times of the year are signiﬁcantly
+                                different (Loulou and Labriet, 2007). For instance, when the demand for electricity
+                                ﬂuctuates across the year and a variety of technologies may be chosen for its
+                                production at given times of the year (such as wind power when wind resources are
+                                high, and solar photovoltaics when there is a high availability of solar radiation).
+                                In such cases, the matching of supply and demand requires that the activities of the
+                                technologies producing and consuming the electricity be tracked—and matched—in each
+                                time slice.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/tiam_energy_system_per_region.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of the TIAM energy system
+                                        for each region
+                                    </p>
+                                    <p>Source: Authors, based on Loulou and Labriet (2007)</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_climate_emissions" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                            <p>
+                                The climate module in TIAM uses emissions that are calculated within the model, as a
+                                result of the energy system’s operations, as well as any mitigation of non-energy
+                                CO<sub>2</sub> and non-CO<sub>2</sub> gases. The model tracks the three main sources
+                                of greenhouse gases - carbon dioxide (CO<sub>2</sub>), methane (CH<sub>4</sub>) and
+                                nitrous oxide (N<sub>2</sub>O). TIAM’s climate module calculates changes in the
+                                atmospheric concentration of CO<sub>2</sub>, CH<sub>4</sub> and N<sub>2</sub>O,
+                                and as a consequence the change in atmospheric radiative forcing (which leads to
+                                global warming) compared to pre-industrial times, and finally the temperature change
+                                over pre-industrial times for the atmosphere and the deep ocean. The figure below gives a
+                                graphical overview of the module‘s structure.
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/tiam_climate_module.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Logic of TIAM climate module
+                                    </p>
+                                    <p>Source:<a href="https://iea-etsap.org/TIAM_f/TIAM%20description_slides.pdf">
+                                        https://iea-etsap.org/TIAM_f/TIAM%20description_slides.pdf</a></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_socioeconomic" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Socioeconomic dimensions </h2>
+                            <p>
+                                The TIAM model requires inputs concerning the degree to which energy demand, as
+                                well as demand for other goods and services which result in GHG emissions (such as
+                                agricultural demand) will grow over the course of the 21st century. This is achieved
+                                by using various socioeconomic inputs, as described in this section.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_econ_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Economic growth</h4>
+                            <p>
+                                Economic growth is based on the Shared Socioeconomic Pathways variant 2 (SSP2),
+                                sometimes called the “middle-of-the-road” scenario as it generally follows recent
+                                past trends in demographic, social, economic and lifestyle developments (Fricko et
+                                al., 2017). TIAM specifically uses the OECD projections for SSP2. This results in a
+                                growth in world Gross Domestic Product to $540 trn in 2005$ Purchasing Power Parity
+                                terms, by 2100, compared to $100 trn in 2020 (Dellink et al., 2017).
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_population_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Population growth</h4>
+                            <p>
+                                Population growth is also based on SSP2, with global population growing to around 9
+                                billion by 2050 peaking at 9.5 billion in 2060 and dropping back to 9 billion by
+                                2100 (KC and Lutz, 2017). The figure below shows the global population and GDP development
+                                paths in SSP2.
+                            </p>
+                            <div class="wrapper_images" style="text-align:center">
+                            <div style="width:50%; float: left ">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/tiam_gsp_projections_left.png" %}">
+                                <!--<div style="text-align: center">-->
+                                    <!--<p style="text-align: center">Figure 9: Population and GSP projections for SSP2-->
+                                        <!--in TIAM-->
+                                    <!--</p>-->
+                                    <!--<p>Source:<a href="https://tntcat.iiasa.ac.at/SspDb">-->
+                                        <!--https://tntcat.iiasa.ac.at/SspDb</a></p>-->
+                                <!--</div>-->
+                            </div>
+                            <div style="width:50%; float:right">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/tiam_gsp_projections_right.png" %}">
+                                <!--<div style="text-align: center">-->
+                                    <!--<p style="text-align: center">Figure 9: Population and GSP projections for SSP2-->
+                                        <!--in TIAM-->
+                                    <!--</p>-->
+                                    <!--<p>Source:<a href="https://tntcat.iiasa.ac.at/SspDb">-->
+                                        <!--https://tntcat.iiasa.ac.at/SspDb</a></p>-->
+                                <!--</div>-->
+
+
+                            </div>
+                                    <p>Population and GSP projections for SSP2 in TIAM</p>
+                                <p> Source:<a href="https://tntcat.iiasa.ac.at/SspDb">
+                                        https://tntcat.iiasa.ac.at/SspDb</a></p>
+                            </div>
+                            <p>It should be noted that TIAM can be adjusted to use other socioeconomic growth
+                                projections apart from SSP2.</p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_sectoral_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Sectoral growth</h4>
+                            <p>
+                                The growth in the industrial, agricultural and retail business sectors in each region
+                                is derived from the region’s overall GDP growth, with each sector’s share of total
+                                GDP changing over time. These shares are derived from a historical analysis of how
+                                all countries’ sectoral shares of output have changed as their overall output grew.
+                                Growth of residential households is derived from population growth and assumptions
+                                on average household size in each region.
+                            </p>
+                            <p>
+                                Growth in each of these sectors drives energy demand as described in the next
+                                sub-section.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_energy_demand_drivers" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy demand drivers</h4>
+                            <p>
+                                The economic, population and sectoral growths are used to determine specific drivers
+                                for the growth in energy demands in a “reference” scenario where no climate change
+                                mitigation takes place. For example, the demand for the number of billion
+                                kilometer-vehicles (bvkm) travelled by automobiles is based on GDP per capita,
+                                whereas the growth in the demand for residential space heating is driven by the
+                                number of households.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_energy_demand_elasticities" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy demand elasticities</h4>
+                            <p>
+                                Once the drivers for the different energy demands represented by
+                                TIAM are determined and quantified, the construction of the reference demand
+                                scenario requires computing a set of energy service demands over the horizon.
+                                This is done by choosing elasticities of demands to their respective drivers,
+                                in each region, using the following general formula:
+                            </p>
+                            <p>
+                                Demand = Driver <sup>Elasticity</sup>
+                            </p>
+                            <p>
+                                So, for example, the number of billion vehicle km travelled by automobiles,
+                                bvkm, grows by a factor which is the growth in the GDP per capita in a region
+                                to the power of a pre-defined elasticity:
+                            </p>
+                            <p>
+                                bvkm = (GDP/capita)<sup>Elasticity</sup>
+                            </p>
+                            <p>
+                                In most cases, the elasticities (which vary over time) are less than 1, and decrease
+                                over time. For example, an elasticity of 0.8 means that a 10% increase in the growth
+                                of GDP per capita in a region would result in an 8% increase in billions of vehicle
+                                kilometres driven. Over time this could reduce to a much smaller elasticity,
+                                reflecting empirical evidence that demand for energy services such as automobile
+                                transport ultimately saturates with rising incomes.
+                            </p>
+                            <p>
+                                TIAM has the capability of estimating the price-based response of these energy
+                                service demands to the changing conditions of scenarios in which mitigation occurs.
+                                For example, if the cost of energy increases as fossil fuels are replaced by
+                                renewables, then the demand for energy services would decrease. To do this, TIAM uses
+                                another set of inputs, namely the price elasticities of the demands for each energy
+                                service considered. TIAM can then calculate the new demands for these mitigation
+                                cases.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_calibration" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Calibration of the model</h2>
+                            <p>
+                                The TIAM model is calibrated for the initial period (currently 2005) using IEA world
+                                energy
+                                statistics for the year 2005, with the projections for energy, installed technology
+                                capacity
+                                and emissions further calibrated to 2012. This is currently being updated, and the
+                                current
+                                intention is that, if this update is complete in sufficient time, the version of TIAM to
+                                be
+                                used in Paris Reinforce will have a full IEA energy statistics-based calibration to the
+                                year
+                                2015. The main variables to be calibrated are: the capacities and operating levels of
+                                all technologies, the extracted, exported, imported, produced, and consumed quantities
+                                for all energy carriers, and the emissions if modelled.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_mitigation_adaptation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>
+                                TIAM is a technology-rich model that represents most major fossil fuel and low-carbon
+                                technologies that are envisaged to be available for at least the first half of the
+                                21st century. By simulating the substitution of low-carbon for high-carbon
+                                technologies in response to their relative costs, as well as emissions constraints
+                                and/or carbon prices, the TIAM model simulates mitigation. The principal energy
+                                sector CO2 mitigation technology options are as shown in the following table:
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2" style="width:100%">Upstream</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><b>Synthetic fuel production</b></td>
+                                        <td><b>Hydrogen production</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas to liquids</li>
+                                                <li >Coal to liquids with CCS</li>
+                                                <li >Biomass to liquids (with and
+                                                    without CCS)
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electrolysis</li>
+                                                <li>Coal to hydrogen with CCS</li>
+                                                <li>Gas to hydrogen with CCS</li>
+                                                <li>Biomass to hydrogen with CCS</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Electricity and heat</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Electricity generation</b></td>
+                                        <td><b>Heat generation</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Coal with CCS</li>
+                                                <li>Gas with CCS</li>
+                                                <li>Nuclear (fission and fusion)</li>
+                                                <li>Hydro</li>
+                                                <li>Biomass (with and without CCS)</li>
+                                                <li>Geothermal</li>
+                                                <li>Solar PV</li>
+                                                <li>Solar CSP</li>
+                                                <li>Wind (onshore and offshore)</li>
+                                                <li>Marine</li>
+                                            </ul>
+                                        </td>
+                                        <td><p >Biomass </p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Transport</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Road</b></td>
+                                        <td><b>Rail</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas (LNG / CNG) vehicles</li>
+                                                <li>Hybrid electric vehicles</li>
+                                                <li>Fully electric vehicles</li>
+                                                <li>Hydrogen fuel cell vehicles</li>
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Electric</li>
+                                                <li>Hydrogen</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Air</b></td>
+                                        <td><b>Marine</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Biofuels in fuel mix</li>
+                                                <li>Hydrogen planes</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas</li>
+                                                <li>Hydrogen</li>
+                                                <li>Biofuels</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Buildings</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Heating </b></td>
+                                        <td><b>Lighting</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul style="list-style-type:none;">
+                                                <li>Gas replacing coal / oil</li>
+                                                <li>Biofuels</li>
+                                                <li>Electricity</li>
+                                                <li>Hydrogen</li>
+                                                <li>Efficiency</li>
+                                            </ul>
+                                        </td>
+                                        <td>Efficiency</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Appliances</b></td>
+                                        <td><b>Cooling</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Efficiency
+                                        </td>
+                                        <td>
+                                            Electricity<br>
+                                            Efficiency
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Industry</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Process heat</b></td>
+                                        <td><b>Machine drives</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Gas replacing oil / coal<br>
+                                            Biomass<br>
+                                            Hydrogen <br>
+                                            Electricity
+                                        </td>
+                                        <td>
+                                            Gas replacing oil / coal<br>
+                                            Electricity
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Steam</b></td>
+                                        <td><b>CHP</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Gas replacing oil / coal<br>
+                                            Electricity
+                                        </td>
+                                        <td>
+                                            Gas replacing oil / coal<br>
+                                            Biomass
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>CCS</b></td>
+                                        <td><b>Other</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            CCS in iron and steel<br>
+                                            CCS in cement<br>
+                                            CCS in chemicals
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p align="left"><b>Agriculture</b></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Energy</b></td>
+                                        <td><b>Other</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Biomass<br>
+                                            Electricity
+                                        </td>
+                                        <td></td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Main CO2 energy system mitigation options in TIAM</caption>
+                                </table>
+                            </div>
+                            <p>
+                            <ul>
+                                TIAM also contains a range of non-energy CO2 and non-CO2 mitigation options, albeit
+                                in a relatively simplified form. For non-energy CO2, the key option is afforestation.
+                                For methane (CH4), these options are:
+                                <li>Farm scale digesters for manure.</li>
+                                <li>Anaerobic digestion, composting, heat production, electricity generation and
+                                    flaring from landfill methane.
+                                </li>
+                                <li>Minimisation of methane leaks from fossil fuel extraction and distribution,
+                                    and/or flaring of methane to (lower global warming potential) carbon dioxide gas.
+                                </li>
+                            </ul>
+
+                            </p>
+                            <p>
+                            <ul>
+                                For nitrous oxide (N2O) these options are:
+                                <li>Thermal destruction of gas from adipic acid production</li>
+                                <li>
+                                    Catalytic reduction of gas from nitric acid production
+                                </li>
+                            </ul>
+
+                            </p>
+                            <p>
+                                In addition to the above mitigation options, the TIAM model has recently
+                                been developed to simulate the deployment and operation of a range of advanced
+                                technologies, including Direct Air Capture for CO2 removal and sequestration
+                                (Realmonte et al., 2019) and even hyper-loop terrestrial high speed transport to
+                                substitute for some domestic aviation trips (Napp et al., 2019). In principle many
+                                other energy technologies could be simulated in the model.
+                            </p>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_economic_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>
+                                TIAM simultaneously calculates the quantity of production and consumption of the
+                                different “commodities” accounted for in the model. These commodities are the
+                                different energy forms, the different quantities of deployed technologies, and the
+                                different quantities of energy services. The price of producing a commodity affects
+                                the demand for that commodity, while at the same time the demand affects the
+                                commodity’s price. TIAM operates in a market-clearing manner, such that prices of
+                                commodities are consistent with the supply and demand being in balance for all
+                                commodities.
+                            </p>
+
+
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/tiam_commodity_supply_demand.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Basic rationale of TIAM equilibrium for
+                                        commodity supply and demand balance
+                                    </p>
+                                    <p>Source:<a href="https://iea-etsap.org/TIAM_f/TIAM%20description_slides.pdf">
+                                        https://iea-etsap.org/TIAM_f/TIAM%20description_slides.pdf</a></p>
+                                </div>
+
+                            </div>
+                            <p>TIAM most commonly operates on a perfect foresight principle, such that it has
+                                knowledge of all current and future technology costs and fuel supply curves. This
+                                allows it to reach a cost-minimising level of commodity production and consumption,
+                                which is consistent with meeting all current and future energy demands, as well as
+                                any imposed emissions constraints. The total energy system cost (including any losses
+                                to consumers’ welfare as a result of energy price rises) is calculated as a Net Present
+                                Value (NPV) cost of the energy system over the whole time period until 2100. A
+                                “discount” factor of 5% per year is used to value the costs of the energy system at
+                                different time points in the future. In other words, a cost of $100 one year in the
+                                future would be equated to a cost of $95 today. This discount factor can be changed.
+                                 </p>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_key_parameters" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key parameters </h2>
+                            <p>
+                                TIAM is a technology-rich tool where techno-economic information is assigned to
+                                each process (existing and future) of the system, and therefore many data/parameter
+                                values can be extracted and reported.
+                            </p>
+                            <p>
+                            <ul>
+                                Key parameters to monitor, discuss and evaluate in the framework of the PARIS REINFORCE
+                                project are likely to be:
+                                <li>
+                                    Fossil fuel availability and cost (i.e. supply curves) and expected production
+                                    rates.
+                                </li>
+                                <li>
+                                    Technology availability and costs.
+                                </li>
+                                <li>
+                                    Information about under construction/planned/possible energy technologies.
+                                </li>
+                                <li>
+                                    Regional emissions reduction goals.
+                                </li>
+                                <li>
+                                    Energy efficiency improvements costs/limits (from the supply side to the demand
+                                    side).
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                Parameters can be revised and updated in the framework of the
+                                PARIS REINFORCE project, following the feedback of experts (stakeholder engagement),
+                                the comparative assessment with other modelling experiences, and the discussion with
+                                the partners (modellers).
+                            </p>
+
+
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="tiam_key_policies" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>
+                            <ul>
+                                TIAM predominantly works by specifying either a carbon price (imposed as a tax) or a
+                                carbon emissions constraint in each region that it represents, or alternatively all
+                                regions simultaneously. For example, the following further policies can be implemented:
+                                <li>
+                                    Minimum / maximum capacity factors on fossil fuel power generation plants
+                                    (e.g. to simulate minimum or maximum desired levels of operation);
+                                </li>
+                                <li>
+                                    Subsidies on particular technologies (through adjusting their costs);
+                                </li>
+                                <li>
+                                    Constraints on the availability of particular technologies (e.g. “no nuclear”,
+                                    variable renewables accounting for no more than 50% of electricity generation);
+                                </li>
+                                <li>
+                                    Constraints on the growth rates of particular technologies (e.g. carbon capture
+                                    and storage power generation capacity cannot grow at more than 20% per year)
+                                </li>
+                                <li>
+                                    Inter-regional emissions trading (or no trading);
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                            <ul>
+                                This allows TIAM to perform a number of policy-relevant investigations, such as:
+                                <li>
+                                    What are the energy system cost and energy technology and fuel mix implications
+                                    of imposing emissions or climate constraints earlier or later in the century, in
+                                    different regions at different times and to different levels of stringency?
+                                    <ul style="list-style-type:circle;">
+                                        <li>
+                                            For example, Gambhir et al. (2017) explored the cost implications of
+                                            introducing delays to mitigation from 2020 to 2030, using the TIAM model
+                                            and two other integrated assessment models.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    How are the above implications affected with and without emissions permit trading?
+                                    <ul style="list-style-type:circle;">
+                                        <li>
+                                            For example, Gambhir et al. (2014) examined the cost and energy system
+                                            transformation implications of India meeting a regional emissions reduction
+                                            target by 2050, with and without international carbon permit trading, whilst
+                                            Few et al. (2017) considered mitigation costs and feasibility with different
+                                            shale gas cost and availability assumptions.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    How are the above implications affected with different input assumptions on
+                                    socioeconomic growth, technological availability, technology costs, fossil fuel
+                                    costs and availability?
+                                    <ul style="list-style-type:circle;">
+                                        <li>
+                                            For example, Gambhir et al. (2017) examined the mitigation costs of
+                                            achieving a 2oC climate target with delayed introduction of carbon
+                                            capture and storage so that it wasn’t available before 2050, whilst
+                                            Realmonte et al. (2019) undertook a deep-dive into the energy system
+                                            implications of using direct air capture technologies.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    How are the above implications affected by imposed policies such as power plant
+                                    capacity factor constraints?
+                                    <ul style="list-style-type:circle;">
+                                        <li>
+                                            For example, Napp et al. (2017) considered the feasibility of meeting a
+                                            2oC climate target on the assumption that coal plants would need to be
+                                            kept running at considerable capacity factors for some years to come.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                            </p>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:50%">SDG</th>
+                                        <th style="width:50%">Details</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>§3. Health (e.g., air-pollution related mortality)</td>
+                                        <td>The use of solid fuels in buildings can form the basis of local air
+                                            pollution calculations.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§7. Affordable and clean energy</td>
+                                        <td>Cost-effectiveness and availability of low-carbon energy is a central
+                                            set of TIAM outputs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>§8. Decent work & economic growth</td>
+                                        <td>TIAM reports energy system costs under different scenarios, often
+                                            expressed as a share of GDP, giving a measure of economic losses due
+                                            to mitigation. Note, this does not account for economic gains due to
+                                            mitigation that result from lower temperature changes.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> S9: Industry, innovation and infrastructure
+                                        </td>
+                                        <td>Quantifies low-carbon energy technology deployments, investments and energy
+                                            system costs.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>§15: Life on land</td>
+                                        <td>Afforestation measures can be taken into account;
+                                            RES potential/exploitation and investment decisions (e.g. energy
+                                            infrastructures) can be subject to land-specific constraints
+                                            (natural and regulatory).
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>Capacity of the TIAM model to address non-climate
+                                        SDGs
+                                    </caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_recent_use_cases" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Recent use cases</h2>
+                            <div class="my_table table-responsive">
+
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">SDG</th>
+                                        <th style="width:35%">Topic</th>
+                                        <th style="width:45%">Key findings
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Realmonte et al. (2019)</td>
+                                        <td>An investigation of the role of Direct Air Capture (DAC) in
+                                            meeting global 1.5oC and 2oC pathways
+                                        </td>
+                                        <td>DAC can reduce the policy costs of mitigation in the near-term,
+                                            but there are many uncertainties about its scale-up potential and,
+                                            if we ease mitigation efforts and rely on DAC, even if it does not
+                                            deliver large-scale removals, we will overshoot the Paris climate goals.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Napp et al. (2019)</td>
+                                        <td>Analysis of deep mitigation pathways with advanced mitigation
+                                            technologies including hydrogen aviation, hydrogen in industrial
+                                            manufacturing, and CCS across industry, and deep demand side
+                                            reductions including modal shifts and other behaviour changes
+                                        </td>
+                                        <td>Development and deployment of a range of advanced demand-side
+                                            technologies, combined with demand-side energy savings as a
+                                            result of behaviour change, could significantly ease the pressure on
+                                            using negative emissions like bio-energy with carbon capture to meet the
+                                            Paris goals.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gambhir et al. (2017)</td>
+                                        <td>Establishing a set of metrics by which to assess the feasibility of
+                                            achieving different climate targets
+                                        </td>
+                                        <td>Using multiple metrics such as mitigation cost, carbon price, degree
+                                            of asset stranding, quantity of negative emissions required and rates
+                                            of energy efficiency improvement, it is significantly (>30%) cheaper
+                                            and much more feasible to meet a 2oC target by starting globally
+                                            coordinated mitigation action in 2020 compared to 2030.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gambhir et al. (2017)</td>
+                                        <td>Analysis coupled with a separate non-CO2 and separate climate model to
+                                            assess the contribution that non-CO2 mitigation can make to reaching
+                                            deep mitigation targets
+                                        </td>
+                                        <td>Attempting to meet any climate target without actively mitigating
+                                            non-CO2 greenhouse gases would be much more expensive than using a
+                                            multi-gas mitigation strategy.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Napp et al. (2017)</td>
+                                        <td>Analysis of the potential to meet deep mitigation targets with a
+                                            variety of growth and other constraints on technology deployment,
+                                            so that future technology transition rates do not exceed the fastest
+                                            historical rates
+                                        </td>
+                                        <td>If we cannot exceed historical patterns and rates of energy system
+                                            transformation, then we will miss the 2oC target by about 0.1oC.
+                                            Thus, we must implement policies to accelerate the transition beyond
+                                            past rates.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Few et al., (2017)</td>
+                                        <td>Analysis of the costs of meeting 2oC climate targets with different
+                                            assumptions on the cost and availability of shale gas in different
+                                            world regions.
+                                        </td>
+                                        <td>Exploitation of shale gas could make mitigation to 2oC marginally
+                                            more expensive, but could also lead to some temperature target
+                                            overshoot if fugitive methane emissions are not effectively regulated.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chiodi et al. (2016)</td>
+                                        <td>Analysis of the medium- and long-term implications of increased
+                                            development of unconventional gas and oil and their by-products on
+                                            European market
+                                        </td>
+                                        <td>Although in Europe natural gas can be considered as transition fuel
+                                            towards a low-carbon economy, the natural gas market will expand in
+                                            the future years and will contribute—replacing other more carbon
+                                            intensive fossil fuels—to the decarbonisation of energy sectors.
+                                            The EU-28 exploitation of unconventional oil will be very limited.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>List of recent publications using the TIAM model</caption>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!--Add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="tiam_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                 Fricko, O., Havlik, P., Rogelj, J., Klimont, Z., Gusti, M., Johnson, N., ...
+                                & Ermolieva, T. (2017). The marker quantification of the Shared Socioeconomic
+                                Pathway 2: A middle-of-the-road scenario for the 21st century. Global Environmental
+                                Change, 42, 251-267.
+                            </p>
+                            <p>
+                                Dellink, R., Chateau, J., Lanzi, E., & Magné, B. (2017). Long-term economic growth
+                                projections in the Shared Socioeconomic Pathways. Global Environmental Change, 42,
+                                200-214.
+                            </p>
+                            <p>
+                                Realmonte, G., Drouet, L., Gambhir, A., Glynn, J., Hawkes, A., Köberle, A. C., &
+                                Tavoni, M. (2019). An inter-model assessment of the role of direct air capture in
+                                deep mitigation pathways. Nature communications, 10(1), 3277.
+                            </p>
+                            <p>
+                                Napp, T. A., Few, S., Sood, A., Bernie, D., Hawkes, A., & Gambhir, A. (2019). The role
+                                of advanced demand-sector technologies and energy demand reduction in achieving
+                                ambitious carbon budgets. Applied energy, 238, 351-367.
+                            </p>
+                            <p>
+                                Gambhir, A., Drouet, L., McCollum, D., Napp, T., Bernie, D., Hawkes, A., ... & Lowe, J.
+                                (2017). Assessing the feasibility of global long-term mitigation scenarios.
+                                Energies, 10(1), 89.
+                            </p>
+                            <p>
+                                Gambhir, A., Napp, T. A., Emmott, C. J., & Anandarajah, G. (2014). India's CO2
+                                emissions pathways to 2050: Energy system, economic and fossil fuel impacts with and
+                                without carbon permit trading. Energy, 77, 791-801.
+                            </p>
+                            <p>
+                                Few, S., Gambhir, A., Napp, T., Hawkes, A., Mangeon, S., Bernie, D., & Lowe, J. (2017).
+                                The impact of shale gas on the cost and feasibility of meeting climate targets—a global
+                                energy system model analysis and an exploration of uncertainties. Energies, 10(2), 158.
+                            </p>
+                            <p>
+                                Chiodi, A., Gargiulo, M., Gracceva, F., De Miglio, R., Spisto, A., Costescu, A., &
+                                Giaccaria, S. (2016). Unconventional oil and gas resources in future energy markets -
+                                A modelling analysis of the economic impacts on global energy markets and implication
+                                for Europe. Publications Office of the European Union, Luxembourg. doi: 10.2790/83538.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+</body>
+
+</html>
+
+

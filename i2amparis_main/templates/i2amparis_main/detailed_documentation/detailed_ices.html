@@ -1,0 +1,1409 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+
+                {#                                  ICES#}
+                    <div id="collapse_ices">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span>Short overview</span>
+                                <a style="display: none"
+                                   href="#ices_short_overview">Short Overview</a>
+                            </li>
+                            <li>
+                            <div class="panel-group ices_key_features">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" style="padding:0px">
+                                        <h5 class="panel-title"
+                                            style="background-color:#343a40; padding: 5px">
+                                            <a data-toggle="collapse"
+                                               href="#collapse_ices_key_features"><i
+                                                    class="fa fa-caret-right rotate"
+                                                    style="margin-right: 10px;"></i>Key features of the ICES model
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse_ices_key_features"
+                                         class="panel-collapse collapse">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <span>Geographic coverage</span>
+                                                <a style="display: none"
+                                                   href="#ices_geographic_coverage">
+                                                    Geographic coverage</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span>Sectoral coverage</span>
+                                                <a style="display: none"
+                                                   href="#ices_sectoral_cover">
+                                                   Sectoral coverage</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span>Database</span>
+                                                <a style="display: none"
+                                                   href="#ices_database">
+                                                    Database</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+
+                             <li class="list-group-item">
+                                <span>Emissions granularity</span>
+                                <a style="display: none"
+                                   href="#ices_emissions_granularity">Emissions granularity</a>
+                             </li>
+                                 <li class="list-group-item">
+                                <span>Socioeconomic dimensions</span>
+                                <a style="display: none"
+                                   href="#ices_siocioecon_dim">Socioeconomic dimensions</a>
+                                 </li>
+                            <li class="list-group-item">
+                                <span>Calibration of the model</span>
+                                <a style="display: none"
+                                   href="#ices_calibration">Calibration of the model</a>
+                                 </li>
+                            <li class="list-group-item">
+                                <span>Mitigation/adaptation measures</span>
+                                <a style="display: none"
+                                   href="#ices_mitigation_adaptation">Mitigation/adaptation measures</a>
+                                 </li>
+                            <li class="list-group-item">
+                                <span>Economic rationale and model solution</span>
+                                <a style="display: none"
+                                   href="#ices_econ_rationale">Economic rationale and model solution</a>
+                                 </li>
+                            <li>
+                            <div class="panel-group ices_policy_sdgs">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" style="padding:0px">
+                                        <h5 class="panel-title"
+                                            style="background-color:#343a40; padding: 5px">
+                                            <a data-toggle="collapse"
+                                               href="#collapse_ices_policy_sdgs"><i
+                                                    class="fa fa-caret-right rotate"
+                                                    style="margin-right: 10px;"></i>Policy questions and SDGs
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse_ices_policy_sdgs"
+                                         class="panel-collapse collapse">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <span>Key policies that can be addressed</span>
+                                                <a style="display: none"
+                                                   href="#ices_key_policies">
+                                                    Key policies that can be addressed</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span>Implications for other SDGs</span>
+                                                <a style="display: none"
+                                                   href="#ices_implications_sdgs">
+                                                   Implications for other SDGs</a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Recent use cases</span>
+                                <a style="display: none"
+                                   href="#ices_recent_use_cases">Recent use cases</a>
+                            </li>
+                            <li class="list-group-item">
+                                <span>References</span>
+                                <a style="display: none"
+                                   href="#ices_references">References</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+
+                                         <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The Intertemporal Computable Equilibrium System (ICES) model</h1>
+                      </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="ices_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  ICES is a recursive-dynamic multi-regional Computable General Equilibrium (CGE) model
+                                  developed to assess impacts of climate change on the economic system and to study
+                                  mitigation and adaptation policies. The model’s general equilibrium structure allows
+                                  for the analysis of market flows within a single economy and international flows with
+                                  the rest of the world. This implies going beyond the “simple” quantification of
+                                  direct costs, to offer an economic evaluation of second and higher-order effects
+                                  within specific scenarios of climate change, climate policies and/or different trade
+                                  and public-policy reforms in the vein of conventional CGE theory. The model is linked
+                                  to the Aggregated Sustainable Development goal Index (ASDI) module that generates
+                                  scenario and policy specific projections up to 2030 (2050) of selected SDG indicators
+                                  allowing to assess the systemic implication of implementing a policy on countries’
+                                  sustainability.
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Key features of the ICES model</h2>
+                            <span id="ices_geographic_coverage" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                              <p>
+                                  The ICES model has worldwide coverage. In PARIS REINFORCE, the globe will be broken
+                                  down into 45 countries or regions (see the table below).
+                              </p>
+                              <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:3%">No.</th>
+                                          <th style="width:15%">Countries/regions</th>
+                                          <th style="width:30%">Detail</th>
+                                          <th style="width:4%"> </th>
+                                          <th style="width:3%">No.</th>
+                                          <th style="width:15%">Countries/regions</th>
+                                          <th style="width:30%">Detail</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>1</td>
+                                          <td>Australia</td>
+                                          <td>Australia, Christmas Island, Cocos (Keeling) Islands, Heard Island and
+                                              McDonald Islands, Norfolk Island</td>
+                                          <td></td>
+                                          <td>24</td>
+                                          <td>Germany</td>
+                                          <td>Germany</td>
+                                      </tr>
+                                      <tr>
+                                          <td>2</td>
+                                          <td>NewZealand</td>
+                                          <td>NewZealand</td>
+                                          <td> </td>
+                                          <td>25 </td>
+                                          <td>Greece</td>
+                                          <td>Greece</td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>3</td>
+                                          <td>Japan</td>
+                                          <td>Japan</td>
+                                          <td> </td>
+                                          <td>26</td>
+                                          <td>Italy</td>
+                                          <td>Italy</td>
+                                      </tr>
+                                      <tr>
+                                          <td>4
+                                          </td>
+                                          <td>South Korea</td>
+                                          <td>South Korea</td>
+                                          <td>
+
+                                          </td>
+                                          <td>27</td>
+                                          <td>Poland</td>
+                                          <td>Poland</td>
+                                      </tr>
+                                      <tr>
+                                          <td>5</td>
+                                          <td>Bangladesh</td>
+                                          <td>Bangladesh</td>
+                                          <td></td>
+                                          <td>28</td>
+                                          <td>Spain</td>
+                                          <td>Spain</td>
+                                      </tr>
+                                      <tr>
+                                          <td>6</td>
+                                          <td>China</td>
+                                          <td>China, Hong Kong, Taiwan</td>
+                                          <td></td>
+                                          <td>29</td>
+                                          <td>Sweden</td>
+                                          <td>Sweden</td>
+                                      </tr>
+                                      <tr>
+                                          <td>7</td>
+                                          <td>India</td>
+                                          <td>India</td>
+                                          <td></td>
+                                          <td>30</td>
+                                              <td>UK</td>
+                                              <td>UK</td>
+                                      </tr>
+                                      <tr>
+                                          <td>8</td>
+                                          <td>Indonesia</td>
+                                          <td>Indonesia</td>
+                                          <td></td>
+                                          <td>31</td>
+                                          <td>RoEU</td>
+                                          <td>Austria, Cyprus, Denmark, Estonia, Hungary, Ireland, Latvia, Lithuania,
+                                              Malta, Portugal, Slovakia, Slovenia, Bulgaria, Croatia, Romania</td>
+                                      </tr>
+                                      <tr>
+                                          <td>9</td>
+                                          <td>RoAsia</td>
+                                          <td>Mongolia, Democratic People's Republic of Korea, Macao, Cambodia, Lao PDR,
+                                              Malaysia, Philippines, Singapore, Thailand, Viet Nam, Brunei Darussalam,
+                                              Myanmar, Timor-Leste, Nepal, Pakistan, Sri Lanka, Afghanistan, Bhutan,
+                                              Maldives</td>
+                                          <td></td>
+                                          <td>32</td>
+                                          <td>RoEurope</td>
+                                          <td>
+                                              Switzerland, Norway, Svalbard and Jan Mayen Islands, Iceland,
+                                              Liechtenstein, Albania, Belarus, Ukraine, Moldova, Andorra,
+                                              Bosnia and Herzegovina, Faroe Islands, Gibraltar, Guernsey, Holy See (
+                                              Vatican City State), Isle of Man, Jersey, Republic of Macedonia, Monaco,
+                                              Montenegro, San Marino, Serbia
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>10</td>
+                                          <td>Canada</td>
+                                          <td>Canada</td>
+                                          <td></td>
+                                          <td>33</td>
+                                          <td>Russia</td>
+                                          <td>Russia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>11</td>
+                                          <td>USA</td>
+                                          <td></td>
+                                          <td>34</td>
+                                          <td>Turkey</td>
+                                          <td>Turkey</td>
+                                      </tr>
+                                      <tr>
+                                          <td>12</td>
+                                          <td>Mexico</td>
+                                          <td>Mexico</td>
+                                          <td></td>
+                                          <td>35</td>
+                                          <td>Egypt</td>
+                                          <td>Egypt</td>
+                                      </tr>
+                                      <tr>
+                                          <td>13</td>
+                                          <td>Argentina</td>
+                                          <td>Argentina</td>
+                                          <td></td>
+                                          <td>36</td>
+                                          <td>RoMENA</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>14</td>
+                                          <td>Bolivia</td>
+                                          <td>Bolivia</td>
+                                          <td></td>
+                                          <td>37</td>
+                                          <td>Ethiopia</td>
+                                          <td>Ethiopia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>15</td>
+                                          <td>Brazil</td>
+                                          <td>Brazil</td>
+                                          <td></td>
+                                          <td>38</td>
+                                          <td>Ghana</td>
+                                          <td>Ghana</td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>16</td>
+                                          <td>Chile</td>
+                                          <td>Chile</td>
+                                          <td></td>
+                                          <td>39</td>
+                                          <td>Kenya</td>
+                                          <td>Kenya</td>
+                                      </tr>
+                                      <tr>
+                                          <td>17</td>
+                                          <td>Peru</td>
+                                          <td>Peru</td>
+                                          <td></td>
+                                          <td>40</td>
+                                          <td>Mozambique</td>
+                                          <td>Mozambique</td>
+                                      </tr>
+                                      <tr>
+                                          <td>18</td>
+                                          <td>Venezuela</td>
+                                          <td>Venezuela</td>
+                                          <td></td>
+                                          <td>41</td>
+                                          <td>Nigeria</td>
+                                          <td>Nigeria</td>
+                                      </tr>
+                                      <tr>
+                                          <td>19</td>
+                                          <td>RoLACA</td>
+                                          <td>
+                                              Colombia, Ecuador, Paraguay, Uruguay, Falkland Islands (Malvinas), French
+                                              Guiana, Guyana, South Georgia and the South Sandwich Islands, Suriname,
+                                              Costa Rica, Guatemala, Honduras, Nicaragua, Panama, El Salvador, Belize,
+                                              Anguilla, Antigua and Barbuda, Aruba, Bahamas, Barbados, British Virgin
+                                              Islands, Cayman Islands, Cuba, Dominica, Dominican Republic, Grenada,
+                                              Haiti, Jamaica, Montserrat, Netherlands Antilles, Puerto Rico, Saint
+                                              Kitts and Nevis, Saint Lucia, Saint Vincent and Grenadines, Trinidad and
+                                              Tobago, Turks and Caicos Islands, Virgin Islands (US)
+                                          </td>
+                                          <td>
+
+                                          </td>
+                                          <td>42</td>
+                                          <td>Uganda</td>
+                                          <td>Uganda</td>
+                                      </tr>
+                                      <tr>
+                                          <td>20</td>
+                                          <td>Benelux</td>
+                                          <td>Belgium, Luxembourg, Netherlands</td>
+                                          <td></td>
+                                          <td>43</td>
+                                          <td>South Africa</td>
+                                          <td>South Africa</td>
+                                      </tr>
+                                      <tr>
+                                          <td>21</td>
+                                          <td>Czech Republic</td>
+                                          <td>Czech Republic</td>
+                                          <td></td>
+                                          <td>44</td>
+                                          <td>RoAfrica</td>
+                                          <td>
+                                              Cameroon, Côte d'Ivoire, Senegal, Benin, Burkina Faso, Cape Verde,
+                                              Gambia, Guinea, Guinea-Bissau, Liberia, Mali, Mauritania, Niger,
+                                              Saint Helena, Sierra Leone, Togo, Central African Republic, Chad,
+                                              Congo, Equatorial Guinea, Gabon, Sao Tome and Principe, Angola,
+                                                Democratic Republic of the Congo
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>22</td>
+                                          <td>Finland</td>
+                                          <td>Finland</td>
+                                          <td></td>
+                                          <td>45</td>
+                                          <td>RoW</td>
+                                          <td>American Samoa, Cook Islands, Fiji, French Polynesia, Guam, Kiribati,
+                                              Marshall Islands, Federated States of Micronesia, Nauru, New Caledonia,
+                                              Niue, Northern Mariana Islands, Palau, Papua New Guinea, Pitcairn, Samoa,
+                                              Solomon Islands, Tokelau, Tonga, Tuvalu, United States Minor Outlying
+                                              Islands, Vanuatu, Wallis and Futuna Islands, Bermuda, Greenland, Saint
+                                              Pierre and Miquelon, Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan,
+                                              Uzbekistan, Armenia, Azerbaijan,  Georgia, Antarctica, Bouvet Island,
+                                              British Indian Ocean Territory, French Southern Territories</td>
+                                      </tr>
+                                      <tr>
+                                          <td>23</td>
+                                          <td>France</td>
+                                          <td>France</td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                      </tr>
+
+
+
+
+                                      </tbody>
+                                      <caption>Geographic coverage of ICES</caption>
+                                  </table>
+</div>
+
+
+                          </section>
+                     </div>
+
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_sectoral_cover" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Sectoral coverage</h4>
+                              <p>
+                                  In each country, firms are grouped in 26 macro sectors that essentially comprise the economy (see the table below).
+                              </p>
+                               <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th colspan="4" style="width:100%">Sectors</th>
+
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>1</td>
+                                          <td>Agriculture</td>
+                                          <td>14</td>
+                                          <td>Hydro Electricity</td>
+                                      </tr>
+                                      <tr>
+                                          <td>2</td>
+                                          <td>Livestock</td>
+                                          <td>15</td>
+                                          <td>Nuclear Electricity</td>
+                                      </tr>
+                                      <tr>
+                                          <td>3</td>
+                                          <td>Processed Food</td>
+                                          <td>16</td>
+                                          <td>Other non-fossil Electricity</td>
+                                      </tr>
+                                      <tr>
+                                          <td>4</td>
+                                          <td>Forestry</td>
+                                          <td>17</td>
+                                          <td>Heavy Industries</td>
+                                      </tr>
+                                      <tr>
+                                          <td>5</td>
+                                          <td>Fishing</td>
+                                          <td>18</td>
+                                          <td>Light Industries</td>
+                                      </tr>
+                                      <tr>
+                                          <td>6</td>
+                                          <td>Other Mining</td>
+                                          <td>19</td>
+                                          <td>Transport</td>
+                                      </tr>
+                                      <tr>
+                                          <td>7</td>
+                                          <td>Coal</td>
+                                          <td>20</td>
+                                          <td>Water</td>
+                                      </tr>
+                                      <tr>
+                                          <td>8</td>
+                                          <td>Oil</td>
+                                          <td>21</td>
+                                          <td>R&D</td>
+                                      </tr>
+                                      <tr>
+                                          <td>9</td>
+                                          <td>Gas</td>
+                                          <td>22</td>
+                                          <td>Market Services</td>
+                                      </tr>
+                                      <tr>
+                                          <td>10</td>
+                                          <td>Oil Products</td>
+                                          <td>24</td>
+                                          <td>Health</td>
+                                      </tr>
+                                      <tr>
+                                          <td>11</td>
+                                          <td>Fossil Electricity</td>
+                                          <td>25</td>
+                                          <td>Education</td>
+                                      </tr>
+                                      <tr>
+                                          <td>12</td>
+                                          <td>Solar Electricity</td>
+                                          <td>26</td>
+                                          <td>Public Services</td>
+                                      </tr>
+                                      <tr>
+                                          <td>13</td>
+                                          <td>Wind Electricity</td>
+<td></td>
+<td></td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>ICES sectors</caption>
+                                  </table>
+</div>
+                          </section>
+                    </div>
+
+      <div class="row">
+                          <section class="section">
+                              <span id="ices_database" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Database</h4>
+                              <p>
+                                  ICES is a computable model: all the model behavioural equations are connected to the
+                                  GTAP 8 database (Narayanan, Badri, & McDougall, 2012), which collects national social
+                                  accounting matrices from all over the world and provides a snapshot of all economic
+                                  flows in the benchmark year (2007). All economic flows related to fuel-specific energy
+                                  production and consumption derive from GTAP-Power database (Peters, 2016) and are
+                                  merged to GTAP 8 database.
+                              </p>
+                              <p>
+                                  In order to perform a sustainability analysis, the GTAP database has been integrated
+                                  with international statistics in order to single out the following sectors: Research
+                                  and Development (R&D), Education, and Health. For the R&D sector, the indicator “R&D
+                                  expenditure as percentage of GDP” from the World Development Indicators - WDI (World
+                                  Bank 2016) and the “share of R&D financed by Government, Firms, Foreign Investment
+                                  and Other National” from the OECD Main Science and Technology Indicators (OECD 2016)
+                                  are used for attributing R&D to the different economic agents. A similar approach has
+                                  been used for Education and Health sectors. Data on overall expenditure on health and
+                                  education have been obtained from the WDI database (World Bank 2016).
+                              </p>
+                              <p>
+                                  The ICES database has been further extended following the model developments regarding
+                                  the public actor (Delpiazzo, Parrado, & Standardi, 2017). In addition to government
+                                  revenues and expenditures already included in GTAP 8 database, other monetary flows
+                                  have been made explicit: international transactions among governments (foreign aid
+                                  and grants) and transactions between the government and the private households (net
+                                  social transfers, interest payment on public debt to residents), flows among
+                                  governments and foreign private households (interest payment on public debt to
+                                  non-residents), and public debt.
+                              </p>
+
+                          </section>
+      </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Emissions granularity</h2>
+                              <p>
+                                  The model’s economic database is complemented with satellite databases on energy
+                                  volumes (McDougall & Aguiar, 2008), CO<sub>2</sub> and non‐CO<sub>2</sub> emissions
+                                  (Rose & Lee, 2008;
+                                  Lee, 2008), which include nitrous oxide (N<sub>2</sub>O), methane (CH<sub>4</sub>),
+                                  and three fluorinated
+                                  gases (F‐gases). Both energy volumes and emissions have an endogenous dynamic in the
+                                  models and evolve the former, according to energy sector production, and the latter,
+                                  proportionally to energy combustion processes (CO<sub>2</sub> emissions) and sectoral
+                                  and
+                                  household use of agricultural and energy commodities. GHG emissions do not include
+                                  emissions from LULUCF (Land Use, Land Use Change and Forestry). The median trend of
+                                  GHG emissions across IAM scenarios (IIASA database) is targeted given the pattern of
+                                  energy prices and adjusting sector-specific efficiency in energy use.
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_siocioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions</h2>
+                              <p>
+                                  The model is largely driven by the set of possible futures envisioned by the climate
+                                  change community and known as Shared Socioeconomic Pathways (SSPs) (O’Neill, et al.,
+                                  2017). These are five possible futures with different mitigation/adaptation challenges
+                                  and are characterised by different evolutions of main socioeconomic variables. SSPs
+                                  can be linked to Representative Concentration Pathways (RCPs) that envision the GHG
+                                  emission evolution and forcing and temperature rise due to specific patterns of
+                                  socioeconomic growth (Riahi, et al., 2017).
+                              </p>
+                              <p>
+                                  SSPs provide future patterns for population, working age population and GDP at
+                                  country level; the trend of the first two variables is completely exogenous in
+                                  our simulation. The GDP trend is instead a target to be met through a mix of country
+                                  and sector-specific productivities that are exogenously set (primary factor and total
+                                  factor productivity).
+                              </p>
+                          </section>
+                    </div>
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_calibration" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Calibration of the model </h2>
+                              <p>
+                                  In our reference scenarios, the growth of GDP, population and employment reproduces
+                                  historical trends up to 2014 (WDI 2016) and then mimics SSP growth rates
+                                  (OECD projections). Population trend relies on the WDI database (World Bank 2018) up
+                                  to 2014 and then follows SSP growth rates (IIASA-WiC projections). Employment trends
+                                  rely on the WDI database (World Bank 2018) up to 2010, then consider IIASA-WiC
+                                  projections of working age population and other specific assumption of SSP storylines:
+                                  converging participation and unemployment rates in the long run to a structural level.
+                              </p>
+                          </section>
+                    </div>
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures</h2>
+                              <p>
+                                  The ICES model includes a climate policy module that allows designing mitigation
+                                  policies through explicit or implicit carbon taxes internalising or correcting the
+                                  external costs of polluting activities.
+                              </p>
+                              <p>
+                                  In the former case, carbon taxes are introduced into the model through specific ad
+                                  valorem rates depending on the source of emissions. Carbon tax rates are calculated
+                                  for each emitting source as the corresponding ratio between tax revenues and the
+                                  total tax base. Then, this ad valorem tax is added to the supply price and determines
+                                  the market price that households and firms finally face.
+                              </p>
+                              <p>
+                                  In the case of implicit carbon tax, regional emission limits can be imposed (quotas).
+                                  Countries/regions can exchange emission rights starting from an initial allocation of
+                                  permits in order to comply with the quota. The emission trade generates the optimal
+                                  allocation of abatement and the emission price. In the ICES policy module, we can
+                                  restrict emissions training to a set of countries, as in the case of EU-ETS, and
+                                  combine it with direct carbon taxation in other countries, or allow for a global
+                                  emissions trading system.
+                              </p>
+                              <p>
+                                  In the module, it is also possible to design mitigation scenarios curbing the carbon
+                                  leakage effect (Border Tax Adjustments - BTA).
+                              </p>
+                              <p>
+                                  In each country/region revenues are collected by government that can use them to
+                                  reduce public debt or increase government expenditure or rebate them to support
+                                  household income (transfer), to subsidise specific firms or production factors
+                                  (endowments or intermediates), and to support other countries (international transfer
+                                  to specific countries or to an international fund, e.g. Green Climate Fund).
+                              </p>
+                              <p>
+                                  In addition to carbon taxation, ICES can implement other mitigation options such as
+                                  subsidising clean energy production and its use (with direct effect on government
+                                  deficit), imposing behavioural shifts on household and firm energy demand (without
+                                  direct effect on government deficit), improving efficiency in energy use (with/without
+                                  direct effect on government deficit), and applying the above described instruments and
+                                  constraints to the agriculture, livestock and forestry sectors.
+                              </p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  The core structure of ICES derives from the GTAP-E model (Burniaux & Truong, 2002),
+                                  which in turn is an extension of the standard GTAP model (Hertel, 1997). The General
+                                  Equilibrium framework makes it possible to account for economic interactions of agents
+                                  and markets within each country (production and consumption) and across countries
+                                  (international trade). Within each country the economy is characterised by n
+                                  industries, a representative household and the government. Industries are modelled as
+                                  representative cost-minimising firms, taking input prices as given. In turn, output
+                                  prices are given by average production costs. The production functions (see the figure below)
+                                  are specified via a series of nested Constant Elasticity of Substitution (CES)
+                                  functions. Primary factors—including natural resources, land, labour, and a
+                                  capital-energy composite—constitute the Value Added Energy (QVAEN) nest,
+                                  which is combined with intermediates (QF), in order to generate the output.
+                                  Perfect complementarity is assumed between value added and intermediates.
+                                  This implies the adoption of a Leontief production function. For sector i in region r,
+                                  final supply (output)<b>Y<sub>i,r</sub></b>, results from the following constrained
+                                  production cost
+                                  minimisation problem for the producer:
+                              </p>
+                              <p STYLE="text-align: center;font-size: 1.5em;margin: 1em">
+                                  <b>min PVAEN<sub>i,r</sub>Q VAEN<sub>i,r</sub>+PF<sub>i,r</sub>QF<sub>i,t</sub></b>
+                              </p>
+                              <p STYLE="text-align: center;font-size: 1.5em;margin: 1em">
+                                  <b>s.t.Y<sub>i,r</sub>=min[QVAEN<sub>i,r</sub>,QF<sub>i,r</sub>]</b>
+                              </p>
+                              <p>where PVAEN and PF are prices of the related production factors.</p>
+
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/iecs_production_tree.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">ICES production tree
+                                      </p>
+
+                                  </div>
+                              </div>
+                              <p>
+                                  In the ICES production tree, the second nested level, on the left-hand
+                                  side, represents the value added plus energy composite (QVAEN). This composite
+                                  stems from a CES function that combines four primary factors: land (QLAND),
+                                  natural resources (QNR), labour (QL) and the capital-energy bundle (QKE).
+                                  Primary factor demand in turn derives from the first-order conditions of
+                                  the following constrained cost minimisation problem for the representative firm:
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/ices_formula_qvaen.png" %}">
+                                  <div style="text-align: center">
+
+                                  </div>
+                              </div>
+                              <p>
+                                 In turn, the capital-energy bundle combines capital with a set of different energy
+                                  inputs. In fact, energy inputs are not part of the intermediates, but are associated
+                                  to capital in a specific composite. The energy bundle is modelled as an aggregate of
+                                  electric and non-electric energy carriers. Electricity sector differentiates between
+                                  intermittent and non-intermittent sources. Wind and solar, which are intermittent
+                                  sources, are separated from non-intermittent sources: hydro, nuclear, fossil and
+                                  other non-fossil electricity. Economic flows detailing production and consumption of
+                                  energy relies on the GTAP-Power database (Peters, 2016).
+                              </p>
+                              <p>
+                                  The Non-Electric bundle is a composite of coal and energy from other fuels. The
+                                  aggregate other fuels combine, in a series of subsequent nests, petroleum products
+                                  with natural gas and crude oil. All elasticities regarding the inter-fuel substitution
+                                  bundles are those from GTAP-E (Burniaux & Truong, 2002), while for the extended
+                                  renewable electricity sectors we set those values considering different studies
+                                  (Paltsev, et al., 2005; Bosetti, Carraro, Galeotti, Massetti, & Tavoni, 2006).
+                              </p>
+                              <p>
+                                  The demand of production factors (as well as that of consumption goods), can be met
+                                  by either domestic or foreign commodities, which however are not perfectly
+                                  substitutable according to the "Armington" assumption. In general, inputs grouped
+                                  together are more easily substitutable among themselves than with other elements
+                                  outside the nest. For example, the substitutability across imported goods is higher
+                                  than that between imported and domestic goods. Analogously, composite energy inputs
+                                  are more substitutable with capital than with other factors.
+                              </p>
+                              <p>
+                                  In the ICES model, as in GTAP, two industries are treated in a special way and are not
+                                  related to any country, viz. international transport and international investment
+                                  production. International transport is a world industry, which produces the
+                                  transportation services associated with the movement of goods between origin and
+                                  destination regions, thereby determining the cost margin between free-on-board
+                                  (or f.o.b., before freight and insurance are added) and costs-insurance-freight
+                                  (or c.i.f., inclusive of transportation margins) prices. Transport services are
+                                  produced by means of factors submitted by all countries, in variable proportions.
+                                  In a similar way, a hypothetical world bank collects savings from all regions and
+                                  allocates investments in order to achieve equality in the absolute change of current
+                                  rates of return.
+                              </p>
+                              <p>
+                                  The following figure describes the main sources and uses of regional income. In each region, a
+                                  representative utility maximising household receives income, originated by the
+                                  service value of national primary factors (natural resources, land, labour, and
+                                  capital), that they own and sell to the firms. Capital and labour are perfectly mobile
+                                  domestically but immobile internationally (investment is instead internationally
+                                  mobile). Land and natural resources, on the other hand, are industry-specific and
+                                  <b
+                                      class="tooltip-demo well" data-toggle="tooltip" title='Sluggish endowments are characterised by exogenous aggregate supply and
+                                  frictions in the factor movement across sectors (no perfect elasticity), therefore, in
+                                  equilibrium, returns of these endowments are not uniform across different uses.'>sluggish</b>. Land is used only by the agriculture and livestock sectors, and
+                                  competition for land is only among these two sectors; natural resources are of three
+                                  types: forestry and fishing, fossil (coal, oil and gas), and other mining. Whether a
+                                  sluggish endowment is used by more than one sector, its optimal allocation responds
+                                  to the revenue maximisation of a household subject to a transformation frontier
+                                  (Constant Elasticity of Transformation, or CET, formulation). Both land and natural
+                                  resources are monetary aggregate variables in the base year, but price and quantity
+                                  changes are distinguishable in simulation years.
+
+                              </p>
+
+                              <p>
+                                  The regional income is used to finance aggregate household consumption and savings.
+                              </p>
+
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/ices_household_income.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Sources and uses of regional household
+                                          income in ICES
+                                      </p>
+
+                                  </div>
+                              </div>
+
+                              <p>
+                                  Government income equals to the total tax revenues from both private households and
+                                  productive sectors, a series of international transactions among governments (foreign
+                                  aid and grants), and national government-private transfers (Delpiazzo, Parrado, &
+                                  Standardi, 2017). Both the government and the private household consume and save a
+                                  fraction of their income according to a Cobb-Douglas function. The government income
+                                  not spent is saved, and the sum of public and private savings determines the regional
+                                  disposable saving, which enters the Global Bank as in the core ICES model.
+                              </p>
+                              <p>
+                                  Both private and public sector consumption are addressed to all commodities produced
+                                  by each firm/sector. Public consumption is split into a series of alternative
+                                  consumption commodities according to a Cobb-Douglas specification. However, almost all
+                                  public expenditure is concentrated in the specific sector of non-market services,
+                                  including education, defence and health. Private consumption is analogously addressed
+                                  towards alternative goods and services, including energy commodities that can be
+                                  produced domestically or imported. The functional specification used at this level is
+                                  the Constant Difference in Elasticities form: a non-homothetic function, which is used
+                                  to account for possible differences in income elasticities for the various consumption
+                                  goods<sup>2</sup>.
+                              </p>
+                              <p>
+                                  The recursive-dynamic feature is described in the following figure. Starting from the picture of
+                                  the world economy in the benchmark year, by following socioeconomic (e.g. population,
+                                  primary factors stocks and productivity) as well as policy-driven changes occurring in
+                                  the economic system, agents adjust their decisions in terms of input mix (firms),
+                                  consumption basket (households) and savings. The model finds a new general (worldwide
+                                  and economy-wide) equilibrium in each period, while all periods are interconnected by
+                                  the accumulation process of physical capital stock, net of its depreciation. Capital
+                                  growth is standard along exogenous growth theory models and follows:
+                              </p>
+
+                              <div style="text-align: center">
+                                  <img style="width:50%;height:50%; margin-bottom: 2em"
+                                       src="{% static "images/ices_formula_ker.png" %}">
+                                  <div style="text-align: center">
+
+                                  </div>
+                              </div>
+                              <p>
+                                  where <b>Ke<sub>r</sub></b> is the “end of period” capital <b>Kb<sub>r</sub></b>stock,
+                                  is the “beginning of period” capital stock,
+                                  δ is capital depreciation and <b>I<sub>r</sub></b>is endogenous investment.
+                                  Once the model is solved at a
+                                  given step t, the value of <b>Ke<sub>r</sub></b> is stored in an external file and
+                                  used as the “beginning
+                                  of period” capital stock of the subsequent step t+1.
+                              </p>
+                              <p>
+                                  The matching between savings and investments only holds at the world level; a
+                                  fictitious world bank collects savings from all regions and allocates investments
+                                  following the rule of highest capital returns.
+                              </p>
+                              <p>
+                                  As with capital, at each simulation step the government net deficit at the end of the
+                                  period is stored in an external file and adds up to next year debt.
+                              </p>
+
+                                <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/ices_recursive_dynamic.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">Recursive-dynamic feature of the ICES
+                                          model
+                                      </p>
+
+                                  </div>
+                              </div>
+                          </section>
+                    </div>
+
+
+                    <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="ices_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                  The model can be used to address a series of climate policy questions, orienting on
+                                  overall sustainability. These include a deeper understanding of the feasibility of
+                                  deep decarbonisation targets and related costs; of trade-offs between climate action,
+                                  economic development and other societal targets; of possible economic evolution
+                                  trajectories according to different climate policy scenarios; as well as of
+                                  socioeconomic synergies and trade-offs between mitigation policies and activities
+                                  oriented on sustainable development.
+                              </p>
+                              <p>
+                                  By looking into GHG emissions, including non-energy and agriculture emissions, the
+                                  model can inter alia be used to determine national/regional compliance with (intended)
+                                  nationally determined contributions, and assess gaps from equitable and sustainable
+                                  emissions.
+                              </p>
+                              <p>
+                                  The ICES model can also be used to assess economy-wide implications of adaptation
+                                  strategies (the term of comparison in this case is generally a scenario with climate
+                                  change impacts), e.g. understanding the benefits of changing the crop mix in the case
+                                  of impacts in agriculture or of building preventive protections in the case of sea
+                                  level rise causing land loss, or delving into behavioural shifts or efficiency changes
+                                  associated to climate change (e.g. higher cooling demand), which are imposed
+                                  exogenously before their economy-wide implications are assessed).
+                              </p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                  The ASDI (Aggregated Sustainable Development goal Index) module aims at offering a
+                                  comprehensive assessment of future sustainability up to 2030 (with the capacity to
+                                  extend the analysis to 2050) based upon 27 indicators related to the 17 Sustainable
+                                  Development Goals, under different socioeconomic and policy scenarios. ASDI module
+                                  combines a modelling framework (ICES model) with an empirical one (regression approach
+                                  based on historical data) to offer an internally-consistent set-up for analysing
+                                  future patterns of sustainability indicators and their inter-linkages (see the figure below).
+                              </p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/ices_asdi.png" %}">
+                                  <div style="text-align: center">
+                                      <p style="text-align: center">The ASDI module in ICES</p>
+
+                                  </div>
+                              </div>
+                              <p>
+                                  Indicator selection is guided by the following requirements: relevance in measuring
+                                  the SDG they refer to and connection with a specific quantitative SDG Target.
+                                  Furthermore, ASDI indicators need to have good country coverage because the
+                                  well-being assessment is worldwide and the comparability of the results of aggregation
+                                  procedure requires excluding countries with missing values for at least one of ASDI
+                                  indicators. ASDI indicators are at country level; the presence of a macro-economic
+                                  model in our framework and the world coverage forces us to disregard more
+                                  disaggregated indicators (gender, cohort, location-specific).  Furthermore, the most
+                                  stringent constraint in selecting ASDI indicators comes from the sustainability
+                                  assessment: drawing the future path of SDG indicators depends on identifying their
+                                  determinants (empirical analysis on the historical data and evidence from the
+                                  literature), and, at the same time, depicting the future evolution of these
+                                  determinants using the ICES model. The lack of any empirical evidence connecting an
+                                  SDG indicator with one or more endogenous variable in our model determined its
+                                  exclusion from ICES set of indicators. The following table lists all ASDI indicators, except for
+                                  those referring to climate action (SDG 13).
+                              </p>
+                               <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">SDG</th>
+                                          <th style="width:40%">ASDI Indicator</th>
+                                          <th style="width:40%">Modelling Behaviour</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>SDG1</td>
+                                          <td>Poverty headcount ratio at $1.90 a day (PPP2011) (% of population)</td>
+                                          <td>GDPPPP per capita and Palma ratio (regression)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG2</td>
+                                          <td>Prevalence of undernourishment (% of population)</td>
+                                          <td>GDPPPP per capita, squared GDPPPP per capita, Palma ratio, urban
+                                              population share, agricultural production per capita (regression)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG3a</td>
+                                          <td>Physician density (per 1000 population)</td>
+                                          <td>Health expenditure per capita and private heath expenditure share
+                                              (regression)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG3b</td>
+                                          <td>Healthy Life Expectancy (HALE) at birth (years)</td>
+                                          <td>Physician density, education expenditure per capita, electricity access,
+                                              undernourishment prevalence, urban population share (regression)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG4</td>
+                                          <td>Youth literacy rate (% of population 15-24 years)</td>
+                                          <td>Public education expenditure per capita, urban population share
+                                              (regression)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG6</td>
+                                          <td>Annual freshwater withdrawals, total (% of internal renewable water)</td>
+                                          <td>Domestic demand of water by agents: households, industry, agriculture
+                                              (endogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG7a</td>
+                                          <td>Access to electricity (% of total population)</td>
+                                          <td>GDPPPP per capita, GDPPPP per capita squared, electricity output per
+                                              capita, urbanisation and Palma ratio (regression)</td>
+                                      </tr>
+                                      <tr>
+
+                                          <td>SDG7b</td>
+                                          <td>Renewable electricity (% in total electricity output)</td>
+                                          <td>Supply of Electricity from Renewables and Total Electricity (endogenous)
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>SDG7c</td>
+                                          <td>Primary energy intensity (MJ / $PPP2011)</td>
+                                          <td>Total Primary Energy Supply and Real GDP (endogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG8a</td>
+                                          <td>GDP per capita growth (%)</td>
+                                          <td>GDP (endogenous) and Population (exogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG8b</td>
+                                          <td>GDP per person employed ($PPP2011)</td>
+                                          <td>GDP (endogenous) and Employed Population (exogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG8c
+                                          </td>
+                                          <td>Employment-to-population ratio (%)</td>
+                                          <td>Exogenous </td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG9a</td>
+                                          <td>Manufacturing value added (% of GDP)</td>
+                                          <td>Value Added in Manufacturing and GDP (endogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG9b</td>
+                                          <td>Total energy and industry-related GHG emissions over sectoral value added
+                                              (t of CO2e / $PPP2011)</td>
+                                          <td>Industrial Emissions and Value Added in the Industrial sector (endogenous)
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG9c
+                                          </td>
+                                          <td>Research and development (R&D) expenditure (% of GDP)</td>
+                                          <td>R&D Value Added and GDP (endogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG10</td>
+                                          <td>Palma ratio</td>
+                                          <td>Sectoral VA, public education expenditure per capita, unemployment and
+                                              corruption control (regression)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG11</td>
+                                          <td>CO2 intensity of residential and transport sectors (t of CO2 / t of oil
+                                              equivalent energy use)</td>
+                                          <td>Demand of Fossil Fuels and Emissions in Residential and Transport sectors
+                                              (endogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG12</td>
+                                          <td>Material productivity ($PPP2011/ kg)</td>
+                                          <td>Material (mining) Use in Heavy Industry sector and GDP (endogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG14</td>
+                                          <td>Marine protected areas (% of territorial waters)</td>
+                                          <td>Exogenous</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG15a</td>
+                                          <td>Terrestrial protected areas (% of total land area)</td>
+                                          <td>Exogenous</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG15b</td>
+                                          <td>Forest area (% of land area)</td>
+                                          <td>Land use in the Forestry sector (endogenous)</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG15c</td>
+                                          <td>Endangered and vulnerable (animals and plants) species
+                                              (% of total species)</td>
+                                          <td>Exogenous</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG16</td>
+                                          <td>Corruption Perception Index</td>
+                                          <td>Exogenous</td>
+                                      </tr>
+                                      <tr>
+                                          <td>SDG17</td>
+                                          <td>General government gross debt (% of GDP)</td>
+                                          <td>GDP and government debt (endogenous)</td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>ASDI indicators and main drivers for the ICES model</caption>
+                                  </table>
+                                    </div>
+                              <p>
+                                  Among ASDI indicators, sixteen are computed using model results, seven require
+                                  regression analyses to be linked to them (SDG1, SDG2, SDG3a, SDG3b, SDG4, SDG7a,
+                                  SDG10), and the remaining four are kept constant at historical levels (SDG14, SDG15a,
+                                  SDG15c, SDG16). The collection of historical data of indicators relies on several
+                                  international databases (World Development Indicators (World Bank, 2018), the UN
+                                  database (United Nations, 2018), and World Income Inequality Database (WIID3.4)
+                                  (United Nations, 2017b), and covers all available countries for the period 1990-2015.
+                              </p>
+                              <p>
+                                  Historical data are used for initialising indicators in the base year of the model
+                                  (2007) and for estimating the basic relationships between the model’s variables
+                                  and indicators in the regression analysis phase. The ASDI module computes the values
+                                  of the SDG indicators up to 2030 (2050) using the output of the ICES model.
+                                  For the indicators not directly generated by the model, the estimated relationships
+                                  from historical data with the regression analysis are used in an out-of-sample
+                                  estimation procedure and combined with output variables of the model (main drivers are
+                                  listed in the following table). In order to derive SDG-specific indices (simple
+                                  average of the underlying indicators) and the ASDI, ASDI indicator values are
+                                  normalised, using a
+                                  benchmarking procedure that identifies sustainable and unsustainable thresholds,
+                                  and then aggregated.
+                              </p>
+
+
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="ices_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                 <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper</th>
+                                          <th style="width:40%">Topic</th>
+                                          <th style="width:40%">Key findings
+</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>Campagnolo & Davide, 2019</td>
+                                          <td>Potential synergies and trade-offs between emission reduction policies and
+                                              sustainable development objectives (ex-ante assessment of the impacts of
+                                              the NDCs on the SDGs of poverty eradication and reduced income inequality
+                                          </td>
+                                          <td>
+                                              Our study finds that a full implementation of the emission reduction
+                                              contributions, stated in the NDCs, is projected to slow down the effort to
+                                              reduce poverty by 2030 (+4.2% of the population below the poverty line
+                                              compared to the baseline scenario), especially in countries that have
+                                              proposed relatively more stringent mitigation targets and suffer higher
+                                              policy costs. Conversely, the impact of climate policy on inequality shows
+                                              opposite sign but remains very limited. If financial support for
+                                              mitigation action in developing countries is provided through an
+                                              international climate fund, the prevalence of poverty will be slightly
+                                              reduced at the aggregate level, but the country-specific effect depends
+                                              on the relative size of funds flowing to beneficiary countries and on
+                                              their economic structure.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Campagnolo & Ciferri, 2018</td>
+                                          <td>Investigation of the current well-being and the future sustainability of
+                                              Italy</td>
+                                          <td>We provide evidence that in a scenario business-as-usual, Italy will not
+                                              improve significantly its level of well-being. However, with a set of
+                                              policies specifically targeted in 2030, the Italian sustainability would
+                                              increase remarkably especially if all policies were implemented
+                                              simultaneously.</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Campagnolo, et al., 2016</td>
+                                          <td>Examination of recent developments in international climate policy,
+                                              considering different levels of cooperation that may arise in light of the
+                                              outcomes of the Conference of the Parties held in Doha</td>
+                                          <td>
+                                              We find that the environmental component of sustainability improves at the
+                                              regional and world level thanks to the implementation of climate policies.
+                                              Overall sustainability increases in all scenarios since the economic and
+                                              social components are affected negatively yet marginally. This analysis
+                                              does not include explicitly climate change damages and this may lead to
+                                              underestimating the benefits of policy actions. If the USA, Canada, Japan
+                                              and Russia did not contribute to mitigating emissions, sustainability in
+                                              these countries would decrease and the overall effectiveness of climate
+                                              policy in enhancing global sustainability would be offset.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Virdis, Gaeta, De Cian, & Parrado, 2015</td>
+                                          <td>Alternative pathways to achieve deep decarbonisation in Italy</td>
+                                          <td>
+                                              The DDPs require considerable effort in terms of low-carbon resources and
+                                              technologies. They also require considerable effort in economic terms.
+                                              The cost changes, compared to a Reference Scenario, are significant: up to
+                                              30% higher cumulative net costs over the period 2010-2050. In particular,
+                                              the emphasis switches from fossil fuel costs and operating costs towards
+                                              investments in power generation capacity and more efficient technologies
+                                              and processes
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Raitzer, et al., 2015</td>
+                                          <td>Examination of potential regimes for regulating global GHG emissions
+                                              through 2050 in Indonesia, Malaysia, the Philippines, Thailand, and
+                                              Vietnam</td>
+                                          <td>
+                                              The analysis affirms that a global climate arrangement that keeps mean
+                                              warming below 2°C is in the economic interest of the region. Although
+                                              the policy costs for such stabilisation during initial decades are not
+                                              trivial, net benefits are found to far exceed net costs. The resource
+                                              requirements are also not insurmountable, as costs are a smaller share of
+                                              GDP than what the region has spent in recent years on fossil fuel
+                                              subsidies. Moreover, the study finds that policy costs to achieve
+                                              stabilisation sharply increase if actions to reduce emissions are delayed
+                                          </td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>List of recent publications using the ICES model</caption>
+                                  </table>
+                                    </div>
+                          </section>
+                    </div>
+
+                    <!--Add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="ices_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                O’Neill, B. C., Kriegler, E., Ebi, K. L., Kemp-Benedict, E., Riahi, K., Rothman, D. S.,
+                                ... & Levy, M. (2017). The roads ahead: Narratives for shared socioeconomic pathways
+                                describing world futures in the 21st century. Global Environmental Change, 42, 169-180.
+                            </p>
+                            <p>
+                                Riahi, K., Van Vuuren, D. P., Kriegler, E., Edmonds, J., O’neill, B. C., Fujimori, S.,
+                                ... & Lutz, W. (2017). The shared socioeconomic pathways and their energy, land use,
+                                and greenhouse gas emissions implications: an overview. Global Environmental Change,
+                                42, 153-168.
+                            </p>
+                            <p>
+                                Paltsev, S., Reilly, J. M., Jacoby, H. D., Eckaus, R. S., McFarland, J. R., Sarofim, M.
+                                C., ... & Babiker, M. H. (2005). The MIT emissions prediction and policy analysis (EPPA)
+                                model: version 4. MIT Joint Program on the Science and Policy of Global Change.
+                            </p>
+                            <p>
+                                Bosetti, V., Carraro, C., Galeotti, M., Massetti, E., & Tavoni, M. (2006). WITCH a
+                                world induced technical change hybrid model. The Energy Journal, 13-37.
+                            </p>
+                            <p>
+                                Campagnolo, L., Carraro, C., Davide, M., Eboli, F., Lanzi, E., & Parrado, R. (2016).
+                                Can climate policy enhance sustainability?. Climatic change, 137(3-4), 639-653.
+                            </p>
+                            <p>
+                                Raitzer, D. A., Bosello, F., Tavoni, M., Orecchia, C., Marangoni, G., & Samson, J. N. G.
+                                (2015). SouthEast Asia and the economics of global climate stabilization.
+                                Asian Development Bank.
+                            </p>
+                        </section>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('body').css('height', '100%');
+    });
+
+
+</script>
+</body>
+
+</html>
+
+

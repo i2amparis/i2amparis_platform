@@ -1,0 +1,552 @@
+{% extends "base_template_harmonisation_manual.html" %}
+{% load static %}
+{% csrf_token %}
+{% block css %}
+
+    <style>
+        .heading {
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .heading a {
+            font-size: 0.9em;
+        }
+
+        .desc_text {
+            font-size: 0.8em;
+        }
+
+        .take_up_space {
+            min-height: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .text_take_up_space {
+            min-height: 10em;
+            margin-bottom: 1em;
+        }
+
+        td {
+            font-size: 0.8em;
+            background-color: rgba(246, 250, 238, 0.5);
+            color: #2a2a2e;
+        }
+
+        td.light-grey {
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 1em;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <link rel="stylesheet" href={% static "model_list_css.css" %}>
+{% endblock %}
+
+{% block content %}
+    <div class="" id="harm_heatmap">
+        <div class="container" style="width: 95%; height:100%;">
+            <h2 style="text-align: center ;margin-top: 3em; width:100%;  color: rgba(151, 174, 33, 0.8)">Customisable
+                Variable Harmonisation Heatmap</h2>
+            <h3 style="margin-bottom: 2em; text-align: center ; width:100%;  color: rgba(151, 174, 33, 0.8)">of the
+                PARIS REINFORCE project</h3>
+            <div class="col-sm-12 col-md-12" style="margin-bottom: 1em">
+                <p>
+                    <b>Please, select up to 15 models from the list below </b> and press the
+                    <button class="button btn btn-default   green line-btn"
+                            style="background-color: rgba(151, 174, 33, 0.8);color: white;padding: 0; width: 4em; line-height: 1.5em; height: 1.5em">
+                        Run
+                    </button>
+                    button. The created heatmap
+                    will indicate how different variables are handled across the models available in I<sup>2</sup>AM
+                    PARIS
+                    Platform.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12" style="">
+                    <div class="model-list tooltip-demo large"
+                         style=" text-align: center">
+                        {% for model,json in buttons.items %}
+                            <div class="col not-selected" data-link="{{ model }}"
+                                 style="overflow: visible; padding: 0;position: relative;display: inline-block; margin: 0.8em">
+                                <i style="position: absolute;left: 0.5em;top:0.5em;color:#cfd0d2;font-size: 0.8em;z-index: 1050"
+                                   class="fa fa-info-circle"></i>
+                                <a>
+                                    <img class="not-selected rounded-corners-el"
+                                         style="width:6.3em;"
+                                         src="/static/rev_icons/grey/{{ json.icon }}"
+                                         data-toggle="tooltip" data-placement="auto"
+                                         title='<p>{{ json.description }}</p>'>
+                                </a>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
+                            <a id="clear-button"
+                               class="button btn btn-default  openbtn content_btn line-btn"
+                               style="width:100%;background-color: rgba(172,31,0,0.8);color: white;padding: 0;height: inherit; line-height: 2.5em; ">Clear
+                                <i class="fa fa-trash-o" style="margin-left: 0.5em"></i>
+                            </a>
+                        </div>
+                        <span class="col-sm-8 col-md-8 col-xs-8"></span>
+                        <div class="col-sm-2 col-md-2 col-xs-2">
+                            <a id="run-button"
+                               class="button btn btn-default openbtn content_btn green line-btn"
+                               style="width:100%;background-color: rgba(151, 174, 33, 0.8);color: white;padding: 0;height: inherit; line-height: 2.5em; ">Run
+                                <i class="fa fa-spinner"
+                                   style="margin-left: 0.5em"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="dynamic_chart" class="row" style=" height: 130vh; margin-top: 2em">
+                <div class="col-sm-9 col-xs-12" style="height: 100%">
+                    <div id="viz_frame_div" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="viz_iframe" src="" title="Harmonisation Table Heatmap Chart"
+                                style="width: 100%; height: 100%;  border:none"></iframe>
+                        <div id="loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em; display: none">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">The rows present the different socio and techno
+                                    economic
+                                    variables. The columns indicate the available models. Variables are either
+                                    considered as outputs
+                                    from models, inputs to models or are not represented by the models as any
+                                    explicit output or
+                                    input
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3 col-xs-12 viz-container" style="margin-top: 2em; display: none">
+                    <div class="tooltip-demo">
+                        <h4 style="display: inline-block;background:transparent;box-shadow: none; font-weight: bold; color: #828f30; cursor: help"
+                            data-toggle="tooltip" data-placement="auto"
+                            title="<p>This heatmap indicates how different variables are handled across the models within the Paris Reinforce consortium. The rows present the different socio and techno economic variables. The columns indicate the 16 PR models. Variables are either considered as outputs from models, inputs to models or are not represented by the models as any explicit output or input</p>">
+                            Variable Harmonisation Heatmap
+                        </h4>
+                    </div>
+
+
+                    <label for="model_name" style="display: block;width: 70%">Model Name
+                        <select class="form-control desc_text take_up_space" id="model_name">
+                            {#                                {% for el in models %}#}
+                            {#                                    <option value="{{ el.model_name }}">{{ el.model_title }}</option>#}
+                            {#                                {% endfor %}#}
+                        </select>
+                    </label>
+                    <div class="heading">Model Geographical Coverage</div>
+                    <div class="desc_text take_up_space" id="geo_cov"></div>
+                    <div class="heading">Model Type</div>
+                    <div class="desc_text take_up_space" id="model_type"></div>
+                    <div class="heading"> Model Time Step (Years)</div>
+                    <div class="desc_text take_up_space" id="model_timestep"></div>
+                    <div class="heading">
+                        <a style="font-weight: bold; " id="model_desc" target="_blank"
+                           rel="noopener noreferrer" href="/detailed_model_doc/">Detailed Model
+                            Documentation
+                            <i class="fa fa-book"></i>
+                        </a>
+                    </div>
+                    <div class="heading " style="margin-bottom: 1em">
+                        <a style="font-weight: bold; " id="model_dynamic" target="_blank"
+                           rel="noopener noreferrer" href="/dynamic_doc/">Dynamic Model
+                            Documentation
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </div>
+
+                    {#                <div class="desc_text text_take_up_space" id="model_desc"></div>#}
+                    {#                <hr>#}
+                    {#                <div class="heading">Variable Name</div>#}
+                    <label for="var_name" style="display: block;width: 70%">Variable Name
+                        <select class=" form-control desc_text take_up_space" id="var_name">
+                            {% for el in variables %}
+                                <option value="{{ el.var_name }}">{{ el.var_title }}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+                    <div class="heading"> Category</div>
+                    <div class="desc_text take_up_space" id="var_cat"></div>
+                    <div class="heading">Variable Definition</div>
+                    <div class="desc_text take_up_space" id="var_def"></div>
+                    <div class="source_container">
+                        <div class="heading">Source</div>
+                        <div class="desc_text take_up_space" id="var_mod_source"></div>
+                    </div>
+                    <div class="unit_container">
+                        <div class="heading">Unit</div>
+                        <div class="desc_text take_up_space" id="var_mod_unit"></div>
+                    </div>
+                    <div class="timespan_container">
+                        <div class="heading">Timespan</div>
+                        <div class="desc_text take_up_space" id="var_mod_timespan"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="models_container" style="display: none">
+            {% for model in models %}
+                <div id={{ model.model_name }}>
+                    {#                <span id="long_title">{{ model.long_title }}</span>#}
+                    <span class="d_model_coverage">{{ model.coverage_title }}</span>
+                    <span class="d_model_type">{{ model.type_of_model }}</span>
+                    <span class="d_model_timestep">{{ model.time_steps_in_solution }}</span>
+                    <span class="d_model_description">{{ model.short_description }}</span>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="variables_container" style="display: none">
+            {% for variable in variables %}
+                <div id={{ variable.var_name }}>
+                    <span class="d_var_title">{{ variable.var_title }}</span>
+                    <span class="d_var_category">{{ variable.var_category }}</span>
+                    <span class="d_var_definition">{{ variable.var_definition }}</span>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="var_mod_data_container" style="display: none">
+            {% for el in var_mod %}
+                <div id={{ el.model }}_{{ el.var }}>
+                    <span class="d_var_mod_unit">{{ el.var_unit }}</span>
+                    <span class="d_var_mod_source_info">{{ el.var_source_info }}</span>
+                    <span class="d_var_mod_timespan">{{ el.var_timespan }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+
+{% block js %}
+
+    <script>
+        $(document).ready(function () {
+            $('.tooltip-demo.well').tooltip({
+                html: true,
+                selector: 'img[data-toggle=tooltip]'
+            });
+            $('.tooltip-demo.large').tooltip({
+                html: true,
+                selector: 'img[data-toggle=tooltip]',
+                container: ".model-list"
+            });
+
+            $(".model-list i.fa-info-circle").click(function (event) {
+                console.log('pressed icon');
+                window.open("/detailed_model_doc/" + $(this).parent().data('link'));
+                // Do something
+            });
+
+
+        });
+    </script>
+
+
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function create_visualisation(query_id) {
+            var viz_frame = $('#viz_iframe');
+            viz_frame.off();
+            viz_frame.hide();
+            $('#loading_bar').show();
+            var col_ordering_grouping = $('#col_order option:selected').attr('data-category');
+            if ((col_ordering_grouping === "") && (col_ordering_grouping === null) && (col_ordering_grouping === undefined)) {
+                col_ordering_grouping = "";
+            }
+            var data = {
+                "row_categorisation_dataset": "datasetvariableharmonisationguides",
+                "col_categorisation_dataset": col_ordering_grouping,
+                "col_order": $('#col_order').val(),
+                "row_order": "order",
+                "y_var_names": ["var"],
+                "y_axis_title": "Variables",
+                "y_var_units": ["-"],
+                "x_axis_name": "model",
+                "x_axis_title": "Models",
+                "x_axis_unit": "-",
+                "z_axis_name": "status",
+                "z_axis_title": "Value",
+                "z_axis_unit": "-",
+                "min_max_z_value": 0,
+                "color_list_request": ["grey_green", "light_blue", "ice_gray"],
+                "distinct": ["Extractable model output", "Harmonisable model input", "No explicit output or input"],
+                "dataset": query_id,
+                "dataset_type": "query",
+            };
+            var url = '';
+            for (var key in data) {
+                if (data.hasOwnProperty(key)) {
+                    if (Array.isArray(data[key])) {
+                        for (var j = 0; j < data[key].length; j++) {
+                            url = url + String(key) + '[]' + "=" + String(data[key][j]) + '&'
+                        }
+                    } else {
+                        url = url + String(key) + "=" + String(data[key]) + '&'
+                    }
+
+                }
+            }
+
+            var complete_url = "/visualiser/show_heat_map_chart?" + url;
+            viz_frame.attr('src', complete_url);
+            viz_frame.on('load', function () {
+                $(this).show();
+                console.log("delete old query");
+                $.ajax({
+                    url: "/data_manager/delete_query",
+                    type: "POST",
+                    data: JSON.stringify(query_id),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+
+                $('#loading_bar').hide();
+                $(this).contents().on('click', function () {
+                    console.log('select model & var');
+                    var col_option = $('iframe').contents().find('#col_clicked').text();
+                    var col_val = $('#model_name option')
+                        .filter(function () {
+                            return $.trim($(this).text()) === col_option;
+                        }).val();
+                    $('#model_name').val(col_val);
+                    $('#model_name').trigger('change');
+                    var row_option = $('iframe').contents().find('#row_clicked').text();
+                    var row_val = $('#var_name option')
+                        .filter(function () {
+                            return $.trim($(this).text()) === row_option;
+                        }).val();
+                    $('#var_name').val(row_val);
+                    $('#var_name').trigger('change');
+                })
+            });
+
+        }
+
+
+        $(".model-list div").click(function () {
+            var models_json;
+            var icon_name;
+            if ($(this).hasClass('not-selected')) {
+                models_json = {{ buttons|safe }};
+                icon_name = models_json[$(this).attr('data-link')]['icon'];
+                $(this).find("img").attr("src", "/static/rev_icons/colored/" + icon_name);
+                $(this).removeClass('not-selected');
+                $(this).addClass('selected');
+            } else if ($(this).hasClass('selected')) {
+                models_json = {{ buttons|safe }};
+                icon_name = models_json[$(this).attr('data-link')]['icon'];
+                $(this).find("img").attr("src", "/static/rev_icons/grey/" + icon_name);
+                $(this).removeClass('selected');
+                $(this).addClass('not-selected');
+            }
+        });
+
+        $("#clear-button").click(function () {
+            var model_sel = $(".model-list div");
+            model_sel.removeClass('selected');
+            model_sel.addClass('not-selected');
+            model_sel.each(function () {
+                var models_json = {{ buttons|safe }};
+                var icon_name = models_json[$(this).attr('data-link')]['icon'];
+                $(this).find("img").attr("src", "/static/rev_icons/grey/" + icon_name);
+            });
+            $("#model_name option").remove();
+            $('#dynamic_chart').css('visibility', 'hidden');
+
+        });
+
+        $("#run-button").click(function () {
+
+            var selector_models = $(".model-list div.selected");
+            if (selector_models.length < 1) {
+                alert('Please, select at least one model from the list.')
+            } else {
+                $("#model_name option").remove();
+                $('#dynamic_chart').css('visibility', 'visible')
+                const csrftoken = getCookie('csrftoken');
+                var selected_models = [];
+                selector_models.each(function (index) {
+                    selected_models.push($(this).attr('data-link'));
+                });
+                console.log(selected_models);
+
+                $.ajaxSetup({
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader('X-CSRFToken', csrftoken);
+                    }
+                });
+                var query = {};
+                query["query_name"] = "var_harmonisation_on_demand";
+                var string = "";
+                for (var i = 0; i < selected_models.length; i++) {
+                    string = string + '"' + selected_models[i] + '",'
+                }
+                string = string.slice(0, -1);
+                query["parameters"] = JSON.parse('{"model_list":[' + string + ']}');
+                console.log("requested_harmonisation_data");
+                $.ajax({
+                    url: "request_harmonisation_data",
+                    type: "POST",
+                    data: JSON.stringify(selected_models),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        var i;
+                        var selected_mod = data['selected_models'];
+                        for (i = 0; i < selected_mod.length; i = i + 1) {
+                            $("#model_name").append('<option value="' + selected_mod[i]['model_name'] + '">' + selected_mod[i]['model_title'] + '</option');
+                        }
+                        $("#model_name").trigger('change');
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+                console.log("created query");
+                console.log(query);
+                $.ajax({
+                    url: "/data_manager/create_query",
+                    type: "POST",
+                    data: JSON.stringify(query),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        $('.viz-container').show();
+                        var query_id = data['query_id']
+                        create_visualisation(query_id);
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            }
+        });
+
+
+    </script>
+
+    <script>
+
+        var sel_model_name = $("#model_name");
+        var sel_geo_cov = $('#geo_cov');
+        var sel_model_type = $('#model_type');
+        var sel_model_timestep = $('#model_timestep');
+        var sel_model_desc = $('#model_desc');
+        var sel_model_dynamic = $('#model_dynamic');
+        var sel_var_mod_unit = $('#var_mod_unit');
+        var sel_var_mod_source = $('#var_mod_source');
+        var sel_var_mod_timespan = $('#var_mod_timespan');
+        var sel_var_name = $("#var_name");
+        var sel_var_def = $('#var_def');
+        var sel_var_cat = $('#var_cat');
+        var sel_unit_container = $('.unit_container');
+        var sel_source_container = $('.source_container');
+        var sel_timespan_container = $('.timespan_container');
+
+        function show_hide_empty_fields() {
+            if (sel_var_mod_unit.text() === '') {
+                sel_unit_container.hide();
+            } else {
+                sel_unit_container.show();
+            }
+            if (sel_var_mod_source.text() === '') {
+                sel_source_container.hide();
+            } else {
+                sel_source_container.show();
+            }
+            if (sel_var_mod_timespan.text() === '') {
+                sel_timespan_container.hide();
+            } else {
+                sel_timespan_container.show();
+            }
+        }
+
+        sel_model_name.change(function () {
+            sel_geo_cov.text($('#' + String($(this).val()) + ' .d_model_coverage').text());
+            sel_model_type.text($('#' + String($(this).val()) + ' .d_model_type').text());
+            sel_model_timestep.text($('#' + String($(this).val()) + ' .d_model_timestep').text());
+            sel_model_desc.attr('href', '/detailed_model_doc/' + String($(this).val()));
+            sel_model_dynamic.attr('href', '/dynamic_doc/' + String($('#model_name').val()));
+            sel_model_desc.html("<i class=\"fa fa-book\"></i> Detailed Documentation of " + String($(this).find('option:selected').text()));
+            sel_model_dynamic.html("<i class=\"fa fa-search\"></i> Dynamic Documentation of " + String($(this).find('option:selected').text()));
+            sel_var_mod_unit.text($('#' + String(sel_model_name.val()) + '_' + String(sel_var_name.val()) + ' .d_var_mod_unit').text());
+            sel_var_mod_source.text($('#' + String(sel_model_name.val()) + '_' + String(sel_var_name.val()) + ' .d_var_mod_source_info').text());
+            sel_var_mod_timespan.text($('#' + String(sel_model_name.val()) + '_' + String(sel_var_name.val()) + ' .d_var_mod_timespan').text());
+            show_hide_empty_fields();
+        });
+        sel_var_name.change(function () {
+            sel_var_def.text($('#' + String($(this).val()) + ' .d_var_definition').text());
+            sel_var_cat.text($('#' + String($(this).val()) + ' .d_var_category').text());
+            sel_var_mod_unit.text($('#' + String(sel_model_name.val()) + '_' + String(sel_var_name.val()) + ' .d_var_mod_unit').text());
+            sel_var_mod_source.text($('#' + String(sel_model_name.val()) + '_' + String(sel_var_name.val()) + ' .d_var_mod_source_info').text());
+            sel_var_mod_timespan.text($('#' + String(sel_model_name.val()) + '_' + String(sel_var_name.val()) + ' .d_var_mod_timespan').text());
+            show_hide_empty_fields();
+
+        });
+        sel_model_desc.attr('href', '/detailed_model_doc/' + String(sel_model_name.val()));
+        sel_geo_cov.text($('#' + String(sel_model_name.val()) + ' .d_model_coverage').text());
+        sel_model_type.text($('#' + String(sel_model_name.val()) + ' .d_model_type').text());
+        sel_model_timestep.text($('#' + String(sel_model_name.val()) + ' .d_model_timestep').text());
+        sel_model_dynamic.attr('href', '/dynamic_doc/' + String(sel_model_name.val()));
+        sel_model_desc.html("<i class=\"fa fa-book\"></i> Detailed Documentation of " + String(sel_model_name.find('option:selected').text()));
+        sel_model_dynamic.html("<i class=\"fa fa-search\"></i> Dynamic Documentation of " + String(sel_model_name.find('option:selected').text()));
+        sel_var_def.text($('#' + String(sel_var_name.val()) + ' .d_var_definition').text());
+        sel_var_cat.text($('#' + String(sel_var_name.val()) + ' .d_var_category').text());
+        show_hide_empty_fields();
+
+    </script>
+
+
+
+{% endblock %}
+
+
+
+
+
+

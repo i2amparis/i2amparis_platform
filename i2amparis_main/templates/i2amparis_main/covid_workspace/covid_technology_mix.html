@@ -1,0 +1,80 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30;">
+        Which technology portfolios maximize greenhouse gas emissions cuts and jobs? 
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    <p class="col-md-12 col-xs-12">
+        Obtained optimal portfolios suggest that, when optimally allocating recovery funds between emission reduction and employment creation objectives, most countries would invest:
+    </p>
+    <p class="col-md-12 col-xs-12">
+    <ul>
+        <li>over 50% of their energy-focused green recovery packages in financing PV,</li>
+        <li>over 10% in onshore wind,</li>
+        <li>while investments in other clean energy technologies strongly depend on the country, preferred objective, and model applied.</li> 
+    </ul>
+    </p>
+    <p class="col-md-12 col-xs-12">
+        Overall, our results suggest that the recovery response to the COVID-19 pandemic can provide a strong green stimulus in which economic recovery is aligned with improved mitigation efforts.
+    </p>
+
+    <p class="col-md-12 col-xs-12">
+        You can select a country/region in the dropdown menu to see numeric results for each country in the figure below. For each objective independently, we isolated the top 5% of portfolios that maximize that objective. We then used the robustness of each portfolio as a weight and calculated the weighted average of their investment mixes (in the top 5%), to create an ideal portfolio that represents the best-performing solution for each distinct objective.
+    </p>
+
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents optimal portfolios of power-sector technologies.</p>">
+                Optimal portfolios of power-sector technologies 
+            </h2>
+            <h4 style="">(maximizing emissions cuts, jobs in 2025, or jobs in 2030)</h4>
+            <p style="font-style: italic">Different columns for the same model represent different scenarios and their results on the optimal portfolio for investing green recovery packages. A share of 0 indicates that the technology is not part of the optimal portfolio and a share of 1 indicates that the technology covers the whole budget.</p>
+
+            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 1em; text-align: center">Please select a country/region.</div>
+            <div class="col-md-3 col-sm-2 col-xs-1"></div>
+            <div class="form-group col-md-6 col-sm-8 col-xs-10" style="text-align: center">
+                <div class="">
+                    <select class="desc_text take_up_space country-select" placeholder="Select a Country" id="country_select" style="width: 100%;">
+                    <option value="China">China</option>
+                    <option value="Canada">Canada</option>
+                    <option value="EU">EU (incl. the UK)</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="USA">USA</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="covid_portfolio" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="covid_portfolio_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="covid_portfolio_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present optimal technology portfolios.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</div>

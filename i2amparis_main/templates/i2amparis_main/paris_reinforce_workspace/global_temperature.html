@@ -1,0 +1,118 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        What are the global temperature estimates across models until 2100?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    <div class="col-md-12 col-xs-12">
+        <p>
+            This figure shows global temperature estimates until the year 2100.
+            (The bars show ranges including all scenarios runs.)
+        </p>
+    </div>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="tooltip-demo" style="margin-top:3em">
+            <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; cursor: help; margin-bottom: 0.2em"
+                data-toggle="tooltip" data-placement="auto"
+                title="<p>The chart presents the Global temperature estimates up to 2100.
+                    </p>">
+                Global temperature estimates
+            </h2>
+            <h4 style="">(until to 2100 across Current Policy and Nationally Determined Contribution Constrained
+                Scenarios)</h4>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3" style="height: 43em">
+            <div style="height: 100%;">
+                <div id="global_temp_historical" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="global_temp_historical_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="global_temp_historical_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the historical data for global temperature.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-7 col-md-7" style="height: 53.25em">
+            <div style="height: 100%;">
+                <div id="global_temp" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="global_temp_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="global_temp_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the Global temperature estimates up to 2100.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-2 col-md-2" style="height: 45.7em">
+            <div style="height: 100%;">
+                <div id="global_temp_ranges" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="global_temp_ranges_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="global_temp_ranges_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-12">The chart will present the ranges of Global temperature.
+
+                            </div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-12 col-xs-12" style="margin-top: 2em">
+        <p>
+            Across the range of scenarios considered, median 2100 temperature results at around
+            <strong>2.2-2.9°C</strong>
+        </p>
+        <p>
+            NDC constrained scenarios give lower 2100 temperatures than current policy constrained scenarios, reflecting
+            their greater ambition by 2030 and beyond at a global level.
+        </p>
+        <p>
+            Intensity scenarios - based on greater optimism in terms of effort - also give lower 2100 temperature
+            estimates
+            than price scenarios.
+
+        </p>
+
+        <p>
+            Note: Our temperature range considers all emissions intensity scenarios but only three (of six) carbon price
+            scenarios. The low end of our temperature range is more robust than the high end.
+        </p>
+    </div>
+
+</div>

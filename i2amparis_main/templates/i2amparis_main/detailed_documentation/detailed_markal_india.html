@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+{#        #section-main-content {#}
+{#            min-height: 3380px;#}
+{#        }#}
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+
+            <div id="main_bar">
+{#                <button class="openbtn content_btn" onclick="openNav()">☰ Contents</button>#}
+                <div class="container">
+
+                    <div class="row">
+                        <section class="section">
+                            <h1 style="padding-bottom: 1em; padding-top: 1em">MARKAL-India</h1>
+                            <span id="markal_india" class="anchor"></span>
+                            <p>
+                                TERI’s MARKAL-India model is a bottom-up customised MARKAL model for the Indian
+                                energy and environmental policy context. It is based on a rational expectation
+                                hypothesis of inter-temporal optimisation with perfect foresight. The energy service
+                                demands are estimated in useful energy terms and supply is met through all energy
+                                technologies available currently and forecast for entry in India. The model works out
+                                the most optimal set of choices based on minimisation of the total discounted system
+                                cost of the energy sector under various scenarios. The MARKAL-India model is a dynamic
+                                LP (linear programming) model of the Indian energy system. It uses LP methods to solve
+                                for the technology mix that best meets the specified objectives. It is demand-driven
+                                and feasible solutions are obtained only if all specified end-use energy demands are
+                                satisfied for every time period. The end use demands for each sector and for each time
+                                period are exogenously estimated. The elements of the model simulate the flow of energy
+                                in various forms (energy carriers), from the sources of supply (import, export, mining,
+                                and stockpiling) through transformation systems (resource, process, conversion, and
+                                demand technologies) to the devices that satisfy the end-use demands.
+                            </p>
+                            <p>
+                                The model runs over a 50-year period, from 2001 to 2050, at five-year intervals.
+                                In the model, the Indian energy sector is disaggregated into five major energy
+                                consuming sectors, namely agriculture, commercial, industry, residential, and transport.
+                                Each of these sectors is further disaggregated to reflect the sectoral end-use demands.
+                                On the supply side, the model considers various energy resources that are available
+                                both domestically and from abroad for meeting various end use demands. These include
+                                both the conventional energy sources, such as coal, oil, natural gas, hydropower, and
+                                nuclear power, as well as renewable energy sources (RES), such as wind, solar, biomass,
+                                and so on. The availability of each of these fuels is represented by constraints in the
+                                supply side. The relative energy prices of various forms and sources of fuels dictate
+                                the choice of fuels, which play an integral role in capturing inter-fuel and
+                                inter-factor substitution within the model. Some of the studies that have used TERI’s
+                                MARKAL model include TERI (2006; 2012; 2013; 2015), Sachs et al. (2014), and Sharma
+                                and Kumar (2016).
+                            </p>
+                        </section>
+                    </div>
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script>
+    $('.content_btn').hide();
+</script>
+</body>
+
+</html>
+
+

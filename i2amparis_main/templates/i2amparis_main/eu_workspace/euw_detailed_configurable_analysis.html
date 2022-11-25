@@ -1,0 +1,285 @@
+{% load static %}
+{% csrf_token %}
+<div class="tab-pane" id="scientific_tool">
+    <div class="container" style="width: 90%; height:100%;">
+        <div class="row" style="margin-top: 8em; height: 90vh">
+
+            <div class="tooltip-demo col-sm-12 col-xs-12 ">
+                <h2 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help;"
+                    data-toggle="tooltip" data-placement="auto"
+                    title="<p>These are the results of the analysis for a selected model, region,
+                                variable(s), scenario in function of time.</p>">
+                    Detailed Configurable Analysis
+                </h2>
+            </div>
+            <div class="tooltip-demo col-md-12 col-xs-12 ">
+                <p style="background:transparent; box-shadow: none;">
+                    Please, select one or more options from the available fields below. Keep in mind that the
+                    selection of multiple values is only allowed for one field at a time (model, scenario, region or
+                    variables).
+                </p>
+                <div style="display: none">
+                    <div class="col-xs-12 col-md-12">
+                        <label class="form-group" style="display: inline-block">Filtering</label>
+                        <div class="tooltip-demo" style="display: inline-block; margin-left: 0.3em">
+                            <i class="fa fa-info-circle"
+                               style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; cursor: help;"
+                               data-toggle="tooltip" data-placement="auto"
+                               title="<p><strong>Basic</strong> filtering allows the selection options related to any of the currently selected options. <br>
+                        <strong>Strict</strong> filtering allows the selection of options related to all currently selected options</p>">
+                            </i>
+                        </div>
+                    </div>
+                    <div class="btn-group col-xs-6 col-md-2" data-toggle="buttons" id="detailed_filtering"
+                         style="display: block; margin-bottom: 1em">
+                        <label class="btn btn-primary active"
+                               style="border-top-left-radius: 5px ; border-bottom-left-radius: 5px">
+                            <input type="radio" name="detailed_filtering_input" id="detailed_basic" value="basic"
+                                   checked>Basic
+                        </label>
+                        <label class="btn btn-primary"
+                               style="border-top-right-radius: 5px ; border-bottom-right-radius: 5px">
+                            <input type="radio" name="detailed_filtering_input" id="detailed_strict" value="strict">
+                            Strict
+                        </label>
+                    </div>
+
+                </div>
+                <div class="btn-group col-xs-12 col-md-2" data-toggle="buttons" id="sdg_filtering"
+                     style="display: block; margin-bottom: 1em">
+                    <label class="btn btn-primary active"
+                           style="border-top-left-radius: 5px ; border-bottom-left-radius: 5px">
+                        <input type="radio" name="sdg_filtering_input" id="all_variables" value="all_variables"
+                               checked>All Variables
+                    </label>
+                    <label class="btn btn-primary"
+                           style="border-top-right-radius: 5px ; border-bottom-right-radius: 5px">
+                        <input type="radio" name="sdg_filtering_input" id="sdg_variables" value="sdg_variables">
+                        SDGs
+                    </label>
+                </div>
+
+                <div class="col-xs-12 col-md-8"></div>
+                <div class="col-xs-12 col-md-2">
+                    <a id="clear-button"
+                       class="button btn btn-default openbtn"
+                       style="background-color: rgba(172,31,0,0.8);color: white;padding: 0.1em 0.5em 0.1em 0.5em;height: inherit;line-height: 2em; width: 100%; position: relative; ">
+                        Clear All <i style="margin-left: 0.3em" class="fa fa-trash-o"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="form-group col-md-12" disabled="disabled">
+                <div class="col-xs-12 col-md-3">
+                    <select class="desc_text take_up_space sdg-select" placeholder="Select an SDG"
+                            id="sdg_select" style="width: 100%;">
+                        <option value="No Poverty">SDG 1: No Poverty</option>
+                        <option value="Zero Hunger">SDG 2: Zero Hunger</option>
+                        <option value="Affordable & Clean Energy">SDG 7: Affordable & Clean Energy</option>
+                        <option value="Decent Work & Economic Growth">SDG 8: Decent Work & Economic Growth</option>
+                        <option value="Industry, Innovation & Infrastructure">SDG 9: Industry, Innovation &
+                            Infrastructure
+                        </option>
+                        <option value="Responsible Consumption & Production">SDG 12: Responsible Consumption &
+                            Production
+                        </option>
+                        <option value="Climate Action">SDG 13: Climate Action</option>
+                        <option value="Life on Land">SDG 15: Life on Land</option>
+                    </select>
+                </div>
+                <div class="col-xs-12 col-md-9"></div>
+            </div>
+            <div class="selects-filters col-md-12 col-xs-12">
+
+                <div class="col-md-3 col-xs-12 form-group">
+                    <label for="variable_name" style="padding: 0; display: inline-block">Variables </label>
+                    <div style="display: inline-block; margin-left: 0.4em; position:relative; bottom:0.1em;">
+                        <a class=" disabled-select clear-sel-button button btn btn-default openbtn "
+                           data-sel_clear="variable_name"
+                           style="background-color: rgba(172,31,0,0.8);color: white;height: inherit; font-size: 11px; padding: 0em 0.4em 0em 0.4em">x
+                        </a>
+                    </div>
+                    <select class=" disabled-select desc_text take_up_space boot-select" data-dbname="variable"
+                            placeholder="Select Variable(s)"
+                            id="variable_name" style="width: 100%">
+                        {% for el in variables %}
+                            <option value="{{ el.name }}">{{ el.title }}</option>
+                        {% endfor %}
+                    </select>
+
+                </div>
+
+                <div class="col-md-3 col-xs-12 form-group">
+                    <label for="region_name" style="display: inline-block;">Regions </label>
+                    <div style="display: inline-block; margin-left: 0.4em; position:relative; bottom:0.1em;">
+                        <a class=" disabled-select clear-sel-button button btn btn-default openbtn "
+                           data-sel_clear="region_name"
+                           style="background-color: rgba(172,31,0,0.8);color: white;height: inherit; font-size: 11px; padding: 0em 0.4em 0em 0.4em">x
+                        </a>
+                    </div>
+                    <select class=" disabled-select desc_text take_up_space mul-select boot-select" data-dbname="region"
+                            multiple="multiple"
+                            placeholder="Select Region(s)"
+                            id="region_name" style="width: 100%">
+                        {% for el in regions %}
+                            <option value="{{ el.name }}">{{ el.title }}</option>
+                        {% endfor %}
+                    </select>
+                    <div style="float: left">
+                        <a id="dca-var-next-btn" class="button btn btn-default openbtn "
+                           style="background-color: #97AE21; color: white;height: inherit; font-size: 13px; padding: 0.4em 0.5em 0.4em 0.5em">Next
+                            <i style="margin-left: 0.3em" class="fa fa-play"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-xs-12 form-group">
+                    <label for="scenario_name" style="display: inline-block;">Scenarios</label>
+                    <div style="display: inline-block; margin-left: 0.4em; position:relative; bottom:0.1em;">
+                        <a class=" disabled-select clear-sel-button button btn btn-default openbtn"
+                           data-sel_clear="scenario_name"
+                           style="background-color: rgba(172,31,0,0.8);color: white;height: inherit; font-size: 11px; padding: 0em 0.4em 0em 0.4em">x
+                        </a>
+                    </div>
+                    <select class=" disabled-select desc_text take_up_space mul-select boot-select"
+                            data-dbname="scenario"
+                            multiple="multiple"
+                            placeholder="Select Scenario(s)"
+                            id="scenario_name" style="width: 100%">
+                        {% for el in scenarios %}
+                            <option value="{{ el.name }}">{{ el.title }}</option>
+                        {% endfor %}
+                    </select>
+                    <div style="float: left" hidden>
+                        <a id="dca-region-next-btn" class=" button btn btn-default openbtn "
+                           style="background-color: #97AE21; color: white;height: inherit; font-size: 13px; padding: 0.4em 0.5em 0.4em 0.5em">Next
+                            <i style="margin-left: 0.3em" class="fa fa-play"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-xs-12 form-group">
+                    <label for="model_name" style="display: inline-block;">Models</label>
+                    <div style="display: inline-block; margin-left: 0.4em; position:relative; bottom:0.1em;">
+                        <a class="clear-sel-button button btn btn-default openbtn" data-sel_clear="model_name"
+                           style="background-color: rgba(172,31,0,0.8);color: white;height: inherit; font-size: 11px; padding: 0em 0.4em 0em 0.4em">x
+                        </a>
+                    </div>
+                    <select class="desc_text take_up_space mul-select boot-select" data-dbname="model"
+                            placeholder="Select Model(s)"
+                            multiple="multiple"
+                            id="model_name" style="width: 100%">
+                        {% for el in models %}
+                            <option value="{{ el.name }}">{{ el.title }}</option>
+                        {% endfor %}
+                    </select>
+                    <div style="float: left" hidden>
+                        <a id="dca-scenario-next-btn" class=" button btn btn-default openbtn "
+                           style="background-color: #97AE21; color: white;height: inherit; font-size: 13px; padding: 0.4em 0.5em 0.4em 0.5em">Next
+                            <i style="margin-left: 0.3em" class="fa fa-play"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-xs-12 col-md-12">
+                <div id="dca_progress_bar" class="progress col-md-10 col-xs-12" style="padding: 0; top: 1em">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="2"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                        <span class="sr-only">25% Complete</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-12 disabled-select">
+                    <a id="run-button"
+                       class="button btn btn-default openbtn green"
+                       style="background-color: rgba(151, 174, 33, 0.8);color: white;padding: 0.1em 2.5em 0.1em 2.5em;height: inherit;line-height: 2em ; width: 100% ; ">Run
+                        <i style="margin-left: 0.3em" class="fa fa-spinner"></i>
+                    </a>
+                </div>
+                <div id="detailed_configurable_progress_text" class="col-md-12 col-xs-12">
+                    <p>Please select Model(s) . . .</p>
+                </div>
+            </div>
+            <div class="btn-group col-xs-12 col-md-12" data-toggle="buttons" id="visualisation_type_selection"
+                 style="display: block; margin-bottom: 1em; margin-top: 1em">
+                <label class="btn btn-primary active col-md-2 col-xs-6"
+                       style="border-radius: 5px; margin: 2px">
+                    <input type="radio" name="visualisation_input" id="linechart" value="show_line_chart"
+                           checked>Line Chart
+                </label>
+                <label class="btn btn-primary col-md-2 col-xs-6"
+                       style="border-radius: 5px ;margin: 2px">
+                    <input type="radio" name="visualisation_input" id="columnchart" value="show_column_chart">
+                    Column Chart
+                </label>
+                <label class="btn btn-primary col-md-2 col-xs-6"
+                       style="border-radius: 5px; margin: 2px; display: none">
+                    <input type="radio" name="visualisation_input" id="piechart" value="show_pie_chart">
+                    Pie Chart
+                </label>
+            </div>
+
+
+            <div class="row" style="height: 75vh">
+                <div class="col-sm-9 col-xs-12" style="height: 100%; margin-top: 2em">
+                    <div id="viz_frame_div" class="row" style="height: 100%; line-height: 100%;">
+                        <iframe id="viz_iframe" src="" title="Results"
+                                style="width: 100%; height: 100%;  border:none"></iframe>
+                        <div id="loading_bar"
+                             style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                            <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                                 src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                            <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">These are the results of the analysis for the selected model,
+                                    region,
+                                    variable(s), scenario in function of time.
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <div hidden id="chart-side-info" style="height: 100%; margin-top: 2em" class="col-sm-3 col-xs-12">
+                    <div class=""><p style="font-size: 0.9em">The chart on the left shows the model analysis results in
+                        function of time for:</p>
+                        <div id="updated-chart-info">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-xs-12 col-md-12" style="margin-top: 1em">
+            <button style="background-color: #e78b10; font-weight: bold"
+                    class="button btn btn-default openbtn" type="button"
+                    data-toggle="collapse" data-target="#legend_detailed">
+                Show Legend
+            </button>
+        </div>
+        <div class="col-md-3 col-xs-12 form-group" style="display: none">
+            <select class="hidden-var-container" style="width: 100%">
+                {% for el in variables %}
+                    <option value="{{ el.name }}" data-type="{{ el.agg_func }}">{{ el.title }}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+        {% include "i2amparis_main/paris_reinforce_workspace/prw_wawh_tools_scenario_region_legend.html" %}
+
+
+    </div>
+    {% include "i2amparis_main/paris_reinforce_workspace/paris_workspace_detailed_configurable_analysis_datatables.html" %}
+
+
+</div>
+
+

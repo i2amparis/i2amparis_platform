@@ -1,0 +1,119 @@
+{% extends "base_template.html" %}
+{%  load static %}
+{% block css %}
+
+    <style>
+    .checked {
+        color: orange;
+    }
+    .field{
+        width: 100%;
+    }
+    .rating_star{
+        cursor: pointer;
+    }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <section id="section-evaluate" class="section appear clearfix" style="">
+        <div class="container" style="">
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="section-header">
+                        <h2 class="section-heading animated" data-animation="bounceInUp">Evaluate us</h2>
+                        <h3>We need your feedback!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <div id="sendmessage">Your evaluation has been sent. Thank you!</div>
+                    <div id="errormessage">Something went wrong! Please try again later!</div>
+                    <form action="{% url 'feedback_form:home' %}" role="form" method="POST" class="ui form contactForm">
+                        {% csrf_token %}
+
+                        <div class="field form-group" style="margin-bottom: 10px"><label class="" for="username">Username</label>
+                            <input class=" form-control" name="username" id="username" value="" placeholder="Your Username"
+                                   data-rule="minlen:2"
+                                   data-msg="Please enter at least 2 chars" required>
+
+                            <div class="validation "></div>
+                        </div>
+                        <div class="field  form-group" style="margin-bottom: 10px"><label for="email" class="">Email</label>
+                            <input class=" form-control" name="email" id="email" value="" placeholder="Your Email"
+                                   data-rule="email"
+                                   data-msg="Please enter a valid email" required>
+
+                            <div class="validation "></div>
+                        </div>
+                        <div class="field form-group" style="margin-bottom :10px;"><label for="id_service" class="">About</label>
+                            <select class="form-control" name="service" id="id_service">
+                                <option value="The Platform in General">The Platform in General</option>
+                                <option value="Dynamic Model Documentation">Dynamic Model Documentation</option>
+                                <option value="Overview and Comparative Assessment">Overview and Comparative Assessment</option>
+                                <option value="Detailed Model Documentation">Detailed Model Documentation</option>
+                                <option value="Visualisation Engine">Visualisation Engine</option>
+                            </select>
+                        </div>
+                        <div class="field form-group" style="margin-bottom: 10px"><label class="" for="id_details">Details</label>
+                            <textarea class="form-control" name="details" id="id_details" required style="height: 10em"></textarea>
+                        </div>
+                        <div class="field form-group">
+                            <label class="" for="id_rating">Star Rating</label>
+                            <div class="" id="id_star_rating" style="display: inline-block; margin: 2em; font-size: 1.5em ">
+                                <span id="1" class="fa fa-star rating_star"></span>
+                                <span id="2" class="fa fa-star rating_star"></span>
+                                <span id="3" class="fa fa-star rating_star"></span>
+                                <span id="4" class="fa fa-star rating_star"></span>
+                                <span id="5" class="fa fa-star rating_star"></span>
+                            </div>
+                            <input data-msg="Please rate using 1 to 5 stars" data-rule="min-stars" name="rating"
+                                   id="id_rating" value="0" hidden required>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LewHqEdAAAAAG7A1uY2PJJbdLksCuhlD_N4k49j"></div>
+                        </div>
+                        <input id="submit-button" class="btn btn-sm btn-primary pull-left line-btn green" type="submit"/>
+                    </form>
+                </div>
+                <!-- ./span12 -->
+            </div>
+
+        </div>
+    </section>
+
+
+
+{% endblock %}
+
+{% block js %}
+    <script src={% static "evaluationform.js" %}></script>
+
+    <script>
+         $( document ).ready(function() {
+             $('.rating_star').click(function () {
+                 var chosen_star = $(this).attr('id');
+                 for (var i=1; i<=5; i++){
+                     if(i<=chosen_star) {
+                         $('.rating_star#' + String(i)).addClass("checked")
+                     }
+                     else{
+                          $('.rating_star#' + String(i)).removeClass("checked")
+                     }
+                 }
+                 $('#id_rating').val(String(chosen_star));
+             })
+
+
+        });
+
+    </script>
+
+
+{% endblock %}

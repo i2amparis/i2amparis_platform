@@ -1,0 +1,152 @@
+{% extends "base_template_harmonisation_manual.html" %}
+{% load static %}
+{% csrf_token %}
+{% block css %}
+
+    <style>
+        .heading {
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .heading a {
+            font-size: 0.9em;
+        }
+
+        .desc_text {
+            font-size: 0.8em;
+        }
+
+        .take_up_space {
+            min-height: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .text_take_up_space {
+            min-height: 10em;
+            margin-bottom: 1em;
+        }
+
+        td {
+            font-size: 0.8em;
+            background-color: rgba(246, 250, 238, 0.5);
+            color: #2a2a2e;
+        }
+
+        td.light-grey {
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 1em;
+        }
+
+        .service-col {
+            text-align: center;
+            height: 100%;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <link rel="stylesheet" href={% static "model_list_css.css" %}>
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="width: 85%; height:100%;">
+        <div style="margin-top: 4em;text-align: center"><img style=" height: 7em;"
+                                                             src={% static "logos/paris_reinforce_logo.png" %}></div>
+        <div class="row menu-container" style="height: 130vh">
+            <div class="row">
+
+                <div class="col-md-6 col-xs-12 service-col scientific_mod" style="cursor: pointer ;padding-bottom: 0">
+                    <div class="">
+                        <img style="width: 14em" onmouseover="this.src='../static/logos/advanced.png'"
+                             onmouseout="this.src='../static/logos/advanced_hover.png'"
+                             src={% static "logos/advanced.png" %}>
+                    </div>
+                    <h2><a href="scientific_module" class="scientific_mod">Where is the world headed?
+                    </a>
+                    </h2>
+                    <p>An advanced, scientific overview of selected results, and access to all datasets, produced in the
+                        analysis of this workspace. </p>
+                </div>
+                <div class="col-md-6 col-xs-12 service-col conclusions" style="cursor: pointer; padding-bottom: 0">
+                    <div class="">
+                        <img style="width: 14em" onmouseout="this.src='../static/logos/means.png'"
+                             onmouseover="this.src='../static/logos/means_hover.png'"
+                             src={% static "logos/means.png" %}>
+
+                    </div>
+                    {#                    <h2><a href="pr_wwh/conclusions" class="prw_conclusions">Cool… what does that mean?</a>#}
+                    <h2><a href="conclusions" class="conclusions">Cool… what does that mean?</a>
+                    </h2>
+                    <p>A user-friendly, public interface featuring a summary of, and insights from, the multi-model
+                        analysis for all interested audiences. </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-xs-12 service-col harm" style="cursor: pointer; padding-bottom: 0">
+                    <div class="">
+                        <img style="width: 14em" onmouseover="this.src='../static/logos/heatmap.png'"
+                             onmouseout="this.src='../static/logos/heatmap_hover.png'"
+                             src={% static "logos/heatmap.png" %}>
+                    </div>
+                    <h2><a href="harmonisation_table" class="harm">Variable harmonisation heatmap</a></h2>
+                    <p>A heatmap indicating how different variables are handled (input or output) across the models used
+                        in this multi-model analysis workspace. Rows present socio- and techno-economic variables;
+                        columns correspond to models. Definitions, type of interlinkages, and access to input datasets
+                        and documentations available for each variable and/or model.</p>
+                </div>
+
+                <div class="col-md-6 col-xs-12 service-col digital_lib" style="cursor: pointer; padding-bottom: 0">
+                    <div class="">
+                        <img style="width: 14em" onmouseout="this.src='../static/logos/library.png'"
+                             onmouseover="this.src='../static/logos/library_hover.png'"
+                             src={% static "logos/library.png" %}>
+                    </div>
+                    <h2><a href="virtual_library" class="digital_lib">Virtual library</a>
+                    </h2>
+                    <p>A collection of scientific publications, policy briefs, databases, and other material related to
+                        this workspace.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+{% endblock %}
+
+
+{% block js %}
+
+    <script>
+        $(document).on('click', 'div.harm', function (e) {
+            $("a.harm")[0].click()
+        });
+        $(document).on('click', 'div.scientific_mod', function (e) {
+            $("a.scientific_mod")[0].click()
+        });
+        $(document).on('click', 'div.conclusions', function (e) {
+            $("a.conclusions")[0].click()
+        });
+        $(document).on('click', 'div.digital_lib', function (e) {
+            $("a.digital_lib")[0].click()
+        });
+
+    </script>
+
+{% endblock %}
+
+
+
+
+
+

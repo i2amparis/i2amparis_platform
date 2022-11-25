@@ -1,0 +1,537 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#poles_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model POLES</span>
+                                    <a style="display: none"
+                                       href="#poles_key_features">Key features of the model POLES</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#poles_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#poles_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#poles_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#poles_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#poles_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#poles_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#poles_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#poles_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#42_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The POLES model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="poles_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>The Prospetive outlook on energy systems (POLES) is a partial equilibrium model that
+                                  represents detailed world energy system dynamics. It explores the interactions between
+                                  the energy systems and climate. The role of POLES is put incoherence detailed
+                                  informations from the supply, transformation and use of energy to provide scientific
+                                  insights onthe world and detailed country level of energy decarbonsation pathways.
+                                  The model components provide a faithful representation of the best current scientific
+                                  understanding of underlying behaviour.</p>
+                              <p>POLES allows users to explore what-if scenarios, quantifying the implications of
+                                  possible future conditions. These outputs are not predictions of the future; they are
+                                  a way of analysing the potential impacts of different assumptions about future
+                                  conditions. POLES reads in external “scenario assumptions” about key drivers (e.g.,
+                                  population, economic activity, technology, and policies) and then assesses the
+                                  implications of these assumptions on key scientific or decision-relevant outcomes
+                                  (e.g., commodity prices, energy use and emissions).</p>
+                              <p>POLES has been used to produce scenarios for national and international assessments in
+                                  the two last IPCC scenarios (sources).</p>
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="poles_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the POLES model</h2>
+                              <p>POLES takes in a set of assumptions and then processes those assumptions to create a
+                                  full scenario of prices, energy and other transformations, and commodity and other
+                                  flows across regions and into the future. The energy, economy and climate systems are
+                                  interconnected and interact with each other (see the figure below). The interactions
+                                  between these different modules are modelled as one integrated whole.</p>
+                                <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/poles_figure1.png" %}">
+                                  <div style="text-align: center">
+
+                                  </div>
+                              </div>
+                              <p><b>Geographic coverage</b></p>
+                              <p>The POLES core represents the entire world, but it is constructed with different levels
+                                  of resolution for each of these different systems. The energy-economy system operates
+                                  at 66 geopolitical regions globally , 88 oil producers, gas producers, coal producers</p>
+                              <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/poles_figure2.png" %}">
+                                  <div style="text-align: center">
+
+                                  </div>
+                              </div>
+                              <p>The structure of the energy system consists of four main elements: resource production,
+                                  energy transformation, final energy consumption and end-use (see the figure below).
+                                  It also tracks international trade in energy commodities. All the different elements
+                                  of POLES interact through market prices and physical flows.</p>
+
+                              </p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="poles_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>Emissions pathways by scenario exogenous
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="poles_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p><b>Economic growth</b></p>
+                              <p>Population and economic activity are determined exogenously.</p>
+                              <p><b>Industrial sector growth</b></p>
+                              <p>Industrial sector growth Growth is based on a pre-defined GDP elasticity which
+                                  decreases over time, thus assuming saturation of industrial demand with rising
+                                  incomes. The values of these elasticities vary per region and between different SSPs.
+                                  Apart from a GDP elasticity, industrial demand also depends on an assumed price
+                                  elasticity for industrial energy use.</p>
+                              <p><b>Transport sector growth</b></p>
+                              <p>Per capita demand for passenger transport depends on an assumed GDP per capita
+                                  elasticity and price elasticity, which means that more transport services are demanded
+                                  at higher incomes and cheaper transport. However, there is also a time cost involved
+                                  in transport, which increases proportionally with GDP per capita, and which is summed
+                                  to the capital and energy costs of transport. This means that, at higher incomes,
+                                  demand for passenger transport slowly saturates due to the price elasticity multiplied
+                                  by the increasing costs of time. Also, demand shifts to faster ways of transport, for
+                                  which time costs are lower. Demand for freight transport, like for industrial sectors,
+                                  depends on an assumed GDP elasticity and price elasticity.</p>
+                              <p><b>Building sector growth</b></p>
+                              <p>Demand for energy services in residential and commercial buildings is primarily by
+                                  total building floor space, which is driven by GDP per capita, and saturates at a
+                                  given maximum value, defined per region. Per unit of floor space, demand for energy
+                                  services increases over time depending on the relative price of the service, and the
+                                  difference between the base year saturation and the defined maximum saturation for a
+                                  certain service. For heating and cooling services, the maximum saturation depends on
+                                  regionally explicit heating and cooling degree days.</p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="poles_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>POLES is a technology-rich model that represents most major fossil fuel and low-carbon
+                                  technologies that are envisaged to be available for at least the first half of the
+                                  21st century. By simulating the substitution of low-carbon for high-carbon
+                                  technologies in response to their relative costs, as well as emissions constraints
+                                  and/or carbon prices, the POLES model simulates mitigation through a large set of
+                                  different measures.
+                                Also, certain assumption sets can be loaded from climate models for heating and cooling
+                                  degree days, which are consistent with a certain temperature target. Through these
+                                  assumptions, the model adapts to the simulated reality through the allocation of
+                                  building service demands.
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="poles_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>The representative agents in the modules use information on prices and make decisions
+                                  about the allocation of resources. They represent, for example, regional electricity
+                                  producers or regional energy demand sectors who have to allocate generation by
+                                  technology or energy demand mix. Markets are the means by which international prices
+                                  are result of confrontation of demand and supply for oil, gas, coal, biomass or
+                                  uranium.  In other words, market equilibrium is assumed to take place in each one of
+                                  these markets (partial equilibrium), and not in the entire economy across all markets
+                                  (general equilibrium). The POLES solution process is the process of recursive
+                                  iterating on market prices until this equilibrium is reached.</p>
+                              <p>As an example, POLES derives a demand for natural gas starting with all of the uses to
+                                  which natural gas might be put, such as power generation, hydrogen production,
+                                  heating, cooling and cooking, other industrial energy uses or passenger and freight
+                                  transport. POLES then calculates the amount of natural gas that suppliers would like
+                                  to supply given their reserves and the market price.</p>
+                              <p>POLES is a dynamic recursive model, meaning that decision-makers do not know the future
+                                  when making a decision today. The POLES version used is typically operated in year by
+                                  year-year time steps up to 2100 as the final simulation year.</p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="poles_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>Key scenario assumptions for the POLES model include socioeconomics (population, GDP);
+                                  energy technology characteristics (e.g. costs, performance, water requirements);
+                                  energy and other resources, such as fossil fuels, wind, solar, uranium; and policies,
+                                  including emissions constraints, renewable portfolio standards, etc.</p>
+                              <p>Key scenario results (outputs) from the POLES model include an analysis of the energy
+                                  system (energy demands, flows, technology deployments, and prices throughout); prices
+                                  and supplies of all agricultural and forest products, land use and land use change;
+                                  water demands and supplies for all agricultural, energy, and household uses; and
+                                  emissions for greenhouse gases and pollutents.</p>
+                              <p>Parameters can be revised and updated in the framework of this project, following the
+                                  feedback of local experts (stakeholder engagement), the comparative assessment with
+                                  other modelling experiences, and the discussion with the partners (modellers).</p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="poles_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>POLES can be used to explore the implications of different future policies like :</p>
+                              <p><b>Emissions-related policies</b></p>
+                              <p>There are three main policy approaches that can be applied in POLES to reduce emissions
+                                  of CO2 or other GHGs: carbon/GHG prices, emissions constraints, or climate
+                                  constraints. In all cases, GCAM implements the policy approach by placing a price on
+                                  emissions. This price then filters down through all systems in GCAM and alters
+                                  production and demand. For example, a price on carbon would put a cost on emitting
+                                  fossil fuels. This cost would then influence the cost of producing electricity from
+                                  fossil-fired power plants that emit CO2, which would then influence their relative
+                                  cost compared to other electricity generating technologies and increase the price of
+                                  electricity. The increased price of electricity would then make its way to consumers
+                                  that use electricity, decreasing its competitiveness relative to other fuels and
+                                  leading to a decrease in electricity demand.</p>
+                              <p>Carbon or GHG prices: POLES users can directly specify the price of carbon or GHG
+                                  emissions. Given a carbon price, the resulting emissions will vary depending on other
+                                  scenario drivers, such as population, GDP, resources, and technology.
+                                  Emissions constraints: POLES users can specify the total amount of (CO2 or other GHG)
+                                  emissions as well. POLES will then calculate the price of carbon needed to reach the
+                                  constraint in each period of the constraint.
+                                  Climate constraints: POLES users can specify a climate variable (e.g. concentration or
+                                  radiative forcing) target for a particular year. Users determine whether that target
+                                  can be exceeded prior to the target year.</p>
+                              <p><b>Energy production policies</b></p>
+                              <p>POLES can explore the implications of a constraint on production or a minimum
+                                  production requirement which allows POLES users to model policies such as renewable
+                                  portfolio standards and biofuels standards. Across sectors, these constraints must be
+                                  applied as quantity constraints, but they can be applied as share constraints within
+                                  individual sectors (e.g. fraction of electricity that comes from solar power). In
+                                  implementing these policies, users can set either a lower bound or an upper bound.
+                                  The model will solve for the tax (upper bound) or subsidy (lower bound) required to
+                                  reach the given constraint.</p>
+
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="poles_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                 POLES does not automatically calculate the implications on non-climate SDGs of its
+                                  least-cost energy system to meet prescribed climate or emissions constraints. However,
+                                  it is possible to use its outputs and calculate the predictions for certain indicators
+                                  framed in the SDG agenda.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="poles_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.jhydrol.2019.04.046</td>
+                                          <td>
+                                              Global agricultural green and blue water consumption under future climate
+                                              and land use changes
+                                          </td>
+                                          <td>
+                                             Global crop green water consumption will increase by 12% in 2090s when
+                                              compared with that in 1971–2000, and climate change will dominate over
+                                              land use change in determining the trend of global crop green water
+                                              consumption. However, expansion in global irrigated area will dominate the
+                                              changing trend of global crop blue water consumption which increases 70%
+                                              by 2090s, especially in regions with significant irrigated land expansion
+                                              (e.g. northern Africa, central Asia, China, Mexico, the Middle East,
+                                              Russia, southern Asia, and Argentina). Furthermore, global crop blue water
+                                              dependence will increase under climate and land use changes, especially in
+                                              arid regions.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/S2542-5196(18)30029-9</td>
+                                          <td>
+                                              Health co-benefits from air pollution and mitigation costs of the Paris
+                                              Agreement
+                                          </td>
+                                          <td>
+                                            The health co-benefits substantially outweighed the policy cost of achieving
+                                              the 2°C target. The ratio of health co-benefit to mitigation cost ranged
+                                              from 1.4 to 2.45, depending on the scenario. At the regional level, the
+                                              costs of reducing GHG emissions could be compensated with the health
+                                              co-benefits alone for China and India, whereas the proportion the
+                                              co-benefits covered varied but could be substantial in the European Union
+                                              (7–84%) and USA (10–41%), respectively. Finally, we found that the extra
+                                              effort of trying to pursue the 1.5°C target instead of the 2°C target
+                                              would generate a substantial net benefit in India (US$3.28–8.4 trillion)
+                                              and China ($0.27–2.31 trillion).
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              10.1126/science.aad5761
+                                          </td>
+                                          <td>
+                                              Can Paris pledges avert severe climate change?
+                                          </td>
+                                          <td>
+                                              To limit warming to any level, CO2 emissions at the global level must
+                                              ultimately be brought to zero. If emissions are not brought swiftly to
+                                              zero beyond 2100, the chances of extreme temperature change after 2100
+                                              could be much higher and the chance of limiting warming to 2°C much lower.
+                                              The Paris scenarios reduce probabilities of extreme warming and increase
+                                              the probability of limiting global warming to 2°C this century.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the Euro-Calliope model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="42_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Stéphane Allard, Silvana Mima, Vincent Debusschere, Tuan Tran Quoc, Patrick Criqui,
+                                et al.. European transmission grid expansion as a flexibility option in a scenario of
+                                large scale variable renewable energies integration.</p>
+                            <p>Energy Economics, Elsevier, 2020, pp.104733. ⟨10.1016/j.eneco.2020.104733⟩ .</p>
+                            <p>Mantulet, Gabin, Bidaud, Adrien and  Mima, Silvana. 2019. "The role of biomass
+                                gasification and methanisation in the decarbonisation strategies." Energy:Available
+                                online 16 December 2019, 116737, pp. 1-19.</p>
+                                    <p>Luderer, G., Pehl, M., Arvesen, A. et al. Environmental co-benefits and adverse
+                                        side-effects of alternative power sector decarbonization strategies. Nat Commun
+                                        10, 5229 (2019) doi:10.1038/s41467-019-13067-8    Applied Energy 240 (2019)
+                                        964–985</p>
+                            <p>Katerina Kermeli, OreaneY. Edelenbosch, Wina Crijns-Graus, BasJ.vanRuijven, Silvana Mima,
+                                Detlef P.vanVuuren, Ernst Worrell </p>
+                            <p>The scope for better industry representationin long-term energy models: Modeling the
+                                cement industry. journal homepage: www.elsevier.com/locate/apenergy</p>
+                            </p>
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

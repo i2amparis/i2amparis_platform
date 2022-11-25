@@ -1,0 +1,148 @@
+{
+	"dataset": "dataset_1",
+	"query_configuration":{
+		"select": ["variable_1", "variable_2"],
+		"filter": {"operand_1": [
+						{"operand_1": "variable_3",
+						"operand_2": 5,
+						"operation": ">"},
+
+						{"operand_1": "variable_4",
+						 "operand_2": [1,2],
+						 "operation": "between"},
+
+						 {"operand_1": "variable_5",
+						  "operand_2": ['value1', 'value2', 'value3'],
+						  "operation": "in" }
+					],
+					"operand_2":{
+						{"operand_1": "variable_3",
+						 "operand_2": 500.
+						 "operation": "<"}
+					},
+					"operation": "or"
+					} ,
+
+		"ordering":[
+			    {"parameter": "variable_8",
+			    "ascending": true},
+			    {"parameter": "variable_9",
+			     "ascending": true}
+			     ]
+	    ,
+
+		"grouping": {
+			"params":["variable_1", "variable_2"],
+			"aggregated_params": [
+				{"name": "variable_3",
+				 "agg_func": "Sum"},
+				{"name": "variable_4",
+				 "agg_func": "Avg"}
+				 ]
+			}
+
+		},
+	"additional_app_parameters":{}
+}
+
+#### alternative
+{
+	"dataset": "dataset_1",
+	"query_configuration":{
+		"select": ["variable_1", "variable_2"],
+		"filter": {"and": [
+						{"operand_1": "variable_3",
+						"operand_2": 5,
+						"operation": ">"},
+
+						{"operand_1": "variable_4",
+						 "operand_2": [1,2],
+						 "operation": "between"},
+
+						 {"operand_1": "variable_5",
+						  "operand_2": ['value1', 'value2', 'value3'],
+						  "operation": "in" }
+					],
+					"or":[
+						{"operand_1": "variable_3",
+						 "operand_2": 500.
+						 "operation": "<"}
+					]
+					} ,
+
+		"ordering":[
+			    {"parameter": "year",
+			    "ascending": true},
+			     ]
+	    ,
+
+		"grouping": {
+			"params":["variable_1", "variable_2"],
+			"aggregated_params": [
+				{"name": "variable_3",
+				 "agg_func": "Sum"},
+				{"name": "variable_4",
+				 "agg_func": "Avg"}
+				 ]
+			}
+
+		},
+	"additional_app_parameters":{}
+}
+
+
+######Specific query
+
+{
+	"dataset": "dataset_1",
+	"query_configuration":{
+		"select": ["variable_1", "variable_2"],
+		"filter": {"and": [
+						{"operand_1": "variable_3",
+						"operand_2": 5,
+						"operation": ">"},
+
+						{"operand_1": "variable_4",
+						 "operand_2": [1,2],
+						 "operation": "between"},
+
+						 {"operand_1": "variable_5",
+						  "operand_2": ['value1', 'value2', 'value3'],
+						  "operation": "in" }
+					],
+					"or":[
+						{"operand_1": "variable_3",
+						 "operand_2": 500.
+						 "operation": "<"}
+					]
+					} ,
+
+		"ordering":[
+			    {"parameter": "variable_8",
+			    "ascending": true},
+			    {"parameter": "variable_9",
+			     "ascending": true}
+			     ]
+	    ,
+
+		"grouping": {
+			"params":["variable_1", "variable_2"],
+			"aggregated_params": [
+				{"name": "variable_3",
+				 "agg_func": "Sum"},
+				{"name": "variable_4",
+				 "agg_func": "Avg"}
+				 ]
+			}
+
+		},
+	"additional_app_parameters":{}
+}
+
+
+
+operation_examples: "< , > , <> , = , between, in "
+Aggregation functions: Sum, Count, Min, Max, Avg
+operands in [] are considered AND
+OR is explicitly stated (works for AND as well)
+KEEP IN MIND! variable names can be from "joined tables" as well,  eg. model__name etc.

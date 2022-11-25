@@ -1,0 +1,102 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h1 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+        Methods
+    </h1>
+</div>
+<span id="methods" style="position: relative; top:-7em"></span>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    <p class="col-xs-12 col-sm-12 col-md-12">
+        Our global public interface focuses on inter-model differences regarding emissions projections.
+    </p>
+    <p class="col-xs-12 col-sm-12 col-md-12">
+        We carry out projections across numerous Integrated Assessment Models with a specific focus on <strong>policy
+        representation</strong> and <strong>harmonisation methods</strong>.
+    </p>
+    <p class="col-xs-12 col-sm-12 col-md-12">
+        <strong>We used four different scenarios for representing policies:</strong>
+        Two scenarios for up to 2030, corresponding to <strong>Current Policies</strong> and <strong>Nationally
+        Determined Contributions</strong>, and two
+        different ways of extrapolating after 2030 accordingly (to represent possible interpretations of continued
+        ambition). NDC scenarios were modelled on top of Current Policies. The first post-2030 extension method takes
+        the equivalent carbon price in 2030, increasing it with GDP per capita; the second method takes the rate of
+        emissions intensity reductions implied between 2020 and 2030 and applies it after 2030.
+    </p>
+
+    <p class="col-xs-12 col-sm-12 col-md-12">
+
+        <strong>Harmonisation Methods: </strong>Harmonisation efforts have been undertaken as a novelty in multi model
+        comparison bearing
+        in mind differences across model features and heterogeneity. Expert users of models within the PR modelling
+        consortium have conducted a coordinated effort on whether variables have been fully, partially or not harmonized
+        and/or checked for consistency across models.
+    </p>
+
+    <p class="col-xs-12 col-sm-12 col-md-12">
+        The models that have been used for the global interface are the following global models:
+    </p>
+
+
+    <div class=" col-xs-12 col-sm-7 col-md-7 model-list tooltip-demo large "
+         style="overflow: auto; height:25em; text-align: center">
+        {% for model in models %}
+            <div class="col selected model-obj" data-link="{{ model.model_name }}"
+                 style="overflow: visible; padding: 0;position: relative;display: inline-block;">
+                <i style="position: absolute;left: 0.5em;top:1em;font-size: 0.8em;z-index: 1050;color:#f7f7f7;"
+                   class="fa fa-info-circle"></i> <a target="_blank" href="/dynamic_doc/{{ model.model_name }}">
+                <img class="selected rounded-corners-el"
+                     style="width:8em; margin: 2em "
+                     src="/static/rev_icons/colored/{{ model.icon }}"
+                     data-toggle="tooltip" data-placement="auto"
+                     title='<p>{{ model.short_description }}</p>'>
+            </a>
+            </div>
+
+        {% endfor %}
+    </div>
+
+
+    <div class="my_table table-responsive col-xs-12 col-sm-5 col-md-5">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Model</th>
+                <th>World regions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>FortyTwo(42)</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>E3ME</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>GCAM</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Gemini-E3</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>ICES</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>MUSE</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>TIAM</td>
+                <td>15</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>

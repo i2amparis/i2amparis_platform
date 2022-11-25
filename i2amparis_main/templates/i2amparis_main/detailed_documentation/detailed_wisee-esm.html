@@ -1,0 +1,447 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#wisee-esm_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model WISEE-ESM</span>
+                                    <a style="display: none"
+                                       href="#wisee-esm_key_features">Key features of the model WISEE-ESM</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#wisee-esm_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#wisee-esm_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#wisee-esm_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#wisee-esm_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#wisee-esm_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#wisee-esm_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#wisee-esm_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Recent use cases</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#wisee-esm_recent_use_cases">Recent use cases</a>-->
+<!--                                </li>-->
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>References</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#42_references">References</a>-->
+<!--                                </li>-->
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The WISEE-ESM model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  The energy supply model WISEE-ESM calculates the cost-optimal expansion and use of
+                                  energy supply plants, infrastructures and sector coupling technologies (e.g.
+                                  electrolysers or heat pumps) to cover given energy demands. Demands can be taken from
+                                  the energy demand model (WISEE-EDM) or can be specified externally (e.g. from existing
+                                  energy scenarios). WISEE-ESM can be flexibly adjusted which energy sources or
+                                  substances (CO2, other material flows) are to be taken into account. For each of them,
+                                  production technologies, transport and storage infrastructures as well as sector
+                                  coupling technologies can be represented.
+                              </p>
+                              <p>
+                                  The model consists of two modules: The expansion or invest module and the deployment
+                                  or dispatch module. The Invest module calculates the necessary increase in generation,
+                                  transport and conversion capacity over the next decades, the dispatch module
+                                  calculates the use of the system components during the year. Both modules work with an
+                                  optimization whose objective function is the minimization of costs. Investment, CO2,
+                                  fuel and operating costs are taken into account. CO2 emission limits and limitations
+                                  of potential can be specified as boundary conditions.
+                              </p>
+                              <p>
+                                  Key results of model runs are: installed capacity (of generation, transport, storage
+                                  and conversion facilities), capital expenditure, dispatch of the components in hourly
+                                  resolution, dispatch costs, CO2 emissions.
+                              </p>
+                              <p>
+                                 Depending on the object of investigation, various parameters can be taken from external
+                                  sources or optimised internally. The model can represent several regions. Depending on
+                                  the research question, regions can be, for example, federal states or states.
+                                  Depending on the application and the data basis, the model can be parameterized for
+                                  different regions. Up to now, the application of the model has concentrated on Germany
+                                  and Europe.
+                              </p>
+                              <p>
+                                  <div style="text-align: center">
+                                  <img style="width:80%;height:80%; margin-bottom: 2em"
+                                       src="{% static "images/wisee-esm.jpg" %}">
+                                  <div style="text-align: center">
+                                  </div>
+                              </div>
+
+                              </p>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the WISEE-ESM model</h2>
+                              <p><b>Flexible choice of model components</b></p>
+                              <p>WISEE-ESM can represent the supply of various energy sources and materials such as
+                                  electricity, heat, hydrogen, CO2 or other material flows. It can be flexibly adjusted
+                                  which of these energy sources or substances are to be taken into account. For each of
+                                  them, producers, transport and storage infrastructures and sector coupling
+                                  technologies can be represented. </p>
+                              <p><b>Flexible spatial and temporal resolution</b></p>
+                              <p>The model can represent several regions. Depending on the research question, regions
+                                  can be, for example, federal states or states. Depending on the application and the
+                                  data basis, the model can be parameterized for different regions. Transmission
+                                  capacities represent the connections between the regions. They are defined as
+                                  transmission power at the region boundaries. A transmission capacity is therefore
+                                  representative of all lines that connect these two regions.</p>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>Emission limits are implemented as boundary conditions</p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  The socio-economic dimension enters the model via demand for various energy carriers
+                                  reflecting for example growth trajectories in different sectors. Furthermore,
+                                  constraints set to the optimation may reflect socio-economic dimensions, for example
+                                  regarding limitations of onshore wind generation potentials.
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>WISEE-ESM calculates the cost-optimal expansion and use of energy supply plants. It
+                                  covers fossils-based as well as low-carbon energy supply technologies. Mitigation
+                                  measures that influence costs of different technologies, for example CO2 price,
+                                  subsidies and taxes can be represented by the model. Furthermore, all measures that
+                                  foster or limit the application of particular technologies (e.g. coal exit strategies)
+                                  can be included in the model. Adaptation measures are not part of the model.</p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>The core principle behind the results provided by the model is that of minimal societal
+                                  costs (as reflected in the model's input parameter) for providing a given amount of
+                                  energy.
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p><b>Key input parameters</b></p>
+                              <p>Key input parameters of the model are one the one hand of technical nature: CO2 cap,
+                                  potentials for renewables, energy demand (electricity, heat, hydrogen) over time. </p>
+                              <p>On the other hand, economic parameters are required: investment costs per unit, fuel
+                                  prices and operative costs. Finally, the starting situation (exisiting plants,
+                                  infrastructure etc.) needs to be defined.</p>
+                              <p><b>Data basis</b></p>
+                              <p>
+                                  <ul>
+                              <ol>Energy demand from WISEE-EDM model results or externally given</ol>
+                              <ol>Current German power plant park (own databasis)</ol>
+                              <ol>Cross border capacity based on Entso-E data</ol>
+                              <ol>Demand curves according to Entso-E TYNPD</ol>
+                              <ol>Renewables production in different weather years according to PyPSA-EUR
+                                  (https://github.com/PyPSA/pypsa-eur )</ol>
+                              <ol>Costs (invest, fuels, CO2, operation)</ol>
+                          </ul>
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="wisee-esm_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                          <p>Different policies can be represented in the model if they translate into costs or can be
+                              represented through cost parameters (see mitigation measures above).</p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-esm_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                            WISEE-ESM does not automatically calculate the implications on non-climate SDGs of its
+                                  least-cost energy system to meet prescribed climate or emissions constraints. However,
+                                  it is possible to use its outputs and calculate the predictions for certain indicators
+                                  framed in the SDG agenda.</p>
+                          </section>
+                    </div>
+<!--                    <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="wisee-esm_recent_use_cases" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Recent use cases</h2>-->
+<!--                                <div class="my_table table-responsive">-->
+
+<!--                                                                <table class="table ">-->
+<!--                                      <thead>-->
+<!--                                      <tr>-->
+<!--                                          <th style="width:20%">Paper DOI</th>-->
+<!--                                          <th style="width:40%">Paper Title</th>-->
+<!--                                          <th style="width:40%">Key findings</th>-->
+<!--                                      </tr>-->
+<!--                                      </thead>-->
+<!--                                      <tbody>-->
+<!--                                      <tr>-->
+<!--                                          <td>https://doi.org/10.1016/j.energy.2019.01.004</td>-->
+<!--                                          <td>-->
+<!--                                              A multi-layer energy modelling methodology to assess the impact of-->
+<!--                                              heat-electricity integration strategies: the case of the residential-->
+<!--                                              cooking sector in Italy-->
+<!--                                          </td>-->
+<!--                                          <td>-->
+<!--                                              The electrification of residential cooking energy uses, in italy, is-->
+<!--                                              beneficial only under high shares of renewables. Otherwise, it increases-->
+<!--                                              primary energy consumption of natural gas.-->
+<!--                                          </td>-->
+
+<!--                                      </tr>-->
+<!--                                      <tr>-->
+<!--                                          <td>https://doi.org/10.1016/j.apenergy.2015.04.102</td>-->
+<!--                                          <td>-->
+<!--                                              Renewables, nuclear, or fossil fuels? Comparing scenarios for the Great-->
+<!--                                              Britain electricity system-->
+<!--                                          </td>-->
+<!--                                          <td>-->
+<!--                                              Up to 60% of variable renewable capacity is possible with little cost increase.-->
+<!--                                              Higher shares require storage, imports or dispatchable renewables such as tidal range.-->
+<!--                                          </td>-->
+<!--                                      </tr>-->
+<!--                                      <tr>-->
+<!--                                          <td>-->
+<!--                                              https://doi.org/10.1016/j.apenergy.2019.114218-->
+<!--                                          </td>-->
+<!--                                          <td>-->
+<!--                                             Optimal system layout and locations for fully renewable high temperature-->
+<!--                                              co-electrolysis-->
+<!--                                          </td>-->
+<!--                                          <td>-->
+<!--                                              Many favourable locations for high-temperature co-electrolysis (HTCOE) exist across Europe.-->
+<!--                                            HTCOE can become economically competitive for currently discussed CO2 prices.-->
+<!--                                          </td>-->
+<!--                                      </tr>-->
+<!--                                      </tbody>-->
+<!--                                      <caption>Recent publications using the WISEE-ESM model </caption>-->
+<!--                                  </table>-->
+<!--                                </div>-->
+
+<!--                          </section>-->
+<!--                    </div>-->
+
+                    <!--add ref-->
+<!--                    <div class="row">-->
+<!--                        <section class="section">-->
+<!--                            <span id="42_references" class="anchor"></span>-->
+<!--                            <h2 class="mb-0 heading-new">References</h2>-->
+
+<!--                        </section>-->
+<!--                    </div>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

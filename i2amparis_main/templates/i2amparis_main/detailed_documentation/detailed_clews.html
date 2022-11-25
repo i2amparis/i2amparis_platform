@@ -1,0 +1,599 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#clews_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model CLEWs</span>
+                                    <a style="display: none"
+                                       href="#clews_key_features">Key features of the model CLEWs</a>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Climate module & emissions granularity</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#clews_emissions_granularity">Climate module & emissions granularity</a>-->
+<!--                                </li>-->
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Socioeconomic dimensions</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#clews_socioecon_dim">Socioeconomic dimensions</a>-->
+<!--                                </li>-->
+
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Mitigation/adaptation measures and technologies</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#clews_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>-->
+<!--                                </li>-->
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Economic rationale and model solution</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#clews_econ_rationale">Economic rationale and model solution</a>-->
+<!--                                </li>-->
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>Key parameters</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#clews_key_params">Key parameters</a>-->
+<!--                                </li>-->
+
+<!--                                <li>-->
+
+<!--                                <div class="panel-group 42_policies_sdgs">-->
+<!--                                    <div class="panel panel-default">-->
+<!--                                        <div class="panel-heading" style="padding:0px">-->
+<!--                                            <h5 class="panel-title"-->
+<!--                                                style="background-color:#343a40; padding: 5px">-->
+<!--                                                <a data-toggle="collapse"-->
+<!--                                                   href="#collapse_42_policies_sdgs"><i-->
+<!--                                                        class="fa fa-caret-right rotate"-->
+<!--                                                        style="margin-right: 10px;"></i>Policy questions and SDGs-->
+<!--                                                </a>-->
+<!--                                            </h5>-->
+<!--                                        </div>-->
+<!--                                        <div id="collapse_42_policies_sdgs"-->
+<!--                                             class="panel-collapse collapse">-->
+<!--                                            <ul class="list-group">-->
+<!--                                                <li class="list-group-item">-->
+<!--                                                    <span>Key policies that can be addressed</span>-->
+<!--                                                    <a style="display: none"-->
+<!--                                                       href="#clews_key_policies">-->
+<!--                                                        Key policies that can be addressed</a>-->
+<!--                                                </li>-->
+<!--                                                <li class="list-group-item">-->
+<!--                                                    <span>Implications for other SDGs</span>-->
+<!--                                                    <a style="display: none"-->
+<!--                                                       href="#clews_implications_sdgs">-->
+<!--                                                        Implications for other SDGs</a>-->
+<!--                                                </li>-->
+
+
+<!--                                            </ul>-->
+<!--                                        </div>-->
+
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                </li>-->
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#clews_recent_use_cases">Recent use cases</a>
+                                </li>
+<!--                                <li class="list-group-item">-->
+<!--                                    <span>References</span>-->
+<!--                                    <a style="display: none"-->
+<!--                                       href="#42_references">References</a>-->
+<!--                                </li>-->
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">CLEWs</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="clews_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                 The time domain may cover e.g. up to 2070 or more. A good time resolution that allows
+                                  rather detailed representation of renewables without making the computation incredibly
+                                  heavy could be around 100 time slices. The energy sector is the one requiring the
+                                  highest time resolution, so such time resolution would be good also for the other
+                                  sectors. The energy system typically could include any energy conversion and energy
+                                  storage process like other TIMES applications. It can be regionalized and some power
+                                  infrastructure can be represented individually, if important. Any type of emission can
+                                  be represented, as long as emission factors are available and as long as emissions are
+                                  linearly dependent on generation. The land system model represents many possible types
+                                  of land uses, including built-up land, forest, grassland, barren land, water bodies,
+                                  other (e.g. natural reserves), pastures and crops. Crops are further divided in any
+                                  type of crop that is relevant in the region being analysed. Each crop is again divided
+                                  in 5 categories of land uses, depending on the type of inputs: irrigated land with
+                                  intermediate or high input (in terms of fertilizers, energy and water) and rainfed
+                                  land with low, intermediate and high input. Each of these types will have different
+                                  yields and they compete between themselves in the model, based on cost- and
+                                  resource-optimality criteria. Finally, land uses are also divided in clusters, which
+                                  aggregate cells of the region with similar agro-climatic conditions. All this
+                                  categorization and all input data are derived from GAEZ. Emissions from land use
+                                  changes are represented. The water system represents precipitation, all water inputs
+                                  and outputs of land uses, and all final water demands / uses. Precipitation,
+                                  evaporation from water bodies and evapotranspiration from vegetation are represented.
+                                  They vary according to climatic conditions and climate change. Groundwater and surface
+                                  water uses are represented separately (but need improvement). The water system is part
+                                  of the optimisation. However, it can also be represented with an accounting model
+                                  externally to OSeMOSYS (e.g. using WEAP) and soft-linked with OSeMOSYS. Several such
+                                  applications have been developed. Many links between the energy, water and land
+                                  systems are usually represented, e.g. water uses by power plants, diesel uses by
+                                  agricultural activities, water uses by irrigation, and more. More links can be
+                                  added / customised.
+                              </p>
+
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="clews_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the CLEWs modelling framework</h2>
+                              <p>
+                                  Fully open source, from solver to code, to pre- and post-processing codes, to
+                                  interfaces, to data. Teaching material and documentation available on GitHub and on
+                                  the Open University's OpenLearn platform (and others). Used in teaching, research and
+                                  capacity development. Key in capacity development is that the tool is used, owned and
+                                  kept by the trainees. Within 2 weeks, the trainees are guided into the independent
+                                  creation of their own CLEWs model; then, the model is further developed with a
+                                  COLLABORATION, rather than with a univocal or top-down approach.
+                              </p>
+                          </section>
+                    </div>
+
+<!--                    <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="clews_emissions_granularity" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>-->
+<!--                              <p>-->
+<!--                                  The MENA-EDS model estimates in detail carbon dioxide emissions, as emerging from-->
+<!--                                  fossil fuel combustion and industrial processes.</p>-->
+<!--                              <p>-->
+<!--                                  The model directly covers all emissions from the energy sector and the industry sector-->
+<!--                                  and can split CO2 emissions by sector (transport, industry, buildings, power-->
+<!--                                  generation, refineries, international bunkers, other) and by fuel (coal, oil,-->
+<!--                                  natural gas). The model is currently expanded to represent non-CO2 GHG emissions-->
+<!--                                  (including CH4, N2O and F-gases) through specific marginal abatement cost curves-->
+<!--                                  per region and sector.</p>-->
+<!--                              <p>Energy and climate policies affect these emissions: energy CO2 is derived from the-->
+<!--                                  changes in the energy sector induced by the policy, other emissions are affected by-->
+<!--                                  marginal abatement cost curves.</p>-->
+<!--                              <p>The model has been used extensively to study climate change mitigation scenarios, see-->
+<!--                                  References section for the most recent examples.</p>-->
+<!--                              </p>-->
+<!--                          </section>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="clews_socioecon_dim" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>-->
+<!--                              <p>-->
+<!--                                  The two main socio-economic drivers, population and GDP, are exogenous in MENA-EDS.-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  The key marco-economic assumptions are derived from population and GDP projections.-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Starting from historical data, sectoral economic activity variables are calculated (capturing regional differentiation):-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  <ul>-->
+<!--                              <li> sectoral value added by sector (industries, services, agriculture): depends on the-->
+<!--                                  level of development of the region, given by GDP per capita (industrialization phase-->
+<!--                                  followed by service-based economy);</li>-->
+<!--                              <li>industrial physical production: depends on the evolution of sectoral value added,-->
+<!--                                  which depends on the level of development</li>-->
+<!--                              <li>mobility (for passengers and for goods): depends on the evolution of GDP per capita-->
+<!--                                  and transport activity (measured in terms of passenger-km/cars per capita or tonne-km)-->
+<!--                                  as well as the average cost of transport compared to income</li>-->
+<!--                              <li>buildings surfaces: depend on households size and surface per dwelling, both depending-->
+<!--                                  on personal income.</li>-->
+<!--                          </ul>-->
+<!--                              </p>-->
+<!--                          </section>-->
+<!--                    </div>-->
+
+
+<!--                     <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="clews_mitigation_adaptation" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>-->
+<!--                              <p>-->
+<!--                               MENA-EDS is a technology-rich energy system model that represents most major fossil fuel-->
+<!--                                  and low-carbon technologies  that are envisaged to be available for at least the first-->
+<!--                                  half of the 21st century, and also including disruptive technological options,-->
+<!--                                  including zero and negative-emission technologies (incuding Biomass with CCS and-->
+<!--                                  Direct Air Capture) . By simulating the substitution of low or zero-carbon for-->
+<!--                                  high-carbon technologies in response to their relative costs, as well as emissions-->
+<!--                                  constraints and/or carbon prices, the MENA-EDS energy system model simulates-->
+<!--                                  mitigation through a large set of different measures and technological configurations.-->
+<!--                              </p>-->
+
+<!--                          </section>-->
+<!--                     </div>-->
+
+
+<!--                     <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="clews_econ_rationale" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>-->
+<!--                              <p>-->
+<!--                                 MENA-EDS is a recursive dynamic energy system simulation model. Variables are either-->
+<!--                                  calculated directly or are calculated based on the previous years' values, to which-->
+<!--                                  are applied the evolution of explanatory variables and other exogenous parameters.-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                 The economic decisions regarding the investment and operation of the energy system are-->
+<!--                                  based on the current state of knowledge of parameters (costs and performance of-->
+<!--                                  technologies, prices, ...) or with a myopic anticipation of future costs and-->
+<!--                                  constraints. The model does not use foresight but myopic anticipation. Some foresight-->
+<!--                                  can be forced in the electricity production sector. The core operating principle of-->
+<!--                                  the model is that of market equilibrium. The representative agents in the modules use-->
+<!--                                  information on prices and make decisions about the allocation of resources. They-->
+<!--                                  represent, for example, regional electricity sectors, regional refining sectors,-->
+<!--                                  regional energy demand sectors. Markets are the means by which these representative-->
+<!--                                  agents interact with one another. The model solves for a set of market prices so that-->
+<!--                                  supplies and demands are balanced in all these markets across the model ; in other-->
+<!--                                  words, market equilibrium is assumed to take place in each one of these markets-->
+<!--                                  (partial equilibrium), and not in the entire economy across all markets (general-->
+<!--                                  equilibrium). The solution process is the process of iterating on market prices until-->
+<!--                                  this equilibrium is reached. The regional fuel markets are also integrated to form an-->
+<!--                                  international (global or regional) market equilibirum for crude oil, natural gas and-->
+<!--                                  coal.-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                 A major update of the model is currently implemented, expanding its time horizon,-->
+<!--                                  technology coverage, regional coverage and policy representation (as part of H2020-->
+<!--                                  NDC ASPECTS project)-->
+<!--                              </p>-->
+<!--                     </div>-->
+
+
+<!--                     <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="clews_key_params" class="anchor"></span>-->
+<!--                              <h2 class="mb-0 heading-new">Key parameters</h2>-->
+<!--                              <p>-->
+<!--                                Key scenario assumptions for MENA-EDS include socioeconomics (population, labour-->
+<!--                                  participation, and GDP); energy technology characteristics (e.g. costs, performance);-->
+<!--                                  energy and other resources & potentials, such as fossil fuels, wind, solar, uranium;-->
+<!--                                  and policies, including emissions constraints, renewable portfolio standards, etc.-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                Key scenario results (outputs) from MENA-EDS include an analysis of the energy system-->
+<!--                                  (energy demands, flows, technology deployments, and prices throughout); prices of-->
+<!--                                  energy products; and emissions for the major greenhouse gases-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Outcomes of MENA-EDS depend strongly on the assumptions made for socioeconomic,-->
+<!--                                  techno-economic, and policy parameters.-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Parameters can be revised and updated in the framework of the project, following the-->
+<!--                                  feedback of local and national experts (stakeholder engagement), the comparative-->
+<!--                                  assessment with other modelling experiences, and the discussion with the partners-->
+<!--                                  (modellers).-->
+<!--                              </p>-->
+<!--                          </section>-->
+<!--                     </div>-->
+
+<!--                             <div class="row">-->
+<!--                          <section class="section">-->
+
+<!--                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>-->
+<!--                                <span id="clews_key_policies" class="anchor"></span>-->
+<!--                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>-->
+<!--                              <p>-->
+<!--                                The MENA-EDS model is used to simulate the implications of various energy and climate policy instruments, including:-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  GHG policies-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                 Regional emission reduction objective: Implementation of carbon pricing schemes-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Cumulated CO2 buget: Regional differentiation of emission constraints and carbon pricing to reduce emissions within budget (iterative calculation)-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Energy pricing policies-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Carbon pricing (either carbon taxation in ETS sectors or carbon values non-ETS sectors)-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Other environmental taxes (e.g. introduction of taxes on fossil fuel production and/or consumption or environmental tax on non-conventional fuels production)-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Subsidies to renewable energy, electric cars and energy efficiency-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Fossil fuel subsidies (including the possibility to phase out)-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Support policies for specific technologies-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Electricity generation feed-in tariffs (especially for renewable energy technologies)-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Acceleration of deployment of low-emission vehicles (e.g. through direct subsidies or-->
+<!--                                  low interest loans)-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Low interest loans or subsidies to capital cost to purchase energy appliances and-->
+<!--                                  equipment or to perform energy retrofitting-->
+<!--                              </p>-->
+<!--                              <p>Efficiency standards</p>-->
+<!--                              <p>Fuel efficiency standards in vehicles and in buildings</p>-->
+<!--                              <p>-->
+<!--                                  Penetration of low-energy consuming buildings-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Openness to investment, especially in low-carbon technologies-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Discount rates in low-carbon technology investment-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Lower discount rates (subsidies to capital) for low-carbon and energy efficient-->
+<!--                                  technologies-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  The model calculates several indicators that can be used to inform energy and climate-->
+<!--                                  policy impact assessment at regional or global level. These include:-->
+<!--                              </p>-->
+<!--                              <p>-->
+<!--                                  Energy Demand, Energy intensity of GDP (primary and final energy), Energy intensity-->
+<!--                                  per unit of value added in industry, Energy intensity of households’ income, Energy-->
+<!--                                  intensity per inhabitant, Energy intensity per passenger car, Electricity consumption-->
+<!--                                  per capita in residential sector, Electricity generated per capita, Transport fuels-->
+<!--                                  per capita, Performance against overall energy efficiency targets (primary energy and-->
+<!--                                  final energy), Number of passenger cars per capita, Overall share of RES in primary-->
+<!--                                  energy demand, Share of RES in total power generation, Share of bio-fuels in fuels-->
+<!--                                  used in the transport sector, Share of renewable energy in power generation, Share of-->
+<!--                                  electricity produced by CCS, Share of intermittent RES in power generation, Share of-->
+<!--                                  nuclear in power generation, Power generation per capita, Average load factor of power-->
+<!--                                  generation, Average rate of use of power plant capacities (by type), Security of-->
+<!--                                  Energy Supply, Overall energy dependence indicator in each region, Evolution of import-->
+<!--                                  fossil fuel prices for the EU, Developments of global fossil fuel markets for oil,-->
+<!--                                  natural gas and coal, Share of unconventional oil (extra heavy oil and tar sands) in-->
+<!--                                  global oil supply, Share of Middle East production in global oil production and-->
+<!--                                  reserves, Development of unconventional gas resources (shale, tight and CBM), Carbon-->
+<!--                                  intensity of GDP, Carbon intensity of households,Carbon intensity of the transport-->
+<!--                                  sector,Carbon emissions per capita,Carbon intensity of power generation, Share of-->
+<!--                                  emissions captured in power generation, Carbon intensity per unit of final energy in-->
+<!--                                  industry/transport/buildings, Carbon intensity per unit of primary energy, Prices for-->
+<!--                                  internationally traded fossil fuels (coal, oil and natural gas), Electricity prices-->
+<!--                                  for industries and households, Unit costs of electricity production, Investments in-->
+<!--                                  the power generation sector and in energy efficiency, Consumer expenditures on final-->
+<!--                                  energy,  Carbon prices-->
+<!--                              </p>-->
+<!--                          </section>-->
+<!--                             </div>-->
+<!--                    <div class="row">-->
+<!--                          <section class="section">-->
+<!--                              <span id="clews_implications_sdgs" class="anchor"></span>-->
+<!--                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>-->
+<!--                              <p>-->
+<!--                                  MENA-EDS does not automatically calculate the implications on non-climate SDGs of its-->
+<!--                                  least-cost energy system to meet prescribed climate or emissions constraints. However,-->
+<!--                                  it is possible to use its outputs to calculate relevant indicators in the SDG agenda-->
+<!--                                  (details in the SDGs tab).-->
+<!--                              </p>-->
+<!--                          </section>-->
+<!--                    </div>-->
+                    <div class="row">
+                          <section class="section">
+                              <span id="clews_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1007/s42108-021-00119-3
+                                          </td>
+                                          <td>
+                                              Long-term water–energy–food security and resources sustainability: a case
+                                              study of Ethiopia by 2030 and 2050
+                                          </td>
+                                          <td>
+                                              <p>
+                                              The dominant hydropower energy capacity will be limited after 2040 and
+                                                  replaced by solar and other technologies. The target food production
+                                                  is constrained by limited land availability and productivity. Doubling
+                                                  of agricultural productivity is needed to effectively reduce the
+                                                  burden on land encroachment to sensitive ecosystems and reduce the
+                                                  dependency on imported food. It can be cautiously concluded that from
+                                                  resources supply–demand aspects, Ethiopia achieves middle-income
+                                                  country status by developing its untapped water and land resources.
+                                              </p>
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              NA
+                                          </td>
+                                          <td>
+                                              NA
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  <b>Addressing water crisis and dying ecosystems in the Urmia and Hamoon
+                                                      basins (Iran) with an integrated planning perspective.</b> Results of the
+                                                  CLEWs modelling show that there is not enough water to feed the
+                                                  restoration of the lakes as well as water demands for public uses and
+                                                  agriculture in the following years. The water deficit can be
+                                                  significantly aggravated by climatic change, which is particularly
+                                                  fast and intense in the two regions. The water deficit can be reduced
+                                                  by change in agricultural practices and import/export patterns with
+                                                  the rest of the country.
+                                              </p>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                            DG CLIMA work (unfortunately not published yet)
+                                          </td>
+                                          <td>
+                                              Assessing the impacts of NDCs and low-emission pathways in MENA countries
+                                          </td>
+                                          <td>
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the CLEWs model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+<!--                    <div class="row">-->
+<!--                        <section class="section">-->
+<!--                            <span id="42_references" class="anchor"></span>-->
+<!--                            <h2 class="mb-0 heading-new">References</h2>-->
+<!--                            <p><a href="https://e3modelling.com/modelling-tools/clews/"> https://e3modelling.com/modelling-tools/clews/</a></p>-->
+<!--                        </section>-->
+<!--                    </div>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

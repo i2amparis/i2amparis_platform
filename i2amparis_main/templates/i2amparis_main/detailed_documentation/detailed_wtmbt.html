@@ -1,0 +1,517 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model WTMBT</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_key_features">Key features of the model WTMBT</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#wtmbt_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#wtmbt_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#wtmbt_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The WTMBT model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                              The World Trade Model with Bilateral Trades (WTMBT in the following) is a meso-economic
+                                  linear optimization model based on the comparative advantage principle. Considering m
+                                  world regions with n industries each, the WTMBT enables to endogenously determine the
+                                  production yields and trades patterns required to satisfy an exogenously specified
+                                  final demand yield in each region, minimizing the use of factors of production (labor
+                                  and capital) by complying with regional factors endowments (e.g. availability of
+                                  natural resources, land, workforce, etc.). The choice of developing a model which
+                                  includes the cost of bilateral trades (i.e. WTMBT), is driven by the relevance of
+                                  transport in determining the arrangement of production and trades and by its
+                                  non-negligible impact on carbon emissions. The economic and environmental implications
+                                  of national and international transport of products are included in the model and
+                                  weighed depending on transport distances. With respect to General Equilibrium Models
+                                  (CGE), the WTMBT requires less exogenous data since it considers households and
+                                  government final demand as constant and perfectly rigid with respect to endogenous
+                                  change in prices of goods and services. Therefore, instead of maximizing social
+                                  utility, the WTMBT establishes that the highest-cost producers set the products
+                                  prices, and each region chooses to produce or to import by minimizing the overall
+                                  costs complying with their own production factors availability (i.e. factor
+                                  endowments). In the WTMBT, production technologies, factors use coefficients and final
+                                  demand for each country are derived from Multi-Regional Input-Output tables (MRIO).
+                                  Other exogenous inputs like factor endowments, weights of transported goods and
+                                  regional distances are derived from other databases (e.g. World Bank, International
+                                  Energy Agency), depending on the scope of the adopted MRIO and on the type of analysis
+                                  to be carried out.
+                                </p>
+
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the WTMBT model</h2>
+                              <p>Linear optimization in an input-output formulation of an economy.</p>
+                              <p>Comparative static.</p>
+                              <p>The model is asked to provide the minimization of factor cost of economic activities
+                                  while meeting, for every economy, the final demand of consumers, the intermediate
+                                  demand of industries and export demand (with its demand of transport services) of each
+                                  sector by means of production or import.
+                              </p>
+                              <p>Every economic production implies the consumption of factors (natural resources,
+                                  capital and labour) and the emission of CO2 and other polluters.</p>
+                              <p>In this formulation of the model, the electricity sector generates an output which can
+                                  be produced by several different technologies: the model will chose between the
+                                  alternatives on the basis of the solely principle of comparative advantage, which
+                                  regulates all the model decisions.</p>
+
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                The model considers CO2 emissions as a direct consequence of the endogenous production
+                                  of the sectors and regions considered in the model. These emissions are expressed
+                                  with respect to the sector, region and type of pollutant or greenhouse gas. Thanks to
+                                  the input-output structure of the model, it is possible to consider various mechanisms
+                                  for assigning responsibility for emissions (e.g. Production-Based Approach,
+                                  Consumption-Based Approach).
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  The socio-economic dimension is considered in the objective function of the model,
+                                  which foresees a minimisation of the global use of productive factors net of scarcity
+                                  rents that may emerge when one or more resources become scarce. In fact, these
+                                  resources are bound not to exceed a maximum level of availability, called factor
+                                  endowments (e.g. maximum number of high-skilled workers for a given sector in a given
+                                  region).
+                              </p>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                  The existing technology is determined by the multiregional input-output database
+                                  adopted as input to the optimization model. Sectoral interrelationships,
+                                  characterizing the technology mix of each region, are exogenously determined.
+                                  An exception is made for the electricity sector where it is possible to choose between
+                                  several technologies to meet the needs of both industries and households for
+                                  electricity. Also in this choice, the model is guided by the principle of comparative
+                                  advantage that will produce the least expensive technology until one or more resources
+                                  are exhausted.In this sense, mitigation and adaptation scenarios can be simulated by
+                                  introducing additional constraints (which model the introduction of a policy) that
+                                  disrupt either the cost of a technology, the availability of one or more resources or
+                                  other types of constraints (e.g. impose exogenously a new final demand).
+                              </p>
+
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  The model minimizes the global cost, in terms of the use of productive factors, like
+                                  labour and capital, of satisfying an exogenously determined quantity of goods and
+                                  services. The primary formulation of this linear model provides for the satisfaction
+                                  of the final demand for each region, taking into account the resulting need for
+                                  intermediate demand due to the sectoral interrelationships of each region, the
+                                  possibility to import from another region, the possibility to export one's own product
+                                  net of transport costs and resource limits. This formulation is underpinned by a dual
+                                  formulation of the same problem that provides for a maximization of final demand net
+                                  of scarcity rents that may emerge when the limits of a resource are reached. Price
+                                  indices will take into account transport costs and relative price differences that may
+                                  arise. In this way it will be possible to assess the impact in terms of price indices,
+                                  linked to each solution found by the model, under the assumption that there is no
+                                  influence of the mechanisms of balance between supply and demand.
+                              </p>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                 The fundamental exogenous parameters for the model concern:
+                                  <ul>
+                              <li>final demand by sector and region</li>
+                              <li>technology (i.e. input-output coefficients)</li>
+                              <li>maximum availability of resources outside the economy (e.g. availability of fossil
+                                  fuels, availability of labour)</li>
+                          </ul>
+                              </p>
+                              <p>
+                                  The endogenous parameters provided by the model concern:
+                                  <ul>
+                              <li>sectoral production (which determines the sectoral GDP and related CO2 emissions)</li>
+                              <li>import-export (allowing trade between regions and consequent choice of make-or-buy)</li>
+                          </ul>
+                              </p>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="wtmbt_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                                One of WTMBT uses is to explore the implications of different future policies.
+                                  There are a number of types of policies that can be easily modelled in GCAM:
+                              </p>
+                              <p>
+                                  <b>Emissions-related policies</b>
+                                  Through this model it is possible to model emission constraints as a maximum level of
+                                  emissions for a given group of regions and sectors (e.g. Emission Trading System) or
+                                  by imposing an emission cost level (e.g. Carbon Tax). These two different types of
+                                  constraints will disrupt minimization by either affecting external constraints or
+                                  directly affecting exogenous coefficients (i.e. a tax per ton of GHG in a certain
+                                  sector and/or region).
+                              </p>
+                              <p>
+                                  <b>Energy production policies</b>
+                                  It may be possible to include a constraint requiring the model to provide, as an
+                                  aggregate or regional value, a minimum quantity of production from one or more energy
+                                  sources. Through the possibility of choice, both in terms of regional production and
+                                  technology used to supply electricity, the model will be able to choose different
+                                  ways, moving towards the one that minimizes global costs.
+                              </p>
+                              <p>
+                                  <b>Behavioural policies</b>
+                                  In principle it is possible to assess the impact of changes in behaviour, translated
+                                  as a change in consumption preferences of the final demand category of households
+                                  (e.g. impact of teleworking).
+                              </p>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>
+                                 The WTMBT does not independently assess the impact on SDGs but it is possible to derive
+                                  indicators that may partially indicate an impact on some of the dimensions of several
+                                  SDGs.
+                              </p>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wtmbt_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Paper Title</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>https://doi.org/10.1016/j.jclepro.2018.06.218</td>
+                                          <td>
+                                             Restricting water withdrawals of the thermal power sector:
+                                              An input-output analysis for the northeast of the United States
+                                          </td>
+                                          <td>
+                                              Based on an annual analysis, it is conclude that Northen East USA can
+                                              satisfy its electric power requirements while fully complying with
+                                              legislated water restrictions at moderate cost by compensating the
+                                              curtailment of output from some plants by otherwise unutilized capacities
+                                              of other plants in the region.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td>https://doi.org/10.1111/jiec.12856</td>
+                                          <td>
+                                             ﻿The global economic costs of substituting dietary protein from fish with
+                                              meat, grains and legumes, and dairy
+                                          </td>
+                                          <td>
+                                              The WTM is used to analyze alternative scenarios about protein content and
+                                              sources in global diets. It is found that the substitution of fish by meat
+                                              or dairy entails several trillion US dollars of additional costs annually,
+                                              corrsiponding to increased use of pastureland, cropland, water and other
+                                              factor of production.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              https://doi.org/10.1016/j.apenergy.2020.115301
+                                          </td>
+                                          <td>
+                                              Fighting carbon leakage through consumption-based carbon emissions
+                                              policies: Empirical analysis based on the World Trade Model with Bilateral
+                                              Trades
+                                          </td>
+                                          <td>
+                                              The WTMBT is adopted to evaluate two different approaches in limiting
+                                              carbon emission within EU. Production-based approach and Consumption-based
+                                              approach are simulated in the modelling framework and their impacts in
+                                              terms of global emission and increase in the use of factor of production
+                                              is evaluated.
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                      <caption>Recent publications using the EnergyPLAN model </caption>
+                                  </table>
+                                </div>
+
+                          </section>
+                    </div>
+
+<!--                    add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="wtmbt_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                             Duchin, F., S.H. Levine, and A.H. Stromman, 2016. Combining Multiregional Input-Output
+                                Analysis with a World Trade Model for Evaluating Scenarios for Sustainable Use of Global
+                                Resources, Part I: Conceptual Framework, Journal of Industrial Ecology, 20(4): 775-782.
+                            </p>
+                            <p>
+                             Duchin, F. and Levine, S.H., 2016. Combining multiregional input‐output analysis with a
+                                world trade model for evaluating scenarios for sustainable use of global resources, Part
+                                II: Implementation. Journal of Industrial Ecology, 20(4): 783-791.
+                            </p>
+                            <p>
+                             Duchin, F., 2016. A global case‐study framework applied to water supply and sanitation.
+                                Journal of Industrial Ecology, 20(3): 387-395.
+                            </p>
+                            <p>
+                               Duchin, F. 2017. “Resources for Sustainable Economic Development: A Framework for
+                                Evaluating Infrastructure System Alternatives,” Sustainability, 9(11), 2105,
+                                http://www.mdpi.com/2071-1050/9/11/2105/htm.
+                            </p>
+                            <p>
+                                Duchin, F. and S. Levine, 2019.  The Recovery of Products and Materials for Reuse: A
+                                Global Context for Resource Management, Resources, Conservation and Recycling (Special
+                                Issue on Economy-wide Prospects for Material Recovery and Waste Recycling: Advances in
+                                Integrating Input-Output Economics and Industrial Ecology).
+                            </p>
+
+                        </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+
