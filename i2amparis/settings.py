@@ -138,15 +138,15 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.office365.com'
+EMAIL_HOST = os.environ.get("EMAIL_HOST")
 EMAIL_PORT = 587
 EMAIL_PROTOCOL = 'smtp'
-EMAIL_HOST_USER = 'noreply@epu.ntua.gr'
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'noreply@epu.ntua.gr'
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL")
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
-EMAIL_FROM = 'noreply@epu.ntua.gr'
-SERVER_EMAIL = 'noreply@epu.ntua.gr'
+EMAIL_FROM = os.environ.get("EMAIL_FROM")
+SERVER_EMAIL = os.environ.get("SERVER_EMAIL")
 
 GOOGLE_RECAPTCHA_SITE_KEY =  os.environ.get("GOOGLE_RECAPTCHA_SITE_KEY")
 
