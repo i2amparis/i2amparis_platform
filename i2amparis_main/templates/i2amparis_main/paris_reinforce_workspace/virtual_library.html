@@ -26,7 +26,7 @@
     <!-- BASICS -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <title>I2AMPARIS - Virtual Library</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
@@ -70,28 +70,30 @@
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
-    <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
-        <div class=" col-sm-12 col-xs-12" style="text-align: center">
-            <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
-                Virtual Library
-            </h1>
+    <div class="container" style="width: 90%; max-width: 1200px; height: 100%; padding-bottom: 3em">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12" style="text-align: center">
+                <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                    Virtual Library
+                </h1>
+            </div>            
         </div>
-        <div class="content-section col-sm-12 col-xs-12 col-md-12"
-             style="text-align: center; margin-top: 2em;padding: 1em">
-            <div class="col-sm-4 col-xs-6">
-                <div class="circle-button cb-orange" style="text-align: center">
+        <div class="content-section row"
+             style="text-align: center; padding: 1em">
+            <div class="col-md-4 col-sm-12">
+                <div class="circle-button cb-orange" style="margin-top: 2em">
                     <a href="virtual_library/publications" class="">Publications</a>
                     <i class="fa fa-book circle-icon"></i>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-6">
-                <div class="circle-button cb-green" style="text-align: center">
+            <div class="col-md-4 col-sm-12">
+                <div class="circle-button cb-green" style="margin-top: 2em">
                     <a href="virtual_library/conferences" class="">Conferences</a>
                     <i class="fa fa-users circle-icon"></i>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-6">
-                <div class="circle-button cb-yellow" style="text-align: center">
+            <div class="col-md-4 col-sm-12">
+                <div class="circle-button cb-yellow" style="margin-top: 2em">
                     <a style="padding-top: 3em; white-space: normal" href="virtual_library/policybriefs"
                        class="">Commentaries
                         & Policy Briefs</a>
@@ -99,22 +101,16 @@
                 </div>
             </div>
         </div>
-        <div class="content-section col-sm-12 col-xs-12 col-md-12"
-             style="text-align: center; margin-top: 3em; padding: 1em">
-            <div class="col-sm-4 col-xs-6">
-                <div class="circle-button cb-purple" style="text-align: center">
-                    <a href="virtual_library/databases" class="">Databases</a>
-                    <i class="fa fa-hdd-o circle-icon"></i>
-                </div>
-            </div>
-            <div class="col-sm-4 col-xs-6">
-                <div class="circle-button cb-red" style="text-align: center">
-                    <a href="virtual_library/zenodo" class="">Zenodo Library</a>
+        <div class="row"
+             style="text-align: center; padding: 1em">
+            <div class="col-md-4 col-sm-12 col-md-offset-2">
+                <div class="circle-button cb-red" style="margin-top: 2em">
+                    <a href="virtual_library/datasets" class="">Datasets</a>
                     <i class="fa fa-cloud-download circle-icon"></i>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-6">
-                <div class="circle-button cb-blue" style="text-align: center">
+            <div class="col-md-4 col-sm-12">
+                <div class="circle-button cb-blue" style="margin-top: 2em">
                     <a href="virtual_library/deliverables" class="">Deliverables</a>
                     <i class="fa fa-file circle-icon"></i>
                 </div>

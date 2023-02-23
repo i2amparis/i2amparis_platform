@@ -1,0 +1,446 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  42#}
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_short_overview">Short Overview</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key features of the model WISEE-Global Steel </span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_key_features">Key features of the model WISEE-Global Steel </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Climate module & emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_emissions_granularity">Climate module & emissions granularity</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_key_params">Key parameters</a>
+                                </li>
+
+                                <li>
+
+                                <div class="panel-group 42_policies_sdgs">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="padding:0px">
+                                            <h5 class="panel-title"
+                                                style="background-color:#343a40; padding: 5px">
+                                                <a data-toggle="collapse"
+                                                   href="#collapse_42_policies_sdgs"><i
+                                                        class="fa fa-caret-right rotate"
+                                                        style="margin-right: 10px;"></i>Policy questions and SDGs
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse_42_policies_sdgs"
+                                             class="panel-collapse collapse">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span>Key policies that can be addressed</span>
+                                                    <a style="display: none"
+                                                       href="#wisee-globalsteel_key_policies">
+                                                        Key policies that can be addressed</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span>Implications for other SDGs</span>
+                                                    <a style="display: none"
+                                                       href="#wisee-globalsteel_implications_sdgs">
+                                                        Implications for other SDGs</a>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#wisee-globalsteel_recent_use_cases">Recent use cases</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#42_references">References</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The WISEE-Global Steel  model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                WISEE - Global Steel is an Excel and R based scenario development tool for the global steel industry. The model builds on national or regional targets, scenarios and/or technology roadmaps and integrates those into a global picture. National/regional pathways can be modified to explore global implications, for example in order to develop various Paris-compatible global pathways and to explicate their respective national/regional underpinning. Furthermore, the model facilitates analyses of global DRI (direct reduced iron) trade and of new possible global value chains induced by this.
+                              </p>
+                              <p>
+                                The model differentiates 11 countries/regions (EU27, China, India, United States, Japan, South Korea, South Africa, Australia, Brazil, Iran, Russia) and one “rest of the world”-region. The explicitly represented 11 countries/regions cover 92% of today’s global steel production.
+                              </p>
+                              <p>
+                                On the technological side, the model allows to separate iron production from crude steel production, i.e., iron (DRI) may be produced for export and steel may be produced from imported DRI. Steel finishing processes (e.g. hot rolling) are not included the model. In total, the model differentiates 21 Technologies (see below). 
+                              </p>
+                              <p>
+                                The model takes crude steel production per technology (see below) for each region as the main exogenously defined driver. The baseline technology pathways used in the current model version are represented in ten year steps. They are partly gathered from national/regional scenarios or roadmaps for decarbonization of the steel industry and partly deduced from regional industry politics, emission reduction targets as well as geographies of the analysed regions and their renewable energy potential. Pathways for several countries/regions (China, India, South Africa, Europe) have been underpinned through exchange with country experts.
+                              </p>
+
+
+                              <p>Based on this input, following topics are analyzed and presented as model output:</p>
+                                <ul>
+                                  <li>
+                                      Energy and material consumption
+                                  </li>
+                                  <li>
+                                      Steelmaking capacity by technology (including display of mothballed capacities)
+                                  </li>
+                                  <li>
+                                      Costs (production costs, investment costs, energy and material costs etc.)
+                                  </li>
+                                  <li>
+                                      Annual and cumulative emissions
+                                  </li>
+                                  <li>
+                                      Effects of DRI trade
+                                  </li>
+                              </ul>
+                            </br>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_key_features" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key features of the WISEE-Global Steel  model</h2>
+                              <p><b>Technological detail</b></p>
+                              <p>The model features a big number of technologies for iron (DRI) and crude steel production: </p>
+                                  <ul>
+                              <li>
+                                  14 technologies for primary steel production (blast furnace (BF)/ basic oxygen furnace (BOF); BF/BOF+CCS; Smelting Reduction (SR); SR+CCS; DRI/Electric Arc Furnace (EAF) with coal, bioenergy, natural gas or H2 used for DRI production and with or without CCS; DRI / submerged arc furnace (SAF) /BOF with bioenergy, natural gas or H2 used for DRI production and with or without CCS; Alkaline electrolysis (AEL) + EAF; Molten Oxide Electrolysis)
+                              </li>
+                              <li>
+                                  3 technologies for iron (DRI) production for export (DRI with natural gas or hydrogen; AEL)
+                              </li>
+                              <li>
+                                  2 technologies for production of steel from imported iron (DRI) (EAF; SAF/BOF)
+                              </li>
+                              <li>
+                                    2 technologies for production of secondary steel (EAF with fossil fuels or bioenergy used as carbon)
+                              </li>
+                          </ul>
+
+                              <p>
+                                  <b>Separation of iron production from steel production</b>
+                              </p>
+                              <p>
+                                  The model includes technologies for DRI production for export as well as such for steel production from imported DRI. Through this, quantitative analysis of DRI trade and its effects on energy consumption and value chains becomes possible.
+                              </p>
+                            </br>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>The model output includes CO2 emissions per country/region as well as on the global level.</p>
+                            </br>
+                          </section>                    
+                      </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>
+                                  <b>Production levels</b>
+                              </p>
+                              <p>
+                                  Production levels are a main driver of the model and economic growth is a main driver of production level scenarios used by the model. Furthermore, effects of behavioural changes and material efficiency on production levels (e.g. less demand for cars) can be included in the specification of production level scenarios. 
+                              </p>
+                              <p>
+                                  <b>
+                                      Impacts of political and societal discourses
+                                  </b>
+                              </p>
+                              <p>
+                                  The model is flexible to include impacts of political and societal discourses on the industrial production system such as the future (non-)availability of infrastructures (e.g. CO2-infrastructure) and technologies.
+                              </p>
+                            </br>
+                          </section>
+                    </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>The model is capable of including the following mitigation measures:</p>
+                              <ul>
+                              <li>
+                                Material efficiency (less use of steel in buildings, cars etc.)
+                              </li>
+                              <li>
+                                (Increased) use of secondary steel
+                              </li>
+                              <li>
+                                Innovative green technologies for steel production e.g. DRI hydrogen-based steel and Carbon Capture and Storage (see above for full list of technologies)
+                              </li>
+                            </ul>
+                              <p>
+                                  The model does not include adaptation measures.
+                              </p>
+
+                            </br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>Invest and production costs displayed as an output of the model are calculated as annuities with corresponding investment lifetime of the technology. Operation and maintenance costs are differentiated to fix OPEX costs, energy costs, material costs and CO2 costs/tax. Annual invest costs and annual operation and maintenance costs together corresponds to the annual production cost of crude steel by the technology.</p>
+                              <p>The model is “solved” in an iterative process of scenario outline (regional / national production levels and technology pathways) and modification thereof, as well as expert and stakeholder discussions. The iterative process is supported by an interface that visualizes per country/region: </p>
+                              <ul>
+                                <li>steel production total</li>
+                                <li>steel production per capita </li>
+                                <li>DRI production for export</li>
+                                <li>DRI production for export per technology</li>
+                                <li>DRI import</li>
+                                <li>Crude steel production by process</li>
+                                <li>Production capacity per technology (iron & steel)</li>
+                                <li>New technology capacities (iron & steel)</li>
+                                <li>Mothballed capacities (iron & steel)</li>
+                                <li>Energy consumption per energy carrier</li>
+                                <li>Annual and cumulative CO2 emissions</li>
+                                <li>Captured and stored CO2</li>
+                                <li>Material consumption (scrap, ore, pellets etc.)</li>
+                                <li>Specific annual production cost by technology (iron & steel)</li>
+                                <li>Average cost (iron & steel)</li>
+                                <li>Total annual costs</li>
+                              </ul>
+                            <p>The visualization allows to assess implications of the chosen global and national/regional pathways and to discuss their plausibility (e.g. with regards to capacities and scaling of CO2 storage, potentials and scaling of renewable energy, iron ore mining capacities, mothballed production capacities, engineering capacities for plant build-up, etc.)</p>
+                            </br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>Key “parameters” of the model are the national / regional technology pathways defined as main input.</p>
+                            </br>
+                          </section>
+                     </div>
+
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                                <span id="wisee-globalsteel_key_policies" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                              <p>
+                              While the WISEE-Global Steel Model does not feature a policy interface or endogenously simulates the effects of policies, it is able to incorporate the effects of a range of different types of policies through adaptation of the scenario pathways:
+                              </p>
+                              <p><b>Energy policy</b></p>
+                              <p>Changes to the availability and costs of energy carriers can be respected through modification of technology pathways.</p>
+                              <p><b>R&D related policies</b></p>
+                              <p>Policies that support the development and diffusion of innovative technologies can be represented through variation of the replacement of existing assets through innovative technologies.</p>
+                              <p><b>Infrastructure-related policies</b></p>
+                              <p>The model can assess the effects of infrastructure related policies and regulations through variation of the role of technologies depending on these infrastructures in the definition of technology pathways.</p>
+                            </br>
+                          </section>
+                             </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_implications_sdgs" class="anchor"></span>
+                              <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
+                              <p>The WISEE-Global Steel Model does not automatically calculate the implications on non-climate SDGs. However, it is possible to use its outputs (CO2, energy) and calculate impacts for certain indicators framed in the SDG agenda.
+                              </p>
+                            </br>
+                          </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                                <span id="presentation" class="anchor"></span>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ceep4SrFXuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model_Presentation_WISEE_EDM_EU_Industry_Global_Steel.pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                          </section>
+                     </div>
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="wisee-globalsteel_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <p>The model is currently developed and used in the EU Horizon 2020 project NDC ASPECTS. https://www.ndc-aspects.eu/</p>
+                            </br>
+                          </section>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

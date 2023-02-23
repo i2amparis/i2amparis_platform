@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+                        <div id="collapse_42">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#aimenduse_short_overview">Short Overview</a>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+                    <div class="row">
+                        <h1 id="dynerio" style="padding-bottom: 1em; padding-top: 1em">Dynamic Extraction and Recycling Input Output model (DYNERIO)</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="dynerio_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Short overview</h2>
+                            <p>DYNERIO is a simulation model able to assess impact of implemented macroscopic trends and scenarios from an economic and environmental perspectives. With respect to the traditional input-output models, it is able to quantitatively assess the extraction of raw materials for selected technologies driven by the regional production of commodities provided by the Leontief Production Model
+                            </p>
+
+
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="dynerio_key_feat_intro" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key features of the DYNERIO model</h2>
+
+                            <p>Input-Output simulation and impact evaluation model with global geographical scope and fully characterized industrial sectors.
+                            </p>
+
+                            <p>Impact evaluation of desired policies via economic and environmental indicators such as gross value added, production levels of commodities and services, critical raw materials extraction and recycling assessment, GHG emissions, water consumption, land use, primary energy use.</p>
+
+                            <p>The model can be provided of year-by-year exogneous variation of final consumption of commodities and technological mode of production.</p>
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="dynerio_emissions" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                            <p>The model considers CO2 emissions as a direct consequence of the endogenous production of the sectors and regions considered in the model. These emissions are expressed with respect to the sector, region and type of pollutant or greenhouse gas. Thanks to the input-output structure of the model, it is possible to consider various mechanisms for assigning responsibility for emissions (e.g. Production-Based Approach, Consumption-Based Approach).
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Socioeconomic dimensions </h2>
+                            <span id="dynerio_econ_growth" class="anchor"></span>
+                            <p>The model assess the economic impact of the implemented scenarios in terms of sectoral GDP, labor and employment rates variation</p>
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="dynerio_mitigation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>The existing technology is determined by the multiregional input-output database adopted as input to the model. Sectoral interrelationships, characterizing the technology mix of each region, are exogenously determined. The model can react to exogenously provided technology changes such as fuel switches and efficiency improvements.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="dynerio_econ_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>The model capture a yearly picture of the global economy and intersectoral relationships. The model simulates the technological changes/macroscopic trends implemented and computes the level of production of commodity and services required via the application of the Leontief Production Model. Treating such production levels as a driving force for materials extraction, the model solution also quantifies the amount of materials which are extracted regionally and yearly.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="dynerio_key_parameters" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key parameters </h2>
+                            <p>The main exogenous parameters requested are:</p>
+                            <ul>
+                                <li>final demand by sector and region</li>
+                                <li>technology (i.e. input-output coefficients)</li>
+                                <li>macroscopic pathways (population growth, penetration rate of selected technologies, fuel switches)</li>
+                                <li>raw materials data (localization of extraction and recycling processes, material intensity of selected technologies, recycling rates)</li>
+                            </ul>
+                            <p>The endogenous parameters provided by the model concern:</p>
+                            <ul>
+                                <li>sectoral production (which determines the sectoral GDP, cost of deployed capacities, CO2 emissions...)</li>
+                                <li>net extraction of critical materials</li>
+                                <li>recycled materials</li>
+                            </ul>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="dynerio_addressed_pol" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>DYNERIO can be used to assess the impact of different future policies. There are a number of types of policies that can be easily modelled in DYNERIO:</p>
+
+                            <p><strong>Technological change</strong></p> 
+                            <p>Through this model it is possible to implement a perturbation in the starting economic system configuration in order to simulate a change in the way goods and services are produced and/or consumed. From the environmental perspective, it is possible to couple a technological change with a change in consumption of environmental resources and production of emissions.</p>
+
+                            <p><strong>Behavioural policies</strong></p> 
+                            <p>In principle it is possible to assess the impact of changes in behaviour, translated as a change in consumption preferences of the final demand category of households (e.g. impact of teleworking).</p>
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="dynerio_sdg_implications" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Implications for SDGs</h4>
+                            <p>DYNERIO does not independently assess the impact on SDGs but it is possible to derive indicators that may partially indicate an impact on some of the dimensions of several SDGs.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                          <section class="section">
+                                <span id="presentation" class="anchor"></span>
+                                </br>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/XPc9weC41tk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model_Presentation_WTMBT_&_DyNERIO.pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+
+                                </br>
+                                </br>
+                                </br>
+                          </section>
+                     </div>
+
+                    <div class="row">
+                        <section class="section">
+
+                            <span id="dynerio_references" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">References</h4>
+                            <p>
+                                Nakamura, Kondo (2018) - Toward an integrated model of the circular economy: Dynamic waste input–output - https://doi.org/10.1016/j.resconrec.2018.07.016
+                            </p>
+                            <p>
+                                Wiebe, Harsdoff, Montt, Simas, Wood (2018) - Global Circular Economy Scenario in a Multiregional Input−Output Framework - https://doi.org/10.1021/acs.est.9b01208
+                            </p>
+                            <p>
+                                Valero,Valero, Calvo, Ortego (2018) - Material bottlenecks in the future development of green technologies - https://doi.org/10.1016/j.rser.2018.05.041
+                            </p>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

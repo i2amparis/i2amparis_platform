@@ -1,0 +1,1321 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar" >
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                        <div id="collapse_gcamv2022" >
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview </span>
+                                    <a style="display: none" href="#gcamv2022_overview">Short overview </a>
+                                </li>
+                                <li class="list-group-item" style="padding: 0">
+                                    <div class="panel-group gcamv2022_key_feat">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:0px">
+                                                <h5 class="panel-title"
+                                                    style="background-color:#343a40; padding: 5px">
+                                                    <a data-toggle="collapse" href="#collapse_gcamv2022_key_feat"><i
+                                                            class="fa fa-caret-right rotate"
+                                                            style="margin-right: 10px;"></i>Key features of the GCAM v2022
+                                                        model</a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse_gcamv2022_key_feat" class="panel-collapse collapse">
+                                                {#                                      MENU BAR#}
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span>Introduction</span>
+                                                        <a style="display: none" href="#gcamv2022_key_feat_intro">Introduction</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Geographic coverage</span>
+                                                        <a style="display: none" href="#gcamv2022_geo">Geographic
+                                                            coverage</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Energy system detail</span>
+                                                        <a style="display: none" href="#gcamv2022_energy_system">Energy
+                                                            system detail</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Land and agricultural system detail</span>
+                                                        <a style="display: none" href="#gcamv2022_land_agr">Land and
+                                                            agricultural system detail</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><span>Climate module & emissions granularity</span>
+                                    <a style="display: none" href="#gcamv2022_emissions">
+                                        Climate module & emissions granularity</a></li>
+                                <li class="list-group-item">
+                                    <div class="panel-group gcamv2022_socecon">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:0px">
+                                                <h5 class="panel-title"
+                                                    style="background-color:#343a40; padding: 5px">
+                                                    <a data-toggle="collapse" href="#collapse_gcamv2022_socecon"><i
+                                                            class="fa fa-caret-right rotate"
+                                                            style="margin-right: 10px;"></i>Socio- economic dimensions
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse_gcamv2022_socecon" class="panel-collapse collapse">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span>Economic growth</span>
+                                                        <a style="display: none" href="#gcamv2022_econ_growth">Economic
+                                                            growth</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Industrial sector growth</span>
+                                                        <a style="display: none" href="#gcamv2022_industrial">Industrial
+                                                            sector growth</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Transport sector growth</span>
+                                                        <a style="display: none" href="#gcamv2022_transport">Transport
+                                                            sector growth</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Building sector growth</span>
+                                                        <a style="display: none" href="#gcamv2022_building">Building
+                                                            sector growth</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Demand for agricultural commodities</span>
+                                                        <a style="display: none" href="#gcamv2022_demand_agr">Demand for
+                                                            agricultural commodities</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none" href="#gcamv2022_mitigation">
+                                        Mitigation/adaptation measures and technologies</a></li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none" href="#gcamv2022_econ_rationale">
+                                        Economic rationale and model solution</a></li>
+                                <li class="list-group-item">
+                                    <span>Key parameters </span>
+                                    <a style="display: none" href="#gcamv2022_key_parameters">
+                                        Key parameters </a></li>
+                                <li class="list-group-item">
+                                    <div class="panel-group gcamv2022_policy">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:0px">
+                                                <h5 class="panel-title"
+                                                    style="background-color:#343a40; padding: 5px">
+                                                    <a data-toggle="collapse"
+                                                       href="#collapse_gcamv2022_policy"><i
+                                                            class="fa fa-caret-right rotate"
+                                                            style="margin-right: 10px;"></i>Policy
+                                                        questions and SDGs
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse_gcamv2022_policy"
+                                                 class="panel-collapse collapse">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span>Key policies that can be addressed</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_addressed_pol">Key policies
+                                                            that can be addressed</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Implications for other SDGs</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_sdg_implications">Implications
+                                                            for other SDGs</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none" href="#gcamv2022_recent_use_cases">Recent use
+                                        cases</a>
+                                </li>
+                                {#                                                      gcamv2022_china#}
+                                <li class="list-group-item">
+                                    <div class="panel-group gcamv2022_china">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:0px">
+                                                <h5 class="panel-title"
+                                                    style="background-color:#343a40; padding: 5px">
+                                                    <a data-toggle="collapse"
+                                                       href="#collapse_gcamv2022_china"><i
+                                                            class="fa fa-caret-right rotate"
+                                                            style="margin-right: 10px;"></i>GCAM v2022-China
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse_gcamv2022_china"
+                                                 class="panel-collapse collapse">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span>Overview</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_china_overview">Overview</a></li>
+                                                    <li class="list-group-item">
+                                                        <span>Key features of the GCAM v2022-China model</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_china_key_feat">Key
+                                                            features of the GCAM v2022-China model</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Calibration of the model</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_china_calibration">Calibration
+                                                            of the model</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Key parameters</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_china_key_param">Key
+                                                            parameters</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Recent publications </span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_china_publications">Recent
+                                                            publications </a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>References </span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_china_references">References </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {#                                                      gcamv2022_sousei#}
+                                <li class="list-group-item">
+                                    <div class="panel-group gcamv2022_sousei">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:0px">
+                                                <h5 class="panel-title"
+                                                    style="background-color:#343a40; padding: 5px">
+                                                    <a data-toggle="collapse"
+                                                       href="#collapse_gcamv2022_sousei"><i
+                                                            class="fa fa-caret-right rotate"
+                                                            style="margin-right: 10px;"></i>GCAM v2022-SOUSEI
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse_gcamv2022_sousei"
+                                                 class="panel-collapse collapse">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span>Overview</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_sousei_overview">Overview</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Key features of the GCAM v2022-SOUSEI model</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_sousei__key_feat">Key
+                                                            features of the GCAM v2022-China model</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Recent publications </span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_sousei__publications">Recent
+                                                            publications </a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>References </span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_sousei__references">References </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {#                                                      gcamv2022_usa#}
+                                <li class="list-group-item">
+                                    <div class="panel-group gcamv2022_usa">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:0px">
+                                                <h5 class="panel-title"
+                                                    style="background-color:#343a40; padding: 5px">
+                                                    <a data-toggle="collapse"
+                                                       href="#collapse_gcamv2022_usa"><i
+                                                            class="fa fa-caret-right rotate"
+                                                            style="margin-right: 10px;"></i>GCAM v2022-USA
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse_gcamv2022_usa"
+                                                 class="panel-collapse collapse">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span>Overview</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_usa_overview">Overview</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Key features of the GCAM v2022-USA model</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_usa_key_feat">Key
+                                                            features of the GCAM v2022-USA model</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Calibration of the model</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_usa_calibration">Calibration
+                                                            of the model</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Key parameters</span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_usa_key_parameters">Key
+                                                            parameters</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Recent publications </span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_usa_publications">Recent
+                                                            publications A</a>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>References </span>
+                                                        <a style="display: none"
+                                                           href="#gcamv2022_usa_references">References </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+{##}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+            </div>
+
+
+            <div id="main_bar">
+{#                <button class="openbtn content_btn" onclick="openNav()">☰ Contents</button>#}
+                <div class="container">
+                    <div class="row">
+                        <h1 id="gcamv2022" style="padding-bottom: 1em; padding-top: 1em">The Global Change Assessment Model (GCAM v2022)</h1>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_overview" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Short overview</h2>
+                            <p> 
+                            </p>
+                            <p>
+                                The Global Change Assessment Model (GCAM v2022) is a global integrated assessment model that represents both human and Earth system dynamics. It explores the behaviour and interactions between the energy system, agriculture and land use, the economy and climate. The role of GCAM is to bring multiple human and physical Earth systems together in one place to provide scientific insights that would not be available from the exploration of individual scientific research lines. The model components provide a faithful representation of the best current scientific understanding of underlying behaviour.
+
+                            </p>
+                            <p>
+                                GCAM allows users to explore what-if scenarios, quantifying the implications of possible future conditions. These outputs are not predictions of the future; they are a way of analysing the potential impacts of different assumptions about future conditions. GCAM reads in external “scenario assumptions” about key drivers (e.g., population, economic activity, technology, and policies) and then assesses the implications of these assumptions on key scientific or decision-relevant outcomes (e.g., commodity prices, energy use, land use, water use, emissions, and concentrations).
+                            </p>
+                            <p>
+                                It is used to explore and map the implications of uncertainty in key input assumptions and parameters into implied distributions of outputs, such as GHG emissions, energy use, energy prices, and trade patterns. Techniques include scenarios analysis, sensitivity analysis, and Monte Carlo simulations.
+                            </p>
+                            <p>
+                                GCAM has been used to produce scenarios for national and international assessments ranging from the very first IPCC scenarios (Response Strategies Working Group, 1990) through the present Shared Socioeconomic Pathways (SSPs) (Calvin et al., 2017). 
+                            </p>
+
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_key_feat_intro" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key features of the GCAM v2022 model</h2>
+
+                            <p>GCAM takes in a set of assumptions and then processes those assumptions to create a full scenario of prices, energy and other transformations, and commodity and other flows across regions and into the future. The energy, agriculture and land use, economy and climate systems are interconnected and interact with each other (see the figure below). The interactions between these different systems are modelled as one integrated whole. 
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:70%;height:70%; margin-bottom: 2em"
+                                     src="{% static "images/gcam_core_func.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of GCAM v2022 Core functioning
+                                    </p>
+                                    <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">
+                                        https://jgcri.github.io/gcamv2022-doc/overview.html</a></p>
+                                </div>
+                            </div>
+
+                            <section class="section">
+                                <span id="gcamv2022_geo" class="anchor"></span>
+                                <h4 class="mb-0 heading-new">Geographic coverage</h4>
+                                <p>The GCAM core represents the entire world, but it is constructed with different levels of resolution for each of these different systems. The energy-economy system operates at 32 geopolitical regions globally , water withdrawals are tracked for 235 hydrologic basins worldwide, and to avoid overlap between geopolitical regions and hydrologic basins, agriculture and land use is calibrated for 384 regions worldwide. 
+                                </p>
+                                <div style="text-align: center">
+                                    <img style="width:80%;height:80%"
+                                         src='{% static "images/gcam_regional_mapping.png" %}'>
+                                </div>
+                                <div style="text-align: center">
+                                    <p style="text-align: center">GCAM v2022
+                                        regional mapping
+                                    </p>
+                                    <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">
+                                        https://jgcri.github.io/gcam-doc/overview.html</a></p>
+                                </div>
+                                <div class="my_table table-responsive">
+                                    <table class="table ">
+                                        <thead>
+                                        <tr>
+                                            <th style="width:20%">Geographic region</th>
+                                            <th style="width:80%">Countries</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Eastern Africa</td>
+                                            <td>Burundi, Comoros, Djibouti, Eritrea, Ethiopia, Kenya, Madagascar,
+                                                Mauritius, Reunion, Rwanda, Sudan, Somalia, Uganda
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Northern Africa</td>
+                                            <td>Algeria, Egypt, Western Sahara, Libya, Morocco, Tunisia
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Southern Africa</td>
+                                            <td>Angola, Botswana, Lesotho, Mozambique, Malawi, Namibia, Swaziland,
+                                                Tanzania, Zambia, Zimbabwe
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Western Africa</td>
+                                            <td>Benin, Burkina Faso, Central African Republic, Cote d’Ivoire,
+                                                Cameroon, Democratic Republic of the Congo, Congo, Cape Verde, Gabon,
+                                                Ghana, Guinea, Gambia, Guinea-Bissau, Equatorial Guinea, Liberia,
+                                                Mali, Mauritania, Niger, Nigeria, Senegal, Sierra Leone, Sao Tome and
+                                                Principe, Chad, Togo
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Argentina</td>
+                                            <td>Argentina
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Australia and New Zealand</td>
+                                            <td>Australia, New Zealand</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brazil</td>
+                                            <td>Brazil</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Canada</td>
+                                            <td>Canada</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Central America and the Caribbean</td>
+                                            <td>Aruba, Anguilla, Netherlands Antilles, Antigua & Barbuda, Bahamas,
+                                                Belize, Bermuda, Barbados, Costa Rica, Cuba, Cayman Islands, Dominica,
+                                                Dominican Republic, Guadeloupe, Grenada, Guatemala, Honduras, Haiti,
+                                                Jamaica, Saint Kitts and Nevis, Saint Lucia, Montserrat, Martinique,
+                                                Nicaragua, Panama, El Salvador, Trinidad and Tobago, Saint Vincent and
+                                                the Grenadines
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Central Asia</td>
+                                            <td>Armenia, Azerbaijan, Georgia, Kazakhstan, Kyrgyzstan, Mongolia,
+                                                Tajikistan, Turkmenistan, Uzbekistan
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>China</td>
+                                            <td>China</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colombia</td>
+                                            <td>Colombia</td>
+                                        </tr>
+                                        <tr>
+                                            <td>EU-12</td>
+                                            <td>Bulgaria, Cyprus, Czech Republic, Estonia, Hungary, Lithuania, Latvia,
+                                                Malta, Poland, Romania, Slovakia, Slovenia
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>EU-15</td>
+                                            <td>Andorra, Austria, Belgium, Denmark, Finland, France, Germany, Greece,
+                                                Greenland, Ireland, Italy, Luxembourg, Monaco, Netherlands, Portugal,
+                                                Sweden, Spain, United Kingdom
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eastern Europe</td>
+                                            <td>Belarus, Moldova, Ukraine</td>
+                                        </tr>
+                                        <tr>
+                                            <td>European Free Trade Association</td>
+                                            <td>Iceland, Norway, Switzerland</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Non-EU Europe</td>
+                                            <td>Albania, Bosnia and Herzegovina, Croatia, Macedonia, Montenegro,
+                                                Serbia, Turkey
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>India</td>
+                                            <td>India</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Indonesia</td>
+                                            <td>Indonesia</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Japan</td>
+                                            <td>Japan</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mexico</td>
+                                            <td>Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Middle East</td>
+                                            <td>United Arab Emirates, Bahrain, Iran, Iraq, Israel, Jordan, Kuwait,
+                                                Lebanon, Oman, Palestine, Qatar, Saudi Arabia, Syria, Yemen
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pakistan</td>
+                                            <td>Pakistan</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Russia</td>
+                                            <td>Russia</td>
+                                        </tr>
+                                        <tr>
+                                            <td>South Africa</td>
+                                            <td>South Africa</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Northern South America</td>
+                                            <td>French Guiana, Guyana, Suriname, Venezuela</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Southern South America</td>
+                                            <td>Bolivia, Chile, Ecuador, Peru, Paraguay, Uruguay</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Southeast Asia</td>
+                                            <td>American Samoa, Brunei Darussalam, Cocos (Keeling) Islands, Cook
+                                                Islands, Christmas Island, Fiji, Federated States of Micronesia, Guam,
+                                                Cambodia, Kiribati, Lao Peoples Democratic Republic, Marshall Islands,
+                                                Myanmar, Northern Mariana Islands, Malaysia, Mayotte, New Caledonia,
+                                                Norfolk Island, Niue, Nauru, Pacific Islands Trust Territory, Pitcairn
+                                                Islands, Philippines, Palau, Papua New Guinea, Democratic People’s
+                                                Republic of Korea, French Polynesia, Singapore, Solomon Islands,
+                                                Seychelles, Thailand, Tokelau, Timor Leste, Tonga, Tuvalu, Viet Nam,
+                                                Vanuatu, Samoa
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>South Korea</td>
+                                            <td>South Korea</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Taiwan</td>
+                                            <td>Taiwan</td>
+                                        </tr>
+                                        <tr>
+                                            <td>USA</td>
+                                            <td>United States</td>
+                                        </tr>
+                                        </tbody>
+                                        <caption>
+                                            Countries included in each region in GCAM v2022
+                                        </caption>
+                                    </table>
+                                    {#                                      <p class="table-notes">*: Aggregated parameters for GEMINI-E3 model </p>#}
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcam_energy_system" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Energy system detail</h4>
+                            <p>The structure of the energy system consists of four main elements: resource production, energy transformation, final energy carriers and end-use (see the figure below). It also tracks international trade in energy commodities. All the different elements of GCAM interact through market prices and physical flows of, for example, electricity. 
+                            </p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/gcam_energy_system.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Structure of Energy system in GCAM
+                                    </p>
+                                    <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">
+                                        https://jgcri.github.io/gcam-doc/energy.html</a></p>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcam_land_agr" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Land and agricultural system detail</h4>
+                            <p>Within each of the land regions shown in the second figure, land is categorised into approximately a dozen types based on cover and use. In GCAM, competing uses of land are nested within land nodes. Within each land node, it is generally assumed to be easier to substitute products. Among arable land types, further divisions are made for lands historically in non-commercial uses (forests and grasslands) and commercial land uses (commercial forests and croplands). Production of approximately twenty crops is currently modelled, with specific yields depending on the land region and management type (with and without irrigation, high and low fertiliser).
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_emissions" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                            <p>GCAM uses a global climate carbon-cycle climate module, Hector (Calvin et al., 2019), an open-source, object-oriented, reduced-form global climate carbon-cycle model that represents the most critical global-scale earth system processes. At every time step, emissions from GCAM are passed to Hector. Hector converts these emissions to concentrations and calculates the associated radiative forcing and the response of the climate system (e.g., temperature, carbon-fluxes, etc.). 
+                            </p>
+                            <div class="my_table table-responsive">
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:10%">Gas</th>
+                                        <th style="width:40%">Sector</th>
+                                        <th style="width:10%">Gas</th>
+                                        <th style="width:40%">Sector</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>C02**</td>
+                                        <td>AgLU***, Energy</td>
+                                        <td>NH3</td>
+                                        <td>AgLU, Energy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CH4</td>
+                                        <td>AgLU, Energy, Industrial Processes, Urban Processes</td>
+                                        <td>SO2</td>
+                                        <td>AgLU, Energy, Industrial Processes</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>N20</td>
+                                        <td>AgLU, Energy, Industrial Processes, Urban Processes</td>
+                                        <td>CO</td>
+                                        <td>AgLU, Energy, Industrial Processes</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>SF6</td>
+                                        <td>Energy, Industrial Processes</td>
+                                        <td>BC</td>
+                                        <td>AgLU, Energy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HFCs</td>
+                                        <td>Energy, Industrial Processes, Urban Processes</td>
+                                        <td>OC</td>
+                                        <td>AgLU, Energy</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>NOx</td>
+                                        <td>AgLU, Energy, Industrial Processes</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>NMVOC</td>
+                                        <td>AgLU, Energy, Industrial Processes, Urban Processes</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>C2F6</td>
+                                        <td>Energy, Industrial Processes</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>CF4</td>
+                                        <td>Industrial Processes, Urban Processes</td>
+                                    </tr>
+                                    </tbody>
+                                    <caption>
+                                        List of gases and corresponding sectors included in the GCAM v2022 model
+                                        and passed to HECTOR.
+                                    </caption>
+                                </table>
+                                <p class="table-notes">* Most of these gases also have positive or negative indirect
+                                    effects on radiative forcing</p>
+                                <p class="table-notes">
+                                    **CO2 emissions from the AgLU sector are separate from CO2 emissions from the
+                                    Energy sector. Any change in atmospheric carbon occurs as a function of
+                                    anthropogenic fossil fuel and industrial emissions, land-use change emissions and
+                                    the atmosphere-ocean and atmosphere-land carbon fluxes.
+                                </p>
+                                <p class="table-notes">
+                                    ***AgLU = Agriculture and Land Use
+                                </p>
+                            </div>
+                            <p>Hector has a three-part main carbon cycle: a one-pool atmosphere, three-pool land, and four-pool ocean (see the figure below). The atmosphere consists of one well-mixed box. The ocean consists of four boxes, with advection and water mass exchange simulating circulation. The high-latitude surface ocean takes up carbon from the atmosphere, while the low-latitude surface ocean off-gases carbon to the atmosphere. The land consists of a user-defined number of biomes or regions for vegetation, detritus and soil. The vegetation takes up carbon from the atmosphere while the detritus and soil release carbon back into the atmosphere. The earth pool is continually debited with each time step to act as a mass balance check on the carbon system. Hector actively solves the inorganic carbon system in the surface ocean, directly calculating air– sea fluxes of carbon and ocean pH. It reproduces the global historical trends of atmospheric [CO2], radiative forcing, and surface temperatures.</p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/gcam_hector.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Representation of Hector’s carbon cycle,
+                                        land, atmosphere, and ocean used in GCAM 
+                                    </p>
+                                    <p>Source:<a href="https://jgcri.github.io/gcam-doc/hector.html">
+                                        https://jgcri.github.io/gcam-doc/hector.html</a></p>
+                                </div>
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Socioeconomic dimensions </h2>
+                            <span id="gcamv2022_econ_growth" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Economic growth</h4>
+                            <p>The socioeconomic components of GCAM set the scale of economic activity and associated demands for model simulations. Assumptions about population and per capita GDP growth for each of the 32 geo-political regions together determine the GDP. Population and economic activity are used in GCAM to transfer information to other GCAM components, and are determined exogenously. 
+                            </p>
+                            <p>GCAM’s inputs include information on population and the rate of per capita income growth for each of the energy-economic regions. Each scenario requires assumptions about population and per capita GDP growth for future time periods, for example those of the SSPs. The macro-economic module takes both of these to produce overall GDP in each GCAM energy-economic region, where the regional GDP is calculated using a simple one-equation model.:</p>
+
+                            <div style="text-align: center">
+                                <img style="width:50%;height:50%; margin-bottom: 2.5em; margin-top:2em; border-style:solid; border-width: 1px;border-color:#0000001a"
+                                     src="{% static "images/gcam_eq.png" %}">
+                            </div>
+                            <p>Where r stands for region, t for period, t Step = number of years in the time step
+                                (5 for GCAM v2022), 〖GDP〗_(r,t) for GDP in region r in period t, 〖POP〗_(r,t) for
+                                population in region r in period t and 〖GRO〗_(r,t) for annual average per capita
+                                GDP growth rate in region r in period t.</p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_industrial" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Industrial sector growth</h4>
+                            <p>Industrial sector growth Growth in industrial sectors is based on a pre-defined GDP elasticity which decreases over time, thus assuming saturation of industrial demand with rising incomes. The values of these elasticities vary per region and between different SSPs. Apart from a GDP elasticity, industrial demand also depends on an assumed price elasticity for industrial energy use.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_transport" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Transport sector growth</h4>
+                            <p>Per capita demand for passenger transport depends on an assumed GDP per capita elasticity and price elasticity, which means that more transport services are demanded at higher incomes and cheaper transport. However, there is also a time cost involved in transport, which increases proportionally with GDP per capita, and which is summed to the capital and energy costs of transport. This means that, at higher incomes, demand for passenger transport slowly saturates due to the price elasticity multiplied by the increasing costs of time. Also, demand shifts to faster ways of transport, for which time costs are lower. Demand for freight transport, like for industrial sectors, depends on an assumed GDP elasticity and price elasticity.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_building" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Building sector growth</h4>
+                            <p>Demand for energy services in residential and commercial buildings is primarily by total building floor space, which is driven by GDP per capita, and saturates at a given maximum value, defined per region. Per unit of floor space, demand for energy services increases over time depending on the relative price of the service, and the difference between the base year saturation and the defined maximum saturation for a certain service. For heating and cooling services, the maximum saturation depends on regionally explicit heating and cooling degree days.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_demand_agr" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Demand for agricultural commodities</h4>
+                            <p>Demand for agricultural and forest commodities depend on exogenous income and price elasticities. For per-capita food demand, also elasticities of substitution of substitution are applied, where demand moves from staple to non-staple crops with increasing GDP. All elasticities are assumed equal between model regions, but the projected evolution of food demand per region depends largely on differences in base-year food consumption patterns. 
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_mitigation" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                            <p>GCAM is a technology-rich model that represents most major fossil fuel and low-carbon technologies that are envisaged to be available for at least the first half of the 21st century. By simulating the substitution of low-carbon for high-carbon technologies in response to their relative costs, as well as emissions constraints and/or carbon prices, the GCAM model simulates mitigation through a large set of different measures. 
+                            </p>
+                            <div class="my_table table-responsive">
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2">Upstream</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="grey_category" style="width: 50%">Synthetic fuel production</th>
+                                        <th class="grey_category" style="width: 50%">Hydrogen production</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+
+                                        <td><p>Coal to gas with CCS</p>
+                                            <p>Coal to liquids with CCS</p>
+                                            <p>Gas to liquids with CCS</p>
+                                            <p>Biomass to liquids (with and without CCS)</p>
+                                        </td>
+                                        <td><p>Electrolysis</p>
+                                            <p>Coal to hydrogen with CCS
+                                            </p>
+                                            <p>Gas to hydrogen with CCS</p>
+                                            <p> Thermal splitting (nuclear)</p>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2">Electricity and heat</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="grey_category">Electricity generation</th>
+                                        <th class="grey_category">Heat generation</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Coal with CCS</p>
+                                            <p>Gas with CCS</p>
+                                            <p>Nuclear (fission and fusion)</p>
+                                            <p>Hydro</p>
+                                            <p> Biomass (with and without CCS)</p>
+                                            <p> Geothermal</p>
+                                            <p>Solar PV</p>
+                                            <p>Solar CSP</p>
+                                            <p>Wind (onshore)</p>
+                                            <p> Marine</p>
+                                        </td>
+                                        <td>
+                                            <p>Coal with CCS</p>
+                                            <p>Gas with CCS</p>
+                                            <p>Oil with CCS</p>
+                                            <p>Geothermal</p>
+                                            <p>Biomass</p>
+                                            <p> Biomass with CCS</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2">Transport</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="grey_category">Road</th>
+                                        <th class="grey_category">Rail</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Gas (LNG / CNG) vehicle</p>
+                                            <p> Hybrid electric vehicles</p>
+                                            <p>Fully electric vehicles</p>
+                                            <p>Hydrogen fuel cell vehicles</p>
+                                            <p> Biofuels in fuel mix</p>
+                                        </td>
+                                        <td>
+                                            <p>Electric</p>
+                                            <p> Hydrogen</p>
+                                            <p>Efficiency</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>
+                                        <th class="grey_category">Air</th>
+                                        <th class="grey_category">Marine</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Biofuels in fuel mix</p>
+                                        </td>
+                                        <td>
+                                            <p>Gas</p>
+                                            <p>Hydrogen</p>
+                                            <p>Biofuels</p>
+                                            <p> Efficiency</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2">Buildings</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="grey_category">Heating</th>
+                                        <th class="grey_category">Lighting</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Gas replacing coal / oil</p>
+                                            <p> Biofuels</p>
+                                            <p> Electricity</p>
+                                            <p>Efficiency</p>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>
+                                        <th class="grey_category">Behaviour</th>
+                                        <th class="grey_category">Cooling</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Behavioural change</p>
+                                        </td>
+                                        <td><p>Electricity</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>Industry</tr>
+                                    <tr>
+                                        <th class="grey_category">Process heat</th>
+                                        <th class="grey_category">CHP</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Gas replacing oil / coal</p>
+                                            <p> Biomass</p>
+                                            <p>Hydrogen</p>
+                                            <p>Electricity</p>
+                                        </td>
+                                        <td>
+                                            <p>Gas replacing oil / coal</p>
+                                            <p> Biomass</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>Agriculture</tr>
+                                    <tr>
+                                        <th class="grey_category">Land & Animal husbandry</th>
+                                        <th class="grey_category">Behaviour</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Land yield maximisation</p>
+                                            <p> Improved feeding practices</p>
+                                        </td>
+                                        <td>
+                                            <p>Behavioural changes (less product demand)</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>
+                                        <th class="grey_category">Land Use, Land Use Change, Forestry</th>
+                                        <th class="grey_category"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Afforestation</p>
+                                            <p> Land production</p>
+                                            <p>Biomaterials</p>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <caption>
+                                        Main mitigation options in GCAM v2022
+                                    </caption>
+                                </table>
+                                {#                                      <p class="table-notes">*: Aggregated parameters for GEMINI-E3 model </p>#}
+                            </div>
+                            <p>Also, certain assumption sets can be loaded for future crop yields, heating and cooling degree days, which are consistent with a certain temperature target. Through these assumptions, the model adapts to the simulated reality through the allocation of agricultural production, and building service demands.</p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_econ_rationale" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                            <p>The core operating principle for GCAM is that of market equilibrium. The representative agents in the modules use information on prices and make decisions about the allocation of resources. They represent, for example, regional electricity sectors, regional refining sectors, regional energy demand sectors, and land users who have to allocate land among competing crops within any given land region. Markets are the means by which these representative agents interact with one another. Agents indicate their intended supply and/or demand for goods and services in the markets. GCAM solves for a set of market prices so that supplies and demands are balanced in all these markets across the model (see the figure below); in other words, market equilibrium is assumed to take place in each one of these markets (partial equilibrium), and not in the entire economy across all markets (general equilibrium). The GCAM solution process is the process of iterating on market prices until this equilibrium is reached. Markets exist for physical flows such as electricity or agricultural commodities, but they also can exist for other types of goods and services, for example tradable carbon permits.
+                            </p>
+                            <p>As an example, in any single model period, GCAM derives a demand for natural gas starting with all of the uses to which natural gas might be put, such as passenger and freight transport, power generation, hydrogen production, heating, cooling and cooking, fertiliser production, and other industrial energy uses. Those demands depend on the external assumptions about, for example, electricity generating technology efficiencies, but also on the price of all of the commodities in the model. GCAM then calculates the amount of natural gas that suppliers would like to supply given their available technology for extracting resources and the market price. The model gathers this same information for all of the commodities and then adjusts prices so that in every market during that period supplies of everything from rice to solar power match demands.</p>
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/gcam_core.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">Conceptual Schematic of the Operation of
+                                        the GCAM Core
+                                    </p>
+                                    <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">
+                                        https://jgcri.github.io/gcam-doc/overview.html</a></p>
+                                </div>
+                            </div>
+                            <p>GCAM is a dynamic recursive model, meaning that decision-makers do not know the future when making a decision today, as opposed to other optimisation models, which assume that agents know the future with certainty when they make decisions. After it solves each period, the model then uses the resulting state of the world, including the consequences of decisions made in that period—such as resource depletion, capital stock retirements and installations, and changes to the landscape—and then moves to the next time step and performs the same exercise. The GCAM version used is typically operated in five-year time steps with 2100 as the final calibration year. However, the model has flexibility to be operated at a different time horizon through user-defined parameters.</p>
+                            <p>While the agents in the GCAM model are assumed to act towards maximising their own self-interest, the model as a whole is not performing an optimisation calculation. In fact, actors in GCAM can make decisions that “seemed like a good idea at the time”, but which are not optimal from a larger social perspective and which the decision maker would not have made had the decision maker known what lay ahead in the future. For example, the model’s actors do not know about future climate regulations, and could install fossil fuel power in the years preceding the implementation of such policies. Also, stated preferences by agents for certain technologies (e.g. transport modes) are calculated in the base year and such preferences are persistent into the future (their evolution can be changed by the user), preventing the solution to be completely cost-minimising or profit-maximising.</p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_key_parameters" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">Key parameters </h2>
+                            <p>Key scenario assumptions for the GCAM core include socioeconomics (population, labour participation, and labour productivity); energy technology characteristics (e.g. costs, performance, water requirements); agricultural technology characteristics (e.g. crop yields, costs, carbon contents, water requirements, fertiliser requirements); energy and other resources, such as fossil fuels, wind, solar, uranium and groundwater; and policies, including emissions constraints, renewable portfolio standards, etc.
+                            </p>
+                            <p>Key scenario results (outputs) from the GCAM model include an analysis of the energy system (energy demands, flows, technology deployments, and prices throughout); prices and supplies of all agricultural and forest products, land use and land use change; water demands and supplies for all agricultural, energy, and household uses; and emissions for 24 greenhouse gases and short-lived species (CO2, CH4, N2O, halocarbons, carbonaceous aerosols, reactive gases, and sulphur dioxide).</p>
+                            <div style="text-align: center">
+                                <img style="width:60%;height:60%; margin-bottom: 2em"
+                                     src="{% static "images/gcam_scenario_assumptions.png" %}">
+                                <div style="text-align: center">
+                                    <p style="text-align: center">GCAM scenario assumptions and modelling
+                                        outputs
+                                    </p>
+                                    <p>Source:<a href="https://jgcri.github.io/gcam-doc/overview.html">
+                                        https://jgcri.github.io/gcam-doc/overview.html</a></p>
+                                </div>
+                            </div>
+                            <p>Outcomes in GCAM depend strongly on the assumptions made for socioeconomic, techno-economic, and agronomic parameters. While many of these parameters matter for the outcomes from the model, some can be identified as the most relevant ones:</p>
+                            <p> • Global and national GHG reduction targets
+                                • Global and national afforestation targets
+                                • Future demand scenarios for energy services and agricultural products
+                                • Future cost paths for renewable energy and CCS technologies
+                            </p>
+                            <p>Parameters can be revised and updated in the framework of the PARIS REINFORCE project, following the feedback of local experts (stakeholder engagement), the comparative assessment with other modelling experiences, and the discussion with the partners (modellers).
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="section">
+                            <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
+                            <span id="gcamv2022_addressed_pol" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>One of GCAM’s uses is to explore the implications of different future policies. There are a number of types of policies that can be easily modelled in GCAM:
+                            </p>
+                            <p><b>Emissions-related policies:</b> There are three main policy approaches that can be applied in GCAM to reduce emissions of CO2 or other GHGs: carbon/GHG prices, emissions constraints, or climate constraints. In all cases, GCAM implements the policy approach by placing a price on emissions. This price then filters down through all systems in GCAM and alters production and demand. For example, a price on carbon would put a cost on emitting fossil fuels. This cost would then influence the cost of producing electricity from fossil-fired power plants that emit CO2, which would then influence their relative cost compared to other electricity generating technologies and increase the price of electricity. The increased price of electricity would then make its way to consumers that use electricity, decreasing its competitiveness relative to other fuels and leading to a decrease in electricity demand. </p>
+                            <p>• Carbon or GHG prices: GCAM users can directly specify the price of carbon or GHG emissions. Given a carbon price, the resulting emissions will vary depending on other scenario drivers, such as population, GDP, resources, and technology. 
+                                • Emissions constraints: GCAM users can specify the total amount of (CO2 or other GHG) emissions as well. GCAM will then calculate the price of carbon needed to reach the constraint in each period of the constraint. 
+                                • Climate constraints: GCAM users can specify a climate variable (e.g. concentration or radiative forcing) target for a particular year. Users determine whether that target can be exceeded prior to the target year. GCAM will adjust carbon prices in order to find the least-cost path to reaching the target.
+                            </p>
+                            <p>Emissions prices of different GHGs can be linked together for a multi-gas policy. Additionally, markets in GCAM can be set for any emission species (e.g., CH4-only market, NOx market, etc.). In addition to identifying emission prices as one measure of cost, GCAM employs the “deadweight loss” approach to measuring welfare loss from emissions mitigation efforts through carbon pricing.</p>
+                            <p><b>Energy production policies: </b>There are times when users would like to explore the implications of a constraint on production or a minimum production requirement. This capability allows GCAM users to model policies such as renewable portfolio standards and biofuels standards. Across sectors, these constraints must be applied as quantity constraints, but they can be applied as share constraints within individual sectors (e.g. fraction of electricity that comes from solar power). In implementing these policies, users can set either a lower bound or an upper bound. The model will solve for the tax (upper bound) or subsidy (lower bound) required to reach the given constraint.</p>
+                            <p><b>Land use policies</b></p>
+                            <p>• Protected Lands: With this policy, GCAM users can set aside a fraction of natural land, removing it from economic competition. This land cannot be converted to crops, pasture, or any other land type. This is similar to real-world policies such as reducing emissions from deforestation and forest degradation (REDD). 
+                                • Valuing carbon in land: When applying a price on carbon through any of the emissions-related policy approaches, GCAM users can choose whether that price extends to land use change CO2 emissions. This policy is modelled as a subsidy to land-owners for holding carbon stocks as opposed to a price on the emissions themselves.   
+                                • Bioenergy constraints: GCAM users can impose constraints on bioenergy within GCAM. Under such a policy, GCAM will calculate the tax or subsidy required to ensure that the constraint is met. 
+                            </p>
+
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_sdg_implications" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
+                            <p>GCAM does not automatically calculate the implications on non-climate SDGs of its least-cost energy system to meet prescribed climate or emissions constraints. However, it is possible to use its outputs and calculate the predictions for certain indicators framed in the SDG agenda. 
+                            </p>
+                            <div class="my_table table-responsive">
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:40%">SDGs</th>
+                                        <th style="width:60%">GCAM v2022</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="light-grey">§2. Zero hunger (e.g., food prices, shortages)</td>
+                                        <td>Food prices by region</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light-grey">§3. Health (e.g., air-pollution related mortality)</td>
+                                        <td>Mortality due to air pollutants</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light-grey">§6. Clean water and sanitation (e.g., groundwater
+                                            depletion)
+                                        </td>
+                                        <td>Groundwater depletion by river basin</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="light-grey">§7. Affordable and clean energy (e.g., traditional
+                                            biomass use, %renewable
+                                            energy)
+                                        </td>
+                                        <td>Traditional biomass use and renewable energy penetration</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light-grey">§12: Responsible production & consumption (e.g., %
+                                            recycled waste,
+                                            embedded emissions)
+                                        </td>
+                                        <td>Footprint impact of consumption</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light-grey">§15: Life on land (e.g., land use for forests, rate of
+                                            land use change)
+                                        </td>
+                                        <td>Land use for forests and rate of land use change</td>
+                                    </tr>
+                                    </tbody>
+                                    <caption>
+                                        Capacity of the GCAM v2022 model to address non-climate SDGs
+                                    </caption>
+                                </table>
+                                {#                                      <p class="table-notes">*: Aggregated parameters for GEMINI-E3 model </p>#}
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                          <section class="section">
+                                <span id="presentation" class="anchor"></span>
+                                </br>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/hG-cs_V5q1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model_Presentation_GCAM.pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                          </section>
+                     </div>
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_recent_use_cases" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">Recent use cases</h4>
+                            <div class="my_table table-responsive">
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th style="width:20%">Paper</th>
+                                        <th style="width:40%">Topic</th>
+                                        <th style="width:40%">Key Findings</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="light-grey">(Huang et al., 2019)</td>
+                                        <td>Global agricultural green and blue water consumption under future climate
+                                            and land use changes
+                                        </td>
+                                        <td>Global crop green water consumption will increase by 12% in 2090s when
+                                            compared with that in 1971–2000, and climate change will dominate over
+                                            land use change in determining the trend of global crop green water
+                                            consumption. However, expansion in global irrigated area will dominate the
+                                            changing trend of global crop blue water consumption which increases 70%
+                                            by 2090s, especially in regions with significant irrigated land expansion
+                                            (e.g. northern Africa, central Asia, China, Mexico, the Middle East,
+                                            Russia, southern Asia, and Argentina). Furthermore, global crop blue water
+                                            dependence will increase under climate and land use changes, especially in
+                                            arid regions.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light-grey">(Markandya et al., 2018)</td>
+                                        <td>Health co-benefits from air pollution and mitigation costs of the Paris
+                                            Agreement
+                                        </td>
+                                        <td>The health co-benefits substantially outweighed the policy cost of
+                                            achieving the 2°C target. The ratio of health co-benefit to mitigation
+                                            cost ranged from 1.4 to 2.45, depending on the scenario. At the regional
+                                            level, the costs of reducing GHG emissions could be compensated with the
+                                            health co-benefits alone for China and India, whereas the proportion the
+                                            co-benefits covered varied but could be substantial in the European Union
+                                            (7–84%) and USA (10–41%), respectively. Finally, we found that the extra
+                                            effort of trying to pursue the 1.5°C target instead of the 2°C target
+                                            would generate a substantial net benefit in India (US$3.28–8.4 trillion)
+                                            and China ($0.27–2.31 trillion).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light-grey">(Fawcett et al., 2015)</td>
+                                        <td>Understanding what the INDCs collectively deliver in terms of reducing the
+                                            probability of the highest levels of global mean surface temperature
+                                            change and improving the odds of limiting temperature change to under 2°C
+                                            relative to preindustrial levels
+                                        </td>
+                                        <td>To limit warming to any level, CO2 emissions at the global level must
+                                            ultimately be brought to zero. If emissions are not brought swiftly to
+                                            zero beyond 2100, the chances of extreme temperature change after 2100
+                                            could be much higher and the chance of limiting warming to 2°C much lower.
+                                            The Paris scenarios reduce probabilities of extreme warming and increase
+                                            the probability of limiting global warming to 2°C this century.
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                    <caption>
+                                         List of recent publications using the GCAM v2022 model
+                                    </caption>
+                                </table>
+                                {#                                      <p class="table-notes">*: Aggregated parameters for GEMINI-E3 model </p>#}
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="gcamv2022_usa_references" class="anchor"></span>
+                            <h4 class="mb-0 heading-new">References</h4>
+                            <p>
+                                Huang, Z., Hejazi, M., Tang, Q., Vernon, C. R., Liu, Y., Chen, M., & Calvin, K. (2019). Global agricultural green and blue water consumption under future climate and land use changes. Journal of Hydrology, 574, 242-256.
+                            </p>
+                            <p>
+                                Markandya, A., Sampedro, J., Smith, S. J., Van Dingenen, R., Pizarro-Irizar, C., Arto, I., & González-Eguino, M. (2018). Health co-benefits from air pollution and mitigation costs of the Paris Agreement: a modelling study. The Lancet Planetary Health, 2(3), e126-e133.
+                            </p>
+                            <p>
+                                Fawcett, A. A., Iyer, G. C., Clarke, L. E., Edmonds, J. A., Hultman, N. E., McJeon, H. C., ... & Creason, J. (2015). Can Paris pledges avert severe climate change?. Science, 350(6265), 1168-1169.
+
+                            </p>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+
+<script src={% static "content_button_js.js" %}></script>
+
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+
+</body>
+
+</html>
+
+

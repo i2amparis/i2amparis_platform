@@ -556,6 +556,10 @@ def covid_virtual_library(request, **kwargs):
         return render(request, 'i2amparis_main/covid_workspace/covid_virtual_library_' + kwargs['section'] + '.html',
                       context)
 
+def feasibility_workspace_landing(request):
+    context = {}
+    return render(request, 'i2amparis_main/feasibility_workspace/feasibility_landing.html', context)
+
 def feasibility_scientific_module(request):
     '''View of scientific interface for the Global Regional Feasibility Workspace'''
     models = DataVariablesModels.objects.filter(name__in=FeasibilityMetaData.objects.values_list('model_name',flat=True).distinct()).order_by('name')
@@ -572,6 +576,15 @@ def feasibility_scientific_module(request):
 
     return render(request, 'i2amparis_main/feasibility_workspace/feasibility_scientific_module.html', context)
 
+def feasibility_virtual_library(request, **kwargs):
+    '''View of virtual library interface for the feasibility Workspace'''
+    if 'section' not in kwargs.keys():
+        context = {}
+        return render(request, 'i2amparis_main/feasibility_workspace/feasibility_virtual_library.html', context)
+    else:
+        context = {}
+        return render(request, 'i2amparis_main/feasibility_workspace/feasibility_virtual_library_' + kwargs['section'] + '.html',
+                      context)
 
 
 

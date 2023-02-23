@@ -40,6 +40,8 @@ class ProjectModels(models.Model):
     model = models.ForeignKey(ModelsInfo, on_delete=models.CASCADE)
     project = models.CharField(null=False, default="", max_length=100)
 
+    def __str__(self):
+        return f'{self.model.model_name} - {self.project}'
 
 # Dynamic Documentation Models
 

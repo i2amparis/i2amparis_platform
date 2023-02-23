@@ -24,11 +24,11 @@ WORKDIR $APP_HOME
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
-#Copy whole project
-COPY . $APP_HOME
+#Copy whole project and chown (change owner of) 
+COPY --chown=i2amparis:i2amparis . $APP_HOME
 
 # chown (change owner of) all the files to the app user
-RUN chown -R i2amparis:i2amparis $APP_HOME
+RUN chown -R i2amparis:i2amparis $APP_HOME/staticfiles
 
 # change to the app user
 USER i2amparis

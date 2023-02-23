@@ -175,82 +175,52 @@
                           <section class="section">
                               <span id="wisee-edm_short_overview" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Short overview</h2>
-                              <p>The industrial module of WISEE-EDM is used to analyse possible futures of an industrial
-                                  production system and to derive technically consistent paths to them, starting from
-                                  the current production system. </p>
-                              <p>
-                                  <ul>
-                              Typical questions to the model are, for example:
-                              <li>
-                                  Which technology mixes make it possible to meet CO2 emission reduction targets in
-                                  2050?
-                              </li>
-                              <li>
-                                  When do investments in innovative industrial processes have to start in order to
-                                  achieve a set target status while maintaining the usual reinvestment cycles?
-                              </li>
-                              <li>
-                                  Which energy sources are needed for a target-oriented path, in what quantities, when
-                                  and where?
-                              </li>
-                              <li>
-                                  What will future production networks look like in technological and geographical
-                                  terms?
-                              </li>
-                          </ul>
-                              </p>
-                              <p>
-                                  The model has a high level of technical detail and offers a variety of options for
-                                  adapting the analysis to scenario-specific assumptions. It is therefore particularly
-                                  suitable for developing scenarios in exchange with stakeholders.
-                              </p>
-                              <p>
-                                  <ul>
-                              The industrial module of WISEE-EDM is a "bottom-up" model of industrial production.
-                              Bottom-up means that aggregated values such as CO2 emissions of the German steel industry
-                              are derived from the properties and operation of the individual plants covered by the
-                              model. Its databasis of industry plants currently (2020) covers the following industries:
-                              <li>
-                                  for EU-27+3: iron & steel, basic chemicals, refineries
-                              </li>
-                              <li>
-                                  for Germany in addition: pulp & paper, non-ferrous metals, cement, lime, glass
-                                  (more on this see „Key features“).
-                              </li>
-                          </ul>
-                              Developments of energy demand and CO2-emissions in other sectors are calculated using
-                              econometric methods.
-                              </p>
-                              <p>
-                                  <ul>
-                              The industrial module of WISEE-EDM is strictly speaking a model family whose central
-                              components are the following two modules:
-                              <li>
-                                  WISEE-EDM Dispatch (EDM-D): Calculates the use (dispatch) of production plants and the
-                                  associated CO2 emissions, energy requirements, feedstock flows and the production of
-                                  by-products (e.g. hydrogen from chlor-alkali electrolysis).
-                              </li>
-                              <li>
-                                  WISEE-EDM-Invest (EDM-I): Optimizes the Europe-wide investments in production
-                                  facilities from an economic point of view over a given period of time, taking into
-                                  account the demand for end products and transport costs between locations. (Currently
-                                  parameterized for the chemical industry only)
-                              </li>
-                          </ul>
-                              </p>
-                              <p>
-                                  <div style="text-align: center">
+
+                                <p>The industrial modules of WISEE-EDM are used to analyse possible futures of an industrial production system and to derive technically consistent paths to them, starting from the current production system.</p>
+
+                                <p>Typical questions to the models are, for example:</p>
+                                <ul>
+                                    <li>"Which technologies will enable compliance with set CO2 emission reduction targets in 2050?"</li>
+                                    <li>"When does a phase-in of break-through technologies need to start in order to reach a target state while maintaining usual reinvestment cycles?"</li>
+                                    <li>"What energy sources are needed for a target pathway, in what quantities, when and where?"</li>
+                                    <li>"What do future production networks look like technologically and geographically?"</li>
+                                </ul>
+
+                                <p>The models have a high level of technical detail and offer a variety of options for adapting the analysis to scenario-specific assumptions. They are therefore particularly suitable for developing scenarios in exchange with stakeholders.</p>
+
+                                
+                                <div style="text-align: center">
                                   <img style="width:80%;height:80%; margin-bottom: 2em"
                                        src="{% static "images/wisee-edm.jpg" %}">
-                                  <div style="text-align: center">
+                                  <div style="text-align: center">Figure 1: Models and their coverage of sectors and levels (as indicated by the colours of bars). Sectors are partly sub-divided into several sub-sectors in the models. Note: the EDM-GS Global Steel Model is described in a separate entry in the database and will thus not be discussed in the following.
                                   </div>
+                              </br>
                               </div>
 
-                              </p>
-                              <p>The model results cover selected years (typically 5-year steps) within the specified
-                                  simulated time frame (e.g. 2020 - 2050). While the invest module optimizes over the
-                                  whole time frame, the dispatch model calculates results for each selected year in
-                                  turn.</p>
+                                
+
+                                <p>The models and tools cover different industrial sub-sectors and levels of analysis and have a range of different purposes, for example material flow analysis (EDM-S) and investment optimization (EDM-I). The following gives a very brief account of each of the models in the family (see figure 1):</p>
+
+                                <ul>
+                                <li>The EDM-D draws on production levels that need to be provided as an input and on the EDM industry database (see below) to calculate the site-specific capacity utilization of production processes and for determining the resulting energy requirements and CO2 quantities. Among other things, the EDM-D enables a rule-based switch between energy carriers over time, whereby a substitution rule is created for a sector or process and made dependent on conditions (such as availability of an H2 infrastructure or availability of a CO2 infrastructure) and can be limited to certain locations or regions (e.g. states, NUTS-3 areas). Furthermore, the EDM-D balances by-products of industrial production (hydrogen, process steam, steam cracker by-products, coke oven, blast furnace and converter gases) and their further use in other processes at the level of sites or cross-site H2 and steam networks.</li>
+                                <li>The EDM-I optimises the Europe-wide investments in production plants of the chemical industry from an economic point of view over a given period of time, taking into account the demand for end products in different years as well as transport costs between locations, taking into account product pipelines that exist between locations today. The EDM-I requires the specific production costs of individual technologies as well as other cost parameters. These are stored in the model, but can also be varied if necessary. The optimisation also results in the use of feedstock and the production quantities per (intermediate) product at different locations. A version of the EDM-I for the steel industry is currently under development (Dec 2022).</li>
+                                <li>The EDM-S is a multi-regional dynamic Material Flow Analysis (MFA) of polymers technically based on the ODYM framework (Open Dynamic Material Systems Model). It aims to answer such questions as “which polymers are demanded in which quantities by which consumer sectors in any given year?” and “Which polymers enter the waste stream in which quantities and after how long in which use sectors in any given year?”. A version of the EDM-S for the steel industry is currently under development (Dec 2022). </li>
+                                <li>The EDM-D_EU is a simplified version of the EDM-D that is used for the energy intensive industries except steel, chemicals and refineries at the EU27(+UK) level. It is used for activity-based modelling of mitigation pathways at country level (i.e. without explicit representation of production capacities).</li>
+                                <li>The EDM-C is a tool for the cement sector that enables a structured derivation of cement and clinker required to satisfy an externally defined service demand for concrete buildings. This tool enables the consideration of developments and reduction levers at different levels of the cement and concrete sector ranging from efficiency of concrete use in concrete construction (e.g. leaner components) through binder shares in concretes and market shares of new binders to the use of different types of cements with various clinker contents.</li>
+                                <li>The EDM-Steam is a tool to define technical pathways for the production of steam required for industrial production and to calculate according energy demands and CO2. It differentiates CHP and boilers fueled by different energy carriers as well as heat pumps.</li>
+                                <li>The EDM-NE extrapolates energy demand for and CO2 emissions of the non-energy intensive industries based on economic indicators, efficiency parameters and technology shifts. It differentiates the non-energy intensive industry into three sectors and considers four different heat levels for each of them (room temp., < 150°C, 150-500°C, >500 °C).</li>
+                                </ul>
+                                
+
+                                <p>The EDM-D and EDM-I modules draw on an extensive database of industrial plants currently (2022) covering the following industries:</p>
+                                <ul>
+                                    <li>for EU-27+3: iron & steel, basic chemicals, refineries</li>
+                                    <li>for Germany in addition: pulp & paper, non-ferrous metals, cement, lime, glass</li>
+                                </ul>
+                                <p>(see below for details on the database)</p>
+
+                                <p>The model results cover selected years (typically 5-year steps) within the specified simulated time frame (e.g. 2020 - 2050).</p> 
+                              </br>
                           </section>
                      </div>
 
@@ -260,47 +230,24 @@
                               <h2 class="mb-0 heading-new">Key features of the WISEE-EDM model</h2>
                               <p><b>High level of technological detail</b></p>
                               <p>
+                              Energy requirements and CO2 emissions are calculated based on the (assumed) physical production of goods. The database underlying the WISEE-EDM industry modules includes:</p>
                                   <ul>
-                              Energy requirements and CO2 emissions are calculated based on the (assumed) physical
-                              production of goods. The database of the WISEE-EDM industry module includes:
                               <li>
-                                  Approx. 800 production sites in Europe. These are covered with GIS data and assigned
-                                  to the EU member states and various NUTS levels (NUTS 1, NUTS 3). The database also
-                                  contains the connection of sites of the chemical industry and refineries by pipelines.
-                                  Furthermore, the (future) connections of sites to a CO2 or hydrogen infrastructure can
-                                  be specified (scenario-dependent).
+                                  Approx. 800 production sites in Europe. These are stored with GIS data and assigned to the EU member states and various NUTS levels. The linking of chemical industry sites and refineries by feedstock and product pipelines is also stored in the database. Furthermore, the (future) times of a connection of sites to a CO2 or H2 infrastructure can be specified (depending on the scenario).
                               </li>
                               <li>
-                                  Approx. 200 technologies (e.g. blast furnace, steam cracker, rotary kiln) with their
-                                  respective specific energy requirements (differentiated by 25 energy carriers),
-                                  process-related emissions, selected material inputs and typical technical lifetimes.
-                                  Technologies on the European average standard of the years 2000 to 2005 as well as the
-                                  currently best available technology (BAT) and assumed future processes (e.g. reduction
-                                  of iron ore by means of hydrogen) are included.
+                                  Approx. 200 technologies (e.g. blast furnace, steam cracker, rotary kiln) with their respective specific energy requirements, process-related emissions, selected material inputs and typical technical lifetimes. Technologies are stored at different development and efficiency levels: at the standard of the European average of the years 2000 to 2005 (“default”) as well as the currently best available technology (“BAT”) and assumed further improved processes in the future (“BAT+”).
+
                               </li>
                               <li>
-                                  > 2600 industrial production plants. The production plants are specified in terms of
-                                  the technology used (see above) and their production capacity. For particularly
-                                  energy-intensive plants, the year in which they were built is also specified. All
-                                  production facilities are assigned to the respective sites.
-                              </li>
-                              <li>
-                                  > 250 industrial power plants, specified by fuel, maximum capacity (electrical,
-                                  thermal), operating strategy and year of construction. They are assigned to the
-                                  respective sites.
+                                  More than 2600 industrial production facilities. The production facilities are specified in terms of the technology used (see above) and their production capacity. For particularly energy-intensive plants, the year of construction is also stored. All production plants are assigned to individual sites.
                               </li>
                           </ul>
-                              </p>
                               <p>
                                   <b>Consideration of industrial co-products</b>
                               </p>
                               <p>
-                                  The production of steam, steel gases and hydrogen as by-products of industrial
-                                  production is accounted for at each site or within the inter-site networks defined in
-                                  the model, and is taken into account in the calculation of (remaining) energy
-                                  requirements and the operation of industrial power plants. For the production of steel
-                                  and basic chemicals, balances are also prepared for selected quantities of materials
-                                  (educts and products).
+                                  In the EDM-D the production of steam, steel gases and hydrogen as by-products of industrial production as well steam cracker by-products are accounted for at each site or within the inter-site networks stored in the database, and is taken into account in the calculation of (remaining) energy requirements and the operation of industrial power plants. For the production of steel and basic chemicals, balances are also prepared for selected quantities of materials (educts and products).
                               </p>
                               <p>
                                   <b>
@@ -308,21 +255,17 @@
                                   </b>
                               </p>
                               <p>
-                                  The investment module is characterized by a consideration of complex production chains
-                                  in connection with transport possibilities and costs of intermediate products.
+                                  The investment module EDM-I is characterized by a consideration of complex production chains in connection with transport possibilities and costs of intermediate products.
                               </p>
-                          </section>
-                    </div>
+                              </br>
+                          </section>                    
+                      </div>
 
                     <div class="row">
                           <section class="section">
                               <span id="wisee-edm_emissions_granularity" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
-                              <p>CO2 emissions are calculated based on the (assumed) physical production of goods
-                                  considering the site-specific efficiency of applied technologies and the choice of
-                                  energy carriers as well as the use of carbon capture technologies (if any). CO2
-                                  emissions are calculated for each production plant and can be aggregated to NUTS 3-,
-                                  NUTS 1-, national and European levels.</p>
+                              <p>CO2 emissions are calculated based on the (assumed) physical production of goods considering the site-specific efficiency of applied technologies and the choice of energy carriers as well as the use of carbon capture technologies (if any). In the EDM-D CO2 emissions are calculated for each production plant and can be aggregated to NUTS 3-, NUTS- 1, national and European levels.</p>
                           </section>
                     </div>
                     <div class="row">
@@ -333,12 +276,7 @@
                                   <b>Production levels</b>
                               </p>
                               <p>
-                                  Production levels are a main driver of the model. Economic growth is a main input
-                                  variable to the definition of production level scenarios used by the model.
-                                  Furthermore, effects of behavioural changes on production levels (e.g. less demand
-                                  for cars) can be included in the specification of production level scenarios. The
-                                  fine-grained differentiation of products by the model allows for a detailed
-                                  representation of developments in  the various industrial sectors.
+                                  Production levels are a main driver of the model. Economic growth is a main input variable to the definition of production level scenarios used by the model. Furthermore, effects of behavioural changes on production levels (e.g. less demand for cars) can be included in the specification of production level scenarios. The fine-grained differentiation of products by the model allows for a detailed representation of developments in the various industrial sectors.
                               </p>
                               <p>
                                   <b>
@@ -346,86 +284,71 @@
                                   </b>
                               </p>
                               <p>
-                                  The model is flexible to include impacts of politial and societal discourses on the
-                                  industrial production system such as the future (non-)availability of infractures
-                                  (e.g. CO2-infrastructure) and technologies.
+                                  The model is flexible to include impacts of political and societal discourses on the industrial production system such as the future (non-)availability of infrastructures (e.g. CO2-infrastructure) and technologies.
                               </p>
-                          </section>
-                    </div>
+                              </br>
+                          </section>                    
+                      </div>
 
 
                      <div class="row">
                           <section class="section">
                               <span id="wisee-edm_mitigation_adaptation" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
-                              <p><ul>
-                              The model is capable of including technical mitigation measures such as:
-                              <li>
-                                  Efficiency of industrial production technologies
-                              </li>
-                              <li>
-                                   Innovative production technologies (e.g. DRI for steel making)
-                              </li>
-                              <li>
-                                  Fuel switches
-                              </li>
-                              <li>
-                                  Carbon capture and storage
-                              </li>
-                              <li>
-                                  Changes to production levels of particular goods
-                              </li>
-                          </ul></p>
+                              <p>
+                              The model is capable of including technical mitigation measures such as:</p>
+                              <ul>
+                                <li>Recycling and production of secondary products</li>
+                                <li>Changes to production levels of particular goods </li>
+                                <li>Innovative production technologies (e.g. DRI for steel making) and energy conversion technologies (e.g. high-temperature heat pumps)</li>
+                                <li>Energy-efficiency of industrial production and energy conversion technologies</li>
+                                <li>Fuel switches </li>
+                                <li>Carbon capture and storage / use</li>
+
+                          </ul>
                               <p>
                                   The model does not include adaptation measures.
                               </p>
 
-                          </section>
-                     </div>
+                              </br>
+                          </section>                    
+                      </div>
 
 
                      <div class="row">
                           <section class="section">
                               <span id="wisee-edm_econ_rationale" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
-                              <p>The core principle behind the investment related part of the model (EDM-I) is that of
-                                  societal costs of industrial production of a given amount of products. EDM-I is an
-                                  optimization model that minimizes the investments and (simplified) operation costs
-                                  over the whole simulated time period (while considering the value of assets at the
-                                  end of the time period). </p>
-                              <p>The dispatch part of the model (EDM-D) does not involve economic considerations but is
-                                  a purely technical model. It calculates energy demand and emissions based on
-                                  production levels and characteristics of the production plants operative in the
-                                  selected year according to the scenario.</p>
-                     </div>
+                              <p>The core principle behind the investment related part of the model (EDM-I) is that of societal costs of industrial production of a given amount of products. EDM-I is an optimization model that minimizes the investments and (simplified) operation costs over the whole simulated time period (while considering the value of assets at the end of the time period). </p>
+                              <p>The dispatch model (EDM-D) and other models in the model family do not involve economic considerations but are purely technical models that are driven by externally set scenarios for production levels and technology replacement (e.g. as derived by use of the EDM-I). 
+                                </p>
+                              <p>Overall, the “solution” of the integrated model family typically consists of an iterative process of scenario outline (production levels, technology shifts, energy carrier shifts, infrastructure layout, …), model application and expert and stakeholder discussions.
+                                </p>
+                              </br>
+                          </section>                    
+                      </div>
 
 
                      <div class="row">
                           <section class="section">
                               <span id="wisee-edm_key_params" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Key parameters</h2>
+
+                              <p>Each of the models and tools in the model family have their specific key parameters. The following abstracts from the single models to key parameters for scenario development with the model family.</p>
                               <p><b>Demand for products / Production levels</b></p>
-                              <p>The central input variables from which the dispatch in the EDM-D is calculated on the
-                                  assumption of an even utilization of all plants are the production capacities
-                                  available in the selected year and the production quantities.
-                                  The production levels and production capacities can either be directly set in the
-                                  EDM-D or be provided by the EDM-I (for the chemical industry). For running the EDM-I,
-                                  the demand for products needs to be specified. Invest costs and operation costs for
-                                  different technologies as well as transport costs for intermediary products are
-                                  parameterized in the model but can be adapted. </p>
+                              <p>TDemand for products (including intermediary products) is a key driver of the model family. It can be externally set in the EDM-D / EDM-D_EU modules or be derived from other models such as the EDM-S, the EDM-I and the EDM-C. An ideal-typical interplay of the models for the chemical industry, for example, is to use the EDM-I to derive production levels (and capacities) for final and intermediary products that are required to satisfy an externally set demand for final products – while the EDM-S is used to calculate the amount of waste materials available as a further input to the EDM-I. </p>
                               <p><b>Technological development</b></p>
                               <p>
-                                  Other central parameters are the years at which innovative production technlogies are
-                                  assumed to be available on an industrial scale and the speed of market penetration
-                                  with BAT technology or further improved production processes.
+                                  Other central parameters are the years at which innovative production technologies are assumed to be available on an industrial scale and the speed of market penetration with BAT / BAT+ technologies.
+
                               </p>
                               <p><b>Infrastructure development</b></p>
                               <p>
-                                  The time at which infrastructures (H2, CO2) will be available (in the future) needs to
-                                  be defined in the model on a site-specific basis per scenario.
+                                  The time at which infrastructures (H2, CO2) will be available (in the future) is a (externally set) key influence factor for technology shifts and fuel switches. In the EDM-D it can / needs to be defined on a site-specific basis per scenario while the EDM-D_EU operates on the basis of capacity shares connected to infrastructure per country and year.
                               </p>
-                          </section>
-                     </div>
+                              </br>
+                          </section>                    
+                      </div>
 
                              <div class="row">
                           <section class="section">
@@ -434,41 +357,54 @@
                                 <span id="wisee-edm_key_policies" class="anchor"></span>
                               <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
                               <p>
-                              While the WISEE-EDM does not feature a policy interface, it is able to simulate the
-                                  effects of a range of different types of policies through adaptation of the models
-                                  parameters:
+                              While the WISEE-EDM does not feature a policy interface or endogenously simulates the effects of policies, it is able to incorporate the effects of a range of different types of policies through adaptation of the model parameters:
                               </p>
                               <p><b>Energy policy</b></p>
-                              <p>The invest module (EDM-I) can directly assess the effects of energy related policies
-                                  that affect prices (tax, subsidies) or availability of energy carriers
-                                  (e.g. coal exit). In the dispatch module (EDM-D) the standard energy demand associated
-                                  with the usage of particular production technologies may also be amended in a
-                                  rule-based manner to cover fuel switches (e.g. coal exit, replacement of natural gas
-                                  by biomethan etc.).  </p>
+                              <p>The invest module (EDM-I) can directly assess the effects of energy related policies that affect prices (tax, subsidies) or availability of energy carriers (e.g. coal exit). In the dispatch module (EDM-D) the standard energy demand associated with the usage of particular production technologies may also be amended in a rule-based manner to cover fuel switches (e.g. coal exit, replacement of natural gas by biomethan etc.).   </p>
                               <p><b>R&D related policies</b></p>
-                              <p>The model can assess the effects of R&D related policies by variation of the year
-                                  from which on technologies are availabe on an industrial scale level. The model may be
-                                  used to check the influence of such measures on the development of the industrial
-                                  production stock – depending on the age composition of the plants, availability of
-                                  infrastructure, and other factors.
-                              Furthermore, policies that support the diffusion of innovative technologies can be
-                                  represented through variation of the replacement rate of standard technologies through
-                                  best available technologies.</p>
+                              <p>The model can assess the effects of R&D related policies by variation of the year from which on technologies are available on an industrial scale level. The model may be used to check the influence of such measures on the development of the industrial production stock – depending on the age composition of the plants, availability of infrastructure, and other factors.
+                            Furthermore, policies that support the diffusion of innovative technologies can be  represented through variation of the replacement rate of standard technologies through best available technologies as well as further improved technologies.
+                            </p>
                               <p><b>Infrastructure related policies</b></p>
-                              <p>The model can assess the effects of infrastructure related policies and regulations
-                                  through variation of industry sites’ connection to infrastructures.</p>
-                          </section>
-                             </div>
+                              <p>The model can assess the effects of infrastructure related policies and regulations through variation of industry sites’ connection to infrastructures (EDM-D) / variation of the capacity shares connected to innovative infrastructures per country and year (EDM-D_EU).</p>
+                              </br>
+                          </section>                    
+                      </div>
                     <div class="row">
                           <section class="section">
                               <span id="wisee-edm_implications_sdgs" class="anchor"></span>
                               <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
-                              <p>WISEE-EDM does not automatically calculate the implications on non-climate SDGs.
-                                  However, it is possible to use its outputs and calculate the predictions for certain
-                                  indicators framed in the SDG agenda.
+                              <p>WISEE-EDM does not automatically calculate the implications on non-climate SDGs. However, it is possible to use its outputs (CO2, energy) and calculate impacts for certain indicators framed in the SDG agenda.
                               </p>
+                              </br>
+                          </section>                    
+                      </div>
+
+
+                    <div class="row">
+                          <section class="section">
+                                <span id="osemosys_presentation" class="anchor"></span>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/PPQiI8cRGWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model_Presentation_WISEE_EDM_EU_Industry_Global_Steel.pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
                           </section>
-                    </div>
+                     </div>
+
                     <div class="row">
                           <section class="section">
                               <span id="wisee-edm_recent_use_cases" class="anchor"></span>
@@ -546,8 +482,9 @@
                                   </table>
                                 </div>
 
-                          </section>
-                    </div>
+                              </br>
+                          </section>                    
+                      </div>
 
 <!--                    add ref-->
                     <div class="row">

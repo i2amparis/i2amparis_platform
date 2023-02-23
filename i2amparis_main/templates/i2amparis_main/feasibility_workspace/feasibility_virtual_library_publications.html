@@ -1,0 +1,81 @@
+{% extends 'i2amparis_main/feasibility_workspace/feasibility_virtual_library_section.html' %}
+
+{% block content %}
+    <div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+        <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+            <div class=" col-sm-12 col-xs-12" style="text-align: center">
+                <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                    Virtual Library
+                </h1>
+            </div>
+            <div class="content-section col-sm-12 col-xs-12 col-md-12"
+                 style=" margin-top: 2em;">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="circle-button tb-orange" style="text-align: center">
+                        <a href="" class="">Publications</a>
+                        <i class="fa fa-book mini-title-icon"></i>
+                    </div>
+                </div>
+                {% include "i2amparis_main/feasibility_workspace/feasibility_virtual_library_side_menu.html" %}
+                <div class="main-content col-md-9 col-xs-12 col-sm-9" style="margin-top: 3em">
+
+                    <div class="accordion col-sm-12 col-xs-12" id="accordion_1">
+                        <div class="card">
+                            <div class="card-header" id="heading_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse_1" aria-expanded="true"
+                                            aria-controls="collapse_1" style="padding:0px">
+                                        <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                        A multi-model analysis of post-Glasgow climate action and feasibility gap. Preprint at SSRN. https://www.researchsquare.com/article/rs-2319580/latest.pdf 
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse_1" class="collapse "
+                                 aria-labelledby="heading_1"
+                                 data-parent="#accordion_1">
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Title:</strong>
+                                        A multi-model analysis of post-Glasgow climate action and feasibility gap
+                                    </p>
+                                    <p>
+                                        <strong>Date:</strong>
+                                        2022
+                                    </p>
+                                    <p>
+                                        <strong>Short description:</strong>
+                                        The COP26 Glasgow process resulted in many countries strengthening their 2030 emissions reduction targets and announcing net-zero pledges for 2050–2070. We use four diverse integrated assessment models (IAMs) to assess CO2 emission trajectories in the near- and long-term based on national policies and pledges, combined with a non-CO2 infilling model and a simple climate model to assess the temperature implications of such trajectories. Critically, we also consider the feasibility of national longterm pledges towards net-zero, to understand where the challenges to achieving them could lie. Whilst near-term pledges alone lead to warming above 2°C, the addition of long-term pledges leads to emissions trajectories compatible with a well-below 2°C future, across all four IAMs. However, whilst IAM heterogeneity translates to diverse decarbonisation pathways towards long-term targets, all modelled pathways indicate several feasibility concerns, relating to the cost of mitigation, as well as to rates and scales of deployed technologies and measures.
+                                    </p>
+                                    <p>
+                                        <strong>Authors:</strong>
+                                        van de Ven, D. J., Gambhir, A., Doukas, H., Giarola, S., Hawkes, A., Koasidis, K., Koberle, A., Lamboll, R., McJeon, H., Perdana, S., Peters, G., Rogelj, J., Sognnaes, I., Vielle, M., & Nikas, A. 
+                                    </p>
+                                    <p>
+                                        <strong>Journal:</strong>
+                                        SSRN
+                                    </p>
+                                    <p>
+                                        <strong>Links:</strong>
+                                        <a href="https://doi.org/10.21203/rs.3.rs-2319580/v1" target="_blank" >https://doi.org/10.21203/rs.3.rs-2319580/v1</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="col-md-12 col-xs-12 col-sm-12">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(".lib-menu-nav .tb-orange").hide();
+    </script>
+{% endblock %}

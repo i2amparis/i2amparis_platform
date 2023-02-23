@@ -191,7 +191,7 @@ def checkForEmptyRows(sheet):
 		raise Exception(f"There are empty fields:{d}")
 
 def checkForStringsInValues(sheet):
-	print("Check if in area of values there is any no empty string, if string is empyt space ignore it")
+	print("Check if in area of values there is any no empty string, if string is empty space ignore it")
 	first_row = sheet.row_values(0)[5:]
 	d = {}
 	for k, year in enumerate(first_row):
@@ -210,7 +210,7 @@ def isNotEmptyStr(s):
 
 
 def checkTitlesFirstRow(sheet):
-	print("Check if first row of sheet has the requirement fields, in the right order")
+	print("Check if first row of sheet has the requirement fields in the right order")
 	t = ['Model', 'Scenario', 'Region', 'Variable', 'Unit', '2005', '2010', '2015', '2020',
 		 '2025', '2030', '2035', '2040', '2045', '2050', '2055', '2060', '2065', '2070', '2075', '2080', '2085', '2090',
 		 '2095', '2100']

@@ -1,0 +1,75 @@
+{% extends 'i2amparis_main/covid_workspace/covid_virtual_library_section.html' %}
+
+{% block content %}
+    <div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+        <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+            <div class=" col-sm-12 col-xs-12" style="text-align: center">
+                <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                    Virtual Library
+                </h1>
+            </div>
+            <div class="content-section col-sm-12 col-xs-12 col-md-12"
+                 style="text-align: center; margin-top: 2em;padding: 1em">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="circle-button tb-yellow" style="text-align: center">
+                        <a style="padding-top: 3em; white-space: normal" href=""
+                           class="">Commentaries
+                            & Policy Briefs</a>
+                        <i class="fa fa-comment mini-title-icon"></i>
+                    </div>
+                </div>
+                {% include "i2amparis_main/covid_workspace/covid_virtual_library_side_menu.html" %}
+                <div class="main-content col-md-9 col-xs-12 col-sm-9" style="margin-top: 3em">
+                    <div class="accordion col-sm-12 col-xs-12" id="accordion_1">
+                        <div class="card" style="text-align: left">
+                            <div class="card-header" id="heading_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse_1" aria-expanded="true"
+                                            aria-controls="collapse_1" style="padding:0px">
+                                        <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                        Investigating Optimal Allocations for Green Recovery Funds. In Climate Action in the Post-COVID-19 World. European Commission
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse_1" class="collapse "
+                                 aria-labelledby="heading_1"
+                                 data-parent="#accordion_1">
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Date:</strong>
+                                        November 2021
+                                    </p>
+                                    <p>
+                                        <strong>Short description:</strong>
+                                        The PARIS REINFORCE project contributed to the COP26 European Commission's Policy Publication, "Climate Action in the Post-COVID-19 World", with its brief on "Investigating Optimal Allocations for Green Recovery Funds". The policy publication includes insights from the EU-funded projects CONSTRAIN, VERIFY, NAVIGATE, CASCADES/RECEIPT, ENGAGE, LOCOMOTION, and PARIS REINFORCE, on how to build forward better contributions
+                                    </p>
+                                    <p>
+                                        <strong>Authors:</strong>
+                                        Nikas, A., Van de Ven, D.J., Koasidis, K., Forouli, A., Mittal, S., Gambhir, A., & Doukas, H. 
+                                    </p>
+                                    <p>
+                                        <strong>Download Link:</strong>
+                                        <a href="https://research-and-innovation.ec.europa.eu/knowledge-publications-tools-and-data/publications/all-publications/climate-action-post-covid-world_en" target="_blank">Report</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="col-md-12 col-xs-12 col-sm-12">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(".lib-menu-nav .tb-yellow").hide();
+    </script>
+{% endblock %}

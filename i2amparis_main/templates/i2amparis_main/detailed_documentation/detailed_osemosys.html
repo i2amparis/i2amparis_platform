@@ -76,38 +76,38 @@
                                 <li class="list-group-item">
                                     <span>Short overview</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_short_overview">Short Overview</a>
+                                       href="#osemosys_short_overview">Short Overview</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>Key features of the model OSeMOSYS - OSeMBE</span>
+                                    <span>Key features of the model OSeMOSYS</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_key_features">Key features of the model OSeMOSYS - OSeMBE</a>
+                                       href="#osemosys_key_features">Key features of the model OSeMOSYS</a>
                                 </li>
                                 <li class="list-group-item">
                                     <span>Climate module & emissions granularity</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_emissions_granularity">Climate module & emissions granularity</a>
+                                       href="#osemosys_emissions_granularity">Climate module & emissions granularity</a>
                                 </li>
                                 <li class="list-group-item">
                                     <span>Socioeconomic dimensions</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_socioecon_dim">Socioeconomic dimensions</a>
+                                       href="#osemosys_socioecon_dim">Socioeconomic dimensions</a>
                                 </li>
 
                                 <li class="list-group-item">
                                     <span>Mitigation/adaptation measures and technologies</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                       href="#osemosys_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
                                 </li>
                                 <li class="list-group-item">
                                     <span>Economic rationale and model solution</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_econ_rationale">Economic rationale and model solution</a>
+                                       href="#osemosys_econ_rationale">Economic rationale and model solution</a>
                                 </li>
                                 <li class="list-group-item">
                                     <span>Key parameters</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_key_params">Key parameters</a>
+                                       href="#osemosys_key_params">Key parameters</a>
                                 </li>
 
                                 <li>
@@ -130,13 +130,13 @@
                                                 <li class="list-group-item">
                                                     <span>Key policies that can be addressed</span>
                                                     <a style="display: none"
-                                                       href="#osemosys-osembe_key_policies">
+                                                       href="#osemosys_key_policies">
                                                         Key policies that can be addressed</a>
                                                 </li>
                                                 <li class="list-group-item">
                                                     <span>Implications for other SDGs</span>
                                                     <a style="display: none"
-                                                       href="#osemosys-osembe_implications_sdgs">
+                                                       href="#osemosys_implications_sdgs">
                                                         Implications for other SDGs</a>
                                                 </li>
 
@@ -151,12 +151,12 @@
                                 <li class="list-group-item">
                                     <span>Recent use cases</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_recent_use_cases">Recent use cases</a>
+                                       href="#osemosys_recent_use_cases">Recent use cases</a>
                                 </li>
                                 <li class="list-group-item">
                                     <span>References</span>
                                     <a style="display: none"
-                                       href="#osemosys-osembe_references">References</a>
+                                       href="#osemosys_references">References</a>
                                 </li>
 
 
@@ -173,127 +173,109 @@
                     </div>
                      <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_short_overview" class="anchor"></span>
+                              <span id="osemosys_short_overview" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Short overview</h2>
                               <p>
-                              OSeMBE is a fully open source long-term electricity system model of the EU28 plus Norway
-                                  and Switzerland. The power systems of the 30 countries included are individually
-                                  modelled and connected by trans-border transmission lines. This allows country
-                                  specific characteristics and trans-border electricity flows to be considered and their
-                                  evolution within EU28+2 decarbonisation pathways assessed. The modelled period spans
-                                  from 2015 to 2050. Each year is divided into five seasons. Each season is constituted
-                                  by one representative day, which is divided into three parts. Therefore, in total each
-                                  year consists of fifteen so called ‘time slices’.
+                              OSeMOSYS is not a model application, but a modelling framework. Using OSeMOSYS, a representation of the energy, land and water systems and the links between them can be created. Climate change is an input to the model and it is typically included as variation of temperature (therefore, evaporation and evapotranspiration) and of precipitation patterns. OSeMOSYS relies on an agnostic representation of processes and commodities, so that any type of process or commodity may be represented, in the energy system but also beyond it. Whichever the process represented, energy and mass balances are ensured. The energy system typically includes representation of several conversion and storage options, from primary resources, to final energy demands (i.e. in energy units) or final energy services if data is available (e.g. passenger-km in transportation). Demands for energy or services are defined exogenously, and they can be defined as step-by-step curves so as to approximate partial equilibrium. The tool can be run with myopic foresight.
                                 </p>
-
+                            </br>
                           </section>
                      </div>
 
                      <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_key_features" class="anchor"></span>
+                              <span id="osemosys_key_features" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Key features of the OSeMOSYS model</h2>
 
                               <p><b>Geographic coverage:</b></p>
-                              <p>OsEMOSYS is completely Open-Source and allows the user to model the desired Reference
-                                  Energy System at will. In particular the geographical coverage is depending on the
-                                  system that is desired to observe, for the particular case of OSeMBE the EU28+CH+NO
-                                  were modelled as nodes of the system. Every node is characterized by electricity
-                                  demand, electricity generation technologies and electricity transmission links with
-                                  neighbouring nodes.
+                              <p>Models at global, continental, regional, national and sub-national scale can and have been built. So far, most countries in the world have been represented, with different sectoral coverages, and time and space resolutions. Applications include: US, Mexico, Costa Rica, Nicaragua, Paraguay, Brazil, Bolivia, Ecuador, the whole of South America (SAMBA model, country by country) EU27+ UK, Switzerland and Norway (country by country - OSeMBE model), the whole African continent (country by country - TEMBA model), Mauritius, Azerbaijan, Iran, Pakistan, India, Vietnam, Nepal, Bhutan, Sri Lanka, Thailand, Philippines, Malaysia, Mongolia, Indonesia.
                               </p>
                               <p><b>Time resolution and horizon:</b></p>
-                              <p>OSeMOSYS allows to define the time resolution of the model dividing the year in
-                                  seasons, the seasons are characterized by says of the season and each day by parts of
-                                  the day. In OSeMBE each year is divided into five seasons. Each season is constituted
-                                  by one representative day, which is divided into three parts. Therefore, in total each
-                                  year consists of fifteen so called ‘time slices’. The observation period is 2015 to
-                                  2050.</p>
+                              <p>OSeMOSYS allows the user to define the time resolution of the model dividing the year in seasons, day types and part of the day (the so called 'time steps' or 'time slices' approach that is common in the long-term energy system modelling practice). However, modelling approaches with sequential time steps and high time resolution (up to hourly) can be pursued. Applications with hourly time resolution exist.</p>
                               <p><b>Technological Characterization:</b></p>
-                              <p>16 different energy conversion technologies, 17 different energy carriers and 3 energy
-                                  transfer and distribution infrastructures are modelled in OSeMBE</p>
-
+                              <p>The user can create any number and type of technology, with any custom characteristic. In the power sector, a single power plant as well as aggregations of power plants can be represented. Representations of the energy sector with up to 60-70 technologies per country are common. Through the 'blocks' called technologies, the user may also represent land uses, processing of agricultural products (including crops, livestock and biomass) and processing of water (for 'CLEWs' applications - see related links on I2AM Paris).</p>
+                            </br>
                           </section>
-                    </div>
+                     </div>
 
                     <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_emissions_granularity" class="anchor"></span>
+                              <span id="osemosys_emissions_granularity" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
-                              <p>OsEMOSYS allows to model specific emissions per each technology operation, set emission
-                                  penalties, annual limits on emissions and limits on emissions for model period.
+                              <p>OsEMOSYS allows specific emissions per each technology to be modelled and it allows the modeller to set emission penalties, annual limits on emissions and limits on emissions for model period. Emissions can also be “exogenous” meaning not produced by the modelled technologies, but coming from outside of the model domain and just accounted for.
                               </p>
-                              <p>Emissions can also be “exogenous” meaning not produced by the modelled technologies and
-                                  be accounted for, in addition to the “endogenous” ones.
-                              </p>
+                            </br>
                           </section>
-                    </div>
+                     </div>
+
                     <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_socioecon_dim" class="anchor"></span>
+                              <span id="osemosys_socioecon_dim" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
                               <p>
-                                 The Growth of the energy demand can be modelled according to different economic growth
-                                  and social related trends evaluated outside the model boundaries
+                                 The Growth of the energy demand can be modelled according to different economic growth and social related trends evaluated outside the model boundaries. The tool can be linked to Input-Output models to account for job loss and creation in investment and/or operation of energy infrastructure.
                               </p>
+                            </br>
                           </section>
-                    </div>
+                     </div>
+
 
 
                      <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_mitigation_adaptation" class="anchor"></span>
+                              <span id="osemosys_mitigation_adaptation" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
                               <p>
-                                  The model allows to model all the existing technologies for energy conversion, from
-                                  fossil fuels to new generation renewables. A switch from one technology to the other
-                                  can be modelled thanks to emission targets, cost targets or technology use targets.
-                                  In the same way is possible to evaluate the impact of national and international
-                                  climate policies on the energy system.
+                                The tool allows all the existing technologies for energy conversion, from fossil fuels to new generation renewables, to be modelled. A switch from one technology to the other can be modelled thanks to emission targets, cost targets or technology use targets. In the same way it is possible to evaluate the impact of national and international climate policies on the energy system.
+                               </p>
+                               <p>
+                                Climatic change is modelled by e.g. varying the precipitation rates, the producibility of hydro power plants and/or the efficiency of thermal power plants that use water for cooling. Adaptation and no-adaptation scenarios can be created by changing the climate but maintaining the infrastructure as calculated by cost-optimization without climate change.
+                            </p>
+                            <p>
+                                Changes in emissions due to changes of land covers (e.g. negative emissions from re-afforestation) can also be modelled.
                               </p>
-
+                            </br>
                           </section>
                      </div>
 
 
+
                      <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_econ_rationale" class="anchor"></span>
+                              <span id="osemosys_econ_rationale" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
                               <p>
-                                 The core operating principle of OSeMOSYS is the Power and Energy balance, for every
-                                  node, at system level and per each timeslice.
+                                 The core operating principle of OSeMOSYS is the energy and mass balances, for every node, at system level and per each timeslice.
                               </p>
                               <p>
-                                The objective of the model is to estimate the lowest net present value (NPV) cost of an
-                                  energy system to meet given demand(s) for energy or energy services.
+                                The objective of the model is to estimate the lowest net present value (NPV) cost of an energy/resource system to meet given demand(s) for energy, energy services or other commodities while meeting resource, policy and technical constraints. 
                               </p>
+                            </br>
+                          </section>
                      </div>
+
 
 
                      <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_key_params" class="anchor"></span>
+                              <span id="osemosys_key_params" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Key parameters</h2>
                               <p>
-                               Key Scenario assumptions for OSeMOSYS include: Energy Carriers Characterization
-                                  (Fuels, Electricity, Heat), Energy Conversion Technologies Characterization
-                                  (Capital Cost, Operative Costs, Efficiency, Emissions, Location, Lifetime) and Energy
-                                  Demand of the modelled nodes.
+                               Key Scenario assumptions for OSeMOSYS include: Energy Carriers Characterization (Fuels, Electricity, Heat), Energy Conversion Technologies Characterization (Capital Cost, Operative Costs, Efficiency, Emissions, Location, Lifetime) and Energy Demand of the modelled nodes.
+                           </p>
+                           <p>
+                                Key Scenario results (outputs) consist in the matrix of installed and operating technologies every year to satisfy the energy demand, the costs of the scenario and of each technology and the overall emissions.
                               </p>
-                              <p>
-                                  Key Scenario results (outputs) consist in the matrix of installed and operating
-                                  technologies every year to satisfy the energy demand, the costs of the scenario and of
-                                  each technology and the overall emissions.
-                              </p>
+                            </br>
                           </section>
                      </div>
+
 
                              <div class="row">
                           <section class="section">
 
                               <h2 class="mb-0 heading-new">Policy questions and SDGs</h2>
-                                <span id="osemosys-osembe_key_policies" class="anchor"></span>
+                                <span id="osemosys_key_policies" class="anchor"></span>
                               <h4 class="mb-0 heading-new">Key policies that can be addressed</h4>
                               <p>
                                Policies that can be addressed can consist in:
@@ -302,25 +284,54 @@
                               <li>Carbon Pricing Policies</li>
                               <li>Technology Production Minimum or Maximum Policies</li>
                               <li>Technology Phase Out Policies</li>
+                              <li>Renewable targets</li>
                           </ul>
                               </p>
+                            </br>
                           </section>
-                             </div>
+                     </div>
+
+
                     <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_implications_sdgs" class="anchor"></span>
+                              <span id="osemosys_implications_sdgs" class="anchor"></span>
                               <h4 class="mb-0 heading-new">Implications for other SDGs</h4>
                               <p>
-                                OSeMOSYS does not automatically calculate the implications on SDGs of its least-cost
-                                  energy system to meet prescribed climate or emissions constraints. However, it is
-                                  possible to use its outputs and calculate the predictions for certain indicators
-                                  framed in the SDG agenda.
+                                OSeMOSYS does not automatically calculate the implications on SDGs of its least-cost energy system to meet prescribed climate or emissions constraints. However, it is possible to use its outputs and calculate the predictions for certain indicators framed in the SDG agenda (for energy applications, SDG 7 and 13) 
                               </p>
+                            </br>
                           </section>
-                    </div>
+                     </div>
+
                     <div class="row">
                           <section class="section">
-                              <span id="osemosys-osembe_recent_use_cases" class="anchor"></span>
+                                <span id="osemosys_presentation" class="anchor"></span>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/4Wj-qQPoLLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model_Presentation_OSeMOSYS.pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                          </section>
+                     </div>
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="osemosys_recent_use_cases" class="anchor"></span>
                               <h2 class="mb-0 heading-new">Recent use cases</h2>
                                 <div class="my_table table-responsive">
 
@@ -401,38 +412,29 @@
                                           </td>
                                       </tr>
                                       </tbody>
-                                      <caption>Recent publications using the OSeMOSYS - OSeMBE model </caption>
+                                      <caption>Recent publications using the OSeMOSYS model </caption>
                                   </table>
                                 </div>
-
+                            </br>
                           </section>
-                    </div>
+                     </div>
 
 <!--                    add ref-->
                     <div class="row">
                         <section class="section">
-                            <span id="osemosys-osembe_references" class="anchor"></span>
+                            <span id="osemosys_references" class="anchor"></span>
                             <h2 class="mb-0 heading-new">References</h2>
-                            <p>
-                             Burandt, Thorsten, Bobby Xiong, Konstantin Löffler, and Pao Yu Oei. 2019. “Decarbonizing
-                                China’s Energy System – Modeling the Transformation of the Electricity, Transportation,
-                                Heat, and Industrial Sectors.” Applied Energy 255(August): 113820.
-                                https://doi.org/10.1016/j.apenergy.2019.113820.
-                            </p>
-                            <p>
-                            Palmer-Wilson, Kevin et al. 2019. “Impact of Land Requirements on Electricity System
-                                Decarbonisation Pathways.” Energy Policy 129(February): 193–205.
-                                https://doi.org/10.1016/j.enpol.2019.01.071.
-                            </p>
-                            <p>
-                             Rocco, Matteo V., Francesco Tonini, Elena M. Fumagalli, and Emanuela Colombo. 2020.
-                                “Electrification Pathways for Tanzania: Implications for the Economy and the
-                                Environment.” Journal of Cleaner Production 263: 121278.
-                                https://doi.org/10.1016/j.jclepro.2020.121278.
-                            </p>
+                                <p>Barnes, T., Shivakumar, A., Brinkerink, M., & Niet, T. (2022). OSeMOSYS Global: An open-source, open data global electricity system model generator.</p>
+                                <p>Howells, M., Rogner, H., Strachan, N., Heaps, C., Huntington, H., Kypreos, S., ... & Roehrl, A. (2011). OSeMOSYS: the open source energy modeling system: an introduction to its ethos, structure and development. Energy Policy, 39(10), 5850-5870.</p>
+                                <p>Gardumi, F., Shivakumar, A., Morrison, R., Taliotis, C., Broad, O., Beltramo, A., ... & Alfstad, T. (2018). From the development of an open-source energy modelling tool to its application and the creation of communities of practice: The example of OSeMOSYS. Energy strategy reviews, 20, 209-228.</p>
+                                <p>Gardumi, F., Mhiri, N., Howells, M., Bock, F., Necibi, T., & Bouden, C. (2021). A scenario analysis of potential long-term impacts of COVID-19 on the Tunisian electricity sector. Energy Strategy Reviews, 38, 100759.</p>
+                                <p>Burandt, Thorsten, Bobby Xiong, Konstantin Löffler, and Pao Yu Oei. 2019. “Decarbonizing China’s Energy System – Modeling the Transformation of the Electricity, Transportation, Heat, and Industrial Sectors.” Applied Energy 255(August): 113820. https://doi.org/10.1016/j.apenergy.2019.113820.</p>
+                                <p>Palmer-Wilson, Kevin et al. 2019. “Impact of Land Requirements on Electricity System Decarbonisation Pathways.” Energy Policy 129(February): 193–205. https://doi.org/10.1016/j.enpol.2019.01.071.</p>
+                                <p>Rocco, Matteo V., Francesco Tonini, Elena M. Fumagalli, and Emanuela Colombo. 2020. “Electrification Pathways for Tanzania: Implications for the Economy and the Environment.” Journal of Cleaner Production 263: 121278. https://doi.org/10.1016/j.jclepro.2020.121278.</p>
+                            </br>
+                          </section>
+                     </div>
 
-                        </section>
-                    </div>
 
             </div>
         </div>
