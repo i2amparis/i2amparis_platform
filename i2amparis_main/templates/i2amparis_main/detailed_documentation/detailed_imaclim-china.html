@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  IMACLIM-China#}
+                        <div id="collapse_IMACLIM-China">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_short_overview">Short Overview</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Key features</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_key_features">Key features</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_emissions_granularity">Emissions granularity</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+                                
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_key_params">Key parameters</a>
+                                </li>
+
+
+                                <li class="list-group-item">
+                                    <span>Key policies</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_key_policies">Key policies</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_recent_use_cases">Recent use cases</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_references">References</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>GitHub</span>
+                                    <a style="display: none"
+                                       href="#IMACLIM-China_github">GitHub</a>
+                                </li>
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The IMACLIM-China model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                               IMACLIM-China model is a global dynamic recursive CGE model based on the MPSGE language written in GAMS. In the IMACLIM-China model, China’s economy is divided into 18 sectors, including 6 energy sectors and 12 non-energy sectors. The bottom dataset in the IMACLIM-China model is a hybrid dataset based on China's input-output table 2015, energy balance table 2015, and market price investigation. To construct the hybrid dataset, we aggregate the IO table and energy balance table to 18 sectors. We get the original price matrix through dividing the value matrix by the volume matrix, then adjust the original price matrix with the market price information, and get a new energy value matrix using the adjusted price times the volume. Finally, we replace the matrix with adjusted energy value matrix and rebalance it. 
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Key features of the IMACLIM-China model</h2>
+                                <span id="IMACLIM-China_key_features" class="anchor"></span>
+                            <p>
+                            IMACLIM-China is a single region recursive dynamic computable general equilibrium model in China. The model is constructed based on IMACLIM-S framework developed by Centre International de Recherchesur l 'Environnement et le Developpement (CIRED). IMACLIM-China aims to study the medium and long term effects of energy and climate policies on China's macro economy through the equilibrium framework of physical quantity, price quantity and value quantity. The main feature of IMACLIM-CHN model is to ensure the technical authenticity of the model's simulation of energy systems and major innovations in energy systems by coupling the technical details of energy supply and energy consumption in the bottom-up model.      
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                  No climate module
+                              </p>
+                              <br>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p>The model uses a multi-layer nested structure to portray the relationship between inputs and outputs of each sector, with the total output of each sector as a function of labor input, capital input, energy input, and intermediate input. In addition to these conventional inputs, the IMACLIM-CHN model also introduces CO2 and non-CO2 greenhouse gas emission rights in the nested structure of the production function to facilitate CO2 and non-CO2 greenhouse gas emission reduction analysis. Final consumption includes both residential consumption and government consumption, and the government consumption expenditure as a percentage of GDP is exogenously given. Imports and exports of energy are given by the China-MORE 2.0 model, and imports of non-energy goods are assumed to be perfectly substitutable between domestic and foreign products in the same sector according to the Armington assumption, and there is some elasticity of substitution between them. 
+                              </p>
+                              <br>
+                          </section>
+                    </div>
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                The IMACLIM-CHN model introduces CO2 and non-CO2 GHG emission rights in the nested structure of the production function to facilitate CO2 and non-CO2 GHG emission reduction analysis.
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                The model adopts a Johansen closure, similar to the neoclassical closure, assuming full employment of labor and full utilization of capital factors in China in the future, and the prices of labor and capital factors are endogenously determined by the model.                              
+                            </p>
+                              <br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>Hybrid SAM Matrix; Substitution elasticity; Base price</p>
+                              <br>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_key_policies" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key policies that can be addressed</h2>
+                              <p>
+                                IMACLIM-CHINA projects the structure of our energy economy in the future, evaluates the economic costs of climate policies such as carbon neutrality, and studies the impact of climate policies on important socio-economic factors such as sector output, GDP, imports and exports, and household consumption.
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+                             
+                    
+                    <div class="row">
+                          <section class="section">
+                                <span id="presentation" class="anchor"></span>
+                                </br>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/bIm1APBAOhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model Presentation IMACLIM-China, China-MORe.pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                          </section>
+                     </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="IMACLIM-China_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Topic</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td><a href='https://doi.org/10.1007/s11027-021-09979-w'>https://doi.org/10.1007/s11027-021-09979-w</a></td>
+                                          <td>
+                                            The economic impact of a deep decarbonisation pathway for China: a hybrid model analysis through bottom-up and top-down linking
+                                          </td>
+                                          <td>
+                                               Our results indicate that deep decarbonisation increases the energy expenses of Chinese households in the mid-run due to the higher cost of electricity. However, firms will benefit from moderate decarbonisation as a result of a reduction in coal and oil consumption. As a result, energy-efficiency improvements lead to a reduction in firms’ total energy costs, partially compensating the crowding-out effect of low-carbon investments on general productive capital. Our mitigation scenario has therefore a small macroeconomic cost compared to business as usual, equal to a lag in the growth of less than one year in 2050.
+                                          </td>
+
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Recent publications using the IMACLIM-China model </caption>
+                                  </table>
+                                  <br>
+                                </div>
+
+                          </section>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

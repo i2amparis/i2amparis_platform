@@ -1,0 +1,455 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  ATOM#}
+                        <div id="collapse_ATOM">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#ATOM_short_overview">Short Overview</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Key features</span>
+                                    <a style="display: none"
+                                       href="#ATOM_key_features">Key features</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#ATOM_emissions_granularity">Emissions granularity</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#ATOM_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+                                
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#ATOM_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#ATOM_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#ATOM_key_params">Key parameters</a>
+                                </li>
+
+
+                                <li class="list-group-item">
+                                    <span>Key policies</span>
+                                    <a style="display: none"
+                                       href="#ATOM_key_policies">Key policies</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#ATOM_recent_use_cases">Recent use cases</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#ATOM_references">References</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>GitHub</span>
+                                    <a style="display: none"
+                                       href="#ATOM_github">GitHub</a>
+                                </li>
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The ATOM model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="ATOM_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  ATOM is an agent-based model,which based on the plausibility of its results compared to historical data and observations, simulates the expected effectiveness of various policy schemes on technology adoption (e.g., small-scale solar PV, battery energy storage systems, smart appliances, electric vehicles, etc.) in the residential sector, for the geographical and socioeconomic context under study. Apart from exploring the expected effectiveness of technology adoption under policy schemes of interest, the model allows us to consider and explicitly quantify the uncertainties that are related to agents’ preferences and decision-making criteria (i.e., behavioural uncertainty). As agents in the model, we refer to consumers/citizens and households.
+                              </p>
+                              <p>
+                                  More specifically, the novelty of ATOM compared to existing models lies in obtaining realistic uncertainty bounds and splitting the total model output uncertainty in its major contributing sources, based on a variance decomposition framework and an uncertainty characterisation method, while accounting for structural uncertainty. Thus, ATOM supports the definition of uncertainty ranges, considering the type (i.e., input, parametric, and structural) and the nature of uncertainty (i.e., epistemic or aleatory), and how uncertainty propagates to the model outcomes over the planning time horizon.
+                              </p>
+                              <p>
+                                  ATOM is part of the Technoeconomics of Energy Systems laboratory (TEESlab) Modelling (TEEM) suite.
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Key features of the ATOM model</h2>
+                                <span id="ATOM_key_features" class="anchor"></span>
+                              <p>
+                                  Variance decomposition takes place for all the three main modules of ATOM (i.e., calibration, sensitivity analysis, and scenario analysis). By allowing the user to select preliminary values for the agent-related parameters according to the plausibility of its results, based on historical data and observations (goodness-of-fit statistics), the model captures input uncertainty (i.e., calibration module). By deriving forward-looking simulations for different behavioural profiles (i.e., different set of agent-related parameters), from willing to invest to risk-averse consumers, ATOM captures parametric uncertainty (i.e., scenario analysis module). Both types of uncertainty are then propagated through the model, and their contribution to the total model’s output variance is quantified. The rest uncertainty is assumed to be explained by the model’s structure. Note that the uncertainty propagation for the agent-related parameters is done for each one of them, allowing calculation of the sensitivity of each parameter to the model output, in the context of a variance-based sensitivity analysis (Sobol method), and calculation of the relative contribution of the variance for each parameter to the total model output variance (i.e., sensitivity analysis module). 
+                              </p>
+                              <br>
+
+                            <div style="text-align: center">
+                                <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/FIGURE 1_ATOM.jpg" %}">
+                            </div>
+                            <br>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ATOM_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                  The model calculates CO2 emissions by the adoption of mitigation technologies in the residential sector, at the national scale, for the geographical and socioeconomic context under study.
+                              </p>
+                              <br>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="ATOM_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p><strong>Economic Growth (aspects of technology diffusion)</strong></p>
+                              <p>
+                                  ATOM models the triggering of private investments, in the form of new capacity additions of different mitigation technologies, also capturing benefits and profitability aspects for households. Behavioural aspects relevant to the citizens'/households' decision-making criteria are also caputed by the model. Different socioeconomic data can be used to develop different citizen/household profiles.
+                              </p>
+                              <br>
+                              <p><strong>Building sector growth</strong></p>
+                              <p>
+                                  In ATOM, on-site energy generation and storage potential in the residential building sector is calculated, capturing also the potential socioeconomic benefits for households' self-consumption and energy autonomy. 
+                              </p>
+                              <br>
+                          </section>
+                    </div>
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="ATOM_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                  The model simulates the adoption of building-integrated/decentralised RES & storage technologies, energy-efficiency and adaptation measures and practices, as well as technologies and practices (e.g., demand-response, behavioural/lifestyle changes, etc.) that can increase demand-flexibility in the residential sector. It also investigates the achievement of capacity targets at the national level. 
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="ATOM_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  The core principle of the model is that of agent-based modelling. In particular, each agent has a private initial belief about the expected annual cash inflows from investing a mitigation technology. This belief is expressed as a Gaussian distribution. Furthermore, to capture the effects of social learning, each agent receives information from the agents in its social circle that have already invested in the respective technology. This information concerns the actual profitability of their investments so far, and is used to update the agent’s beliefs. This is equivalent to updating a Gaussian prior, given a new observation. Accordingly, each agent has a social circle. This condition is modeled as a “small-world” network, which is a type of mathematical graph.
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="ATOM_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                <ul>
+                                  <li><strong>Weather data</strong> (e.g., site-specific solar irradiation dataset/site-specific ambient air temperature & wind speed, etc.): Country(Space)/Hourly(Time)</li>
+                                  <li><strong>Historical data on technology adoption: </strong>Country(Space)/Daily-Monthly(Time)</li>
+                                  <li><strong>Socioeconomic data:</strong> Country(Space)/Yearly(Time)</li>
+                                  <li><strong>Electricity consumption profiles per household:</strong> Country(Space)/Hourly(Time)</li>
+                                  <li><strong>Energy prices, competitive electricity consumption tariffs, and other regulated charges:</strong> Country(Space)/Yearly(Time)</li>
+                                  <li><strong>Technological specifications:</strong> e.g., sizing of PV & storage systems, etc.</li>
+                                  <li><strong>Policy specifications:</strong> e.g., net-metering policy scheme, feen-in-tariffs, etc.</li>
+                                </ul>
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="ATOM_key_policies" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key policies that can be addressed</h2>
+                              <p>
+                                <strong>Energy</strong>
+                            </p>
+                            <p>
+                                <ul>
+                                  <li><strong>RES & storage:</strong> e.g., tax, subsidies, tariffs, etc.</li>
+                                  <li><strong>Energy efficiency:</strong> e.g., energy mix target, efficiency target, regulations (thermal regulation in buildings, banning of diesel cars in urban areas, etc.), instruments under the EED and the EPBD, performance-based financing schemes, etc.</li>
+                                </ul>
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Implications for SDGs</h2>
+                                <span id="ATOM_key_policies" class="anchor"></span>
+                                <p>
+                                    <strong>§7: Affordable and clean energy</strong> by investigating: 
+                                </p>
+                                <p>
+                                    <ul>
+                                      <li>Building-integrated/Decentralised RES generation</li>
+                                      <li>Self-consumption cost-benefit ratios</li>
+                                      <li>Projections on new solar PV capacity additions by households/citizens in a monthly resolution</li>
+                                      <li>On-site PV energy generation and consumption projections in the residential sector</li>
+                                    </ul>
+                              </p>
+                              <br>
+                                <p>
+                                    <strong>§13: Climate action</strong> by investigating:
+                                </p>
+                                <p>
+                                    <ul>
+                                      <li>Adoption levels for technologies, as solar PV and storage systems, smart appliances, and electric vehicles, by households in the residential sector.
+                                    </li>
+                                </ul>
+                              </p>
+                              <br>
+                          </section>
+                             </div>
+                    
+                    <div class="row">
+                          <section class="section">
+                                <span id="presentation" class="anchor"></span>
+                                </br>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/p0ziPbTsmqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model Presentation ATOM & DREEM (TEEM Suite).pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                          </section>
+                     </div>
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="ATOM_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Topic</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td><a href='https://doi.org/10.5281/zenodo.7085526'>https://doi.org/10.5281/zenodo.7085526</a></td>
+                                          <td>
+                                            "Report on model application in the case studies: challenges and lessons learnt: Deliverable 7.2. Sustainable Energy Transitions Laboratory (SENTINEL) project"
+                                          </td>
+                                          <td>
+                                              Section 3.3.5.1: Empowerment of citizens' role in the energy transition is a key factor in meeting the capacity targets of small-scale PV by 2030 in Greece. Modelling outcomes showed that households' behavioural aspects play a key role in the successful roll-out of small-scale PV investments in Greece and that fostering citizens' participation in the energy system under a people-powered storyline leads to increased adoption rates and the least behavioural uncertainty related to the household’s decision-making process. They also showed that both schemes should be utilised to meet the 2030 target of 1GW of total small-scale PV capacity set by the latest version of the National Energy and Climate Plan, as the different features of each scheme may address different audiences of potential adopters.
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td><a href='https://doi.org/10.1016/j.enpol.2020.111350'>https://doi.org/10.1016/j.enpol.2020.111350</a></td>
+                                          <td>
+                                              A transdisciplinary modeling framework for the participatory design of dynamic adaptive policy pathways
+                                          </td>
+                                          <td>
+                                              Net-metering is capable of driving adequate investments in small-scale PV that follow the Greek PV targets’ trajectory only in the short term. This is because grid charges for net-metered electricity burden the prosumers instead of being used to increase the value of locally generated electricity for their benefit. Thus, bill savings (i.e., prosumers’ profits) are solely dependent on the electricity retail price, which reduces consumers’ willingness to install a photovoltaic system. A self-consumption scheme that subsidizes battery storage showed great potential to incentivise investments y consumers. This is because, with a self-consumption scheme prosumers consume more self-generated electricity since it can be stored for later direct use. Furthermore, grid charges are paid only for the electricity consumed from the grid. As such, there is less price-related uncertainty and prosumers’ profits are higher. However, stepwise reduction of subsidy is suggested, to ensure an initial uptake of PV, wihle avoiding excessive subsidies' cost. Regarding the applicability of AIM, the study showed that while 100% success of a policy pathway, regardless the contextual evolution, cannot be achieved, opportunities and dead-ends can be highlighted and visualized in a stakeholder-friendly fashion.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <a href="https://doi.org/10.1016/j.apenergy.2019.113795">https://doi.org/10.1016/j.apenergy.2019.113795</a>
+                                          </td>
+                                          <td>
+                                              An agent-based model to simulate technology adoption quantifying behavioural uncertainty of consumers
+                                          </td>
+                                          <td>
+                                              Simulation results showed that the net-metering scheme, as currently stands, is not capable of achieving the necessary capacity addition towards the Greek target of 2025. In particular, while the scheme could be successful until the end of 2021, it won’t be able to reach the national target of 2025, even in the most optimistic scenarios. The effectiveness of the net-metering scheme in Greece is closely related to the retail price of electricity. Simulation results indicated that an increase in the retail price, reduces the total uncertainty in the modeling outcomes, which is mainly introduced by modeling parameters, as the probability of investing, consumers’ beliefs and resistance towards investing. In policy terms, this is translated into a reduction of the behavioural uncertainty related to the effectiveness of the NEM scheme, especially for the case of risk-averse consumers, which implies that different sources of positive financial outcomes for consumers should be further investigated.
+                                          </td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Recent publications using the ATOM model </caption>
+                                  </table>
+                                  <br>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="ATOM_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Michas, S., Stavrakas, V., Papadelis, S., & Flamos, A. (2020). A transdisciplinary modeling framework for the participatory design of dynamic adaptive policy pathways. Energy Policy, 139, 111350. https://doi.org/10.1016/j.enpol.2020.111350.
+                            </p>
+                            <p>
+                                Stavrakas, V., Papadelis, S., & Flamos, A. (2019). An agent-based model to simulate technology adoption quantifying behavioural uncertainty of consumers. Applied Energy, 255, 113795. https://doi.org/10.1016/j.apenergy.2019.113795.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="ATOM_github" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">GitHub repository</h2>
+                            <p>
+                                <a href="https://github.com/TEESlab-UPRC/ATOM">https://github.com/TEESlab-UPRC/ATOM</a>
+                            </p>
+                        </section>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+

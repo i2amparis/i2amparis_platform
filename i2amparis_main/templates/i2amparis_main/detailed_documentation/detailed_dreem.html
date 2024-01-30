@@ -1,0 +1,521 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71499906-6"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-71499906-6');
+    </script>
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2AMPARIS - Detailed Model Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "main_theme/css/isotope.css" %} media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/js/fancybox/jquery.fancybox.css" %} type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/bootstrap-theme.css" %}>
+    <link href={% static "main_theme/css/responsive-slider.css" %} rel="stylesheet">
+    <link rel="stylesheet" href={% static "main_theme/css/animate.css" %}>
+    <link rel="stylesheet" href={% static "main_theme/css/style.css" %}>
+
+    <link rel="stylesheet" href={% static "main_theme/css/font-awesome.min.css" %}>
+    <!-- skin -->
+    <link rel="stylesheet" href={% static "main_theme/skin/default.css" %}>
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <style>
+        #section-main-content {
+            min-height: 3380px;
+        }
+
+{#        html {#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+
+        .heading-new {
+            color: #97ae21E6
+        }
+    </style>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+    <!-- =======================================================
+    Theme Name: Green
+    Theme URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+
+{% include "i2amparis_main/upper_bar_documentation.html" %}
+<div class="main-page" style="margin-top: 100px">
+    {#      <section id="header_empty" style="background-color: #53595f; height: 100px" ></section>#}
+    <section id="section-main-content" style="margin-top: 20px;margin-left:20px">
+        <div class="main-content">
+            <div id="mySidebar" class="sidebar">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+
+                {#                                  DREEM#}
+                        <div id="collapse_DREEM">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span>Short overview</span>
+                                    <a style="display: none"
+                                       href="#DREEM_short_overview">Short Overview</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Key features</span>
+                                    <a style="display: none"
+                                       href="#DREEM_key_features">Key features</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Emissions granularity</span>
+                                    <a style="display: none"
+                                       href="#DREEM_emissions_granularity">Emissions granularity</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Socioeconomic dimensions</span>
+                                    <a style="display: none"
+                                       href="#DREEM_socioecon_dim">Socioeconomic dimensions</a>
+                                </li>
+                                
+                                <li class="list-group-item">
+                                    <span>Mitigation/adaptation measures and technologies</span>
+                                    <a style="display: none"
+                                       href="#DREEM_mitigation_adaptation">Mitigation/adaptation measures and technologies</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Economic rationale and model solution</span>
+                                    <a style="display: none"
+                                       href="#DREEM_econ_rationale">Economic rationale and model solution</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Key parameters</span>
+                                    <a style="display: none"
+                                       href="#DREEM_key_params">Key parameters</a>
+                                </li>
+
+
+                                <li class="list-group-item">
+                                    <span>Key policies</span>
+                                    <a style="display: none"
+                                       href="#DREEM_key_policies">Key policies</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>Recent use cases</span>
+                                    <a style="display: none"
+                                       href="#DREEM_recent_use_cases">Recent use cases</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>References</span>
+                                    <a style="display: none"
+                                       href="#DREEM_references">References</a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <span>GitHub</span>
+                                    <a style="display: none"
+                                       href="#DREEM_github">GitHub</a>
+                                </li>
+
+                            </ul>
+                        </div>
+            </div>
+
+
+            <div id="main_bar">
+                <div class="container">
+
+                    <div class="row">
+                         <h1 style="padding-bottom: 1em; padding-top: 1em">The DREEM model</h1>
+                    </div>
+                     <div class="row">
+                          <section class="section">
+                              <span id="DREEM_short_overview" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Short overview</h2>
+                              <p>
+                                  DREEM is a fully integrated dynamic high-resolution demand simulation model resolving key features that are not found together in existing demand-side management models. The model serves as an entry point in energy demand and demand-side management modelling in the building sector, by expanding the computational capabilities of existing Building Energy System models to calculate energy demand in the building sector and assess the benefits and limitations of demand-flexibility, primarily for end-users (consumers/citizens), and, then, for other power actors involved. 
+                              </p>
+                              <p>
+                                  DREEM is a hybrid bottom-up model that combines the key features of both statistical and engineering models. The novelty of the model lies mainly in its modularity as its structure is decomposed into individual modules characterised by the main principles of component- and modular-based system modelling approach, namely "the interdependence" of decisions within modules.
+
+                              </p>
+                                <div style="text-align: center">
+                                    <img style="width:80%;height:80%; margin-bottom: 2em"
+                                     src="{% static "images/FIGURE 1_DREEM.jpg" %}">
+                                </div>
+                            <p>
+                                The main premise behind the DREEM model and the range of applications in which it can be used, is that, in order for end-users to have a more active participation to the energy transition, they first need to become more aware of the benefits from investing in new products/ services. While technological infrastructure is often available, business models and regulatory innovations are needed to find ways to maximise the value of these products/ services, as well as to monetise them, to compensate end-users.
+                            </p>
+                              <p>
+                                  DREEM is part of the Technoeconomics of Energy Systems laboratory (TEESlab) Modelling (TEEM) suite.
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Key features of the DREEM model</h2>
+                                <span id="DREEM_key_features" class="anchor"></span>
+                              <p>
+                                  <ul>
+                                    <li>Fully integrated dynamic bottom-up high-resolution model that can embody key features towards the simulation of renewable, energy efficiency, and other demand-flexibility (e.g., demand-response, etc.) actions in the building sector.</li>
+                                    <li>The model builds on the concept of modularity consisting of multiple components, each of which is composed of additional modules, allowing for more flexibility in terms of possible system configurations and computational efficiency towards a wide range of scenarios, to study different aspects of end-use.</li>
+                                    <li>The model provides the ability to incorporate future technological breakthroughs in a detailed manner, such as the inclusion of heat pumps, or electric vehicles, in view of energy transitions envisioning the full electrification of the heating and transport sectors. </li>
+                                    <li>The model supports the capability of producing output for a group of buildings (e.g., neighbourhood, energy hub, energy community, eco-village, etc.).</li>
+                                    <li>The model can serve as a basis for modelling domestic energy demand within the broader field of urban (local), regional, and national energy systems in different geographical (climate) and socioeconomic contexts.</li>
+                                  </ul>
+                            <br>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="DREEM_emissions_granularity" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Climate module & emissions granularity</h2>
+                              <p>
+                                  The model calculates the CO2 emissions from energy consumption in buildings and the respective emission costs due to the potential introduction of a parallel EU emission trading system in the building sector.
+                              </p>
+                              <br>
+                          </section>
+                    </div>
+                    <div class="row">
+                          <section class="section">
+                              <span id="DREEM_socioecon_dim" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Socioeconomic dimensions  </h2>
+                              <p><strong>Economic Growth</strong></p>
+                              <p>
+                                  The model can be used to simulate different aspects towards the development of “game changer” business models, in terms of different configurations of  innovative product-service offerings that could incentivise end-users to invest in demand flexibility. The model can be also used to evaluate market-oriented regulatory designs that eliminate aspects of subsidisation and implement more advanced market rules that could affect the behaviour, lifestyle, and consumption patterns of end-users (e.g., engaging citizens, incentivising household- and community-level changes, etc.).
+                              </p>
+                              <br>
+                              <p><strong>Building sector growth</strong></p>
+                              <p>
+                                  Demand for energy services in residential and commercial buildings is primarily increased by total building floor space, which is driven by GDP per capita, and saturates at a given maximum value, defined per region. Per unit of floor space, demand for energy services increases over time depending on the relative price of the service, and the difference between the base year saturation and the defined maximum saturation for a certain service. For heating and cooling services, the maximum saturation depends on regionally explicit heating and cooling degree days.
+                              </p>
+                              <br>
+                              <p><strong>Energy Poverty</strong></p>
+                              <p>
+                                  As most European countries have no official definition for the term "energy poverty", this state is often described as the "inability to keep homes adequately warm". The model estimates the energy needs of a household considering details as occupancy and thermal comfort, simulating this way the household with accurate “real-world” conditions. Modelling outcomes, combined with real demographic data, e.g., income, etc., can help users identify energy-poor households.
+                              </p>
+                              <br>
+                          </section>
+                    </div>
+
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="DREEM_mitigation_adaptation" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Mitigation/adaptation measures and technologies</h2>
+                              <p>
+                                  The model simulates building-integrated/decentralised RES & storage technologies, energy-efficiency and adaptation measures and practices, as well as technologies and practices (e.g., demand-response, behavioural/lifestyle changes, etc.) that can increase demand-flexibility in the building sector. It also investigates decarbonisation pathways towards the transition to climate neutrality at local, regional, and national levels. 
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="DREEM_econ_rationale" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Economic rationale and model solution</h2>
+                              <p>
+                                  The model can quantify the value of demand-flexibility primarily for end-users, and then for other power actors involved, through the inclusion of a rich set of technology solutions (e.g., small-scale PV, battery storage, smart devices and control management systems, energy efficiency and renovation measures, etc.). By aggregating at e.g., national level, the model can derive pathways for the achievement of, for example, energy-efficiency targets, and quantify the amount of public and/or private investments needed towards this end. In addition, when it comes to demand-response solutions, the model finds the optimal policy that could maximise the benefits of all the actors involved.
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="DREEM_key_params" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key parameters</h2>
+                              <p>
+                                <ul>
+                                  <li><strong>Weather data:</strong> Region(Space)/Minute(Time)</li>
+                                  <li><strong>Building typologies & envelope specifications: </strong>Country-Region(Space)/Monthly(Time)</li>
+                                  <li><strong>Occupancy & activity profiles:</strong> Country(Space)/Daily(Time)</li>
+                                  <li><strong>Appliances (traits, power ratings and use characteristics):</strong> Country(Space)/Daily(Time)</li>
+                                  <li><strong>Thermal comfort parameters/Thermostat setpoints:</strong> Country-Region(Space)/Monthly(Time)</li>
+                                  <li><strong>Energy prices, competitive electricity consumption tariffs, and other regulated charges:</strong> Country-Region(Space)/Monthly(Time)</li>
+                                  <li><strong>Technological specifications:</strong> e.g., COP, EER, sizing of PV & storage systems, etc.</li>
+                                </ul>
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+
+                     <div class="row">
+                          <section class="section">
+                              <span id="DREEM_key_policies" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Key policies that can be addressed</h2>
+                              <p>
+                                <strong>Emissions mitigation</strong>
+                            </p>
+                            <p>
+                                <ul>
+                                  <li>Tax</li>
+                                  <li>Emissions target/quota (annual)</li>
+                                  <li>Emissions target/quota (cumulative)</li>
+                                  <li>Regulations (e.g., emissions standards, ETS, etc.)</li>
+                                  <li>Financial supports (e.g., negative emissions, CDMs, Green Climate Fund, etc.)</li>
+                                </ul>
+                              </p>
+                              <br>
+                              <p>
+                                <strong>Energy</strong>
+                            </p>
+                            <p>
+                                <ul>
+                                  <li><strong>RES & storage:</strong> e.g., tax, subsidies, tariffs, etc.</li>
+                                  <li><strong>Energy efficiency:</strong> e.g., energy mix target, efficiency target, regulations (thermal regulation in buildings, banning of diesel cars in urban areas, etc.), instruments under the EED and the EPBD, performance-based financing schemes, etc.</li>
+                                  <li><strong>Energy poverty:</strong> Effect of energy-efficiency policies in energy poor households; Support the identification of energy-poor households.</li>
+                                  <li><strong>Demand-Response policies:</strong> Policy mechanisms as derived through: (i). considering Hourly Electricity Prices (HEPs) and a Limiting Price (LP), and (ii). a more “real-world” situation, in which a central planner attempts to maximise flexibility value by issuing demand-response signals. This planner learns the optimal policy that maximises its revenues through an optimisation approach based on reinforcement learning theory.</li>
+                                </ul>
+                              </p>
+                              <br>
+                          </section>
+                     </div>
+                             <div class="row">
+                          <section class="section">
+
+                              <h2 class="mb-0 heading-new">Implications for SDGs</h2>
+                                <span id="DREEM_key_policies" class="anchor"></span>
+                                <p>
+                                    <strong>§1. No poverty</strong> by providing: 
+                                </p>
+                                <p>
+                                    <ul>
+                                      <li>estimation of the effect of energy-efficiency policies in energy-poor households;</li>
+                                      <li>support for the identification of energy-poor households in specific areas at the local, regional, or national level.</li>
+                                    </ul>
+                                </p>
+
+                                <p>
+                                    <strong>§3. Health</strong> by determining: 
+                                </p>
+                                <p>
+                                    <ul>
+                                      <li>the appropriate indoor thermal conditions and temperature ranges that result in thermal satisfaction of end-users based on international thermal-comfort standards.</li>
+                                    </ul>
+                                </p>
+
+                                <p>
+                                    <strong>§7: Affordable and clean energy</strong> by investigating: 
+                                </p>
+                                <p>
+                                    <ul>
+                                      <li>Building-integrated/Decentralised RES generation</li>
+                                      <li>Self-consumption cost-benefit ratios</li>
+                                      <li>Market-oriented regulatory designs that eliminate aspects of subsidisation</li>
+                                      <li>Effect of energy-efficiency measures at different geographical and socio-economic contexts</li>
+                                      <li>Transition pathways to climate neutrality & decarbonization pathways.</li>
+                                    </ul>
+                              </p>
+                                <p>
+                                    <strong>§11: Sustainable Cities & Communities</strong> by providing:
+                                </p>
+                                <p>
+                                    <ul>
+                                      <li>Levelized Cost of Saved Energy (LCSE) of different energy-efficiency measures, as well as cost-benefit ratios of demand-flexibility solutions, at the urban level.
+                                    </li>
+                                </ul>
+                              </p>
+                                <p>
+                                    <strong>§13: Climate action</strong> by investigating:
+                                </p>
+                                <p>
+                                    <ul>
+                                      <li>footprint impact of private consumption in the building sector
+                                    </li>
+                                      <li>energy transition scenarios and decarbonisation pathways in the building sector.
+                                    </li>
+                                </ul>
+                              </p>
+                              <br>
+                          </section>
+                             </div>
+
+                    <div class="row">
+                          <section class="section">
+                                <span id="presentation" class="anchor"></span>
+                                </br>
+                                <h2 class="mb-0 heading-new">Model presentation</h2>
+
+                                <h4 class="mb-0 heading-new">Video</h4>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/p0ziPbTsmqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </br>
+                                </br>
+
+                                <h4 class="mb-0 heading-new">Slides</h4>
+
+                                <a href="/static/pdf_files/Model Presentation ATOM & DREEM (TEEM Suite).pdf" class="button btn btn-lg btn-default" style="background-color: rgba(151, 174, 33, 0.8);color: white;position: relative;top:1em;right: 0.5em" >
+                                    Download slides in pdf
+                                </a>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                          </section>
+                     </div>
+
+                    <div class="row">
+                          <section class="section">
+                              <span id="DREEM_recent_use_cases" class="anchor"></span>
+                              <h2 class="mb-0 heading-new">Recent use cases</h2>
+                                <div class="my_table table-responsive">
+
+                                                                <table class="table ">
+                                      <thead>
+                                      <tr>
+                                          <th style="width:20%">Paper DOI</th>
+                                          <th style="width:40%">Topic</th>
+                                          <th style="width:40%">Key findings</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td><a href='https://doi.org/10.5281/zenodo.7085526'>https://doi.org/10.5281/zenodo.7085526</a></td>
+                                          <td>
+                                            "Report on model application in the case studies: challenges and lessons learnt: Deliverable 7.2. Sustainable Energy Transitions Laboratory (SENTINEL) project"
+                                          </td>
+                                          <td>
+                                            <p>
+                                              <strong>Section 3.1.6.2:</strong> When it comes to energy efficiency measures in the European residential building sector, heat pumps display high energy saving potential and competitive cost-effectiveness in several countries. Modelling results showed that the energy saving potential of the EEMs under study is commonly higher for building typologies constructed before 1981 and that the replacement of a traditional diesel heating system with a heat pump system is among the most cost-effective measures for all countries, while also illustrating high energy saving potential. In addition, modelling outcomes also showed that the replacement of a traditional diesel heating system with a more energy efficient diesel boiler is shown to be the least cost-effective measure in most cases, while measures like exterior wall insulation, roof insulation, and double-glazed windows rank low in terms of cost-effectiveness when it comes to building typologies constructed after 1981 (https://teeslab.unipi.gr/wp-content/uploads/2022/10/Energy-transition-in-the-European-residential-sector_DREEM-model.pdf).
+                                            </p>
+
+                                            <p>
+                                              <strong>Section 3.3.6.3:</strong> The existing National Energy and Climate Plan’s target of annual household renovations cannot lead to the decarbonisation of the residential sector by 2050 in Greece, while investing in electrification could lead to lower total costs at both the national and the household level, compared to current planning about investing in natural gas as a transition fuel. Modelling outcomes showed that the annual renovation target of 60,000 household per year (1.5% annual renovation rate) envisioned by the latest version of the NECP cannot lead to decarbonisation by 2050. In addition, when investing in natural gas as a transition fuel more energy derived from fossil fuels (oil products and natural gas) is consumed in 2050 compared to the scenarios investing in electrification. If decarbonising the residential sector by 2050 in Greece is the target, the annual renovation rate needs to be increased to 2.5% (100,000 households annually renovated), while an annual renovation rate of 3.5% (140,000 households annually renovated) could even allow reaching more ambitious targets, as decarbonisation levels by 2040. In addition, investing in electrification could lead to a less harmful environmental footprint and to lower costs at both the household and the national level by 2050, compared to the existing planning to invest in natural gas as a transition fuel. Overall, our findings highlight the need for more ambitious targets for the achievement of the decarbonisation targets set by the EU, as well as the need for greater focus on investing in electrification rather than in natural gas (https://teeslab.unipi.gr/wp-content/uploads/2022/06/Residential-sector-in-Greece_DREEM-modelling-study.pdf).
+                                            </p>
+                                            <p>
+                                              <strong>Section 3.3.6.4:</strong> Decarbonisation in the residential sector in the Peloponnese region in Greece cannot be achieved through the current national planning focusing on investing in new natural gas infrastructure. Modelling results showed that investing in electrification increases the financial, environmental, and, thus, social benefits of the energy transition by 2050 in the residential sector in Peloponnese, while it also leads to lower total costs at both the household and the regional level, in comparison to investing in new natural gas infrastructure. Moreover, our findings also highlighted that the current renovation rate envisioned by the latest version of the NECP is not able to lead to decarbonisation levels. Ιf decarbonisation by 2050 is the target, then, again, electrification is the most appealing pathway, since it requires increasing the renovation rate in the Peloponnese region by only 1.18 times, when the other pathways require at least an increase of 1.33 times (https://sentinel.energy/story/decarbonisation-in-the-residential-sector-in-the-peloponnese-region-in-greece-cannot-be-achieved-through-the-current-national-planning-focusing-on-investing-in-new-natural-gas-infrastructure/).
+                                            </p>
+                                            <p>
+                                              <strong>Section 3.3.6.5:</strong> Decommissioning lignite power plants in the coal and carbon intensive region of Megalopolis in Greece cannot lead to a just transition if national planning keeps on promoting investments in new natural gas infrastructure. Modelling results showed that investing in electrification increases the financial, environmental, and, thus, social benefits of the energy transition by 2050 in the residential sector in the municipality of Megalopolis, while it also leads to lower total costs at both the household and the local level, in comparison to investing in new natural gas infrastructure. Moreover, in the long run, households’ extra charge from the replacement of existing oil boilers with gas boilers could amplify the energy poverty phenomenon in the municipality as it could result to increased costs. To avoid this potential development, tailored energy efficiency support programmes for such regions in transition, promoting the electrification could directly contribute to the reduction of household energy costs and indirectly to the labour market and economic growth, especially in the short term (https://sentinel.energy/story/decommissioning-lignite-power-plants-in-the-coal-and-carbon-intensive-region-of-megalopolis-in-greece-cannot-lead-to-a-just-transition-if-national-planning-keeps-on-promoting-investments-in-new-natura/).
+                                            </p>
+                                          </td>
+
+                                      </tr>
+                                      <tr>
+                                          <td><a href='https://doi.org/10.1016/j.enpol.2021.112759'>https://doi.org/10.1016/j.enpol.2021.112759</a></td>
+                                          <td>
+                                              "Monetising behavioural change as a policy measure to support energy management in the residential sector: A case study in Greece"
+                                          </td>
+                                          <td>
+                                              A case study in the Greek residential sector, implementing an energy management action associated with manual adjustments of a thermostat, showcases potential for achieving a nation-wide and household-level energy reduction of 5.3% and 10% respectively, with monetisation providing an additional €200 to each engaged household on average.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <a href="https://doi.org/10.1016/j.enconman.2019.112339 ">https://doi.org/10.1016/j.enconman.2019.112339 </a>
+                                          </td>
+                                          <td>
+                                              "A modular high-resolution demand-side management model to quantify benefits of demand flexibility in the residential sector"
+                                          </td>
+                                          <td>
+                                            Promoting a synergistic co-operation between the power supplier and the prosumer could lead to significan cost reductions and energy savings, paving the way towards “gamechanger” business models that capture new value on the supply side by coupling it to the demand side.
+                                            Policymaking in Greece should focus on promoting small-scale PV with technologies, as battery storage or smart thermostats. Considering the existing ambiguity of the PV market in Greece, such an infrastructure could generate additional sources of revenue for consumers, which could counterbalance the phase out of the previous Feed-in-Tariffs (FiTs) scheme. In particular, policy efforts should focus on more market-based structures by avoiding cross-subsidisation, along with appropriate promotion campaigns that will inform consumers on the benefits of self-consumption, and its influence on their electricity bill.                                          
+                                        </td>
+                                      </tr>
+
+                                      </tbody>
+                                      <caption>Recent publications using the DREEM model </caption>
+                                  </table>
+                                  <br>
+                                </div>
+
+                          </section>
+                    </div>
+
+                    <!--add ref-->
+                    <div class="row">
+                        <section class="section">
+                            <span id="DREEM_references" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">References</h2>
+                            <p>
+                                Stavrakas, V., & Flamos, A. (2020). A modular high-resolution demand-side management model to quantify benefits of demand-flexibility in the residential sector. Energy Conversion and Management, 205, 112339. https://doi.org/10.1016/j.enconman.2019.112339.
+                            </p>
+                            <br>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="section">
+                            <span id="DREEM_github" class="anchor"></span>
+                            <h2 class="mb-0 heading-new">GitHub repository</h2>
+                            <p>
+                                <a href="https://github.com/TEESlab-UPRC/DREEM">https://github.com/TEESlab-UPRC/DREEM</a>
+                            </p>
+                        </section>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% include "i2amparis_main/pages_footer.html" %}
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+<script src={% static "main_theme/js/modernizr-2.6.2-respond-1.1.0.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.js" %}></script>
+<script src={% static "main_theme/js/jquery.easing.1.3.js" %}></script>
+<script src={% static "main_theme/js/bootstrap.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.isotope.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.nicescroll.min.js" %}></script>
+<script src={% static "main_theme/js/fancybox/jquery.fancybox.pack.js" %}></script>
+<script src={% static "main_theme/js/skrollr.min.js" %}></script>
+<script src={% static "main_theme/js/jquery.scrollTo.js" %}></script>
+<script src={% static "main_theme/js/jquery.localScroll.js" %}></script>
+<script src={% static "main_theme/js/stellar.js" %}></script>
+<script src={% static "main_theme/js/responsive-slider.js" %}></script>
+<script src={% static "main_theme/js/jquery.appear.js" %}></script>
+<script src={% static "main_theme/js/grid.js" %}></script>
+<script src={% static "main_theme/js/main.js" %}></script>
+<script src={% static "main_theme/js/wow.min.js" %}></script>
+<script>
+    wow = new WOW({}).init();
+</script>
+<script src={% static "main_theme/contactform/contactform.js" %}></script>
+<script src={% static "content_button_js.js" %}></script>
+{#<script src={% static "goback_button_js.js" %}></script>#}
+<script src={% static "navigate_menu_js.js" %}></script>
+<script src={% static "footnote_tooltip.js" %}></script>
+
+
+
+</body>
+
+</html>
+
+
