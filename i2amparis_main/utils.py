@@ -1,8 +1,7 @@
 from django.apps import apps
 from django.db.models import F
 
-from i2amparis_main.models import DataVariablesModels, ScenariosRes, RegionsRes, VariablesRes, PRWEUMetaData, \
-    PRWMetaData, COVIDMetaData, FeasibilityMetaData
+from i2amparis_main.models import *
 
 
 def get_model_by_db_table(db_table):
@@ -47,6 +46,20 @@ def get_initial_detailed_conf_analysis_form_data(interface):
         all_regions = [el['region_name'] for el in FeasibilityMetaData.objects.distinct().values('region_name')]
         all_variables = [el['variable_name'] for el in FeasibilityMetaData.objects.distinct().values('variable_name')]
         metadata = FeasibilityMetaData
+        return all_models, all_scenarios, all_regions, all_variables, metadata
+    elif interface == 'pr_ndca':
+        all_models = [el['model_name'] for el in NDCAMetaData.objects.distinct().values('model_name')]
+        all_scenarios = [el['scenario_name'] for el in NDCAMetaData.objects.distinct().values('scenario_name')]
+        all_regions = [el['region_name'] for el in NDCAMetaData.objects.distinct().values('region_name')]
+        all_variables = [el['variable_name'] for el in NDCAMetaData.objects.distinct().values('variable_name')]
+        metadata = NDCAMetaData
+        return all_models, all_scenarios, all_regions, all_variables, metadata
+    elif interface == 'pr_fitfor55':
+        all_models = [el['model_name'] for el in EUPathwayMetaData.objects.distinct().values('model_name')]
+        all_scenarios = [el['scenario_name'] for el in EUPathwayMetaData.objects.distinct().values('scenario_name')]
+        all_regions = [el['region_name'] for el in EUPathwayMetaData.objects.distinct().values('region_name')]
+        all_variables = [el['variable_name'] for el in EUPathwayMetaData.objects.distinct().values('variable_name')]
+        metadata = EUPathwayMetaData
         return all_models, all_scenarios, all_regions, all_variables, metadata
     else:
         print('No interface provided or no interface exists with that name!')

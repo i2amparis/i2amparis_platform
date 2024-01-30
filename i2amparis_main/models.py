@@ -475,6 +475,38 @@ class FeasibilityMetaData(models.Model):
     region_name = models.CharField(null=False, default="", max_length=100)
     variable_name = models.CharField(null=False, default="", max_length=100)
 
+#NDC ASPECTS workspace data
+class NDCAResultsComp(models.Model):
+    model = models.ForeignKey(DataVariablesModels, default=None, on_delete=models.CASCADE)
+    scenario = models.ForeignKey(ScenariosRes, on_delete=models.CASCADE)
+    region = models.ForeignKey(RegionsRes, on_delete=models.CASCADE)
+    variable = models.ForeignKey(VariablesRes, on_delete=models.CASCADE)
+    unit = models.ForeignKey(UnitsRes, on_delete=models.CASCADE)
+    year = models.IntegerField()
+    value = models.FloatField()
+
+class NDCAMetaData(models.Model):
+    model_name = models.CharField(null=False, default="", max_length=100)
+    scenario_name = models.CharField(null=False, default="", max_length=100)
+    region_name = models.CharField(null=False, default="", max_length=100)
+    variable_name = models.CharField(null=False, default="", max_length=100)
+
+#Boitier et al 2023 workspace data
+class EUPathwayComp(models.Model):
+    model = models.ForeignKey(DataVariablesModels, default=None, on_delete=models.CASCADE)
+    scenario = models.ForeignKey(ScenariosRes, on_delete=models.CASCADE)
+    region = models.ForeignKey(RegionsRes, on_delete=models.CASCADE)
+    variable = models.ForeignKey(VariablesRes, on_delete=models.CASCADE)
+    unit = models.ForeignKey(UnitsRes, on_delete=models.CASCADE)
+    year = models.IntegerField()
+    value = models.FloatField()
+
+class EUPathwayMetaData(models.Model):
+    model_name = models.CharField(null=False, default="", max_length=100)
+    scenario_name = models.CharField(null=False, default="", max_length=100)
+    region_name = models.CharField(null=False, default="", max_length=100)
+    variable_name = models.CharField(null=False, default="", max_length=100)
+
 
 #IDA workspace data
 class IDAResultsComp(models.Model):

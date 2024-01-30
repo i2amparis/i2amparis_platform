@@ -1,0 +1,197 @@
+{% extends "base_template_scientific_module.html" %}
+{% load static %}
+{% csrf_token %}
+{% block css %}
+
+    <style>
+        .heading {
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .heading a {
+            font-size: 0.9em;
+        }
+
+        .desc_text {
+            font-size: 0.8em;
+        }
+
+        .take_up_space {
+            min-height: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .text_take_up_space {
+            min-height: 10em;
+            margin-bottom: 1em;
+        }
+
+        td {
+            font-size: 0.8em;
+            background-color: rgba(246, 250, 238, 0.5);
+            color: #2a2a2e;
+        }
+
+        td.light-grey {
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 1em;
+        }
+
+        .disabled_radio {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .init_load_bar_text {
+            animation: blinker 1.5s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .init_load_bar {
+            animation: wavy 1s linear infinite;
+        }
+
+        @keyframes wavy {
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+
+    </style>
+
+    <link rel="stylesheet" href={% static "doc_css.css" %}>
+    <link rel="stylesheet" href={% static "detailed_doc_css.css" %}>
+{% endblock %}
+
+{% block content %}
+    <div id="init_load_container" style="text-align: center; margin-top:15em; height: 100%">
+        <img class="init_load_bar" style="width: 5%" src="{% static "gifs/spinner.gif" %}">
+        <div class="row" style="font-size: 1.5em ; margin-left: 2em; margin-right: 2em;line-height: 2em">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 init_load_bar_text" style="margin-top: 1.5em">Initialising Workspace on NDC ASPECTS results<br>Please, wait <br><br>
+                <span style="font-size: 0.8em!important;">This may take a few seconds . . . </span>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+
+    <div style="display: none" class="tab-content">
+        {% include "i2amparis_main/ndca_workspace/ndca_detailed_configurable_analysis.html" %}
+    </div>
+
+
+{% endblock %}
+
+
+{% block js %}
+
+    <script>
+        $(document).ready(function () {
+
+            $('body').tooltip({container: 'body', html: true, selector: '[data-toggle=tooltip]', placement: 'auto'});
+
+            $('select.sum-boot-select').each(function () {
+                var select = $(this);
+                select.multipleSelect(
+                    {
+                        filter: true,
+                        showClear: true,
+                        animate: 'fade',
+                        maxHeightUnit: 'row',
+                        maxHeight: 8,
+                        dropWidth: 250,
+                    });
+            });
+
+        });
+
+    </script>
+
+    <script>
+        var document_ready_counter = 0;
+
+        $('.tab-content').show();
+        $('#myTab a:last').tab('show');
+        $('#mySumTab a:last').tab('show');
+        $('#myTab a:first').tab('show');
+        $('#mySumTab a:first').tab('show');
+        $('#init_load_container').hide();
+
+        // function check_document_ready(counter) {
+        //     if (counter > 0) {
+        //         $('.tab-content').show();
+        //         $('#myTab a:last').tab('show');
+        //         $('#mySumTab a:last').tab('show');
+        //         $('#myTab a:first').tab('show');
+        //         $('#mySumTab a:first').tab('show');
+        //         $('#init_load_container').hide();
+        //     } else {
+        //         if ((counter >=1)&&(counter < 2)) {
+        //             $('.init_load_bar_text span').text('Initialising Components')
+        //         }
+        //         if ((counter >= 2)&&(counter < 4)) {
+        //             $('.init_load_bar_text span').text('Collecting Data')
+        //         }
+        //         if ((counter >= 4)&&(counter <10)) {
+        //             $('.init_load_bar_text span').text('Running Queries')
+        //         }
+        //         if ((counter >= 10)&&(counter < 14)) {
+        //             $('.init_load_bar_text span').text('Creating Visualisations')
+        //         }
+        //         if ((counter >= 14)&&(counter < 18)){
+        //             $('.init_load_bar_text span').text('Almost Done . . .')
+        //         }
+        //     }
+
+        // }
+        var token = '{{csrf_token}}';
+    </script>
+    <script src={% static "tools/js/wwh_global/scientific_interface/cookie_retriever.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/public_interface/token_retrieval.js" %}></script>
+
+    <script src={% static "tools/js/ndca/scientific_interface/detailed_json_query_creator.js" %}></script>
+    <script src={% static "tools/js/ndca/scientific_interface/detailed_configurable_analysis.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/load_datatable_detailed_conf.js" %}></script>
+<!--     <script src={% static "tools/js/wwh_eu/scientific_interface/start_sci_query_creation_viz_execution.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/create_sci_visualisation.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/retrieve_series_info.js" %}></script> -->
+    <!-- <script src={% static "tools/js/wwh_eu/scientific_interface/colors.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_co2_emissions.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_co2_emissions_by_sector.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_primary_energy.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_final_energy.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_co2_ccs_by_sector.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_ccs_co2_reduction.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_imported_fuels.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_import_ratio.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_electrification_sector.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_electrification_ratio.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_hydrogen_by_fuel.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_hydrogen_transport.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_hydrogen_industry.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_investments_energy_supply.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_investments_power_generation.js" %}></script>
+    <script src={% static "tools/js/wwh_eu/scientific_interface/intro_page_interface_investments_by_gen_tech.js" %}></script> -->
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+

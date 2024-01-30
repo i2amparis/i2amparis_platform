@@ -4,13 +4,12 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 from . import countries_data
-from i2amparis_main.models import ModelsInfo, Harmonisation_Variables, HarmDataNew, HarmDataSourcesLinks, ScenariosRes, \
-    RegionsRes, ResultsComp, VariablesRes, UnitsRes, DataVariablesModels, HarmDataSourcesTitles, PRWMetaData, SdgsCat, \
-    VaraiblesSdgsRes, RrfPolicy, ProjectModels, PRWEUMetaData, EUHarmData, WWHEUResultsComp, COVIDResultsComp, \
-    FeasibilityResultsComp, FeasibilityMetaData
+from i2amparis_main.models import *
+
 from django.core.mail import send_mail
 from .forms import FeedbackForm
 from django.http import JsonResponse, HttpResponse
+
 import os.path
 
 import json
@@ -247,6 +246,16 @@ def populate_detailed_analysis_datatables(request):
 
         elif interface == 'pr_covid':
             q = COVIDResultsComp.objects.filter(model__name__in=models, scenario__name__in=scenarios,
+                                                region__name__in=regions,
+                                                variable__name__in=variables)
+
+        elif interface == 'pr_fitfor55':
+            q = EUPathwayComp.objects.filter(model__name__in=models, scenario__name__in=scenarios,
+                                                region__name__in=regions,
+                                                variable__name__in=variables)
+
+        elif interface == 'pr_ndca':
+            q = NDCAResultsComp.objects.filter(model__name__in=models, scenario__name__in=scenarios,
                                                 region__name__in=regions,
                                                 variable__name__in=variables)
 
@@ -556,6 +565,43 @@ def covid_virtual_library(request, **kwargs):
         return render(request, 'i2amparis_main/covid_workspace/covid_virtual_library_' + kwargs['section'] + '.html',
                       context)
 
+def fitfor55_workspace_landing(request):
+    context = {}
+    return render(request, 'i2amparis_main/fitfor55_workspace/fitfor55_landing.html', context)
+
+def fitfor55_scientific_module(request):
+    '''View of scientific interface'''
+    models = DataVariablesModels.objects.filter(name__in=EUPathwayMetaData.objects.values_list('model_name',flat=True).distinct()).order_by('name')
+    scenarios = ScenariosRes.objects.filter(name__in=EUPathwayMetaData.objects.values_list('scenario_name',flat=True).distinct()).order_by('name')
+    regions = RegionsRes.objects.filter(name__in=EUPathwayMetaData.objects.values_list('region_name',flat=True).distinct()).order_by('name')
+    units = UnitsRes.objects.all().order_by('title')
+    variables = VariablesRes.objects.filter(name__in=EUPathwayMetaData.objects.values_list('variable_name',flat=True).distinct()).order_by('name')
+
+    context = {"models": models,
+               "variables": variables,
+               "scenarios": scenarios,
+               "regions": regions,
+               "units": units}
+
+    return render(request, 'i2amparis_main/fitfor55_workspace/fitfor55_scientific_module.html', context)
+
+
+def fitfor55_public_ui(request):
+    '''View of public interface'''
+    context = {}
+    return render(request, 'i2amparis_main/fitfor55_workspace/fitfor55_public_ui.html', context)
+
+
+def fitfor55_virtual_library(request, **kwargs):
+    '''View of virtual library interface'''
+    if 'section' not in kwargs.keys():
+        context = {}
+        return render(request, 'i2amparis_main/fitfor55_workspace/fitfor55_virtual_library.html', context)
+    else:
+        context = {}
+        return render(request, 'i2amparis_main/fitfor55_workspace/fitfor55_virtual_library_' + kwargs['section'] + '.html',
+                      context)
+
 def feasibility_workspace_landing(request):
     context = {}
     return render(request, 'i2amparis_main/feasibility_workspace/feasibility_landing.html', context)
@@ -576,6 +622,11 @@ def feasibility_scientific_module(request):
 
     return render(request, 'i2amparis_main/feasibility_workspace/feasibility_scientific_module.html', context)
 
+def feasibility_public_ui(request):
+    '''View of public interface'''
+    context = {}
+    return render(request, 'i2amparis_main/feasibility_workspace/feasibility_public_ui.html', context)
+
 def feasibility_virtual_library(request, **kwargs):
     '''View of virtual library interface for the feasibility Workspace'''
     if 'section' not in kwargs.keys():
@@ -585,6 +636,27 @@ def feasibility_virtual_library(request, **kwargs):
         context = {}
         return render(request, 'i2amparis_main/feasibility_workspace/feasibility_virtual_library_' + kwargs['section'] + '.html',
                       context)
+
+
+def ndca_workspace_landing(request):
+    context = {}
+    return render(request, 'i2amparis_main/ndca_workspace/ndca_landing.html', context)
+
+def ndca_scientific_module(request):
+    '''View of scientific interface for the ndca Workspace'''
+    models = DataVariablesModels.objects.filter(name__in=NDCAMetaData.objects.values_list('model_name',flat=True).distinct()).order_by('name')
+    scenarios = ScenariosRes.objects.filter(name__in=NDCAMetaData.objects.values_list('scenario_name',flat=True).distinct()).order_by('name')
+    regions = RegionsRes.objects.filter(name__in=NDCAMetaData.objects.values_list('region_name',flat=True).distinct()).order_by('name')
+    units = UnitsRes.objects.all().order_by('title')
+    variables = VariablesRes.objects.filter(name__in=NDCAMetaData.objects.values_list('variable_name',flat=True).distinct()).order_by('name')
+
+    context = {"models": models,
+               "variables": variables,
+               "scenarios": scenarios,
+               "regions": regions,
+               "units": units}
+
+    return render(request, 'i2amparis_main/ndca_workspace/ndca_scientific_module.html', context)
 
 
 
