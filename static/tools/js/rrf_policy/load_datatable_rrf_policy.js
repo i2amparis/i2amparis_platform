@@ -22,7 +22,7 @@ function populate_datatables() {
                     {"data": "second_classification"}
                 ],
                 dom: 'Bfrtip',
-                buttons: ['csvHtml5'],
+                buttons: [],
                 columnDefs: [
                     {"width": "24%", "targets":0},
                     {"width": "35%", "targets":1},
@@ -32,7 +32,6 @@ function populate_datatables() {
                     {"width": "10%", "targets":5},
                     {"width": "10%", "targets":6}]
             });
-            $(".buttons-csv span").text("Export to CSV");
         },
         error: function (data) {
             console.log(data);
