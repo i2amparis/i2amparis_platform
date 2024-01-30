@@ -33,17 +33,15 @@ class Command(BaseCommand):
         md_length = len(data)
         count = 0
         self.stdout.write('Passing all metadata of {}...'.format(dataset))
-        if dataset in ['resultscomp','wwheuresultscomp','covidresultscomp','feasibilityresultscomp']:
-            for d in data:
-                try:
-                    md_obj = metadata(model_name=d['model__name'], scenario_name=d['scenario__name'],
-                                         region_name=d['region__name'], variable_name=d['variable__name'])
-                    md_obj.save()
-                    count = count + 1
-                    print(f'Complete:{round((100*count)/md_length,2)}%')
-                except:
-                    raise CommandError('{} out of {} passed'.format(count, md_length))
-            self.stdout.write(
-                'Successfully created metadata for dataset {} and placed in {}!'.format(dataset, metadata_table))
-        else:
-            self.stdout.write('Dataset provided does not exist.')
+
+        for d in data:
+            try:
+                md_obj = metadata(model_name=d['model__name'], scenario_name=d['scenario__name'],
+                                     region_name=d['region__name'], variable_name=d['variable__name'])
+                md_obj.save()
+                count = count + 1
+                print(f'Complete:{round((100*count)/md_length,2)}%')
+            except:
+                raise CommandError('{} out of {} passed'.format(count, md_length))
+        self.stdout.write(
+            'Successfully created metadata for dataset {} and placed in {}!'.format(dataset, metadata_table))
