@@ -1,0 +1,78 @@
+{% extends 'i2amparis_main/fitfor55_workspace/fitfor55_virtual_library_section.html' %}
+
+{% block content %}
+    <div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+        <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+            <div class=" col-sm-12 col-xs-12" style="text-align: center">
+                <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                    Virtual Library
+                </h1>
+            </div>
+            <div class="content-section col-sm-12 col-xs-12 col-md-12"
+                 style="margin-top: 2em;padding: 1em">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="circle-button tb-red" style="text-align: center">
+                        <a href="" class="">Datasets</a>
+                        <i class="fa fa-cloud-download mini-title-icon"></i>
+                    </div>
+                </div>
+                {% include "i2amparis_main/fitfor55_workspace/fitfor55_virtual_library_side_menu.html" %}
+                <div class="main-content col-md-9 col-xs-12 col-sm-9" style="margin-top: 3em">
+                    <div class="accordion col-sm-12 col-xs-12" id="accordion_1">
+                        <div class="card">
+                            <div class="card-header" id="heading_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse_1" aria-expanded="true"
+                                            aria-controls="collapse_1" style="padding:0px">
+                                        <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                        Boitier et al_2023_JOULE_DATASET
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse_1" class="collapse "
+                                 aria-labelledby="heading_1"
+                                 data-parent="#accordion_1">
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Date:</strong>
+                                        June 2022
+                                    </p>
+                                    <p>
+                                        <strong>Short description:</strong>
+                                        This dataset contains the underlying raw modelling data for the journal article by Boitier et al., 2023 published in Joule in November 2023.(<a href="https://doi.org/10.1016/j.joule.2023.11.002">link</a>).
+                                    </p>
+                                    <p>
+                                        <strong>Authors:</strong>
+                                        Boitier, B., Nikas, A., Gambhir, A., Koasidis, K., Elia, A., Al-Dabbas, K., Alibaş, Ş., Campagnolo, L., Chiodi, A., Delpiazzo, E., Doukas, H., Fougeyrollas, A., Gargiulo, M., Mouël, P. L., Neuner, F., Perdana, S., Ven, D.-J. van de, Vielle, M., Zagamé, P., & Mittal, S. 
+                                    </p>
+                                    <p>
+                                        <strong>License:</strong>
+                                        Creative Commons Attribution 4.0 International (CC BY 4.0)
+                                    </p>
+                                    <p>
+                                        <strong>Link:</strong>
+                                        <a href="https://doi.org/10.5281/zenodo.10044337" target="_blank">https://doi.org/10.5281/zenodo.10044337</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="col-md-12 col-xs-12 col-sm-12">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(".lib-menu-nav .tb-red").hide();
+    </script>
+{% endblock %}

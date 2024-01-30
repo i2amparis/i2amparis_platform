@@ -1,0 +1,73 @@
+{% load static %}
+<div class="col-sm-12 col-xs-12">
+    <h3 style="display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30;">
+        What is the trajectory of global fossil CO2 emissions based on pre-Glasgow current policies, NDCs, and pledges announced in Glasgow?
+    </h3>
+</div>
+<div class="col-md-12 col-xs-12" style="margin-bottom:3em">
+    <p class="col-md-12 col-xs-12">
+        Based on modelling the policies legislated before the COP26 in Glasgow, CO2 emissions stabilise or start declining in the current decade reaching 33-38 Gt by 2030. If this trend is followed beyond 2030, emissions are further reduced to 24-30 Gt by 2050. Emission reductions are much stronger if countries follow the targets of their NDCs, reaching 30-33 Gt by 2030 and 19-23 Gt by 2050. Alternatively, if countries follow their Glasgow pledges post-2030 after reaching their NDC goals, the global emissions for 2050 will be further reduced to a range of 10-13 Gt.
+    </p>
+
+    <p class="col-md-12 col-xs-12">
+        You can explore the data for the different scenarios and models in the following figures.
+    </p>
+
+    <div class="col-md-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 1em; text-align: center">Please select a variable and a scenario to view the results.</div>
+            <div class="col-md-3 col-sm-2 col-xs-1"></div>
+            <div class="form-group col-md-6 col-sm-8 col-xs-10" style="margin-bottom: 2em;">
+                <div class="">
+                    <select class="desc_text take_up_space sector_select" placeholder="Select a variable" id="sector_select" style="width: 100%;display:inline">
+                    <option value="Emissions|CO2">Total emissions</option>
+                    <option value="Emissions|CO2|Energy">Energy supply</option>
+                    <option value="Emissions|CO2|Industrial Processes">Industry & Processes</option>
+                    <option value="Emissions|CO2|Energy|Demand|Residential and Commercial">Buildings</option>
+                    <option value="Emissions|CO2|Energy|Demand|Transportation">Transport</option>
+                    </select>
+                    <select class="desc_text take_up_space scenario_select" placeholder="Select a scenario" id="scenario_select" style="width: 100%;display:inline">
+
+                    <option value="CP_EI">CP_EI</option>
+                    <option value="NDC_EI">NDC_EI</option>
+                    <option value="NDC_LTT">NDC_LTT</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12" style="height: 40em">
+            <div style="height: 100%;">
+                <div id="total_co2_emissions" class="row"
+                     style="height: 100%; line-height: 100%;">
+                    <iframe id="total_co2_emissions_viz_iframe" src="" title="Results"
+                            style="width: 100%; height: 100%;  border:none ; display: none"></iframe>
+                    <div id="total_co2_emissions_loading_bar"
+                         style=" height:100%;vertical-align: middle; text-align: center; position: relative; top:30%;margin-top:-6em;">
+                        <img class="row" style="height: 13em; width: 13em; margin-bottom: 2em"
+                             src="{% static "gifs/loading-dots.gif" %}" alt="Loading...">
+                        <div class="row" style="font-size: 0.9em ; margin-left: 2em; margin-right: 2em;">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">The chart will present the global CO2 emissions pathways across models until 2050.
+
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="heading" style="font-size: 1.5em; margin:3em">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-xs-12" style="font-style: italic; font-size: 0.9em; margin-top: 1em">
+            <ul>
+                <li>CP_EI: Current Policy until 2030 (before Glasgow), extrapolated with the same average emissions intensity of GDP to 2050</li>
+                <li>NDC_EI: NDC targets until 2030, extrapolated with the same average emissions intensity of GDP to 2050</li>
+                <li>NDC_LTT: NDC targets until 2030, following then the long-term targets announced by the countries in Glasgow</li>
+            </ul>
+        </div>
+
+
+
+    </div>
+</div>

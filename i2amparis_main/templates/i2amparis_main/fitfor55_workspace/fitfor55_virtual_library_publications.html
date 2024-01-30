@@ -1,0 +1,83 @@
+{% extends 'i2amparis_main/fitfor55_workspace/fitfor55_virtual_library_section.html' %}
+
+{% block content %}
+    <div id="intro_virtual" style="margin-top: 6em;min-height: 100%">
+        <div class="container" style="width: 90%; height: 100%; padding-bottom: 3em">
+            <div class=" col-sm-12 col-xs-12" style="text-align: center">
+                <h1 style="text-align:center;display: inline-block;background:transparent; box-shadow: none; font-weight: bold; color: #828f30; ">
+                    Virtual Library
+                </h1>
+            </div>
+            <div class="content-section col-sm-12 col-xs-12 col-md-12"
+                 style=" margin-top: 2em;">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="circle-button tb-orange" style="text-align: center">
+                        <a href="" class="">Publications</a>
+                        <i class="fa fa-book mini-title-icon"></i>
+                    </div>
+                </div>
+                {% include "i2amparis_main/fitfor55_workspace/fitfor55_virtual_library_side_menu.html" %}
+                <div class="main-content col-md-9 col-xs-12 col-sm-9" style="margin-top: 3em">
+
+                    <div class="accordion col-sm-12 col-xs-12" id="accordion_1">
+                        <div class="card">
+                            <div class="card-header" id="heading_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse_1" aria-expanded="true"
+                                            aria-controls="collapse_1" style="padding:0px">
+                                        <i class="fa fa-caret-right rotate" style="margin-right: 10px;"></i>
+                                        A multi-model analysis of the EU’s path to net zero. Joule, 7(12). 
+
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse_1" class="collapse "
+                                 aria-labelledby="heading_1"
+                                 data-parent="#accordion_1">
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Title:</strong>
+                                        A multi-model analysis of the EU’s path to net zero
+                                    </p>
+                                    <p>
+                                        <strong>Date:</strong>
+                                        2023
+                                    </p>
+                                    <p>
+                                        <strong>Short description:</strong>
+                                        The European Union (EU) recently ratcheted its climate ambition to net-zero emissions by 2050, with a milestone of 55% emissions cuts in 2030. This study carries out a model inter-comparison to assess the EU's path, from "Fit for 55" in 2030 to an intermediate milestone in 2040 and onto net zero in 2050, offering insights at sectoral and member-state levels. Our model results support the bloc's ambition for its Emissions Trading System and Effort Sharing Regulation sectors while pointing to the need for near-complete decarbonization of electricity by 2040, enabled by considerable deployment of renewables (45%–65% in 2030, to 60%–70% in 2040, and to 75%–90% in 2050 in electricity generation) and carbon capture and storage (0.5–2 GtCO<sub>2</sub>/year by 2050). We also highlight the trade-offs between supply-side and harder-to-abate sectors, assess the ambition of member states for net zero and timing of coal phaseout, and reflect on the economic implications of investment, technical, and policy needs.
+                                    </p>
+                                    <p>
+                                        <strong>Authors:</strong>
+                                        Boitier, B., Nikas, A., Gambhir, A., Koasidis, K., Elia, A., Al-Dabbas, K., Alibaş, Ş., Campagnolo, L., Chiodi, A., Delpiazzo, E., Doukas, H., Fougeyrollas, A., Gargiulo, M., Mouël, P. L., Neuner, F., Perdana, S., Ven, D.-J. van de, Vielle, M., Zagamé, P., & Mittal, S. 
+ 
+                                    </p>
+                                    <p>
+                                        <strong>Journal:</strong>
+                                        Joule
+                                    </p>
+                                    <p>
+                                        <strong>Links:</strong>
+                                        <a href="https://doi.org/10.1016/j.joule.2023.11.002" target="_blank" >https://doi.org/10.1016/j.joule.2023.11.002</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="col-md-12 col-xs-12 col-sm-12">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(".lib-menu-nav .tb-orange").hide();
+    </script>
+{% endblock %}

@@ -159,6 +159,9 @@
                             <li role="presentation" class="landing-dropdown-sub">
                                 <a role="menuitem" tabindex="-1" href="https://iam-compact.eu">Horizon Europe IAM COMPACT</a></li>
                             </li>
+                            <li role="presentation" class="landing-dropdown-sub">
+                                <a role="menuitem" tabindex="-1" href="https://climate-diamond.eu">Horizon Europe DIAMOND</a></li>
+                            </li>
                         </ul>
 
                     </li>
@@ -471,15 +474,6 @@
                                     Database for modelling research</p>
                             </div>
 
-                            <div class="service-col feasibility_workspace col-lg-6">
-                                <div class="">
-                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_logo.png" %}></figure>
-                                    <img style="width: 19em" src={% static "logos/paris_reinforce_logo.png" %}>
-                                </div>
-                                <h2><a href="feasibility/landing" class="feasibility_workspace">Regional feasibilities to net-zero</a>
-                                </h2>
-                                <p>A global analysis of current policies, NDCs, and net-zero targets with a focus on regional feasibilities</p>
-                            </div>
 
                             <div class="service-col ida_workspace col-lg-6">
                                 <div class="">
@@ -502,6 +496,26 @@
                                 <p>An analysis of climate-employment co-benefits of green recovery packages in six major emitting regions</p>
                             </div>
 
+                            <div class="service-col feasibility_workspace col-lg-6">
+                                <div class="">
+                                    <figure><link rel="icon" type="image/png" href={% static "logos/paris_reinforce_iam_compact_logos.png" %}></figure>
+                                    <img style="width: 19em" src={% static "logos/paris_reinforce_iam_compact_logos.png" %}>
+                                </div>
+                                <h2><a href="feasibility/landing" class="feasibility_workspace">Post-Glasgow climate targets and feasibility challenges</a>
+                                </h2>
+                                <p>A global analysis of pre-Glasgow policies, NDCs, and net-zero targets with a focus on regional feasibilities</p>
+                            </div>
+
+
+                            <div class="service-col fitfor55_workspace col-lg-6">
+                                <div class="">
+                                    <figure><link rel="icon" type="image/png" href={% static "logos/iamcompact_diamond_logos.png" %}></figure>
+                                    <img style="width: 19em" src={% static "logos/iamcompact_diamond_logos.png" %}>
+                                </div>
+                                <h2><a href="fitfor55/landing" class="fitfor55_workspace">EU path to net zero</a>
+                                </h2>
+                                <p>A multi-model analysis of EU's transition from "Fit for 55" in 2030 to net zero by 2050</p>
+                            </div>
 
                         </div>
                     </div>
@@ -591,7 +605,7 @@
                         model can be found <a
                                 href="{% static '/excel_files/I2AM PARIS_documentation_template_GCAM.xlsx' %}"><b>here</b></a>.
                         Please e-mail the template filled in for your model to
-                    <address><a href="mailto:iam@paris-reinforce.eu"><b>iam@paris-reinforce.eu</b></a></address>
+                    <address><a href="mailto:diamond@epu.ntua.gr"><b>diamond@epu.ntua.gr</b></a></address>
                     </p>
                 </div>
             </div>
@@ -712,6 +726,9 @@
     });
     $(document).on('click', 'div.covid_workspace', function (e) {
         $("a.covid_workspace")[0].click()
+    });
+    $(document).on('click', 'div.fitfor55_workspace', function (e) {
+        $("a.fitfor55_workspace")[0].click()
     });
     $(document).on('click', 'div.eu_workspace', function (e) {
         $("a.eu_workspace")[0].click()

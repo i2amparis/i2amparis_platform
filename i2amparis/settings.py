@@ -88,6 +88,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'i2amparis.wsgi.application'
 
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db_new.sqlite3'),
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -120,7 +131,6 @@ USE_L10N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATIC_FINDER = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -138,17 +148,18 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.environ.get("EMAIL_HOST")
+EMAIL_HOST = 'smtp.office365.com'
 EMAIL_PORT = 587
 EMAIL_PROTOCOL = 'smtp'
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_USER = 'noreply@epu.ntua.gr'
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL")
+DEFAULT_FROM_EMAIL = 'noreply@epu.ntua.gr'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
-EMAIL_FROM = os.environ.get("EMAIL_FROM")
-SERVER_EMAIL = os.environ.get("SERVER_EMAIL")
+EMAIL_FROM = 'noreply@epu.ntua.gr'
+SERVER_EMAIL = 'noreply@epu.ntua.gr'
 
-GOOGLE_RECAPTCHA_SITE_KEY =  os.environ.get("GOOGLE_RECAPTCHA_SITE_KEY")
+# !!! This should be manually passed to any template that needs it. If changed, the new one should be passed manually!!!!
+GOOGLE_RECAPTCHA_SITE_KEY = '6LewHqEdAAAAAG7A1uY2PJJbdLksCuhlD_N4k49j'
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
